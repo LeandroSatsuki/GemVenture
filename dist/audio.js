@@ -1,0 +1,12 @@
+export const BPM=110;
+export const BEAT=60/BPM;
+export class Music{
+ constructor(){this.enabled=false;this.ctx=null;this.step=-1;this.voices=new Set();}
+ async enable(){if(!this.ctx){const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio)return false;this.ctx=new Audio();this.master=this.ctx.createGain();this.master.gain.value=.2;this.master.connect(this.ctx.destination);}try{await this.ctx.resume();this.enabled=true;this.step=-1;return true;}catch{return false;}}
+ stop(){this.enabled=false;this.silence();}
+ silence(){for(const voice of this.voices){try{voice.stop();}catch{}}this.voices.clear();this.step=-1;}
+ tone(freq,duration,type,volume,at,slide){if(!this.enabled||!this.ctx)return;const o=this.ctx.createOscillator(),g=this.ctx.createGain();o.type=type;o.frequency.setValueAtTime(freq,at);if(slide)o.frequency.exponentialRampToValueAtTime(slide,at+duration);g.gain.setValueAtTime(.0001,at);g.gain.exponentialRampToValueAtTime(volume,at+.008);g.gain.exponentialRampToValueAtTime(.0001,at+duration);o.connect(g);g.connect(this.master);o.start(at);o.stop(at+duration+.02);this.voices.add(o);o.onended=()=>{this.voices.delete(o);o.disconnect();g.disconnect();};}
+ update(elapsed,biome){if(!this.enabled||this.ctx.state!=='running')return;const stepDuration=BEAT/4,now=this.ctx.currentTime,first=Math.floor(elapsed/stepDuration);if(this.step<first-2)this.step=first-1;const max=Math.floor((elapsed+.12)/stepDuration);for(let i=this.step+1;i<=max;i++){const at=now+i*stepDuration-elapsed;if(at<now)continue;const k=i%64,transpose=[1,1.125,.891,1.189][biome];if(k%4===0){this.tone(135,.14,'sine',.65,at,42);this.tone(880,.035,'triangle',.035,at);}if(k%4===2)this.tone(4700,.033,'triangle',.055,at,1900);if(k%8===4){this.tone(180,.09,'triangle',.13,at,80);this.tone(1700,.035,'sawtooth',.035,at);}if(k%8===0){const bass=[65.406,65.406,87.307,77.782][Math.floor(k/16)];this.tone(bass*transpose,.34,'triangle',.21,at);}if(k%2===0){const notes=[523.25,0,622.25,783.99,698.46,0,622.25,466.16,523.25,622.25,0,932.33,783.99,698.46,622.25,0];const freq=notes[(k/2)%16];if(freq)this.tone(freq*transpose,.16,'sine',.1,at);}}this.step=max;}
+ hit(perfect){if(!this.enabled)return;const t=this.ctx.currentTime;this.tone(perfect?1046.5:392,.075,'triangle',perfect?.24:.13,t);if(perfect)this.tone(1567.98,.15,'sine',.12,t+.04);}
+ reward(){if(!this.enabled)return;[523.25,659.25,783.99,1046.5].forEach((f,i)=>this.tone(f,.25,'sine',.18,this.ctx.currentTime+i*.085));}
+}
