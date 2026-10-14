@@ -1,0 +1,3685 @@
+{
+  "version": 1,
+  "palette": [
+    "#000000",
+    "#180d2f",
+    "#353658",
+    "#686b72",
+    "#8b97b6",
+    "#c5cddb",
+    "#ffffff",
+    "#5ee9e9",
+    "#2890dc",
+    "#1831a7",
+    "#053239",
+    "#005f41",
+    "#08b23b",
+    "#47f641",
+    "#e8ff75",
+    "#fbbe82",
+    "#de9751",
+    "#b66831",
+    "#8a4926",
+    "#461c14",
+    "#1e090d",
+    "#720d0d",
+    "#813704",
+    "#da2424",
+    "#ef6e10",
+    "#ecab11",
+    "#ece910",
+    "#f78d8d",
+    "#f94e6d",
+    "#c12458",
+    "#841252",
+    "#3d083b"
+  ],
+  "rows": [
+    {
+      "group": "vila",
+      "id": "forge",
+      "name": "Forja",
+      "source": "dist/flow-village.js",
+      "reference": "assets/village-hept32/forge.png",
+      "pngReference": "assets/village-hept32/forge.png",
+      "destination": "dist/assets/village-hept32/forge.png",
+      "status": "SUBSTITUIÇÃO DIRETA",
+      "note": "Manter ponto de apoio no chão e proporção da referência.",
+      "type": "forge",
+      "referencePath": "dist/assets/village-hept32/forge.png",
+      "sourceFiles": [
+        "dist/flow-village.js"
+      ]
+    },
+    {
+      "group": "vila",
+      "id": "echo-tree",
+      "name": "Árvore de Ecos",
+      "source": "dist/flow-village.js",
+      "reference": "assets/village-hept32/echo-tree.png",
+      "pngReference": "assets/village-hept32/echo-tree.png",
+      "destination": "dist/assets/village-hept32/echo-tree.png",
+      "status": "SUBSTITUIÇÃO DIRETA",
+      "note": "Tronco fixo; copa pode balançar.",
+      "type": "tree",
+      "referencePath": "dist/assets/village-hept32/echo-tree.png",
+      "sourceFiles": [
+        "dist/flow-village.js"
+      ]
+    },
+    {
+      "group": "vila",
+      "id": "lift",
+      "name": "Elevador",
+      "source": "dist/flow-village.js",
+      "reference": "assets/village-hept32/lift.png",
+      "pngReference": "assets/village-hept32/lift.png",
+      "destination": "dist/assets/village-hept32/lift.png",
+      "status": "SUBSTITUIÇÃO DIRETA",
+      "note": "Manter ponto de apoio no chão e proporção da referência.",
+      "type": "lift",
+      "referencePath": "dist/assets/village-hept32/lift.png",
+      "sourceFiles": [
+        "dist/flow-village.js"
+      ]
+    },
+    {
+      "group": "vila",
+      "id": "well",
+      "name": "Poço dos Desejos",
+      "source": "dist/flow-village.js",
+      "reference": "assets/village-hept32/well.png",
+      "pngReference": "assets/village-hept32/well.png",
+      "destination": "dist/assets/village-hept32/well.png",
+      "status": "SUBSTITUIÇÃO DIRETA",
+      "note": "Bacia fixa; cristal separado para flutuar.",
+      "type": "well",
+      "referencePath": "dist/assets/village-hept32/well.png",
+      "sourceFiles": [
+        "dist/flow-village.js"
+      ]
+    },
+    {
+      "group": "vila",
+      "id": "roulette",
+      "name": "Roleta do Zag",
+      "source": "dist/flow-village.js",
+      "reference": "assets/village-hept32/roulette.png",
+      "pngReference": "assets/village-hept32/roulette.png",
+      "destination": "dist/assets/village-hept32/roulette.png",
+      "status": "SUBSTITUIÇÃO DIRETA",
+      "note": "Separar disco, ponteiro e suporte para girar.",
+      "type": "roulette",
+      "referencePath": "dist/assets/village-hept32/roulette.png",
+      "sourceFiles": [
+        "dist/flow-village.js"
+      ]
+    },
+    {
+      "group": "vila",
+      "id": "zag",
+      "name": "Zag",
+      "source": "dist/flow-village.js",
+      "reference": "assets/village-hept32/zag.png",
+      "pngReference": "assets/village-hept32/zag.png",
+      "destination": "dist/assets/village-hept32/zag.png",
+      "status": "SUBSTITUIÇÃO DIRETA",
+      "note": "Corpo, braço e rosto separados se quiser animação fluida.",
+      "type": "zag",
+      "referencePath": "dist/assets/village-hept32/zag.png",
+      "sourceFiles": [
+        "dist/flow-village.js"
+      ]
+    },
+    {
+      "group": "vila",
+      "id": "miner",
+      "name": "Minerador da vila",
+      "source": "dist/flow-village.js",
+      "reference": "assets/village-hept32/miner.png",
+      "pngReference": "assets/village-hept32/miner.png",
+      "destination": "dist/assets/village-hept32/miner.png",
+      "status": "SUBSTITUIÇÃO DIRETA",
+      "note": "Manter ponto de apoio no chão e proporção da referência.",
+      "type": "miner",
+      "referencePath": "dist/assets/village-hept32/miner.png",
+      "sourceFiles": [
+        "dist/flow-village.js"
+      ]
+    },
+    {
+      "group": "vila",
+      "id": "tree",
+      "name": "Árvore pequena",
+      "source": "dist/flow-village.js",
+      "reference": "assets/village-hept32/tree.png",
+      "pngReference": "assets/village-hept32/tree.png",
+      "destination": "dist/assets/village-hept32/tree.png",
+      "status": "SUBSTITUIÇÃO DIRETA",
+      "note": "Tronco fixo; copa pode balançar.",
+      "type": "grove",
+      "referencePath": "dist/assets/village-hept32/tree.png",
+      "sourceFiles": [
+        "dist/flow-village.js"
+      ]
+    },
+    {
+      "group": "vila",
+      "id": "bush",
+      "name": "Arbusto",
+      "source": "dist/flow-village.js",
+      "reference": "assets/village-hept32/bush.png",
+      "pngReference": "assets/village-hept32/bush.png",
+      "destination": "dist/assets/village-hept32/bush.png",
+      "status": "SUBSTITUIÇÃO DIRETA",
+      "note": "Manter ponto de apoio no chão e proporção da referência.",
+      "type": "bush",
+      "referencePath": "dist/assets/village-hept32/bush.png",
+      "sourceFiles": [
+        "dist/flow-village.js"
+      ]
+    },
+    {
+      "group": "vila",
+      "id": "missions",
+      "name": "Quadro de missões",
+      "source": "dist/flow-village.js",
+      "reference": "assets/village-hept32/missions.png",
+      "pngReference": "assets/village-hept32/missions.png",
+      "destination": "dist/assets/village-hept32/missions.png",
+      "status": "SUBSTITUIÇÃO DIRETA",
+      "note": "Manter ponto de apoio no chão e proporção da referência.",
+      "type": "board",
+      "referencePath": "dist/assets/village-hept32/missions.png",
+      "sourceFiles": [
+        "dist/flow-village.js"
+      ]
+    },
+    {
+      "group": "vila",
+      "id": "reliquary",
+      "name": "Relicário",
+      "source": "dist/flow-village.js",
+      "reference": "assets/village-hept32/reliquary.png",
+      "pngReference": "assets/village-hept32/reliquary.png",
+      "destination": "dist/assets/village-hept32/reliquary.png",
+      "status": "SUBSTITUIÇÃO DIRETA",
+      "note": "Manter ponto de apoio no chão e proporção da referência.",
+      "type": "shrine",
+      "referencePath": "dist/assets/village-hept32/reliquary.png",
+      "sourceFiles": [
+        "dist/flow-village.js"
+      ]
+    },
+    {
+      "group": "vila",
+      "id": "gramophone",
+      "name": "Vitrola",
+      "source": "dist/flow-village.js",
+      "reference": "assets/village-hept32/gramophone.png",
+      "pngReference": "assets/village-hept32/gramophone.png",
+      "destination": "dist/assets/village-hept32/gramophone.png",
+      "status": "SUBSTITUIÇÃO DIRETA",
+      "note": "Manter ponto de apoio no chão e proporção da referência.",
+      "type": "gramophone",
+      "referencePath": "dist/assets/village-hept32/gramophone.png",
+      "sourceFiles": [
+        "dist/flow-village.js"
+      ]
+    },
+    {
+      "group": "vila",
+      "id": "mining-machine-v2",
+      "name": "Mineradora AFK",
+      "source": "dist/flow-village.js",
+      "reference": "assets/village-hept32/mining-machine-v2.png",
+      "pngReference": "assets/village-hept32/mining-machine-v2.png",
+      "destination": "dist/assets/village-hept32/mining-machine-v2.png",
+      "status": "SUBSTITUIÇÃO DIRETA",
+      "note": "Manter ponto de apoio no chão e proporção da referência.",
+      "type": "miningMachine",
+      "referencePath": "dist/assets/village-hept32/mining-machine-v2.png",
+      "sourceFiles": [
+        "dist/flow-village.js"
+      ]
+    },
+    {
+      "group": "personagem",
+      "id": "miner-armor-0",
+      "name": "Minerador · armadura visual 0",
+      "source": "dist/scene-art.js + dist/pack-art.js",
+      "reference": "asset-reference/personagem/miner-armor-0.svg",
+      "pngReference": "asset-reference/personagem/miner-armor-0.png",
+      "destination": "asset-work/novos-assets/personagem/miner-armor-0.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Gerar corpo consistente. Movimento/pulinhos, ataque, dano e morte precisam de quadros ou partes. O PNG da vila não substitui este personagem da caverna.",
+      "type": "miner",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/personagem/miner-armor-0.png",
+      "sourceFiles": [
+        "dist/scene-art.js",
+        "dist/pack-art.js"
+      ]
+    },
+    {
+      "group": "personagem",
+      "id": "miner-armor-1",
+      "name": "Minerador · armadura visual 1",
+      "source": "dist/scene-art.js + dist/pack-art.js",
+      "reference": "asset-reference/personagem/miner-armor-1.svg",
+      "pngReference": "asset-reference/personagem/miner-armor-1.png",
+      "destination": "asset-work/novos-assets/personagem/miner-armor-1.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Gerar corpo consistente. Movimento/pulinhos, ataque, dano e morte precisam de quadros ou partes. O PNG da vila não substitui este personagem da caverna.",
+      "type": "miner",
+      "variant": 1,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/personagem/miner-armor-1.png",
+      "sourceFiles": [
+        "dist/scene-art.js",
+        "dist/pack-art.js"
+      ]
+    },
+    {
+      "group": "personagem",
+      "id": "miner-armor-2",
+      "name": "Minerador · armadura visual 2",
+      "source": "dist/scene-art.js + dist/pack-art.js",
+      "reference": "asset-reference/personagem/miner-armor-2.svg",
+      "pngReference": "asset-reference/personagem/miner-armor-2.png",
+      "destination": "asset-work/novos-assets/personagem/miner-armor-2.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Gerar corpo consistente. Movimento/pulinhos, ataque, dano e morte precisam de quadros ou partes. O PNG da vila não substitui este personagem da caverna.",
+      "type": "miner",
+      "variant": 2,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/personagem/miner-armor-2.png",
+      "sourceFiles": [
+        "dist/scene-art.js",
+        "dist/pack-art.js"
+      ]
+    },
+    {
+      "group": "personagem",
+      "id": "miner-armor-3",
+      "name": "Minerador · armadura visual 3",
+      "source": "dist/scene-art.js + dist/pack-art.js",
+      "reference": "asset-reference/personagem/miner-armor-3.svg",
+      "pngReference": "asset-reference/personagem/miner-armor-3.png",
+      "destination": "asset-work/novos-assets/personagem/miner-armor-3.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Gerar corpo consistente. Movimento/pulinhos, ataque, dano e morte precisam de quadros ou partes. O PNG da vila não substitui este personagem da caverna.",
+      "type": "miner",
+      "variant": 3,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/personagem/miner-armor-3.png",
+      "sourceFiles": [
+        "dist/scene-art.js",
+        "dist/pack-art.js"
+      ]
+    },
+    {
+      "group": "personagem",
+      "id": "pickaxe-00",
+      "name": "Ferro · nível 1",
+      "source": "dist/art-kit.js + dist/pickaxe-style.js",
+      "reference": "asset-reference/personagem/pickaxe-00.svg",
+      "pngReference": "asset-reference/personagem/pickaxe-00.png",
+      "destination": "asset-work/novos-assets/personagem/pickaxe-00.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Uma das 10 aparências. Também usada no cursor e na Forja. Nível 100 mantém a última.",
+      "type": "pickaxe",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/personagem/pickaxe-00.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/pickaxe-style.js"
+      ]
+    },
+    {
+      "group": "personagem",
+      "id": "pickaxe-01",
+      "name": "Cobre · nível 10",
+      "source": "dist/art-kit.js + dist/pickaxe-style.js",
+      "reference": "asset-reference/personagem/pickaxe-01.svg",
+      "pngReference": "asset-reference/personagem/pickaxe-01.png",
+      "destination": "asset-work/novos-assets/personagem/pickaxe-01.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Uma das 10 aparências. Também usada no cursor e na Forja. Nível 100 mantém a última.",
+      "type": "pickaxe",
+      "variant": 1,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/personagem/pickaxe-01.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/pickaxe-style.js"
+      ]
+    },
+    {
+      "group": "personagem",
+      "id": "pickaxe-02",
+      "name": "Quartzo · nível 20",
+      "source": "dist/art-kit.js + dist/pickaxe-style.js",
+      "reference": "asset-reference/personagem/pickaxe-02.svg",
+      "pngReference": "asset-reference/personagem/pickaxe-02.png",
+      "destination": "asset-work/novos-assets/personagem/pickaxe-02.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Uma das 10 aparências. Também usada no cursor e na Forja. Nível 100 mantém a última.",
+      "type": "pickaxe",
+      "variant": 2,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/personagem/pickaxe-02.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/pickaxe-style.js"
+      ]
+    },
+    {
+      "group": "personagem",
+      "id": "pickaxe-03",
+      "name": "Rubi · nível 30",
+      "source": "dist/art-kit.js + dist/pickaxe-style.js",
+      "reference": "asset-reference/personagem/pickaxe-03.svg",
+      "pngReference": "asset-reference/personagem/pickaxe-03.png",
+      "destination": "asset-work/novos-assets/personagem/pickaxe-03.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Uma das 10 aparências. Também usada no cursor e na Forja. Nível 100 mantém a última.",
+      "type": "pickaxe",
+      "variant": 3,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/personagem/pickaxe-03.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/pickaxe-style.js"
+      ]
+    },
+    {
+      "group": "personagem",
+      "id": "pickaxe-04",
+      "name": "Topázio · nível 40",
+      "source": "dist/art-kit.js + dist/pickaxe-style.js",
+      "reference": "asset-reference/personagem/pickaxe-04.svg",
+      "pngReference": "asset-reference/personagem/pickaxe-04.png",
+      "destination": "asset-work/novos-assets/personagem/pickaxe-04.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Uma das 10 aparências. Também usada no cursor e na Forja. Nível 100 mantém a última.",
+      "type": "pickaxe",
+      "variant": 4,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/personagem/pickaxe-04.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/pickaxe-style.js"
+      ]
+    },
+    {
+      "group": "personagem",
+      "id": "pickaxe-05",
+      "name": "Esmeralda · nível 50",
+      "source": "dist/art-kit.js + dist/pickaxe-style.js",
+      "reference": "asset-reference/personagem/pickaxe-05.svg",
+      "pngReference": "asset-reference/personagem/pickaxe-05.png",
+      "destination": "asset-work/novos-assets/personagem/pickaxe-05.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Uma das 10 aparências. Também usada no cursor e na Forja. Nível 100 mantém a última.",
+      "type": "pickaxe",
+      "variant": 5,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/personagem/pickaxe-05.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/pickaxe-style.js"
+      ]
+    },
+    {
+      "group": "personagem",
+      "id": "pickaxe-06",
+      "name": "Safira · nível 60",
+      "source": "dist/art-kit.js + dist/pickaxe-style.js",
+      "reference": "asset-reference/personagem/pickaxe-06.svg",
+      "pngReference": "asset-reference/personagem/pickaxe-06.png",
+      "destination": "asset-work/novos-assets/personagem/pickaxe-06.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Uma das 10 aparências. Também usada no cursor e na Forja. Nível 100 mantém a última.",
+      "type": "pickaxe",
+      "variant": 6,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/personagem/pickaxe-06.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/pickaxe-style.js"
+      ]
+    },
+    {
+      "group": "personagem",
+      "id": "pickaxe-07",
+      "name": "Ametista · nível 70",
+      "source": "dist/art-kit.js + dist/pickaxe-style.js",
+      "reference": "asset-reference/personagem/pickaxe-07.svg",
+      "pngReference": "asset-reference/personagem/pickaxe-07.png",
+      "destination": "asset-work/novos-assets/personagem/pickaxe-07.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Uma das 10 aparências. Também usada no cursor e na Forja. Nível 100 mantém a última.",
+      "type": "pickaxe",
+      "variant": 7,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/personagem/pickaxe-07.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/pickaxe-style.js"
+      ]
+    },
+    {
+      "group": "personagem",
+      "id": "pickaxe-08",
+      "name": "Solar · nível 80",
+      "source": "dist/art-kit.js + dist/pickaxe-style.js",
+      "reference": "asset-reference/personagem/pickaxe-08.svg",
+      "pngReference": "asset-reference/personagem/pickaxe-08.png",
+      "destination": "asset-work/novos-assets/personagem/pickaxe-08.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Uma das 10 aparências. Também usada no cursor e na Forja. Nível 100 mantém a última.",
+      "type": "pickaxe",
+      "variant": 8,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/personagem/pickaxe-08.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/pickaxe-style.js"
+      ]
+    },
+    {
+      "group": "personagem",
+      "id": "pickaxe-09",
+      "name": "Estelar · nível 90",
+      "source": "dist/art-kit.js + dist/pickaxe-style.js",
+      "reference": "asset-reference/personagem/pickaxe-09.svg",
+      "pngReference": "asset-reference/personagem/pickaxe-09.png",
+      "destination": "asset-work/novos-assets/personagem/pickaxe-09.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Uma das 10 aparências. Também usada no cursor e na Forja. Nível 100 mantém a última.",
+      "type": "pickaxe",
+      "variant": 9,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/personagem/pickaxe-09.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/pickaxe-style.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "slime-b1",
+      "name": "Gosma de quartzo",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/slime-b1.svg",
+      "pngReference": "asset-reference/criaturas/slime-b1.png",
+      "destination": "asset-work/novos-assets/criaturas/slime-b1.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 1 · Grutas de Cristal. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "slime",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/criaturas/slime-b1.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "bat-b1",
+      "name": "Morcego de safira",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/bat-b1.svg",
+      "pngReference": "asset-reference/criaturas/bat-b1.png",
+      "destination": "asset-work/novos-assets/criaturas/bat-b1.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 1 · Grutas de Cristal. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "bat",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/criaturas/bat-b1.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "golem-b1",
+      "name": "Guardião de geodo",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/golem-b1.svg",
+      "pngReference": "asset-reference/criaturas/golem-b1.png",
+      "destination": "asset-work/novos-assets/criaturas/golem-b1.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 1 · Grutas de Cristal. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "golem",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/criaturas/golem-b1.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "hedgehog-b1",
+      "name": "Ouriço gigante · Grutas de Cristal",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/hedgehog-b1.svg",
+      "pngReference": "asset-reference/criaturas/hedgehog-b1.png",
+      "destination": "asset-work/novos-assets/criaturas/hedgehog-b1.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Espectador na toca da parede; não é inimigo. Aproximadamente 4× a largura do minerador. Partes: corpo, cristais, face, olhos, patas esquerda/direita; sombra separada.",
+      "type": "hedgehog",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/criaturas/hedgehog-b1.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "chefes",
+      "id": "boss-b1",
+      "name": "REI GEODO",
+      "source": "dist/boss-art.js",
+      "reference": "asset-reference/chefes/boss-b1.svg",
+      "pngReference": "asset-reference/chefes/boss-b1.png",
+      "destination": "asset-work/novos-assets/chefes/boss-b1.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 1. Gerar repouso, antecipação, ataque, vulnerável, dano e derrota.",
+      "type": "boss",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/chefes/boss-b1.png",
+      "sourceFiles": [
+        "dist/boss-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "quartz-b1",
+      "name": "Quartzo · Grutas de Cristal",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/quartz-b1.svg",
+      "pngReference": "asset-reference/recursos/quartz-b1.png",
+      "destination": "asset-work/novos-assets/recursos/quartz-b1.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/recursos/quartz-b1.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "ruby-b1",
+      "name": "Rubi · Grutas de Cristal",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/ruby-b1.svg",
+      "pngReference": "asset-reference/recursos/ruby-b1.png",
+      "destination": "asset-work/novos-assets/recursos/ruby-b1.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 1,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/recursos/ruby-b1.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "topaz-b1",
+      "name": "Topázio · Grutas de Cristal",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/topaz-b1.svg",
+      "pngReference": "asset-reference/recursos/topaz-b1.png",
+      "destination": "asset-work/novos-assets/recursos/topaz-b1.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 2,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/recursos/topaz-b1.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "emerald-b1",
+      "name": "Esmeralda · Grutas de Cristal",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/emerald-b1.svg",
+      "pngReference": "asset-reference/recursos/emerald-b1.png",
+      "destination": "asset-work/novos-assets/recursos/emerald-b1.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 3,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/recursos/emerald-b1.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-1-b1",
+      "name": "Rocha porosa · Grutas de Cristal",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-1-b1.svg",
+      "pngReference": "asset-reference/recursos/rock-1-b1.png",
+      "destination": "asset-work/novos-assets/recursos/rock-1-b1.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/recursos/rock-1-b1.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-2-b1",
+      "name": "Rocha compacta · Grutas de Cristal",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-2-b1.svg",
+      "pngReference": "asset-reference/recursos/rock-2-b1.png",
+      "destination": "asset-work/novos-assets/recursos/rock-2-b1.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 1,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/recursos/rock-2-b1.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-3-b1",
+      "name": "Rocha bruta · Grutas de Cristal",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-3-b1.svg",
+      "pngReference": "asset-reference/recursos/rock-3-b1.png",
+      "destination": "asset-work/novos-assets/recursos/rock-3-b1.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 2,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/recursos/rock-3-b1.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "biomas",
+      "id": "biome-1",
+      "name": "Grutas de Cristal",
+      "source": "dist/world.js + dist/cavern.js + dist/cave-layout.js",
+      "reference": "asset-reference/biomas/biome-1.svg",
+      "pngReference": "asset-reference/biomas/biome-1.png",
+      "destination": "asset-work/novos-assets/biomas/biome-1.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Esta é a miniatura real do elevador, NÃO uma captura completa da caverna. Preparar chão repetível, parede contínua (retas/cantos/extremidades), bordas e terreno especial. A topologia continua procedural.",
+      "referencePath": "dist/asset-reference/biomas/biome-1.png",
+      "sourceFiles": [
+        "dist/world.js",
+        "dist/cavern.js",
+        "dist/cave-layout.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "slime-b2",
+      "name": "Gosma de esporos",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/slime-b2.svg",
+      "pngReference": "asset-reference/criaturas/slime-b2.png",
+      "destination": "asset-work/novos-assets/criaturas/slime-b2.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 2 · Floresta Esquecida. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "slime",
+      "variant": 0,
+      "biome": 1,
+      "referencePath": "dist/asset-reference/criaturas/slime-b2.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "bat-b2",
+      "name": "Morcego de folhas",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/bat-b2.svg",
+      "pngReference": "asset-reference/criaturas/bat-b2.png",
+      "destination": "asset-work/novos-assets/criaturas/bat-b2.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 2 · Floresta Esquecida. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "bat",
+      "variant": 0,
+      "biome": 1,
+      "referencePath": "dist/asset-reference/criaturas/bat-b2.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "golem-b2",
+      "name": "Guardião de raízes",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/golem-b2.svg",
+      "pngReference": "asset-reference/criaturas/golem-b2.png",
+      "destination": "asset-work/novos-assets/criaturas/golem-b2.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 2 · Floresta Esquecida. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "golem",
+      "variant": 0,
+      "biome": 1,
+      "referencePath": "dist/asset-reference/criaturas/golem-b2.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "hedgehog-b2",
+      "name": "Ouriço gigante · Floresta Esquecida",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/hedgehog-b2.svg",
+      "pngReference": "asset-reference/criaturas/hedgehog-b2.png",
+      "destination": "asset-work/novos-assets/criaturas/hedgehog-b2.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Espectador na toca da parede; não é inimigo. Aproximadamente 4× a largura do minerador. Partes: corpo, cristais, face, olhos, patas esquerda/direita; sombra separada.",
+      "type": "hedgehog",
+      "variant": 0,
+      "biome": 1,
+      "referencePath": "dist/asset-reference/criaturas/hedgehog-b2.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "chefes",
+      "id": "boss-b2",
+      "name": "MATRIARCA RAIZ",
+      "source": "dist/boss-art.js",
+      "reference": "asset-reference/chefes/boss-b2.svg",
+      "pngReference": "asset-reference/chefes/boss-b2.png",
+      "destination": "asset-work/novos-assets/chefes/boss-b2.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 2. Gerar repouso, antecipação, ataque, vulnerável, dano e derrota.",
+      "type": "boss",
+      "variant": 1,
+      "biome": 1,
+      "referencePath": "dist/asset-reference/chefes/boss-b2.png",
+      "sourceFiles": [
+        "dist/boss-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "quartz-b2",
+      "name": "Quartzo · Floresta Esquecida",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/quartz-b2.svg",
+      "pngReference": "asset-reference/recursos/quartz-b2.png",
+      "destination": "asset-work/novos-assets/recursos/quartz-b2.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 0,
+      "biome": 1,
+      "referencePath": "dist/asset-reference/recursos/quartz-b2.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "ruby-b2",
+      "name": "Rubi · Floresta Esquecida",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/ruby-b2.svg",
+      "pngReference": "asset-reference/recursos/ruby-b2.png",
+      "destination": "asset-work/novos-assets/recursos/ruby-b2.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 1,
+      "biome": 1,
+      "referencePath": "dist/asset-reference/recursos/ruby-b2.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "topaz-b2",
+      "name": "Topázio · Floresta Esquecida",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/topaz-b2.svg",
+      "pngReference": "asset-reference/recursos/topaz-b2.png",
+      "destination": "asset-work/novos-assets/recursos/topaz-b2.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 2,
+      "biome": 1,
+      "referencePath": "dist/asset-reference/recursos/topaz-b2.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "emerald-b2",
+      "name": "Esmeralda · Floresta Esquecida",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/emerald-b2.svg",
+      "pngReference": "asset-reference/recursos/emerald-b2.png",
+      "destination": "asset-work/novos-assets/recursos/emerald-b2.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 3,
+      "biome": 1,
+      "referencePath": "dist/asset-reference/recursos/emerald-b2.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-1-b2",
+      "name": "Rocha porosa · Floresta Esquecida",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-1-b2.svg",
+      "pngReference": "asset-reference/recursos/rock-1-b2.png",
+      "destination": "asset-work/novos-assets/recursos/rock-1-b2.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 0,
+      "biome": 1,
+      "referencePath": "dist/asset-reference/recursos/rock-1-b2.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-2-b2",
+      "name": "Rocha compacta · Floresta Esquecida",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-2-b2.svg",
+      "pngReference": "asset-reference/recursos/rock-2-b2.png",
+      "destination": "asset-work/novos-assets/recursos/rock-2-b2.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 1,
+      "biome": 1,
+      "referencePath": "dist/asset-reference/recursos/rock-2-b2.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-3-b2",
+      "name": "Rocha bruta · Floresta Esquecida",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-3-b2.svg",
+      "pngReference": "asset-reference/recursos/rock-3-b2.png",
+      "destination": "asset-work/novos-assets/recursos/rock-3-b2.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 2,
+      "biome": 1,
+      "referencePath": "dist/asset-reference/recursos/rock-3-b2.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "biomas",
+      "id": "biome-2",
+      "name": "Floresta Esquecida",
+      "source": "dist/world.js + dist/cavern.js + dist/cave-layout.js",
+      "reference": "asset-reference/biomas/biome-2.svg",
+      "pngReference": "asset-reference/biomas/biome-2.png",
+      "destination": "asset-work/novos-assets/biomas/biome-2.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Esta é a miniatura real do elevador, NÃO uma captura completa da caverna. Preparar chão repetível, parede contínua (retas/cantos/extremidades), bordas e terreno especial. A topologia continua procedural.",
+      "referencePath": "dist/asset-reference/biomas/biome-2.png",
+      "sourceFiles": [
+        "dist/world.js",
+        "dist/cavern.js",
+        "dist/cave-layout.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "slime-b3",
+      "name": "Gosma de âmbar",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/slime-b3.svg",
+      "pngReference": "asset-reference/criaturas/slime-b3.png",
+      "destination": "asset-work/novos-assets/criaturas/slime-b3.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 3 · Galeria dos Fósseis. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "slime",
+      "variant": 0,
+      "biome": 2,
+      "referencePath": "dist/asset-reference/criaturas/slime-b3.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "bat-b3",
+      "name": "Morcego ossudo",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/bat-b3.svg",
+      "pngReference": "asset-reference/criaturas/bat-b3.png",
+      "destination": "asset-work/novos-assets/criaturas/bat-b3.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 3 · Galeria dos Fósseis. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "bat",
+      "variant": 0,
+      "biome": 2,
+      "referencePath": "dist/asset-reference/criaturas/bat-b3.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "golem-b3",
+      "name": "Guardião fóssil",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/golem-b3.svg",
+      "pngReference": "asset-reference/criaturas/golem-b3.png",
+      "destination": "asset-work/novos-assets/criaturas/golem-b3.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 3 · Galeria dos Fósseis. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "golem",
+      "variant": 0,
+      "biome": 2,
+      "referencePath": "dist/asset-reference/criaturas/golem-b3.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "hedgehog-b3",
+      "name": "Ouriço gigante · Galeria dos Fósseis",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/hedgehog-b3.svg",
+      "pngReference": "asset-reference/criaturas/hedgehog-b3.png",
+      "destination": "asset-work/novos-assets/criaturas/hedgehog-b3.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Espectador na toca da parede; não é inimigo. Aproximadamente 4× a largura do minerador. Partes: corpo, cristais, face, olhos, patas esquerda/direita; sombra separada.",
+      "type": "hedgehog",
+      "variant": 0,
+      "biome": 2,
+      "referencePath": "dist/asset-reference/criaturas/hedgehog-b3.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "chefes",
+      "id": "boss-b3",
+      "name": "TITÃ FÓSSIL",
+      "source": "dist/boss-art.js",
+      "reference": "asset-reference/chefes/boss-b3.svg",
+      "pngReference": "asset-reference/chefes/boss-b3.png",
+      "destination": "asset-work/novos-assets/chefes/boss-b3.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 3. Gerar repouso, antecipação, ataque, vulnerável, dano e derrota.",
+      "type": "boss",
+      "variant": 2,
+      "biome": 2,
+      "referencePath": "dist/asset-reference/chefes/boss-b3.png",
+      "sourceFiles": [
+        "dist/boss-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "quartz-b3",
+      "name": "Quartzo · Galeria dos Fósseis",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/quartz-b3.svg",
+      "pngReference": "asset-reference/recursos/quartz-b3.png",
+      "destination": "asset-work/novos-assets/recursos/quartz-b3.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 0,
+      "biome": 2,
+      "referencePath": "dist/asset-reference/recursos/quartz-b3.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "ruby-b3",
+      "name": "Rubi · Galeria dos Fósseis",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/ruby-b3.svg",
+      "pngReference": "asset-reference/recursos/ruby-b3.png",
+      "destination": "asset-work/novos-assets/recursos/ruby-b3.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 1,
+      "biome": 2,
+      "referencePath": "dist/asset-reference/recursos/ruby-b3.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "topaz-b3",
+      "name": "Topázio · Galeria dos Fósseis",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/topaz-b3.svg",
+      "pngReference": "asset-reference/recursos/topaz-b3.png",
+      "destination": "asset-work/novos-assets/recursos/topaz-b3.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 2,
+      "biome": 2,
+      "referencePath": "dist/asset-reference/recursos/topaz-b3.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "emerald-b3",
+      "name": "Esmeralda · Galeria dos Fósseis",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/emerald-b3.svg",
+      "pngReference": "asset-reference/recursos/emerald-b3.png",
+      "destination": "asset-work/novos-assets/recursos/emerald-b3.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 3,
+      "biome": 2,
+      "referencePath": "dist/asset-reference/recursos/emerald-b3.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-1-b3",
+      "name": "Rocha porosa · Galeria dos Fósseis",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-1-b3.svg",
+      "pngReference": "asset-reference/recursos/rock-1-b3.png",
+      "destination": "asset-work/novos-assets/recursos/rock-1-b3.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 0,
+      "biome": 2,
+      "referencePath": "dist/asset-reference/recursos/rock-1-b3.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-2-b3",
+      "name": "Rocha compacta · Galeria dos Fósseis",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-2-b3.svg",
+      "pngReference": "asset-reference/recursos/rock-2-b3.png",
+      "destination": "asset-work/novos-assets/recursos/rock-2-b3.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 1,
+      "biome": 2,
+      "referencePath": "dist/asset-reference/recursos/rock-2-b3.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-3-b3",
+      "name": "Rocha bruta · Galeria dos Fósseis",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-3-b3.svg",
+      "pngReference": "asset-reference/recursos/rock-3-b3.png",
+      "destination": "asset-work/novos-assets/recursos/rock-3-b3.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 2,
+      "biome": 2,
+      "referencePath": "dist/asset-reference/recursos/rock-3-b3.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "biomas",
+      "id": "biome-3",
+      "name": "Galeria dos Fósseis",
+      "source": "dist/world.js + dist/cavern.js + dist/cave-layout.js",
+      "reference": "asset-reference/biomas/biome-3.svg",
+      "pngReference": "asset-reference/biomas/biome-3.png",
+      "destination": "asset-work/novos-assets/biomas/biome-3.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Esta é a miniatura real do elevador, NÃO uma captura completa da caverna. Preparar chão repetível, parede contínua (retas/cantos/extremidades), bordas e terreno especial. A topologia continua procedural.",
+      "referencePath": "dist/asset-reference/biomas/biome-3.png",
+      "sourceFiles": [
+        "dist/world.js",
+        "dist/cavern.js",
+        "dist/cave-layout.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "slime-b4",
+      "name": "Gosma de magma",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/slime-b4.svg",
+      "pngReference": "asset-reference/criaturas/slime-b4.png",
+      "destination": "asset-work/novos-assets/criaturas/slime-b4.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 4 · Coração do Manto. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "slime",
+      "variant": 0,
+      "biome": 3,
+      "referencePath": "dist/asset-reference/criaturas/slime-b4.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "bat-b4",
+      "name": "Morcego de brasa",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/bat-b4.svg",
+      "pngReference": "asset-reference/criaturas/bat-b4.png",
+      "destination": "asset-work/novos-assets/criaturas/bat-b4.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 4 · Coração do Manto. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "bat",
+      "variant": 0,
+      "biome": 3,
+      "referencePath": "dist/asset-reference/criaturas/bat-b4.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "golem-b4",
+      "name": "Guardião de obsidiana",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/golem-b4.svg",
+      "pngReference": "asset-reference/criaturas/golem-b4.png",
+      "destination": "asset-work/novos-assets/criaturas/golem-b4.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 4 · Coração do Manto. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "golem",
+      "variant": 0,
+      "biome": 3,
+      "referencePath": "dist/asset-reference/criaturas/golem-b4.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "hedgehog-b4",
+      "name": "Ouriço gigante · Coração do Manto",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/hedgehog-b4.svg",
+      "pngReference": "asset-reference/criaturas/hedgehog-b4.png",
+      "destination": "asset-work/novos-assets/criaturas/hedgehog-b4.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Espectador na toca da parede; não é inimigo. Aproximadamente 4× a largura do minerador. Partes: corpo, cristais, face, olhos, patas esquerda/direita; sombra separada.",
+      "type": "hedgehog",
+      "variant": 0,
+      "biome": 3,
+      "referencePath": "dist/asset-reference/criaturas/hedgehog-b4.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "chefes",
+      "id": "boss-b4",
+      "name": "BOSS MÍSTICO",
+      "source": "dist/boss-art.js",
+      "reference": "asset-reference/chefes/boss-b4.svg",
+      "pngReference": "asset-reference/chefes/boss-b4.png",
+      "destination": "asset-work/novos-assets/chefes/boss-b4.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 4. Gerar repouso, antecipação, ataque, vulnerável, dano e derrota.",
+      "type": "boss",
+      "variant": 3,
+      "biome": 3,
+      "referencePath": "dist/asset-reference/chefes/boss-b4.png",
+      "sourceFiles": [
+        "dist/boss-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "quartz-b4",
+      "name": "Quartzo · Coração do Manto",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/quartz-b4.svg",
+      "pngReference": "asset-reference/recursos/quartz-b4.png",
+      "destination": "asset-work/novos-assets/recursos/quartz-b4.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 0,
+      "biome": 3,
+      "referencePath": "dist/asset-reference/recursos/quartz-b4.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "ruby-b4",
+      "name": "Rubi · Coração do Manto",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/ruby-b4.svg",
+      "pngReference": "asset-reference/recursos/ruby-b4.png",
+      "destination": "asset-work/novos-assets/recursos/ruby-b4.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 1,
+      "biome": 3,
+      "referencePath": "dist/asset-reference/recursos/ruby-b4.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "topaz-b4",
+      "name": "Topázio · Coração do Manto",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/topaz-b4.svg",
+      "pngReference": "asset-reference/recursos/topaz-b4.png",
+      "destination": "asset-work/novos-assets/recursos/topaz-b4.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 2,
+      "biome": 3,
+      "referencePath": "dist/asset-reference/recursos/topaz-b4.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "emerald-b4",
+      "name": "Esmeralda · Coração do Manto",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/emerald-b4.svg",
+      "pngReference": "asset-reference/recursos/emerald-b4.png",
+      "destination": "asset-work/novos-assets/recursos/emerald-b4.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 3,
+      "biome": 3,
+      "referencePath": "dist/asset-reference/recursos/emerald-b4.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-1-b4",
+      "name": "Rocha porosa · Coração do Manto",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-1-b4.svg",
+      "pngReference": "asset-reference/recursos/rock-1-b4.png",
+      "destination": "asset-work/novos-assets/recursos/rock-1-b4.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 0,
+      "biome": 3,
+      "referencePath": "dist/asset-reference/recursos/rock-1-b4.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-2-b4",
+      "name": "Rocha compacta · Coração do Manto",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-2-b4.svg",
+      "pngReference": "asset-reference/recursos/rock-2-b4.png",
+      "destination": "asset-work/novos-assets/recursos/rock-2-b4.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 1,
+      "biome": 3,
+      "referencePath": "dist/asset-reference/recursos/rock-2-b4.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-3-b4",
+      "name": "Rocha bruta · Coração do Manto",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-3-b4.svg",
+      "pngReference": "asset-reference/recursos/rock-3-b4.png",
+      "destination": "asset-work/novos-assets/recursos/rock-3-b4.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 2,
+      "biome": 3,
+      "referencePath": "dist/asset-reference/recursos/rock-3-b4.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "biomas",
+      "id": "biome-4",
+      "name": "Coração do Manto",
+      "source": "dist/world.js + dist/cavern.js + dist/cave-layout.js",
+      "reference": "asset-reference/biomas/biome-4.svg",
+      "pngReference": "asset-reference/biomas/biome-4.png",
+      "destination": "asset-work/novos-assets/biomas/biome-4.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Esta é a miniatura real do elevador, NÃO uma captura completa da caverna. Preparar chão repetível, parede contínua (retas/cantos/extremidades), bordas e terreno especial. A topologia continua procedural.",
+      "referencePath": "dist/asset-reference/biomas/biome-4.png",
+      "sourceFiles": [
+        "dist/world.js",
+        "dist/cavern.js",
+        "dist/cave-layout.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "slime-b5",
+      "name": "Gosma micelial",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/slime-b5.svg",
+      "pngReference": "asset-reference/criaturas/slime-b5.png",
+      "destination": "asset-work/novos-assets/criaturas/slime-b5.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 5 · Gruta dos Micélios. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "slime",
+      "variant": 0,
+      "biome": 4,
+      "referencePath": "dist/asset-reference/criaturas/slime-b5.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "bat-b5",
+      "name": "Mariposa de esporos",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/bat-b5.svg",
+      "pngReference": "asset-reference/criaturas/bat-b5.png",
+      "destination": "asset-work/novos-assets/criaturas/bat-b5.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 5 · Gruta dos Micélios. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "bat",
+      "variant": 0,
+      "biome": 4,
+      "referencePath": "dist/asset-reference/criaturas/bat-b5.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "golem-b5",
+      "name": "Colosso de fungos",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/golem-b5.svg",
+      "pngReference": "asset-reference/criaturas/golem-b5.png",
+      "destination": "asset-work/novos-assets/criaturas/golem-b5.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 5 · Gruta dos Micélios. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "golem",
+      "variant": 0,
+      "biome": 4,
+      "referencePath": "dist/asset-reference/criaturas/golem-b5.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "hedgehog-b5",
+      "name": "Ouriço gigante · Gruta dos Micélios",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/hedgehog-b5.svg",
+      "pngReference": "asset-reference/criaturas/hedgehog-b5.png",
+      "destination": "asset-work/novos-assets/criaturas/hedgehog-b5.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Espectador na toca da parede; não é inimigo. Aproximadamente 4× a largura do minerador. Partes: corpo, cristais, face, olhos, patas esquerda/direita; sombra separada.",
+      "type": "hedgehog",
+      "variant": 0,
+      "biome": 4,
+      "referencePath": "dist/asset-reference/criaturas/hedgehog-b5.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "chefes",
+      "id": "boss-b5",
+      "name": "SOBERANO MICELIAL",
+      "source": "dist/boss-art.js",
+      "reference": "asset-reference/chefes/boss-b5.svg",
+      "pngReference": "asset-reference/chefes/boss-b5.png",
+      "destination": "asset-work/novos-assets/chefes/boss-b5.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 5. Gerar repouso, antecipação, ataque, vulnerável, dano e derrota. Intangível: invoca núcleos e usa espiral de pedras.",
+      "type": "boss",
+      "variant": 4,
+      "biome": 4,
+      "referencePath": "dist/asset-reference/chefes/boss-b5.png",
+      "sourceFiles": [
+        "dist/boss-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "quartz-b5",
+      "name": "Quartzo · Gruta dos Micélios",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/quartz-b5.svg",
+      "pngReference": "asset-reference/recursos/quartz-b5.png",
+      "destination": "asset-work/novos-assets/recursos/quartz-b5.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 0,
+      "biome": 4,
+      "referencePath": "dist/asset-reference/recursos/quartz-b5.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "ruby-b5",
+      "name": "Rubi · Gruta dos Micélios",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/ruby-b5.svg",
+      "pngReference": "asset-reference/recursos/ruby-b5.png",
+      "destination": "asset-work/novos-assets/recursos/ruby-b5.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 1,
+      "biome": 4,
+      "referencePath": "dist/asset-reference/recursos/ruby-b5.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "topaz-b5",
+      "name": "Topázio · Gruta dos Micélios",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/topaz-b5.svg",
+      "pngReference": "asset-reference/recursos/topaz-b5.png",
+      "destination": "asset-work/novos-assets/recursos/topaz-b5.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 2,
+      "biome": 4,
+      "referencePath": "dist/asset-reference/recursos/topaz-b5.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "emerald-b5",
+      "name": "Esmeralda · Gruta dos Micélios",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/emerald-b5.svg",
+      "pngReference": "asset-reference/recursos/emerald-b5.png",
+      "destination": "asset-work/novos-assets/recursos/emerald-b5.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 3,
+      "biome": 4,
+      "referencePath": "dist/asset-reference/recursos/emerald-b5.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-1-b5",
+      "name": "Rocha porosa · Gruta dos Micélios",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-1-b5.svg",
+      "pngReference": "asset-reference/recursos/rock-1-b5.png",
+      "destination": "asset-work/novos-assets/recursos/rock-1-b5.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 0,
+      "biome": 4,
+      "referencePath": "dist/asset-reference/recursos/rock-1-b5.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-2-b5",
+      "name": "Rocha compacta · Gruta dos Micélios",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-2-b5.svg",
+      "pngReference": "asset-reference/recursos/rock-2-b5.png",
+      "destination": "asset-work/novos-assets/recursos/rock-2-b5.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 1,
+      "biome": 4,
+      "referencePath": "dist/asset-reference/recursos/rock-2-b5.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-3-b5",
+      "name": "Rocha bruta · Gruta dos Micélios",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-3-b5.svg",
+      "pngReference": "asset-reference/recursos/rock-3-b5.png",
+      "destination": "asset-work/novos-assets/recursos/rock-3-b5.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 2,
+      "biome": 4,
+      "referencePath": "dist/asset-reference/recursos/rock-3-b5.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "biomas",
+      "id": "biome-5",
+      "name": "Gruta dos Micélios",
+      "source": "dist/world.js + dist/cavern.js + dist/cave-layout.js",
+      "reference": "asset-reference/biomas/biome-5.svg",
+      "pngReference": "asset-reference/biomas/biome-5.png",
+      "destination": "asset-work/novos-assets/biomas/biome-5.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Esta é a miniatura real do elevador, NÃO uma captura completa da caverna. Preparar chão repetível, parede contínua (retas/cantos/extremidades), bordas e terreno especial. A topologia continua procedural.",
+      "referencePath": "dist/asset-reference/biomas/biome-5.png",
+      "sourceFiles": [
+        "dist/world.js",
+        "dist/cavern.js",
+        "dist/cave-layout.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "slime-b6",
+      "name": "Gosma de argila",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/slime-b6.svg",
+      "pngReference": "asset-reference/criaturas/slime-b6.png",
+      "destination": "asset-work/novos-assets/criaturas/slime-b6.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 6 · Tocas de Âmbar. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "slime",
+      "variant": 0,
+      "biome": 5,
+      "referencePath": "dist/asset-reference/criaturas/slime-b6.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "bat-b6",
+      "name": "Morcego de âmbar",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/bat-b6.svg",
+      "pngReference": "asset-reference/criaturas/bat-b6.png",
+      "destination": "asset-work/novos-assets/criaturas/bat-b6.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 6 · Tocas de Âmbar. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "bat",
+      "variant": 0,
+      "biome": 5,
+      "referencePath": "dist/asset-reference/criaturas/bat-b6.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "golem-b6",
+      "name": "Guardião das tocas",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/golem-b6.svg",
+      "pngReference": "asset-reference/criaturas/golem-b6.png",
+      "destination": "asset-work/novos-assets/criaturas/golem-b6.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 6 · Tocas de Âmbar. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "golem",
+      "variant": 0,
+      "biome": 5,
+      "referencePath": "dist/asset-reference/criaturas/golem-b6.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "hedgehog-b6",
+      "name": "Ouriço gigante · Tocas de Âmbar",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/hedgehog-b6.svg",
+      "pngReference": "asset-reference/criaturas/hedgehog-b6.png",
+      "destination": "asset-work/novos-assets/criaturas/hedgehog-b6.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Espectador na toca da parede; não é inimigo. Aproximadamente 4× a largura do minerador. Partes: corpo, cristais, face, olhos, patas esquerda/direita; sombra separada.",
+      "type": "hedgehog",
+      "variant": 0,
+      "biome": 5,
+      "referencePath": "dist/asset-reference/criaturas/hedgehog-b6.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "chefes",
+      "id": "boss-b6",
+      "name": "REI DAS TOCAS",
+      "source": "dist/boss-art.js",
+      "reference": "asset-reference/chefes/boss-b6.svg",
+      "pngReference": "asset-reference/chefes/boss-b6.png",
+      "destination": "asset-work/novos-assets/chefes/boss-b6.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 6. Gerar repouso, antecipação, ataque, vulnerável, dano e derrota. Toupeira: afundar e emergir.",
+      "type": "boss",
+      "variant": 5,
+      "biome": 5,
+      "referencePath": "dist/asset-reference/chefes/boss-b6.png",
+      "sourceFiles": [
+        "dist/boss-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "quartz-b6",
+      "name": "Quartzo · Tocas de Âmbar",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/quartz-b6.svg",
+      "pngReference": "asset-reference/recursos/quartz-b6.png",
+      "destination": "asset-work/novos-assets/recursos/quartz-b6.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 0,
+      "biome": 5,
+      "referencePath": "dist/asset-reference/recursos/quartz-b6.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "ruby-b6",
+      "name": "Rubi · Tocas de Âmbar",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/ruby-b6.svg",
+      "pngReference": "asset-reference/recursos/ruby-b6.png",
+      "destination": "asset-work/novos-assets/recursos/ruby-b6.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 1,
+      "biome": 5,
+      "referencePath": "dist/asset-reference/recursos/ruby-b6.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "topaz-b6",
+      "name": "Topázio · Tocas de Âmbar",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/topaz-b6.svg",
+      "pngReference": "asset-reference/recursos/topaz-b6.png",
+      "destination": "asset-work/novos-assets/recursos/topaz-b6.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 2,
+      "biome": 5,
+      "referencePath": "dist/asset-reference/recursos/topaz-b6.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "emerald-b6",
+      "name": "Esmeralda · Tocas de Âmbar",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/emerald-b6.svg",
+      "pngReference": "asset-reference/recursos/emerald-b6.png",
+      "destination": "asset-work/novos-assets/recursos/emerald-b6.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 3,
+      "biome": 5,
+      "referencePath": "dist/asset-reference/recursos/emerald-b6.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-1-b6",
+      "name": "Rocha porosa · Tocas de Âmbar",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-1-b6.svg",
+      "pngReference": "asset-reference/recursos/rock-1-b6.png",
+      "destination": "asset-work/novos-assets/recursos/rock-1-b6.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 0,
+      "biome": 5,
+      "referencePath": "dist/asset-reference/recursos/rock-1-b6.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-2-b6",
+      "name": "Rocha compacta · Tocas de Âmbar",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-2-b6.svg",
+      "pngReference": "asset-reference/recursos/rock-2-b6.png",
+      "destination": "asset-work/novos-assets/recursos/rock-2-b6.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 1,
+      "biome": 5,
+      "referencePath": "dist/asset-reference/recursos/rock-2-b6.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-3-b6",
+      "name": "Rocha bruta · Tocas de Âmbar",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-3-b6.svg",
+      "pngReference": "asset-reference/recursos/rock-3-b6.png",
+      "destination": "asset-work/novos-assets/recursos/rock-3-b6.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 2,
+      "biome": 5,
+      "referencePath": "dist/asset-reference/recursos/rock-3-b6.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "biomas",
+      "id": "biome-6",
+      "name": "Tocas de Âmbar",
+      "source": "dist/world.js + dist/cavern.js + dist/cave-layout.js",
+      "reference": "asset-reference/biomas/biome-6.svg",
+      "pngReference": "asset-reference/biomas/biome-6.png",
+      "destination": "asset-work/novos-assets/biomas/biome-6.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Esta é a miniatura real do elevador, NÃO uma captura completa da caverna. Preparar chão repetível, parede contínua (retas/cantos/extremidades), bordas e terreno especial. A topologia continua procedural.",
+      "referencePath": "dist/asset-reference/biomas/biome-6.png",
+      "sourceFiles": [
+        "dist/world.js",
+        "dist/cavern.js",
+        "dist/cave-layout.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "slime-b7",
+      "name": "Gosma de broto",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/slime-b7.svg",
+      "pngReference": "asset-reference/criaturas/slime-b7.png",
+      "destination": "asset-work/novos-assets/criaturas/slime-b7.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 7 · Hortas Subterrâneas. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "slime",
+      "variant": 0,
+      "biome": 6,
+      "referencePath": "dist/asset-reference/criaturas/slime-b7.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "bat-b7",
+      "name": "Mariposa da horta",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/bat-b7.svg",
+      "pngReference": "asset-reference/criaturas/bat-b7.png",
+      "destination": "asset-work/novos-assets/criaturas/bat-b7.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 7 · Hortas Subterrâneas. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "bat",
+      "variant": 0,
+      "biome": 6,
+      "referencePath": "dist/asset-reference/criaturas/bat-b7.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "golem-b7",
+      "name": "Guardião da colheita",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/golem-b7.svg",
+      "pngReference": "asset-reference/criaturas/golem-b7.png",
+      "destination": "asset-work/novos-assets/criaturas/golem-b7.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 7 · Hortas Subterrâneas. Gerar repouso, movimento, antecipação, ataque, dano e morte. Variantes elite podem reutilizar o corpo.",
+      "type": "golem",
+      "variant": 0,
+      "biome": 6,
+      "referencePath": "dist/asset-reference/criaturas/golem-b7.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "criaturas",
+      "id": "hedgehog-b7",
+      "name": "Ouriço gigante · Hortas Subterrâneas",
+      "source": "dist/creature-art.js",
+      "reference": "asset-reference/criaturas/hedgehog-b7.svg",
+      "pngReference": "asset-reference/criaturas/hedgehog-b7.png",
+      "destination": "asset-work/novos-assets/criaturas/hedgehog-b7.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Espectador na toca da parede; não é inimigo. Aproximadamente 4× a largura do minerador. Partes: corpo, cristais, face, olhos, patas esquerda/direita; sombra separada.",
+      "type": "hedgehog",
+      "variant": 0,
+      "biome": 6,
+      "referencePath": "dist/asset-reference/criaturas/hedgehog-b7.png",
+      "sourceFiles": [
+        "dist/creature-art.js"
+      ]
+    },
+    {
+      "group": "chefes",
+      "id": "boss-b7",
+      "name": "BARÃO CENOURA",
+      "source": "dist/boss-art.js",
+      "reference": "asset-reference/chefes/boss-b7.svg",
+      "pngReference": "asset-reference/chefes/boss-b7.png",
+      "destination": "asset-work/novos-assets/chefes/boss-b7.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Bioma 7. Gerar repouso, antecipação, ataque, vulnerável, dano e derrota. Coelho: cenoura separada; filhos tontos com estrelas.",
+      "type": "boss",
+      "variant": 6,
+      "biome": 6,
+      "referencePath": "dist/asset-reference/chefes/boss-b7.png",
+      "sourceFiles": [
+        "dist/boss-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "quartz-b7",
+      "name": "Quartzo · Hortas Subterrâneas",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/quartz-b7.svg",
+      "pngReference": "asset-reference/recursos/quartz-b7.png",
+      "destination": "asset-work/novos-assets/recursos/quartz-b7.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 0,
+      "biome": 6,
+      "referencePath": "dist/asset-reference/recursos/quartz-b7.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "ruby-b7",
+      "name": "Rubi · Hortas Subterrâneas",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/ruby-b7.svg",
+      "pngReference": "asset-reference/recursos/ruby-b7.png",
+      "destination": "asset-work/novos-assets/recursos/ruby-b7.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 1,
+      "biome": 6,
+      "referencePath": "dist/asset-reference/recursos/ruby-b7.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "topaz-b7",
+      "name": "Topázio · Hortas Subterrâneas",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/topaz-b7.svg",
+      "pngReference": "asset-reference/recursos/topaz-b7.png",
+      "destination": "asset-work/novos-assets/recursos/topaz-b7.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 2,
+      "biome": 6,
+      "referencePath": "dist/asset-reference/recursos/topaz-b7.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "emerald-b7",
+      "name": "Esmeralda · Hortas Subterrâneas",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/emerald-b7.svg",
+      "pngReference": "asset-reference/recursos/emerald-b7.png",
+      "destination": "asset-work/novos-assets/recursos/emerald-b7.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "A cor da gema permanece igual; a base acompanha o bioma. Pode gerar 4 gemas separadas + 7 bases em vez de 28 imagens completas. Veio raro reutiliza cristal com sinal e brilho.",
+      "type": "crystal",
+      "variant": 3,
+      "biome": 6,
+      "referencePath": "dist/asset-reference/recursos/emerald-b7.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-1-b7",
+      "name": "Rocha porosa · Hortas Subterrâneas",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-1-b7.svg",
+      "pngReference": "asset-reference/recursos/rock-1-b7.png",
+      "destination": "asset-work/novos-assets/recursos/rock-1-b7.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 0,
+      "biome": 6,
+      "referencePath": "dist/asset-reference/recursos/rock-1-b7.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-2-b7",
+      "name": "Rocha compacta · Hortas Subterrâneas",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-2-b7.svg",
+      "pngReference": "asset-reference/recursos/rock-2-b7.png",
+      "destination": "asset-work/novos-assets/recursos/rock-2-b7.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 1,
+      "biome": 6,
+      "referencePath": "dist/asset-reference/recursos/rock-2-b7.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "recursos",
+      "id": "rock-3-b7",
+      "name": "Rocha bruta · Hortas Subterrâneas",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/recursos/rock-3-b7.svg",
+      "pngReference": "asset-reference/recursos/rock-3-b7.png",
+      "destination": "asset-work/novos-assets/recursos/rock-3-b7.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Pedra minerável. Distinguir das paredes indestrutíveis. Rochas que caem podem reutilizar a rocha bruta.",
+      "type": "rock",
+      "variant": 2,
+      "biome": 6,
+      "referencePath": "dist/asset-reference/recursos/rock-3-b7.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "biomas",
+      "id": "biome-7",
+      "name": "Hortas Subterrâneas",
+      "source": "dist/world.js + dist/cavern.js + dist/cave-layout.js",
+      "reference": "asset-reference/biomas/biome-7.svg",
+      "pngReference": "asset-reference/biomas/biome-7.png",
+      "destination": "asset-work/novos-assets/biomas/biome-7.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Esta é a miniatura real do elevador, NÃO uma captura completa da caverna. Preparar chão repetível, parede contínua (retas/cantos/extremidades), bordas e terreno especial. A topologia continua procedural.",
+      "referencePath": "dist/asset-reference/biomas/biome-7.png",
+      "sourceFiles": [
+        "dist/world.js",
+        "dist/cavern.js",
+        "dist/cave-layout.js"
+      ]
+    },
+    {
+      "group": "chefes",
+      "id": "rabbit-child",
+      "name": "Filhote de coelho",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/chefes/rabbit-child.svg",
+      "pngReference": "asset-reference/chefes/rabbit-child.png",
+      "destination": "asset-work/novos-assets/chefes/rabbit-child.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Repouso, aparecer/sumir da toca, golpe recebido e tonto. Estrelas girando ficam em efeito separado.",
+      "type": "rabbit",
+      "variant": 0,
+      "biome": 6,
+      "referencePath": "dist/asset-reference/chefes/rabbit-child.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "chefes",
+      "id": "spore-core",
+      "name": "Núcleo invocado pelo Soberano",
+      "source": "dist/scene-art.js",
+      "reference": "asset-reference/chefes/spore-core.svg",
+      "pngReference": "asset-reference/chefes/spore-core.png",
+      "destination": "asset-work/novos-assets/chefes/spore-core.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Cogumelo invocado e quebrável; manter leitura diferente da decoração.",
+      "type": "mushroom",
+      "variant": 0,
+      "biome": 4,
+      "referencePath": "dist/asset-reference/chefes/spore-core.png",
+      "sourceFiles": [
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "tree",
+      "name": "Árvore da caverna",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/tree.svg",
+      "pngReference": "asset-reference/cenario/tree.png",
+      "destination": "asset-work/novos-assets/cenario/tree.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "tree",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/tree.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "bush",
+      "name": "Arbusto da caverna",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/bush.svg",
+      "pngReference": "asset-reference/cenario/bush.png",
+      "destination": "asset-work/novos-assets/cenario/bush.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "bush",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/bush.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "molehill",
+      "name": "Toca de âmbar",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/molehill.svg",
+      "pngReference": "asset-reference/cenario/molehill.png",
+      "destination": "asset-work/novos-assets/cenario/molehill.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "molehill",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/molehill.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "mushroom",
+      "name": "Cogumelo",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/mushroom.svg",
+      "pngReference": "asset-reference/cenario/mushroom.png",
+      "destination": "asset-work/novos-assets/cenario/mushroom.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "mushroom",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/mushroom.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "fossil",
+      "name": "Fóssil",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/fossil.svg",
+      "pngReference": "asset-reference/cenario/fossil.png",
+      "destination": "asset-work/novos-assets/cenario/fossil.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "fossil",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/fossil.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "lava",
+      "name": "Magma",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/lava.svg",
+      "pngReference": "asset-reference/cenario/lava.png",
+      "destination": "asset-work/novos-assets/cenario/lava.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "lava",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/lava.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "crate",
+      "name": "Caixote",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/crate.svg",
+      "pngReference": "asset-reference/cenario/crate.png",
+      "destination": "asset-work/novos-assets/cenario/crate.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "crate",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/crate.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "lantern",
+      "name": "Lampião",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/lantern.svg",
+      "pngReference": "asset-reference/cenario/lantern.png",
+      "destination": "asset-work/novos-assets/cenario/lantern.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "lantern",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/lantern.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "campfire",
+      "name": "Fogueira",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/campfire.svg",
+      "pngReference": "asset-reference/cenario/campfire.png",
+      "destination": "asset-work/novos-assets/cenario/campfire.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "campfire",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/campfire.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "lift",
+      "name": "Saída / elevador da caverna",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/lift.svg",
+      "pngReference": "asset-reference/cenario/lift.png",
+      "destination": "asset-work/novos-assets/cenario/lift.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "lift",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/lift.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "potion",
+      "name": "Poção",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/potion.svg",
+      "pngReference": "asset-reference/cenario/potion.png",
+      "destination": "asset-work/novos-assets/cenario/potion.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "potion",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/potion.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "shield",
+      "name": "Escudo",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/shield.svg",
+      "pngReference": "asset-reference/cenario/shield.png",
+      "destination": "asset-work/novos-assets/cenario/shield.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "shield",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/shield.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "ticket",
+      "name": "Passe do Zag",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/ticket.svg",
+      "pngReference": "asset-reference/cenario/ticket.png",
+      "destination": "asset-work/novos-assets/cenario/ticket.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "ticket",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/ticket.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "roulette",
+      "name": "Roleta dos painéis",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/roulette.svg",
+      "pngReference": "asset-reference/cenario/roulette.png",
+      "destination": "asset-work/novos-assets/cenario/roulette.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "roulette",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/roulette.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "zag",
+      "name": "Zag dos painéis",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/zag.svg",
+      "pngReference": "asset-reference/cenario/zag.png",
+      "destination": "asset-work/novos-assets/cenario/zag.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "zag",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/zag.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "cenario",
+      "id": "gramophone",
+      "name": "Vitrola dos painéis",
+      "source": "dist/art-kit.js + dist/scene-art.js",
+      "reference": "asset-reference/cenario/gramophone.svg",
+      "pngReference": "asset-reference/cenario/gramophone.png",
+      "destination": "asset-work/novos-assets/cenario/gramophone.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Referência do desenho por código. Props ambientais podem ter materiais por bioma. Fogueira: chama separada. Alguns painéis também usam desenhos CSS e exigem integração.",
+      "type": "gramophone",
+      "variant": 0,
+      "biome": 0,
+      "referencePath": "dist/asset-reference/cenario/gramophone.png",
+      "sourceFiles": [
+        "dist/art-kit.js",
+        "dist/scene-art.js"
+      ]
+    },
+    {
+      "group": "equipamento",
+      "id": "helmet",
+      "name": "Capacete",
+      "source": "dist/ui-art.js + dist/gear-view.js",
+      "reference": "asset-reference/equipamento/helmet.svg",
+      "pngReference": "asset-reference/equipamento/helmet.png",
+      "destination": "asset-work/novos-assets/equipamento/helmet.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone do slot. A roupa equipada não tem 8 PNGs independentes hoje; o retrato usa o minerador. Picareta usa também as 10 artes em Personagem.",
+      "referencePath": "dist/asset-reference/equipamento/helmet.png",
+      "sourceFiles": [
+        "dist/ui-art.js",
+        "dist/gear-view.js"
+      ]
+    },
+    {
+      "group": "equipamento",
+      "id": "chest",
+      "name": "Peitoral",
+      "source": "dist/ui-art.js + dist/gear-view.js",
+      "reference": "asset-reference/equipamento/chest.svg",
+      "pngReference": "asset-reference/equipamento/chest.png",
+      "destination": "asset-work/novos-assets/equipamento/chest.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone do slot. A roupa equipada não tem 8 PNGs independentes hoje; o retrato usa o minerador. Picareta usa também as 10 artes em Personagem.",
+      "referencePath": "dist/asset-reference/equipamento/chest.png",
+      "sourceFiles": [
+        "dist/ui-art.js",
+        "dist/gear-view.js"
+      ]
+    },
+    {
+      "group": "equipamento",
+      "id": "pants",
+      "name": "Calça",
+      "source": "dist/ui-art.js + dist/gear-view.js",
+      "reference": "asset-reference/equipamento/pants.svg",
+      "pngReference": "asset-reference/equipamento/pants.png",
+      "destination": "asset-work/novos-assets/equipamento/pants.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone do slot. A roupa equipada não tem 8 PNGs independentes hoje; o retrato usa o minerador. Picareta usa também as 10 artes em Personagem.",
+      "referencePath": "dist/asset-reference/equipamento/pants.png",
+      "sourceFiles": [
+        "dist/ui-art.js",
+        "dist/gear-view.js"
+      ]
+    },
+    {
+      "group": "equipamento",
+      "id": "boots",
+      "name": "Botas",
+      "source": "dist/ui-art.js + dist/gear-view.js",
+      "reference": "asset-reference/equipamento/boots.svg",
+      "pngReference": "asset-reference/equipamento/boots.png",
+      "destination": "asset-work/novos-assets/equipamento/boots.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone do slot. A roupa equipada não tem 8 PNGs independentes hoje; o retrato usa o minerador. Picareta usa também as 10 artes em Personagem.",
+      "referencePath": "dist/asset-reference/equipamento/boots.png",
+      "sourceFiles": [
+        "dist/ui-art.js",
+        "dist/gear-view.js"
+      ]
+    },
+    {
+      "group": "equipamento",
+      "id": "necklace",
+      "name": "Colar",
+      "source": "dist/ui-art.js + dist/gear-view.js",
+      "reference": "asset-reference/equipamento/necklace.svg",
+      "pngReference": "asset-reference/equipamento/necklace.png",
+      "destination": "asset-work/novos-assets/equipamento/necklace.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone do slot. A roupa equipada não tem 8 PNGs independentes hoje; o retrato usa o minerador. Picareta usa também as 10 artes em Personagem.",
+      "referencePath": "dist/asset-reference/equipamento/necklace.png",
+      "sourceFiles": [
+        "dist/ui-art.js",
+        "dist/gear-view.js"
+      ]
+    },
+    {
+      "group": "equipamento",
+      "id": "ring",
+      "name": "Anel",
+      "source": "dist/ui-art.js + dist/gear-view.js",
+      "reference": "asset-reference/equipamento/ring.svg",
+      "pngReference": "asset-reference/equipamento/ring.png",
+      "destination": "asset-work/novos-assets/equipamento/ring.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone do slot. A roupa equipada não tem 8 PNGs independentes hoje; o retrato usa o minerador. Picareta usa também as 10 artes em Personagem.",
+      "referencePath": "dist/asset-reference/equipamento/ring.png",
+      "sourceFiles": [
+        "dist/ui-art.js",
+        "dist/gear-view.js"
+      ]
+    },
+    {
+      "group": "equipamento",
+      "id": "backpack",
+      "name": "Mochila",
+      "source": "dist/ui-art.js + dist/gear-view.js",
+      "reference": "asset-reference/equipamento/backpack.svg",
+      "pngReference": "asset-reference/equipamento/backpack.png",
+      "destination": "asset-work/novos-assets/equipamento/backpack.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone do slot. A roupa equipada não tem 8 PNGs independentes hoje; o retrato usa o minerador. Picareta usa também as 10 artes em Personagem.",
+      "referencePath": "dist/asset-reference/equipamento/backpack.png",
+      "sourceFiles": [
+        "dist/ui-art.js",
+        "dist/gear-view.js"
+      ]
+    },
+    {
+      "group": "equipamento",
+      "id": "pickaxe",
+      "name": "Picareta",
+      "source": "dist/ui-art.js + dist/gear-view.js",
+      "reference": "asset-reference/equipamento/pickaxe.svg",
+      "pngReference": "asset-reference/equipamento/pickaxe.png",
+      "destination": "asset-work/novos-assets/equipamento/pickaxe.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone do slot. A roupa equipada não tem 8 PNGs independentes hoje; o retrato usa o minerador. Picareta usa também as 10 artes em Personagem.",
+      "referencePath": "dist/asset-reference/equipamento/pickaxe.png",
+      "sourceFiles": [
+        "dist/ui-art.js",
+        "dist/gear-view.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "muscle",
+      "name": "Braço de pedra",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/muscle.svg",
+      "pngReference": "asset-reference/cartas/muscle.png",
+      "destination": "asset-work/novos-assets/cartas/muscle.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: DANO. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/muscle.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "lucky",
+      "name": "Golpe de sorte",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/lucky.svg",
+      "pngReference": "asset-reference/cartas/lucky.png",
+      "destination": "asset-work/novos-assets/cartas/lucky.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: DANO. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/lucky.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "popcorn",
+      "name": "Pipoca mineral",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/popcorn.svg",
+      "pngReference": "asset-reference/cartas/popcorn.png",
+      "destination": "asset-work/novos-assets/cartas/popcorn.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: EXPLOSÃO. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/popcorn.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "ricochet",
+      "name": "Pedrinha voadora",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/ricochet.svg",
+      "pngReference": "asset-reference/cartas/ricochet.png",
+      "destination": "asset-work/novos-assets/cartas/ricochet.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: DANO. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/ricochet.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "pockets",
+      "name": "Bolso sem fundo",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/pockets.svg",
+      "pngReference": "asset-reference/cartas/pockets.png",
+      "destination": "asset-work/novos-assets/cartas/pockets.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: GEMAS. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/pockets.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "candy",
+      "name": "Cristal de açúcar",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/candy.svg",
+      "pngReference": "asset-reference/cartas/candy.png",
+      "destination": "asset-work/novos-assets/cartas/candy.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: CURA. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/candy.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "ember",
+      "name": "Tá quentinho",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/ember.svg",
+      "pngReference": "asset-reference/cartas/ember.png",
+      "destination": "asset-work/novos-assets/cartas/ember.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: FOGO. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/ember.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "ice",
+      "name": "Gelo protetor",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/ice.svg",
+      "pngReference": "asset-reference/cartas/ice.png",
+      "destination": "asset-work/novos-assets/cartas/ice.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: DEFESA. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/ice.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "vampire",
+      "name": "Lanchinho",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/vampire.svg",
+      "pngReference": "asset-reference/cartas/vampire.png",
+      "destination": "asset-work/novos-assets/cartas/vampire.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: CURA. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/vampire.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "skates",
+      "name": "Patins de pedra",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/skates.svg",
+      "pngReference": "asset-reference/cartas/skates.png",
+      "destination": "asset-work/novos-assets/cartas/skates.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: MOVIMENTO. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/skates.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "elastic",
+      "name": "Ritmo fácil",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/elastic.svg",
+      "pngReference": "asset-reference/cartas/elastic.png",
+      "destination": "asset-work/novos-assets/cartas/elastic.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: RITMO. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/elastic.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "secondwind",
+      "name": "Último fôlego",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/secondwind.svg",
+      "pngReference": "asset-reference/cartas/secondwind.png",
+      "destination": "asset-work/novos-assets/cartas/secondwind.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: CURA. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/secondwind.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "shell",
+      "name": "Casca grossa",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/shell.svg",
+      "pngReference": "asset-reference/cartas/shell.png",
+      "destination": "asset-work/novos-assets/cartas/shell.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: DEFESA. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/shell.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "laser",
+      "name": "Raio de bolso",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/laser.svg",
+      "pngReference": "asset-reference/cartas/laser.png",
+      "destination": "asset-work/novos-assets/cartas/laser.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: EXPLOSÃO. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/laser.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "echohit",
+      "name": "Toc toc",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/echohit.svg",
+      "pngReference": "asset-reference/cartas/echohit.png",
+      "destination": "asset-work/novos-assets/cartas/echohit.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: DANO. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/echohit.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "greed",
+      "name": "Brilhou, é meu",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/greed.svg",
+      "pngReference": "asset-reference/cartas/greed.png",
+      "destination": "asset-work/novos-assets/cartas/greed.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: GEMAS. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/greed.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "bombgift",
+      "name": "Presente explosivo",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/bombgift.svg",
+      "pngReference": "asset-reference/cartas/bombgift.png",
+      "destination": "asset-work/novos-assets/cartas/bombgift.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: BOMBAS. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/bombgift.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "battery",
+      "name": "Elevador turbo",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/battery.svg",
+      "pngReference": "asset-reference/cartas/battery.png",
+      "destination": "asset-work/novos-assets/cartas/battery.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: MINERAÇÃO. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/battery.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "sprouts",
+      "name": "Adubo suspeito",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/sprouts.svg",
+      "pngReference": "asset-reference/cartas/sprouts.png",
+      "destination": "asset-work/novos-assets/cartas/sprouts.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: MINERAÇÃO. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/sprouts.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "revival",
+      "name": "Só mais uma",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/revival.svg",
+      "pngReference": "asset-reference/cartas/revival.png",
+      "destination": "asset-work/novos-assets/cartas/revival.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: VIDA EXTRA. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/revival.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "lantern",
+      "name": "Lanterna Viva",
+      "source": "dist/cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/lantern.svg",
+      "pngReference": "asset-reference/cartas/lantern.png",
+      "destination": "asset-work/novos-assets/cartas/lantern.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: VISÃO. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/lantern.png",
+      "sourceFiles": [
+        "dist/cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "abyss-heal",
+      "name": "Reparo vital",
+      "source": "dist/abyss-cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/abyss-heal.svg",
+      "pngReference": "asset-reference/cartas/abyss-heal.png",
+      "destination": "asset-work/novos-assets/cartas/abyss-heal.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: CURA. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/abyss-heal.png",
+      "sourceFiles": [
+        "dist/abyss-cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "abyss-breath",
+      "name": "Respire fundo",
+      "source": "dist/abyss-cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/abyss-breath.svg",
+      "pngReference": "asset-reference/cartas/abyss-breath.png",
+      "destination": "asset-work/novos-assets/cartas/abyss-breath.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: FÔLEGO. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/abyss-breath.png",
+      "sourceFiles": [
+        "dist/abyss-cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "cartas",
+      "id": "abyss-ward",
+      "name": "Bolha de proteção",
+      "source": "dist/abyss-cards.js + dist/ui-art.js",
+      "reference": "asset-reference/cartas/abyss-ward.svg",
+      "pngReference": "asset-reference/cartas/abyss-ward.png",
+      "destination": "asset-work/novos-assets/cartas/abyss-ward.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Símbolo atual: ESCUDO. Pode criar ilustração própria do efeito, sem nome/texto dentro da imagem. Texto continua na interface.",
+      "referencePath": "dist/asset-reference/cartas/abyss-ward.png",
+      "sourceFiles": [
+        "dist/abyss-cards.js",
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "heart",
+      "name": "heart",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/heart.svg",
+      "pngReference": "asset-reference/icones/heart.png",
+      "destination": "asset-work/novos-assets/icones/heart.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/heart.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "vault",
+      "name": "vault",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/vault.svg",
+      "pngReference": "asset-reference/icones/vault.png",
+      "destination": "asset-work/novos-assets/icones/vault.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/vault.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "wings",
+      "name": "Asas",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/wings.svg",
+      "pngReference": "asset-reference/icones/wings.png",
+      "destination": "asset-work/novos-assets/icones/wings.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/wings.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "magnet",
+      "name": "Ímã",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/magnet.svg",
+      "pngReference": "asset-reference/icones/magnet.png",
+      "destination": "asset-work/novos-assets/icones/magnet.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/magnet.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "sight",
+      "name": "Visão",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/sight.svg",
+      "pngReference": "asset-reference/icones/sight.png",
+      "destination": "asset-work/novos-assets/icones/sight.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/sight.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "gem",
+      "name": "Gema",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/gem.svg",
+      "pngReference": "asset-reference/icones/gem.png",
+      "destination": "asset-work/novos-assets/icones/gem.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/gem.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "force",
+      "name": "Força / picareta",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/force.svg",
+      "pngReference": "asset-reference/icones/force.png",
+      "destination": "asset-work/novos-assets/icones/force.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/force.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "ear",
+      "name": "Ritmo / música",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/ear.svg",
+      "pngReference": "asset-reference/icones/ear.png",
+      "destination": "asset-work/novos-assets/icones/ear.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/ear.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "breath",
+      "name": "Fôlego",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/breath.svg",
+      "pngReference": "asset-reference/icones/breath.png",
+      "destination": "asset-work/novos-assets/icones/breath.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/breath.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "dash",
+      "name": "Deslocamento",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/dash.svg",
+      "pngReference": "asset-reference/icones/dash.png",
+      "destination": "asset-work/novos-assets/icones/dash.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/dash.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "guard",
+      "name": "Defesa",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/guard.svg",
+      "pngReference": "asset-reference/icones/guard.png",
+      "destination": "asset-work/novos-assets/icones/guard.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/guard.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "revive",
+      "name": "Reviver",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/revive.svg",
+      "pngReference": "asset-reference/icones/revive.png",
+      "destination": "asset-work/novos-assets/icones/revive.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/revive.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "shatter",
+      "name": "Quebra",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/shatter.svg",
+      "pngReference": "asset-reference/icones/shatter.png",
+      "destination": "asset-work/novos-assets/icones/shatter.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/shatter.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "stun",
+      "name": "Atordoamento",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/stun.svg",
+      "pngReference": "asset-reference/icones/stun.png",
+      "destination": "asset-work/novos-assets/icones/stun.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/stun.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "chain",
+      "name": "Raio em cadeia",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/chain.svg",
+      "pngReference": "asset-reference/icones/chain.png",
+      "destination": "asset-work/novos-assets/icones/chain.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/chain.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "fury",
+      "name": "Frenesi",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/fury.svg",
+      "pngReference": "asset-reference/icones/fury.png",
+      "destination": "asset-work/novos-assets/icones/fury.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/fury.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "fortune",
+      "name": "Sorte",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/fortune.svg",
+      "pngReference": "asset-reference/icones/fortune.png",
+      "destination": "asset-work/novos-assets/icones/fortune.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/fortune.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "harvest",
+      "name": "Colheita / cura",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/harvest.svg",
+      "pngReference": "asset-reference/icones/harvest.png",
+      "destination": "asset-work/novos-assets/icones/harvest.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/harvest.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "seed",
+      "name": "Crescimento",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/seed.svg",
+      "pngReference": "asset-reference/icones/seed.png",
+      "destination": "asset-work/novos-assets/icones/seed.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/seed.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "echo",
+      "name": "Eco",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/echo.svg",
+      "pngReference": "asset-reference/icones/echo.png",
+      "destination": "asset-work/novos-assets/icones/echo.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/echo.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "symbiosis",
+      "name": "Simbiose",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/symbiosis.svg",
+      "pngReference": "asset-reference/icones/symbiosis.png",
+      "destination": "asset-work/novos-assets/icones/symbiosis.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/symbiosis.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "flow",
+      "name": "Fluxo",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/flow.svg",
+      "pngReference": "asset-reference/icones/flow.png",
+      "destination": "asset-work/novos-assets/icones/flow.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/flow.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "hunter",
+      "name": "Caçador",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/hunter.svg",
+      "pngReference": "asset-reference/icones/hunter.png",
+      "destination": "asset-work/novos-assets/icones/hunter.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/hunter.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "tree",
+      "name": "Talentos",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/tree.svg",
+      "pngReference": "asset-reference/icones/tree.png",
+      "destination": "asset-work/novos-assets/icones/tree.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/tree.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "lift",
+      "name": "Elevador",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/lift.svg",
+      "pngReference": "asset-reference/icones/lift.png",
+      "destination": "asset-work/novos-assets/icones/lift.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/lift.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "blast",
+      "name": "Bomba",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/blast.svg",
+      "pngReference": "asset-reference/icones/blast.png",
+      "destination": "asset-work/novos-assets/icones/blast.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/blast.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "tonic",
+      "name": "Cura",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/tonic.svg",
+      "pngReference": "asset-reference/icones/tonic.png",
+      "destination": "asset-work/novos-assets/icones/tonic.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/tonic.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "ward",
+      "name": "Escudo",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/ward.svg",
+      "pngReference": "asset-reference/icones/ward.png",
+      "destination": "asset-work/novos-assets/icones/ward.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/ward.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "forge",
+      "name": "Forja",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/forge.svg",
+      "pngReference": "asset-reference/icones/forge.png",
+      "destination": "asset-work/novos-assets/icones/forge.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/forge.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "helmet",
+      "name": "Capacete",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/helmet.svg",
+      "pngReference": "asset-reference/icones/helmet.png",
+      "destination": "asset-work/novos-assets/icones/helmet.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/helmet.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "chest",
+      "name": "Peitoral",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/chest.svg",
+      "pngReference": "asset-reference/icones/chest.png",
+      "destination": "asset-work/novos-assets/icones/chest.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/chest.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "pants",
+      "name": "Calça",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/pants.svg",
+      "pngReference": "asset-reference/icones/pants.png",
+      "destination": "asset-work/novos-assets/icones/pants.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/pants.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "boots",
+      "name": "Botas",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/boots.svg",
+      "pngReference": "asset-reference/icones/boots.png",
+      "destination": "asset-work/novos-assets/icones/boots.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/boots.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "necklace",
+      "name": "Colar",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/necklace.svg",
+      "pngReference": "asset-reference/icones/necklace.png",
+      "destination": "asset-work/novos-assets/icones/necklace.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/necklace.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "ring",
+      "name": "Anel",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/ring.svg",
+      "pngReference": "asset-reference/icones/ring.png",
+      "destination": "asset-work/novos-assets/icones/ring.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/ring.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "backpack",
+      "name": "Mochila",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/backpack.svg",
+      "pngReference": "asset-reference/icones/backpack.png",
+      "destination": "asset-work/novos-assets/icones/backpack.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/backpack.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "icones",
+      "id": "empty",
+      "name": "Espaço vazio",
+      "source": "dist/ui-art.js",
+      "reference": "asset-reference/icones/empty.svg",
+      "pngReference": "asset-reference/icones/empty.png",
+      "destination": "asset-work/novos-assets/icones/empty.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Ícone compartilhado. Manter leitura a 32 px; a mesma arte pode servir a várias cartas e habilidades. Não é um efeito animado.",
+      "referencePath": "dist/asset-reference/icones/empty.png",
+      "sourceFiles": [
+        "dist/ui-art.js"
+      ]
+    },
+    {
+      "group": "zag",
+      "id": "die-1",
+      "name": "Dado · face 1",
+      "source": "dist/zag-view.js",
+      "reference": "asset-reference/zag/die-1.svg",
+      "pngReference": "asset-reference/zag/die-1.png",
+      "destination": "asset-work/novos-assets/zag/die-1.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Seis faces do mesmo dado. Pode gerar uma base e manter os pontos por código; não precisa fazer seis modelos diferentes.",
+      "referencePath": "dist/asset-reference/zag/die-1.png",
+      "sourceFiles": [
+        "dist/zag-view.js"
+      ]
+    },
+    {
+      "group": "zag",
+      "id": "die-2",
+      "name": "Dado · face 2",
+      "source": "dist/zag-view.js",
+      "reference": "asset-reference/zag/die-2.svg",
+      "pngReference": "asset-reference/zag/die-2.png",
+      "destination": "asset-work/novos-assets/zag/die-2.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Seis faces do mesmo dado. Pode gerar uma base e manter os pontos por código; não precisa fazer seis modelos diferentes.",
+      "referencePath": "dist/asset-reference/zag/die-2.png",
+      "sourceFiles": [
+        "dist/zag-view.js"
+      ]
+    },
+    {
+      "group": "zag",
+      "id": "die-3",
+      "name": "Dado · face 3",
+      "source": "dist/zag-view.js",
+      "reference": "asset-reference/zag/die-3.svg",
+      "pngReference": "asset-reference/zag/die-3.png",
+      "destination": "asset-work/novos-assets/zag/die-3.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Seis faces do mesmo dado. Pode gerar uma base e manter os pontos por código; não precisa fazer seis modelos diferentes.",
+      "referencePath": "dist/asset-reference/zag/die-3.png",
+      "sourceFiles": [
+        "dist/zag-view.js"
+      ]
+    },
+    {
+      "group": "zag",
+      "id": "die-4",
+      "name": "Dado · face 4",
+      "source": "dist/zag-view.js",
+      "reference": "asset-reference/zag/die-4.svg",
+      "pngReference": "asset-reference/zag/die-4.png",
+      "destination": "asset-work/novos-assets/zag/die-4.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Seis faces do mesmo dado. Pode gerar uma base e manter os pontos por código; não precisa fazer seis modelos diferentes.",
+      "referencePath": "dist/asset-reference/zag/die-4.png",
+      "sourceFiles": [
+        "dist/zag-view.js"
+      ]
+    },
+    {
+      "group": "zag",
+      "id": "die-5",
+      "name": "Dado · face 5",
+      "source": "dist/zag-view.js",
+      "reference": "asset-reference/zag/die-5.svg",
+      "pngReference": "asset-reference/zag/die-5.png",
+      "destination": "asset-work/novos-assets/zag/die-5.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Seis faces do mesmo dado. Pode gerar uma base e manter os pontos por código; não precisa fazer seis modelos diferentes.",
+      "referencePath": "dist/asset-reference/zag/die-5.png",
+      "sourceFiles": [
+        "dist/zag-view.js"
+      ]
+    },
+    {
+      "group": "zag",
+      "id": "die-6",
+      "name": "Dado · face 6",
+      "source": "dist/zag-view.js",
+      "reference": "asset-reference/zag/die-6.svg",
+      "pngReference": "asset-reference/zag/die-6.png",
+      "destination": "asset-work/novos-assets/zag/die-6.png",
+      "status": "PREPARAR · AINDA NÃO CONECTADO",
+      "note": "Seis faces do mesmo dado. Pode gerar uma base e manter os pontos por código; não precisa fazer seis modelos diferentes.",
+      "referencePath": "dist/asset-reference/zag/die-6.png",
+      "sourceFiles": [
+        "dist/zag-view.js"
+      ]
+    }
+  ],
+  "production": [
+    {
+      "name": "Terreno e paredes",
+      "source": "dist/world.js / dist/cavern.js / dist/cave-layout.js",
+      "files": "Por bioma: chão repetível; parede reta; cantos interno/externo; ponta; toca grande do ouriço; buracos da toupeira/coelhos. Água, lama, fungos, magma e horta conforme ambiente.",
+      "note": "Sem arquivo isolado atual. Use a galeria de cavernas como referência. Nunca desenhar a caverna inteira em uma imagem: precisa combinar peças."
+    },
+    {
+      "name": "Vila: chão e decoração pequena",
+      "source": "dist/flow-village.js",
+      "files": "Grama, borda de terra, caminho, fogueira, cristais decorativos, cogumelos e caixas.",
+      "note": "Ainda desenhados por código, mesmo na vila nova. Reservar área livre para edifícios; não incorporar construções ao terreno."
+    },
+    {
+      "name": "Efeitos de combate",
+      "source": "dist/effects.js / dist/world.js",
+      "files": "Impacto, quebra mineral (4 cores), poeira de pedra, explosão/bomba, raio, fogo, cura, escudo, teleporte, asas, ímã, estrelas e atordoamento.",
+      "note": "Hoje são partículas, linhas e formas. Opcional substituir por spritesheets; preservar sinais de perigo e efeitos no ritmo. Números, combo e barras continuam dinâmicos."
+    },
+    {
+      "name": "Tabuleiro do Zag",
+      "source": "dist/zag-view.js / dist/zag.css / dist/zag.js",
+      "files": "Casas: partida, cofre, runa (3 símbolos), fragmentos, cristais (4 cores), tesouro/jackpot, desabamento, auditoria, experiência, dado, escudo e saque ×2. Peão usa o minerador.",
+      "note": "Hoje construído pela interface. Várias casas reutilizam rocha, cristal, caixa, Zag e lampião já catalogados. Fundo separado do tabuleiro e dos botões; não embutir valores/textos."
+    },
+    {
+      "name": "Vitrola e colecionáveis",
+      "source": "dist/records-view.js / dist/records.css / dist/records.js",
+      "files": "Disco-base, rótulos/capas para os 15 discos, essência, moeda e estrela.",
+      "note": "Discos do menu usam CSS atualmente. São desenhos de interface; gerar capas é opcional e não altera músicas ou drops."
+    },
+    {
+      "name": "Molduras e menus",
+      "source": "dist/*.css / dist/*-view.js",
+      "files": "Moldura de carta, nó de talento pequeno/grande/máximo, conectores, botões e painéis se desejar.",
+      "note": "Não precisa transformar tudo em imagem. Textos, valores, barras e botões devem continuar funcionais e legíveis."
+    },
+    {
+      "name": "Arquivados · não gerar agora",
+      "source": "dist/art-kit.js",
+      "files": "gardener, tent, drill",
+      "note": "Jardineiro é alias antigo do ouriço; tenda foi substituída pela roleta; broca pertence ao conceito antigo do Zag. Não são prioridades de produção."
+    }
+  ]
+}

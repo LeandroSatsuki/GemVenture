@@ -1,0 +1,31 @@
+name: Bug
+description: Relatar um problema reproduzível no jogo.
+title: "[Bug] "
+body:
+  - type: input
+    id: environment
+    attributes:
+      label: Ambiente
+      placeholder: "Windows 11 / Chrome / modo Andares"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Como reproduzir
+      description: Passos curtos, incluindo modo e situação da partida.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: O que deveria acontecer?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: O que aconteceu?
+      description: Pode incluir uma captura ou vídeo. Não publique dados pessoais ou credenciais.
+    validations:
+      required: true

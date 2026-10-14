@@ -1,0 +1,9 @@
+@media (hover:hover) and (pointer:fine){
+ html,body,body #world,body button:not(:disabled),body a,body [role="button"]{cursor:var(--pickaxe-cursor,pointer)}
+ body button:disabled{cursor:not-allowed}
+ body input,body textarea{cursor:text}
+}
+.pickaxe-evolution{display:flex;align-items:center;gap:12px;padding:10px 14px;background:#180d2f;border:2px solid #5ee9e9;border-radius:12px;margin-bottom:14px}
+.pickaxe-evolution svg{width:68px;height:75px;flex-shrink:0}
+.pickaxe-evolution strong{display:block;font-size:24px;color:#e8ff75;text-transform:uppercase}
+.pickaxe-evolution span{display:block;font-size:16px;font-weight:800;color:#c5cddb;margin-top:4px}

@@ -1,0 +1,11 @@
+import {World} from './world.js';
+import {createState} from './core.js';
+import {loadVillageArt,FLOW_ART,flowImageUrl} from './flow-village.js';
+const canvas=document.getElementById('villageCanvas'),world=new World(canvas),state=createState(712);
+world.place(state);world.setSoft(false);
+await loadVillageArt();document.getElementById('save').disabled=false;
+document.getElementById('assetExports').innerHTML=Object.entries(FLOW_ART).map(([type,file])=>'<button data-export="'+type+'">'+file+'</button>').join('');
+document.getElementById('assetExports').addEventListener('click',e=>{const type=e.target.dataset.export;if(!type)return;const a=document.createElement('a');a.href=flowImageUrl(type);a.download=FLOW_ART[type]+'.png';a.click();});
+let last=performance.now();function frame(now){world.draw(state,now/1000,Math.min(.05,(now-last)/1000),null,null,false);last=now;requestAnimationFrame(frame);}requestAnimationFrame(frame);
+addEventListener('resize',()=>world.resize());
+document.getElementById('save').addEventListener('click',()=>canvas.toBlob(blob=>{const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='vila-flow-preview.png';a.click();setTimeout(()=>URL.revokeObjectURL(url),5000);},'image/png'));

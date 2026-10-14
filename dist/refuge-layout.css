@@ -1,0 +1,136 @@
+/* The village is the screen; its HUD occupies the unbuilt edges of the map. */
+body.immersive-base{overflow:hidden}
+.immersive-base>header{height:54px;padding:0 20px}
+.immersive-base>main{position:fixed;inset:54px 0 0;max-width:none;padding:0;margin:0;isolation:isolate}
+.immersive-base .stage[data-mode="base"]{position:absolute;inset:0;width:100%;height:100%;min-height:0;border:0;border-radius:0;box-shadow:none;z-index:0}
+.immersive-base .stage[data-mode="base"]>canvas{height:calc(100% - 85px)}
+.immersive-base .scene-heading{position:absolute;inset:18px 24px auto;margin:0;z-index:7;pointer-events:none;align-items:flex-start}
+.immersive-base .scene-heading>div:first-child{padding:10px 16px;border-left:3px solid #5ee9e9;background:#180d2fe6;border-radius:0 12px 12px 0}
+.immersive-base .scene-heading .eyebrow{font-size:12px}
+.immersive-base h1{font-size:clamp(24px,2.5vw,36px);margin:3px 0 0}
+.immersive-base .balances{gap:6px}
+.immersive-base .balances>div{min-width:88px;padding:9px 13px;gap:8px;border-radius:10px;clip-path:none;border:1px solid #353658;background:#180d2fe6}
+.immersive-base .balances small{font-size:12px}
+.immersive-base .balances strong{font-size:24px}
+.immersive-base .experience-hud{position:absolute;bottom:48px;left:24px;width:310px;display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:12px 16px;margin:0;z-index:7;background:#180d2fee;border:1px solid #353658;border-radius:14px;pointer-events:none}
+.immersive-base .experience-label{flex-wrap:wrap;gap:4px 12px;font-size:14px}
+.immersive-base .experience-label strong{flex-basis:100%;margin:0;font-size:13px}
+.immersive-base .material-wallet{position:absolute;bottom:48px;right:24px;z-index:7;gap:8px;margin:0;max-width:calc(100% - 390px);pointer-events:none}
+.immersive-base .material-wallet>div{display:grid;grid-template-columns:30px auto;gap:0 8px;padding:9px 13px;background:#180d2fee;border-radius:12px}
+.immersive-base .material-wallet svg{grid-row:span 2;width:30px;height:40px}
+.immersive-base .material-wallet b{font-size:22px;line-height:1.2}
+.immersive-base .material-wallet span{display:block;font-size:12px}
+.immersive-base>main>footer{position:absolute;bottom:0;left:24px;right:24px;z-index:7;min-height:35px;margin:0;padding:10px 0;border:0;font-size:10px}
+.immersive-base #missionHud{display:none} /* The mission board retains progress and claim actions. */
+.immersive-base .village-building>span{font-size:clamp(12px,1.3vw,19px);padding:7px 12px}
+/* A full-window table with separate scroll areas, never a tiny fixed-height board. */
+dialog.zag-dialog{width:calc(100vw - 16px);max-width:none;height:calc(100dvh - 16px);max-height:none;margin:auto;border-radius:16px;overflow:hidden;box-shadow:0 0 0 8px #180d2f}
+dialog.zag-dialog .dialog-top{position:absolute;top:12px;right:14px;padding:0;border:0;background:transparent;z-index:30}
+.zag-dialog #dialogLabel{display:none}
+.zag-dialog #close{width:44px;height:44px;border-radius:10px;font-size:30px}
+dialog.zag-dialog #dialogBody{height:100%;padding:14px 20px;overflow:hidden}
+.zag-game{height:100%;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:10px;min-height:0}
+.zag-heading{height:auto;min-height:64px;margin:0;padding:0 58px 8px 0;gap:12px;flex:none}
+.zag-heading h2{font-size:clamp(22px,2.3vw,36px);margin:2px 0}
+.zag-host{width:64px}
+.zag-host svg{height:64px;object-fit:contain}
+.zag-heading>div>span{font-size:12px}
+.zag-wallet span{font-size:12px!important}
+.zag-wallet b{font-size:27px}
+.zag-layout{height:auto;min-height:0;grid-template-columns:minmax(0,1fr) minmax(360px,32%);gap:18px}
+.zag-map{min-height:0;background:#180d2f}
+.zag-board-head{padding:9px 18px;flex-shrink:0}
+.zag-board-head span,.zag-board-head b{font-size:17px}
+.zag-lane-labels{flex-shrink:0;font-size:15px;padding:6px}
+.zag-board-window{height:auto;min-height:0;max-height:none;overflow:auto;background:radial-gradient(ellipse at top,#353658,#180d2f);scrollbar-gutter:stable}
+.zag-board{width:min(100%,600px);margin:auto}
+.zag-feedback{min-height:70px;padding:10px;flex-shrink:0}
+.zag-feedback strong{font-size:22px}
+.zag-feedback span{font-size:15px;margin-top:3px}
+.zag-controls{gap:7px;overflow-y:auto;overscroll-behavior:contain;padding:2px 6px 4px 0;scrollbar-width:thin;scrollbar-color:#5ee9e9 #180d2f}
+.zag-controls>*{flex-shrink:0}
+.zag-controls button{font-size:18px;line-height:1.15;min-height:44px;padding:9px 8px}
+.zag-controls button small{font-size:14px;line-height:1.2}
+.zag-roulette-row .zag-wheel-wrap{width:84px}
+.zag-routes button{font-size:17px}
+.zag-hand{min-height:110px}
+.zag-hand button{padding:7px 4px;gap:5px}
+.zag-hand svg{width:44px;height:44px}
+.zag-hand strong{font-size:15px}
+.zag-hand button small{font-size:14px}
+.zag-move-preview{font-size:15px}
+.zag-controls #zagMove{font-size:23px;min-height:50px}
+.zag-tools button{font:700 14px 'Chakra Petch',sans-serif;padding:9px 4px;min-height:40px}
+.zag-satchel{margin-top:auto;padding:8px}
+.zag-satchel h3{font-size:14px}
+.zag-satchel svg{height:30px}
+.zag-satchel button{font-size:16px;min-height:36px;padding:7px}
+.zag-satchel>div{margin-bottom:5px}
+.zag-workshops{position:relative;margin:0 180px 0 0;gap:12px}
+.zag-workshops details{padding:12px 16px}
+.zag-workshops details:nth-child(2){grid-column:2}
+.zag-workshops summary{font-size:16px}
+.zag-workshops details[open]{position:absolute;bottom:0;width:calc(50% - 6px);max-height:min(65dvh,520px);overflow:auto;z-index:25;border:2px solid #e8ff75;box-shadow:0 -12px 40px #180d2fcc}
+.zag-workshops details[open]:nth-child(2){right:0}
+.zag-workshops:has(details[open]){min-height:44px}
+.zag-rules{position:absolute;right:24px;bottom:27px;margin:0;padding:0;border:0}
+.zag-rules summary{font-size:14px}
+.zag-rules[open]{position:absolute;bottom:14px;left:20px;right:20px;max-height:70dvh;overflow:auto;padding:18px;background:#180d2f;border:2px solid #5ee9e9;border-radius:12px;z-index:26}
+@media(max-width:900px){
+ .immersive-base .scene-heading{inset:12px 14px auto}
+ .immersive-base .balances>div{min-width:65px;padding:8px}
+ .immersive-base .balances strong{font-size:19px}
+ .immersive-base .gem-balance>i{display:none}
+ .immersive-base .experience-hud{left:14px;width:260px}
+ .immersive-base .material-wallet{right:14px;max-width:calc(100% - 300px);gap:5px}
+ .immersive-base .material-wallet>div{padding:7px}
+ .immersive-base .material-wallet b{font-size:18px}
+ .zag-layout{grid-template-columns:minmax(0,1fr) 340px;gap:10px}
+ .zag-heading h2{font-size:23px}
+ .zag-host{width:50px}
+ .zag-wallet{gap:8px}
+}
+@media(max-width:700px){
+ .immersive-base>header{padding:0 12px}
+ .immersive-base .scene-heading{flex-wrap:wrap;gap:8px}
+ .immersive-base .scene-heading>div:first-child{padding:6px 10px}
+ .immersive-base .balances{width:100%;justify-content:space-between}
+ .immersive-base .balances>div{display:flex;flex:1;padding:5px 8px}
+ .immersive-base .balances small{font-size:10px}
+ .immersive-base .balances strong{font-size:18px}
+ .immersive-base .experience-hud{bottom:92px;width:calc(100% - 28px);padding:8px 12px}
+ .immersive-base .stage[data-mode="base"]>canvas{position:absolute;top:100px;height:calc(100% - 255px)}
+ .immersive-base .experience-label strong{flex-basis:auto;margin-left:auto;font-size:11px}
+ .immersive-base .material-wallet{left:14px;right:14px;bottom:26px;max-width:none;justify-content:space-between}
+ .immersive-base .material-wallet>div{flex:1;grid-template-columns:22px auto;gap:0 4px;padding:6px}
+ .immersive-base .material-wallet svg{width:22px;height:32px}
+ .immersive-base .material-wallet span{font-size:10px}
+ .immersive-base .village-building>span{font-size:10px;padding:5px}
+ .immersive-base>main>footer{left:14px;right:14px;padding:4px 0;min-height:20px;font-size:8px}
+ .immersive-base #footerState{display:none}
+ dialog.zag-dialog{width:100vw;height:100dvh;border-radius:0;border-width:0}
+ dialog.zag-dialog #dialogBody{padding:10px;overflow:auto}
+ .zag-game{height:auto;min-height:100%;display:flex;flex-direction:column}
+ .zag-heading{padding:0 46px 8px 0;flex-wrap:wrap;gap:8px}
+ .zag-heading h2{font-size:21px}
+ .zag-heading .zag-host{width:46px}
+ .zag-wallet{margin:0 0 0 auto}
+ .zag-layout{display:flex;flex-direction:column;height:auto}
+ .zag-board-window{height:52dvh;min-height:300px;max-height:none;flex:auto}
+ .zag-controls{overflow:visible;padding:0;gap:12px}
+ .zag-workshops{grid-template-columns:1fr;gap:10px;margin:0}
+ .zag-workshops details:nth-child(2){grid-column:auto}
+ .zag-rules{position:static}
+ .zag-workshops details[open],.zag-workshops details[open]:nth-child(2),.zag-rules[open]{position:static;width:auto;max-height:none;box-shadow:none}
+ .zag-board-head span,.zag-board-head b{font-size:14px}
+}
+
+/* Board decisions stay beside the path; deeper rules remain folded. */
+.zag-collection{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:10px 14px;background:#180d2f;border-bottom:2px solid #353658;flex:none}
+.zag-collection>strong{font:15px var(--arcade);color:#e8ff75}.zag-collection>div{display:flex;gap:8px}.zag-collection span{display:grid;place-items:center;color:#8b97b6;font-size:10px;min-width:50px;border:1px solid #686b72;border-radius:10px;padding:3px}.zag-collection span b{font-size:25px}.zag-collection span.owned{color:#e8ff75;border-color:#e8ff75;background:#353658;box-shadow:0 0 10px #ecab1133}.zag-collection small{max-width:120px;font-size:11px;color:#c5cddb;font-weight:800}
+.zag-routes{grid-template-columns:repeat(3,1fr)}.zag-routes button[data-route=craft]{color:#e8ff75}.zag-lane-labels b:nth-child(2){color:#e8ff75}.zag-lane-labels b:nth-child(3){color:#f94e6d}
+.zag-controls .zag-auto{background:#053239;color:#5ee9e9;border:2px solid #5ee9e9;font:20px var(--arcade);padding:10px}.zag-controls .zag-auto[aria-pressed=true]{background:#5ee9e9;color:#180d2f}.zag-adjust{display:flex;align-items:center;gap:8px}.zag-adjust b{font-size:12px;min-width:65px;text-align:center;color:#e8ff75}.zag-adjust button{font-size:14px}
+.zag-workshops{grid-template-columns:repeat(3,1fr)}.zag-workshops details:nth-child(2){grid-column:auto}.zag-workshops details[open]{z-index:30}
+@media(max-width:760px){.zag-collection{flex-wrap:wrap;gap:6px}.zag-collection>strong{font-size:13px}.zag-collection small{max-width:none}.zag-workshops{grid-template-columns:1fr}.zag-routes button{font-size:14px}.zag-controls .zag-auto small{font-size:12px}}
+
+@media(min-width:761px){.zag-workshops details[open]{width:calc(48% - 8px)}.zag-workshops details[open]:nth-child(1){left:0}.zag-workshops details[open]:nth-child(2){left:26%;right:auto}.zag-workshops details[open]:nth-child(3){right:0}.zag-collection{padding:7px 14px}.zag-collection span{display:flex;gap:5px;padding:4px 8px;min-width:0}.zag-collection span b{font-size:21px}}

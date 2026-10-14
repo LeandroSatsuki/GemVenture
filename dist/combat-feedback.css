@@ -1,0 +1,33 @@
+/* Health follows the rendered miner; retain its text for screen readers. */
+.exploration-hud{position:absolute;bottom:10px;left:220px;max-width:calc(100% - 560px);z-index:3;pointer-events:none;background:#180d2f;color:#e8ff75;border-left:3px solid #5ee9e9;padding:7px 10px;font-size:13px;font-weight:800}
+@media(max-width:700px){.exploration-hud{left:8px;top:115px;bottom:auto;max-width:calc(100% - 95px);font-size:11px;padding:5px}}
+.run-hud .vital{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap;border:0!important}
+.combo-burst{width:230px;right:204px;top:104px;transform-origin:80% 35%}
+.combo-burst>strong{font-size:82px;line-height:1.08;text-shadow:4px 5px #841252,0 0 25px currentColor}
+.combo-burst>small{font-size:18px}.combo-burst>span{font-size:16px}
+.combo-burst:before{inset:-12px;opacity:.24}
+.combo-burst[data-tier="3"]>strong,.combo-burst[data-tier="4"]>strong{font-size:94px}
+.proc-feed{top:275px;max-width:290px}
+.proc-label{font-size:24px!important;gap:10px;padding:11px 14px;border-width:2px;transform-origin:right center;animation:skill-impact 2.1s both}
+.proc-label .glyph{width:34px;height:34px;flex-shrink:0}
+@keyframes skill-impact{0%{opacity:0;transform:translateX(30px) scale(.65)}12%{opacity:1;transform:translateX(-8px) scale(1.12)}24%,76%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-16px) scale(.95)}}
+.soft-fx .proc-label{animation:none;box-shadow:none}.soft-fx .combo-burst:before{opacity:.1}
+@media(max-width:700px){.combo-burst{right:77px;top:80px;width:145px}.combo-burst>strong{font-size:54px}.combo-burst[data-tier="3"]>strong,.combo-burst[data-tier="4"]>strong{font-size:62px}.combo-burst>small{font-size:13px}.combo-burst>span{font-size:12px}.proc-feed{top:222px;max-width:180px}.proc-label{font-size:16px!important;padding:8px;gap:6px}.proc-label .glyph{width:25px;height:25px}}
+@media(prefers-reduced-motion:reduce){.proc-label{animation:none}}
+.breath-hud{position:relative;margin:10px 0;z-index:4;padding:9px 12px 11px;background:#053239;border:2px solid #5ee9e9;box-shadow:0 4px #180d2f;pointer-events:none}
+.breath-heading{display:flex;align-items:center;gap:14px;margin-bottom:7px;color:#5ee9e9}
+.breath-heading strong{font:20px var(--arcade)}.breath-heading span{font-size:13px;font-weight:800;margin-left:auto}.breath-heading b{font-size:18px;color:#fff}
+.breath-meter{height:22px;background:#180d2f;border:2px solid #353658;overflow:hidden}
+.breath-meter i{display:block;height:100%;width:100%;background:#5ee9e9;box-shadow:inset 0 5px #2890dc;transition:width .12s}
+.breath-hud[data-low="true"]{border-color:#f94e6d}.breath-hud[data-low="true"] .breath-heading{color:#f94e6d}.breath-hud[data-low="true"] .breath-meter i{background:#f94e6d;box-shadow:inset 0 5px #c12458}
+@media(max-width:700px){.breath-hud{padding:8px}.breath-heading{gap:5px;margin-bottom:5px}.breath-heading strong{font-size:15px}.breath-heading b{font-size:14px;margin-left:auto}.breath-heading span{display:none}.breath-meter{height:19px}}
+
+/* Brief, phrase-aligned cue. Kept out of the character and combo areas. */
+.music-cue{position:absolute;z-index:12;left:50%;top:14px;transform:translateX(-50%);display:flex;align-items:center;gap:14px;padding:9px 18px;background:#180d2f;border:3px solid #5ee9e9;color:#5ee9e9;box-shadow:0 4px 0 #180d2f;pointer-events:none}
+.music-cue[hidden]{display:none}
+.music-cue strong{font:20px Bungee,sans-serif;letter-spacing:1px}
+.music-cue b{font:26px Bungee,sans-serif;min-width:28px;text-align:center}
+.music-cue[data-direction="up"]{color:#fbbe82;border-color:#fbbe82}
+.music-cue[data-pulse="on"]{transform:translateX(-50%) scale(1.06)}
+.soft-fx .music-cue[data-pulse="on"]{transform:translateX(-50%)}
+@media(max-width:700px){.music-cue{top:70px;gap:8px;padding:6px 10px}.music-cue strong{font-size:16px}.music-cue b{font-size:20px}}

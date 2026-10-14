@@ -1,0 +1,475 @@
+{
+  "version": 1,
+  "locale": "pt-BR",
+  "status": "Catálogo de design; sem integração com Steamworks ou contadores de conquistas no jogo.",
+  "achievements": [
+    {
+      "id": "ACH_FIRST_CRYSTAL",
+      "name": "Primeiro Brilho",
+      "description": "Quebre seu primeiro cristal.",
+      "metric": "crystals_broken",
+      "target": 1,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_ROCKS_25",
+      "name": "Abra Caminho",
+      "description": "Quebre 25 pedras.",
+      "metric": "rocks_broken",
+      "target": 25,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_KILLS_10",
+      "name": "Sai da Frente",
+      "description": "Derrote 10 criaturas.",
+      "metric": "enemies_killed",
+      "target": 10,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_CRYSTALS_100",
+      "name": "Mãos à Mina",
+      "description": "Quebre 100 cristais.",
+      "metric": "crystals_broken",
+      "target": 100,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_QUARTZ_50",
+      "name": "Quartzo Puro",
+      "description": "Quebre 50 cristais de quartzo.",
+      "metric": "crystals_broken_0",
+      "target": 50,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_RUBY_25",
+      "name": "Sangue da Terra",
+      "description": "Quebre 25 rubis.",
+      "metric": "crystals_broken_1",
+      "target": 25,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_TOPAZ_25",
+      "name": "Sol Subterrâneo",
+      "description": "Quebre 25 topázios.",
+      "metric": "crystals_broken_2",
+      "target": 25,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_EMERALD_25",
+      "name": "Verde Vivo",
+      "description": "Quebre 25 esmeraldas.",
+      "metric": "crystals_broken_3",
+      "target": 25,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_COMBO_25",
+      "name": "Pegou o Ritmo",
+      "description": "Alcance um combo de 25.",
+      "metric": "best_combo",
+      "target": 25,
+      "scope": "single_run",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_COMBO_50",
+      "name": "No Embalo",
+      "description": "Alcance um combo de 50.",
+      "metric": "best_combo",
+      "target": 50,
+      "scope": "single_run",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_PERFECT_250",
+      "name": "Ouvido Afiado",
+      "description": "Acerte 250 ações no ritmo.",
+      "metric": "perfect_actions",
+      "target": 250,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_FIRST_FLOOR",
+      "name": "Mais Fundo",
+      "description": "Conclua seu primeiro andar.",
+      "metric": "floors_cleared",
+      "target": 1,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_FIRST_BOSS",
+      "name": "Geodo Partido",
+      "description": "Derrote o guardião do andar 5.",
+      "metric": "boss_5_kills",
+      "target": 1,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_REACH_FOREST",
+      "name": "Verde no Escuro",
+      "description": "Entre no andar 6.",
+      "metric": "highest_floor_entered",
+      "target": 6,
+      "scope": "single_run",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_FIRST_CARD",
+      "name": "Nova Ideia",
+      "description": "Escolha sua primeira carta.",
+      "metric": "cards_chosen",
+      "target": 1,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_FIVE_CARDS",
+      "name": "Plano de Ataque",
+      "description": "Tenha 5 cartas diferentes na mesma descida.",
+      "metric": "run_distinct_cards",
+      "target": 5,
+      "scope": "single_run",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_FIRST_STAR",
+      "name": "Nasceu uma Estrela",
+      "description": "Ganhe sua primeira estrela por pontuação.",
+      "metric": "performance_stars_earned",
+      "target": 1,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_THREE_STARS",
+      "name": "Trio Brilhante",
+      "description": "Ganhe 3 estrelas na mesma descida.",
+      "metric": "run_performance_stars",
+      "target": 3,
+      "scope": "single_run",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_SAFE_RETURN",
+      "name": "Lar, Doce Lar",
+      "description": "Volte vivo com recursos coletados.",
+      "metric": "safe_returns_with_cargo",
+      "target": 1,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_FIRST_RESCUE",
+      "name": "Saque Seguro",
+      "description": "Envie recursos por um resgate.",
+      "metric": "nonempty_rescues",
+      "target": 1,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_FIRST_TALENT",
+      "name": "Primeiro Nó",
+      "description": "Aprenda seu primeiro talento.",
+      "metric": "unique_talents_learned",
+      "target": 1,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_FIRST_MAX_NODE",
+      "name": "Nó Completo",
+      "description": "Leve um nó de talento ao máximo.",
+      "metric": "maxed_talent_nodes",
+      "target": 1,
+      "scope": "snapshot",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_PICKAXE_5",
+      "name": "Bom Fio",
+      "description": "Leve a picareta ao nível 5.",
+      "metric": "pickaxe_level",
+      "target": 5,
+      "scope": "snapshot",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_FIRST_ARMOR",
+      "name": "Casca Dura",
+      "description": "Construa sua primeira melhoria de armadura.",
+      "metric": "armor_level",
+      "target": 1,
+      "scope": "snapshot",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_FIRST_BUILDING",
+      "name": "Vila Crescente",
+      "description": "Aprimore um prédio da vila.",
+      "metric": "building_upgrades_bought",
+      "target": 1,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_FIRST_MISSION",
+      "name": "Serviço Feito",
+      "description": "Receba a recompensa de uma missão.",
+      "metric": "missions_claimed",
+      "target": 1,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_MISSIONS_5",
+      "name": "Nome na Praça",
+      "description": "Receba 5 recompensas de missão.",
+      "metric": "missions_claimed",
+      "target": 5,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_FIRST_WISH",
+      "name": "Pedra no Poço",
+      "description": "Faça sua primeira oferenda.",
+      "metric": "offerings_made",
+      "target": 1,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_FIRST_ABYSS",
+      "name": "Além do Portão",
+      "description": "Entre no Abismo após abrir o portão.",
+      "metric": "legitimate_abyss_entries",
+      "target": 1,
+      "scope": "cumulative",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_ABYSS_250",
+      "name": "Sem Fundo",
+      "description": "Alcance 250 metros no Abismo.",
+      "metric": "best_abyss_depth_m",
+      "target": 250,
+      "scope": "single_run",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ACH_CRYSTALS_50000",
+      "name": "Montanha Oca",
+      "description": "Quebre 50 mil cristais.",
+      "metric": "crystals_broken",
+      "target": 50000,
+      "scope": "cumulative",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_KILLS_10000",
+      "name": "Varredura Total",
+      "description": "Derrote 10 mil criaturas.",
+      "metric": "enemies_killed",
+      "target": 10000,
+      "scope": "cumulative",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_BOSSES_250",
+      "name": "Caça a Titãs",
+      "description": "Derrote 250 chefes.",
+      "metric": "bosses_killed",
+      "target": 250,
+      "scope": "cumulative",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_COMBO_1000",
+      "name": "Pulso Imortal",
+      "description": "Alcance um combo de 1.000.",
+      "metric": "best_combo",
+      "target": 1000,
+      "scope": "single_run",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_ABYSS_5000",
+      "name": "Cinco Quilômetros",
+      "description": "Alcance 5.000 metros no Abismo.",
+      "metric": "best_abyss_depth_m",
+      "target": 5000,
+      "scope": "single_run",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_ABYSS_NO_DAMAGE",
+      "name": "Intocável",
+      "description": "Chegue a 1.000 m no Abismo sem perder vida.",
+      "metric": "abyss_no_health_damage_depth_m",
+      "target": 1000,
+      "scope": "single_run",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_ABYSS_NO_MISS",
+      "name": "Metrônomo Vivo",
+      "description": "Chegue a 1.000 m no Abismo sem perder fôlego.",
+      "metric": "abyss_no_rhythm_loss_depth_m",
+      "target": 1000,
+      "scope": "single_run",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_FULL_DESCENT_ALIVE",
+      "name": "Uma Só Chance",
+      "description": "Vença os 25 andares desde o início sem reviver.",
+      "metric": "full_campaign_no_revive",
+      "target": 1,
+      "scope": "single_run",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_FULL_DESCENT_UNTOUCHED",
+      "name": "Fantasma da Mina",
+      "description": "Vença os 25 andares desde o início sem perder vida.",
+      "metric": "full_campaign_no_health_damage",
+      "target": 1,
+      "scope": "single_run",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_FULL_DESCENT_NO_TONIC",
+      "name": "Sem Goles",
+      "description": "Vença os 25 andares desde o início sem usar poções.",
+      "metric": "full_campaign_no_tonic",
+      "target": 1,
+      "scope": "single_run",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_MYCELIUM_FLAWLESS",
+      "name": "Dança dos Esporos",
+      "description": "Vença o chefe do andar 25 sem perder vida nessa arena.",
+      "metric": "boss_25_flawless_wins",
+      "target": 1,
+      "scope": "single_floor",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_ABYSS_FIVE_STARS_FAST",
+      "name": "Estrela Cadente",
+      "description": "Ganhe 5 estrelas no Abismo antes de 1.000 metros.",
+      "metric": "abyss_five_stars_before_1000m",
+      "target": 1,
+      "scope": "single_run",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_CHALLENGES_50",
+      "name": "Sem Tempo Ruim",
+      "description": "Conclua 50 desafios durante as descidas.",
+      "metric": "dynamic_challenges_won",
+      "target": 50,
+      "scope": "cumulative",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_MISSIONS_100",
+      "name": "Lenda da Vila",
+      "description": "Receba 100 recompensas de missão.",
+      "metric": "missions_claimed",
+      "target": 100,
+      "scope": "cumulative",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_PICKAXE_100",
+      "name": "Obra Prima",
+      "description": "Leve a picareta ao nível 100.",
+      "metric": "pickaxe_level",
+      "target": 100,
+      "scope": "snapshot",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_ALL_BUILDINGS_MAX",
+      "name": "Vila Monumental",
+      "description": "Leve Forja, Poço e Quadro ao nível 10.",
+      "metric": "buildings_at_level_10",
+      "target": 3,
+      "scope": "snapshot",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_TALENTS_100",
+      "name": "Mente sem Limites",
+      "description": "Aprenda 100 nós diferentes de talentos.",
+      "metric": "unique_talents_learned",
+      "target": 100,
+      "scope": "cumulative",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_NOTABLES_MAX_8",
+      "name": "Oito Constelações",
+      "description": "Leve 8 nós maiores de talento ao máximo.",
+      "metric": "maxed_notable_nodes",
+      "target": 8,
+      "scope": "snapshot",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_STARS_200",
+      "name": "Céu Particular",
+      "description": "Ganhe 200 estrelas por pontuação.",
+      "metric": "performance_stars_earned",
+      "target": 200,
+      "scope": "cumulative",
+      "difficulty": "very_hard"
+    },
+    {
+      "id": "ACH_MINERAL_MASTERY",
+      "name": "Quatro Corações",
+      "description": "Quebre 5.000 cristais de cada uma das quatro cores.",
+      "metric": "minimum_crystals_broken_per_kind",
+      "target": 5000,
+      "scope": "cumulative",
+      "difficulty": "very_hard"
+    }
+  ],
+  "notes": [
+    "Fácil significa aprendizado e primeiras horas, não desbloqueio automático.",
+    "Metas muito difíceis são uma proposta para a nova curva; validar com telemetria de runs e ajustar antes de publicar na Steam.",
+    "Conquistas sem perder vida/fôlego exigem zero perda real desde o início da run/arena; recuperar depois não apaga falhas.",
+    "A campanha completa aqui é o arco inicial 1–25; não exige terminar uma progressão infinita.",
+    "Aprender 100 nós e maximizar 8 nós maiores depende da nova teia solicitada conter essa quantidade.",
+    "Contar nós de cristais quebrados, não quantidade de loot, salvo quando a descrição disser recursos.",
+    "Estrelas de prestígio contam somente awardScore, não compras, recompensas do Zag, transferência de save nem saldo atual.",
+    "Testes/fixtures/debug/desbloqueio de portão por playtest não devem publicar conquistas Steam.",
+    "Critérios permanentes já comprovados podem ser migrados; não inventar históricos de perfeição ou gasto.",
+    "Custos e chance da nova roleta não entram em conquistas; evitar premiar gastar até ter sorte."
+  ],
+  "steam": {
+    "source": "https://partner.steamgames.com/doc/features/achievements",
+    "guide": "https://partner.steamgames.com/doc/features/achievements/ach_guide",
+    "implementation": "IDs API separados dos textos localizados. Stats INT incrementais ou máximos. SetStat/SetAchievement durante progresso; StoreStats em checkpoints e desbloqueios. Tratar callbacks e reenvio; não afirmar integração Steam enquanto só houver catálogo local.",
+    "initialAchievementLimit": 100
+  }
+}

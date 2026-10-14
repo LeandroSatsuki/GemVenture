@@ -1,0 +1,17 @@
+name: Ideia
+description: Propor uma melhoria com objetivo claro.
+title: "[Ideia] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Qual problema resolve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposta
+      description: Explique o comportamento e como se encaixa no ritmo, na progressão e nos papéis da vila.
+    validations:
+      required: true

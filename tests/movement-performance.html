@@ -1,0 +1,15 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Gemventure · teste de deslocamento</title>
+<style>body{margin:0;background:#180d2f;color:#fff;font:18px system-ui}header{padding:12px;display:flex;gap:16px;align-items:center}button{font:inherit;padding:10px}canvas{width:100%;height:620px}output{white-space:pre-wrap}</style>
+<header><b>EXPLORAÇÃO CONTÍNUA</b><button id="bench">Medir 3.600 quadros</button><button id="long">Simular 10 minutos</button><button id="live">Explorar</button><output id="report">Pronto</output></header><canvas id="world"></canvas>
+<script type="module">
+import {World} from '/world.js';import {createState,startRun} from '/core.js';import {reveal} from '/cavern.js';
+const state=createState(321);startRun(state);const r=state.run,w=new World(document.getElementById('world'));r.room.rocks=[];r.room.terrain.fill(0);let frame=0,live=false,last=0;
+// Same deterministic route and art workload before/after; no save or game economy touched.
+const route=[{x:4,y:12},{x:8,y:12},{x:12,y:12},{x:16,y:12},{x:20,y:12},{x:24,y:12},{x:28,y:12},{x:32,y:12},{x:36,y:12},{x:32,y:12},{x:28,y:12},{x:24,y:12},{x:20,y:12},{x:16,y:12},{x:12,y:12},{x:8,y:12}];
+function reset(){frame=0;r.player={...route[0]};w.place(state);reveal(r.room,r.player);w.draw(state,0,0,null,null,true);}
+function step(){if(frame%24===0){const from={...r.player},to=route[(Math.floor(frame/24)+1)%route.length],path=[];for(let x=from.x+Math.sign(to.x-from.x);x!==to.x+Math.sign(to.x-from.x);x+=Math.sign(to.x-from.x))path.push({x,y:to.y});r.player={...to};reveal(r.room,r.player);w.consume([{type:'dash',from,to,path}]);}w.draw(state,frame/60,1/60,null,null,false);frame++;}
+async function measure(batches){live=false;reset();const times=[];let trails=0;const buttons=['bench','long','live'].map(id=>document.getElementById(id));buttons.forEach(b=>b.disabled=true);for(let batch=0;batch<batches;batch++){await new Promise(requestAnimationFrame);for(let i=0;i<60;i++){const t=performance.now();step();times.push(performance.now()-t);trails=Math.max(trails,w.trail.length);}}const mean=a=>+(a.reduce((x,y)=>x+y,0)/a.length).toFixed(2),firstMs=mean(times.slice(0,3600)),lastMs=mean(times.slice(-3600));times.sort((a,b)=>a-b);document.getElementById('report').textContent=JSON.stringify({frames:times.length,meanMs:mean(times),p95Ms:+times[Math.floor(times.length*.95)].toFixed(2),firstMs,lastMs,maxTrail:trails});buttons.forEach(b=>b.disabled=false);}
+document.getElementById('bench').onclick=()=>measure(60);document.getElementById('long').onclick=()=>measure(600);
+document.getElementById('live').onclick=e=>{live=!live;e.target.textContent=live?'Parar':'Explorar';};
+function animate(t){if(live&&t-last>=1000/60){step();last=t;}requestAnimationFrame(animate);}reset();requestAnimationFrame(animate);
+</script></html>

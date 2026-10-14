@@ -1,0 +1,14 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gemventure — rastro de teleporte</title>
+<style>body{margin:0;background:#180d2f;color:#fff;font:700 18px system-ui}header{padding:20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}h1{font-size:26px;margin:0 auto 0 0;color:#5ee9e9}button{background:#353658;color:#fff;border:2px solid #5ee9e9;border-radius:10px;padding:10px 16px;font:inherit;cursor:pointer}canvas{display:block;width:100%;height:calc(100vh - 130px);min-height:400px}footer{text-align:center;color:#c5cddb;padding:12px}</style>
+<header><h1>RASTRO DE TELEPORTE</h1><button id="play">Animar</button><button id="soft">Efeitos suaves</button><button id="scroll">Rolar Abismo</button></header><canvas id="world"></canvas><footer id="status">Prévia congelada durante o deslocamento · mesmo renderizador do jogo</footer>
+<script type="module">
+import {World} from '/world.js';import {createState,startRun,act} from '/core.js';
+const s=createState(321);startRun(s);const r=s.run,w=new World(document.getElementById('world'));let running=false,last=0,elapsed=0;
+r.room.rocks=[];r.room.enemies=[];r.room.nodes=r.room.nodes.filter(n=>n.y<10||n.y>13);r.room.quota=999;r.room.terrain?.fill(0);r.room.visible?.fill(1);r.room.explored?.fill(1);
+function reset(){r.player={x:8,y:12};r.acted=-1;r.beat=-1;r.events=[];w.place(s);act(s,{type:'move',x:12,y:12},0);w.consume(r.events.splice(0));r.room.visible?.fill(1);r.room.explored?.fill(1);if(!running)w.advanceMovement(.09);w.draw(s,0,0,null,null,true);elapsed=0;}
+document.getElementById('play').onclick=e=>{running=!running;e.target.textContent=running?'Congelar':'Animar';reset();};
+document.getElementById('soft').onclick=e=>{w.setSoft(!w.reduced);e.target.textContent=w.reduced?'Efeitos intensos':'Efeitos suaves';reset();};
+document.getElementById('scroll').onclick=()=>{w.consume([{type:'scroll'}]);r.player.y--;w.draw(s,0,0,null,null,true);document.getElementById('status').textContent='Rastro preservado após a rolagem';};
+new ResizeObserver(()=>{w.resize();w.draw(s,0,0,null,null,true);}).observe(w.canvas);
+function frame(time){const dt=Math.min(.05,(time-last)/1000);last=time;if(running){elapsed+=dt;if(elapsed>1)reset();w.draw(s,time/1000,dt,null,null,false);}requestAnimationFrame(frame);}w.setSoft(false);reset();requestAnimationFrame(frame);
+</script></html>

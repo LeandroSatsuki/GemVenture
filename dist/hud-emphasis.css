@@ -1,0 +1,97 @@
+/* Reward progress owns the old wave strip; the cave keeps its full viewport. */
+.immersive-run #scoreHud{top:auto;bottom:104px;left:12px;right:116px;height:84px;padding:8px 22px 8px 16px;gap:22px;z-index:10;border:2px solid #ecab11;border-radius:14px;background:linear-gradient(110deg,#180d2feb,#353658e8);box-shadow:0 0 18px #ecab1133;pointer-events:none}
+.immersive-run #scoreHud .score-total{min-width:105px;display:flex;flex-direction:column;align-items:flex-start;gap:0}
+.immersive-run #scoreHud .score-total>small{display:block;font-size:12px;font-weight:800;letter-spacing:1px;color:#e8ff75}
+.immersive-run #scoreHud .score-total>strong{font-size:32px;line-height:1.2;color:#fff}
+.immersive-run #scoreHud .score-track{min-width:0;padding-right:14px}
+.immersive-run #scoreHud .star-road{height:60px;margin:0}
+.immersive-run #scoreHud .star-progress{top:15px;height:30px;border:2px solid #ecab11;border-radius:12px;background:#180d2f}
+.immersive-run #scoreHud .star-progress>i{background:linear-gradient(90deg,#ecab11,#e8ff75);box-shadow:0 0 18px #ece910,inset 0 3px #fbbe82}
+.immersive-run #scoreHud .earned-stars{top:30px}
+.immersive-run #scoreHud .earned-stars>span{font-size:48px;color:#353658;-webkit-text-stroke:2px #ecab11;text-shadow:0 3px #180d2f}
+.immersive-run #scoreHud .earned-stars>.lit{color:#e8ff75;-webkit-text-stroke:2px #180d2f;filter:drop-shadow(0 0 10px #ecab11)}
+.immersive-run #explorationHud{top:77px;bottom:auto;left:150px;max-width:calc(100% - 435px);padding:4px 8px;background:#180d2fbf}
+.immersive-run #runCards{bottom:198px;left:205px;right:116px;height:76px;max-height:76px;align-items:stretch}
+.immersive-run #runCards .card-chip{flex-basis:280px;min-height:0;padding:6px 8px;overflow:hidden}
+.immersive-run #runCards .card-chip strong{font-size:15px;line-height:1.3;white-space:nowrap}.immersive-run #runCards .card-chip b{font-size:14px}
+.immersive-run #runCards .card-chip small{font-size:13px;line-height:1.2;margin-top:4px}.immersive-run #runCards .card-chip>.glyph{flex-shrink:0}
+.immersive-run #boostHud{bottom:270px;right:116px}
+.immersive-run #objective{bottom:195px}
+.immersive-run #frenzyHud{top:165px;gap:6px;padding:8px}
+.immersive-run #objective>div:not(.meter){font-size:10px;margin:4px 0;gap:4px}.immersive-run #objective strong{font-size:13px}.immersive-run #objective p{font-size:11px;line-height:1.4;margin-top:6px;padding-top:6px}
+.immersive-run #missionHud{bottom:360px}
+.immersive-run #runHud .combo{top:106px;right:116px;width:225px;z-index:11;pointer-events:none}
+.immersive-run #runHud #combo{font-size:72px;line-height:1.12;text-shadow:3px 4px #180d2f,0 0 14px var(--energy),0 0 30px var(--energy)}
+.immersive-run #runHud #combo>span{font-size:36px}
+.immersive-run #runHud .combo>small{font-size:16px}.immersive-run #runHud #comboHint{font-size:16px}
+.immersive-run #comboBurst{top:285px;right:116px;width:345px;z-index:12}
+.immersive-run #comboBurst>strong{font-size:123px;text-shadow:4px 5px #841252,0 0 22px currentColor,0 0 40px currentColor}
+.immersive-run #comboBurst[data-tier="3"]>strong,.immersive-run #comboBurst[data-tier="4"]>strong{font-size:141px}
+.immersive-run #comboBurst>small{font-size:24px}.immersive-run #comboBurst>span{font-size:21px}
+.immersive-run #procFeed{top:470px;right:116px;z-index:13}
+.immersive-run #bossHud{right:360px}
+.immersive-run .star-announcements{z-index:45}.immersive-run .star-flight b{font-size:140px}.immersive-run .star-flight strong{font-size:28px}
+.soft-fx.immersive-run #runHud #combo{ text-shadow:3px 4px #180d2f,0 0 7px var(--energy)}
+@media(max-width:800px){
+ .immersive-run #scoreHud{left:7px;right:72px;bottom:91px;height:74px;padding:7px 14px 7px 10px;gap:10px}
+ .immersive-run #scoreHud .score-total{min-width:54px}.immersive-run #scoreHud .score-total>small{font-size:10px}.immersive-run #scoreHud .score-total>strong{font-size:21px}
+ .immersive-run #scoreHud .star-road{height:50px}.immersive-run #scoreHud .star-progress{top:13px;height:25px}.immersive-run #scoreHud .earned-stars{top:25px}.immersive-run #scoreHud .earned-stars>span{font-size:36px}
+ .immersive-run #scoreHud .score-track{padding-right:6px}.immersive-run #explorationHud{left:82px;top:65px;max-width:calc(100% - 160px);font-size:10px}
+ .immersive-run #runHud .combo{top:107px;right:73px;width:128px}.immersive-run #runHud #combo{font-size:48px}.immersive-run #runHud #combo>span{font-size:24px}.immersive-run #runHud .combo>small{font-size:12px}
+ .immersive-run #comboBurst{top:243px;right:73px;width:195px}.immersive-run #comboBurst>strong{font-size:75px}.immersive-run #comboBurst[data-tier="3"]>strong,.immersive-run #comboBurst[data-tier="4"]>strong{font-size:93px}.immersive-run #comboBurst>small,.immersive-run #comboBurst>span{font-size:16px}
+ .immersive-run #procFeed{top:390px;right:73px}.immersive-run #runCards{bottom:178px;left:150px;right:72px;max-height:76px}.immersive-run #boostHud{bottom:262px;right:72px}
+ .immersive-run #objective{bottom:180px}.immersive-run #missionHud{bottom:330px}.immersive-run #bossHud{left:150px;right:73px}
+ .immersive-run #frenzyHud{top:106px}
+}
+@media(max-height:560px) and (min-width:801px){.immersive-run #comboBurst{top:220px}.immersive-run #procFeed{top:355px}.immersive-run #boostHud{bottom:205px}.immersive-run #runCards{max-height:40px}.immersive-run #scoreHud{height:72px;bottom:95px}.immersive-run #objective{bottom:180px}}
+
+/* Stars rise in their own right-hand rail; every pixel lets clicks pass through. */
+.immersive-run #boostHud{left:auto;max-width:300px;flex-wrap:wrap;justify-content:flex-end;pointer-events:none}
+.immersive-run #boostHud .boost-node{display:flex;flex-direction:column;justify-content:center;gap:2px;width:45px;height:58px;padding:4px;border-radius:10px;box-shadow:0 0 8px var(--boost)}
+.immersive-run #boostHud .boost-node b,.immersive-run #boostHud .boost-node .glyph{width:30px;height:30px;display:block}
+.immersive-run #boostHud .boost-node small{font-size:12px}
+#scoreFill{width:var(--score-fill,0%)}.earned-stars>span{left:var(--star-mark,0%)}
+.immersive-run #stage>canvas{width:calc(100% - 166px)}
+.immersive-run #stage:after{width:166px}
+.immersive-run #scoreHud{left:auto;right:94px;top:130px;bottom:100px;width:66px;height:auto;display:flex;flex-direction:column-reverse;gap:12px;padding:20px 3px 7px;border:0;background:transparent;box-shadow:none;pointer-events:none}
+.immersive-run #scoreHud *{pointer-events:none!important}
+.immersive-run #scoreHud .score-total{min-width:0;align-items:center;gap:1px;margin:0}
+.immersive-run #scoreHud .score-total>small{font-size:9px;letter-spacing:.3px}
+.immersive-run #scoreHud .score-total>strong{font:700 15px var(--body);white-space:nowrap}
+.immersive-run #scoreHud .score-track{width:100%;padding:0;min-height:0;flex:1}
+.immersive-run #scoreHud .star-road{width:100%;height:100%;margin:0}
+.immersive-run #scoreHud .star-progress{inset:0 auto 0 50%;transform:translateX(-50%);height:100%;width:20px;border-radius:10px;overflow:hidden}
+.immersive-run #scoreHud .star-progress>i{position:absolute;bottom:0;left:0;width:100%;height:var(--score-fill,0%);background:linear-gradient(0deg,#ecab11,#e8ff75);transition:height .25s ease-out}
+.immersive-run #scoreHud .earned-stars{inset:0;height:100%;width:100%}
+.immersive-run #scoreHud .earned-stars>span{left:50%;top:calc(100% - var(--star-mark));font-size:35px;transform:translate(-50%,-50%)}
+.immersive-run #scoreHud .earned-stars>.lit{animation:rail-star 3s ease-in-out infinite}
+@keyframes rail-star{0%,100%{transform:translate(-50%,-50%) rotate(-6deg)}50%{transform:translate(-50%,-50%) rotate(6deg) scale(1.08)}}
+.immersive-run #breathHud{right:178px}.immersive-run #runHud .combo,.immersive-run #comboBurst,.immersive-run #procFeed{right:178px}
+.immersive-run #runCards{bottom:100px;right:178px}.immersive-run #boostHud{bottom:186px;right:178px}
+.immersive-run #objective{bottom:100px}.immersive-run #missionHud{bottom:265px}
+/* Keep progression logic, but remove the elevator counters and mutator text panel. */
+#objective,.mutator-block{display:none!important}
+/* Available item borders follow the actual gameplay clock, including tempo changes. */
+.immersive-run #itemBar{position:absolute;left:50%;bottom:0;transform:translateX(-50%);margin:0}
+#itemBar .item-button:not(:disabled){box-shadow:0 0 5px currentColor;transition:box-shadow 90ms linear}
+#itemBar[data-beat="on"] .item-button:not(:disabled){box-shadow:0 0 15px currentColor,inset 0 0 7px currentColor}
+#itemBar .item-button:disabled{box-shadow:none;border-color:#353658}
+.soft-fx #itemBar .item-button:not(:disabled){box-shadow:0 0 4px currentColor;transition:none}
+@media(prefers-reduced-motion:reduce){#itemBar .item-button:not(:disabled){box-shadow:0 0 4px currentColor;transition:none}}
+@media(max-width:480px){.immersive-run #itemBar .item-button{width:48px}.immersive-run #itemBar{gap:4px}}
+.soft-fx.immersive-run #scoreHud .earned-stars>.lit{animation:none}
+.soft-fx.immersive-run #scoreHud .star-progress>i{transition:none}
+@media(max-width:800px){
+ .immersive-run #stage>canvas{width:calc(100% - 108px)}.immersive-run #stage:after{width:108px}
+ .immersive-run #scoreHud{right:61px;width:42px;top:110px;bottom:96px;padding:14px 0 5px;gap:8px}
+ .immersive-run #scoreHud .score-total>strong{font-size:12px}.immersive-run #scoreHud .score-total>small{font-size:8px}
+ .immersive-run #scoreHud .star-progress{width:14px}.immersive-run #scoreHud .earned-stars>span{font-size:27px}
+ .immersive-run #breathHud{right:119px}.immersive-run #runHud .combo,.immersive-run #comboBurst,.immersive-run #procFeed{right:119px}
+ .immersive-run #runCards,.immersive-run #boostHud{right:119px}
+}
+@media(prefers-reduced-motion:reduce){.immersive-run #scoreHud .earned-stars>.lit{animation:none}.immersive-run #scoreHud .star-progress>i{transition:none}}
+
+/* Boss status remains accessible, while its visual badge travels with the creature. */
+.immersive-run #runCards{height:46px;max-height:46px}
+.immersive-run #runCards .card-chip{flex-basis:245px}
+.immersive-run #bossHud{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important;pointer-events:none!important}

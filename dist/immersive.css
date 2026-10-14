@@ -1,0 +1,98 @@
+/* The cave owns the viewport. HUD lives at its edges, outside the miner's route. */
+body.immersive-run{overflow:hidden}
+.immersive-run>header{height:42px;padding:0 14px;border-width:1px}
+.immersive-run .brand{font-size:18px}.immersive-run .brand img{width:25px}
+.immersive-run .brand>b,.immersive-run #saved{display:none}
+.immersive-run>main{position:fixed;inset:46px 8px 8px;max-width:none;padding:0;margin:0}
+.immersive-run main>.scene-heading,.immersive-run #experienceHud,.immersive-run #materialWallet,.immersive-run main>footer{display:none}
+.immersive-run #stage{position:absolute;inset:0;height:100%;min-height:0;width:100%;border-width:1px}
+.immersive-run #stage>canvas{width:calc(100% - 96px);height:100%}
+.immersive-run #stage:after{width:96px}
+.immersive-run #runControls{width:84px;right:5px;top:8px;bottom:90px;gap:5px}
+.immersive-run #runControls .rhythm-label>span,.immersive-run #runControls>small{display:none}
+.immersive-run #runControls .beat-track{width:46px;min-height:60px}
+.immersive-run #runControls .rhythm-caption{font-size:12px}
+.immersive-run #runControls>strong{font-size:24px}
+.immersive-run .hit-history{display:grid;grid-template-columns:repeat(4,1fr);gap:1px 4px}
+.immersive-run #breathHud,.immersive-run #scoreHud{position:absolute;left:150px;right:116px;margin:0;z-index:6;pointer-events:none;box-shadow:none}
+.immersive-run #breathHud{top:10px;padding:6px 10px;background:#053239e8;border-width:1px}
+.immersive-run .breath-heading{margin:0 0 4px}.immersive-run .breath-heading strong{font-size:16px}
+.immersive-run .breath-heading span{display:none}.immersive-run .breath-heading b{margin-left:auto;font-size:16px}
+.immersive-run .breath-meter{height:19px}
+.immersive-run #scoreHud{top:68px;display:flex;gap:16px;padding:4px 12px;background:#180d2fc9;border:0;height:46px}
+.immersive-run .score-total{min-width:100px;display:flex;align-items:center;gap:10px;margin:0}
+.immersive-run .score-total>strong{font-size:23px}.immersive-run .score-total>small,.immersive-run .score-total>span,.immersive-run .score-caption,.immersive-run #scoreWindow{display:none}
+.immersive-run .score-track{padding-right:12px}.immersive-run .star-road{height:34px;margin:0}
+.immersive-run .star-progress{top:10px;height:16px}.immersive-run .earned-stars{top:18px}
+.immersive-run .earned-stars>span{font-size:30px}
+.immersive-run #depthLift{left:4px;top:6px;transform:scale(.85);transform-origin:top left}
+.immersive-run .stage-corner{display:none}
+.immersive-run #frenzyHud{position:absolute;left:12px;top:157px;width:170px;min-height:0;display:flex;flex-direction:column;align-items:stretch;gap:10px;margin:0;padding:10px;background:#180d2fd9;border-width:1px;z-index:6;pointer-events:none}
+.immersive-run .heat-block{width:auto}.immersive-run #frenzyHud strong{font-size:14px}
+.immersive-run .heat-track{height:7px;margin:5px 0}.immersive-run #heatLoot{font-size:16px}
+.immersive-run .mutator-block small{font-size:13px;line-height:1.2;margin-top:3px}
+.immersive-run .live-quest{margin:0;padding:7px 0 0;border:0;border-top:1px solid #686b72}
+.immersive-run .live-quest b{font-size:20px;margin-top:3px}
+.immersive-run #frenzyHud #liveQuest{position:fixed;left:50%;top:164px;transform:translateX(-50%);width:max-content;max-width:calc(100vw - 420px);padding:9px 14px;background:#180d2fe8;border:1px solid #ece910;border-radius:5px;text-align:center}
+@media(max-width:800px){.immersive-run #frenzyHud #liveQuest{top:143px;left:82px;right:75px;transform:none;width:auto;max-width:none;padding:7px}.immersive-run #liveQuest b{font-size:16px}}
+.immersive-run #frenzyHud .rescue-hud{position:fixed;top:172px;bottom:auto;left:50%;right:auto;transform:translateX(-50%);min-width:0;width:max-content;max-width:calc(100vw - 230px);flex-wrap:wrap;pointer-events:auto;padding:10px;box-shadow:0 4px #180d2f}
+.immersive-run #frenzyHud:has(.rescue-hud:not([hidden])) .live-quest{visibility:visible}
+.immersive-run #runHud .combo{right:111px;top:124px;width:150px}
+.immersive-run #comboBurst{right:110px;top:205px}
+.immersive-run #procFeed{right:110px;top:355px;max-width:245px}
+.immersive-run .proc-label{font-size:18px!important;padding:7px 10px}
+.immersive-run #targetTip{left:195px;top:124px;max-width:220px}
+.immersive-run #musicCue{top:120px;left:52%;padding:5px 10px}
+.immersive-run #objective{bottom:170px;left:12px;width:170px;padding:8px}
+.immersive-run #explorationHud{left:12px;top:auto;bottom:108px;max-width:190px;font-size:12px}
+.immersive-run #message{bottom:190px;max-width:45%;font-size:23px!important}
+.immersive-run #controlDeck{position:absolute;bottom:8px;left:12px;right:12px;min-height:0;padding:0;border:0;background:none;box-shadow:none;flex-wrap:nowrap;gap:10px;z-index:6;pointer-events:none}
+.immersive-run #controlDeck button{pointer-events:auto}
+/* Read-only overlays must let map taps through, including their text and icons. */
+.immersive-run :is(#runCards,#runHud,#message,#musicCue,#procFeed,#boostHud,#targetTip,#objective,#explorationHud,#depthLift,#comboBurst),
+.immersive-run :is(#runCards,#runHud,#message,#musicCue,#procFeed,#boostHud,#targetTip,#objective,#explorationHud,#depthLift,#comboBurst) *{pointer-events:none}
+.immersive-run #frenzyHud .rescue-hud{pointer-events:none}
+.immersive-run #frenzyHud .rescue-hud button{pointer-events:auto}
+.immersive-run #controlDeck .loadout,.immersive-run #runHints>.eyebrow,.immersive-run #runHints>p{display:none}
+.immersive-run #controlDeck .deck-left{flex:1;min-width:0}
+.immersive-run #inspectSkills{margin:0;padding:12px;font-size:16px;background:#180d2fe8;color:#5ee9e9;border:1px solid #5ee9e9}
+.immersive-run #itemBar{gap:7px;order:0}
+.immersive-run .item-button{width:88px;height:78px;padding:6px}
+.immersive-run .item-button .glyph{width:30px;height:30px}.immersive-run .item-button>span{font-size:13px}
+.immersive-run .item-button kbd,.immersive-run .item-button b{font-size:16px;bottom:auto;top:3px}
+.immersive-run #extract{order:0;flex-direction:column;width:80px;height:78px;justify-content:center;padding:5px;margin:0;font-size:23px;gap:0}
+.immersive-run #extract>span{font-size:11px}
+.immersive-run #boostHud{left:auto;right:110px;bottom:101px;gap:6px}
+.immersive-run .boost-node:not(.active){display:none}
+.immersive-run #boostHud .boost-node{width:118px;height:58px;background:#180d2fe8}
+.immersive-run #boostHud .boost-node strong{font-size:12px}
+.immersive-run #runCards{position:absolute;bottom:95px;left:205px;right:110px;margin:0;padding:0;z-index:6;max-height:76px}
+.immersive-run .cards-empty,.immersive-run .cards-caption{display:none}
+.immersive-run .card-chip{flex-basis:220px;padding:6px}.immersive-run .card-chip strong{font-size:15px}.immersive-run .card-chip small{font-size:13px}
+.immersive-run #missionHud{position:absolute;left:12px;bottom:91px;max-width:190px;margin:0;padding:7px;display:flex;flex-wrap:wrap;gap:4px;z-index:6;pointer-events:none}
+.immersive-run #missionHud>div{display:none}.immersive-run #missionHud>span{font-size:14px;flex-basis:100%}.immersive-run #missionHud>b{font-size:18px}.immersive-run #missionHud>strong{font-size:12px;margin-left:auto}
+.immersive-run:has(#missionHud:not([hidden])) #explorationHud{display:none}
+.immersive-run #bossHud{position:absolute;top:122px;left:195px;right:275px;z-index:6;margin:0;padding:8px;background:#180d2fe8}
+.immersive-run #pauseCover{z-index:18}.immersive-run:has(#pauseCover:not([hidden])) #controlDeck{visibility:hidden}
+/* Completion owns the screen, including outside the stage's stacking context. */
+.floor-complete #breathHud,.floor-complete #scoreHud,.floor-complete #frenzyHud,.floor-complete #controlDeck,.floor-complete #missionHud,.floor-complete #runCards,.floor-complete #starAnnouncements{visibility:hidden;pointer-events:none}
+.floor-complete #clearBanner{z-index:50}
+@media(max-width:800px){
+ .immersive-run>main{inset:42px 3px 3px}.immersive-run>header{height:39px;padding:0 7px}.immersive-run .brand{font-size:14px}.immersive-run .brand img{width:21px;margin-right:5px}.immersive-run #sound span{display:none}
+ .immersive-run #stage>canvas{width:calc(100% - 62px)}.immersive-run #stage:after{width:62px}.immersive-run #runControls{width:52px;right:4px;bottom:90px}.immersive-run #runControls .beat-track{width:33px}.immersive-run #runControls .rhythm-label>b{display:none}.immersive-run #runControls>strong{font-size:18px}
+ .immersive-run #breathHud,.immersive-run #scoreHud{left:80px;right:72px}.immersive-run #breathHud{top:7px;padding:5px}.immersive-run .breath-heading strong{font-size:13px}.immersive-run .breath-heading b{font-size:13px}.immersive-run .breath-meter{height:16px}
+ .immersive-run #scoreHud{top:57px;padding:2px 6px;gap:7px;height:36px}.immersive-run .score-total{min-width:45px}.immersive-run .score-total>strong{font-size:16px}.immersive-run .earned-stars>span{font-size:23px}
+ .immersive-run #depthLift{transform:scale(.56);left:0;top:4px}
+ .immersive-run #frenzyHud{top:106px;left:7px;width:135px;padding:7px;gap:6px}.immersive-run #frenzyHud strong{font-size:12px}.immersive-run .mutator-block small{display:none}.immersive-run #heatLoot{font-size:14px}
+ .immersive-run #frenzyHud .rescue-hud{top:140px;max-width:calc(100vw - 84px);width:300px;margin-left:-27px;gap:7px}.immersive-run .rescue-hud button{font-size:12px;padding:9px}
+ .immersive-run #runHud .combo{right:73px;top:102px;width:85px}.immersive-run #comboBurst{right:72px;top:165px;width:130px}.immersive-run #comboBurst>strong{font-size:50px}.immersive-run #comboBurst>small,.immersive-run #comboBurst>span{font-size:12px}
+ .immersive-run #procFeed{right:72px;top:272px;max-width:150px}.immersive-run .proc-label{font-size:14px!important}.immersive-run #targetTip{top:247px;left:7px;max-width:150px}.immersive-run #musicCue{top:95px;left:50%}.immersive-run #musicCue strong{font-size:12px}.immersive-run #musicCue b{font-size:16px}
+ .immersive-run #controlDeck{left:6px;right:6px;bottom:7px;gap:5px}.immersive-run #inspectSkills{font-size:12px;padding:10px 5px;max-width:90px}.immersive-run #itemBar{gap:4px}.immersive-run .item-button{width:60px;height:72px}.immersive-run .item-button>span{font-size:10px}.immersive-run #extract{width:52px;height:72px}.immersive-run #extract>span{font-size:8px}
+ .immersive-run #boostHud{right:70px;bottom:89px;max-width:calc(100% - 78px);flex-wrap:wrap;justify-content:flex-end}.immersive-run #boostHud .boost-node{width:90px;height:46px;grid-template-columns:22px 1fr}.immersive-run #boostHud .boost-node strong{font-size:10px}
+ .immersive-run #runCards{left:150px;right:70px;bottom:89px;max-height:75px}.immersive-run #objective{bottom:190px;left:7px;width:138px}.immersive-run #explorationHud{bottom:92px;left:7px;max-width:120px}.immersive-run #missionHud{left:7px;bottom:88px;max-width:138px}
+ .immersive-run #bossHud{top:99px;left:150px;right:73px}.immersive-run #message{display:none}
+}
+@media(max-height:560px) and (min-width:801px){.immersive-run #frenzyHud{top:135px}.immersive-run #procFeed{top:245px}.immersive-run #comboBurst{top:190px}.immersive-run #objective{bottom:95px}.immersive-run #explorationHud{display:none}}
+
+/* Leave the new boss silhouette visible below the command strip. */
+@media(min-width:801px){.immersive-run #bossHud[data-spore=true]{top:110px;gap:16px}.immersive-run #bossHud[data-spore=true] #bossPhase{display:none}.immersive-run #bossHud[data-spore=true] strong{font-size:20px}.immersive-run #bossHud[data-spore=true] .boss-command span{font-size:18px}}

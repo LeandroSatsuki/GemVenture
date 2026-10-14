@@ -1,0 +1,35 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Cavernas · Revisão de composição</title>
+<style>body{margin:0;background:#181a29;color:#ebede9;font:16px system-ui}main{max-width:1200px;margin:auto;padding:20px}header{display:flex;gap:12px;align-items:center;flex-wrap:wrap}h1{font-size:22px;margin:0 auto 0 0}button,input,select{font:inherit;padding:10px;border-radius:8px}#scene{width:100%;height:580px;display:block;margin:16px 0;background:#181a29;border:1px solid #a5b2c2}#maps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}article{padding:12px;border:1px solid #5a6b82;border-radius:10px}article canvas{width:100%;image-rendering:pixelated}h2{font-size:16px;margin:0 0 8px}output{display:block;font-size:14px;color:#a5b2c2;padding:8px 0}</style>
+<main><header><h1>Composição das cavernas</h1><input id="seed" type="number" min="1" value="712" aria-label="Semente"><select id="biome" aria-label="Bioma"></select><button id="renew">Nova semente</button><button id="ceiling">Queda de pedras</button></header><output id="status"></output><canvas id="scene"></canvas><section id="maps"></section></main>
+<script type="module">
+import * as E from '/core.js';
+import {World,project} from '/world.js';
+import {BIOME_ART,P} from '/palette.js';
+import {environment} from '/cavern.js';
+import {ceilingTick} from '/cave-ceiling.js';
+import {beatTime} from '/score.js';
+const floors=[1,6,11,16,21,26,31],selector=document.querySelector('#biome'),seedField=document.querySelector('#seed'),canvas=document.querySelector('#scene'),status=document.querySelector('#status');
+selector.innerHTML=floors.map(f=>`<option value="${f}">${environment(f).name}</option>`).join('');
+let state,world,roof=false;
+function create(floor){const s=E.createState(Number(seedField.value)||712);s.seals=5;E.startRun(s);s.run.floor=floor;E.generateRoom(s);s.run.room.visible.fill(1);s.run.room.explored.fill(1);return s;}
+function render(){
+ state=create(Number(selector.value));const r=state.run;
+ if(roof){r.room.rocks=[];r.room.nodes=[];r.room.enemies=[];r.room.ceiling.stock=100;r.player={x:8,y:15};ceilingTick(r,24,E.rng(17));r.beat=24;}
+ world=new World(canvas);world.place(state);world.wide=true;world.resize();world.reduced=false;world.sightHalo=()=>{};
+ if(roof&&r.room.ceiling.falls[0]){const p=project(r.room.ceiling.falls[0].x,r.room.ceiling.falls[0].y);world.camera={x:p.x-world.viewWidth/2,y:p.y-world.viewHeight/2};world.cameraReset=false;}
+ else{const size=canvas.getBoundingClientRect(),bound=project(r.room.cols+2,r.room.rows+2);world.scale=Math.min(size.width/bound.x,size.height/(bound.y+150));world.viewWidth=size.width/world.scale;world.viewHeight=size.height/world.scale;world.offsetX=0;world.offsetY=0;world.camera={x:0,y:-150};world.cameraReset=false;}
+ world.draw(state,beatTime(r.floor,roof?26.55:0),0,null,null,true);
+ status.textContent=`Semente ${state.seed} · ${r.room.floorMask.filter(Boolean).length} células abertas · ${r.room.rocks.length} pedras · ${r.room.nodes.length} cristais · ${r.room.layout.style}${roof?' · Aviso de três pulsos antes da queda':''}`;
+ const maps=document.querySelector('#maps');maps.replaceChildren();
+ for(let index=0;index<floors.length;index++){
+  const s=create(floors[index]),room=s.run.room,b=BIOME_ART[index],article=document.createElement('article'),h=document.createElement('h2'),map=document.createElement('canvas');h.textContent=environment(floors[index]).name;map.width=420;map.height=300;article.append(h,map);maps.append(article);const c=map.getContext('2d');c.fillStyle=P.ink;c.fillRect(0,0,420,300);
+  for(let y=0;y<30;y++)for(let x=0;x<42;x++)if(room.floorMask[y*42+x]){c.fillStyle=b.floor;c.fillRect(x*10,y*10,10,10);}
+  c.globalAlpha=.35;c.fillStyle=b.accent;for(const id of room.layout.protectedTiles)c.fillRect((id%42)*10,Math.floor(id/42)*10,10,10);c.globalAlpha=1;
+  for(const n of room.nodes){c.fillStyle=E.CRYSTALS[n.kind].color;c.beginPath();c.arc(n.x*10+5,n.y*10+5,3,0,Math.PI*2);c.fill();}
+  for(const [p,color]of [[s.run.player,P.white],[room.exit,P.lemon],[room.hedgehog,P.pink]]){c.fillStyle=color;c.fillRect(p.x*10+2,p.y*10+2,6,6);}
+ }
+}
+document.querySelector('#renew').onclick=()=>{seedField.value=Number(seedField.value)+1;roof=false;render();};selector.onchange=()=>{roof=false;render();};seedField.onchange=()=>{roof=false;render();};document.querySelector('#ceiling').onclick=()=>{roof=!roof;render();};addEventListener('resize',render);render();
+// Art-only animation: the fixture keeps its map, camera and combat frozen.
+const previewStart=performance.now();function animate(now){if(!document.hidden&&world&&state){const t=(now-previewStart)/1000;world.ambientAge=t;world.draw(state,beatTime(state.run.floor,roof?26.55:0)+(roof?0:t),0,null,null,true);}requestAnimationFrame(animate);}requestAnimationFrame(animate);
+</script></html>

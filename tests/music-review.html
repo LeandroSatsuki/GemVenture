@@ -1,0 +1,27 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Conferência musical</title>
+<style>body{font:18px system-ui;background:#180d2f;color:white;padding:30px}button,a{padding:14px;color:#180d2f;background:#fbbe82;border:0;margin:8px;display:inline-block}audio{display:block;width:600px;max-width:100%}table{border-collapse:collapse}td,th{padding:10px;border-bottom:1px solid #353658}</style>
+<h1>CONFERÊNCIA MUSICAL</h1><button id="render">GERAR AMOSTRAS</button><p id="status">Discos · áudio real do jogo</p><table id="results"><tr><th>DISCO</th><th>PICO</th><th>VOZES</th><th>ÁUDIO</th></tr></table>
+<script type="module">
+import {Music} from './audio.js';import {RECORDS} from './records.js';import {arrangementStep} from './music-arrangements.js';import {playInstrument} from './music-instruments.js';import {trackBeatTime} from './score.js';
+function wav(buffer){const bytes=new ArrayBuffer(44+buffer.length*4),v=new DataView(bytes);const str=(at,s)=>[...s].forEach((c,i)=>v.setUint8(at+i,c.charCodeAt()));str(0,'RIFF');v.setUint32(4,bytes.byteLength-8,true);str(8,'WAVE');str(12,'fmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,2,true);v.setUint32(24,buffer.sampleRate,true);v.setUint32(28,buffer.sampleRate*4,true);v.setUint16(32,4,true);v.setUint16(34,16,true);str(36,'data');v.setUint32(40,buffer.length*4,true);for(let i=0;i<buffer.length;i++)for(let c=0;c<2;c++)v.setInt16(44+i*4+c*2,Math.max(-1,Math.min(1,buffer.getChannelData(c)[i]))*32767,true);return new Blob([bytes],{type:'audio/wav'});}
+document.querySelector('#render').onclick=async()=>{
+ document.querySelector('#render').disabled=true;
+ try{for(const record of RECORDS){
+  const ctx=new OfflineAudioContext(2,12*24000,24000),music=new Music();music.ctx=ctx;music.enabled=true;music.master=ctx.createGain();music.master.gain.value=.2;music.master.connect(ctx.destination);
+  const endings=new Map();let peakVoices=0;
+  // Prune finished *scheduled* nodes while rendering offline; real playback
+  // prunes them through onended. This preserves the same active voice budget.
+  for(const factory of ['createOscillator','createBufferSource']){const create=ctx[factory].bind(ctx);ctx[factory]=()=>{const o=create(),stop=o.stop.bind(o);o.stop=t=>{endings.set(o,t);stop(t);};return o;};}
+  for(let step=0;trackBeatTime(record.previewTrack,step/4)<10;step++){
+   const at=trackBeatTime(record.previewTrack,step/4);
+   for(const [o,end]of endings)if(end<=at){music.voices.delete(o);endings.delete(o);}
+   for(const e of arrangementStep(record,record.previewTrack,step,{combo:60})){const delay=e.delayBeats?trackBeatTime(record.previewTrack,step/4+e.delayBeats)-at:0;playInstrument(music,e,at+delay);}
+   peakVoices=Math.max(peakVoices,music.voices.size);
+  }
+  const buffer=await ctx.startRendering();let peak=0;for(let c=0;c<2;c++)for(const value of buffer.getChannelData(c))peak=Math.max(peak,Math.abs(value));
+  const url=URL.createObjectURL(wav(buffer)),row=document.createElement('tr');row.innerHTML=`<td>${record.genre} · ${record.name}</td><td>${peak.toFixed(3)}</td><td>${peakVoices}</td><td><audio controls src="${url}"></audio><a download="${record.id}.wav" href="${url}">SALVAR ${record.id}</a></td>`;document.querySelector('#results').append(row);
+ }
+ document.querySelector('#status').textContent='CONCLUÍDO · '+RECORDS.length+' discos renderizados';
+ }catch(e){document.querySelector('#status').textContent='ERRO · '+e.message;console.error(e);}
+};
+</script></html>
