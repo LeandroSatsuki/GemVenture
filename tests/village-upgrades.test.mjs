@@ -58,4 +58,3 @@ test('mission levels improve rarity, rewards and choice count without rewriting 
 test('well previews show the selected color, broad family and cost and saved blessing strength',()=>{
  const s=rich();let html=wellMarkup(s,false,1);assert.match(html,/FORÇA · CRÍTICOS/);assert.match(html,/OFERECER 45/);assert.doesNotMatch(html,/BRASA RUBRA|GOLPE DE SORTE|wish-odds/);assert.doesNotMatch(html,/undefined|NaN/);makeOffering(s,3);html=wellMarkup(s,true);assert.match(html,/BÊNÇÃO GUARDADA/);assert.match(html,/wish-crystal/);assert.doesNotMatch(html,/data-offering|undefined|NaN/);
 });
-

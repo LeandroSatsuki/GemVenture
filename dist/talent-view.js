@@ -28,4 +28,3 @@ export class TalentView{
   const buy=root.querySelector('#webBuy');if(buy)buy.onclick=()=>changed(()=>skill?rank?upgradeSkill(s,n.id):learn(s,n.id):buyTalent(s,n.id,SKILLS));const eq=root.querySelector('#webEquip');if(eq)eq.onclick=()=>changed(()=>equip(s,n.id));const refund=root.querySelector('#webRefund');if(refund)refund.onclick=()=>{if(!refundTalent(s,n.id,SKILLS)){refund.textContent='SUSTENTA OUTROS NÓS';return;}invalidateProgression(s);this.position={x:root.querySelector('.web-viewport').scrollLeft,y:root.querySelector('.web-viewport').scrollTop};this.onChange(n.id);};
  }
 }
-

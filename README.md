@@ -61,6 +61,11 @@ Cada estrutura tem uma função própria:
 
 ## Em imagens
 
+<p align="center">
+  <img src="docs/media/gameplay.jpg" alt="Combate contra o Rei das Tocas, com combo, cristais e habilidades no HUD" width="100%">
+  <br><em>Prévia de combate: o chefe, a rota e o ritmo dividem a mesma cena.</em>
+</p>
+
 <table>
   <tr>
     <td><img src="docs/media/village.jpg" alt="Vila do GemVenture com suas construções interativas"><br><strong>Refúgio</strong></td>

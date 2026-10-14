@@ -71,4 +71,3 @@ test('damaging procs scale with pickaxe strength and never recurse or duplicate 
  hit(s,n,0);assert.equal(s.run.loot.enemies.count,2);assert.equal(s.run.killCount,2);const bag=s.run.bag;
  hit(s,n,1);E.tick(s,2);assert.equal(s.run.bag,bag);assert.equal(other.hp,0);
 });
-

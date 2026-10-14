@@ -182,4 +182,3 @@ export function validFrenzy(r){
  if(isAbyss(r)){const a=r.abyss;if(!a||!Number.isSafeInteger(a.section)||a.section<1||!Number.isSafeInteger(a.rows)||a.rows<0||!Number.isFinite(a.lastShift))return false;if(a.checkpoint&&(!Number.isInteger(a.checkpoint.section)||!Number.isFinite(a.checkpoint.until)||typeof a.checkpoint.used!=='boolean'))return false;}
  return true;
 }
-

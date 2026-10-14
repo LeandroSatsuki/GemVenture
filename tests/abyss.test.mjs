@@ -81,4 +81,3 @@ test('invalid mode and malformed endless state are rejected without losing valid
  const s=E.createState();assert.equal(E.startRun(s,'unknown'),false);E.startRun(s);const old=JSON.parse(JSON.stringify(s));delete old.run.mode;delete old.run.frenzy;delete old.run.spiceVersion;assert.ok(E.restoreState(JSON.stringify(old)));
  const a=run();a.run.abyss.section=-1;assert.equal(E.restoreState(JSON.stringify(a)),null);a.run.abyss.section=1;a.run.frenzy.buffs={giant:Infinity};assert.equal(E.restoreState(JSON.stringify(a)),null);
 });
-

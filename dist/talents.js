@@ -61,4 +61,3 @@ export function talentText(n,rank=1){if(n.kind==='mastery')return 'Poder no Abis
 export function restoreTalents(raw){if(raw===undefined)return createTalents();if(!raw||raw.version!==1||!raw.ranks||!raw.spent||Array.isArray(raw.ranks)||Array.isArray(raw.spent))return null;const t=createTalents();for(const [id,rank]of Object.entries(raw.ranks)){const n=TALENTS.find(n=>n.id===id);if(!n||!Number.isSafeInteger(rank)||rank<1||rank>Math.min(n.max,1000000)||!Number.isSafeInteger(raw.spent[id])||raw.spent[id]!==talentInvestment(n,rank))return null;t.ranks[id]=rank;t.spent[id]=raw.spent[id];}if(Object.keys(raw.spent).some(id=>!t.ranks[id]))return null;return t;}
 
 export function talentInvestment(n,rank){let total=0;for(let i=0;i<rank;i++)total+=n.kind==='mastery'?Math.min(1e9,5+Math.floor(i/5)+Math.floor(i*i/200)):n.kind==='notable'?3+i:1+Math.floor(n.ring/3)+i;return total;}
-

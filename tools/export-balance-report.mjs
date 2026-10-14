@@ -14,7 +14,7 @@ const num=n=>n.toLocaleString('pt-BR',{maximumFractionDigits:2}),table=(head,row
 const content=`<header><span>GEMVENTURE · BALANCEAMENTO · POLIMENTO DE 12 OUT 2026</span><h1>Crescer por muito tempo.<br>Escolher a cada volta.</h1><p>Economia, cartas, talentos, prestígio e 50 conquistas. Resultados atualizados para cavernas conectadas; estimativas de duração humana continuam separadas das simulações.</p></header>
 <nav><a href="#economia">Economia</a><a href="#teia">Teia</a><a href="#estrelas">Estrelas</a><a href="#medidas">Simulações</a><a href="#missoes">Missões 150</a><a href="#conquistas">50 conquistas</a></nav>
 <section><h2>Revisão atual</h2><p>Limites econômicos anteriores foram mantidos. O ajuste desta revisão está nas curas acumuladas: as cartas novas por seção do Abismo permitiam que um só abate recuperasse mais que toda a vida inicial. As duas primeiras cópias mantêm seus valores; as seguintes têm ganho decrescente.</p>${table(['Problema','Antes','Agora'],[
-['Cartas de cura','Crescimento linear até 16 cópias','Crescimento logarítmico após a segunda cópia'], ['Saque ambiental no Abismo','Teto parcial × profundidade linear','Teto ambiental 3,5×; profundidade logarítmica'], 
+['Cartas de cura','Crescimento linear até 16 cópias','Crescimento logarítmico após a segunda cópia'], ['Saque ambiental no Abismo','Teto parcial × profundidade linear','Teto ambiental 3,5×; profundidade logarítmica'],
 ['Criaturas entre biomas','Resistência dependia do andar reciclado','Resistência e dano dependem da seção absoluta'],
 ['Veio raro','Arredondamento por golpe favorecia dano baixo','Acumula frações e paga o dano efetivo'],
 ['Forja avançada','Custos exponenciais de projetos e receitas','Cauda polinomial; devolução do excedente investido na migração'],
