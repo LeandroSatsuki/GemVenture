@@ -70,9 +70,11 @@ test('level 149 contract is frozen across upgrade, death, reload, progress and o
 });
 
 test('legacy accepted missions retain old prices and time; new long contracts reject corrupted saves',()=>{
- const s=E.createState();s.village.missions=10;s.mission={id:'legacy',template:'combo',tier:'gold',rewardLevel:10,goal:54,progress:12,remaining:123,duration:360,status:'active'};
+ const s=E.createState(150923);s.village.missions=10;s.mission={id:'legacy',template:'combo',tier:'gold',rewardLevel:10,goal:54,progress:12,remaining:123,duration:360,status:'active'};
  const old=structuredClone(s.mission);s.village.missions=150;const restored=E.restoreState(JSON.stringify(s));assert.deepEqual(restored.mission,old);assert.deepEqual(missionReward(restored.mission),{gems:1892,essence:9});
- s.mission=null;const fresh=missionOffers(s)[0];assert.ok(fresh.duration>360);assert.ok(validMission(fresh));
+ // This regression exercises a long contract, not whichever random offer
+ // happens to come first. A high-level combo may correctly retain 360 seconds.
+ s.mission=null;const fresh=missionOffers(s).find(m=>m.duration>360);assert.ok(fresh,'a long contract must be offered');assert.ok(validMission(fresh));
  for(const changes of [{rewardLevel:151},{rewardLevel:1.5},{version:99},{duration:7201},{remaining:fresh.duration+1},{reward:{gems:Infinity,essence:1}},{reward:{gems:12,essence:-1}},{reward:null}])assert.equal(validMission({...fresh,...changes}),false);
  const expired={...fresh,remaining:.1};s.mission=expired;E.startRun(s);tickMission(s,1);assert.equal(s.mission.status,'expired');recordMission(s,'mine',1e6);assert.equal(s.mission.progress,0);E.finishRun(s);assert.equal(claimMission(s),false);
 });
