@@ -29,12 +29,12 @@ uma nova descida.
 evoluindo. A capa é uma ilustração promocional; as imagens abaixo mostram a
 interface do jogo.
 
-## Atualização preparada — 2 de novembro de 2026
+## Atualização — 2 de novembro de 2026
 
 Novas cavernas conectadas e arenas, ambientação própria por bioma, chefes com
 animações e mecânicas mais claras e uma rodada de otimizações sem retirar o visual.
 Picareta e vida receberam ganhos maiores no começo; custos e limites preservados.
-A candidata ainda aguarda publicação no Itch.io.
+[Jogue no Itch.io](https://leandrosatsuki.itch.io/gemventure) · [Diário da atualização](https://leandrosatsuki.itch.io/gemventure/devlog/1748439/cavernas-renovadas-chefes-com-mais-personalidade-gemventure).
 
 ![Refúgio atual](docs/media/gemventure-refuge-20261102.png)
 ![Caverna de magma atual](docs/media/gemventure-cave-20261102.png)
@@ -198,3 +198,9 @@ Desenvolvido por [LeandroSatsuki](https://github.com/LeandroSatsuki).
 Código, marca, arte e música mantêm **direitos reservados**; publicar o repositório
 não concede licença de reutilização. Consulte [LICENSE](LICENSE) e
 [CREDITS.md](CREDITS.md).
+
+## Pacote web para o Itch.io
+
+Depois de instalar as dependências de desenvolvimento com npm ci, gere uma release com build:release. Execute node tools/build-itch.mjs PASTA_DA_RELEASE NOVA_PASTA para produzir a variante compatível com o limite de 1.000 arquivos. Compacte o conteúdo da nova pasta, mantendo index.html na raiz.
+
+O empacotador mantém CSS e áudio, conserva os pixels das imagens e reúne os módulos sem minificação. Os chunks ficam na raiz para preservar URLs relativas dos estilos, e as entradas inline do HTML são mantidas. Na atualização de 02/11, o pacote tem 945 arquivos; 258 PNGs pequenos são transportados sem perdas como data URLs. O recibo é gravado ao lado da pasta, fora do ZIP. Não sobrescreva releases anteriores.

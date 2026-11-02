@@ -1,5 +1,14 @@
 # Changelog
 
+## 02/11/2026 — Publicação das cavernas, chefes e ambientação
+
+- Atualização publicada no Itch.io, com nova arte promocional, capturas atuais e diário de desenvolvimento.
+- Pacote web com 945 arquivos, abaixo do limite de 1.000 da plataforma. Módulos reunidos sem minificação; 258 imagens pequenas transportadas sem perdas. CSS, áudio, regras e pixels preservados.
+- Entradas inline do HTML mantidas e chunks na raiz para conservar os caminhos dos estilos carregados em tempo de execução.
+- Empacotador reproduzível em `tools/build-itch.mjs`, com esbuild 0.25.12 fixado. Reconstrução comparada: 945 arquivos idênticos byte a byte.
+- Conferência local de hub, Forja, elevador e caverna; hub hospedada abriu sem erros registrados. Quatro verificações de release e check do projeto passaram. Isso não certifica FPS constante nem substitui playtest.
+- [Jogo](https://leandrosatsuki.itch.io/gemventure) · [Diário](https://leandrosatsuki.itch.io/gemventure/devlog/1748439/cavernas-renovadas-chefes-com-mais-personalidade-gemventure).
+
 ## 02/11/2026 — Otimização da exploração da caverna
 
 - Rotas e perseguição reutilizam buscas incrementais; inimigos parados e salas sem perseguidores não geram buscas desnecessárias.

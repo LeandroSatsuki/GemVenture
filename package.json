@@ -28,5 +28,8 @@
     "export:studio": "node export-art-studio.mjs",
     "export:terrain": "node tools/export-terrain-template.mjs",
     "build:release": "node tools/build-release.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
   }
 }
