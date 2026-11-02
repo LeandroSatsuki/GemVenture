@@ -1,0 +1,4 @@
+/* Scoped to the approved rest consumer; historical rest skins cannot add a second header. */
+body #dialog.approved-ui-dialog[data-service=rest]{transform:none!important;inset:0!important;margin:auto!important;height:fit-content!important;max-height:calc(100dvh - 24px)!important;min-height:0!important;max-width:none!important;padding:0!important;border:0!important;border-radius:14px!important;background:#06132b!important;overflow:auto!important;box-sizing:border-box!important}
+body #dialog.approved-ui-dialog[data-service=rest]>.dialog-top{display:none!important}
+body #dialog.approved-ui-dialog[data-service=rest] #dialogBody{display:block!important;min-height:0!important;max-height:none!important;height:auto!important;padding:0!important;overflow:visible!important;background:none!important;border:0!important}

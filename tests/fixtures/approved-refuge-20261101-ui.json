@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-01T06:49:58.765239+00:00",
+  "authorization": "HUMAN-APPROVAL.json",
+  "concurrentChangesPreserved": "Vitrola buyAlbum import and onBuyAlbum callback; own run delta applied as three narrow hunks",
+  "files": {
+    "approved-refuge-markup.js": "e8adcaf138e1458a29d5cedf0ec4f6c3bc7292ed3594eece592627a401e3c009",
+    "approved-refuge-ui.css": "d5c21ea6abad9fd16cbee6466ac516f2a29e5052182788cdf4e5dfbf181b6b62",
+    "refuge-lobby.js": "521e5c0de986a5365f1a035abdabaece489ef21dbfc99d8448c4ad7f5f420703",
+    "ui-bubble-bank.js": "44a156b78c74a7cd008b45cfabf1c181b90ffa6d6024d631f3353125eff22b00",
+    "ui-bubble-feedback.js": "1bc72013bde8db178dc3bb157187b6bf594969ffc66b04f59480159047061039",
+    "index.html": "c2a0f7b47d502bedd2d7f606903a12f5c28aabb3f1b81692d4f634bf2a2794a6",
+    "run.js": "6cdd7b8aca8ff62d53299dd9fe8cdc80667a9513b10982e00f7b4672ae0afb08"
+  }
+}

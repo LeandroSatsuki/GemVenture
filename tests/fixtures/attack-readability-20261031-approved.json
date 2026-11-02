@@ -1,0 +1,13 @@
+{
+  "status": "human-approved-application",
+  "approvalSource": "Current user approves P1/R2-WORDLESS-ZONES and authorizes continuation to the next phase.",
+  "scope": "Creature/boss visual attack readability and animations; wordless safe zones. No combat or musical change.",
+  "receipt": "E:/Genventure/coordination/VFX-ATTACK-APPLIED-20261031/APPLICATION-RECEIPT.json",
+  "approvedPilotSha256": "131a75de559d4caf67c298df4618e870f26b18f2a44c0dfbe1bd42b630c748d8",
+  "files": {
+    "world.js": "8827979fd780cad245a5789c60e757c374d7eb496726ffd808a65ba09bdadcfe",
+    "attack-readability.js": "8e28383fe657966733e02d83d96ba08f1912e911ed9103df9b8246ebf380a76e",
+    "run.js": "19b89aa01a76a7bd25ad914a2e40c164995f2daf739ac284150a64b923cbdfe5"
+  },
+  "runtimeIntegration": "Native DOM boss HUD also omits redundant safe-area instruction. All other run.js bytes preserved after reversing this one replacement."
+}

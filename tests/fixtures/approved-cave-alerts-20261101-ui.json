@@ -1,0 +1,13 @@
+{
+  "id": "CAVE-ALERTS-UI-INTEGRATION-20261101",
+  "authorization": "Ficou muito bom, aprovado. Pode aplicar os alertas de hordas e pressão no jogo oficial e seguir para a próxima tela que ainda falta, mantendo esse padrão, com pouco texto e sem remover nenhuma funcionalidade.",
+  "proposal": "../CAVE-ALERTS-UI-PROPOSAL-20261101/v1/DELIVERY.json",
+  "files": {
+    "cave-alerts-model.js": "127294893957af8a2ef1264bb9b7471c23cd43817f6b91e01b4a29146cff90af",
+    "approved-cave-alerts-ui.js": "e2dfb2d62957b8dae4f0a763d7984f953b95ece335ad31ad962022f423ac92a0",
+    "approved-cave-alerts-ui.css": "c09cd5dcefeab1ff22ef395f1dc109170b5ab77e887393bde9e9913503a0a91b",
+    "run.js": "304eacb615ec53d70c3ede59176a81f6123730b91ac1a422dcbd0cfbf36e94c0",
+    "expedition-hud-view.js": "0f9e8a47b1ee283a16b04128680617154d4d58dfdfe6be9c195018580714a9f1",
+    "approved-discoveries-ui.js": "ec7a4996638d90bf87635f4c85ee3c6a9c537475c4b69f8962206caacb918bed"
+  }
+}

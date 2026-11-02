@@ -1,0 +1,11 @@
+{
+  "id": "FINAL-UI-REVIEW-20261102-R1",
+  "authorization": "Current user authorizes both remaining stages: compact tempo notices and cross-screen final review; warnings complement gameplay, remain succinct and nonblocking.",
+  "files": {
+    "tempo-cue.js": "8bed28a37662474b71e375d0e9414dc0ebc29f15a55a7d15b9e246a444e65b5c",
+    "tempo-cue.css": "90eb5ef54cfb63776636297a5c9e3c838be379076a8f895e4ca0130930696b03",
+    "expedition-hud-view.js": "084904c060feaf570517eb92cfefe41e537967166c81e521c29807808c70796c",
+    "approved-services.css": "54132a3d64babbf502a573d6262d71aba4467fa14642dc51f7fa8a7bea3a3ad3",
+    "pets-transaction.js": "92452503c4af75b9e80dbcbf5cc1fe835d0ced11cea12c851667c79eb90d7f60"
+  }
+}

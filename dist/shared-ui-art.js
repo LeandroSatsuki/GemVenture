@@ -1,0 +1,4 @@
+export const WALLET_STAR={"id":"wallet-star","version":"v01","source":"E:/Assets Genventure/production/gv-hud-wallet-items-romulo-v01/wallet-star-v01.png","file":"preview/assets/shared/wallet-star-v01.png","sha256":"b368f63d4dcf847cba794ef1208d14c40b9fcdb722736dde5d00a07c1de4b949","size":[80,80],"status":"approved HUD art reused per Guilherme direction","usage":["header balance","invocation cost","invocation illustration","legacy founder balance and costs"],"cssPixels":{"inline":24,"header":28,"invocationDesktop":64,"invocationCompact":52},"url":"assets/relicario-v10/shared/wallet-star-v01.png"};
+export function starIcon(){return '<span class="shared-star" data-shared-art="wallet-star-v01" aria-hidden="true"><img src="'+WALLET_STAR.url+'" alt="" width="80" height="80"></span>';}
+// Isolated legacy display adapter only. Canonical founder markup/domain is untouched.
+export const withWalletStars=markup=>markup.replaceAll('★',starIcon());

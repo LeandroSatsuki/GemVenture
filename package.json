@@ -6,17 +6,27 @@
   "type": "module",
   "license": "UNLICENSED",
   "author": "LeandroSatsuki",
-  "engines": { "node": ">=24" },
-  "repository": { "type": "git", "url": "https://github.com/LeandroSatsuki/GemVenture.git" },
-  "bugs": { "url": "https://github.com/LeandroSatsuki/GemVenture/issues" },
+  "engines": {
+    "node": ">=24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeandroSatsuki/GemVenture.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LeandroSatsuki/GemVenture/issues"
+  },
   "homepage": "https://github.com/LeandroSatsuki/GemVenture#readme",
   "scripts": {
     "start": "node server.mjs",
     "test": "node --test tests/*.test.mjs",
     "check": "node tools/check-project.mjs",
+    "audit:assets": "node tools/audit-asset-usage.mjs",
     "audit:art": "node skills/gemventure-procedural-art/scripts/audit-assets.mjs .",
     "audit:miner": "node tools/audit-miner.mjs",
     "catalog": "node tools/export-asset-catalog.mjs",
-    "export:studio": "node export-art-studio.mjs"
+    "export:studio": "node export-art-studio.mjs",
+    "export:terrain": "node tools/export-terrain-template.mjs",
+    "build:release": "node tools/build-release.mjs"
   }
 }

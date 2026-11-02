@@ -1,0 +1,12 @@
+{
+  "id": "LEVEL-PROGRESS-UI-INTEGRATION-20261102",
+  "authorization": "Ficou muito bom, aprovado. Pode aplicar o aviso de nível e pontos de habilidade no jogo oficial e seguir para a próxima tela que ainda falta, mantendo esse padrão, com pouco texto e sem remover nenhuma funcionalidade. e siga com o proximo",
+  "proposal": "../LEVEL-PROGRESS-UI-PROPOSAL-20261101/v1/DELIVERY.json",
+  "files": {
+    "level-progress-notice.js": "a2011572dd7b6393af56eed40beddf64707f153512b45c9f59d6bfa91caebe96",
+    "approved-level-progress-ui.js": "a1c16a4400b96fcc6580e5b7b6af7ea3faa8cb0dddeaba4e84e86f223a00ce98",
+    "approved-level-progress-ui.css": "8ea640e24591168d7571a12abb7e885c61aeb6c2f5cd00c7ad37a5fdfe093e15",
+    "run.js": "080f9f32363950e3cc476bd07035b9eea2cda7f85c3d87047a77218dbbf88f5d",
+    "approved-discoveries-ui.js": "15b715c6a2d4547b0ca895c216436e09cecc049729bd4d505df6ccc664a7e3b3"
+  }
+}

@@ -16,7 +16,7 @@
 - O modo intenso usa HEPT32, efeitos limitados em memória e preserva a opção suave. Nomes de poderes e avisos são grandes e curtos.
 
 
-Estas regras registram a direção definida pelo usuário. Aplicar em novas mecânicas, balanceamento, arte e interface.
+Estas regras registram a direção definida pelo usuário. Aplicar em novas mecânicas, balanceamento, arte e interface. Para fontes vigentes por domínio e autorizações de entrega, consulte [o fluxo da equipe](docs/TEAM_WORKFLOW.md); atualizações humanas específicas posteriores prevalecem no seu escopo.
 
 ## Cinco pilares com funções distintas
 
@@ -42,10 +42,10 @@ O elevador é navegação e acesso aos biomas, não uma loja duplicada. As melho
 
 - A vila da etapa Flow (13/10/2026) segue o prompt e os assets entregues pelo usuário: isometria consistente, blocos volumétricos com chanfros suaves, materiais foscos, contorno de silhueta e sombra azul-marinho. Usar os PNGs do pack e referências para peças faltantes; não substituir essa direção por pequenos retoques nos desenhos frontais antigos. O terreno acompanha as faces dos assets. A migração visual das cavernas é uma etapa própria.
 
-- Uma paleta: HEPT32. Formas sólidas, contornos escuros e uma cor de sombra por material. Personagem e quadro de missões são as referências locais; priorizar silhueta clara, curvas orgânicas e poucas massas grandes. Cristais têm facetas intencionais, sem ruído em cada vértice. Todos os assets usam o mesmo gerador.
-- Packs novos passam por seleção e adaptação explícita: preservar a identidade do recurso, eliminar texturas e variações de sombra desnecessárias e conferir os seis biomas. Não trocar automaticamente a arte ao detectar um ZIP novo. Fontes e importação em ART_ASSETS.md.
-- Desenhos importados compartilham as mesmas âncoras, exportações SVG e cache do Canvas. Máximo de 30 formas por peça; ZIPs, conversores e sequências brutas de VFX ficam fora da execução do jogo.
-- Seis biomas, cinco andares cada; chefes em 5, 10, 15, 20, 25 e 30. Boss Místico encerra o Manto, Soberano Micelial encerra os Micélios e Rei das Tocas encerra as Tocas de Âmbar. O HUD não antecipa o total da campanha.
+- O runtime mantém HEPT32 e silhuetas claras. Arte procedural usa formas sólidas, contornos escuros e uma cor de sombra por material. Famílias raster preservam câmera, chanfros e acabamento de suas referências aprovadas; ícones seguem contrato próprio. Não converter uma modalidade na outra nem recolorir arte ativa automaticamente. Cristais têm facetas intencionais, sem ruído em cada vértice.
+- Packs novos passam por seleção e adaptação explícita: preservar a identidade do recurso, eliminar detalhes desnecessários conforme o contrato da família e conferir todos os biomas atuais. Não trocar automaticamente a arte ao detectar um ZIP novo. Fontes e importação em ART_ASSETS.md.
+- Geradores procedurais compartilham âncoras, exportações SVG e cache do Canvas, com máximo de 30 formas por peça. PNGs e animações importadas seguem seus manifestos de âncora, camadas e cache; o limite de formas não se aplica a pixels. ZIPs, conversores e sequências brutas de VFX ficam fora da execução do jogo.
+- A campanha atual em `dist/campaign.js` tem sete biomas, cinco andares cada; chefes em 5, 10, 15, 20, 25, 30 e 35. Conferir a composição vigente em `dist/campaign.js` e `dist/bosses.js`, sem usar listas históricas como configuração. O HUD não antecipa o total da campanha.
 - Quartzo, rubi, topázio e esmeralda são recursos separados. Não converter automaticamente a mineração em uma moeda genérica.
 - O mapa vertical mostra cada andar, seu bioma, cristal abundante e chefe. Arrastar, scroll e teclado devem funcionar.
 - Vida persiste entre andares; cura só por efeitos explícitos. Cartas e bênçãos duram a descida. XP, recursos guardados, construções e relíquias persistem.
@@ -55,7 +55,7 @@ O elevador é navegação e acesso aos biomas, não uma loja duplicada. As melho
 
 ## Exploração e hordas
 
-- O ouriço de costas cristalinas é um espectador gigante na toca da parede, claramente maior que o explorador. Varia com o bioma, respira, pisca, acompanha a exploração com o olhar e alterna as patas no pulso. Usa camadas independentes e pivôs coerentes, com no máximo 30 formas. É cenário, sem vida, colisão de alvo ou recompensa por ataque.
+- O ouriço de costas cristalinas é um espectador gigante na toca fixa da parede, claramente maior que o explorador, com camadas independentes e pivôs coerentes. Corpo constante e cristais variáveis por bioma; movimento e reação usam o pulso. A interação especial não letal por picareta substitui a antiga regra de nunca ser alvo: pode provocar brotação limitada, sem pagamento direto, vida de inimigo ou recompensa por morte. Explosões e habilidades em área não acionam essa interação. Preservar os limites, saves e comportamento de [docs/art/hedgehog-interaction.md](docs/art/hedgehog-interaction.md).
 - Pedras do teto avisam três pulsos antes. Repor apenas em área livre, sem bloquear corredor protegido, saída ou personagem. Limitar a três avisos e doze quedas por andar/seção; pedras repostas pagam uma moeda base e nenhum cristal. Pausas e cartas congelam a queda.
 
 - Cavernas de exploração têm quatro vezes a área inicial, câmera acompanhando o personagem e descoberta por proximidade. Não revelar todos os recursos e inimigos ao entrar.
@@ -83,7 +83,7 @@ O elevador é navegação e acesso aos biomas, não uma loja duplicada. As melho
 
 - Estrelas são marcos dentro de uma barra acumulada. A barra não reinicia ao ganhar uma estrela nem ao mudar de andar. Metas fixas não devem crescer porque o jogador desbloqueou mais andares.
 - Cada sala oferece pontos limitados e suficientes para progresso perceptível. Repetir trajetos e permanecer infinitamente não pode gerar todas as estrelas.
-- Aumentar a duração das cavernas junto da área explorável; combinar carga, sequência e sobrevivência, com pressão crescente. Mostrar quando o elevador ainda está estabilizando.
+- Nas cavernas atuais, a carga sozinha libera a conclusão pelo HUD; sequência e sobrevivência não são travas. Preservar pressão crescente para quem escolhe continuar explorando.
 - Elevador do HUD usa o personagem e mostra só o andar atual. Revelar o mapa com a exploração; não informar o total de andares ou futuros chefes.
 - Uma ressurreição disponível preserva o combo e abre pausa para mudar estratégia. Vida extra precisa ser conquistada; não oferecer revives ilimitados.
 - A cada dez andares, incluir um abrigo antes de prosseguir: tempo parado, música tranquila, troca de build e preparos pagos com cristais. Não curar automaticamente ao atravessar andares.
@@ -169,3 +169,35 @@ O elevador é navegação e acesso aos biomas, não uma loja duplicada. As melho
 - Zag tem Oficina para ferramentas e Ousada para selos exclusivos. Três selos diferentes pagam melhorias só do tabuleiro. Engrenagens excedentes compram cargas de ferramentas; não substituem Árvore, Forja ou Estrelas.
 - AFK é uma escolha explícita e tem botão de parada. Usa dados e passes, escolhe destinos pelo benefício visível e guarda a mochila ao acabar. Preserva ferramentas, engrenagens e investimentos para decisões manuais. Fechar o painel encerra a automação.
 - Cada passe limita os dados bônus a dois; após esse limite, a casa de dado paga um fragmento. Não permitir que a automação crie recursos infinitos sem novas descidas.
+
+
+## Escada e permanência — 01/11/2026
+
+- Atualização de 02/11/2026 após playtest: nos andares comuns, preencher a carga existente libera DESCER no HUD, de qualquer posição, sem combo ou tempo mínimo. A barra permanece visível desde o início. A conclusão é intencional; atingir a carga não interrompe a exploração. O buraco descoberto é um atalho opcional que permite sair antes da carga. Nos andares de chefe, derrotar o chefe libera a conclusão pelo HUD e o buraco. A escolha de carta continua intencional, seguida de avanço automático; fogueiras e limites de bioma continuam válidos.
+- Ajuste após playtest de 02/11/2026: nos novos andares comuns 1–4, a descida pelo HUD exige a carga atual e visitar duas salas principais (a entrada conta como a primeira). Entrar no interior da segunda sala conta; avistá-la ou repetir passos na entrada não. HUD mostra Carga e Salas; não há tempo/combo mínimo. O buraco continua atalho livre. Andares já salvos sem departureVersion=2 mantêm a regra anterior até a próxima geração; chefes, treino, Abismo e andares posteriores não mudam.
+- A escada descoberta recebe orientação discreta no objetivo. O primeiro andar ajuda a orientação após 128 pulsos; nos demais, a pista de direção pode aparecer ao encerrar a janela de pontuação, preservando a névoa do mapa. A seta acompanha o próximo trecho transitável do caminho, sem apontar através de uma parede.
+- Após a vitória em arena de chefe, os depósitos existentes continuam coletáveis até a escada, mas a reposição de cristais para. Não criar uma fonte segura infinita de recursos ao trocar o fechamento automático pela saída física.
+- Explorar continua opcional. A janela de pontuação e o orçamento fixo de cada andar permanecem; estrelas só pagam a melhora do melhor resultado desse andar. Depois da janela não se ganha mais pontos, mesmo com reposição ou recarga do save.
+- Em andares comuns, a pressão começa ao fim da janela de pontos, com piso de 384 pulsos no primeiro andar. Avisar 16 pulsos antes. Três etapas, separadas por 64 pulsos, elevam dano de criaturas em 25/50/75% e reduzem o intervalo das ondas para 85/70/60%, sem elevar o teto de população ou mudar BPM. Pausa, escolha e aba oculta congelam o relógio. Não aplicar ao treino, Abismo nem lutas de chefe.
+
+## Zag na caverna — 02/11/2026
+
+- A loja da caverna foi retirada por instrução humana. Zag permanece somente como personagem, com a arte e a animação existentes: sem ofertas, pedestais, preços, compra ao pisar, painel de loja ou nova interação.
+- Saves antigos convertem a posição da loja em posição do personagem e descartam o estoque. Bônus já equipados continuam até o fim da descida, sem novas compras ou reembolso. Partidas novas não mostram espaços vazios de orbs. O tabuleiro Trilha da Fortuna do Refúgio é outro sistema e não pertence a esta retirada da lojinha da caverna.
+
+
+## Curvas da picareta e da vida — aprovação de 02/11/2026
+
+- Picareta A: para n=nível−1, força base=1+0,160n−0,072n(n−1)/196. As99compras dão ganhos positivos decrescentes de0,160 a0,088; nível100 conserva13,276.
+- Vida B: base100; +4 nas compras1–10, +3 em11–30, +2 em31–60, +1 em61–100; base final300HP. Créditos legados/equipamentos/bênçãos permanecem aplicados pelas regras existentes.
+- Manter custos e receitas atuais, limite100, IDs/fundos/formato de save. Não converter esta aprovação em alteração de missões, cartas, armadura, demais projetos ou fontes globais.
+- HP corrente de save não é preenchido automaticamente ao aumentar seu máximo. Na migração da barra compartilhada antiga, fôlego usa o máximo antigo para preservar sua proporção.
+- Aprovação refere-se à curva e ao escopo; testes técnicos não certificam diversão, renda humana, redução de grind ou equilíbrio definitivo. Evidências e recuperação: analysis/pickaxe-vigor-20261102-r1/implementation-r1/APPLIED.json.
+
+## Recompensas de quests — 02/11/2026
+
+- Novos contratos v3 conservam as moedas e acrescentam gemas de uma cor em tipos selecionados. Valores usam a curva vigente de trabalho/nível do quadro, com multiplicadores minerais 1/2/4 por comum/rara/dourada. Objetivos e prazos não mudam. Contratos antigos já aceitos mantêm seu pagamento original.
+- Discos: somente miner/geode/floors/depth4/depth8, com chance por entrega 0,1/0,3/0,75%. Sorteio entre discos colecionáveis ainda não possuídos, respeitando a elegibilidade de andar. Não equipa automaticamente. Álbuns gravados são outro catálogo e não foram alterados.
+- Bolota: alternativa rara nas missões rocks/hunter/floors, 0% comum, 0,1% rara, 0,25% dourada. O vínculo original de 20 missões e 5.000 moedas de expedição permanece. Não duplica nem equipa o pet, nem altera seus poderes.
+- Cada contrato congela valores, chances e seed ao ser oferecido. Só uma entrega concluída concede; recarregar não sorteia de novo. Remoção do contrato e todos os ganhos são salvos juntos, antes do recibo visual. Falha confirmada mantém a missão pronta; gravação incerta exige recarga sem autosave.
+- HUD de missão mostra moedas, cor/quantidade e chances aplicáveis antes de aceitar. Testes técnicos e cálculo econômico não constituem aceite humano de balanceamento.

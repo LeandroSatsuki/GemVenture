@@ -1,0 +1,14 @@
+{
+  "id": "OPTIONAL-MINIBOSSES-UI-20261101-R2",
+  "authorization": "Pedido humano direto: retirar textos e nome sobre miniboss; pequena aura; nome grande e barra de vida no topo enquanto visível, ocultar ao afastar; aviso de proximidade na identidade aprovada da UI.",
+  "scope": "Only miniboss presentation: subtle ground aura, top name/life while visible, short approach notice in existing HUD family, no overhead captions. No combat/economy change.",
+  "sourceReceipt": "E:/Genventure/coordination/optional-minibosses-ui-20261101-r2/APPLICATION.json",
+  "files": {
+    "cave-miniboss-art.js": "a46ec867183218f17c56c466d635158a076707603592fd8730959d9e6b9397bd",
+    "cave-miniboss-hud.js": "1b905e104345aad722d73fdd431ed2315e5f7b9f2f577fc5a20734495e39bce6",
+    "cave-miniboss-hud.css": "5fb0fb7916e35efc29852de4552f2b7a184891c27e6da43af3d888e7dbbbdc1e",
+    "world.js": "f6841c140599ad210de04f1c3551398399bb6413cae4ceac04e45df667968a9c",
+    "attack-readability.js": "686d949f6baea012c6bd83dc8996ba998e40ad3fdd937f856779621d0ed38a33",
+    "run.js": "c1b438f3c00e526c223a26d474204e2a2ca2059858387d9ac349c8893e3b33a5"
+  }
+}

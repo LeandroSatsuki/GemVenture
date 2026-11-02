@@ -1,0 +1,8 @@
+{
+  "id": "GV-043/GOLD-PROC-FIX-R1",
+  "scope": "Residual yellow critical aura correction using approved family combo tier 1",
+  "source": "Current chat: old yellow flame around the player; prior approved crisp VFX family and application",
+  "files": {
+    "effects.js": "a268b0939138d5c6d148eff29fb20aa56b8d49e11ac210571cd6fc09fe1b0c88"
+  }
+}

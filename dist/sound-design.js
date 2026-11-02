@@ -1,6 +1,7 @@
 // Brief synthesized cues. Music keeps its own clock; no effect changes tempo.
 // Note: frequency, duration, waveform, gain, delay, optional final frequency.
 export const SOUND_CUES={
+ hedgehog:[[196,.11,'sine',.055,0,147],[88,.07,'triangle',.035,0,65]],
  drillHit:[[95,.1,'triangle',.055,0,42],[48,.1,'sine',.04,0]],
  drillDense:[[78,.22,'triangle',.022,0,60],[44,.24,'sine',.035,0]],
  drillDeflect:[[220,.12,'triangle',.065,0,110],[440,.06,'sine',.035,.03]],
@@ -9,6 +10,7 @@ export const SOUND_CUES={
  drillBoost:[[110,.15,'triangle',.06,0,220],[220,.2,'triangle',.045,.1,440]],
  burrow:[[150,.3,'triangle',.09,0,45],[90,.26,'sine',.07,.06,35]],
  emerge:[[65,.3,'sine',.12,0,180],[294,.12,'triangle',.08,.035,98],[587,.22,'sine',.05,.1]],
+ geodeEruption:[[82,.24,'triangle',.09,0,38],[1175,.18,'sine',.065,.04,1568]],
  rabbitStun:[[587,.09,'sine',.08,0,784],[880,.12,'triangle',.07,.08,1175],[1318,.22,'sine',.06,.16]],
  carrotSlam:[[110,.2,'triangle',.11,0,44],[165,.14,'triangle',.06,.04,80],[523,.22,'sine',.07,.08]],
  rockfall:[[100,.2,'triangle',.075,0,42],[68,.24,'sine',.065,.015,30]],
@@ -35,6 +37,7 @@ export const SOUND_CUES={
  proc:[[880,.12,'triangle',.055,0,1320],[1320,.14,'sine',.06,.04]],
  warning:[[294,.14,'sine',.12,0],[294,.14,'sine',.1,.19]],
  card:[[784,.12,'sine',.1,0],[1047,.25,'triangle',.075,.07]],
+ ascend:[[262,.1,'sine',.065,0],[392,.13,'sine',.075,.065],[523,.2,'triangle',.065,.13]],
  descend:[[523,.13,'sine',.08,0],[392,.18,'sine',.09,.09],[262,.3,'sine',.09,.18]],
  death:[[330,.3,'sine',.12,0],[262,.35,'sine',.1,.16],[196,.6,'sine',.08,.33]]
 };
@@ -45,8 +48,10 @@ export function eventSoundCues(events){
   else if(e.type==='cargo')cues.add('claim');
   else if(e.type==='hurt')cues.add(e.reason==='attack'?'hurt':'miss');
   else if(['meteorWarning','invaderWarning','bossWarning','waveWarning','sectionWarning'].includes(e.type))cues.add('warning');
-  else if(e.type==='burrow'||e.type==='emerge'||e.type==='rabbitStun'||e.type==='carrotSlam')cues.add(e.type);
+  else if(e.type==='burrow'||e.type==='emerge'||e.type==='rabbitStun'||e.type==='carrotSlam'||e.type==='geodeEruption')cues.add(e.type);
+  else if(e.type==='hedgehogHit')cues.add('hedgehog');
   else if(e.type==='ceilingWarning')cues.add('ceiling');
+  else if(e.type==='geodePulse'&&e.version===1&&e.bossIndex===0)cues.add('rockfall');
   else if(e.type==='rockfall'||e.type==='rockfallDust')cues.add('rockfall');
   else if(e.type==='heal')cues.add('heal');
   else if(e.type==='shield')cues.add('shield');
@@ -57,5 +62,5 @@ export function eventSoundCues(events){
   else if(e.type==='hit')cues.add('pick');
  }
  // A chain reaction must not become hundreds of simultaneous sounds.
- return ['mission','claim','hurt','burrow','emerge','rabbitStun','carrotSlam','warning','ceiling','rockfall','heal','shield','card','miss','heavy','proc','crystal','kill','pick'].filter(id=>cues.has(id)).slice(0,3);
+ return ['mission','claim','hurt','burrow','emerge','rabbitStun','carrotSlam','geodeEruption','warning','ceiling','rockfall','heal','shield','card','miss','heavy','proc','crystal','kill','hedgehog','pick'].filter(id=>cues.has(id)).slice(0,3);
 }

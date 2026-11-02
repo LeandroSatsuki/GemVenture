@@ -1,0 +1,11 @@
+{
+  "id": "FLOOR-PERFORMANCE-UI-INTEGRATION-20261101",
+  "authorization": "Ficou muito bom, aprovado. Pode aplicar o Desempenho por andar no jogo oficial e seguir para a próxima tela que ainda falta, mantendo esse padrão e sem remover nenhuma funcionalidade.",
+  "scope": "Approved floor performance only; no gameplay or palette migration.",
+  "files": {
+    "approved-lift-ui.js": "6293d461d0e6ebb518777144dc60f183abcccfddd94cf065ebfe9a0903b61551",
+    "approved-floor-performance.js": "42de3d0b2a477b1ac65aac8ed9a15dca100e47a3676e746419b229bb27b8c283",
+    "approved-floor-performance.css": "244bd5894c11b2b748f5548a23f955c23bea58808c74cbfe6295acc70b43d8aa"
+  },
+  "receipt": "E:\\Genventure\\coordination\\FLOOR-PERFORMANCE-UI-INTEGRATION-20261101\\APPLIED-RECEIPT.json"
+}

@@ -1,14 +1,14 @@
+import {collectedGemSvg} from './collected-gems.js';
 import {BLESSINGS,RELICS,OFFERING_COST,nextLevelXP,blessingInfo,WISH_FAMILIES} from './pillars.js';
 import {MATERIALS} from './materials.js';
-import {gemIcon} from './expedition-map.js';
+import {approvedArtSvg} from './approved-art.js';
 import {generateAsset,assetToSvg} from './art-kit.js';
-import {glyph} from './ui-art.js';
+import {approvedInterfaceIcons as icons} from './approved-interface-entry.js';
 import {buildingLevel} from './village.js';
 import {buildingMarkup} from './village-view.js';
-import {flowMarkup} from './flow-village.js';
-export function wellMarkup(s,result=false,selected=3){
- const pending=blessingInfo(s.pendingBlessing,s.pendingBlessingLevel,s.pendingBlessingRoll),kind=pending?.kind??selected,m=MATERIALS[kind];
- return '<div class="well-heading"><h2>POÇO DOS DESEJOS</h2></div>'+buildingMarkup(s,'well')+'<div class="wish-layout '+(result?'wish-reveal':'')+'" style="--wish:'+m.color+'"><div class="wish-scene">'+flowMarkup('well','Poço dos Desejos')+'<div class="wish-crystal">'+gemIcon(kind)+'<em>✦</em><em>✦</em><em>✧</em></div><i></i><b>'+(pending?'BÊNÇÃO GUARDADA':'FAÇA UM DESEJO')+'</b></div><section class="wish-choice">'+(pending?'<span>PRÓXIMA DESCIDA</span><h3>'+pending.name+'</h3><strong class="wish-good">↑ '+pending.good+'</strong><strong class="wish-risk">↓ '+pending.risk+'</strong><button class="primary" id="wellDone">PRONTO ✓</button>':'<div class="wish-offerings">'+MATERIALS.map((min,i)=>'<button data-wish-kind="'+i+'" aria-pressed="'+(i===kind)+'" style="--mineral:'+min.color+'">'+gemIcon(i)+'<strong>'+min.name+'</strong><span>'+WISH_FAMILIES[i].label+'</span></button>').join('')+'</div><p class="wish-risk-line">BÊNÇÃO + MALDIÇÃO</p><button class="primary" data-offering="'+kind+'" '+(s.materials[kind]<OFFERING_COST?'disabled':'')+'>OFERECER '+OFFERING_COST+' ◆</button><p class="wish-stock">'+s.materials[kind]+' GUARDADOS</p>')+'</section></div>';
-}
-export function relicMarkup(s){return `<div class="relic-heading"><h2>RELÍQUIAS</h2><strong>★ ${s.stars}</strong></div><div class="relic-grid">${RELICS.map(r=>{const owned=s.relics.includes(r.id);return `<article class="relic ${owned?'owned':''}"><div class="relic-art">${glyph(r.icon)}</div><h3>${r.name}</h3><strong>${r.detail}</strong><button class="primary" data-relic="${r.id}" ${owned||s.stars<r.cost?'disabled':''}>${owned?'ATIVA':'DESPERTAR · ★ '+r.cost}</button></article>`;}).join('')}</div><p class="relic-rule">ATÉ 5 ESTRELAS POR DESCIDA</p>${Object.values(s.starUpgrades).some(n=>n>0)?'<details class="quiet-details"><summary>MELHORIAS ANTERIORES</summary><p>Seus bônus estelares anteriores continuam ativos.</p></details>':''}`;}
+import {currentFlowMarkup} from './flow-village.js';
+// Retired service: compatibility exports cannot expose actions or spend currency.
+export function wellPresentationModel(){return null;}
+export function wellMarkup(){return '';}
+export function relicMarkup(s){return `<div class="relic-heading"><h2>RELÍQUIAS</h2><strong>★ ${s.stars}</strong></div><div class="relic-grid">${RELICS.map(r=>{const owned=s.relics.includes(r.id);return `<article class="relic ${owned?'owned':''}"><div class="relic-art">${icons.founder(r.id)}</div><h3>${r.name}</h3><strong>${r.detail}</strong><button class="primary" data-relic="${r.id}" ${owned||s.stars<r.cost?'disabled':''}>${owned?'ATIVA':'DESPERTAR · ★ '+r.cost}</button></article>`;}).join('')}</div><p class="relic-rule">ATÉ 5 ESTRELAS POR DESCIDA</p>${Object.values(s.starUpgrades).some(n=>n>0)?'<details class="quiet-details"><summary>MELHORIAS ANTERIORES</summary><p>Seus bônus estelares anteriores continuam ativos.</p></details>':''}`;}
 export function experienceMarkup(s){const p=s.experience,blessing=blessingInfo(s.run?.blessing||s.pendingBlessing,s.run?.blessingLevel||s.pendingBlessingLevel,s.run?s.run.blessingRoll:s.pendingBlessingRoll);return `<div class="experience-label"><b>NV. ${p.level}</b><span>${p.xp} / ${nextLevelXP(p.level)} XP</span><strong>${p.points} PONTOS DE HABILIDADE</strong></div><div class="experience-bar"><i style="width:${p.xp/nextLevelXP(p.level)*100}%"></i></div>${blessing?'<span class="blessing-tag">'+blessing.name+' · '+(s.run?'ATIVA':'PRÓXIMA DESCIDA')+'</span>':''}`;}

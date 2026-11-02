@@ -1,0 +1,12 @@
+import {createAlphaPlane,createAlphaMask} from './refuge-picking.js';
+import {REFUGE_LIFT_ASSETS,REFUGE_LIFT_ROOT,REFUGE_LIFT_EMBEDDED,REFUGE_LIFT_DENSITY} from './refuge-lift-manifest.js';
+import {paintRefugeLift,liftLayersReady} from './lift-composition.js';
+function browserImage(spec){return new Promise((resolve,reject)=>{if(typeof Image==='undefined'){reject(Error('Image unavailable'));return;}const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>reject(Error('Layer decode failed'));image.src=REFUGE_LIFT_EMBEDDED[spec.role]||REFUGE_LIFT_ROOT+spec.file;});}
+export function createLiftLayerAssets({loadImage=browserImage}={}){const layers=Object.create(null),masks=Object.create(null),failed=new Set();let loading=null,next=0;const status=()=>({ready:liftLayersReady(layers,REFUGE_LIFT_DENSITY),loaded:Object.keys(layers).length,expected:5,failed:[...failed],cachePixels:Object.values(layers).reduce((n,im)=>n+im.width*im.height,0)});return Object.freeze({
+ load(){if(loading)return loading;loading=Promise.all(Array.from({length:2},async()=>{while(next<REFUGE_LIFT_ASSETS.length){const spec=REFUGE_LIFT_ASSETS[next++];try{const image=await loadImage(spec);if(image.width!==389||image.height!==384||image.complete===false)throw Error('Layer registration changed');layers[spec.role]=image;try{const scratch=document.createElement('canvas');scratch.width=image.width;scratch.height=image.height;const ctx=scratch.getContext('2d');ctx.drawImage(image,0,0);const plane=createAlphaPlane(ctx.getImageData(0,0,image.width,image.height).data,image.width,image.height,{side:image.width});masks[spec.role]=createAlphaMask(plane,()=>document.createElement('canvas'));scratch.width=scratch.height=1;}catch{/* Presentation mask unavailable: keep original pixels and suppress mismatched animated outline. */}}catch{failed.add(spec.role);}}})).then(status);return loading;},
+ status,
+ maskStatus(){return {ready:liftLayersReady(masks,REFUGE_LIFT_DENSITY),pixels:Object.values(masks).reduce((n,im)=>n+im.width*im.height,0),canOutline:!liftLayersReady(layers,REFUGE_LIFT_DENSITY)||liftLayersReady(masks,REFUGE_LIFT_DENSITY)};},
+ paintMask(c,paintStatic,placement){return paintRefugeLift(c,{layers:masks,sourceToCache:REFUGE_LIFT_DENSITY,paintStatic},placement);},
+ paint(c,paintStatic,placement){return paintRefugeLift(c,{layers,sourceToCache:REFUGE_LIFT_DENSITY,paintStatic},placement);}
+});}
+export const refugeLiftAssets=createLiftLayerAssets();

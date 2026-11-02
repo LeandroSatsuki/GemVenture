@@ -1,0 +1,194 @@
+[
+  {
+    "path": "atlas\\bat-poof-shared-normal.png",
+    "sha256": "50276A6B6E2180597244F9F0564788592BBD83CD8FC71161521D6E10DBFE7E68"
+  },
+  {
+    "path": "atlas\\bat-poof-shared-soft.png",
+    "sha256": "577B4CCE438EE52161DE6FED6A13A7A411EEE2B0515DE600063D2C5C240FD112"
+  },
+  {
+    "path": "atlas\\geode-contact-shared-normal.png",
+    "sha256": "9302A7C10CA210CA54348C4500C69F1A41A8AE078160FE4B5CBC8B6DA83D42C6"
+  },
+  {
+    "path": "atlas\\geode-contact-shared-soft.png",
+    "sha256": "29926D6A65B45B0BCB2CA7E5C4F7ED50AA1FDBE45B9B0A0927A0579D8DC039AE"
+  },
+  {
+    "path": "atlas\\geode-death-shared-normal.png",
+    "sha256": "40D845E6E3F307462BDE674A51154BDC1E35B128505FA324ACBF6DBF6110465D"
+  },
+  {
+    "path": "atlas\\geode-death-shared-soft.png",
+    "sha256": "44E40DB628E9468B3274E28532EB6127BB9C872F1DEC11FBDF43EEBD8234BADA"
+  },
+  {
+    "path": "atlas\\slime-offensive-b1-normal.png",
+    "sha256": "7801C7199FBE6D776D8892DC01414B2E3C03CB990D7CB8777097E574236DE6BD"
+  },
+  {
+    "path": "atlas\\slime-offensive-b1-soft.png",
+    "sha256": "51F1C45417ACCE8DEC8EBD4FEEE40BD499C3D979D8779086154383D35427D395"
+  },
+  {
+    "path": "atlas\\slime-offensive-b2-normal.png",
+    "sha256": "1A5FA150715C0B1F0AA6FFEC1BF1193A6FBCBF575DF1464607D58171A65428DB"
+  },
+  {
+    "path": "atlas\\slime-offensive-b2-soft.png",
+    "sha256": "611C25191B435FA3F9432673AFEE0017D3251B2C137605C453E43A2F97310C17"
+  },
+  {
+    "path": "atlas\\slime-offensive-b3-normal.png",
+    "sha256": "1D69454C19875CAF0807B8B53B3B7331C549BCC3BB526152828C71EB3EA1DB03"
+  },
+  {
+    "path": "atlas\\slime-offensive-b3-soft.png",
+    "sha256": "6FC1AA39A8AE6B31D21995F711FCB54B463DA41B468799837EC26B613A4AFD15"
+  },
+  {
+    "path": "atlas\\slime-offensive-b4-normal.png",
+    "sha256": "F4A202D7A7E691C6CE7CE8A032F2536CAA32806757095663B8BB442A22D1C678"
+  },
+  {
+    "path": "atlas\\slime-offensive-b4-soft.png",
+    "sha256": "EE94FDC76704B332F62D0677D91796A3E97C07356BFF4EDAABB0D07B5C2978C5"
+  },
+  {
+    "path": "atlas\\slime-offensive-b5-normal.png",
+    "sha256": "FEBDE1EAE2F429E528212C2E016013A1338A4CB7FF88BD02F05D17C94B9980AF"
+  },
+  {
+    "path": "atlas\\slime-offensive-b5-soft.png",
+    "sha256": "D48352E0D3143E45109031B62084DE685A6A1D3402E9F281691676249E864B81"
+  },
+  {
+    "path": "atlas\\slime-offensive-b6-normal.png",
+    "sha256": "27D2410E97A74FABC87D04102C73C3442109F8C99DA7176092776C45244F6C03"
+  },
+  {
+    "path": "atlas\\slime-offensive-b6-soft.png",
+    "sha256": "1E1967129E600DF44881C6DEBF290659ED5D412C323710B5071287E77CB0A1EA"
+  },
+  {
+    "path": "atlas\\slime-offensive-b7-normal.png",
+    "sha256": "F623DAA95E37B1E8DE03B19233E76381F1C5E736229823AA65EA646C5794899B"
+  },
+  {
+    "path": "atlas\\slime-offensive-b7-soft.png",
+    "sha256": "4C7BFDDB6AF4E7095BF568DAE6CB4413C20540D309C40D0BD13B8C8C7D6B11F9"
+  },
+  {
+    "path": "atlas\\slime-residue-b1-normal.png",
+    "sha256": "4991BA079DDFF736FFD669FC8AACEB38F1145B3E61BFCA72A2FB5C1DF670C3D8"
+  },
+  {
+    "path": "atlas\\slime-residue-b1-soft.png",
+    "sha256": "4991BA079DDFF736FFD669FC8AACEB38F1145B3E61BFCA72A2FB5C1DF670C3D8"
+  },
+  {
+    "path": "atlas\\slime-residue-b2-normal.png",
+    "sha256": "B4B69094DDD3F30D3AE886263756601A29265C03EAF3C720856917A288238B1C"
+  },
+  {
+    "path": "atlas\\slime-residue-b2-soft.png",
+    "sha256": "B4B69094DDD3F30D3AE886263756601A29265C03EAF3C720856917A288238B1C"
+  },
+  {
+    "path": "atlas\\slime-residue-b3-normal.png",
+    "sha256": "09C7E1E032B3F0FD1FD558A262396C3D4CBDA567449261B892B2C4CBB320088F"
+  },
+  {
+    "path": "atlas\\slime-residue-b3-soft.png",
+    "sha256": "09C7E1E032B3F0FD1FD558A262396C3D4CBDA567449261B892B2C4CBB320088F"
+  },
+  {
+    "path": "atlas\\slime-residue-b4-normal.png",
+    "sha256": "EC9F37E253BA274677928335A991D207714AF5277EFFC0C3E4E0E8281D4A6575"
+  },
+  {
+    "path": "atlas\\slime-residue-b4-soft.png",
+    "sha256": "EC9F37E253BA274677928335A991D207714AF5277EFFC0C3E4E0E8281D4A6575"
+  },
+  {
+    "path": "atlas\\slime-residue-b5-normal.png",
+    "sha256": "2B0E3F48E15BC5452B3846855D7C6851B53AF3C30258DBED2A2AC3D6684DFA44"
+  },
+  {
+    "path": "atlas\\slime-residue-b5-soft.png",
+    "sha256": "2B0E3F48E15BC5452B3846855D7C6851B53AF3C30258DBED2A2AC3D6684DFA44"
+  },
+  {
+    "path": "atlas\\slime-residue-b6-normal.png",
+    "sha256": "2880D092BE1B5A3F919FA56EF4E7AAE73025EE5C8AE6AA95E971C13B96F248B3"
+  },
+  {
+    "path": "atlas\\slime-residue-b6-soft.png",
+    "sha256": "2880D092BE1B5A3F919FA56EF4E7AAE73025EE5C8AE6AA95E971C13B96F248B3"
+  },
+  {
+    "path": "atlas\\slime-residue-b7-normal.png",
+    "sha256": "3E4B5AAAE4C2B01D6B4B3D0E39845F2ABCAD143DE5774EFDC5BEF0C704C598DE"
+  },
+  {
+    "path": "atlas\\slime-residue-b7-soft.png",
+    "sha256": "3E4B5AAAE4C2B01D6B4B3D0E39845F2ABCAD143DE5774EFDC5BEF0C704C598DE"
+  },
+  {
+    "path": "atlas\\slime-splash-b1-normal.png",
+    "sha256": "ACA1BEF325A70211037A59B28FAE386AA5041FD2676CAD0038E3B92B2EE282F8"
+  },
+  {
+    "path": "atlas\\slime-splash-b1-soft.png",
+    "sha256": "AF5D56119709F9BEC16ACE7F1AA65D931B5637D21061FC3F5A9FFD20014152BE"
+  },
+  {
+    "path": "atlas\\slime-splash-b2-normal.png",
+    "sha256": "44F3E27B13C3C1E95812EFF3E18E4AAF1EDDCDE17147C467C2396A8F8D91FBAC"
+  },
+  {
+    "path": "atlas\\slime-splash-b2-soft.png",
+    "sha256": "9DF53FD885CA4EA6F7C57734C8ABDB979CDA833E02A665EB60365532E1805B01"
+  },
+  {
+    "path": "atlas\\slime-splash-b3-normal.png",
+    "sha256": "F73B15D942681E57C05FCB0137753E3BD27D5E41002DED5A28652902501B8E87"
+  },
+  {
+    "path": "atlas\\slime-splash-b3-soft.png",
+    "sha256": "0657B0F631B2EC44758AF3BE56CF62184280F3BF0F8E3724E50E261F44E8E7D7"
+  },
+  {
+    "path": "atlas\\slime-splash-b4-normal.png",
+    "sha256": "7A6141F7FF837887D57E6EF1F3F8472DEBE7489B13C3EA95B49682F429E6DB80"
+  },
+  {
+    "path": "atlas\\slime-splash-b4-soft.png",
+    "sha256": "860DAEE5BFDB60CEDCCA8C1B24C571A2BFFED7E94F3EF0D393BD021ACE306297"
+  },
+  {
+    "path": "atlas\\slime-splash-b5-normal.png",
+    "sha256": "1F129937A4E45F5CC03A21C62D522FACD9F3337446B1ABDD62558B035E0E2C9E"
+  },
+  {
+    "path": "atlas\\slime-splash-b5-soft.png",
+    "sha256": "860DAEE5BFDB60CEDCCA8C1B24C571A2BFFED7E94F3EF0D393BD021ACE306297"
+  },
+  {
+    "path": "atlas\\slime-splash-b6-normal.png",
+    "sha256": "4BD9FB1E45DC7D9273F16F0C465CF5E43C3B87513E32AF2EF17AB05B805C0E2E"
+  },
+  {
+    "path": "atlas\\slime-splash-b6-soft.png",
+    "sha256": "2053E072A83CF94DA321BDE79BFF077C38D8DD8AF8139B0793ABA4C720FAEC55"
+  },
+  {
+    "path": "atlas\\slime-splash-b7-normal.png",
+    "sha256": "7992C94F1872892F7F11C3E4C799913223B3AA44C22030959243EFEA59416C1A"
+  },
+  {
+    "path": "atlas\\slime-splash-b7-soft.png",
+    "sha256": "C9501AC3FD7850A2D50D14054F2CBD9785BCEB10DB1244E1D1E0A3E4F00DDFB6"
+  }
+]

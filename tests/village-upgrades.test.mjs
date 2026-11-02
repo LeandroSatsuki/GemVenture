@@ -1,3 +1,4 @@
+import {rectangularRoom} from './helpers/rectangular-room.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as E from '../dist/core.js';
@@ -6,11 +7,11 @@ import {makeOffering,WISH_FAMILIES,blessingEffects,blessingInfo,grantXP} from '.
 import {missionOffers,missionOdds,missionReward,acceptMission,claimMission} from '../dist/missions.js';
 import {wellMarkup} from '../dist/pillar-view.js';
 function rich(){const s=E.createState(712);s.bank=1000000;s.materials=[100000,100000,100000,100000];return s;}
-function run(id,level=1){const s=E.createState(12);s.pendingBlessing=id;s.pendingBlessingLevel=level;E.startRun(s);const r=s.run;r.room.visible=null;r.room.explored=null;r.room.terrain.fill(0);r.room.rocks=[];r.room.nodes=[];r.room.enemies=[];r.room.wave=null;r.room.quota=999;return s;}
+function run(id,level=1){const s=E.createState(12);s.pendingBlessing=id;s.pendingBlessingLevel=level;E.startRun(s);rectangularRoom(s);const r=s.run;r.room.visible=null;r.room.explored=null;r.room.terrain.fill(0);r.room.rocks=[];r.room.nodes=[];r.room.enemies=[];r.room.wave=null;r.room.quota=999;return s;}
 const close=(a,b)=>assert.ok(Math.abs(a-b)<1e-8,`${a} ≈ ${b}`);
 
 test('buildings consume exact resources, persist through death and respect their individual caps',()=>{
- for(const id of Object.keys(BUILDINGS)){const s=rich(),cap=BUILDINGS[id].cap;s.bank=1e9;s.materials.fill(1e9);let lastCost=0;for(let level=1;level<cap;level++){const p=buildingUpgrade(s,id),wallet=[...s.materials],bank=s.bank;assert.ok(p.cost>lastCost);lastCost=p.cost;assert.ok(upgradeBuilding(s,id));assert.equal(s.village[id],level+1);assert.equal(s.bank,bank-p.cost);assert.deepEqual(s.materials,wallet.map((v,i)=>v-p.recipe[i]));}const snapshot=JSON.stringify(s);assert.equal(upgradeBuilding(s,id),false);assert.equal(JSON.stringify(s),snapshot);assert.deepEqual(E.restoreState(snapshot),s);E.startRun(s);assert.equal(upgradeBuilding(s,'well'),false);E.finishRun(s,'death');assert.equal(s.village[id],cap);}
+ for(const id of Object.keys(BUILDINGS).filter(id=>id!=='well')){const s=rich(),cap=BUILDINGS[id].cap;s.bank=1e9;s.materials.fill(1e9);let lastCost=0;for(let level=1;level<cap;level++){const p=buildingUpgrade(s,id),wallet=[...s.materials],bank=s.bank;assert.ok(p.cost>lastCost);lastCost=p.cost;assert.ok(upgradeBuilding(s,id));assert.equal(s.village[id],level+1);assert.equal(s.bank,bank-p.cost);assert.deepEqual(s.materials,wallet.map((v,i)=>v-p.recipe[i]));}const snapshot=JSON.stringify(s);assert.equal(upgradeBuilding(s,id),false);assert.equal(JSON.stringify(s),snapshot);assert.deepEqual(E.restoreState(snapshot),s);E.startRun(s);assert.equal(upgradeBuilding(s,'well'),false);E.finishRun(s,'death');assert.equal(s.village[id],cap);}
  const poor=E.createState(),before=JSON.stringify(poor);assert.equal(upgradeBuilding(poor,'well'),false);assert.equal(upgradeBuilding(poor,'unknown'),false);assert.equal(JSON.stringify(poor),before);
 });
 
@@ -23,14 +24,12 @@ test('forge building boosts raw tool power without changing investments or skill
  const s=rich();s.forge.invested.anvil=123;const power=E.power(s),slots=[...s.equipped];upgradeBuilding(s,'forge');close(E.power(s),power*1.02);assert.equal(s.forge.invested.anvil,123);assert.deepEqual(s.equipped,slots);
 });
 
-test('every crystal rolls only its three themed blessings; legacy bonuses stay intact',()=>{
- for(let kind=0;kind<4;kind++){const seen=new Set();for(let seed=0;seed<80;seed++){const s=rich();s.seed=seed;const wallet=[...s.materials],b=makeOffering(s,kind);assert.ok(WISH_FAMILIES[kind].ids.includes(b.id));seen.add(b.id);assert.equal(s.materials[kind],wallet[kind]-45);assert.equal(makeOffering(s,kind),null);assert.ok(blessingInfo(b.id,1).good);assert.ok(blessingInfo(b.id,10).risk);assert.ok(blessingInfo(b.id,1,b.pendingBlessingRoll).risk);}assert.equal(seen.size,3);}
- close(blessingEffects({blessing:'might'}).power,1.04);close(blessingEffects({blessing:'wisdom'}).xp,1.05);close(blessingEffects({blessing:'shellwish'}).incoming,.97);close(blessingEffects({blessing:'luckywish'}).doubleLoot,.04);
+test('retired offerings preserve legacy bonuses and never consume a crystal',()=>{
+ for(let kind=0;kind<4;kind++){const s=rich(),before=JSON.stringify(s);assert.equal(makeOffering(s,kind),null);assert.equal(JSON.stringify(s),before);}close(blessingEffects({blessing:'might'}).power,1.04);close(blessingEffects({blessing:'wisdom'}).xp,1.05);close(blessingEffects({blessing:'shellwish'}).incoming,.97);close(blessingEffects({blessing:'luckywish'}).doubleLoot,.04);
 });
 
-test('offering snapshots well level, survives reload, expires on return and cannot reroll while running',()=>{
- const s=rich();s.village.well=3;makeOffering(s,1);upgradeBuilding(s,'well');assert.equal(s.pendingBlessingLevel,3);const t=E.restoreState(JSON.stringify(s));E.startRun(t);assert.equal(t.run.blessingLevel,3);assert.equal(t.pendingBlessing,null);assert.equal(t.pendingBlessingLevel,1);assert.equal(makeOffering(t,2),null);assert.ok(E.restoreState(JSON.stringify(t)));E.finishRun(t,'death');E.startRun(t);assert.equal(t.run.blessing,null);
- const bad=structuredClone(t);bad.run.blessingLevel=11;assert.equal(E.restoreState(JSON.stringify(bad)),null);
+test('existing purchased blessing survives reload and expires after one run',()=>{
+ const s=rich();s.village.well=3;s.pendingBlessing='might';s.pendingBlessingLevel=3;assert.equal(upgradeBuilding(s,'well'),false);const t=E.restoreState(JSON.stringify(s));E.startRun(t);assert.equal(t.run.blessingLevel,3);assert.equal(t.pendingBlessing,null);assert.equal(makeOffering(t,2),null);assert.ok(E.restoreState(JSON.stringify(t)));E.finishRun(t,'death');E.startRun(t);assert.equal(t.run.blessing,null);const bad=structuredClone(t);bad.run.blessingLevel=11;assert.equal(E.restoreState(JSON.stringify(bad)),null);
 });
 
 test('new blessings apply actual force, life, XP, breath and incoming-damage tradeoffs',()=>{
@@ -55,6 +54,6 @@ test('mission levels improve rarity, rewards and choice count without rewriting 
  s.village.missions=10;assert.equal(missionOffers(s).length,6);assert.ok(E.restoreState(JSON.stringify(s)));s.unlocked.push('questluck');const chance=missionOdds(s);assert.ok(chance.gold+chance.rare<1);
 });
 
-test('well previews show the selected color, broad family and cost and saved blessing strength',()=>{
- const s=rich();let html=wellMarkup(s,false,1);assert.match(html,/FORÇA · CRÍTICOS/);assert.match(html,/OFERECER 45/);assert.doesNotMatch(html,/BRASA RUBRA|GOLPE DE SORTE|wish-odds/);assert.doesNotMatch(html,/undefined|NaN/);makeOffering(s,3);html=wellMarkup(s,true);assert.match(html,/BÊNÇÃO GUARDADA/);assert.match(html,/wish-crystal/);assert.doesNotMatch(html,/data-offering|undefined|NaN/);
+test('retired well renders no UI for new or previously blessed saves',()=>{
+ const s=rich();assert.equal(wellMarkup(s),'');s.pendingBlessing='might';assert.equal(wellMarkup(s,true),'');
 });

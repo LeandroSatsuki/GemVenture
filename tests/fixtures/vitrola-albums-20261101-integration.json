@@ -1,0 +1,13 @@
+{
+  "authorization": "Current human direct request to add approved recorded music to the in-game vitrola. Musical approval in HUMAN-APPROVAL-ALL-R5.json; does not assert human visual approval of the new album panel.",
+  "scope": "Album catalog/listening in vitrola; preserve original expedition disc collection and gameplay clocks.",
+  "sourceReceipt": "E:\\Genventure\\coordination\\GV-059-vitrola-library-r1\\INTEGRATION-RECEIPT.json",
+  "files": {
+    "approved-records-ui.js": "164a97adacaa5ae08b6a7e57673f82dfbe3f22e04d71f4819b5790fe7cb17065",
+    "music-albums.js": "a1f39127653e960670b6a71dc809db94a4d14a3d3c071859fb044cc333b5e7eb",
+    "recorded-album-art.js": "6d2874db310deeb8f29701e26c5f3af54a1404d5f03b69c63847cd3c28c168d3",
+    "recorded-album-player.js": "22b75acbd40b1b31ff1c88f48232a778e5eb1d4dc7bf47e5ac032642abe58566",
+    "recorded-albums-ui.js": "85610c6c04a5fbcb8414bfc106f854da6cb86b5b713fa524076178d8455616e9",
+    "recorded-albums-ui.css": "f0a293138cb25f18c08157be25a5a53c33ef45e15205d2292ae2bc582f6130e5"
+  }
+}

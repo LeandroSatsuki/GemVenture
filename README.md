@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/media/gemventure-cover.png" alt="GemVenture: o minerador salta sobre cristais em uma caverna colorida, com um ouriço gigante observando a descida." width="100%">
+  <img src="docs/media/gemventure-update-20261102.png" alt="GemVenture: o minerador corre na caverna de fogo, perseguido pelo Místico, por um slime de magma e por um morcego de brasa." width="100%">
 </p>
 
 <h1 align="center">GemVenture</h1>
@@ -9,7 +9,7 @@
   <a href="https://github.com/LeandroSatsuki/GemVenture/actions/workflows/ci.yml"><img src="https://github.com/LeandroSatsuki/GemVenture/actions/workflows/ci.yml/badge.svg" alt="Validação do projeto"></a>
   <img src="https://img.shields.io/badge/estado-alpha-de9751?style=flat-square" alt="Em desenvolvimento: alpha">
   <img src="https://img.shields.io/badge/Node.js-24-08b23b?style=flat-square" alt="Node.js 24">
-  <img src="https://img.shields.io/badge/arte-HEPT32-5ee9e9?style=flat-square" alt="Paleta HEPT32">
+  <img src="https://img.shields.io/badge/arte-voxel_2.5D-5ee9e9?style=flat-square" alt="Arte voxel 2.5D">
 </p>
 
 <p align="center">
@@ -22,12 +22,24 @@
 
 GemVenture é um jogo de mineração rítmica com progressão incremental e expedições
 procedurais. Cada batida é uma decisão: quebrar um cristal, enfrentar uma criatura
-ou abrir caminho para o próximo combo. Volte à vila, invista os recursos e prepare
+ou abrir caminho para o próximo combo. Volte ao refúgio, invista os recursos e prepare
 uma nova descida.
 
 **Protótipo jogável em desenvolvimento.** Arte, conteúdo e balanceamento continuam
 evoluindo. A capa é uma ilustração promocional; as imagens abaixo mostram a
 interface do jogo.
+
+## Atualização preparada — 2 de novembro de 2026
+
+Novas cavernas conectadas e arenas, ambientação própria por bioma, chefes com
+animações e mecânicas mais claras e uma rodada de otimizações sem retirar o visual.
+Picareta e vida receberam ganhos maiores no começo; custos e limites preservados.
+A candidata ainda aguarda publicação no Itch.io.
+
+![Refúgio atual](docs/media/gemventure-refuge-20261102.png)
+![Caverna de magma atual](docs/media/gemventure-cave-20261102.png)
+
+Capturas do jogo em perfil de demonstração isolado. A capa é ilustração promocional.
 
 ## O jogo
 
@@ -35,16 +47,15 @@ interface do jogo.
 | --- | --- |
 | **Andares** | Explore, mine, vença o chefe e escolha entre descer ou voltar à vila. |
 | **Abismo Infinito** | Mineração e enxames em fluxo contínuo, com risco crescente e escolhas rápidas de cartas. |
-| **Broca AFK** | Uma máquina que evolui com cascalho e encontra lotes raros de cristais; profundidade, núcleo e progresso ampliam os prêmios. |
 
 - **Ritmo como regra:** movimentação, ataques, criaturas e sinais compartilham o pulso musical.
 - **Cavernas vivas:** corredores, ambientes específicos, recursos variados e chefes com mecânicas próprias.
 - **Builds:** cartas temporárias combináveis, uma grande teia de talentos e equipamentos aprimoráveis.
 - **Recompensa visível:** combos, estrelas, explosões e números com feedback imediato.
-- **Descanso com propósito:** vila interativa, música suave, missões e o tabuleiro tático de Zag.
-- **Discos colecionáveis:** gêneros distintos, compra por essências e prévia de cinco segundos.
+- **Preparação no refúgio:** equipamentos, talentos, missões, pets e música antes da próxima expedição.
+- **Discos colecionáveis:** gêneros distintos, compra por estrelas e seleção da trilha.
 
-## A vila
+## O refúgio
 
 Cada estrutura tem uma função própria:
 
@@ -52,14 +63,15 @@ Cada estrutura tem uma função própria:
 | --- | --- |
 | **Forja** | Força bruta e resistência, usando cristais separados por tipo. |
 | **Árvore de Ecos** | Builds e sinergias, usando experiência e pontos de talento. |
-| **Poço dos Desejos** | Bênçãos e maldições aleatórias para a próxima descida. |
 | **Relicário** | Prestígio, relíquias e desbloqueios pagos com estrelas raras. |
 | **Quadro de Missões** | Objetivos escalonados e entrega de recompensas na vila. |
-| **Zag** | Tabuleiro, escolhas de dados, rotas, ferramentas e cofres. |
 | **Vitrola** | Coleção musical e seleção da trilha. |
-| **Broca AFK** | Economia passiva própria; cascalho melhora apenas a máquina. |
+| **Pets** | Companheiros, habilidades e requisitos de desbloqueio. |
 
-## Em imagens
+Dados e módulos legados de sistemas retirados da navegação podem permanecer para
+migração de saves e ferramentas de desenvolvimento; não representam opções do lobby atual.
+
+## Em imagens — registros de desenvolvimento
 
 <p align="center">
   <img src="docs/media/gameplay.jpg" alt="Combate contra o Rei das Tocas, com combo, cristais e habilidades no HUD" width="100%">
@@ -127,6 +139,7 @@ carregar os módulos.
 ```bash
 npm test
 npm run audit:art
+npm run audit:assets
 npm run audit:miner
 npm run catalog
 ```
@@ -135,6 +148,18 @@ A suíte cobre combate, ritmo, chefes, exploração, economia, migrações de sa
 cartas e geração de arte. GitHub Actions executa validação automática em Linux e
 Windows. O jogo é servido diretamente de `dist/`; essa pasta contém o código
 fonte atual, não uma compilação descartável.
+
+Para montar um pacote de distribuição separado:
+
+```bash
+npm run build:release
+```
+
+O comando cria uma pasta nova em `../releases/`, com manifesto e hashes. Inclui
+os módulos do jogo, folhas de estilo e famílias de assets usadas, preservando
+biomas, cosméticos e músicas. Testes, ferramentas, fontes de produção, backups,
+páginas de QA e ateliês não são incluídos. Não publique o repositório inteiro.
+Esse pacote web ainda não é um executável nem uma integração Steamworks.
 
 | Pasta | Conteúdo |
 | --- | --- |
@@ -149,12 +174,15 @@ Ferramentas visuais locais: [ateliê](http://127.0.0.1:4173/art-studio.html),
 [laboratório musical](http://127.0.0.1:4173/music-lab.html) e
 [relatório de balanceamento](http://127.0.0.1:4173/balance-report.html).
 
+Arquivos gerados, fontes e critérios de limpeza: [manutenção do projeto](docs/MAINTENANCE.md).
+
 ## Documentação
 
 - [Arquitetura e persistência](docs/ARCHITECTURE.md)
 - [Direção de arte e capa](docs/art/README.md)
 - [Regras de produto](DESIGN_RULES.md)
 - [Assets e referências](ART_ASSETS.md)
+- [Efeitos substituíveis](docs/art/vfx-assets.md) · [prévia local](http://127.0.0.1:4173/vfx-gallery.html)
 - [Economia da Broca AFK](MINERADORA.md)
 - [Direção musical](MUSIC_DIRECTION.md)
 - [Histórico técnico](docs/technical/development-history.md)

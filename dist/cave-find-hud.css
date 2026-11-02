@@ -1,0 +1,27 @@
+/* Approved passive cave information. Scoped to this consumer only. */
+body.hud-v5 #hud5Root .cave-combo-guard{position:absolute;top:100%;left:20px;box-sizing:border-box;width:248px;display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:5px 7px;margin-top:8px;padding:8px 10px;border:2px solid #26538c;border-radius:11px;background:linear-gradient(#102a52,#06132b);box-shadow:0 3px #020816;color:#edf4ff;font:600 17px/1.2 GVExpDisplay,Fredoka,sans-serif;text-align:left;text-shadow:none;pointer-events:none;overflow:hidden}
+body.hud-v5 #hud5Root .cave-guard-glyph{grid-row:1 / 3;width:29px;height:29px;object-fit:contain}
+body.hud-v5 #hud5Root .cave-guard-name{font:600 16px/1.1 GVExpDisplay,Fredoka,sans-serif;color:#edf4ff;white-space:nowrap}
+body.hud-v5 #hud5Root .cave-combo-guard b.cave-guard-time{font:600 18px/1 GVExpDisplay,Fredoka,sans-serif;color:#35d6f2;white-space:nowrap}
+body.hud-v5 #hud5Root .cave-guard-track{grid-column:2 / 4;height:5px;border-radius:4px;background:#020816;overflow:hidden}
+body.hud-v5 #hud5Root .cave-guard-track i{display:block;height:100%;border-radius:inherit;background:#35d6f2;box-shadow:0 0 5px #35d6f2}
+body.hud-v5 #hud5Root .cave-combo-guard[hidden]{display:none!important}
+/* The clean HUD keeps generic legacy target details hidden. Only the chest hint
+   has an approved passive slot, below the orb row rather than over it at150%. */
+body.hud-v5 #hud5Root .hud>#targetTip.approved-cave-find-tip{position:absolute!important;inset:auto!important;left:12px!important;top:196px!important;width:220px!important;min-width:0!important;max-width:calc(100% - 24px)!important;height:auto!important;box-sizing:border-box;transform:none!important;margin:0!important;display:flex!important;flex-direction:column;align-items:center;gap:5px;padding:10px 14px;border:2px solid #26538c!important;border-radius:11px;background:linear-gradient(#102a52,#06132b)!important;box-shadow:0 3px #020816!important;color:#edf4ff!important;text-shadow:none;pointer-events:none!important;font:600 16px/1.2 GVExpBody,Nunito,sans-serif}
+body.hud-v5 #hud5Root .hud>#targetTip.approved-cave-find-tip[hidden]{display:none!important}
+body.hud-v5 #hud5Root #targetTip.approved-cave-find-tip :is(strong,span,small,b,svg){margin:0!important;letter-spacing:0!important;text-transform:none}
+body.hud-v5 #hud5Root #targetTip.approved-cave-find-tip>strong{font:600 19px/1.15 GVExpDisplay,Fredoka,sans-serif!important;color:#edf4ff!important}
+body.hud-v5 #hud5Root #targetTip.approved-cave-find-tip .cave-find-reward{display:flex;align-items:center;justify-content:center;gap:7px}
+body.hud-v5 #hud5Root #targetTip.approved-cave-find-tip .cave-find-reward,body.hud-v5 #hud5Root #targetTip.approved-cave-find-tip .cave-find-reward>span{font:600 16px/1.1 GVExpBody,Nunito,sans-serif!important;color:#bfd0e8!important}
+body.hud-v5 #hud5Root #targetTip.approved-cave-find-tip .collected-gem{width:35px;height:35px;flex:none;overflow:visible}
+body.hud-v5 #hud5Root #targetTip.approved-cave-find-tip .cave-find-reward b{font:600 25px/1 GVExpDisplay,Fredoka,sans-serif!important;color:#edf4ff!important}
+body.hud-v5 #hud5Root #targetTip.approved-cave-find-tip>small{font:600 13px/1.1 GVExpBody,Nunito,sans-serif!important;color:#bfd0e8!important}
+@container approved-exp (max-width:680px){
+ body.hud-v5 #hud5Root .cave-combo-guard{left:auto;right:0;width:210px;padding:7px 8px;grid-template-columns:25px 1fr auto;gap:5px}
+ body.hud-v5 #hud5Root .cave-guard-glyph{width:25px;height:25px}
+ body.hud-v5 #hud5Root .cave-guard-name{font-size:14px}
+ body.hud-v5 #hud5Root .cave-combo-guard b.cave-guard-time{font-size:17px}
+ body.hud-v5 #hud5Root .hud>#targetTip.approved-cave-find-tip{top:304px!important;left:8px!important;width:180px!important;padding:8px!important}
+ body.hud-v5 #hud5Root #targetTip.approved-cave-find-tip>strong{font-size:17px!important}
+}

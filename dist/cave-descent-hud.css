@@ -1,0 +1,29 @@
+@layer ui-layout-r2 {
+/* Keep the approved blue panel and typography; replace its obsolete meters. */
+body.hud-v5 #stage #hud5Root .hud5-critical #objective[data-stairway=true]>*{display:none!important}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective[data-stairway=true]>[hidden]{display:none!important}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective[data-stairway=true]>small{display:block!important;font:600 15px GVExpDisplay,Fredoka,sans-serif!important;white-space:normal!important}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective[data-stairway=true]>p[data-stair-pressure]:not([hidden]){display:block!important;font:600 13px GVExpBody,Nunito,sans-serif!important;white-space:normal!important}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective[data-stairway=true][hidden]{display:none!important}
+
+}
+
+@layer ui-layout-r2 {
+body.hud-v5 #stage #hud5Root .hud5-critical #objective[data-stairway=true]>[data-cave-completion]:not([hidden]){display:grid!important;gap:8px;margin-top:8px;min-width:0}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective [data-cave-completion] [hidden]{display:none!important}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective .cave-charge-value{display:flex;align-items:center;justify-content:space-between;gap:12px;font:700 14px GVExpBody,Nunito,sans-serif}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective .cave-charge-value strong{font:800 16px GVExpBody,Nunito,sans-serif}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective .cave-charge-meter{height:9px;width:100%;margin:0}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective .cave-charge-meter i{display:block;height:100%;background:linear-gradient(90deg,#2870b8,#6cdce5);border-radius:inherit}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective .cave-complete{position:static;width:100%;min-height:44px;margin:0;padding:8px 12px;font:700 16px GVExpDisplay,Fredoka,sans-serif;pointer-events:auto;cursor:pointer}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective .cave-hole-hint{font:700 12px GVExpBody,Nunito,sans-serif;opacity:.78;white-space:normal}
+}
+
+@layer ui-layout-r2 {
+@keyframes gv-descent-ready{0%,100%{opacity:.12}50%{opacity:1}}
+body.hud-v5 #stage #hud5Root .cave-complete:not(:disabled)::after{content:'';position:absolute;inset:0;border:3px solid #ffd36a;border-radius:inherit;background:#ffbc0026;box-shadow:inset 0 0 16px #ffd36a80,0 0 20px #ffbc00;pointer-events:none;animation:gv-descent-ready 1.05s ease-in-out infinite}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective .cave-complete{position:relative}
+body.hud-v5 #stage #hud5Root[data-feedback-held=true] .cave-complete::after{animation-play-state:paused}
+body.soft-fx #stage #hud5Root .cave-complete:not(:disabled)::after{animation:none;opacity:1;box-shadow:inset 0 0 0 1px #ffd36a}
+@media(prefers-reduced-motion:reduce){body.hud-v5 #stage #hud5Root .cave-complete:not(:disabled)::after{animation:none;opacity:1;box-shadow:inset 0 0 0 1px #ffd36a}}
+}

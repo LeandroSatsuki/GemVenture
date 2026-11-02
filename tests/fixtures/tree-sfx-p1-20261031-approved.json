@@ -1,0 +1,19 @@
+{
+  "id": "GV-059/SFX-TREE-P1",
+  "authorization": "Human approval in the musical chat, 2026-10-31: aprovado, pode aplicar. Eight approved Tree sounds and semantic callbacks; no visual redesign or other-service expansion.",
+  "applicationReceipt": "coordination/GV-059-sfx-tree-applied-20261031/APPLICATION-RECEIPT.json",
+  "parentContracts": [
+    "approved-services-20261031-ui.json",
+    "approved-pets-20261031-ui.json"
+  ],
+  "previousApprovedHashes": {
+    "approved-tree-ui.js": "84a7c010d6f8c15bf5f461ae821dee97735f85ee307b9b2ae7bd6bcddd539265",
+    "run.js": "11f43f60ebc53a35fd07fe59f86d13f2592f622e14e6f3a6c0c661730a2e6639"
+  },
+  "scope": "Approved sound-semantic delta, newer Pets code preserved; existing palette/geometry/markup/CSS unchanged.",
+  "files": {
+    "run.js": "270f1c09e1e2bbf5332467f0186893e05b7fd29bad8d259e61f2276ca95b76f6",
+    "approved-tree-ui.js": "a121d3e730a01a6433c6aed3eabdac01b090f79e68762e09bf24ece3b04e3a7f",
+    "ui-sound-feedback.js": "2da7a4c074a36de2a1e859202313a3e3764781d4fd39a0f3dfb7ca5572637f7a"
+  }
+}

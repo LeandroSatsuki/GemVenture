@@ -1,6 +1,9 @@
 import {generateAsset,assetSvgBody} from './art-kit.js';
 const itemArt={tonic:'potion',ward:'shield'};
 const paths={
+ coin:'M26 15A10 10 0 1 1 6 15A10 10 0 1 1 26 15ZM12 3C17 0 29 4 29 14C29 21 25 26 20 28M13 11H19M16 8V22M13 19H19',
+ star:'M16 3L20 11L29 12L23 19L24 28L16 24L8 28L9 19L3 12L12 11Z',
+ depth:'M7 3V26H27M16 4V20M12 16L16 20L20 16M3 8H7M3 14H7M3 20H7',
  heart:'M16 28C13 25 3 18 3 11C3 3 13 2 16 9C19 2 29 3 29 11C29 18 19 25 16 28Z',
  vault:'M4 12V8Q4 4 8 4H24Q28 4 28 8V12ZM4 12H28V28H4ZM3 12H29M14 16H18V21H14ZM16 21V24',
  wings:'M16 20Q12 5 2 3L4 15 8 14 8 20 13 19 16 25 19 19 24 20 24 14 28 15 30 3Q20 5 16 20Z',
@@ -39,4 +42,5 @@ const paths={
  backpack:'M8 9V6C8 3 11 2 16 2S24 3 24 6V9M6 10H26V29H6ZM11 10V29M21 10V29M11 18H21V23H11Z',
  empty:'M16 8V24M8 16H24'
 };
-export function glyph(id){if(itemArt[id])return `<svg class="glyph" viewBox="0 0 100 110" aria-hidden="true">${assetSvgBody(generateAsset(itemArt[id]))}</svg>`;return `<svg class="glyph" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"><path d="${paths[id]||paths.gem}"/></svg>`;}
+const currentResources={coin:'coin',star:'star',gem:'gem-0'};
+export function glyph(id){if(currentResources[id])return `<svg class="glyph" viewBox="0 0 128 128" aria-hidden="true"><image href="./assets/refuge-night-v3/${currentResources[id]}.png" width="128" height="128"/></svg>`;if(itemArt[id])return `<svg class="glyph" viewBox="0 0 100 110" aria-hidden="true">${assetSvgBody(generateAsset(itemArt[id]))}</svg>`;return `<svg class="glyph" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"><path d="${paths[id]||paths.gem}"/></svg>`;}

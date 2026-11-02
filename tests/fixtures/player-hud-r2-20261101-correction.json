@@ -1,0 +1,12 @@
+{
+  "id": "GV-043/PLAYER-HUD-R2",
+  "source": "Current chat human approval of R1 and requested five critical stars, distinct green luck, score-stars layer, boss framing",
+  "files": {
+    "effects.js": "2115845fee3e892da12877a15132bf4e137b050852bc48e46b5e17f7037189b1",
+    "vfx-family.js": "5f514fd3aa53a99309e6cd5a72c5b46082a3dbf3a59b2c191ac2a5602dc4661d",
+    "world.js": "ee26c214adcb3ed64624442ec92fd0ef06e182a92bfa883241c362f189af19e4",
+    "approved-expedition-hud.css": "bb257034f1815e607d71693d0c3c0e2eb89ff0cb331697ae57bfa9c58b67ff02"
+  },
+  "composedWith": "approved-settings-pause-20261101-ui.json",
+  "sharedHudScope": "Only two score stacking declarations belong to this correction; concurrent pause layout preserved."
+}

@@ -1,0 +1,2 @@
+/* M2: existing exploration text only; mission precedence and owner anchors stay intact. */
+body.immersive-run #explorationHud{font:800 16px/1.4 var(--r2-body,'GV R2 Body','Trebuchet MS',sans-serif);font-variant-numeric:tabular-nums;letter-spacing:0;white-space:normal;overflow-wrap:anywhere;border-radius:10px;background:var(--r2-inset,#353658);color:var(--r2-text,#fff);border-left-color:var(--r2-select,#5ee9e9);box-shadow:inset 0 2px #ffffff33,inset 0 -3px #180d2f66}

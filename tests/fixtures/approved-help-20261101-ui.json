@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-01T04:47:10.555349+00:00",
+  "authorization": "coordination/HELP-UI-INTEGRATION-20261101/HUMAN-APPROVAL.json",
+  "scope": "Approved Como jogar v1 only; current dialog lifecycle preserved",
+  "files": {
+    "run.js": "b06d2361b80b9dc16b00ce4a79350dfbf74a04580ca020cab159107fb5b4c4d0",
+    "index.html": "4739cf44e868d3e59751aa2137ba7a116542a00aed08e1c6c0f2ef8cba6c2523",
+    "approved-help-ui.js": "09a915da70c296fb3c4446c4bf67c1feb1171ba8f77043badc52dcf5d3ec8da6",
+    "approved-help-ui.css": "bd1379809f7dd61a11779383f17b868d024ca97e080e716cc32e8d650c46be29"
+  }
+}

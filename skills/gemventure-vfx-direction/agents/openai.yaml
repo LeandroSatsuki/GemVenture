@@ -1,0 +1,4 @@
+interface:
+  display_name: "GemVenture — Direção de VFX e game feel"
+  short_description: "Efeitos como recompensa, com ritmo e coerência visual"
+  default_prompt: "Use $gemventure-vfx-direction para estudar os efeitos atuais e propor uma família nítida de recompensas visuais para o GemVenture."

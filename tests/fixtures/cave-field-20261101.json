@@ -1,0 +1,15 @@
+{
+  "id": "CAVE-VISIBILITY-REACH-20261101-R7",
+  "authority": "Pedido humano direto: alcance, visão suave arredondada e correção das sombras e iluminação de minerais.",
+  "files": {
+    "world.js": "544e649bc8ba935141f0a47d41009efb31289239460dce698deba55470a030c6",
+    "campaign-cave-runtime.js": "6e3726a3c6e0ebfad5e82e263459c89646b29eecf725c6fa96fc7a1ecce5d1ec",
+    "campaign-cave-surface.js": "f03aaa9d24ed0a30c96ae1c0006c8e33568b153cfa2679fb0a29968c786b1d79",
+    "abyss-cave-scene.js": "d874813cd60ba03582baf95a8cc276ffd9c2f2b27ffb60bcf125fc6ffc3dc63e",
+    "geode-ambience.js": "f3d196bd26ee542662bf3b28002501fb5ebe8a2b61b11f9f25aae93b842454b6",
+    "dungeon-environment.js": "8ed70d2c948d9fb572de953102640166cc50aceb6ab13182f6cd5a5ffbdaead7",
+    "cave-field-presentation.js": "e33778ba7502014f905817699bcf76b29c1705c01b4ccd73538d92cae4d071ec"
+  },
+  "revision": "CAVE-VISIBILITY-REACH-20261101-R8",
+  "revisionAuthority": "Pedido humano: linha um pouco mais transparente e bordas da visão um pouco mais esmaecidas."
+}

@@ -1,0 +1,14 @@
+{
+  "origin": "User-authorized current blue UI refinements, 2026-10-27. Implementation receipt; visual review pending. Prior approval receipts preserved.",
+  "files": {
+    "refuge-lobby.css": "a08b08d4ce9e63095dfab1d3a59ad476e223d72f2ff0c8390e04b2a02a54d724",
+    "cuidadora-host.css": "0f43e036b8f5ed25da9ff4847bc247f0eb2f5a2be7b397d01e06ffc706616884",
+    "forge-layout.css": "617b1fee6b5c057646b6da51cb436c80defe9c9dc71dd1bd7d1a539e244465f1",
+    "pets-view.js": "a6611afb682df0a664e79811c0e5d456dacab16e2ec62a114709b4301624df41",
+    "rebrand-lift.css": "2ca17b715ad3552e2c4a27d6aeb5047f85e99888051ae0a90dc5bfcd5ab2508f",
+    "rebrand-lift.js": "8ab2cf4cb630bf06cf3829e116af82308674bef1fcef0e7d54c1dd6c2eb7b439",
+    "dungeon-rewards-catalog.js": "9bf9e069aada9154848e527b2704a72e75094b9856fa14b085a0c4964f2f1c40",
+    "reward-catalog-ui.js": "9fec901f1b35326e66d8adfe3b6fee73246b70e38f97a4206c96c4ca509745ce",
+    "abyss-v2y.js": "aed558f31893978c224397c00bd76238defe06900588ecdaa842e7eb2304c87b"
+  }
+}

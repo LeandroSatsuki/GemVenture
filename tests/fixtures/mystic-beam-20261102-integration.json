@@ -1,0 +1,10 @@
+{
+  "id": "MYSTIC-BEAM01-OFFICIAL-R1",
+  "authority": "coordination/boss-evolution/mystic-r1/BEAM01-HUMAN-APPROVAL.json",
+  "files": {
+    "world.js": "e83a1f08cb96a7ad5023316efb2b8890ae9dafde89f2cf2c9f35678099577afe",
+    "mystic-fire.js": "f2b8e5d8015dd62757247b0d9a0af1dc30d4d859fc99a54cd841cf154dac0b59",
+    "mystic-presentation.js": "5a850bba3feaeef9059414ecf5e165ce0e3f4f5a55e08d18fab7b6631346362f",
+    "mystic-beam.js": "3b06476f043e592904fbf889e4c01548256eb28f86d2ab675eb527e9465d09ce"
+  }
+}

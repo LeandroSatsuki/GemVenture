@@ -1,0 +1,2 @@
+/* Read-only active station caption only. World owns hit masks,hover,idles and route. */
+body.immersive-base #villagePlaceName{box-sizing:border-box;max-width:calc(100% - 24px);border:3px solid var(--r2-ink,#180d2f);border-radius:12px;background:var(--r2-inset,#353658);color:var(--r2-text,#ffffff);box-shadow:inset 0 2px #ffffff33,inset 0 -4px #180d2f66;text-shadow:none;font:600 clamp(19px,2vw,28px)/1.2 var(--r2-display,'GV R2 Display',sans-serif);white-space:normal;overflow-wrap:anywhere}

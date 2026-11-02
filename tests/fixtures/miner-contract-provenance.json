@@ -1,0 +1,44 @@
+[
+  {
+    "file": "miner.candidate.mjs",
+    "source": "E:/Genventure/coordination/GV-046/miner.candidate.mjs",
+    "sourceSha256": "8979c49efb35bff0ae900a1f641ac1f9453021c80750cdd99ed1bf1290e6176f",
+    "portedSha256": "44fde684b48aa475b4596a3af454f230e900dd548c0150a10b16070ecd34605c"
+  },
+  {
+    "file": "contact-physics.mjs",
+    "source": "E:/Genventure/coordination/GV-046/contact-physics.mjs",
+    "sourceSha256": "9e0a2c7a22de0835cffdfc09ed46d30d20098ecb1e1e965963eddb4747503f29",
+    "portedSha256": "9e0a2c7a22de0835cffdfc09ed46d30d20098ecb1e1e965963eddb4747503f29"
+  },
+  {
+    "file": "credit-audit.mjs",
+    "source": "E:/Genventure/coordination/GV-046/credit-audit.mjs",
+    "sourceSha256": "5ddc3c512b65a3e56e6bcda0f88a4e0971f3d8cb7695e935a26b517496115f51",
+    "portedSha256": "6e492be016a2544c6f6095c8851dd1337f98baaa4c968aade5bf6435dc90a3e4"
+  },
+  {
+    "file": "baseline.json",
+    "source": "E:/Genventure/coordination/GV-046/baseline.json",
+    "sourceSha256": "a4e9e196407210162cc61d6a8a6f8992cfeef7e2aa1935b15a51148a9d01f9c8",
+    "portedSha256": "a4e9e196407210162cc61d6a8a6f8992cfeef7e2aa1935b15a51148a9d01f9c8"
+  },
+  {
+    "file": "miner-contact.test.mjs",
+    "source": "E:/Genventure/coordination/GV-046/miner-contact.test.mjs",
+    "sourceSha256": "8216b8105c679afbccd8c5bbcc048950e617dd91c858aab945831ad98cfdde55",
+    "portedSha256": "c076bba9b10252ef4ac3e3984f4dbccb485ab751a6d7f7f74c1d861d2f9f4bc2"
+  },
+  {
+    "file": "credit-audit.test.mjs",
+    "source": "E:/Genventure/coordination/GV-046/credit-audit.test.mjs",
+    "sourceSha256": "e6f0ee61a9cf31a7354778e8866603eed3be8be2a03d8271b91e9b022901e1a6",
+    "portedSha256": "e6f0ee61a9cf31a7354778e8866603eed3be8be2a03d8271b91e9b022901e1a6"
+  },
+  {
+    "file": "runtime-equivalence.test.mjs",
+    "source": "E:/Genventure/coordination/GV-046/runtime-equivalence.test.mjs",
+    "sourceSha256": "f996e5069332449b8f8dcb4c95fbfe0503e1e5f131d98e0fd9903b559eb42a02",
+    "portedSha256": "53b47d3f7bae0ecbca559bc10b4a6c0b5174037db9ad95dd904817a68d72c311"
+  }
+]

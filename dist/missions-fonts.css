@@ -1,0 +1,5 @@
+/* Exact approved font files already shipped with the game; local family aliases. */
+@font-face{font-family:Fredoka;src:url('assets/menu-fonts/Fredoka-600-Static.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:Nunito;src:url('assets/menu-fonts/Nunito-600-Static.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:Nunito;src:url('assets/menu-fonts/Nunito-800-Static.ttf') format('truetype');font-weight:800;font-display:swap}
+@font-face{font-family:Nunito;src:url('assets/menu-fonts/Nunito-900-Static.ttf') format('truetype');font-weight:900;font-display:swap}

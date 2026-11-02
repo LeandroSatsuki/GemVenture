@@ -1,0 +1,47 @@
+/* Free-standing combo typography. This scope overrides panel/notice skins only
+   for the combo; other HUD widgets retain their established surfaces. */
+body.hud-v5.hud-clean-v5 #hud5Root .hud section.combo{
+ top:84px!important;right:4px!important;left:auto!important;bottom:auto!important;
+ width:242px!important;height:112px!important;padding:0!important;gap:0!important;
+ display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
+ background:transparent!important;background-image:none!important;border:0!important;border-radius:0!important;
+ box-shadow:none!important;backdrop-filter:none!important;clip-path:none!important;pointer-events:none!important;
+ color:var(--combo-color,#4aeaff)!important;transform-origin:50% 50%;
+ filter:brightness(calc(1 + var(--combo-beat,0)*.3));
+}
+body.hud-v5.hud-clean-v5 #hud5Root .combo::before,body.hud-v5.hud-clean-v5 #hud5Root .combo::after{content:none!important;display:none!important}
+body.hud-v5.hud-clean-v5 #hud5Root .combo :is(.eyebrow,strong){
+ color:var(--combo-color,#4aeaff)!important;-webkit-text-fill-color:var(--combo-color,#4aeaff)!important;
+ background:none!important;paint-order:stroke fill;-webkit-text-stroke:1.7px #020816;
+ text-shadow:0 3px #020816,0 0 12px var(--combo-color,#4aeaff),0 0 25px color-mix(in srgb,var(--combo-color,#4aeaff) 62%,transparent)!important;
+ font-family:'GV R2 Display','Fredoka',sans-serif!important;font-weight:600!important;line-height:1!important;
+}
+body.hud-v5.hud-clean-v5 #hud5Root .combo .eyebrow{font-size:25px!important;letter-spacing:1px!important}
+body.hud-v5.hud-clean-v5 #hud5Root .combo strong{font-size:var(--combo-font-size,84px)!important;letter-spacing:-3px!important;white-space:nowrap!important}
+body.hud-v5.hud-clean-v5 #hud5Root .combo>small{display:none!important}
+body.hud-v5.hud-v3 #stage #comboBurst{
+ left:50%!important;top:36%!important;right:auto!important;bottom:auto!important;
+ width:min(420px,calc(100% - 48px))!important;padding:14px 12px!important;height:auto!important;
+ background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+ pointer-events:none!important;z-index:16!important;opacity:0;transform:translate(-50%,-50%);overflow:visible!important;
+ color:var(--combo-color,#ffd95a)!important;text-align:center;will-change:transform,opacity;
+}
+body.hud-v5.hud-v3 #stage #comboBurst::before{
+ content:''!important;display:block!important;position:absolute;inset:-22px -16px;z-index:-1;
+ background:var(--combo-color,#ffd95a)!important;opacity:.16;
+ clip-path:polygon(0 30%,22% 32%,13% 5%,40% 20%,53% 0,64% 23%,95% 10%,81% 37%,100% 52%,79% 64%,96% 91%,67% 81%,50% 100%,34% 80%,4% 92%,18% 62%);
+}
+body.hud-v5.hud-v3 #stage #comboBurst :is(strong,small,span),.combo-number-flight{
+ color:var(--combo-color,#ffd95a)!important;-webkit-text-fill-color:var(--combo-color,#ffd95a)!important;
+ font-family:'GV R2 Display','Fredoka',sans-serif!important;font-weight:600!important;letter-spacing:0!important;
+ -webkit-text-stroke:2px #020816;paint-order:stroke fill;text-shadow:0 4px #020816,0 0 18px var(--combo-color,#ffd95a),0 0 32px color-mix(in srgb,var(--combo-color,#ffd95a) 60%,transparent)!important;
+}
+body.hud-v5.hud-v3 #stage #comboBurst strong{display:block!important;font-size:112px!important;line-height:1.05!important;letter-spacing:-5px!important}
+body.hud-v5.hud-v3 #stage #comboBurst strong span{font-size:.5em!important}
+body.hud-v5.hud-v3 #stage #comboBurst small{display:block!important;font-size:27px!important;line-height:1.15!important;letter-spacing:.5px!important}
+body.hud-v5.hud-v3 #stage #comboBurst>span{display:block!important;font-size:24px!important;line-height:1.1!important}
+.combo-number-flight{position:fixed;z-index:9998;pointer-events:none!important;line-height:1;white-space:nowrap;transform:translate(-50%,-50%);transform-origin:50% 50%;opacity:0;will-change:transform,opacity}
+@media(max-height:760px){body.hud-v5.hud-clean-v5 #hud5Root .hud section.combo{top:70px!important;height:104px!important}body.hud-v5.hud-v3 #stage #comboBurst strong{font-size:96px!important}body.hud-v5.hud-v3 #stage #comboBurst small{font-size:24px!important}}
+@media(max-width:1000px){body.hud-v5.hud-clean-v5 #hud5Root .hud section.combo{width:212px!important;right:0!important}body.hud-v5.hud-clean-v5 #hud5Root .combo strong{font-size:min(var(--combo-font-size,84px),72px)!important}body.hud-v5.hud-clean-v5 #hud5Root .combo .eyebrow{font-size:22px!important}}
+body.soft-fx #hud5Root .combo{filter:none!important}
+@media(prefers-reduced-motion:reduce){body.hud-v5 #hud5Root .combo{filter:none!important;will-change:auto}.combo-number-flight{display:none!important}}

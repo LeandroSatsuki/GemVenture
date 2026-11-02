@@ -1,0 +1,15 @@
+/* Candidate mode only. Theme does not change clocks, animation, ordering, audio or input owners. */
+body.hud-v3.hud-v5 :is(#message.stage-message,#toast.toast,#comboBurst,#starAnnouncements .star-flight){font-family:var(--body);font-weight:900;color:#fff!important;background:#092341!important;border:2px solid #397fba;border-radius:14px;box-shadow:0 0 0 2px #020916,inset 0 2px #97d5ff30!important;letter-spacing:0;line-height:1.3;white-space:normal;overflow-wrap:anywhere}
+body.hud-v3.hud-v5 :is(#message.stage-message,#comboBurst strong,#starAnnouncements strong,#clearBanner > .floor-choice > strong){font-family:var(--display);font-weight:600;paint-order:stroke fill;-webkit-text-stroke:2px #020916;font-size:23px}
+body.hud-v3.hud-v5 #toast.toast{font-size:15px;border-color:#4092c5!important}
+body.hud-v3.hud-v5 [data-notice-tone=warning] :is(#message,#toast){border-color:#f2b340!important}
+body.hud-v3.hud-v5 [data-notice-tone=abyss] :is(#message,#toast){border-color:#ae7bdf!important}
+body.hud-v3.hud-v5 :is(#comboBurst,#starAnnouncements .star-flight){border-color:#f4d15e;color:#fff6c1!important}
+body.hud-v3.hud-v5 #clearBanner > .floor-choice > strong{font-size:24px}body.hud-v3.hud-v5 #clearBanner > .floor-choice > small{color:#ffd965}
+body.hud-v3.hud-v5 #comboBurst:before{display:none}
+body.hud-v3.hud-v5 #comboBurst strong{letter-spacing:0;text-shadow:0 2px #020916}
+body.hud-v3.hud-v5 #comboBurst :is(small,span),body.hud-v3.hud-v5 #clearBanner > .floor-choice > :is(small,p){font-family:var(--body);font-weight:900;letter-spacing:0}
+body.hud-v3.hud-v5 #comboBurst :is(small,span){font-size:13px}body.hud-v3.hud-v5 #clearBanner > .floor-choice > small{font-size:13px}
+body.hud-v3.hud-v5 #starAnnouncements .star-flight b{font-family:var(--display);color:#ffe156;text-shadow:0 2px #020916}
+/* Host owns root overlay/backdrop/geometry/modality. Theme only its inner visual panel. */
+body.hud-v3.hud-v5 #clearBanner > .floor-choice{background:#092341;border:2px solid #397fba;border-radius:14px;box-shadow:0 0 0 2px #020916,inset 0 2px #97d5ff30;color:#fff;font-family:var(--body)}

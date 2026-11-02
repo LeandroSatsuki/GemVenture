@@ -1,12 +1,16 @@
+import {campaignCaveProfile} from './campaign-cave-profile.js';
+import {orbVision} from './run-orbs.js';
+import {validExpandedBossRoom} from './boss-arena-space.js';
 import {biomeIndex} from './campaign.js';
 import {isFloor,wallAt,validateLayout} from './cave-layout.js';
 import {validCeiling} from './cave-ceiling.js';
 import {openingWave} from './balance.js';
+import {validGeodeBoss} from './bosses.js';
 export {isFloor,wallAt} from './cave-layout.js';
 export const CAVERN_COLS=42;
 export const CAVERN_ROWS=30;
 export const SIGHT=5;
-export const sightRange=run=>(SIGHT+Math.min(3,Math.max(0,Math.floor(run?.cards?.lantern||0))))*(1+Math.min(.675,Math.max(0,run?.visionBonus||0)));
+export const sightRange=run=>(SIGHT+Math.min(3,Math.max(0,Math.floor(run?.cards?.lantern||0))))*(1+Math.min(.675,Math.max(0,run?.visionBonus||0)))+(run?.petId==='fagulhito'&&!run.trainingClock?1:0)+orbVision(run);
 // World projection is skewed: measure in its screen plane, not grid squares.
 export const sightDistance=(dx,dy)=>Math.hypot(dx+dy/11,dy*8/11);
 export const roomSize=room=>({cols:room?.cols||21,rows:room?.rows||15});
@@ -29,4 +33,4 @@ export const visible=(room,p)=>inRoom(room,p)&&(!room.explored||!!room.visible?.
 export const explored=(room,p)=>inRoom(room,p)&&(!room.explored||!!room.explored[p.y*roomSize(room).cols+p.x]);
 export function terrainMap(room,random,player,floor){const {cols,rows}=roomSize(room),type=environment(floor).terrain,map=Array(cols*rows).fill(0);if(!type)return map;for(let k=0;k<14;k++){const cx=3+Math.floor(random()*(cols-6)),cy=3+Math.floor(random()*(rows-6)),radius=1+Math.floor(random()*3);for(let y=cy-radius;y<=cy+radius;y++)for(let x=cx-radius;x<=cx+radius;x++)if(isFloor(room,x,y)&&Math.hypot(x-cx,y-cy)<=radius&&Math.abs(x-player.x)+Math.abs(y-player.y)>6)map[y*cols+x]=type;}return map;}
 export function wavePlan(floor,number){return openingWave(floor,number)||{count:Math.min(16,3+number*2+biomeIndex(floor)*2),cap:Math.min(40,18+biomeIndex(floor)*6),interval:24,warning:4};}
-export function validCavern(room){if(!validateLayout(room)||!validCeiling(room))return false;if(room.cols==null&&room.rows==null)return true;if(![[21,15],[42,30]].some(([x,y])=>room.cols===x&&room.rows===y))return false;const n=room.cols*room.rows;return (!room.explored||(Array.isArray(room.explored)&&room.explored.length===n&&room.explored.every(v=>v===0||v===1)))&&(!room.terrain||(Array.isArray(room.terrain)&&room.terrain.length===n&&room.terrain.every(v=>Number.isInteger(v)&&v>=0&&v<=6)))&&(!room.wave||(Number.isInteger(room.wave.number)&&room.wave.number>=0&&Number.isInteger(room.wave.next)&&room.wave.next>=0));}
+export function validCavern(room){if(room.campaignCave!==undefined){const c=room.campaignCave;if(!c||c.version!==1||!Number.isInteger(c.biome)||c.biome<0||c.biome>6||typeof c.arena!=='boolean'||!Array.isArray(room.floorMask)||(c.arena?(c.arenaRevision!==undefined?(!validExpandedBossRoom(room)||room.bossFloor!==true):(room.cols!==21||room.rows!==15||room.bossFloor!==true)):!campaignCaveProfile(room)))return false;}if(!validateLayout(room)||!validCeiling(room))return false;if(Array.isArray(room.enemies)&&room.enemies.some(e=>e.boss&&e.bossIndex===0&&!validGeodeBoss(e)))return false;if(room.cols==null&&room.rows==null)return true;if(![[21,15],[42,30]].some(([x,y])=>room.cols===x&&room.rows===y)&&!(validExpandedBossRoom(room))&&!campaignCaveProfile(room))return false;const n=room.cols*room.rows;return (!room.explored||(Array.isArray(room.explored)&&room.explored.length===n&&room.explored.every(v=>v===0||v===1)))&&(!room.terrain||(Array.isArray(room.terrain)&&room.terrain.length===n&&room.terrain.every(v=>Number.isInteger(v)&&v>=0&&v<=6)))&&(!room.wave||(Number.isInteger(room.wave.number)&&room.wave.number>=0&&Number.isInteger(room.wave.next)&&room.wave.next>=0));}

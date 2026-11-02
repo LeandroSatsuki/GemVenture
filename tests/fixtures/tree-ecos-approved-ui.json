@@ -1,0 +1,9 @@
+{
+  "origin": "TREE-ECOS-PREVIEW-03 human approved layout and Guilherme exact source icons; only asset URL namespace remapped in tree-composition.css",
+  "files": {
+    "rebrand-tree-layout.css": "c70f23ba6c6f8cb47ee233b6c2b381be9b91c3f73b40d25e919bf41fe5195663",
+    "tree-composition.css": "6e33197d13cd7cc2e4475a52a8648ec2157364d7d3be809dcd25925b4433a0d0",
+    "tree-buy-gold.css": "4e68fe84a0da9cb20cead5a7f0c46cc38875fcfa84068af883494e13840e010a",
+    "tree-icons.js": "a8ec6ab63c68082da65ea435b252b3f367a49b936cdd08176fb919e5e5e28137"
+  }
+}

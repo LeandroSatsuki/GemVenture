@@ -1,0 +1,4 @@
+interface:
+  display_name: "Laboratório de balanceamento"
+  short_description: "Economia, builds e dificuldade com medidas verificáveis"
+  default_prompt: "Use $gameplay-balance-lab para investigar os gargalos e as curvas deste jogo sem alterar o gameplay."

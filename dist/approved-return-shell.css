@@ -1,0 +1,7 @@
+/* Only the approved withdrawal/result shells; preserve the game's CRT layer. */
+body #dialog.approved-ui-dialog[data-service=retreat],body #returnDialog.approved-return-dialog{transform:none!important;inset:0!important;margin:auto!important;height:fit-content!important;max-height:calc(100dvh - 24px)!important;min-height:0!important;max-width:none!important;padding:0!important;border:0!important;border-radius:14px!important;background:#06132b!important;overflow:auto!important;box-sizing:border-box!important;box-shadow:none!important}
+body #returnDialog.approved-return-dialog{width:min(800px,calc(100vw - 24px))!important}
+body #dialog.approved-ui-dialog[data-service=retreat]>.dialog-top{display:none!important}
+body #dialog.approved-ui-dialog[data-service=retreat] #dialogBody{display:block!important;min-height:0!important;max-height:none!important;height:auto!important;padding:0!important;overflow:visible!important;background:none!important;border:0!important}
+
+body #returnDialog.approved-return-dialog::backdrop,body #dialog.approved-ui-dialog[data-service=retreat]::backdrop{background:#020816d1!important;backdrop-filter:blur(3px)!important}

@@ -1,0 +1,27 @@
+/* P1-A only. R2 variables are supplied by rebrand-tokens.css on .gv-r2. */
+body.immersive-base #materialWallet.gv-r2{right:20px;bottom:20px;left:auto;width:min(720px,calc(100% - 300px));max-width:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0;padding:0;background:none;border:0;box-shadow:none;overflow:visible;pointer-events:auto}
+#materialWallet.gv-r2>.resource-balance{box-sizing:border-box;position:relative;display:grid;grid-template-columns:36px minmax(0,1fr);grid-template-rows:auto auto;align-content:center;align-items:center;justify-content:normal;gap:0 8px;min-width:0;min-height:64px;padding:8px 10px;border:var(--r2-line) solid var(--r2-ink);border-radius:var(--r2-radius);background:var(--r2-inset);color:var(--r2-text);box-shadow:inset 0 2px #ffffff33,inset 0 calc(-1 * var(--r2-depth)) #180d2f66;outline-offset:3px;cursor:default;transform:none;translate:none;filter:none;transition:border-color 100ms,box-shadow 100ms}
+#materialWallet.gv-r2 .resource-icon{display:grid;grid-column:1;grid-row:1/3;place-items:center;width:36px;height:42px;min-width:0}
+#materialWallet.gv-r2 .resource-icon>svg{display:block;width:36px;height:42px;grid-row:auto;max-width:none;overflow:visible}
+#materialWallet.gv-r2 b{display:block;grid-column:2;min-width:0;margin:0;color:var(--r2-text)!important;font:900 22px/1.2 var(--r2-body);font-variant-numeric:tabular-nums;white-space:normal;overflow-wrap:anywhere}
+#materialWallet.gv-r2 .resource-name{display:block;grid-column:2;min-width:0;color:var(--r2-muted);font:800 12px/1.3 var(--r2-body);overflow-wrap:anywhere}
+#materialWallet.gv-r2>.resource-balance:hover{border-color:var(--r2-select);box-shadow:inset 0 3px #ffffff55,inset 0 calc(-1 * var(--r2-depth)) #180d2f66}
+#materialWallet.gv-r2>.resource-balance:focus-visible{outline:3px solid var(--r2-focus);outline-offset:3px;box-shadow:0 0 0 6px var(--r2-ink),inset 0 2px #ffffff33,inset 0 calc(-1 * var(--r2-depth)) #180d2f66}
+#materialWallet.gv-r2 .resource-tooltip{position:absolute;z-index:18;bottom:calc(100% + 10px);left:50%;right:auto;transform:translateX(-50%);display:none;box-sizing:border-box;width:max-content;max-width:min(280px,calc(100vw - 24px));padding:9px 12px;border:var(--r2-line) solid var(--r2-ink);border-radius:10px;background:var(--r2-inset);color:var(--r2-text);font:800 14px/1.4 var(--r2-body);text-align:center;white-space:normal;overflow-wrap:anywhere;pointer-events:none;box-shadow:0 3px var(--r2-ink)}
+#materialWallet.gv-r2 .resource-tooltip small{display:block;color:var(--r2-muted);font:600 13px/1.4 var(--r2-body);font-variant-numeric:tabular-nums}
+#materialWallet.gv-r2>.resource-balance:is(:hover,:focus-visible) .resource-tooltip{display:block}
+#materialWallet.gv-r2>.resource-balance:first-child .resource-tooltip{left:0;right:auto;transform:none}
+#materialWallet.gv-r2>.resource-balance:last-child .resource-tooltip{left:auto;right:0;transform:none}
+@media(max-width:1099px){
+ body.immersive-base #materialWallet.gv-r2{width:min(420px,calc(100% - 300px));grid-template-columns:repeat(2,minmax(0,1fr))}
+ #materialWallet.gv-r2>.resource-balance:nth-child(odd) .resource-tooltip{left:0;right:auto;transform:none}
+ #materialWallet.gv-r2>.resource-balance:nth-child(even) .resource-tooltip{left:auto;right:0;transform:none}
+}
+@media(max-width:600px){
+ body.immersive-base #materialWallet.gv-r2{left:12px;right:12px;bottom:var(--wallet-bottom,132px);width:auto;gap:6px;grid-template-columns:repeat(2,minmax(0,1fr))}
+ #materialWallet.gv-r2>.resource-balance{grid-template-columns:30px minmax(0,1fr);gap:0 6px;min-height:60px;padding:6px 8px}
+ #materialWallet.gv-r2 .resource-icon,#materialWallet.gv-r2 .resource-icon>svg{width:30px;height:36px}
+ #materialWallet.gv-r2 b{font-size:20px}
+}
+@media(prefers-reduced-motion:reduce){#materialWallet.gv-r2>.resource-balance{transition:none;animation:none}}
+.soft-fx #materialWallet.gv-r2>.resource-balance{transition:none;animation:none}

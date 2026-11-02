@@ -1,0 +1,15 @@
+{
+  "files": {
+    "core.js": "1f0b5cb3fac5209f2c9d5c2a8de11e4826b16e93102ffef08a221e8856a486e3",
+    "run.js": "b68de2ce0aeffdefce1dd5f1654f2a2d7ad2c06edc8ad3e141b64a7b27e93094",
+    "descent-progress.js": "7b2eba3b30ba78395fad9e58ef22fcbea22e770f53585617e48be97d07ad85a8",
+    "expedition-map.js": "047294fb1793f2b8d8c6af7a27a404053bacf950178458f0b39eb761dde8aa3f",
+    "lift-v2ab-model.js": "8f463126db8036f99eaea09dd8323da9606aed4945d4875d0e3b6c5036614f6d",
+    "rebrand-lift.js": "a3fb3a7810a5f770d8f831d84b7620ed9892e269e23c062d0476658084da069b",
+    "lift-view.js": "e4fd13bb75e6db9810d9643252d92066c7a77d7e33b82c7f11205f3913e465d4",
+    "abyss-v2y.js": "94fdb7585d29a0097dc73d6321e9e5b6faa5018ec9ec9a39c8c6d9837727f8b9",
+    "lift-v2ab-host.css": "c7e2df71661f3f5e1f0819066b3626a5b6595aa6b0f18331bb5c5f7ab20337b5",
+    "floor-records-view.js": "434d03d454c00c78a61d887363cc194e37b7c3ce4fc5da1cb8aff37bfc553a40"
+  },
+  "scope": "Fix official campaign progression through seven biomes, expose existing Abyss gate requirements, persist and display local floor performance. No global ranking, no historical times fabricated. User authorized official Itch release."
+}

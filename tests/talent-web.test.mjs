@@ -6,7 +6,7 @@ import {progressionEffects} from '../dist/progression-effects.js';
 const state=()=>{const s=E.createState(12);s.experience.points=1000000;return s;};
 test('223 talents form one traversable web with cross routes, 24 major nodes and 6 endless masteries',()=>{
  const net=talentNetwork(E.SKILLS),seen=new Set(['root']);let changed=true;while(changed){changed=false;for(const [a,b]of net.edges)if(seen.has(a)!==seen.has(b)){seen.add(a);seen.add(b);changed=true;}}
- assert.equal(net.nodes.length,224);assert.equal(seen.size,net.nodes.length);assert.ok(net.edges.length>net.nodes.length*2);assert.equal(TALENTS.filter(n=>n.kind==='notable').length,24);assert.equal(TALENTS.filter(n=>n.max===Infinity).length,6);
+ assert.equal(net.nodes.length,226);assert.equal(seen.size,net.nodes.length);assert.ok(net.edges.length>net.nodes.length*2);assert.equal(TALENTS.filter(n=>n.kind==='notable').length,24);assert.equal(TALENTS.filter(n=>n.max===Infinity).length,6);
 });
 test('an owned neighbor opens a node sideways, small and large ranks have distinct benefits and maximums',()=>{
  const s=state();assert.equal(buyTalent(s,'web-0-0',E.SKILLS),false);assert.ok(E.learn(s,'ear'));assert.ok(buyTalent(s,'web-0-0',E.SKILLS));assert.ok(talentConnected(s,'web-0-23',E.SKILLS));assert.ok(buyTalent(s,'web-0-23',E.SKILLS));

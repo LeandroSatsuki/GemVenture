@@ -5,7 +5,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 const root=fileURLToPath(new URL('../dist/',import.meta.url)),tests=fileURLToPath(new URL('./',import.meta.url));
 const port=Number(process.argv[2])||4175;
-const routes=new Set(['expedition-init.js','input-check.js','cave-gallery.html','fx-preview.html','movement-preview.html','music-review.html']);
+const routes=new Set(['approved-services-fixture.html','expedition-init.js','input-check.js','hedgehog-check.js','cave-gallery.html','fx-preview.html','minion-effects-preview.html','movement-preview.html','music-review.html']);
 http.createServer(async(req,res)=>{
  try{
   const url=new URL(req.url,'http://localhost'),name=decodeURIComponent(url.pathname).slice(1)||'index.html';

@@ -1,5 +1,6 @@
 import {FLOORS_PER_BIOME,TOTAL_FLOORS,depthLimit} from './campaign.js';
 import {validMaterials,canPayMaterials,payMaterials} from './materials.js';
+import {runBeatTime} from './training-clock.js';
 
 // Addresses never clamp to the current content catalog. Future layers keep their identity.
 export function floorAddress(floor){
@@ -22,13 +23,15 @@ export function restoreDescentProgress(raw,s){
  if(raw.bosses.some(n=>!Number.isSafeInteger(n)||n<5||n%5!==0||n>TOTAL_FLOORS))return null;
  if(raw.stops.some(n=>!Number.isSafeInteger(n)||n<1||n>TOTAL_FLOORS||n>Math.max(1,s.best)))return null;
  const records=raw.records??{};if(typeof records!=='object'||Array.isArray(records))return null;
- for(const [floor,r]of Object.entries(records))if(!/^[1-9]\d*$/.test(floor)||Number(floor)>TOTAL_FLOORS||!r||!Number.isSafeInteger(r.points)||r.points<0||!Number.isSafeInteger(r.clears)||r.clears<1)return null;
- return{version:1,bosses:[...new Set(raw.bosses)],stops:[...new Set(raw.stops)].sort((a,b)=>a-b),gate:[...raw.gate],records:Object.fromEntries(Object.entries(records).map(([f,r])=>[f,{points:r.points,clears:r.clears}]))};
+ for(const [floor,r]of Object.entries(records))if(!/^[1-9]\d*$/.test(floor)||Number(floor)>TOTAL_FLOORS||!r||!Number.isSafeInteger(r.points)||r.points<0||!Number.isSafeInteger(r.clears)||r.clears<1||(r.stars!==undefined&&(!Number.isInteger(r.stars)||r.stars<0||r.stars>5))||['bestTimeMs','lastTimeMs','lastScore'].some(k=>r[k]!==undefined&&(!Number.isSafeInteger(r[k])||r[k]<0)))return null;
+ return{version:1,bosses:[...new Set(raw.bosses)],stops:[...new Set(raw.stops)].sort((a,b)=>a-b),gate:[...raw.gate],records:Object.fromEntries(Object.entries(records).map(([f,r])=>[f,{points:r.points,clears:r.clears,...Object.fromEntries(['stars','bestTimeMs','lastTimeMs','lastScore'].filter(k=>r[k]!==undefined).map(k=>[k,r[k]]))}]))};
 }
-export function recordFloorResult(s){
- const r=s.run;if(!r||r.mode==='abyss'||!r.room.cleared||r.room.recordSaved)return false;
- const points=Math.max(0,Math.round(r.score.points-(r.room.floorStart?.points??r.score.points-(r.room.scoreSpent||0))));
- const records=s.descent.records??={},previous=records[r.floor];records[r.floor]={points:Math.max(previous?.points||0,points),clears:(previous?.clears||0)+1};r.room.recordSaved=true;return true;
+export function recordFloorResult(s,phase=null){
+ const r=s.run;if(!r||r.mode==='abyss'||r.trainingClock||!r.room.cleared||r.room.recordSaved)return false;
+ const points=r.score.points;
+ const records=s.descent.records??={},previous=records[r.floor];
+ const activePhase=Number.isFinite(phase)?phase:Math.max(0,r.acted??0,r.beat??0),time=Math.max(0,Math.round(runBeatTime(r,activePhase)*1000));
+ records[r.floor]={points:Math.max(previous?.points||0,points),lastScore:points,clears:(previous?.clears||0)+1,stars:Math.max(previous?.stars||0,Math.max(0,Math.min(5,r.score?.earned||0))),lastTimeMs:time,bestTimeMs:Math.min(previous?.bestTimeMs??Infinity,time)};r.room.recordSaved=true;return true;
 }
 export function recordBossVictory(s,floor){
  if(!s.run||s.run.mode==='abyss'||floor%FLOORS_PER_BIOME!==0)return;
@@ -37,7 +40,7 @@ export function recordBossVictory(s,floor){
 export const gateProgress=s=>s.descent.gate.reduce((a,n)=>a+n,0)/ABYSS_GATE_COST.reduce((a,n)=>a+n,0);
 export const gateBossDefeated=s=>s.descent.bosses.includes(20);
 // Temporary playtest switch. Never stored in the save or enabled on the hosted game.
-export const ABYSS_PLAYTEST_ENABLED=true;
+export const ABYSS_PLAYTEST_ENABLED=false;
 export const abyssTestAccess=()=>ABYSS_PLAYTEST_ENABLED&&typeof location!=='undefined'&&['localhost','127.0.0.1','[::1]'].includes(location.hostname);
 export const canEnterAbyss=s=>abyssTestAccess()||(gateBossDefeated(s)&&s.descent.gate.every((n,i)=>n===ABYSS_GATE_COST[i]));
 export function depositGate(s,index,amount=100){
@@ -46,9 +49,11 @@ export function depositGate(s,index,amount=100){
  if(paid<=0)return 0;s.materials[index]-=paid;s.descent.gate[index]+=paid;return paid;
 }
 export const stopCost=floor=>[12*floor,floor>=6?8*floor:0,floor>=11?6*floor:0,floor>=16?6*floor:0];
-export const canStartAt=(s,floor)=>Number.isSafeInteger(floor)&&floor>=1&&floor<=TOTAL_FLOORS&&floor<=depthLimit(s)&&floor<=Math.max(1,s.best)&&s.descent.stops.includes(floor);
+// Opening a biome also opens its entrance. Interior elevator stops retain their costs.
+export const biomeEntrance=(s,floor)=>Number.isSafeInteger(floor)&&floor>=1&&floor<=TOTAL_FLOORS&&floor<=depthLimit(s)&&(floor-1)%FLOORS_PER_BIOME===0;
+export const canStartAt=(s,floor)=>Number.isSafeInteger(floor)&&floor>=1&&floor<=TOTAL_FLOORS&&floor<=depthLimit(s)&&(biomeEntrance(s,floor)||floor<=Math.max(1,s.best)&&s.descent.stops.includes(floor));
 export function unlockStop(s,floor){
- if(s.run||!Number.isSafeInteger(floor)||floor<2||floor>TOTAL_FLOORS||floor>s.best||floor>depthLimit(s)||s.descent.stops.includes(floor))return false;
+ if(s.run||!Number.isSafeInteger(floor)||floor<2||floor>TOTAL_FLOORS||floor>s.best||floor>depthLimit(s)||s.descent.stops.includes(floor)||biomeEntrance(s,floor))return false;
  if(!canPayMaterials(s,stopCost(floor)))return false;
  payMaterials(s,stopCost(floor));s.descent.stops.push(floor);s.descent.stops.sort((a,b)=>a-b);return true;
 }

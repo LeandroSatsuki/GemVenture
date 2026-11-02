@@ -1,0 +1,16 @@
+{
+  "authorization": "Current direct user: join albums and existing music in one official vitrola collection, classify by Iniciante and higher levels, show purchase prices for all. Authorized local official application.",
+  "scope": "One 26-item collection, classification, album prices/purchases and optional saved ownership. Original discs and their prices unchanged. New layout human review not inferred.",
+  "sourceReceipt": "E:\\Genventure\\coordination\\GV-059-vitrola-unified-r1\\INTEGRATION-RECEIPT.json",
+  "files": {
+    "records.js": "c8f4fa551a2ddf5568398c18ffd3cbbede9b3d180b7b6165727321615cb096a3",
+    "music-albums.js": "7b0efead882a43a4b23f789e242ec909a2456851f38fbbb981bc805e6d1d6085",
+    "recorded-album-player.js": "53c35a7bb0b45cb8f9871e016c7f69385ee291098b7bc593a7acb45386c34cba",
+    "approved-records-ui.js": "f6ac9c5a5a2d813d3440660a73fcdd29acb0547828b39d362f924daecc887342",
+    "run.js": "cc98eb412e9a286c86d1f96a6eaef3baebb303ef7636dc9e77c6e1be7a282972",
+    "album-collection.js": "eae45ee59304c8f6b44ce4b8efea3e62cb1615b95b8e0d4d213b2eae51c8f1b5",
+    "record-catalog.js": "9da373b1d970f8a2cf4ae1d760971e169d15620f50a062c02da0908cfc06cc65",
+    "unified-records-ui.js": "e9b9e585a14b76811b5cdb271cad72a9b239616635d324377887f1862668ea92",
+    "unified-records-ui.css": "7c570b7ffa5507a903d555e8a864567290cbd17d27ba792b9b5bf0433ab66844"
+  }
+}

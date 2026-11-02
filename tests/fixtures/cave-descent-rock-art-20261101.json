@@ -1,0 +1,9 @@
+{
+  "id": "CAVE-HOLE-APPROVED-20261101-R5",
+  "authority": "Usuário aprovou o buraco da R4, pediu retirar somente a escada interna e autorizou aplicação no jogo real.",
+  "files": {
+    "cave-stair-art.js": "c3470d7e661b1feee32a5b9a530b79bd4d6554b0a2babbc8918eadb6675b0956",
+    "cave-descent.js": "95f99bf74b46e55f492798d53fec15051a89fa50a12c62fb4493b7887b939fae",
+    "lift-v2ab-model.js": "b9e8d60cd0dd87fc636c22da704fb7ec936e9ed6978f3d075250463d6f4e0e61"
+  }
+}

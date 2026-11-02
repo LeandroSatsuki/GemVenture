@@ -1,0 +1,30 @@
+GEMVENTURE — GUIAS DE TERRENO
+
+Esta entrega padroniza os encaixes. NÃO são os sete materiais com arte final.
+
+Formato: uma folha por material, 2048 x 2048, 8 x 8 células de 256 pixels.
+00–46: máscaras conectadas de piso/topo, incluindo cantos internos.
+47–50: faces verticais N/L/S/O (quedas para água e lava).
+51–54: terminações N/L/S/O.
+55–58: escadas N/L/S/O ou detalhes de fluxo de líquidos.
+59–62: variações de piso A/B/C/D.
+63: acento sobreposto.
+
+Use o arquivo MATERIAL-template.png com MATERIAL-prompt.txt e a referência
+de estilo aprovada do Gemventure. O branco do template representa cobertura,
+não a cor do terreno. Preserve a forma, a posição e a transparência de cada peça.
+Não desenhe contornos entre pisos conectados.
+
+guia-encaixes.png: números para localizar cada posição.
+mascaras.png: as formas sem legenda.
+layout.json: retângulos de recorte, vizinhanças e pontos de apoio.
+SVGs: versões vetoriais editáveis dos mesmos guias.
+
+pedra-estudo-v1.png é um ESTUDO VISUAL em 4 x 6. Os cantos não foram aprovados
+para encaixe automático. Ele não corresponde à folha técnica final de 8 x 8.
+Foi produzido com a ferramenta integrada de geração de imagens; os demais
+templates foram construídos por geometria vetorial e exportados como PNG.
+
+Materiais: pedra, terra, grama, água, lava, madeira e alvenaria.
+Não há alteração de gameplay, cenário ativo, colisão ou save nesta entrega.
+Próxima fase: pintar e validar a arte final sobre este contrato.

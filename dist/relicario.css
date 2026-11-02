@@ -1,0 +1,147 @@
+@font-face{font-family:Fredoka;src:url('assets/menu-fonts/Fredoka-600-Static.ttf');font-weight:600}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-icon img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] :is(.header-art,.relic-vignette)>img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .shared-star{display:inline-block;width:24px;height:24px;vertical-align:middle;flex:none;line-height:0!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .shared-star img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .header-wallet b,#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-cost{display:inline-flex;align-items:center;gap:7px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .header-wallet .shared-star{width:28px;height:28px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-sigil .shared-star{width:64px;height:64px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-sigil{flex:none}
+@media(max-width:1450px),(max-height:820px){#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-sigil .shared-star{width:52px;height:52px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-cost .shared-star{width:22px;height:22px}
+}
+@font-face{font-family:Nunito;src:url('assets/menu-fonts/Nunito-800-Static.ttf');font-weight:800}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] *{box-sizing:border-box}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars]{margin:0;background:#07142f!important;color:#f7f8ff!important;font:800 16px Nunito,Arial,sans-serif!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] button,#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] select{font:inherit!important;color:inherit!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] button{cursor:pointer}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] button:disabled{cursor:default}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] [hidden]{display:none!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] :focus-visible{outline:3px solid #fff49a;outline-offset:3px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars]{position:fixed;inset:54px 18px 18px;margin:0;width:auto;max-width:none;height:auto;max-height:none;padding:0;border:4px solid #030a1c!important;border-radius:22px;background:linear-gradient(135deg,#0b234d,#081a39)!important;box-shadow:0 0 0 1px #010611,inset 0 0 0 1px #244777,0 10px 38px #02071680!important;color:inherit!important;overflow:hidden}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars]::backdrop{background:#0005!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-shell{height:100%;display:flex;flex-direction:column;min-height:0}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-heading-main{display:flex;align-items:center;gap:14px;padding:8px 24px;height:104px;flex:none}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-heading-main #dialogLabel{font:600 43px/1 Fredoka,Arial!important;margin:0 0 5px;paint-order:stroke fill;-webkit-text-stroke:3px #020916;text-shadow:0 3px #020916}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-heading-main p{margin:0;color:#a8cfff!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .header-art{width:104px;height:104px;flex:none}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .header-wallet{margin-left:auto;background:#07142f!important;border:1px solid #24416c!important;border-radius:10px;padding:8px 18px;min-width:140px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .header-wallet small{display:block;color:#b8d6ff!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .header-wallet b{font:600 28px Fredoka!important;color:#ffdf37!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .close-relic{align-self:flex-start;border:3px solid #0a0613!important;background:linear-gradient(#ff4566,#c90030)!important;box-shadow:inset 0 2px #ff8fa4,0 3px #010712!important;border-radius:12px;font:600 42px/1 Fredoka!important;width:56px;height:56px;padding:0;flex:none}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] #dialogBody{padding:0 16px 12px;overflow:auto;min-height:0;flex:1;scrollbar-color:#4583b4 #07152e}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic{display:flex;flex-direction:column;gap:12px;min-height:100%}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] h2,#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] h3{font-family:Fredoka,Arial!important;font-weight:600!important;margin:0}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] h2{font-size:26px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-top,#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped,#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-collection{border:2px solid #030b1c!important;border-radius:14px;background:linear-gradient(145deg,#13264b,#0d1e42)!important;box-shadow:inset 0 0 0 1px #263f68!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-wallet{display:none}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-invoke{min-height:128px;padding:12px 18px;display:flex;align-items:center;gap:18px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-invoke-copy{display:flex;align-items:center;gap:18px;flex:1}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-sigil{font-size:64px!important;line-height:1!important;color:#ffe23c!important;text-shadow:0 3px #8b5101}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-invoke p{color:#c0d7f1!important;margin:7px 0;font-size:15px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-remaining{color:#bfd5ef!important;font-size:14px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-invoke-action{width:240px;flex:none;text-align:center}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .primary{border:2px solid #ffe889!important;border-radius:10px;background:linear-gradient(#ffe447,#ffac10)!important;color:#fff!important;text-shadow:0 2px #664009;paint-order:stroke fill;-webkit-text-stroke:1px #69450b;font:600 23px Fredoka,Arial!important;padding:10px 20px;box-shadow:0 0 0 2px #38220b,inset 0 2px #fff6ba!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .primary:disabled{background:linear-gradient(#345075,#192a4c)!important;border-color:#284269!important;color:#e4eafb!important;box-shadow:0 0 0 2px #071227!important;-webkit-text-stroke:1px #17233c;text-shadow:none}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-vignette{width:256px;height:112px;flex:none}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .art-pending{display:grid;place-items:center;border:1px dashed #7394ba!important;border-radius:9px;background:#07152e!important;color:#a7bfd8!important;text-align:center}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .art-pending small{font:800 10px/1.3 Nunito,Arial!important;letter-spacing:.02em}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped{padding:10px 16px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped header,#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-collection>header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped header>span,#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-collection h2 span{color:#3aefff!important;font:600 24px Fredoka!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped ol{padding:0;margin:8px 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped li{position:relative;min-width:0;min-height:140px;border:3px dashed #355582!important;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:14px;padding:14px 32px;background:#0a1936!important;box-shadow:inset 0 0 0 1px #1e365a!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped li.is-filled{border-style:solid;border-color:#1a566e!important;background:linear-gradient(140deg,#0d2740,#08182f)!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped li.is-filled>div{width:auto;max-width:210px;min-width:0}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped li.is-empty{flex-direction:column;gap:6px;text-align:center}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped li.is-empty>div{max-width:240px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped .r2-relic-icon{width:88px;height:88px;flex:none}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-slot-number{position:absolute;right:9px;top:8px;display:grid;place-items:center;width:25px;height:25px;border:1px solid #365a8d!important;border-radius:6px;background:#07142f!important;color:#acc5ed!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped li strong{display:block;font:600 20px/1.15 Fredoka!important;margin-bottom:5px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped li div>span{display:block;font-size:14px!important;line-height:1.3!important;color:#c3d2ec!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-empty{font:600 38px/1 Fredoka!important;color:#8abced!important;width:44px;height:44px;display:grid;place-items:center;text-align:center;flex:none;background:#112a50!important;border:2px solid #345b8c!important;border-radius:9px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped>p{margin:4px 0;color:#a9c7e9!important;font-size:13px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-eyebrow{color:#78e7fa!important;font-size:13px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;flex:1}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-offers article{display:grid;grid-template-columns:88px minmax(0,1fr);gap:5px 12px;align-items:center;background:#07152e!important;padding:10px;border:1px solid #203658!important;border-radius:10px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-offers .r2-relic-icon{width:88px;height:88px;grid-row:span 2}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-offers h3{font-size:20px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-offers p{font-size:13px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-offers button{grid-column:1/-1;padding:6px!important;font-size:19px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-last{margin:0;color:#78ffce!important;font-size:14px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-help{font-size:13px!important;color:#abccec!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-help p{margin:6px 0;line-height:1.5!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-collection{padding:10px 14px;flex:1;min-height:180px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-collection>header p{font-size:13px!important;color:#aec9eb!important;margin:0}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-filters{display:flex;gap:8px;margin:8px 0}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-filters button{padding:5px 13px;border:1px solid #345588!important;border-radius:8px;background:#06122a!important;font-size:13px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-filters button[aria-pressed=true]{background:#22c9de!important;color:#03182d!important;border-color:#3c849f!important;box-shadow:0 0 0 2px #020916,inset 0 1px #72e5ed!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .filter-status{margin:0 0 6px;font-size:11px!important;color:#a7bfd7!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-card{position:relative;display:grid;grid-template-columns:88px minmax(0,1fr);gap:5px 12px;align-items:center;min-height:122px;text-align:left;background:linear-gradient(135deg,#050d21,#08142b)!important;border:2px solid #142848!important;border-radius:11px;padding:9px;color:#fff!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-card .r2-relic-icon{width:88px;height:88px;grid-row:span 2}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-card-copy{min-width:0}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-card-copy strong{display:block;font:600 19px/1.1 Fredoka!important;margin-bottom:5px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-card-copy>span{font-size:14px!important;line-height:1.2!important;color:#c0d8f2!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-card-state{display:block;grid-column:2;align-self:end;text-align:center;padding:4px 2px;font-size:12px!important;border:1px solid #20385c!important;border-radius:7px;background:#0e1d39!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-card.is-equipped{border-color:#218399!important;background:linear-gradient(135deg,#0c2438,#071a2c)!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-card.is-equipped .r2-relic-card-state{color:#fff0a0!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-card:disabled{opacity:1}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-card:not(:disabled):hover{border-color:#ffe27d!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .astral-legacy{margin-top:12px;padding:10px 14px;border:1px solid #3e668a!important;border-radius:10px;background:#081b35!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .astral-legacy summary{cursor:pointer;color:#badafa!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:10px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-grid article{border:1px solid #416c9a!important;padding:12px;border-radius:10px;background:#0b203e!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-grid h3{margin:8px 0}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-grid article>strong{display:block;font-size:14px!important;color:#bdd1ec!important;min-height:35px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-grid .primary{font-size:17px!important;padding:8px;margin-top:8px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-art{width:64px;height:64px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-art svg{width:100%;height:100%}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-rule{color:#aac4df!important;font-size:12px!important}
+@media(max-width:1450px),(max-height:820px){#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-heading-main{height:84px;padding:6px 18px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-heading-main #dialogLabel{font-size:34px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-heading-main p{font-size:14px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .header-art{width:80px;height:80px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-invoke{min-height:108px;padding:10px 14px;gap:12px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-invoke-copy{gap:12px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-sigil{font-size:52px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-invoke-action{width:190px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-vignette{width:192px;height:102px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] h2{font-size:23px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped li{min-height:120px;padding:12px 26px;gap:10px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped li.is-empty{gap:5px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped li.is-filled>div{max-width:190px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped .r2-relic-icon{width:64px;height:64px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped li strong{font-size:18px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped li div>span{font-size:12px!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-card{grid-template-columns:64px minmax(0,1fr);min-height:108px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-card .r2-relic-icon{width:64px;height:64px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-offers article{grid-template-columns:64px minmax(0,1fr)}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-offers .r2-relic-icon{width:64px;height:64px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-invoke p{font-size:13px!important}
+}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] :is(#relicInvokeTitle,.r2-relic-equipped h2){color:#f7f8ff!important;paint-order:stroke fill;-webkit-text-stroke:3px #020916;text-shadow:0 2px 0 #020916}
+@media(max-width:900px){#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-heading-main p,#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-vignette{display:none}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .header-wallet{min-width:95px;padding:8px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-equipped ol,#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-offers{grid-template-columns:1fr}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-invoke{flex-wrap:wrap}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-invoke-action{width:auto}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic-collection>header{display:block}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-filters{flex-wrap:wrap}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-grid{grid-template-columns:1fr}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars]{inset:58px 10px 10px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .header-art{width:64px;height:64px}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-heading-main #dialogLabel{font-size:27px!important}
+}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .filter-clarification{margin:0 0 6px;color:#c3d2ec!important;font-size:13px!important;line-height:1.3!important}
+
+/* Host modal geometry and human-requested external-only subtle blur. */
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars]{inset:18px;margin:0;width:calc(100vw - 36px);height:calc(100dvh - 36px);max-width:none;max-height:calc(100dvh - 36px)}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .dialog-top.relic-heading-main{position:relative;background:none!important;border:0!important;border-radius:0;box-shadow:none!important;min-height:0;justify-content:flex-start}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .relic-shell{width:100%;min-width:0}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] #dialogLabel{display:block;letter-spacing:0;color:#f7f8ff!important;text-transform:none}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars]::backdrop{background:rgba(2,9,22,.20)!important;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+@media(prefers-reduced-motion:reduce){#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+body.soft-fx #dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] *{animation:none!important;transition:none!important;scroll-behavior:auto!important}

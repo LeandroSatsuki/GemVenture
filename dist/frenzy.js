@@ -1,3 +1,4 @@
+import {recordPetBank} from './pet-bonds.js';
 import {blessingEffects} from './pillars.js';
 import {offerAbyssCards} from './abyss-cards.js';
 import {BIOME_COUNT,FLOORS_PER_BIOME} from './campaign.js';
@@ -6,6 +7,7 @@ import {createAbyssLayout,shiftAbyssLayout,isFloor} from './cave-layout.js';
 import {initCeiling} from './cave-ceiling.js';
 import {progressionEffects} from './progression-effects.js';
 import {depthDifficulty} from './balance.js';
+import {biomeMineral} from './materials.js';
 import {reveal,sightRange} from './cavern.js';
 // Run spice is deterministic and uses the same beat clock as combat.
 export const isAbyss=r=>r?.mode==='abyss';
@@ -50,13 +52,13 @@ export function grantBoost(r,beat){
  f.buffs[id]=beat+16;const b=BOOSTS.find(b=>b.id===id);
  emit(r,'boost',{id,name:b.name,color:b.color,...r.player});
 }
-export function recordFrenzy(s,target,award){
+export function recordFrenzy(s,target,award,beat=Math.max(s.run?.acted??-1,s.run?.beat??-1)){
  const r=s.run,f=r?.frenzy;if(!f)return;
- if(target.type==='enemy'){f.swarmKills++;if(isAbyss(r)&&f.swarmKills%8===0)grantBoost(r,Math.max(r.acted,r.beat));}
- const q=f.quest;if(!q||q.done||Math.max(r.acted,r.beat)>q.until)return;
- if(q.kind==='hunt'&&target.type==='enemy'&&r.combo>0&&r.acted>=r.beat)q.progress++;
+ if(target.type==='enemy'){f.swarmKills++;if(isAbyss(r)&&f.swarmKills%8===0)grantBoost(r,beat);}
+ const q=f.quest;if(!q||q.done||beat>q.until)return;
+ if(q.kind==='hunt'&&target.type==='enemy'&&r.combo>0&&r.acted>=beat)q.progress++;
  if(q.kind==='vein'&&target.id===q.target)q.progress=q.goal;
- if(q.progress>=q.goal&&award){q.done=true;r.materials[isAbyss(r)?1:0]+=Math.round(15*(1+(progressionEffects(s).questYield||0)));award(s,350,Math.max(r.acted,r.beat));emit(r,'challengeWin',{name:'DESAFIO FEITO'});if(isAbyss(r))grantBoost(r,Math.max(r.acted,r.beat));}
+ if(q.progress>=q.goal&&award){q.done=true;r.materials[isAbyss(r)?1:0]+=Math.round(15*(1+(progressionEffects(s).questYield||0)));award(s,350,beat);emit(r,'challengeWin',{name:'DESAFIO FEITO'});if(isAbyss(r))grantBoost(r,beat);}
 }
 export function initAbyss(r){
  r.mode='abyss';r.abyss={section:1,rows:0,lastShift:0,checkpoint:null,secured:0,cardSection:1,cardChoice:null};
@@ -109,7 +111,7 @@ export function secureCargo(s){
  // Only unsent cargo is eligible for salvage and return presentation.
  for(const c of r.loot.crystals){c.count=0;c.gems=0;}for(const id of ['rocks','enemies'])r.loot[id]={count:0,gems:0};
  r.room.floorStart={...r.room.floorStart,bag:0,materials:[0,0,0,0]};
- emit(r,'cargo',{coins,materials});return true;
+ r.events.push(...recordPetBank(s,materials));emit(r,'cargo',{coins,materials});return true;
 }
 export function skipRescue(r){if(!rescueAvailable(r))return false;if(isAbyss(r))r.abyss.checkpoint.used=true;else r.rescuedFloor=r.floor;return true;}
 // Deadline follows the shared musical clock, including saves and scrolling.
@@ -129,7 +131,7 @@ export function frenzyTick(s,beat,api){
   if(beat>0&&beat%4===0){const squeezed=r.player.y<=5;shiftWorld(r,beat,api,random);s.abyssBest=Math.max(s.abyssBest||0,a.rows*5);if(squeezed){api.lose(s,a.section===1?6:14,'attack');if(!s.run)return;}}
   if(beat%96===88){const m=sectionMutator(r,a.section+1);f.pendingSection={name:m.name,until:beat+8};emit(r,'sectionWarning',{name:m.name,hint:m.hint});}
   if(beat>0&&beat%96===0){
-   a.section++;if(r.room.hedgehog)r.room.hedgehog.biome=(a.section-1)%BIOME_COUNT;if(r.room.ceiling){r.room.ceiling.landed=0;r.room.ceiling.stock=Math.max(36,r.room.rocks.filter(n=>n.hp>0).length);}if(blessingEffects(r).floorShield){r.guardUntil=Math.max(r.guardUntil,beat+blessingEffects(r).floorShield-3);emit(r,'shield',{...r.player});}r.floor=1+((a.section-1)%BIOME_COUNT)*FLOORS_PER_BIOME;r.room.scoreLimit+=4000;
+   a.section++;api.petSection?.(a.section);if(r.room.hedgehog)r.room.hedgehog.biome=(a.section-1)%BIOME_COUNT;if(r.room.ceiling){r.room.ceiling.landed=0;r.room.ceiling.stock=Math.max(36,r.room.rocks.filter(n=>n.hp>0).length);}if(blessingEffects(r).floorShield){r.guardUntil=Math.max(r.guardUntil,beat+blessingEffects(r).floorShield-3);emit(r,'shield',{...r.player});}r.floor=1+((a.section-1)%BIOME_COUNT)*FLOORS_PER_BIOME;r.room.scoreLimit+=4000;
    f.mutator=sectionMutator(r).id;f.pendingSection=null;
    emit(r,'section',{section:a.section,name:sectionMutator(r).name});
    offerAbyssCards(s);
@@ -150,7 +152,7 @@ export function frenzyTick(s,beat,api){
    emit(r,'meteorWarning',{name:'CHUVA DE METEOROS'});
   }
   if(f.meteors?.[0]?.due===beat){
-   for(const p of f.meteors){emit(r,'meteor',{...p});if(Math.abs(r.player.x-p.x)+Math.abs(r.player.y-p.y)<=1&&r.guardUntil<beat)api.lose(s,18*heatState(r).damage,'attack');if(!s.run)return;
+   for(const p of f.meteors){emit(r,'meteor',{...p});if(r.guardUntil>=beat&&Math.abs(r.player.x-p.x)+Math.abs(r.player.y-p.y)<=1)emit(r,'shieldBlock',{...r.player});if(Math.abs(r.player.x-p.x)+Math.abs(r.player.y-p.y)<=1&&r.guardUntil<beat)api.lose(s,18*heatState(r).damage,'attack');if(!s.run)return;
     for(const n of [...r.room.nodes,...r.room.enemies,...r.room.rocks])if(n.hp>0&&Math.abs(n.x-p.x)+Math.abs(n.y-p.y)<=2)api.damageTarget(s,n,api.power(s)*4,true);
    }f.meteors=[];
   }
@@ -165,7 +167,7 @@ export function frenzyTick(s,beat,api){
  if(q&&!q.done&&beat>q.until){q.done=true;emit(r,'challengeEnd');}
  if(beat>=f.nextQuest){
   const kind=Math.floor(beat/64)%2?'hunt':'vein';q=f.quest={kind,name:kind==='hunt'?'CAÇA NO PULSO':'VEIO RARO',goal:kind==='hunt'?6:1,progress:0,until:beat+48,done:false};
-  if(kind==='vein'){const n=api.spawnCrystal(s,random,2);if(n){n.rare=true;n.rareUntil=q.until;n.explosive=isAbyss(r);n.value*=3;q.target=n.id;const p={x:Math.min(r.room.cols-3,r.player.x+3),y:Math.min(r.room.rows-3,r.player.y+2)};if(api.walkable(r.room,p.x,p.y)){n.x=p.x;n.y=p.y;}}else q.done=true;}
+  if(kind==='vein'){const n=api.spawnCrystal(s,random,biomeMineral(r.floor));if(n){n.rare=true;n.rareUntil=q.until;n.explosive=isAbyss(r);n.value*=3;q.target=n.id;const p={x:Math.min(r.room.cols-3,r.player.x+3),y:Math.min(r.room.rows-3,r.player.y+2)};if(api.walkable(r.room,p.x,p.y)){const sprout=r.events.findLast(e=>e.type==='sprout'&&e.x===n.x&&e.y===n.y);n.x=p.x;n.y=p.y;if(sprout){sprout.x=n.x;sprout.y=n.y;}}}else q.done=true;}
   f.nextQuest=beat+72;emit(r,'challenge',{name:q.name});
  }
 }

@@ -1,0 +1,16 @@
+{
+  "id": "STAIR-DESCENT-20261101-R1",
+  "authority": "Pedido direto: aplicar revisão de miniboss no oficial e simplificar passagem por escada ao pisar; exploração opcional, consequência temporal e sem farm infinito de estrelas.",
+  "files": {
+    "cave-arrival-presentation.js": "505e506140baf3a790a66365d1b06b03d271a5c2af0d9f64579ba680c0183fc3",
+    "cave-descent.js": "dce61da7acf51c67473dc77113b9ab77d260ba96a5ba8e12123584ed8d628442",
+    "cave-stair-art.js": "bd807caec8db9f92b8d135235a5cbc8813fbe9d6d1025a91bbe95516967e9be3",
+    "core.js": "68f2f34aaed2a26b1be1ecdf61f35fe2219119cad351ca021a71dc14fef05a61",
+    "expedition-hud-view.js": "242841ea54c0becd18640b0a0bf0b70f8244450475ed42dcd6bb47e986ca098a",
+    "run.js": "641d09f43bf2092ed9962681f42c6a2ba35e18f4294b9988b4621744de2d9445",
+    "cave-arrival-plan.js": "f98566d3ca87106a3a5e1f29a563d879ef559d3b9c21e68a7dc931ace8a41989",
+    "cave-descent-hud.css": "812f48ebeb36c684dc1d19a6b8ff7e82368653b5695211a3713d5ce898514986",
+    "lift-v2ab-model.js": "22eef57c4cb1d5a9e9eb8c246643ec45e05e15ea9686f49aeb0bd08aeb70d144",
+    "approved-lift-ui.js": "cef20547702fae585e3f8f2d4626b4e58c0166a353952a9f44e315aa18c29b17"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "SCENERY-LIGHTING-20261101-R1",
+  "authorization": "Current human request: scenery liquids and roots remain luminous outside sight; sight identifies enemies only.",
+  "scope": "Rendering policy and scoped root-sap emission. Native palettes, materials, discovery, interaction and saves remain frozen. New neon source colors are local emission masks only.",
+  "files": {
+    "world.js": "1ac66ef4c12e27997ed7a1b3da2747bcc5985c4c8b00af5aecc8073a011dbf5a",
+    "cave-lighting-masks.js": "8ea18f418ab8e907ad69d2bdc6c5cae976461c212e11725abb50788b06d4efc9",
+    "liquid-ambience.js": "46ad05df9cde4a5b3b57c19b38f785f7d06d2a4b6fe2a346c39a22205f4cb6e7",
+    "geode-ambience.js": "ca39b6e74cbab3b50376fc4ca022884cc18e72759ef87c19e24c0cb144e39eb9",
+    "cave-find-art.js": "9876e31135d94d98e4ae004300f64cfe95cb4f7e5c821270d293b2f0cb316564",
+    "root-emission.js": "6fd4f7f741e969b2072512c06b97438229cf1cd98165b937ee3ba826635dddc3",
+    "scenery-visibility.js": "7820c7f57808ce8ff0f6e9ea2748079fc8e4b1f774bc79647187e92acf789353"
+  }
+}

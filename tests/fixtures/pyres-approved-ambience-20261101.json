@@ -1,0 +1,20 @@
+{
+  "id": "PYRES-APPROVED-AMBIENCE-OFFICIAL-20261101-R1",
+  "authorization": "Perfeito. Agora pode colocar as piras nas paredes das cavernas, com aquelas part\u00edculas luminosas e a ilumina\u00e7\u00e3o na cor de cada bioma, mantendo esse clima escuro. E pode aplicar as aprova\u00e7\u00f5es no jogo real, t\u00e1?",
+  "files": {
+    "art-kit.js": "ccc49f60f99f6a14f55307896f0bd7b0796e7729c2c083cf929be2c50cbcb678",
+    "campaign-cave-surface.js": "646d05144671606e3b4bd55e52a7658e4296733f2f1cb533e7b66a291d35e8cc",
+    "abyss-cave-scene.js": "943669f774f86c64a52c269a88018846b969a8ce7b5a98be85bf9c094abc04fe",
+    "micelial-art.js": "51e3ec5f710442c524fc7c690c4174aa66cbfc0388b3e51b28216d3fa524ee79",
+    "hedgehog-raster-art.js": "8508168d19a592794de7439b19bf052efec2a49ee97ee30a85083e3351c0c84f",
+    "world.js": "0ed0d9212ca8e56714c44a23576b24f8b089ba4c0a379419317f911fa78d67e1",
+    "geode-lighting-runtime.js": "774847ecaeee809a7bd3f6c52cca0e090298f8eccbfbcd5b6a3d2dea940c49ca",
+    "geode-ambience.js": "a36eb51b4e4a6e5a9e0c231fc3e7124768e5b8cec4e59cfdf568a268703d9290",
+    "scenery-emission-bridge.js": "5920ef0a6e8b174e81de12c114ce72729217d851a1fab0a9e06de049880f8ee1",
+    "approved-scenery-emission.js": "8b4363e9f25092e853edcea0e612fe992d09e40f7df4b1dab0a7df6bdefbbec4",
+    "approved-scenery-materials.js": "baaf6b9bd437ee8b9629a4a9d5324cbc9d246a866dd93a6eb711c42505f3f3c5",
+    "cave-wall-pyres-plan.js": "26957b160a810d5be9f90fb5a38aab5f432b0add9f7407be7db457e6de8ba3b7",
+    "cave-wall-pyres-art.js": "2d5feba8aecc8d387cefa9d596129046b37ff23cbee71b236adeb51b52602499",
+    "cave-wall-pyres-runtime.js": "fab7ee201c5cc36a36c39306731c79ca98a1dddef009f4aecd04c4bc94d36b7f"
+  }
+}

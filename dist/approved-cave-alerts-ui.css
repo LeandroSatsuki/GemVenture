@@ -1,0 +1,22 @@
+@layer ui-layout-r2 {
+/* Only this passive objective consumer adopts the approved cave alert family. */
+body.hud-v5 #stage #hud5Root .hud5-left .hud5-critical:has(>[data-cave-alerts]){overflow:visible!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>[data-cave-alerts]{position:absolute!important;left:calc(100% + 16px)!important;bottom:0!important;width:220px!important;max-width:calc(100vw / var(--gv-ui-scale,1) - 220px)!important;pointer-events:none!important;background:linear-gradient(#102a52,#06132b)!important;border:2px solid #26538c!important;border-radius:11px!important;box-shadow:0 3px #020816!important;padding:10px!important}
+body.hud-v5 #stage #hud5Root #objective[data-approved-alerts]{box-sizing:border-box!important;background:linear-gradient(#102a52,#06132b)!important;border:2px solid #26538c!important;border-radius:11px!important;box-shadow:0 3px #020816!important;padding:12px!important;gap:0!important;color:#edf4ff!important;pointer-events:none!important}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective[data-approved-alerts][data-stairway=true]>p[data-stair-pressure]:not([hidden]){display:none!important}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective[data-approved-alerts]>small{font:600 16px/1.2 GVExpDisplay,Fredoka,sans-serif!important;margin:0!important;color:#edf4ff!important;white-space:normal!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>[data-cave-alerts]:not([hidden]){display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:12px!important;margin-top:0!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>[data-cave-alerts][hidden]{display:none!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>[data-cave-alerts] [hidden]{display:none!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>[data-cave-alerts] section{display:grid!important;gap:7px!important;margin:0!important;padding:0!important;border:0!important;background:none!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>[data-cave-alerts] .gv-alert-line{display:flex!important;align-items:baseline!important;justify-content:space-between!important;gap:8px!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>[data-cave-alerts] strong{font:600 17px/1.15 GVExpDisplay,Fredoka,sans-serif!important;min-width:0!important;white-space:normal!important;color:#edf4ff!important;letter-spacing:0!important;margin:0!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>[data-cave-alerts] span{font:600 15px/1.15 GVExpBody,Nunito,sans-serif!important;color:#ffd36a!important;white-space:nowrap!important;margin:0!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>[data-cave-alerts] [data-danger=true] span{color:#ff5264!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>[data-cave-alerts] .gv-alert-track{height:8px!important;border:0!important;border-radius:5px!important;background:#020816!important;overflow:hidden!important;box-shadow:none!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>[data-cave-alerts] .gv-alert-track>i{display:block!important;height:100%!important;border:0!important;border-radius:inherit!important;background:#ffd36a!important;box-shadow:0 0 6px #ffd36a40!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>[data-cave-alerts] .gv-pressure-steps{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:5px!important;height:8px!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>[data-cave-alerts] .gv-pressure-steps i{display:block!important;border-radius:4px!important;background:#26538c!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>[data-cave-alerts] .gv-pressure-steps i[data-on=true]{background:#ff5264!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>[data-cave-alerts] :is(section,.gv-alert-track,.gv-pressure-steps)[hidden]{display:none!important}
+}

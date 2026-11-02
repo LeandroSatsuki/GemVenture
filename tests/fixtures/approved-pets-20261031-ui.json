@@ -1,0 +1,9 @@
+{
+  "authorization": "Pets v1 explicitly approved31/10/2026; clean native UI, all ten powers and real care/equip/remove. Existing art/domain unchanged.",
+  "files": {
+    "approved-pets-ui.js": "fc23c003677366ac5083f7f7cb90c9c1d2027bd2e53feb16325f29d7b6ec5cfa",
+    "approved-pets-ui.css": "79f75625220ad6b01fd2a7f95eb63b26c5ac9fafef14ec960438f5d55fc0cfa2",
+    "run.js": "11f43f60ebc53a35fd07fe59f86d13f2592f622e14e6f3a6c0c661730a2e6639",
+    "approved-services-shell.css": "4c6ab1891600464d6fd2b700ae4f34332156d80db008f6656894bb6bdbc52bd1"
+  }
+}

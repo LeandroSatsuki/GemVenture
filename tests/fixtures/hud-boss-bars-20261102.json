@@ -1,0 +1,12 @@
+{
+  "id": "HUD-BOSS-BARS-20261102-R1",
+  "authorization": "User direct HUD polish and boss HP relocation; presentation only",
+  "files": {
+    "approved-expedition-hud.css": "1967ea267fc41c7a4a6a3297209e1cb7750544ddeb79e2d4dc3aa3d5f85d9251",
+    "boss-hud.css": "8965d6e0e2c1d1f561438827924726c2d42c9937933d8e10807964d034c1028f",
+    "boss-hud.js": "b6921079b52dac6d0ef3334cd8e47062bf83909296ac76f97e17ae55563dd8db",
+    "canvas-health-ui.js": "c8aea4ccf60a60bc7f0aa421c3bbb413306b9ec945fde7d01409a0e678cd2e26",
+    "expedition-hud-view.js": "03ab0eca318eabee899301b99b8913597d912fb6f4cfbfff3732dfbf4c951ec1",
+    "world.js": "03346abe6f7228648f12cf59f64676afab23a9ee9c9db031bc5b5bc4ef2574ae"
+  }
+}

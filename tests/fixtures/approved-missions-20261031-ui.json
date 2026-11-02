@@ -1,0 +1,13 @@
+{
+  "authorization": "Human approval31/10/2026: official application of Missions v3, compact layout and ownership state distinction; real host transactions and tutorial adapter.",
+  "files": {
+    "approved-missions-ui.js": "068afc75de02e202d0f634a2f1de031f048d908c7eab4ab9fd015d443a81a875",
+    "approved-missions-ui.css": "c1e955b0e2e926c4fe9b09851a1636f35f6d290365a2eeac2e645f4a1f982b33",
+    "approved-missions-assets.js": "886968cbcb267cce0065db0237f1f544051e053301fc61fb429a2e747a87120f",
+    "approved-missions-access.js": "1b470d12323f6660a0afa5918a95d1983f15499aafcc3fb4d2bf73cfb09a768d",
+    "run.js": "a296c6ad49c59a4d3d3bd087cb702d7b397709e1bf1d3b08def13f3640d0fab0",
+    "approved-services-shell.css": "ff8727429588b78cb7f8142e11deb8210fd325c95db21b236fbdc3d105b79889",
+    "tutorial-runtime.js": "b13e22bf1f653b48c9af2e31c3ffd18b87de9cf4876f5950f4238dac2c1ffac4",
+    "tutorial-view.js": "da5f6d5bcc7eb33243723cb1410ec6425090c59c62b8b0c020826adce6220e6c"
+  }
+}

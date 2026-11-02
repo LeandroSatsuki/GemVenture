@@ -1,0 +1,25 @@
+{
+  "status": "candidate-not-art-approval",
+  "files": {
+    "cave-layout.js": "80ef36670137aa1205d517deb9309958aa6e3c097f8358ee3756b8adbc387eea",
+    "cave-wall-occlusion.js": "b12e0737a1a074ce938abcde89dde2072de071e586b1740837c383ff72427a30",
+    "compact-talents.js": "17ae86479003b82a277f6bb56dc0d98429ece51183ee982ab9b7ece906abbe90",
+    "core.js": "558c21ea7cb3778f6bcfc2c914cd82ae5b734a3752d781d17457ef1cde1477ab",
+    "dungeon-volumes.js": "121ca6c596376a0cd12f39605386c1b87fc4ec6182421138b34b4b069356bea4",
+    "expedition-hud-view.js": "0d191ec0de360cc4146c0b6726f88193f8c1f947f0daa1d2f0d63453bb514f34",
+    "gamefeel-v5.css": "5f0dc33494dcb038ec70418118be0ee6c7de2de79b866e6e90f781678faf8fa4",
+    "gamefeel-v5.js": "6a307a709b6d108a02bca8aa1804f47eed379435035c7866be3a3d3a9026c498",
+    "index.html": "1468d09b1f7c820b1197f225dcbf3ad10beac2e18f09a97e8cf12ce058933924",
+    "player-appearance.js": "e917c6e1d93293442fa056695987d7da85c0a6749abfb0f09ad42d7f80a90e16",
+    "refuge-art-ready.js": "8ba8e2538804850635859ced9f33f652dfac82ba3a900f17e3a39eab01e2375e",
+    "refuge-lobby.js": "57ce13a06998dfe09fc2ea69bf8b8ec4b727d208f590c5122fa2901a24562f9d",
+    "rhythm-talents.js": "93ea33df8b73a4d82e30deaddabfbc2187df2fdaa4e0b27785c42a40492d4fce",
+    "run.js": "1a0a91c1cbab2042a5d8da4ca18bdad9368e44a6796e60ba839d3d0c249bae02",
+    "talent-icons-v5.js": "2aa41b4b0e66016caac88cc26aedee41bb10ddc141fb9a770ac7bbba01e34df6",
+    "talent-view.js": "32eba212e26b2562da1146984085197393aa4861901b8c6e9f84f6bc2f194f0c",
+    "talents.js": "2fae115780056b3b63c056c6ff78a63cb2a749df824e838f15d3978f1dc7de81",
+    "tree-layout.js": "f89b436a88397db206ed6edf6c39732eb17c04767e455988bd845e4e28785088",
+    "tree-presentation.js": "b944f21d745811fff446e5fbaa930e21bde2c323b4d083e4e315980a73cb6d09",
+    "world.js": "5c2af394d62dc6192c2e18339b7139e5c1b5c5266a1aaa5eb5ca37859e5fa511"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "TRAINING-UI-INTEGRATION-20261101",
+  "at": "2026-11-01T17:29:05.040046+00:00",
+  "authorization": {
+    "quote": "Só uma condição de aprovação: a barrinha ali do pulso coloca ela igual tá no jogo mesmo oficial, pro jogador não estranhar. Mas aprovado isso, depois só substituir essa barrinha, tá aprovado o treino, ok?",
+    "scope": "Apply approved training UI after substituting its pulse with the actual official rhythm track. Preserve mechanics, profile, transactions and all 26 steps.",
+    "proposal": "../TRAINING-UI-PROPOSAL-20261101/v1/PROPOSAL-MANIFEST.json"
+  },
+  "files": {
+    "tutorial-view.js": "9e2b72e7e1b168903e5cb00130224a9383184f5a8d963e270957ac4c39e9e52e",
+    "tutorial-runtime.js": "b9db7f597171a8c0b3ead8e375e7d23502de98592333291c8a689a3a2f121a45",
+    "approved-training-ui.js": "bc59db6a723389f2b058b51dc692b595626de150c7fe95484632ee07c4f0cd24",
+    "approved-training-ui.css": "4e797a5b37de502e7254150ce8d65df527b65e418e47e94c31296d7cc828a011"
+  },
+  "scope": "Approved training UI only; actual official rhythm track reused. No palette migration or gameplay/World edits.",
+  "receipt": "E:/Genventure/coordination/TRAINING-UI-INTEGRATION-20261101/APPLIED-RECEIPT.json",
+  "monitorResumed": false
+}

@@ -1,0 +1,38 @@
+/* Animate the paint face and contents, never the button's layout or hit box. */
+body.immersive-run #clearBanner.gv-card-lighting.gv-card-floating .gem-card{
+ position:relative;isolation:isolate;overflow:visible;
+ transform:none;translate:none;animation:none;
+ background:transparent!important;border-color:transparent!important;box-shadow:none!important;
+ --float-delay:0s;--float-state:running;
+ --face-border:var(--card-light);
+ --face-bg:radial-gradient(ellipse at 50% 32%,color-mix(in srgb,var(--card) 22%,#07142d) 0%,#07142d 56%);
+ --face-shadow:0 0 0 2px #020a1c,0 7px 9px -5px color-mix(in srgb,var(--card) 18%,#020a1c),0 0 17px var(--card-glow),inset 0 0 0 2px #020a1c,inset 0 3px var(--card-light),inset 0 -6px 13px color-mix(in srgb,var(--card) 35%,transparent);
+}
+body.immersive-run #clearBanner.gv-card-lighting.gv-card-floating .gem-card:nth-child(3n+2){--float-delay:-1.6s}
+body.immersive-run #clearBanner.gv-card-lighting.gv-card-floating .gem-card:nth-child(3n){--float-delay:-3.2s}
+body.immersive-run #clearBanner.gv-card-lighting.gv-card-floating .gem-card::before{
+ content:"";position:absolute;inset:-3px -3px -6px;z-index:-1;box-sizing:border-box;
+ border:3px solid var(--face-border);border-bottom-width:6px;border-radius:inherit;
+ background:var(--face-bg);box-shadow:var(--face-shadow);pointer-events:none;
+}
+body.immersive-run #clearBanner.gv-card-lighting.gv-card-floating .gem-card>*,
+body.immersive-run #clearBanner.gv-card-lighting.gv-card-floating .gem-card::before{
+ pointer-events:none;
+ animation:gv-card-gentle-float 4.8s ease-in-out var(--float-delay) infinite;
+ animation-play-state:var(--float-state);
+}
+body.immersive-run #clearBanner.gv-card-lighting.gv-card-floating .gem-card:is(:hover,:focus-within,:focus-visible,.selected,[aria-pressed=true],:disabled){--float-state:paused}
+body.immersive-run #clearBanner.gv-card-lighting.gv-card-floating .gem-card:hover:not(:disabled){
+ --face-bg:radial-gradient(ellipse at 50% 32%,color-mix(in srgb,var(--card) 30%,#07142d) 0%,#07142d 64%);
+}
+body.immersive-run #clearBanner.gv-card-lighting.gv-card-floating .gem-card:is(.selected,[aria-pressed=true]){--face-border:#fff0a6}
+body.immersive-run #clearBanner.gv-card-lighting.gv-card-floating .gem-card:disabled{
+ --face-border:var(--card);--face-shadow:0 0 0 2px #020a1c,inset 0 1px var(--card),inset 0 -3px var(--card-glow);
+}
+@keyframes gv-card-gentle-float{0%,100%{translate:0 -2px}50%{translate:0 2px}}
+@media(prefers-reduced-motion:reduce){
+ body.immersive-run #clearBanner.gv-card-lighting.gv-card-floating .gem-card>*,
+ body.immersive-run #clearBanner.gv-card-lighting.gv-card-floating .gem-card::before{animation:none!important;translate:none!important}
+}
+.soft-fx #clearBanner.gv-card-lighting.gv-card-floating .gem-card>*,
+.soft-fx #clearBanner.gv-card-lighting.gv-card-floating .gem-card::before{animation:none!important;translate:none!important}

@@ -1,0 +1,2216 @@
+{
+  "name": "Minion VFX pilot",
+  "revision": 1,
+  "status": "pilotos visuais separados; sem integração ou aprovação humana",
+  "date": "2026-10-14",
+  "palette": "HEPT32",
+  "frameSize": 96,
+  "columns": 4,
+  "rows": 3,
+  "frames": 12,
+  "atlasOrder": "left to right, then next row",
+  "uniqueAtlases": 48,
+  "decodedAtlasBytes": 442368,
+  "loadingBudget": {
+    "activeBiomeAtlases": 6,
+    "maxDecodedAtlases": 12,
+    "maxDecodedBytes": 5308416,
+    "policy": "load only current biome and current normal/soft mode; at most previous biome as LRU"
+  },
+  "effects": [
+    {
+      "id": "slime-splash-b1",
+      "kind": "slime-splash",
+      "family": "slime",
+      "biome": 0,
+      "label": "Estouro de gosma",
+      "sourceAsset": "slime-b1.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-azul-cristal-teste-01.png",
+      "sourceSha256": "ed983b6e7d20dec5cb0dc2fde49f0af3ee6ae730b0036bba735eca784ed8ee9b",
+      "normalFile": "atlas/slime-splash-b1-normal.png",
+      "softFile": "atlas/slime-splash-b1-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.3,
+      "loop": false,
+      "role": "death-splash",
+      "layer": "aboveBody",
+      "colors": [
+        "#2890dc",
+        "#1831a7",
+        "#5ee9e9",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "slime-splash-b2",
+      "kind": "slime-splash",
+      "family": "slime",
+      "biome": 1,
+      "label": "Estouro de gosma",
+      "sourceAsset": "slime-b2.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-verde-folhas-01.png",
+      "sourceSha256": "c467877b75925d0e7400b1b969d8bb7a4cde15685fb5d848dca8b812a0866e8d",
+      "normalFile": "atlas/slime-splash-b2-normal.png",
+      "softFile": "atlas/slime-splash-b2-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.3,
+      "loop": false,
+      "role": "death-splash",
+      "layer": "aboveBody",
+      "colors": [
+        "#08b23b",
+        "#005f41",
+        "#47f641",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "slime-splash-b3",
+      "kind": "slime-splash",
+      "family": "slime",
+      "biome": 2,
+      "label": "Estouro de gosma",
+      "sourceAsset": "slime-b3.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-terroso-chifre-osso-01.png",
+      "sourceSha256": "b3fb9e5177ed53c749d8a84ad83ca59bf6e567c31f8045b0710a734b8cd26d39",
+      "normalFile": "atlas/slime-splash-b3-normal.png",
+      "softFile": "atlas/slime-splash-b3-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.3,
+      "loop": false,
+      "role": "death-splash",
+      "layer": "aboveBody",
+      "colors": [
+        "#b66831",
+        "#8a4926",
+        "#de9751",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "slime-splash-b4",
+      "kind": "slime-splash",
+      "family": "slime",
+      "biome": 3,
+      "label": "Estouro de gosma",
+      "sourceAsset": "slime-b4.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-fogo-chama-01.png",
+      "sourceSha256": "67bf99d1acb23ba381787700ba097d92a1d0caf1bd3c4c5496f05db140299d42",
+      "normalFile": "atlas/slime-splash-b4-normal.png",
+      "softFile": "atlas/slime-splash-b4-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.3,
+      "loop": false,
+      "role": "death-splash",
+      "layer": "aboveBody",
+      "colors": [
+        "#da2424",
+        "#720d0d",
+        "#ef6e10",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "slime-splash-b5",
+      "kind": "slime-splash",
+      "family": "slime",
+      "biome": 4,
+      "label": "Estouro de gosma",
+      "sourceAsset": "slime-b5.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-avermelhado-cogumelo-01.png",
+      "sourceSha256": "fb2725ab0421d7e5cc05f19b73692e6418e47fb0444d8aaf0b900a2b72af3640",
+      "normalFile": "atlas/slime-splash-b5-normal.png",
+      "softFile": "atlas/slime-splash-b5-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.3,
+      "loop": false,
+      "role": "death-splash",
+      "layer": "aboveBody",
+      "colors": [
+        "#da2424",
+        "#720d0d",
+        "#f94e6d",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "slime-splash-b6",
+      "kind": "slime-splash",
+      "family": "slime",
+      "biome": 5,
+      "label": "Estouro de gosma",
+      "sourceAsset": "slime-b6.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-amarelo-laranja-coroa-01.png",
+      "sourceSha256": "e9967c7978f46254762b01daaf1dc45e0d87e45399796766a3387c37b5a46f4f",
+      "normalFile": "atlas/slime-splash-b6-normal.png",
+      "softFile": "atlas/slime-splash-b6-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.3,
+      "loop": false,
+      "role": "death-splash",
+      "layer": "aboveBody",
+      "colors": [
+        "#ecab11",
+        "#ef6e10",
+        "#e8ff75",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "slime-splash-b7",
+      "kind": "slime-splash",
+      "family": "slime",
+      "biome": 6,
+      "label": "Estouro de gosma",
+      "sourceAsset": "slime-b7.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-cenoura-01.png",
+      "sourceSha256": "c6ba6119e4183b2d523c74806658343360b7d6c3e4dd3721d796885aba705fbe",
+      "normalFile": "atlas/slime-splash-b7-normal.png",
+      "softFile": "atlas/slime-splash-b7-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.3,
+      "loop": false,
+      "role": "death-splash",
+      "layer": "aboveBody",
+      "colors": [
+        "#ef6e10",
+        "#ecab11",
+        "#e8ff75",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "slime-residue-b1",
+      "kind": "slime-residue",
+      "family": "slime",
+      "biome": 0,
+      "label": "Resíduo decorativo",
+      "sourceAsset": "slime-b1.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-azul-cristal-teste-01.png",
+      "sourceSha256": "ed983b6e7d20dec5cb0dc2fde49f0af3ee6ae730b0036bba735eca784ed8ee9b",
+      "normalFile": "atlas/slime-residue-b1-normal.png",
+      "softFile": "atlas/slime-residue-b1-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 48,
+      "clipSeconds": 0.72,
+      "loop": false,
+      "role": "decorative-residue",
+      "layer": "groundBelowWarnings",
+      "colors": [
+        "#2890dc",
+        "#1831a7",
+        "#5ee9e9",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "slime-residue-b2",
+      "kind": "slime-residue",
+      "family": "slime",
+      "biome": 1,
+      "label": "Resíduo decorativo",
+      "sourceAsset": "slime-b2.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-verde-folhas-01.png",
+      "sourceSha256": "c467877b75925d0e7400b1b969d8bb7a4cde15685fb5d848dca8b812a0866e8d",
+      "normalFile": "atlas/slime-residue-b2-normal.png",
+      "softFile": "atlas/slime-residue-b2-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 48,
+      "clipSeconds": 0.72,
+      "loop": false,
+      "role": "decorative-residue",
+      "layer": "groundBelowWarnings",
+      "colors": [
+        "#08b23b",
+        "#005f41",
+        "#47f641",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "slime-residue-b3",
+      "kind": "slime-residue",
+      "family": "slime",
+      "biome": 2,
+      "label": "Resíduo decorativo",
+      "sourceAsset": "slime-b3.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-terroso-chifre-osso-01.png",
+      "sourceSha256": "b3fb9e5177ed53c749d8a84ad83ca59bf6e567c31f8045b0710a734b8cd26d39",
+      "normalFile": "atlas/slime-residue-b3-normal.png",
+      "softFile": "atlas/slime-residue-b3-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 48,
+      "clipSeconds": 0.72,
+      "loop": false,
+      "role": "decorative-residue",
+      "layer": "groundBelowWarnings",
+      "colors": [
+        "#b66831",
+        "#8a4926",
+        "#de9751",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "slime-residue-b4",
+      "kind": "slime-residue",
+      "family": "slime",
+      "biome": 3,
+      "label": "Resíduo decorativo",
+      "sourceAsset": "slime-b4.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-fogo-chama-01.png",
+      "sourceSha256": "67bf99d1acb23ba381787700ba097d92a1d0caf1bd3c4c5496f05db140299d42",
+      "normalFile": "atlas/slime-residue-b4-normal.png",
+      "softFile": "atlas/slime-residue-b4-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 48,
+      "clipSeconds": 0.72,
+      "loop": false,
+      "role": "decorative-residue",
+      "layer": "groundBelowWarnings",
+      "colors": [
+        "#da2424",
+        "#720d0d",
+        "#ef6e10",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "slime-residue-b5",
+      "kind": "slime-residue",
+      "family": "slime",
+      "biome": 4,
+      "label": "Resíduo decorativo",
+      "sourceAsset": "slime-b5.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-avermelhado-cogumelo-01.png",
+      "sourceSha256": "fb2725ab0421d7e5cc05f19b73692e6418e47fb0444d8aaf0b900a2b72af3640",
+      "normalFile": "atlas/slime-residue-b5-normal.png",
+      "softFile": "atlas/slime-residue-b5-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 48,
+      "clipSeconds": 0.72,
+      "loop": false,
+      "role": "decorative-residue",
+      "layer": "groundBelowWarnings",
+      "colors": [
+        "#da2424",
+        "#720d0d",
+        "#f94e6d",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "slime-residue-b6",
+      "kind": "slime-residue",
+      "family": "slime",
+      "biome": 5,
+      "label": "Resíduo decorativo",
+      "sourceAsset": "slime-b6.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-amarelo-laranja-coroa-01.png",
+      "sourceSha256": "e9967c7978f46254762b01daaf1dc45e0d87e45399796766a3387c37b5a46f4f",
+      "normalFile": "atlas/slime-residue-b6-normal.png",
+      "softFile": "atlas/slime-residue-b6-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 48,
+      "clipSeconds": 0.72,
+      "loop": false,
+      "role": "decorative-residue",
+      "layer": "groundBelowWarnings",
+      "colors": [
+        "#ecab11",
+        "#ef6e10",
+        "#e8ff75",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "slime-residue-b7",
+      "kind": "slime-residue",
+      "family": "slime",
+      "biome": 6,
+      "label": "Resíduo decorativo",
+      "sourceAsset": "slime-b7.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-cenoura-01.png",
+      "sourceSha256": "c6ba6119e4183b2d523c74806658343360b7d6c3e4dd3721d796885aba705fbe",
+      "normalFile": "atlas/slime-residue-b7-normal.png",
+      "softFile": "atlas/slime-residue-b7-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 48,
+      "clipSeconds": 0.72,
+      "loop": false,
+      "role": "decorative-residue",
+      "layer": "groundBelowWarnings",
+      "colors": [
+        "#ef6e10",
+        "#ecab11",
+        "#e8ff75",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "slime-offensive-b1",
+      "kind": "slime-offensive",
+      "family": "slime",
+      "biome": 0,
+      "label": "Poça ofensiva",
+      "sourceAsset": "slime-b1.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-azul-cristal-teste-01.png",
+      "sourceSha256": "ed983b6e7d20dec5cb0dc2fde49f0af3ee6ae730b0036bba735eca784ed8ee9b",
+      "normalFile": "atlas/slime-offensive-b1-normal.png",
+      "softFile": "atlas/slime-offensive-b1-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 48,
+      "clipSeconds": 0.8,
+      "loop": true,
+      "role": "offensive-visual",
+      "layer": "groundBelowWarnings",
+      "colors": [
+        "#2890dc",
+        "#1831a7",
+        "#5ee9e9",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "managed by caller actual hazard state"
+    },
+    {
+      "id": "slime-offensive-b2",
+      "kind": "slime-offensive",
+      "family": "slime",
+      "biome": 1,
+      "label": "Poça ofensiva",
+      "sourceAsset": "slime-b2.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-verde-folhas-01.png",
+      "sourceSha256": "c467877b75925d0e7400b1b969d8bb7a4cde15685fb5d848dca8b812a0866e8d",
+      "normalFile": "atlas/slime-offensive-b2-normal.png",
+      "softFile": "atlas/slime-offensive-b2-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 48,
+      "clipSeconds": 0.8,
+      "loop": true,
+      "role": "offensive-visual",
+      "layer": "groundBelowWarnings",
+      "colors": [
+        "#08b23b",
+        "#005f41",
+        "#47f641",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "managed by caller actual hazard state"
+    },
+    {
+      "id": "slime-offensive-b3",
+      "kind": "slime-offensive",
+      "family": "slime",
+      "biome": 2,
+      "label": "Poça ofensiva",
+      "sourceAsset": "slime-b3.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-terroso-chifre-osso-01.png",
+      "sourceSha256": "b3fb9e5177ed53c749d8a84ad83ca59bf6e567c31f8045b0710a734b8cd26d39",
+      "normalFile": "atlas/slime-offensive-b3-normal.png",
+      "softFile": "atlas/slime-offensive-b3-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 48,
+      "clipSeconds": 0.8,
+      "loop": true,
+      "role": "offensive-visual",
+      "layer": "groundBelowWarnings",
+      "colors": [
+        "#b66831",
+        "#8a4926",
+        "#de9751",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "managed by caller actual hazard state"
+    },
+    {
+      "id": "slime-offensive-b4",
+      "kind": "slime-offensive",
+      "family": "slime",
+      "biome": 3,
+      "label": "Poça ofensiva",
+      "sourceAsset": "slime-b4.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-fogo-chama-01.png",
+      "sourceSha256": "67bf99d1acb23ba381787700ba097d92a1d0caf1bd3c4c5496f05db140299d42",
+      "normalFile": "atlas/slime-offensive-b4-normal.png",
+      "softFile": "atlas/slime-offensive-b4-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 48,
+      "clipSeconds": 0.8,
+      "loop": true,
+      "role": "offensive-visual",
+      "layer": "groundBelowWarnings",
+      "colors": [
+        "#da2424",
+        "#720d0d",
+        "#ef6e10",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "managed by caller actual hazard state"
+    },
+    {
+      "id": "slime-offensive-b5",
+      "kind": "slime-offensive",
+      "family": "slime",
+      "biome": 4,
+      "label": "Poça ofensiva",
+      "sourceAsset": "slime-b5.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-avermelhado-cogumelo-01.png",
+      "sourceSha256": "fb2725ab0421d7e5cc05f19b73692e6418e47fb0444d8aaf0b900a2b72af3640",
+      "normalFile": "atlas/slime-offensive-b5-normal.png",
+      "softFile": "atlas/slime-offensive-b5-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 48,
+      "clipSeconds": 0.8,
+      "loop": true,
+      "role": "offensive-visual",
+      "layer": "groundBelowWarnings",
+      "colors": [
+        "#da2424",
+        "#720d0d",
+        "#f94e6d",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "managed by caller actual hazard state"
+    },
+    {
+      "id": "slime-offensive-b6",
+      "kind": "slime-offensive",
+      "family": "slime",
+      "biome": 5,
+      "label": "Poça ofensiva",
+      "sourceAsset": "slime-b6.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-amarelo-laranja-coroa-01.png",
+      "sourceSha256": "e9967c7978f46254762b01daaf1dc45e0d87e45399796766a3387c37b5a46f4f",
+      "normalFile": "atlas/slime-offensive-b6-normal.png",
+      "softFile": "atlas/slime-offensive-b6-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 48,
+      "clipSeconds": 0.8,
+      "loop": true,
+      "role": "offensive-visual",
+      "layer": "groundBelowWarnings",
+      "colors": [
+        "#ecab11",
+        "#ef6e10",
+        "#e8ff75",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "managed by caller actual hazard state"
+    },
+    {
+      "id": "slime-offensive-b7",
+      "kind": "slime-offensive",
+      "family": "slime",
+      "biome": 6,
+      "label": "Poça ofensiva",
+      "sourceAsset": "slime-b7.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/slime-cenoura-01.png",
+      "sourceSha256": "c6ba6119e4183b2d523c74806658343360b7d6c3e4dd3721d796885aba705fbe",
+      "normalFile": "atlas/slime-offensive-b7-normal.png",
+      "softFile": "atlas/slime-offensive-b7-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 48,
+      "clipSeconds": 0.8,
+      "loop": true,
+      "role": "offensive-visual",
+      "layer": "groundBelowWarnings",
+      "colors": [
+        "#ef6e10",
+        "#ecab11",
+        "#e8ff75",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "managed by caller actual hazard state"
+    },
+    {
+      "id": "bat-poof-b1",
+      "kind": "bat-poof",
+      "family": "bat",
+      "biome": 0,
+      "label": "Fumaça do morcego",
+      "sourceAsset": "bat-b1.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/morcego-azul-cristal-01.png",
+      "sourceSha256": "99adea14261554fda0bbb19d6dc591e9297470fb3a32cd63e396966fd77d1bc6",
+      "normalFile": "atlas/bat-poof-shared-normal.png",
+      "softFile": "atlas/bat-poof-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.3,
+      "loop": false,
+      "role": "death-smoke",
+      "layer": "aboveBody",
+      "colors": [
+        "#686b72",
+        "#353658"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "bat-poof-b2",
+      "kind": "bat-poof",
+      "family": "bat",
+      "biome": 1,
+      "label": "Fumaça do morcego",
+      "sourceAsset": "bat-b2.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/morcego-verde-folhas-01.png",
+      "sourceSha256": "32b4a355e9833f117345ba38e47f3c234ff770ca8cb393f209e2c213b408d1ce",
+      "normalFile": "atlas/bat-poof-shared-normal.png",
+      "softFile": "atlas/bat-poof-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.3,
+      "loop": false,
+      "role": "death-smoke",
+      "layer": "aboveBody",
+      "colors": [
+        "#686b72",
+        "#353658"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "bat-poof-b3",
+      "kind": "bat-poof",
+      "family": "bat",
+      "biome": 2,
+      "label": "Fumaça do morcego",
+      "sourceAsset": "bat-b3.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/morcego-terroso-chifre-osso-01.png",
+      "sourceSha256": "1f67916e2bbdacae36c0f3f6b0de3dbd77f458167176998683abddd3e4142605",
+      "normalFile": "atlas/bat-poof-shared-normal.png",
+      "softFile": "atlas/bat-poof-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.3,
+      "loop": false,
+      "role": "death-smoke",
+      "layer": "aboveBody",
+      "colors": [
+        "#686b72",
+        "#353658"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "bat-poof-b4",
+      "kind": "bat-poof",
+      "family": "bat",
+      "biome": 3,
+      "label": "Fumaça do morcego",
+      "sourceAsset": "bat-b4.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/morcego-fogo-chama-01.png",
+      "sourceSha256": "c80aeaf79111163f04bbd815426aa43167b8f2d72b344adf929a17a67ec9841e",
+      "normalFile": "atlas/bat-poof-shared-normal.png",
+      "softFile": "atlas/bat-poof-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.3,
+      "loop": false,
+      "role": "death-smoke",
+      "layer": "aboveBody",
+      "colors": [
+        "#686b72",
+        "#353658"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "bat-poof-b5",
+      "kind": "bat-poof",
+      "family": "bat",
+      "biome": 4,
+      "label": "Fumaça do morcego",
+      "sourceAsset": "bat-b5.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/morcego-avermelhado-cogumelo-01.png",
+      "sourceSha256": "3ebb8ed2effa070f22872f0dabbf3cf38fa813c58f1e0323a88484776a56e2ca",
+      "normalFile": "atlas/bat-poof-shared-normal.png",
+      "softFile": "atlas/bat-poof-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.3,
+      "loop": false,
+      "role": "death-smoke",
+      "layer": "aboveBody",
+      "colors": [
+        "#686b72",
+        "#353658"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "bat-poof-b6",
+      "kind": "bat-poof",
+      "family": "bat",
+      "biome": 5,
+      "label": "Fumaça do morcego",
+      "sourceAsset": "bat-b6.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/morcego-amarelo-laranja-coroa-01.png",
+      "sourceSha256": "d0087196ce7922fe479574d3c2ac1091584c03c48ebb351f477e2899d1435286",
+      "normalFile": "atlas/bat-poof-shared-normal.png",
+      "softFile": "atlas/bat-poof-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.3,
+      "loop": false,
+      "role": "death-smoke",
+      "layer": "aboveBody",
+      "colors": [
+        "#686b72",
+        "#353658"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "bat-poof-b7",
+      "kind": "bat-poof",
+      "family": "bat",
+      "biome": 6,
+      "label": "Fumaça do morcego",
+      "sourceAsset": "bat-b7.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/morcego-cenoura-01.png",
+      "sourceSha256": "490c5c02aed026789a36bf9768d30f269ac2ec64dcafb1215f4ba77d8deeff90",
+      "normalFile": "atlas/bat-poof-shared-normal.png",
+      "softFile": "atlas/bat-poof-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.3,
+      "loop": false,
+      "role": "death-smoke",
+      "layer": "aboveBody",
+      "colors": [
+        "#686b72",
+        "#353658"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "geode-death-b1",
+      "kind": "geode-death",
+      "family": "golem",
+      "biome": 0,
+      "label": "Fragmentos do geodo",
+      "sourceAsset": "golem-b1.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/minion-geodo-cristal-azul-04.png",
+      "sourceSha256": "4169c65cddc2847d70d77c3db3b3f1c1fc18c647077082767ff3d5ec297fd44a",
+      "normalFile": "atlas/geode-death-shared-normal.png",
+      "softFile": "atlas/geode-death-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.34,
+      "loop": false,
+      "role": "death-fragments",
+      "layer": "debrisBelowWarnings",
+      "colors": [
+        "#8b97b6",
+        "#353658",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "geode-death-b2",
+      "kind": "geode-death",
+      "family": "golem",
+      "biome": 1,
+      "label": "Fragmentos do geodo",
+      "sourceAsset": "golem-b2.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/minion-geodo-verde-folhas-01.png",
+      "sourceSha256": "b299f1e07b60bfc1e7c522dcf8bc1a0ed75a8e2079bd373e2e4de74eac49f669",
+      "normalFile": "atlas/geode-death-shared-normal.png",
+      "softFile": "atlas/geode-death-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.34,
+      "loop": false,
+      "role": "death-fragments",
+      "layer": "debrisBelowWarnings",
+      "colors": [
+        "#8b97b6",
+        "#353658",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "geode-death-b3",
+      "kind": "geode-death",
+      "family": "golem",
+      "biome": 2,
+      "label": "Fragmentos do geodo",
+      "sourceAsset": "golem-b3.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/minion-geodo-osso-chifre-01.png",
+      "sourceSha256": "35bd0a2f8f515991085c8fe7bfc8216ecf4494175a6a5507c06d253e3316d2d7",
+      "normalFile": "atlas/geode-death-shared-normal.png",
+      "softFile": "atlas/geode-death-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.34,
+      "loop": false,
+      "role": "death-fragments",
+      "layer": "debrisBelowWarnings",
+      "colors": [
+        "#8b97b6",
+        "#353658",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "geode-death-b4",
+      "kind": "geode-death",
+      "family": "golem",
+      "biome": 3,
+      "label": "Fragmentos do geodo",
+      "sourceAsset": "golem-b4.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/minion-geodo-fogo-chama-01.png",
+      "sourceSha256": "75f61b9d517ee44c3f17226351bd7b3aeff8e699bbbe99f516586f31b1a88401",
+      "normalFile": "atlas/geode-death-shared-normal.png",
+      "softFile": "atlas/geode-death-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.34,
+      "loop": false,
+      "role": "death-fragments",
+      "layer": "debrisBelowWarnings",
+      "colors": [
+        "#8b97b6",
+        "#353658",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "geode-death-b5",
+      "kind": "geode-death",
+      "family": "golem",
+      "biome": 4,
+      "label": "Fragmentos do geodo",
+      "sourceAsset": "golem-b5.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/minion-geodo-vermelho-cogumelo-01.png",
+      "sourceSha256": "562101c0240046306e84eb2493f7b1e018f285dbebae2d2f3e1be6fb2fbd87d6",
+      "normalFile": "atlas/geode-death-shared-normal.png",
+      "softFile": "atlas/geode-death-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.34,
+      "loop": false,
+      "role": "death-fragments",
+      "layer": "debrisBelowWarnings",
+      "colors": [
+        "#8b97b6",
+        "#353658",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "geode-death-b6",
+      "kind": "geode-death",
+      "family": "golem",
+      "biome": 5,
+      "label": "Fragmentos do geodo",
+      "sourceAsset": "golem-b6.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/minion-geodo-amarelo-coroa-01.png",
+      "sourceSha256": "730df3ceb416b04e7264c03296dea4e3988c08ee6339780f99760d33ea60eeb4",
+      "normalFile": "atlas/geode-death-shared-normal.png",
+      "softFile": "atlas/geode-death-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.34,
+      "loop": false,
+      "role": "death-fragments",
+      "layer": "debrisBelowWarnings",
+      "colors": [
+        "#8b97b6",
+        "#353658",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "geode-death-b7",
+      "kind": "geode-death",
+      "family": "golem",
+      "biome": 6,
+      "label": "Fragmentos do geodo",
+      "sourceAsset": "golem-b7.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/minion-geodo-laranja-cenoura-01.png",
+      "sourceSha256": "fa16b574789edf82cff0c3acf87a16bf55cd22c7c4596afc2eff0cc5569cae73",
+      "normalFile": "atlas/geode-death-shared-normal.png",
+      "softFile": "atlas/geode-death-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 64,
+      "clipSeconds": 0.34,
+      "loop": false,
+      "role": "death-fragments",
+      "layer": "debrisBelowWarnings",
+      "colors": [
+        "#8b97b6",
+        "#353658",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "geode-contact-b1",
+      "kind": "geode-contact",
+      "family": "golem",
+      "biome": 0,
+      "label": "Contato frontal do geodo",
+      "sourceAsset": "golem-b1.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/minion-geodo-cristal-azul-04.png",
+      "sourceSha256": "4169c65cddc2847d70d77c3db3b3f1c1fc18c647077082767ff3d5ec297fd44a",
+      "normalFile": "atlas/geode-contact-shared-normal.png",
+      "softFile": "atlas/geode-contact-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 40,
+      "clipSeconds": 0.16,
+      "loop": false,
+      "role": "attack-contact",
+      "layer": "contactBelowWarnings",
+      "colors": [
+        "#8b97b6",
+        "#353658",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "geode-contact-b2",
+      "kind": "geode-contact",
+      "family": "golem",
+      "biome": 1,
+      "label": "Contato frontal do geodo",
+      "sourceAsset": "golem-b2.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/minion-geodo-verde-folhas-01.png",
+      "sourceSha256": "b299f1e07b60bfc1e7c522dcf8bc1a0ed75a8e2079bd373e2e4de74eac49f669",
+      "normalFile": "atlas/geode-contact-shared-normal.png",
+      "softFile": "atlas/geode-contact-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 40,
+      "clipSeconds": 0.16,
+      "loop": false,
+      "role": "attack-contact",
+      "layer": "contactBelowWarnings",
+      "colors": [
+        "#8b97b6",
+        "#353658",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "geode-contact-b3",
+      "kind": "geode-contact",
+      "family": "golem",
+      "biome": 2,
+      "label": "Contato frontal do geodo",
+      "sourceAsset": "golem-b3.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/minion-geodo-osso-chifre-01.png",
+      "sourceSha256": "35bd0a2f8f515991085c8fe7bfc8216ecf4494175a6a5507c06d253e3316d2d7",
+      "normalFile": "atlas/geode-contact-shared-normal.png",
+      "softFile": "atlas/geode-contact-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 40,
+      "clipSeconds": 0.16,
+      "loop": false,
+      "role": "attack-contact",
+      "layer": "contactBelowWarnings",
+      "colors": [
+        "#8b97b6",
+        "#353658",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "geode-contact-b4",
+      "kind": "geode-contact",
+      "family": "golem",
+      "biome": 3,
+      "label": "Contato frontal do geodo",
+      "sourceAsset": "golem-b4.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/minion-geodo-fogo-chama-01.png",
+      "sourceSha256": "75f61b9d517ee44c3f17226351bd7b3aeff8e699bbbe99f516586f31b1a88401",
+      "normalFile": "atlas/geode-contact-shared-normal.png",
+      "softFile": "atlas/geode-contact-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 40,
+      "clipSeconds": 0.16,
+      "loop": false,
+      "role": "attack-contact",
+      "layer": "contactBelowWarnings",
+      "colors": [
+        "#8b97b6",
+        "#353658",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "geode-contact-b5",
+      "kind": "geode-contact",
+      "family": "golem",
+      "biome": 4,
+      "label": "Contato frontal do geodo",
+      "sourceAsset": "golem-b5.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/minion-geodo-vermelho-cogumelo-01.png",
+      "sourceSha256": "562101c0240046306e84eb2493f7b1e018f285dbebae2d2f3e1be6fb2fbd87d6",
+      "normalFile": "atlas/geode-contact-shared-normal.png",
+      "softFile": "atlas/geode-contact-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 40,
+      "clipSeconds": 0.16,
+      "loop": false,
+      "role": "attack-contact",
+      "layer": "contactBelowWarnings",
+      "colors": [
+        "#8b97b6",
+        "#353658",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "geode-contact-b6",
+      "kind": "geode-contact",
+      "family": "golem",
+      "biome": 5,
+      "label": "Contato frontal do geodo",
+      "sourceAsset": "golem-b6.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/minion-geodo-amarelo-coroa-01.png",
+      "sourceSha256": "730df3ceb416b04e7264c03296dea4e3988c08ee6339780f99760d33ea60eeb4",
+      "normalFile": "atlas/geode-contact-shared-normal.png",
+      "softFile": "atlas/geode-contact-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 40,
+      "clipSeconds": 0.16,
+      "loop": false,
+      "role": "attack-contact",
+      "layer": "contactBelowWarnings",
+      "colors": [
+        "#8b97b6",
+        "#353658",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    },
+    {
+      "id": "geode-contact-b7",
+      "kind": "geode-contact",
+      "family": "golem",
+      "biome": 6,
+      "label": "Contato frontal do geodo",
+      "sourceAsset": "golem-b7.png",
+      "sourceOriginal": "E:/assets GemVenture/output/imagegen/minion-geodo-laranja-cenoura-01.png",
+      "sourceSha256": "fa16b574789edf82cff0c3acf87a16bf55cd22c7c4596afc2eff0cc5569cae73",
+      "normalFile": "atlas/geode-contact-shared-normal.png",
+      "softFile": "atlas/geode-contact-shared-soft.png",
+      "frameSize": 96,
+      "columns": 4,
+      "rows": 3,
+      "frames": 12,
+      "anchor": {
+        "x": 48,
+        "y": 68
+      },
+      "worldSize": 40,
+      "clipSeconds": 0.16,
+      "loop": false,
+      "role": "attack-contact",
+      "layer": "contactBelowWarnings",
+      "colors": [
+        "#8b97b6",
+        "#353658",
+        "#180d2f"
+      ],
+      "gameplayAuthority": false,
+      "damage": false,
+      "collision": false,
+      "reward": false,
+      "lifetime": "finite visual only"
+    }
+  ],
+  "deathBundles": [
+    {
+      "id": "slime-death-b1",
+      "family": "slime",
+      "biome": 0,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "slime-splash-b1",
+        "slime-residue-b1"
+      ],
+      "durationSeconds": 0.72,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "bat-death-b1",
+      "family": "bat",
+      "biome": 0,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "bat-poof-b1"
+      ],
+      "durationSeconds": 0.3,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "golem-death-b1",
+      "family": "golem",
+      "biome": 0,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "geode-death-b1"
+      ],
+      "durationSeconds": 0.34,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "slime-death-b2",
+      "family": "slime",
+      "biome": 1,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "slime-splash-b2",
+        "slime-residue-b2"
+      ],
+      "durationSeconds": 0.72,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "bat-death-b2",
+      "family": "bat",
+      "biome": 1,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "bat-poof-b2"
+      ],
+      "durationSeconds": 0.3,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "golem-death-b2",
+      "family": "golem",
+      "biome": 1,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "geode-death-b2"
+      ],
+      "durationSeconds": 0.34,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "slime-death-b3",
+      "family": "slime",
+      "biome": 2,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "slime-splash-b3",
+        "slime-residue-b3"
+      ],
+      "durationSeconds": 0.72,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "bat-death-b3",
+      "family": "bat",
+      "biome": 2,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "bat-poof-b3"
+      ],
+      "durationSeconds": 0.3,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "golem-death-b3",
+      "family": "golem",
+      "biome": 2,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "geode-death-b3"
+      ],
+      "durationSeconds": 0.34,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "slime-death-b4",
+      "family": "slime",
+      "biome": 3,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "slime-splash-b4",
+        "slime-residue-b4"
+      ],
+      "durationSeconds": 0.72,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "bat-death-b4",
+      "family": "bat",
+      "biome": 3,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "bat-poof-b4"
+      ],
+      "durationSeconds": 0.3,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "golem-death-b4",
+      "family": "golem",
+      "biome": 3,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "geode-death-b4"
+      ],
+      "durationSeconds": 0.34,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "slime-death-b5",
+      "family": "slime",
+      "biome": 4,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "slime-splash-b5",
+        "slime-residue-b5"
+      ],
+      "durationSeconds": 0.72,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "bat-death-b5",
+      "family": "bat",
+      "biome": 4,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "bat-poof-b5"
+      ],
+      "durationSeconds": 0.3,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "golem-death-b5",
+      "family": "golem",
+      "biome": 4,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "geode-death-b5"
+      ],
+      "durationSeconds": 0.34,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "slime-death-b6",
+      "family": "slime",
+      "biome": 5,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "slime-splash-b6",
+        "slime-residue-b6"
+      ],
+      "durationSeconds": 0.72,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "bat-death-b6",
+      "family": "bat",
+      "biome": 5,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "bat-poof-b6"
+      ],
+      "durationSeconds": 0.3,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "golem-death-b6",
+      "family": "golem",
+      "biome": 5,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "geode-death-b6"
+      ],
+      "durationSeconds": 0.34,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "slime-death-b7",
+      "family": "slime",
+      "biome": 6,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "slime-splash-b7",
+        "slime-residue-b7"
+      ],
+      "durationSeconds": 0.72,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "bat-death-b7",
+      "family": "bat",
+      "biome": 6,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "bat-poof-b7"
+      ],
+      "durationSeconds": 0.3,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    },
+    {
+      "id": "golem-death-b7",
+      "family": "golem",
+      "biome": 6,
+      "trigger": "one resolved death event",
+      "effectIds": [
+        "geode-death-b7"
+      ],
+      "durationSeconds": 0.34,
+      "deduplication": "owned by caller death event id",
+      "decorative": true
+    }
+  ],
+  "atlases": [
+    {
+      "file": "atlas/slime-splash-b1-normal.png",
+      "kind": "slime-splash",
+      "biome": 0,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "aca1bef325a70211037a59b28fae386aa5041fd2676cad0038e3b92b2ee282f8"
+    },
+    {
+      "file": "atlas/slime-splash-b1-soft.png",
+      "kind": "slime-splash",
+      "biome": 0,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "af5d56119709f9bec16ace7f1aa65d931b5637d21061fc3f5a9ffd20014152be"
+    },
+    {
+      "file": "atlas/slime-splash-b2-normal.png",
+      "kind": "slime-splash",
+      "biome": 1,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "44f3e27b13c3c1e95812eff3e18e4aaf1eddcde17147c467c2396a8f8d91fbac"
+    },
+    {
+      "file": "atlas/slime-splash-b2-soft.png",
+      "kind": "slime-splash",
+      "biome": 1,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "9df53fd885ca4ea6f7c57734c8abdb979cda833e02a665eb60365532e1805b01"
+    },
+    {
+      "file": "atlas/slime-splash-b3-normal.png",
+      "kind": "slime-splash",
+      "biome": 2,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "f73b15d942681e57c05fcb0137753e3bd27d5e41002ded5a28652902501b8e87"
+    },
+    {
+      "file": "atlas/slime-splash-b3-soft.png",
+      "kind": "slime-splash",
+      "biome": 2,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "0657b0f631b2ec44758af3be56cf62184280f3bf0f8e3724e50e261f44e8e7d7"
+    },
+    {
+      "file": "atlas/slime-splash-b4-normal.png",
+      "kind": "slime-splash",
+      "biome": 3,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "7a6141f7ff837887d57e6ef1f3f8472debe7489b13c3ea95b49682f429e6db80"
+    },
+    {
+      "file": "atlas/slime-splash-b4-soft.png",
+      "kind": "slime-splash",
+      "biome": 3,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "860daee5bfdb60cedcca8c1b24c571a2bffed7e94f3ef0d393bd021ace306297"
+    },
+    {
+      "file": "atlas/slime-splash-b5-normal.png",
+      "kind": "slime-splash",
+      "biome": 4,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "1f129937a4e45f5cc03a21c62d522facd9f3337446b1abdd62558b035e0e2c9e"
+    },
+    {
+      "file": "atlas/slime-splash-b5-soft.png",
+      "kind": "slime-splash",
+      "biome": 4,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "860daee5bfdb60cedcca8c1b24c571a2bffed7e94f3ef0d393bd021ace306297"
+    },
+    {
+      "file": "atlas/slime-splash-b6-normal.png",
+      "kind": "slime-splash",
+      "biome": 5,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "4bd9fb1e45dc7d9273f16f0c465cf5e43c3b87513e32af2ef17ab05b805c0e2e"
+    },
+    {
+      "file": "atlas/slime-splash-b6-soft.png",
+      "kind": "slime-splash",
+      "biome": 5,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "2053e072a83cf94da321bde79bff077c38d8dd8af8139b0793aba4c720faec55"
+    },
+    {
+      "file": "atlas/slime-splash-b7-normal.png",
+      "kind": "slime-splash",
+      "biome": 6,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "7992c94f1872892f7f11c3e4c799913223b3aa44c22030959243efea59416c1a"
+    },
+    {
+      "file": "atlas/slime-splash-b7-soft.png",
+      "kind": "slime-splash",
+      "biome": 6,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "c9501ac3fd7850a2d50d14054f2cbd9785bceb10db1244e1d1e0a3e4f00ddfb6"
+    },
+    {
+      "file": "atlas/slime-residue-b1-normal.png",
+      "kind": "slime-residue",
+      "biome": 0,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "4991ba079ddff736ffd669fc8aaceb38f1145b3e61bfca72a2fb5c1df670c3d8"
+    },
+    {
+      "file": "atlas/slime-residue-b1-soft.png",
+      "kind": "slime-residue",
+      "biome": 0,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "4991ba079ddff736ffd669fc8aaceb38f1145b3e61bfca72a2fb5c1df670c3d8"
+    },
+    {
+      "file": "atlas/slime-residue-b2-normal.png",
+      "kind": "slime-residue",
+      "biome": 1,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "b4b69094ddd3f30d3ae886263756601a29265c03eaf3c720856917a288238b1c"
+    },
+    {
+      "file": "atlas/slime-residue-b2-soft.png",
+      "kind": "slime-residue",
+      "biome": 1,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "b4b69094ddd3f30d3ae886263756601a29265c03eaf3c720856917a288238b1c"
+    },
+    {
+      "file": "atlas/slime-residue-b3-normal.png",
+      "kind": "slime-residue",
+      "biome": 2,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "09c7e1e032b3f0fd1fd558a262396c3d4cbda567449261b892b2c4cbb320088f"
+    },
+    {
+      "file": "atlas/slime-residue-b3-soft.png",
+      "kind": "slime-residue",
+      "biome": 2,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "09c7e1e032b3f0fd1fd558a262396c3d4cbda567449261b892b2c4cbb320088f"
+    },
+    {
+      "file": "atlas/slime-residue-b4-normal.png",
+      "kind": "slime-residue",
+      "biome": 3,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "ec9f37e253ba274677928335a991d207714af5277effc0c3e4e0e8281d4a6575"
+    },
+    {
+      "file": "atlas/slime-residue-b4-soft.png",
+      "kind": "slime-residue",
+      "biome": 3,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "ec9f37e253ba274677928335a991d207714af5277effc0c3e4e0e8281d4a6575"
+    },
+    {
+      "file": "atlas/slime-residue-b5-normal.png",
+      "kind": "slime-residue",
+      "biome": 4,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "2b0e3f48e15bc5452b3846855d7c6851b53af3c30258dbed2a2ac3d6684dfa44"
+    },
+    {
+      "file": "atlas/slime-residue-b5-soft.png",
+      "kind": "slime-residue",
+      "biome": 4,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "2b0e3f48e15bc5452b3846855d7c6851b53af3c30258dbed2a2ac3d6684dfa44"
+    },
+    {
+      "file": "atlas/slime-residue-b6-normal.png",
+      "kind": "slime-residue",
+      "biome": 5,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "2880d092be1b5a3f919fa56ef4e7aae73025ee5c8ae6aa95e971c13b96f248b3"
+    },
+    {
+      "file": "atlas/slime-residue-b6-soft.png",
+      "kind": "slime-residue",
+      "biome": 5,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "2880d092be1b5a3f919fa56ef4e7aae73025ee5c8ae6aa95e971c13b96f248b3"
+    },
+    {
+      "file": "atlas/slime-residue-b7-normal.png",
+      "kind": "slime-residue",
+      "biome": 6,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "3e4b5aaae4c2b01d6b4b3d0e39845f2abcad143de5774efdc5bef0c704c598de"
+    },
+    {
+      "file": "atlas/slime-residue-b7-soft.png",
+      "kind": "slime-residue",
+      "biome": 6,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "3e4b5aaae4c2b01d6b4b3d0e39845f2abcad143de5774efdc5bef0c704c598de"
+    },
+    {
+      "file": "atlas/slime-offensive-b1-normal.png",
+      "kind": "slime-offensive",
+      "biome": 0,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "7801c7199fbe6d776d8892dc01414b2e3c03cb990d7cb8777097e574236de6bd"
+    },
+    {
+      "file": "atlas/slime-offensive-b1-soft.png",
+      "kind": "slime-offensive",
+      "biome": 0,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "51f1c45417acce8dec8ebd4feee40bd499c3d979d8779086154383d35427d395"
+    },
+    {
+      "file": "atlas/slime-offensive-b2-normal.png",
+      "kind": "slime-offensive",
+      "biome": 1,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "1a5fa150715c0b1f0aa6ffec1bf1193a6fbcbf575df1464607d58171a65428db"
+    },
+    {
+      "file": "atlas/slime-offensive-b2-soft.png",
+      "kind": "slime-offensive",
+      "biome": 1,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "611c25191b435fa3f9432673afee0017d3251b2c137605c453e43a2f97310c17"
+    },
+    {
+      "file": "atlas/slime-offensive-b3-normal.png",
+      "kind": "slime-offensive",
+      "biome": 2,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "1d69454c19875caf0807b8b53b3b7331c549bcc3bb526152828c71eb3ea1db03"
+    },
+    {
+      "file": "atlas/slime-offensive-b3-soft.png",
+      "kind": "slime-offensive",
+      "biome": 2,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "6fc1aa39a8ae6b31d21995f711fcb54b463da41b468799837ec26b613a4afd15"
+    },
+    {
+      "file": "atlas/slime-offensive-b4-normal.png",
+      "kind": "slime-offensive",
+      "biome": 3,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "f4a202d7a7e691c6ce7ce8a032f2536caa32806757095663b8bb442a22d1c678"
+    },
+    {
+      "file": "atlas/slime-offensive-b4-soft.png",
+      "kind": "slime-offensive",
+      "biome": 3,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "ee94fdc76704b332f62d0677d91796a3e97c07356bff4edaabb0d07b5c2978c5"
+    },
+    {
+      "file": "atlas/slime-offensive-b5-normal.png",
+      "kind": "slime-offensive",
+      "biome": 4,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "febde1eae2f429e528212c2e016013a1338a4cb7ff88bd02f05d17c94b9980af"
+    },
+    {
+      "file": "atlas/slime-offensive-b5-soft.png",
+      "kind": "slime-offensive",
+      "biome": 4,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "d48352e0d3143e45109031b62084de685a6a1d3402e9f281691676249e864b81"
+    },
+    {
+      "file": "atlas/slime-offensive-b6-normal.png",
+      "kind": "slime-offensive",
+      "biome": 5,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "27d2410e97a74fabc87d04102c73c3442109f8c99da7176092776c45244f6c03"
+    },
+    {
+      "file": "atlas/slime-offensive-b6-soft.png",
+      "kind": "slime-offensive",
+      "biome": 5,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "1e1967129e600df44881c6debf290659ed5d412c323710b5071287e77cb0a1ea"
+    },
+    {
+      "file": "atlas/slime-offensive-b7-normal.png",
+      "kind": "slime-offensive",
+      "biome": 6,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "f623daa95e37b1e8de03b19233e76381f1c5e736229823aa65ea646c5794899b"
+    },
+    {
+      "file": "atlas/slime-offensive-b7-soft.png",
+      "kind": "slime-offensive",
+      "biome": 6,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "4c7bfddb6af4e7095bf568dae6cb4413c20540d309c40d0bd13b8c8c7d6b11f9"
+    },
+    {
+      "file": "atlas/bat-poof-shared-normal.png",
+      "kind": "bat-poof",
+      "biome": null,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "50276a6b6e2180597244f9f0564788592bbd83cd8fc71161521d6e10dbfe7e68"
+    },
+    {
+      "file": "atlas/bat-poof-shared-soft.png",
+      "kind": "bat-poof",
+      "biome": null,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "577b4cce438ee52161de6fed6a13a7a411eee2b0515de600063d2c5c240fd112"
+    },
+    {
+      "file": "atlas/geode-death-shared-normal.png",
+      "kind": "geode-death",
+      "biome": null,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "40d845e6e3f307462bde674a51154bdc1e35b128505fa324acbf6dbf6110465d"
+    },
+    {
+      "file": "atlas/geode-death-shared-soft.png",
+      "kind": "geode-death",
+      "biome": null,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "44e40db628e9468b3274e28532eb6127bb9c872f1dec11fbdf43eebd8234bada"
+    },
+    {
+      "file": "atlas/geode-contact-shared-normal.png",
+      "kind": "geode-contact",
+      "biome": null,
+      "soft": false,
+      "width": 384,
+      "height": 288,
+      "sha256": "9302a7c10ca210ca54348c4500c69f1a41a8ae078160fe4b5cbc8b6da83d42c6"
+    },
+    {
+      "file": "atlas/geode-contact-shared-soft.png",
+      "kind": "geode-contact",
+      "biome": null,
+      "soft": true,
+      "width": 384,
+      "height": 288,
+      "sha256": "29926d6a65b45b0bcb2ca7e5c4f7ed50aa1fdbe45b9b0a0927a0579d8dc039ae"
+    }
+  ],
+  "note": "Offensive visual is attached only to caller-owned damaging puddles; decorative death residue has no damage/collision. No callbacks or loot text. Bosses excluded.",
+  "player": "minion-effects-player.js",
+  "preview": "review.html",
+  "integration": "integration.txt",
+  "validation": "validation.json",
+  "referenceBodies": "reference/approved-body-contact-sheet.png",
+  "visualProof": [
+    "browser-b1-normal.png",
+    "browser-b7-soft.png"
+  ],
+  "transientBudget": {
+    "normal": 48,
+    "soft": 16,
+    "overflow": "discard oldest decorative residue first; never remove authoritative hazard markers"
+  }
+}

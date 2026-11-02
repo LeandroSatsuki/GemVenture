@@ -1,0 +1,9 @@
+/* Candidate accents only: native card geometry, fonts, artwork and input bounds remain intact. */
+#gv-expedition-cards-v2[data-card-feel] .offer,#gv-expedition-abyss-v1[data-card-feel] .offer{position:relative;--feel-rim:color-mix(in srgb,var(--card) 72%,#edf4ff 28%);border-color:var(--feel-rim);box-shadow:inset 0 0 0 1px #020816,0 0 11px -7px var(--card)}
+#gv-expedition-cards-v2[data-card-feel] .offer-meta>span:first-child,#gv-expedition-abyss-v1[data-card-feel] .offer .role{color:var(--feel-rim)}
+#gv-expedition-cards-v2[data-card-feel] .offer>*,#gv-expedition-abyss-v1[data-card-feel] .offer>*{transition:translate 180ms cubic-bezier(.2,.9,.2,1)}
+#gv-expedition-cards-v2[data-card-feel] .offer[data-feel-selected=true]{outline:2px solid var(--feel-rim);outline-offset:2px;border-color:var(--feel-rim);box-shadow:inset 0 0 0 1px #020816,0 0 13px -6px var(--card)}
+#gv-expedition-cards-v2[data-card-feel] .offer[data-feel-selected=true]>:not([data-gv-button-overlay]){translate:0 -4px}
+#gv-expedition-cards-v2[data-card-feel] .chosen[data-feel-role]{box-shadow:inset 0 0 0 1px var(--feel-role-color),0 0 15px -8px var(--feel-role-color)}
+#gv-expedition-cards-v2[data-soft=true][data-card-feel] .offer>*,#gv-expedition-abyss-v1[data-soft=true][data-card-feel] .offer>*{transition:none;translate:none!important}
+@media(prefers-reduced-motion:reduce){#gv-expedition-cards-v2[data-card-feel] .offer>*,#gv-expedition-abyss-v1[data-card-feel] .offer>*{transition:none;translate:none!important}}

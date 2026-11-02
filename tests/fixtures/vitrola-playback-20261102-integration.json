@@ -1,0 +1,21 @@
+{
+  "authorization": "Current direct user request: select owned new music/edition at the vitrola and use it during actual gameplay, replacing the current expedition track. Apply this behavior to the official local game.",
+  "scope": "Functional music selection, ownership validation and shared recorded beat clock; existing artwork, palette, prices and difficulty decisions unchanged",
+  "sourceReceipt": "E:\\Genventure\\coordination\\GV-059-vitrola-playback-r1\\APPLICATION-RECEIPT.json",
+  "humanVisualApproval": false,
+  "files": {
+    "album-collection.js": "3e43dbda24c89127f7c308999c610adc2bd92a8da4d145f4270dc80b4dc7b76d",
+    "cave-player-presentation.js": "f92842bcb16211cd7456ebc109e7215c4d422e77be80cc01b2aaa4d5189d326e",
+    "core.js": "3a90e043ccec984b0f100569c86178156c49aaabaff9b9206342159cfee38f6d",
+    "expedition-hud-view.js": "d24858a394109c80247737ecdcbd59aea121f80438de9345765cb6741fb0fca9",
+    "hud-model.js": "d94fff482c2431db4b99887c6c298867892dd21d44c32c10874c878e7b6d3dee",
+    "matriarch-effects.js": "55b6c09be50d8e7d45ad12f1bd564b5a55ec1f2ce27c623ba3ed25f991834525",
+    "matriarch-egg.js": "d9172e1ce457dc7fee298dade3079f552c564bde8b3dbba0569428fcd2de942a",
+    "record-catalog.js": "74e8acfc9e7e75dc4b4e920623ab55b8a1cc2f55460791e37b33c7ef11b39a9d",
+    "records.js": "e459cb4c032e271c996cbc75187f757ac623dcfaf9deb9c45546c9da4667beaf",
+    "run.js": "1f936e333251a9bf6bb93539ab8277f62995c435fad095e7981bd14b23bee329",
+    "tempo-cue.js": "ca6b95cd288e123ea42dc9fa9426974afa74dd9200e17c51bc16774244ba56c5",
+    "unified-records-ui.js": "3e5b1ec17bee14877c0099475c003d1ccf66bbdc09e0f0fa4ec48731081606fc",
+    "world.js": "984593a81f9fbd153fdb82c2b7cae24730c29b877091c6c9d0cc91f0373174c6"
+  }
+}

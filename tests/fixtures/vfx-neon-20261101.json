@@ -1,0 +1,19 @@
+{
+  "id": "GV-043/CHARACTER-NEON/R1",
+  "authorization": "Current user asks to inspect shader/atmosphere chat and apply neon emission to character effects and fragments on every break. Human approved and authorized official neon/treasure application on 2026-11-02.",
+  "scope": "Neon from existing character VFX and mining shards, preserving native shader masks, current wall pyres, scenery emission and chest UI v3. No gameplay changes.",
+  "files": {
+    "effects.js": "9d5b9878182c35d02cae7bf096aefc6beb39f8e231089cc9644c681341000946",
+    "geode-ambience.js": "fa3f0c60c2f3043eb412132108a569efe237af17c4edfc64a9589777f263ec07",
+    "geode-particle-light.js": "dbbbd7588792367d6a5e8c001f175e11b849c026f970de4543b5e3715942210c",
+    "mining-vfx.js": "8b7417c41e356374a992b9b5fd9c65550ca9f09a9d1b25bf98566a305d7ef399",
+    "player-heal-vfx.js": "2d00f88ae444e049cb9951d60f0ac35fae91675efe30fc6f76dae73e853821d4",
+    "player-shield-vfx.js": "9a03b8baa45852f11dd3c153688be84e94b882bc937404e070de5a52db23baec",
+    "player-titan-vfx.js": "52888189a745f49b4cf41322ff0317c092a51f46a8c64fab0d305197f2ba5dba",
+    "power-vfx.js": "b0c8458636bc3d1b3d5a86f29f5056c889b85505933a3850cc895f0621edebf3",
+    "vfx-assets.js": "1b559994d59ccde01a538e3f4f43ebbd3db8f967d7f3ff5a2e1a985ce29b5f2e",
+    "vfx-emission.js": "3d57f272ed4863680cf72addf9307d9ecd1e38e83b16dd17324cf43c23082db9",
+    "chest-treasure-vfx.js": "e5d78e4c2a7889f0ed8b9f8757f80729c68747ef5d0ae8aa0cbc91c684bd1002",
+    "approved-scenery-emission.js": "db05819a98a0e8b3247d9a3b8552a2f28fb9307c1747a9b6a0552f00484df14e"
+  }
+}

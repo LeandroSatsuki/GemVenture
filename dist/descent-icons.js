@@ -1,0 +1,1 @@
+export const DESCENT_ICONS=Object.freeze({"coin":"assets/refuge-night-v3/coin.png","star":"assets/refuge-night-v3/star.png","points":null,"material-0":"assets/refuge-night-v3/gem-0.png","material-1":"assets/refuge-night-v3/gem-1.png","material-2":"assets/refuge-night-v3/gem-2.png","material-3":"assets/refuge-night-v3/gem-3.png"});

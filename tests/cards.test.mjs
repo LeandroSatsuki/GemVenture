@@ -1,9 +1,11 @@
+import {rectangularRoom} from './helpers/rectangular-room.mjs';
+// Legacy encounter fixtures preserve in-progress save compatibility; see geode-crown-official.test.mjs for fresh Coroa Fraturada arenas.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as E from '../dist/core.js';
 import {CARDS,cardOffer,cardValues,cardLimit,cardDetail} from '../dist/cards.js';
 import {createLoot,returnRewards} from '../dist/rewards.js';
-function arena(cards={}){const s=E.createState(71);E.startRun(s);Object.assign(s.run,{cards,health:40});Object.assign(s.run.room,{explored:null,visible:null,floorMask:null,layout:null,wave:null,terrain:Array((s.run.room.cols||21)*(s.run.room.rows||15)).fill(0),rocks:[],enemies:[],nodes:[],quota:999});return s;}
+function arena(cards={}){const s=E.createState(71);E.startRun(s);rectangularRoom(s);Object.assign(s.run,{cards,health:40});Object.assign(s.run.room,{explored:null,visible:null,floorMask:null,layout:null,wave:null,terrain:Array((s.run.room.cols||21)*(s.run.room.rows||15)).fill(0),rocks:[],enemies:[],nodes:[],quota:999});return s;}
 function target(s,type='crystal',kind=0,x=4,y=11,hp=100){const n={id:s.run.room.nextId++,type,kind,x,y,hp,maxHp:hp,value:10,born:0,stunUntil:-1,windup:null};s.run.room[type==='rock'?'rocks':type==='enemy'?'enemies':'nodes'].push(n);return n;}
 const hit=(s,n,beat)=>E.act(s,{type:'hit',id:n.id},beat);
 const triggered=(s,id)=>s.run.events.some(e=>e.type==='proc'&&e.id===id);
@@ -19,7 +21,7 @@ test('late healing duplicates grow slowly, preserve the first two copies and pre
  const wind=arena({secondwind:16});wind.run.health=20;hit(wind,target(wind,'enemy',0,3,11,1000),0);assert.equal(wind.run.health,27.9);
 });
 test('twenty-one distinct cards yield reproducible three-card offers',()=>{assert.equal(CARDS.length,21);assert.equal(new Set(CARDS.map(c=>c.id)).size,21);for(let i=0;i<80;i++){const a=cardOffer(E.rng(i));assert.deepEqual(a,cardOffer(E.rng(i)));assert.equal(new Set(a).size,3);assert.ok(a.every(id=>CARDS.some(c=>c.id===id)));}});
-test('floor reward is chosen once, duplicates stack, saves retain cards, extraction resets them',()=>{const s=arena();assert.equal(E.chooseCard(s,'muscle'),false);for(let floor=0;floor<2;floor++){s.run.room.minBeats=0;s.run.room.charge=999;for(let b=0;b<s.run.room.goal;b++)E.act(s,{type:'move',x:b%2?3:2,y:11},b);s.run.cardOffer=['muscle','ice','ember'];assert.equal(E.descend(s),false);assert.equal(E.chooseCard(s,'greed'),false);assert.ok(E.chooseCard(s,'muscle'));assert.equal(E.chooseCard(s,'ice'),false);assert.equal(E.restoreState(JSON.stringify(s)).run.cards.muscle,floor+1);assert.ok(E.descend(s));}assert.equal(E.power(s),3);E.finishRun(s);assert.equal(s.run,null);E.startRun(s);assert.deepEqual(s.run.cards,{});});
+test('floor reward is chosen once, duplicates stack, saves retain cards, extraction resets them',()=>{const s=arena();assert.equal(E.chooseCard(s,'muscle'),false);for(let floor=0;floor<2;floor++){s.run.room.minBeats=0;s.run.room.charge=999;for(let b=0;b<s.run.room.goal;b++)E.act(s,{type:'move',x:b%2?3:2,y:11},b);s.run.cardOffer=['muscle','ice','ember'];assert.equal(E.descend(s),false);assert.equal(E.chooseCard(s,'greed'),false);assert.ok(E.chooseCard(s,'muscle'));assert.equal(E.chooseCard(s,'ice'),false);assert.equal(E.restoreState(JSON.stringify(s)).run.cards.muscle,floor+1);assert.ok(E.descend(s));rectangularRoom(s);Object.assign(s.run.room,{explored:null,visible:null,wave:null,quota:999});}assert.equal(E.power(s),3);E.finishRun(s);assert.equal(s.run,null);E.startRun(s);assert.deepEqual(s.run.cards,{});});
 test('all crystal and rock kinds withstand multiple ordinary hits even at high power',()=>{for(const [type,defs]of [['crystal',E.CRYSTALS],['rock',E.ROCKS]])for(let kind=0;kind<defs.length;kind++){const s=arena();s.level=12;const n=target(s,type,kind,4,11,defs[kind].hp);let hits=0;while(n.hp>0&&hits<30)hit(s,n,hits++);assert.ok(hits>=defs[kind].minHits,type+kind);const bag=s.run.bag;hit(s,n,hits);assert.equal(s.run.bag,bag);if(type==='rock')assert.ok(E.walkable(s.run.room,n.x,n.y));}});
 test('rocks block routes until mined; dash animation gets each legal step',()=>{const s=arena();const rock=target(s,'rock',2,4,11,18),n=target(s,'crystal',0,7,11);assert.equal(E.walkable(s.run.room,4,11),false);hit(s,n,0);const route=s.run.events.find(e=>e.type==='dash');let from=route.from;for(const step of route.path){assert.equal(E.distance(from,step),1);assert.ok(E.walkable(s.run.room,step.x,step.y));from=step;}assert.deepEqual(from,route.to);s.level=12;for(let i=1;i<15&&rock.hp>0;i++)hit(s,rock,i);assert.equal(rock.hp,0);assert.ok(E.walkable(s.run.room,4,11));assert.equal(s.run.loot.rocks.count,1);});
 test('passive strength, timing and skates stack with explicit caps',()=>{const s=arena({muscle:3,elastic:10,skates:10});assert.equal(E.power(s),4);assert.equal(E.windowMs(s),189);E.act(s,{type:'dodge',dx:1,dy:0},0);assert.equal(s.run.player.x,10);E.act(s,{type:'move',x:18,y:11},1);assert.equal(s.run.player.x,18);});
@@ -51,7 +53,7 @@ test('last breath heals only enemy hits below forty percent health, never moveme
 });
 test('armor reduces enemy damage, revival copies are consumed once each, death removes cards',()=>{const s=arena({shell:2,revival:2});const n=target(s,'enemy');n.windup={x:3,y:11,beat:4,radius:0};s.run.acted=4;E.tick(s,4);assert.ok(Math.abs(s.run.health-34.512)<.001);assert.ok(triggered(s,'shell'));for(let b=5;b<=7;b++){s.run.rhythm=1;E.act(s,{type:'move',x:3,y:11},b+.45);if(b<7){assert.equal(s.run.rhythm,30);E.resumeRecovery(s);}}assert.equal(s.run,null);assert.equal(s.deaths,1);});
 test('gardener card speeds crystal generation without exceeding one per two beats',()=>{const s=arena({sprouts:9});E.tick(s,1);assert.equal(s.run.room.nodes.length,0);E.tick(s,2);assert.equal(s.run.room.nodes.length,1);E.tick(s,3);assert.equal(s.run.room.nodes.length,1);});
-test('return groups preserve the exact saved gem sum and essence separately, including old saves',()=>{const loot=createLoot();loot.crystals=[{count:2,gems:11},{count:2,gems:33},{count:2,gems:71},{count:1,gems:7}];loot.rocks={count:3,gems:13};loot.enemies={count:2,gems:8};loot.essence=3;for(const kept of [0,71,143]){const groups=returnRewards(loot,143,kept);assert.equal(groups.filter(g=>g.destination==='bank').reduce((sum,g)=>sum+g.value,0),kept);assert.equal(groups.find(g=>g.destination==='essence').value,3);}assert.equal(returnRewards(null,31,15)[0].value,15);});
+test('return groups preserve the exact saved gem sum without obsolete currency, including old saves',()=>{const loot=createLoot();loot.crystals=[{count:2,gems:11},{count:2,gems:33},{count:2,gems:71},{count:1,gems:7}];loot.rocks={count:3,gems:13};loot.enemies={count:2,gems:8};loot.essence=3;for(const kept of [0,71,143]){const groups=returnRewards(loot,143,kept);assert.equal(groups.filter(g=>g.destination==='bank').reduce((sum,g)=>sum+g.value,0),kept);assert.equal(groups.some(g=>g.destination==='essence'),false);}assert.equal(returnRewards(null,31,15)[0].value,15);});
 test('offers always include survival and offense and exclude capped upgrades, including skill synergy',()=>{
  const s=arena({lucky:3,shell:4,elastic:5,skates:3,sprouts:2,bombgift:3});s.equipped=['dash','seed'];s.skillRanks={dash:3};
  for(let i=0;i<100;i++){const offer=cardOffer(E.rng(i),s.run,s);assert.equal(offer.length,3);assert.equal(new Set(offer).size,3);
@@ -59,11 +61,12 @@ test('offers always include survival and offense and exclude capped upgrades, in
  assert.ok(cards.every(c=>(s.run.cards[c.id]||0)<cardLimit(c,s)));}
 });
 test('ice weakens boss attacks without canceling telegraphs; expired ice has no effect',()=>{
- const s=arena({ice:1,shell:1});s.run.floor=5;E.generateRoom(s);const r=s.run,b=r.room.enemies[0];r.player={x:9,y:6};
+ const s=arena({ice:1,shell:1});s.run.floor=5;E.generateRoom(s);const r=s.run,b=r.room.enemies[0];delete b.crown;b.windup=null;b.recoverUntil=3;r.player={x:9,y:6};
  let beat=0;while(!b.chill&&beat<40){hit(s,b,beat++);}assert.ok(b.chill);assert.equal(b.stunUntil,-1);
- const attackBeat=Math.max(4,beat);b.chill.until=attackBeat;b.windup={x:9,y:6,radius:0,beat:attackBeat,damage:40};r.health=100;r.acted=attackBeat;E.tick(s,attackBeat);
+ const attackBeat=Math.max(4,beat);b.chill.until=attackBeat;b.windup={...r.player,radius:0,beat:attackBeat,damage:40};r.health=100;r.acted=attackBeat;E.tick(s,attackBeat);
  assert.equal(r.health,74.5);assert.ok(b.exposedUntil>attackBeat);
- b.windup={x:9,y:6,radius:0,beat:attackBeat+1,damage:40};r.acted=attackBeat+1;E.tick(s,attackBeat+1);assert.equal(r.health,40.5);
+ // Geode now pushes the player; target the new position to test expired ice.
+ b.windup={...r.player,radius:0,beat:attackBeat+1,damage:40};r.acted=attackBeat+1;E.tick(s,attackBeat+1);assert.equal(r.health,40.5);
 });
 test('damaging procs scale with pickaxe strength and never recurse or duplicate a dead target reward',()=>{
  const a=cardValues('popcorn',1,1),b=cardValues('popcorn',1,12);assert.ok(b.damage>a.damage);

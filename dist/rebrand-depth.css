@@ -1,0 +1,6 @@
+/* M3: existing depth captions only; cabin, portrait, stops, scale and transitions stay owned. */
+body.immersive-run #depthLift{font-family:var(--r2-body,'GV R2 Body','Trebuchet MS',sans-serif);font-weight:800;font-variant-numeric:tabular-nums;color:var(--r2-text,#fff)}
+body.immersive-run #depthLift #liftCurrent{font-family:var(--r2-display,'GV R2 Display','Arial Rounded MT Bold',sans-serif);font-weight:600;font-variant-numeric:tabular-nums;color:var(--r2-action,#ece910);white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #depthLift #liftCode{font-family:var(--r2-body,'GV R2 Body','Trebuchet MS',sans-serif);font-weight:900;font-variant-numeric:tabular-nums;color:var(--r2-muted,#c5cddb);white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #depthLift #liftBiome{font-family:var(--r2-body,'GV R2 Body','Trebuchet MS',sans-serif);font-weight:800;color:var(--r2-text,#fff);white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #depthLift #liftBoss{font-family:var(--r2-body,'GV R2 Body','Trebuchet MS',sans-serif);font-weight:900;color:var(--r2-select,#5ee9e9);white-space:normal;overflow-wrap:anywhere}

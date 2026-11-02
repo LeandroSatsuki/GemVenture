@@ -1,3 +1,4 @@
+import {chiprockStep} from './music-chiprock.js';
 import {ALL_TRACKS,scoreStep,isBossTrack,trackBeatTime} from './score.js';
 
 // Original compositions. A disc owns its harmony, riff and orchestration;
@@ -56,13 +57,7 @@ export function arrangementStep(record,trackIndex,step,mood={}){
    if(q>=12&&bar%4===3)add('tom',7-(q-12)*2,.1,.07);
    break;
   }
-  case 'chip': {
-   if(step%4===0)add('bass',q===12?-5:-12,b*.42,.13,{color:'chip'});
-   if(step%2===0&&(!calm||step%4===0))add('lead',riff,b*.3,.075,{color:'chip',pan:step%4===0?-.15:.15});
-   if(step%2===1&&!calm)add('lead',[0,3,7,12][step%4]+24,b*.12,.032,{color:'chip'});
-   if(q===15&&bar%2===1)add('tom',24,.07,.04);
-   break;
-  }
+  case 'chip': {events.push(...chiprockStep(record.id,step,{root,beat:b,hot}));break;}
   case 'swing': {
    const delay=step%4===2?1/6:0;
    if(step%4===0)add('bass',[-12,-8,-5,-2][Math.floor(step/4)%4],b*.56,.17,{color:'soft'});
@@ -77,7 +72,8 @@ export function arrangementStep(record,trackIndex,step,mood={}){
    if(hot&&q===0&&bar%2===0)add('sing',24,b*.85,.1,{vowel:'a'});
    break;
   }
-  case 'rock': case 'metal': {
+  case 'rock': {events.push(...chiprockStep(record.id,step,{root,beat:b,hot}));break;}
+  case 'metal': {
    if(step%2===0&&(!calm||step%4===0)){
     add('guitar',riff,b*(q===14?.9:.37),.16*strength,{color:p.family,pan:bar%2?-.18:.18});
     add('bass',riff%12-12,b*.42,.19,{color:'electric'});
@@ -127,13 +123,7 @@ export function arrangementStep(record,trackIndex,step,mood={}){
    if(q===0&&bar%2===0)for(const n of [0,7,12])add('pad',n,b*5,.021,{color:'warm'});
    break;
   }
-  case 'synthwave': {
-   if(step%2===0)add('bass',-12+(step%8===6?12:0),b*.48,.18,{color:'electric'});
-   if(q===0)for(const n of [0,3,7,12])add('pad',n,b*3.5,.028,{color:'warm',pan:n===7?.2:-.2});
-   if(step%2===1&&!calm)add('pluck',riff,b*.45,.07,{color:'bell',pan:q<8?-.25:.25});
-   if(step%4===0)add('lead',[24,22,19,17,15,17,19,22][Math.floor(step/4)%8],b*.75,.07,{color:'warm'});
-   break;
-  }
+  case 'synthwave': {events.push(...chiprockStep(record.id,step,{root,beat:b,hot}));break;}
   default: {
    if(q%4===2)add('bass',-12,b*.45,.19,{color:'sub'});
    if(q===2||q===10)for(const n of [12,15,19])add('keys',n,b*.65,.047,{color:'bright'});

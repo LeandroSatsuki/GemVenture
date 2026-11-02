@@ -1,12 +1,16 @@
+import {paintSoftShadowShape} from './soft-ground-shadow.js';
+import {captureSceneryEmission} from './scenery-emission-bridge.js';
+import {caveFindShapes} from './cave-find-shapes.js';
 import {bossShapes} from './boss-art.js';
 import {creatureShapes} from './creature-art.js';
 import {sceneShapes,softenPolygon} from './scene-art.js';
 import {P,GEM_RAMPS,BIOME_ART} from './palette.js';
 import {PICKAXE_STYLES} from './pickaxe-style.js';
+import {drawApprovedArt} from './approved-art.js';
 
 // The generator owns silhouette, proportions, light direction and materials.
 // Seeds vary large shapes only. No texture noise, gradients or random colors.
-export const ART_TYPES=Object.freeze(['boss','rabbit','crystal','rock','miner','pickaxe','zag','drill','ticket','gardener','hedgehog','slime','bat','golem','tree','bush','molehill','mushroom','fossil','lava','forge','board','shrine','lift','well','gramophone','tent','roulette','crate','lantern','campfire','potion','shield']);
+export const ART_TYPES=Object.freeze(['boss','rabbit','crystal','rock','miner','pickaxe','zag','drill','ticket','gardener','hedgehog','slime','bat','golem','tree','bush','molehill','mushroom','fossil','lava','forge','board','shrine','lift','well','gramophone','tent','roulette','crate','lantern','campfire','potion','shield','cave-chest','cave-mushroom']);
 export const ART_ACCENT_PIVOTS=Object.freeze({well:Object.freeze([50,36]),shrine:Object.freeze([50,35]),tree:Object.freeze([50,58]),forge:Object.freeze([38,88]),zag:Object.freeze([77,80]),gramophone:Object.freeze([75,58]),roulette:Object.freeze([50,45]),hedgehog:Object.freeze([51,94]),gardener:Object.freeze([51,94])});
 export const HEDGEHOG_PART_PIVOTS=Object.freeze({shadow:Object.freeze([50,96]),body:Object.freeze([50,89]),crystals:Object.freeze([50,55]),face:Object.freeze([50,78]),eyes:Object.freeze([50,76]),'paw-left':Object.freeze([25,90]),'paw-right':Object.freeze([77,90])});
 const DRAW_LAYERS=new Set(['base','accent',...Object.keys(HEDGEHOG_PART_PIVOTS)]);
@@ -26,7 +30,7 @@ export function generateAsset(type,{seed=1,variant=0,biome=0}={}){
  const shadow=(rx=32)=>ellipse(50,96,rx,7,P.ink);
  const eyes=(y=65,space=12)=>{rect(50-space-3,y,5,8,P.ink,2);rect(50+space-2,y,5,8,P.ink,2);};
  const crystal=(x,y,w,h,colors)=>{const [base,shade]=colors;path(`M ${x} ${y-h} L ${x-w} ${y-h*.65} L ${x-w*.8} ${y-4} L ${x} ${y+3} L ${x+w*.8} ${y-4} L ${x+w} ${y-h*.65} Z`,base);path(`M ${x} ${y-h} L ${x+w} ${y-h*.65} L ${x+w*.8} ${y-4} L ${x} ${y+3} Z`,shade,false);path(`M ${x-w*.55} ${y-h*.62} L ${x-w*.35} ${y-h*.25}`,P.white,false);};
- const composed=sceneShapes(type,{variant,biome,j});
+ const composed=caveFindShapes(type,{variant,biome,j})||sceneShapes(type,{variant,biome,j});
  if(composed)s.push(...composed);
  else if(type==='boss')s.push(...bossShapes(variant));
  else if(['slime','gardener','hedgehog','bat','golem'].includes(type))s.push(...creatureShapes(type,{seed,variant,biome}));
@@ -82,21 +86,24 @@ export function generateAsset(type,{seed=1,variant=0,biome=0}={}){
   shadow(35);path('M 17 88 L 23 80 L 84 93 L 79 102 Z',P.clay);path('M 19 94 L 77 81 L 82 89 L 25 103 Z',P.wood);
   path(`M 25 83 Q 19 66 34 51 Q 30 65 40 65 Q 60 ${26+j} 53 23 Q 85 56 73 82 Q 69 96 49 97 Q 32 96 25 83 Z`,P.orange);path('M 41 89 Q 31 76 47 59 Q 45 70 52 72 Q 58 64 60 59 Q 70 81 59 91 Q 51 98 41 89 Z',P.yellow,false);
  }
- const asset=Object.freeze({type,seed,variant,biome,visualKey:type+':'+j+':'+variant+':'+biome,width:100,height:110,anchor:Object.freeze({x:50,y:96}),shapes:Object.freeze(s.map(shape=>Object.freeze({...shape,...(shape.type==='path'?{d:softenPolygon(shape.d,type==='boss'?3.5:2.2)}:{}),layer:shape.layer||'base'})))});
+ const asset=Object.freeze({type,seed,variant,biome,visualKey:type+':'+j+':'+variant+':'+biome,width:100,height:110,anchor:Object.freeze({x:50,y:96}),shapes:Object.freeze(s.map(shape=>Object.freeze({...shape,...(shape.type==='path'&&!shape.hardEdges?{d:softenPolygon(shape.d,type==='boss'?3.5:2.2)}:{}),layer:shape.layer||'base'})))});
  if(cache.size>=512)cache.delete(cache.keys().next().value);cache.set(key,asset);return asset;
 }
 function shapePath(s){if(shapePaths.has(s))return shapePaths.get(s);let p;if(s.type==='path'){if(!paths.has(s.d)){if(paths.size>=2048)paths.delete(paths.keys().next().value);paths.set(s.d,new Path2D(s.d));}p=paths.get(s.d);}else{p=new Path2D();if(s.type==='ellipse')p.ellipse(s.cx,s.cy,s.rx,s.ry,0,0,Math.PI*2);else p.roundRect(s.x,s.y,s.width,s.height,s.radius);}shapePaths.set(s,p);return p;}
-function paintAsset(ctx,a,layer='all'){ctx.lineJoin='round';ctx.lineCap='round';ctx.lineWidth=ART_RULES.outline;for(const s of a.shapes){if(layer!=='all'&&s.layer!==layer&&s.part!==layer)continue;const p=shapePath(s);if(s.matrix){ctx.save();ctx.transform(...s.matrix);}ctx.fillStyle=s.fill;ctx.fill(p);if(s.stroke){ctx.strokeStyle=s.stroke;ctx.stroke(p);}if(s.matrix)ctx.restore();}}
-export function drawAsset(ctx,type,x,y,width=32,options={}){const a=generateAsset(type,options),scale=width/a.width,layer=DRAW_LAYERS.has(options.layer)?options.layer:'all';
+function paintAsset(ctx,a,layer='all',omitGroundShadow=false){ctx.lineJoin='round';ctx.lineCap='round';ctx.lineWidth=ART_RULES.outline;for(const s of a.shapes){if(omitGroundShadow&&a.type==='miner'&&s===a.shapes[0])continue;if(layer!=='all'&&s.layer!==layer&&s.part!==layer)continue;const p=shapePath(s);if(s.matrix){ctx.save();ctx.transform(...s.matrix);}const softShadow=paintSoftShadowShape(ctx,s);if(s.fill&&!softShadow){ctx.fillStyle=s.fill;ctx.fill(p);}if(s.stroke&&!softShadow){ctx.lineWidth=s.strokeWidth??ART_RULES.outline;ctx.strokeStyle=s.stroke;ctx.stroke(p);}if(s.matrix)ctx.restore();}}
+export function drawAsset(ctx,type,x,y,width=32,options={}){if(!['rock','crystal'].includes(type)&&!options.procedural&&drawApprovedArt(ctx,type,x,y,width,options))return;const a=generateAsset(type,options),scale=width/a.width,layer=DRAW_LAYERS.has(options.layer)?options.layer:'all',omitGroundShadow=type==='miner'&&options.omitGroundShadow===true;
  // Large art-studio previews retain vector quality; gameplay uses a crisp 2× sprite.
  if((width<=120||((type==='hedgehog'||type==='gardener')&&width<=160))&&typeof document!=='undefined'){
   // Seeds with identical geometry share pixels. Recycle evicted canvases instead
   // of creating hundreds of GPU-backed surfaces every frame in a dense room.
-  const density=width>50?2:1,key=a.visualKey+':'+density+':'+layer;
-  let sprite=sprites.get(key);if(sprite){sprites.delete(key);sprites.set(key,sprite);}else{if(sprites.size>=SPRITE_LIMIT){const oldest=sprites.keys().next().value;sprite=sprites.get(oldest);sprites.delete(oldest);}else sprite=document.createElement('canvas');sprite.width=108*density;sprite.height=118*density;const c=sprite.getContext('2d');c.scale(density,density);c.translate(4,4);paintAsset(c,a,layer);sprites.set(key,sprite);}
-  ctx.drawImage(sprite,x-(a.anchor.x+4)*scale,y-(a.anchor.y+4)*scale,108*scale,118*scale);return;
+  const density=['rock','crystal','lantern','fossil','mushroom','bush','molehill','lava'].includes(type)?2:width>50?2:1,key=a.visualKey+':'+density+':'+layer+(omitGroundShadow?':no-ground-shadow':'');
+  let sprite=sprites.get(key);if(sprite){sprites.delete(key);sprites.set(key,sprite);}else{if(sprites.size>=SPRITE_LIMIT){const oldest=sprites.keys().next().value;sprite=sprites.get(oldest);sprites.delete(oldest);}else sprite=document.createElement('canvas');sprite.width=108*density;sprite.height=118*density;const c=sprite.getContext('2d');c.scale(density,density);c.translate(4,4);paintAsset(c,a,layer,omitGroundShadow);sprites.set(key,sprite);}
+  ctx.drawImage(sprite,x-(a.anchor.x+4)*scale,y-(a.anchor.y+4)*scale,108*scale,118*scale);if(type==='mushroom'||type==='cave-mushroom')captureSceneryEmission(ctx,'mushroom',{a,type,x,y,width,options});return;
  }
- ctx.save();ctx.translate(x-a.anchor.x*scale,y-a.anchor.y*scale);ctx.scale(scale,scale);paintAsset(ctx,a,layer);ctx.restore();
+ ctx.save();ctx.translate(x-a.anchor.x*scale,y-a.anchor.y*scale);ctx.scale(scale,scale);paintAsset(ctx,a,layer,omitGroundShadow);ctx.restore();if(type==='mushroom'||type==='cave-mushroom')captureSceneryEmission(ctx,'mushroom',{a,type,x,y,width,options});
 }
-export function assetSvgBody(a){return a.shapes.map(s=>{const style=`${s.matrix?'transform="matrix('+s.matrix.join(' ')+')" ':''}fill="${s.fill}" stroke="${s.stroke||'none'}" stroke-width="${ART_RULES.outline}" stroke-linejoin="round" stroke-linecap="round"`;if(s.type==='path')return `<path d="${s.d}" ${style}/>`;if(s.type==='ellipse')return `<ellipse cx="${s.cx}" cy="${s.cy}" rx="${s.rx}" ry="${s.ry}" ${style}/>`;return `<rect x="${s.x}" y="${s.y}" width="${s.width}" height="${s.height}" rx="${s.radius}" ${style}/>`;}).join('');}
+export function assetSvgBody(a){return a.shapes.map(s=>{const style=`${s.matrix?'transform="matrix('+s.matrix.join(' ')+')" ':''}fill="${s.fill||'none'}" stroke="${s.stroke||'none'}" stroke-width="${s.strokeWidth??ART_RULES.outline}" stroke-linejoin="round" stroke-linecap="round"`;if(s.type==='path')return `<path d="${s.d}" ${style}/>`;if(s.type==='ellipse')return `<ellipse cx="${s.cx}" cy="${s.cy}" rx="${s.rx}" ry="${s.ry}" ${style}/>`;return `<rect x="${s.x}" y="${s.y}" width="${s.width}" height="${s.height}" rx="${s.radius}" ${style}/>`;}).join('');}
 export function assetToSvg(a){return `<svg xmlns="http://www.w3.org/2000/svg" width="${a.width}" height="${a.height}" viewBox="0 0 ${a.width} ${a.height}" role="img" aria-label="Gemventure ${a.type}">${assetSvgBody(a)}</svg>`;}
+
+// The existing bounded LRU owns both miner variants.
+drawAsset.supportsGroundShadowControl=true;

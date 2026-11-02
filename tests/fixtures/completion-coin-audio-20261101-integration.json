@@ -1,0 +1,10 @@
+{
+  "id": "GV-059/COIN-FILL-R1",
+  "authorization": "Current explicit user instruction delegated by Efeitos Gamefeel; visual receipt remains independent",
+  "visualReceipt": "E:\\Genventure\\coordination\\VFX-COMPLETION-APPLIED-20261101\\APPLIED.json",
+  "files": {
+    "return-screen.js": "b8e83629e9416e1c8066aea4f1e3ea7ef354ca2fc40eb28ce0dabd56326b8667",
+    "run.js": "d5b4c2a8034322eba4e633485d47dbb631da8e23e3bdd192a3e49612d1734f1b",
+    "completion-coin-audio.js": "77ff97bb56dbd5549d222f6cab710565378410436db0955a3c00fb4e91a2a2a9"
+  }
+}

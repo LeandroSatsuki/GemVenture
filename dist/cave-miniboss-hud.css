@@ -1,0 +1,24 @@
+@font-face{font-family:GVSentinelDisplay;src:url('assets/menu-fonts/Fredoka-600-Static.ttf');font-weight:600}
+@font-face{font-family:GVSentinelBody;src:url('assets/menu-fonts/Nunito-600-Static.ttf');font-weight:600}
+body.hud-v5 #hud5Root .cave-miniboss-hud{position:absolute;inset:0;pointer-events:none!important}
+body.hud-v5 #hud5Root .cave-miniboss-hud .gv-sentinel{position:absolute;top:var(--sentinel-top,12px);left:var(--sentinel-left,35%);width:var(--sentinel-width,min(396px,50%))}
+:is(.cave-miniboss-hud,#approvedSentinelReward) .gv-sentinel{box-sizing:border-box;padding:14px 16px;background:linear-gradient(#102a52,#06132b);border:2px solid #26538c;border-radius:13px;box-shadow:0 4px #020816,inset 0 1px #35d6f21a;color:#edf4ff;font-family:GVSentinelBody,Nunito,sans-serif;text-shadow:none;pointer-events:none!important}
+:is(.cave-miniboss-hud,#approvedSentinelReward) *{box-sizing:border-box;pointer-events:none!important}
+:is(.cave-miniboss-hud,#approvedSentinelReward) .gv-sentinel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+:is(.cave-miniboss-hud,#approvedSentinelReward) .gv-sentinel-head strong{font:600 23px/1.1 GVSentinelDisplay,Fredoka,sans-serif;color:#edf4ff;letter-spacing:0;text-transform:none;overflow-wrap:anywhere}
+:is(.cave-miniboss-hud,#approvedSentinelReward) .gv-sentinel-head span{font:600 14px/1.2 GVSentinelBody,Nunito,sans-serif;color:#bfd0e8;letter-spacing:0;text-transform:none}
+body.hud-v5 #hud5Root .cave-miniboss-hud .cave-miniboss-life{height:10px;background:#020816;border-radius:6px;margin-top:14px;overflow:hidden}
+body.hud-v5 #hud5Root .cave-miniboss-hud .cave-miniboss-life i{display:block;height:100%;background:linear-gradient(90deg,#ff5264,#ff8b91);border-radius:inherit;transition:width 140ms ease-out}
+body.hud-v5 #hud5Root .cave-miniboss-hud .gv-sentinel-details{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px 12px;margin-top:8px;color:#bfd0e8;font:600 13px/1.2 GVSentinelBody,Nunito,sans-serif}
+body.hud-v5 #hud5Root .cave-miniboss-hud .gv-sentinel-details b{font:600 16px/1.2 GVSentinelDisplay,Fredoka,sans-serif;color:#edf4ff}
+body.hud-v5 #hud5Root .cave-miniboss-hud .cave-miniboss-warning strong{color:#ffd36a;font-size:21px}
+:is(.cave-miniboss-hud,#approvedSentinelReward) [hidden],#approvedSentinelReward[hidden]{display:none!important}
+body.soft-fx #hud5Root .cave-miniboss-hud .cave-miniboss-life i{transition:none}
+#approvedSentinelReward{position:absolute;z-index:14;box-sizing:border-box;pointer-events:none!important}
+#approvedSentinelReward .gv-sentinel-gains{display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px;margin-top:12px}
+#approvedSentinelReward .gv-sentinel-gains span{display:flex;align-items:center;gap:6px;color:#35d6f2;font:600 25px/1 GVSentinelDisplay,Fredoka,sans-serif}
+#approvedSentinelReward .gv-sentinel-gains b{font-weight:600}
+#approvedSentinelReward .gv-sentinel-gains img{width:38px;height:38px;object-fit:contain}
+@media(prefers-reduced-motion:reduce){body.hud-v5 #hud5Root .cave-miniboss-hud .cave-miniboss-life i{transition:none}}
+
+/* Incoming Sentinela information never translates the mission. */

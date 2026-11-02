@@ -1,0 +1,14 @@
+{
+  "scope": "User-requested UI corrections: cards, decision summary, tree legend, floor rewards/enemies, Abyss rewards and infinity art",
+  "authorization": "Direct correction request in this chat on 2026-10-29",
+  "visualHumanApproval": false,
+  "integrationReceipt": "coordination/UI-CORRECTIONS-20261029/r2/INTEGRATION.json",
+  "files": {
+    "abyss-selected-art-v2y.js": "9561ae770b600bb1973c789e7edf620b8fb2cbc601f1c0ecb6a6226bd7be7d98",
+    "rebrand-lift.js": "761960167dc0e18491abe02da1ca24e3f27ecf76774888caa22c8eba024211e6",
+    "run.js": "dab070d9b026db6b3e7cd14828f3355a33fff3adb2be300b433c26b0b14f609c",
+    "tree-presentation.js": "1c2e76b3fdff166ac1cb56d806fdc929eca3238b5a35190b5032bf54e305c7ca",
+    "ui-consistency.css": "c4c726dc6c1d90171aeaad50183a1ad39951ba46434f3122c1a8c3db3e8f6791",
+    "assets/ui-corrections-r2/infinite-progress-v2.png": "496729f6e421ab4241659b6b260feedc0eb8daafa9de68ae6a7298c5e8c2105d"
+  }
+}

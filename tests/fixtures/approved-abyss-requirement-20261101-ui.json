@@ -1,0 +1,11 @@
+{
+  "id": "ABYSS-REQUIREMENT-UI-INTEGRATION-20261101",
+  "authorization": "Ficou muito bom, aprovado. Pode aplicar o requisito do Abismo no jogo oficial e seguir para a próxima tela que ainda falta, mantendo esse padrão, com pouco texto e sem remover nenhuma funcionalidade. Próxima prioridade humana: orbs da caverna, intuitivas, menos texto, padrão da UI; arte permitida se necessária.",
+  "scope": "Only approved Abyss requirement presentation; preserve boss, gate contributions and saves.",
+  "files": {
+    "approved-lift-ui.js": "3314992846fffca15705a916e5f9d74ae8c5a6d005a728910510bd834e803dad",
+    "approved-abyss-requirement.js": "a6ab7c515f97416d927ef3bf0bf178d24b3d4d8063c5be0530bbddd4dec34532",
+    "approved-abyss-requirement.css": "ec892f644eebba6ea124de6ccb77b6053da8bcf0f68a0685b7a6136e4708698e"
+  },
+  "receipt": "E:\\Genventure\\coordination\\ABYSS-REQUIREMENT-UI-INTEGRATION-20261101\\APPLIED-RECEIPT.json"
+}

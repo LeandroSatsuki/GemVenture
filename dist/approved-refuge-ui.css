@@ -1,0 +1,129 @@
+@font-face{font-family:GVRefugeDisplay;src:url('assets/menu-fonts/Fredoka-600-Static.ttf');font-weight:600}
+@font-face{font-family:GVRefugeBody;src:url('assets/menu-fonts/Nunito-600-Static.ttf');font-weight:600}
+#refugeLobby{--gv-edge:#020816;--gv-bg:#06132b;--gv-inset:#041025;--gv-panel:#102a52;--gv-raised:#173f73;--gv-line:#26538c;--gv-text:#edf4ff;--gv-muted:#bfd0e8;--gv-select:#35d6f2;--gv-gold:#ffbc00;--gv-orange:#ff7600;--gv-ink:#17213d;--gv-hover:#214f88;--gv-success:#67e3b8;--gv-disabled:#243854;font:600 15px/1.25 GVRefugeBody,sans-serif;color:var(--gv-text);color-scheme:dark;max-width:1024px;margin:auto;container:refuge/inline-size}
+#refugeLobby *{box-sizing:border-box}
+#refugeLobby [hidden]{display:none!important}
+#refugeLobby :is(h2,p){margin:0}
+#refugeLobby img{display:block;object-fit:contain}
+#refugeLobby button{font:600 18px/1.15 GVRefugeDisplay;color:var(--gv-text);touch-action:manipulation}
+#refugeLobby button:focus-visible{outline:3px solid var(--gv-text);outline-offset:3px}
+#refugeLobby .scene{position:relative;isolation:isolate;display:grid;grid-template-columns:230px minmax(0,1fr) 240px;grid-template-rows:auto 1fr auto;grid-template-areas:'head head head' 'nav space aside' 'tools space enter';gap:16px;min-height:660px;padding:16px;background:var(--gv-bg);overflow:hidden}
+#refugeLobby .backdrop{position:absolute;inset:0;z-index:-1;width:100%;height:100%;object-fit:cover;pointer-events:none}
+#refugeLobby .head{grid-area:head;display:flex;align-items:center;justify-content:space-between;gap:16px;min-width:0}
+#refugeLobby .location{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:12px;background:rgb(6 19 43 / .74);flex:none}
+#refugeLobby .location img{width:30px;height:30px}
+#refugeLobby h2{font:600 24px GVRefugeDisplay}
+#refugeLobby .wallet{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:9px;min-width:0;width:640px;padding:10px 12px;background:rgb(6 19 43 / .88);border:1px solid rgb(191 208 232 / .35);border-radius:14px}
+#refugeLobby .balance{display:flex;align-items:center;justify-content:center;gap:5px;min-width:0;font:600 18px GVRefugeDisplay;font-variant-numeric:tabular-nums}
+#refugeLobby .balance img,#refugeLobby .balance svg{width:27px;height:32px;flex:none}
+#refugeLobby .balance .gem{display:block;width:27px;height:32px;flex:none}
+#refugeLobby .balance strong{font:inherit;white-space:nowrap}
+
+/* A caixa clicável fica parada; face, luz e arte respondem dentro dela. */
+#refugeLobby .button{position:relative;isolation:isolate;border:0;border-radius:14px;background:none;box-shadow:none;min-height:48px;padding:8px 10px}
+#refugeLobby .button::before{content:'';position:absolute;inset:1px 0 3px;z-index:-1;border-radius:inherit;border:1px solid rgb(53 214 242 / .4);background:linear-gradient(135deg,var(--gv-hover),var(--gv-raised));box-shadow:inset 0 1px rgb(237 244 255 / .22),0 2px rgb(2 8 22 / .42)}
+#refugeLobby .button::after{content:'';position:absolute;inset:2px 1px 4px;pointer-events:none;border-radius:inherit;background:linear-gradient(110deg,transparent 33%,rgb(237 244 255 / .22) 48%,transparent 63%) no-repeat;background-size:240% 100%;background-position:180% 0;opacity:0}
+#refugeLobby .button:is(:hover,:focus-visible):not(:disabled)::before{border-color:var(--gv-select);background:linear-gradient(135deg,var(--gv-hover),var(--gv-line));box-shadow:inset 0 1px rgb(237 244 255 / .38),0 2px rgb(2 8 22 / .35),0 0 12px rgb(53 214 242 / .18)}
+#refugeLobby .button:active:not(:disabled)::before{box-shadow:inset 0 2px rgb(2 8 22 / .25)}
+#refugeLobby .button:disabled::before{background:rgb(36 56 84 / .86);border-color:rgb(191 208 232 / .2);box-shadow:inset 0 1px rgb(191 208 232 / .12)}
+#refugeLobby .button:disabled{color:var(--gv-muted)}
+#refugeLobby .nav{grid-area:nav;display:flex;flex-direction:column;gap:12px;align-self:start;min-width:0}
+#refugeLobby .profile{display:grid;grid-template-columns:54px minmax(0,1fr);gap:9px;min-height:82px;text-align:left;padding:9px}
+#refugeLobby .profile::before,#refugeLobby .score::before{background:linear-gradient(135deg,var(--gv-raised),var(--gv-panel));border-color:rgb(191 208 232 / .35)}
+#refugeLobby .portrait{display:block;overflow:hidden;width:54px;height:60px;flex:none}
+#refugeLobby .portrait img{width:100%;height:100%;object-fit:contain;transform:scale(1.8)}
+#refugeLobby .profile-copy{min-width:0}
+#refugeLobby .name-row{display:flex;justify-content:space-between;align-items:center;gap:5px}
+#refugeLobby .name-row strong{font-size:17px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#refugeLobby .level{font:600 12px GVRefugeBody;white-space:nowrap;color:var(--gv-muted)}
+#refugeLobby .xp{display:block;height:6px;background:rgb(4 16 37 / .7);border-radius:4px;overflow:hidden;margin:7px 0 4px}
+#refugeLobby .xp span{display:block;height:100%;width:0;background:var(--gv-select)}
+#refugeLobby .profile small{display:flex;justify-content:space-between;gap:5px;font:600 11px GVRefugeBody;color:var(--gv-muted)}
+#refugeLobby .services{display:grid;gap:8px}
+#refugeLobby .route{height:60px;min-height:60px;padding:5px 10px 7px;display:flex;align-items:center;gap:10px;text-align:left;min-width:0;width:100%}
+#refugeLobby .route-art{position:relative;display:grid;place-items:center;width:42px;height:42px;flex:none;border-radius:50%;background:radial-gradient(circle,rgb(53 214 242 / .16),transparent 72%)}
+#refugeLobby .route-art img{width:40px;height:40px;flex:none}
+#refugeLobby .route-label{flex:1;min-width:0;line-height:20px}
+#refugeLobby .route small{display:block;font:600 11px/12px GVRefugeBody;color:var(--gv-muted);margin-top:0}
+#refugeLobby .route-arrow{flex:none;width:10px;opacity:.3;font-size:25px;color:var(--gv-select)}
+#refugeLobby .button:is(:hover,:focus-visible) .route-arrow{opacity:1}
+#refugeLobby .route-mark{display:grid;place-items:center;width:40px;height:40px;flex:none;font-size:26px;color:var(--gv-muted)}
+#refugeLobby .badge{display:grid;place-items:center;min-width:24px;height:24px;padding:2px 5px;border-radius:8px;background:var(--gv-success);color:var(--gv-ink);font:600 14px GVRefugeDisplay}
+#refugeLobby .requirement{color:var(--gv-muted);font:600 11px GVRefugeBody;white-space:nowrap}
+#refugeLobby .space{grid-area:space;pointer-events:none}
+#refugeLobby .aside{grid-area:aside;display:flex;flex-direction:column;gap:14px;align-self:start;min-width:0}
+#refugeLobby .score{display:flex;align-items:center;gap:10px;text-align:left;width:100%;min-height:84px;padding:8px 12px}
+#refugeLobby .score-art{display:grid;place-items:center;flex:none;width:56px;height:64px;overflow:hidden;padding:2px}
+#refugeLobby .score img{width:100%;height:100%;object-fit:contain}
+#refugeLobby .score small{display:block;font:600 12px GVRefugeBody;color:var(--gv-muted);margin-bottom:3px}
+#refugeLobby .score strong{font:600 23px GVRefugeDisplay;font-variant-numeric:tabular-nums}
+#refugeLobby .music{background:rgb(6 19 43 / .42);border:1px solid rgb(191 208 232 / .16);border-radius:16px;padding:10px;min-width:0}
+#refugeLobby .music .track{display:block;color:var(--gv-text);font-size:12px;overflow-wrap:anywhere;text-align:center;margin-bottom:9px}
+#refugeLobby .transport{display:flex;justify-content:center;align-items:center;gap:7px}
+#refugeLobby .transport button{width:44px;min-width:44px;min-height:44px;padding:0;font-size:22px;border-radius:50%}
+#refugeLobby .transport button::before{inset:0;background:rgb(23 63 115 / .28);border:1px solid rgb(237 244 255 / .4);box-shadow:none}
+#refugeLobby .transport button:is(:hover,:focus-visible):not(:disabled)::before{background:rgb(23 63 115 / .5);border-color:var(--gv-select);box-shadow:0 0 12px rgb(53 214 242 / .18)}
+#refugeLobby .transport button:disabled::before{background:none;border:0;box-shadow:none}
+#refugeLobby .transport button:disabled{color:var(--gv-muted);opacity:.6}
+#refugeLobby .transport [aria-pressed=true]::before{border-color:var(--gv-select)}
+#refugeLobby .tools{grid-area:tools;display:flex;gap:6px;align-self:end;align-items:center;width:max-content}
+#refugeLobby .tools button{min-height:44px;min-width:44px;padding:6px;font-size:20px}
+#refugeLobby .tools button::before{background:rgb(6 19 43 / .75);border-color:rgb(191 208 232 / .3);box-shadow:none}
+#refugeLobby .tools .tutorial{font-size:14px;padding:7px 10px}
+#refugeLobby .tools [aria-pressed=true]{color:var(--gv-select)}
+#refugeLobby .enter{height:52px;padding:6px 10px;grid-area:enter;align-self:end;display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;color:var(--gv-ink);font-size:22px}
+#refugeLobby .enter::before{background:linear-gradient(rgb(255 188 0 / .96),rgb(255 118 0 / .94));border:1px solid var(--gv-gold);box-shadow:inset 0 1px rgb(237 244 255 / .5),0 2px rgb(2 8 22 / .4)}
+#refugeLobby .enter:is(:hover,:focus-visible)::before{background:linear-gradient(var(--gv-gold),var(--gv-orange));border-color:var(--gv-gold);box-shadow:inset 0 1px var(--gv-text),0 2px rgb(2 8 22 / .35),0 0 18px rgb(255 188 0 / .22)}
+#refugeLobby .enter img{width:34px;height:34px}
+#refugeLobby .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+#refugeLobby .review{display:flex;gap:8px;align-items:center;margin-top:10px;font:400 13px system-ui;color:var(--foreground,var(--gv-muted))}
+#refugeLobby .review select{background:var(--gv-bg);color:var(--gv-text);padding:6px;border:1px solid var(--gv-line);border-radius:6px;font:inherit}
+
+#refugeLobby[data-motion=on] .button::before,#refugeLobby[data-motion=on] .route-label,#refugeLobby[data-motion=on] .route-arrow{transition:transform 180ms ease-out,box-shadow 180ms ease-out,opacity 180ms ease-out}
+#refugeLobby[data-motion=on] .button:is(:hover,:focus-visible):not(:disabled)::before{transform:translateY(-2px)}
+#refugeLobby[data-motion=on] .button:active:not(:disabled)::before{transform:translateY(1px)}
+#refugeLobby[data-motion=on] .button:is(:hover,:focus-visible):not(:disabled)::after{animation:gvRefugeGlint 520ms ease-out both}
+#refugeLobby[data-motion=on] .route:is(:hover,:focus-visible):not(:disabled) .route-art{animation:gvRefugeWelcome 480ms cubic-bezier(.2,.75,.25,1.1) both}
+#refugeLobby[data-motion=on] .route:is(:hover,:focus-visible):not(:disabled) .route-label{transform:translateX(2px)}
+#refugeLobby[data-motion=on] .enter:is(:hover,:focus-visible) img{animation:gvRefugePickaxe 480ms ease-out both}
+@keyframes gvRefugeGlint{0%{background-position:180% 0;opacity:0}20%{opacity:1}100%{background-position:-80% 0;opacity:0}}
+@keyframes gvRefugeWelcome{0%{transform:translateY(0) rotate(0) scale(1)}35%{transform:translateY(-4px) rotate(-7deg) scale(1.1)}65%{transform:translateY(0) rotate(3deg) scale(1.06)}100%{transform:translateY(-1px) rotate(0) scale(1.06)}}
+@keyframes gvRefugePickaxe{0%{transform:rotate(0)}35%{transform:rotate(-14deg) scale(1.08)}70%{transform:rotate(5deg)}100%{transform:rotate(-3deg)}}
+@media(prefers-reduced-motion:reduce){#refugeLobby .button::before,#refugeLobby .button::after,#refugeLobby .route-art,#refugeLobby .route-label,#refugeLobby .route-arrow,#refugeLobby .enter img{animation:none!important;transition:none!important;transform:none!important}}
+@container refuge (min-width:761px) and (max-width:900px){#refugeLobby .wallet{width:440px;grid-template-columns:repeat(3,minmax(0,1fr))}}
+@container refuge (max-width:760px){#refugeLobby .scene{grid-template-columns:minmax(0,1fr);grid-template-rows:auto 220px auto auto auto auto;grid-template-areas:'head' 'space' 'nav' 'aside' 'tools' 'enter';min-height:0;padding:12px;gap:12px}#refugeLobby .backdrop{height:380px}#refugeLobby .head{display:grid;gap:8px}#refugeLobby .location{justify-self:start}#refugeLobby .wallet{width:100%;gap:7px;padding:8px}#refugeLobby .nav{width:100%}#refugeLobby .profile .name-row strong{font-size:18px}#refugeLobby .profile small{font-size:12px}#refugeLobby .services{grid-template-columns:repeat(3,minmax(0,1fr))}#refugeLobby .route{font-size:16px;gap:7px;padding:7px}#refugeLobby .route-art{width:34px;height:38px}#refugeLobby .route-art img{width:34px;height:34px}#refugeLobby .aside{display:grid;grid-template-columns:1fr 1fr;align-items:start}#refugeLobby .tools{width:100%;justify-content:center}#refugeLobby .enter{width:100%}}
+@container refuge (max-width:460px){#refugeLobby .scene{grid-template-rows:auto 150px auto auto auto auto}#refugeLobby .backdrop{height:320px}#refugeLobby .wallet{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px 4px}#refugeLobby .balance{font-size:17px;gap:4px}#refugeLobby .balance img,#refugeLobby .balance svg,#refugeLobby .balance .gem{width:24px;height:28px}#refugeLobby .services{grid-template-columns:repeat(2,minmax(0,1fr))}#refugeLobby .route{font-size:15px;gap:6px;padding:7px 5px}#refugeLobby .route-art{width:30px;height:34px}#refugeLobby .route-art img{width:30px;height:32px}#refugeLobby .route-arrow{display:none}#refugeLobby .aside{grid-template-columns:1fr}#refugeLobby .tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}#refugeLobby .tools .tutorial{font-size:13px}}
+@container refuge (max-width:360px){#refugeLobby .balance{flex-direction:column;gap:0}#refugeLobby .backdrop{height:360px}#refugeLobby .route{position:relative}#refugeLobby .badge{position:absolute;top:3px;right:4px;min-width:16px;height:16px;padding:0 3px;font-size:11px}}
+
+#refugeLobby .review{flex-wrap:wrap}#refugeLobby .review label{display:flex;align-items:center;gap:8px}#refugeLobby .audio-preview{font:600 14px GVRefugeBody;min-height:44px;padding:7px 12px;border:1px solid var(--gv-line);border-radius:8px;background:var(--gv-panel);color:var(--gv-text)}#refugeLobby .audio-preview:disabled{opacity:.5}
+
+#refugeLobby{position:absolute;inset:0;z-index:8;max-width:none;margin:0;pointer-events:none;overflow:auto;scrollbar-width:thin;container:refuge/inline-size}
+#refugeLobby[hidden]{display:none!important}
+#refugeLobby>.scene{width:calc(100% - 32px);min-height:660px;height:calc(100% - 32px);margin:16px auto;background:transparent;overflow:visible;container:refuge-scene/inline-size}
+#refugeLobby button,#refugeLobby .balance{pointer-events:auto}
+#refugeLobby .portrait canvas{display:block;width:54px;height:60px;object-fit:contain}
+#refugeLobby .wallet [data-lobby-gems]{display:contents}
+#refugeLobby .balance .resource-icon,#refugeLobby .balance .resource-icon svg{display:block;width:27px;height:32px}
+#refugeLobby .balance :is(.resource-name,.resource-tooltip){display:none}
+#refugeLobby .balance>b{font:inherit;white-space:nowrap}
+#refugeLobby .wallet [data-lobby-gems] .balance{background:none;border:0;padding:0}
+#refugeLobby .tools .game-toolbar{position:static!important;inset:auto!important;display:block!important;width:auto!important;height:auto!important;min-height:0!important;padding:0!important;border:0!important;transform:none!important;background:transparent!important;box-shadow:none!important;pointer-events:none}
+#refugeLobby .tools .top-actions{display:flex!important;gap:6px!important;align-items:center!important;padding:0!important;background:none!important;border:0!important;flex-wrap:nowrap!important}
+#refugeLobby .tools :is(#saved,#openPets){display:none!important}
+#refugeLobby .tools button{position:relative!important;width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;padding:6px!important;border:0!important;border-radius:14px!important;background:none!important;color:var(--gv-text)!important;box-shadow:none!important;font:600 20px GVRefugeDisplay!important;transform:none!important;pointer-events:auto}
+#refugeLobby .tools #tutorialButton{width:auto!important;min-width:75px!important;font-size:14px!important;padding:7px 10px!important}
+#refugeLobby .tools button>span{display:none!important}
+#refugeLobby .tools [aria-pressed=true]{color:var(--gv-select)!important}
+@media(max-width:760px){#refugeLobby>.scene{width:calc(100% - 24px);height:auto;min-height:0;margin:12px auto}#refugeLobby .tools .top-actions{justify-content:center;flex-wrap:wrap!important}}
+@media(max-width:460px){#refugeLobby .tools .top-actions{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));width:100%!important}#refugeLobby .tools button{width:100%!important}#refugeLobby .balance .resource-icon,#refugeLobby .balance .resource-icon svg{width:24px;height:28px}}
+
+#refugeLobby .tools .game-toolbar[hidden]{display:none!important}
+#refugeLobby .head{position:static!important;inset:auto!important;margin:0!important;padding:0!important;height:auto!important;background:none!important;border:0!important;box-shadow:none!important}
+#refugeLobby button{text-transform:none;letter-spacing:normal}
+#refugeLobby .button:disabled{opacity:1;filter:none}
+#refugeLobby .transport button:disabled{opacity:.6}
+/* Keep departure and options visible when the player chooses larger controls. */
+@container refuge (min-width:761px){
+ #refugeLobby>.scene{min-height:0;grid-template-rows:auto minmax(0,1fr) auto}
+ #refugeLobby .nav{min-height:0;height:100%;align-self:stretch;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--gv-select) var(--gv-bg);padding-bottom:6px;pointer-events:auto}
+}

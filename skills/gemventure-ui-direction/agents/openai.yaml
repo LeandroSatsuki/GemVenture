@@ -1,0 +1,4 @@
+interface:
+  display_name: "GemVenture — Sistema de UI e game feel"
+  short_description: "Dirigir UI coerente com as mecânicas do GemVenture"
+  default_prompt: "Use $gemventure-ui-direction para estudar as funções das telas e propor um sistema consistente de UI e game feel, preservando a identidade aprovada."

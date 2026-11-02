@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-29",
+  "authorization": "User requested four-color vein integration, larger base and no white glints; collected gems excluded",
+  "files": {
+    "crystal-vein-data.js": "775b467dfb2acc13810f02b58e0baa36f03679a6df8d480c23bacad3678c5811",
+    "crystal-veins.js": "db857471ae76b1e54cf6d61768f9c327063aace667a77dcd9151ef141c81728d",
+    "art-kit.js": "4b58ae933d7151606a734c5cdc5ebc04e663247237a70be15482e5e76e32df2b",
+    "dungeon-volumes.js": "e635080e12be72ef7a30917e3f9cd499d98c361f985eb20fcd46352f47fd486e",
+    "world-crystals.js": "de3ccce9f207638284d86d8ef1ecb31b838c2e2cc11ef89d523965295ac3bd36",
+    "missions-assets.js": "392f15912499b7ffa1cfdeda9ef352645a2e28a20c95cc58b2d10d0e03cabee0",
+    "hud-art-registry.js": "e813edddac3ac2b473a71dd9efec0f840780d47b46edf446c695d3b5aeac8e3d",
+    "hud-art.js": "026c2285f3b1537886d240de716ab027d35daa0d411446074098946932e97960",
+    "art-studio.js": "21133eafb7a8ecc4fdadb1eb9090d7f12f2ede0d9b548b7507aaf537923f739e"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ABYSS-CAVE-OFFICIAL-20261101-R1",
+  "authorization": "Perfeito, pode aplicar. Só remova esse filtro que fica na frente do ouriço, ok? E dê uma motivação pro ouriço estar ali.",
+  "approvedPilot": "ABYSS-CAVE-PILOT-20261101-R1",
+  "scope": "Approved cave-family source colors and scoped integration; legacy palette remains frozen.",
+  "files": {
+    "cave-layout.js": "1bf3dbe3950994f7f8c4c9fba16dc37e5e03dcc8721791fc6ea5760219c84839",
+    "world.js": "afae85c50df2cacea648b607ca37770fac0f1d29ef31820b8d1f4e1b867e083f",
+    "core.js": "be4cde3142827674fd2f049f0873cdde2880a4624a7323ed03c04c1d91b24c67",
+    "campaign-cave-fog.js": "95b468bab3e9f4fb455fa5f12f05b1715920e869e0477fb21fa3e53200ecabc4",
+    "run.js": "555a0efab9b4dd790f646063b616a27f584b5e8ccea640c6586c41c87d6565b9",
+    "hedgehog.js": "b31a9cee7091f13126fdc937c3373840dc493450586c9d21f48ddb232d40715e",
+    "abyss-cave-habitat.js": "8413296b4ead2ddaeb9c06673ffb7296862d2f933c74d3256759aec63af75e5a",
+    "abyss-cave-layout.js": "bda16fc6bd09c7cbbb815ae5d3c9f9d3a056ca076ca50ad055b68c1cc97c6be2",
+    "abyss-cave-scene.js": "7f7e6c24a7dce1427a1b80e4324d16de6a320f241c1124c35d7313f15b19645b"
+  }
+}

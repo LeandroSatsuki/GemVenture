@@ -1,0 +1,292 @@
+{
+  "officialSha256": "b5579094f577c6c8a39c56b64b8758f7637d3c5a99a2af67c5f00d7a3adba261",
+  "findings": {
+    "firstSolid": {
+      "seed": 1,
+      "t": 0.7769230769230769,
+      "oldDepth": 1,
+      "plannedNextRow": 2,
+      "originCol": 3,
+      "plannedCol": 2,
+      "firstSolid": {
+        "row": 1,
+        "col": 2,
+        "type": "prism"
+      },
+      "officialPose": {
+        "col": 2.1270878470641783,
+        "row": 1.7769230769230768,
+        "lift": 45.06153846153846,
+        "tilt": -0.11607159829251068
+      },
+      "physicalTipRow": 0.9999999999999999,
+      "officialContactWillBeNextRow": true,
+      "miner": {
+        "version": 3,
+        "seed": 1,
+        "enabled": true,
+        "level": 1,
+        "core": 0,
+        "power": 0,
+        "side": 0,
+        "bombs": 0,
+        "offline": 0,
+        "focus": -1,
+        "gravel": 3,
+        "fragments": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "crystals": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "cuts": [
+          [
+            3,
+            3,
+            1,
+            1
+          ]
+        ],
+        "steps": 1,
+        "blocks": 1,
+        "pulses": 0,
+        "combo": 1,
+        "col": 2,
+        "origin": 3,
+        "direction": -1,
+        "overdrive": 0,
+        "crystalRush": 0,
+        "doubleLoot": 0,
+        "oreCharge": 1000,
+        "passes": 0,
+        "lastAt": 1700000001000,
+        "carry": 0
+      }
+    },
+    "titanium": {
+      "seed": 1,
+      "beforeDepth": 12,
+      "afterDepth": 13,
+      "event": {
+        "step": 13,
+        "type": "titanium",
+        "col": 5,
+        "work": 70000,
+        "kind": 1,
+        "radius": 1,
+        "id": 13,
+        "from": 5,
+        "to": 6,
+        "contact": {
+          "row": 13,
+          "col": 5,
+          "offsetY": -22,
+          "normal": {
+            "x": 0,
+            "y": -1
+          }
+        },
+        "hot": true,
+        "count": 0,
+        "cells": [],
+        "effects": [],
+        "gravel": 0,
+        "crystal": -1,
+        "crystalAmount": 0,
+        "pass": 0,
+        "pulse": false,
+        "combo": 47,
+        "multiplier": 4
+      }
+    },
+    "dense": {
+      "seed": 2,
+      "block": {
+        "step": 58,
+        "type": "dense",
+        "col": 6,
+        "work": 200000,
+        "kind": 2,
+        "radius": 1
+      },
+      "beforeDepth": 57,
+      "after500ms": {
+        "depth": 57,
+        "carry": 50000,
+        "events": 0
+      },
+      "fullDurationMs": 2000,
+      "finalDepth": 58,
+      "finalEvents": [
+        {
+          "id": 58,
+          "type": "dense",
+          "row": 58,
+          "count": 1
+        }
+      ]
+    }
+  },
+  "metrics": [
+    {
+      "build": "base",
+      "seed": 7,
+      "seconds": 3600,
+      "depth": 7614,
+      "blocks": 19694,
+      "crystals": 66,
+      "materials": [
+        16,
+        10,
+        15,
+        25
+      ],
+      "gravel": 163676,
+      "passes": 0,
+      "simulationMs": 178
+    },
+    {
+      "build": "base",
+      "seed": 42,
+      "seconds": 3600,
+      "depth": 7924,
+      "blocks": 20332,
+      "crystals": 70,
+      "materials": [
+        16,
+        20,
+        16,
+        18
+      ],
+      "gravel": 165846,
+      "passes": 1,
+      "simulationMs": 203
+    },
+    {
+      "build": "base",
+      "seed": 713,
+      "seconds": 3600,
+      "depth": 7944,
+      "blocks": 21592,
+      "crystals": 65,
+      "materials": [
+        7,
+        17,
+        21,
+        20
+      ],
+      "gravel": 176783,
+      "passes": 0,
+      "simulationMs": 214
+    },
+    {
+      "build": "motor10",
+      "seed": 7,
+      "seconds": 3600,
+      "depth": 9495,
+      "blocks": 23439,
+      "crystals": 75,
+      "materials": [
+        24,
+        20,
+        16,
+        15
+      ],
+      "gravel": 190607,
+      "passes": 1,
+      "simulationMs": 159
+    },
+    {
+      "build": "motor10",
+      "seed": 42,
+      "seconds": 3600,
+      "depth": 9193,
+      "blocks": 22431,
+      "crystals": 66,
+      "materials": [
+        15,
+        17,
+        20,
+        14
+      ],
+      "gravel": 181800,
+      "passes": 1,
+      "simulationMs": 131
+    },
+    {
+      "build": "motor10",
+      "seed": 713,
+      "seconds": 3600,
+      "depth": 9393,
+      "blocks": 22346,
+      "crystals": 67,
+      "materials": [
+        16,
+        12,
+        21,
+        18
+      ],
+      "gravel": 183261,
+      "passes": 0,
+      "simulationMs": 182
+    },
+    {
+      "build": "upgraded",
+      "seed": 7,
+      "seconds": 3600,
+      "depth": 13143,
+      "blocks": 54595,
+      "crystals": 125,
+      "materials": [
+        26,
+        24,
+        41,
+        34
+      ],
+      "gravel": 628541,
+      "passes": 1,
+      "simulationMs": 337
+    },
+    {
+      "build": "upgraded",
+      "seed": 42,
+      "seconds": 3600,
+      "depth": 12869,
+      "blocks": 53326,
+      "crystals": 133,
+      "materials": [
+        31,
+        46,
+        24,
+        32
+      ],
+      "gravel": 614906,
+      "passes": 1,
+      "simulationMs": 365
+    },
+    {
+      "build": "upgraded",
+      "seed": 713,
+      "seconds": 3600,
+      "depth": 12585,
+      "blocks": 52228,
+      "crystals": 125,
+      "materials": [
+        49,
+        27,
+        33,
+        16
+      ],
+      "gravel": 599699,
+      "passes": 0,
+      "simulationMs": 284
+    }
+  ],
+  "note": "Model reproductions and one-hour samples, not browser FPS or target economy. No official writes."
+}

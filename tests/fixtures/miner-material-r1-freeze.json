@@ -1,0 +1,17 @@
+{
+  "authorization": "Direct human approval of Mineradora Automática and Missões in this chat, 2026-10-16 America/Sao_Paulo",
+  "checkpoint": "GV-022-material-candidate-r1",
+  "minerManifestSha256": "d2e770926ab32466e45a79f1983e556bb13ea3a9f16aa1b0e1a4d795f73e6658",
+  "previousMinerSha256": "d60e610313be4875c637d6551056211358887f2d36ae0b380840682acae5881d",
+  "scope": "Only retire new focus selections; historical values and payouts preserved; contact module unchanged",
+  "engineSources": [
+    {
+      "file": "miner.js",
+      "sha256": "928f1ed5c0af79dafba6315a0ff38005c6688097a4c63a85689dff5c68add602"
+    },
+    {
+      "file": "miner-contact.js",
+      "sha256": "9e0a2c7a22de0835cffdfc09ed46d30d20098ecb1e1e965963eddb4747503f29"
+    }
+  ]
+}

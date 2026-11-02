@@ -1,0 +1,150 @@
+{
+  "approval": "Human reaffirmation and official integration authorization 2026-10-23",
+  "source": "gv057-cards-source-map-guilherme-v1/SOURCE-MAP.json",
+  "cards": [
+    {
+      "file": "muscle-approved-v01.png",
+      "version": "v01",
+      "sha256": "5cc4e0239e9d0c07e7e8af0d25aca05c9e5f494d31e7167fcc028c86a47070b8",
+      "id": "muscle"
+    },
+    {
+      "file": "lucky-approved-v01.png",
+      "version": "v01",
+      "sha256": "2411d8a2f2dfd1ab00381a87d3b5bec363ddf67a5c0cfa52f49edee1fe38f80e",
+      "id": "lucky"
+    },
+    {
+      "file": "popcorn-approved-v01.png",
+      "version": "v01",
+      "sha256": "56e5da564bb58d6de2e16148f67770b713fde6d29108a6ed86b4f3d0be1d6d6f",
+      "id": "popcorn"
+    },
+    {
+      "file": "ricochet-approved-v01.png",
+      "version": "v01",
+      "sha256": "cbd267a220242dc938acab786587fcf0c92484e4998a42a82c72354ae34706d3",
+      "id": "ricochet"
+    },
+    {
+      "file": "pockets-approved-v01.png",
+      "version": "v01",
+      "sha256": "161f644c484eb453e488f1ab5ace7e6d9e6847cd9b69043904d89973a16af7fd",
+      "id": "pockets"
+    },
+    {
+      "file": "candy-approved-v01.png",
+      "version": "v01",
+      "sha256": "eafd8277dc09d0b5982f96c96f5df148c2ef2ff5937807a62174c7e7afb3dda8",
+      "id": "candy"
+    },
+    {
+      "file": "ember-approved-v01.png",
+      "version": "v01",
+      "sha256": "a9a3a24371d0223ef87c674db6e7022b9714467d229d6f1afaae1f03d6091681",
+      "id": "ember"
+    },
+    {
+      "file": "ice-approved-v02.png",
+      "version": "v02",
+      "sha256": "77c15c774396369a537812dfa2e829bab402face7a0e58271db7b5ead6fb4ef4",
+      "id": "ice"
+    },
+    {
+      "file": "vampire-approved-v01.png",
+      "version": "v01",
+      "sha256": "09cd76e7658bfcc5888423781789d8937c6619b755697479ca2293eece3e322e",
+      "id": "vampire"
+    },
+    {
+      "file": "skates-approved-v01.png",
+      "version": "v01",
+      "sha256": "40c0e449323db34ad7e05bd06dc9ff0c3d0cac52bb3123aaed5954338d5ce787",
+      "id": "skates"
+    },
+    {
+      "file": "elastic-approved-v01.png",
+      "version": "v01",
+      "sha256": "3e8d6039280d6ff193263962355d2fdc059ef32de51c9b86853a477ba31c7c2c",
+      "id": "elastic"
+    },
+    {
+      "file": "secondwind-approved-v01.png",
+      "version": "v01",
+      "sha256": "1e948965d267efb9e0b4f492d5e57773fb75de9a4968b213156902a2c69685c0",
+      "id": "secondwind"
+    },
+    {
+      "file": "shell-approved-v01.png",
+      "version": "v01",
+      "sha256": "c9c97449c5755cea02170bbfee23d2b4aa3bccb3953f11943f40659eb2043ac7",
+      "id": "shell"
+    },
+    {
+      "file": "laser-approved-v01.png",
+      "version": "v01",
+      "sha256": "770312ac8018998917b51b188905d5d78c18886e8f54d6edf0ab4aace5fea1ba",
+      "id": "laser"
+    },
+    {
+      "file": "echohit-approved-v01.png",
+      "version": "v01",
+      "sha256": "670faba12c82bee68d8a5202044af7f3ab26f3b3bc42c797f1d5159cc7266f81",
+      "id": "echohit"
+    },
+    {
+      "file": "greed-approved-v01.png",
+      "version": "v01",
+      "sha256": "4f8a7d38eccecd95f434435d86f17437d2d9ab74de19e5b36ea93dd9693a5138",
+      "id": "greed"
+    },
+    {
+      "file": "bombgift-approved-v01.png",
+      "version": "v01",
+      "sha256": "4002df872a6e2ea8a25695762c1cd5008c2ed3074ac15ef52a8a2a5975dc89c6",
+      "id": "bombgift"
+    },
+    {
+      "file": "battery-approved-v01.png",
+      "version": "v01",
+      "sha256": "fb9c6e0fc7b448c8e5f0e5bc50e7d8bd99afa1cc507e913c4589c7bcdf0b07a3",
+      "id": "battery"
+    },
+    {
+      "file": "sprouts-approved-v01.png",
+      "version": "v01",
+      "sha256": "d8aa6749f72eb4891586460e93881ae861d759d09b86e8538b0ade627048925d",
+      "id": "sprouts"
+    },
+    {
+      "file": "revival-approved-v01.png",
+      "version": "v01",
+      "sha256": "9086c0dd28e42d3afe38bd91b5612a6023278481f266e9b7f56ad2e0b64a44ef",
+      "id": "revival"
+    },
+    {
+      "file": "lantern-approved-v01.png",
+      "version": "v01",
+      "sha256": "c6f3e718544a10fe0beebaea5fd6f652e8cfb875700cab0da7b6c44e71363dbb",
+      "id": "lantern"
+    },
+    {
+      "file": "abyss-heal-approved-v01.png",
+      "version": "v01",
+      "sha256": "37ca1fb9e13fff7ec1ffd0facb18c6dc4cdb0a7abc939255099af8c30b039855",
+      "id": "abyss-heal"
+    },
+    {
+      "file": "abyss-breath-approved-v01.png",
+      "version": "v01",
+      "sha256": "7a158b2cb563c60736a114b180db90a0ed394d30adf4c264ed89f807e51f76ce",
+      "id": "abyss-breath"
+    },
+    {
+      "file": "abyss-ward-approved-v01.png",
+      "version": "v01",
+      "sha256": "2bccf827e85a2bb97db7a0e543e9f9cd2962c87c6dee14e3f733d7f24aa5537e",
+      "id": "abyss-ward"
+    }
+  ]
+}

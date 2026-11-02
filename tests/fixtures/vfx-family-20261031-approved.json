@@ -1,0 +1,15 @@
+{
+  "status": "human-approved-official-application",
+  "approvalSource": "Pedido humano direto neste chat em 31/10/2026: Aprovadíssimo ... pode aplicar no jogo real.",
+  "scope": "Família R4 de poderes e caminhos das cartas; demais consumidores preservados.",
+  "receipt": "E:/Genventure/coordination/VFX-OFFICIAL-20261031/APPLICATION-RECEIPT.json",
+  "files": {
+    "core.js": "e6e11a7006a89e0e11f68f8ff10642264c3b30d3614c392657b8d7f8dfc5fa7c",
+    "effects.js": "422d31e1d9845dd33d42200f9fc7903498793b106f8f38799a2dd918b761733b",
+    "world.js": "3133b65916b317a178ba0285cbdfa6d0e185d9ccb5d4a0002cfa102ab9073537",
+    "player-shield-vfx.js": "79fcbd2218b27554cd79917d55d9aff9d78b41f4229f0e5c415c4f7f4ec9fc49",
+    "power-vfx.js": "52f140bab13cd9c5a790a2307a762d0e0619839629a41dbeb944294877f8937f",
+    "lightning-vfx.js": "69560a930de7b37f1549f9927e7eea0710713644ee8f4f08ae2da6ce3f1a6314",
+    "vfx-family.js": "92696c2ff5da554ee2c7977ae32043d9dff1ca50f7b458857bf1e2c3c8a1ebea"
+  }
+}

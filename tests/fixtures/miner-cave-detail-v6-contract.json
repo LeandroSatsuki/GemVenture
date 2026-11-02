@@ -1,0 +1,18 @@
+{
+  "id": "miner-cave-detail-v6",
+  "date": "2026-10-31",
+  "authorization": "Direct user request in current chat: improve in-game miner sharpness and widen left/right head profiles.",
+  "status": "applied-local-review-pending",
+  "preserves": [
+    "Cosmos64",
+    "gemventure-cave-v1 camera",
+    "128px logical cell and (64,96) ground",
+    "existing animation counts/timing and tool sockets",
+    "front/back geometry at equal render density",
+    "historical miner and lobby assets"
+  ],
+  "files": {
+    "dungeon-miner.js": "368b213fdc80037b8c08641dbe791966e37e876b12f3ebed8bc649b2098366b6"
+  },
+  "evidence": "outputs/miner-cave-detail-v6/ in Diorama workspace"
+}

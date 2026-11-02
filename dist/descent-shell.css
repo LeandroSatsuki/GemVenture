@@ -1,0 +1,83 @@
+/* Full common-floor shell; opt-in, independent from Abismo and HUD chips. */
+body.immersive-run #clearBanner.gv-descent-shell{
+ position:fixed;inset:0;width:100%;height:100dvh;padding:0;display:block;overflow:auto;
+ background:#030b21;isolation:isolate;scroll-padding:20px;
+ --descent-torch-art:url('assets/descent-choice/scenery/torch-v03.png');--descent-cave-art:url('assets/descent-choice/scenery/cave.png');--descent-pedestal-art:url('assets/descent-choice/scenery/pedestal.png');
+}
+body.immersive-run #clearBanner.gv-descent-shell::before{
+ content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+ background-image:var(--descent-cave-art,none);background-size:cover;background-position:center;
+}
+body.immersive-run #clearBanner.gv-descent-shell::after{
+ content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+ background-image:var(--descent-torch-art,none),var(--descent-torch-art,none);
+ background-position:left 16px center,right 16px center;background-size:80px 160px;background-repeat:no-repeat;
+}
+body.immersive-run #clearBanner.gv-card-lighting.gv-descent-shell .floor-choice{
+ width:min(1424px,calc(100% - 80px));max-height:none;min-height:100%;margin:auto;padding:24px 0 28px;
+ display:flex;flex-direction:column;align-items:center;overflow:visible;border:0;border-radius:0;background:none;box-shadow:none;
+}
+body.immersive-run #clearBanner.gv-descent-shell .descent-heading{
+ position:relative;isolation:isolate;width:min(720px,100%);min-height:150px;padding:16px 40px 12px;
+ display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+ border:2px solid #173b6b;border-radius:7px;background:#06122deb;box-shadow:0 0 0 3px #02091b,inset 0 0 0 2px #0d2449;
+}
+body.immersive-run #clearBanner.gv-descent-shell .descent-header-art{position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--descent-header-art,none) center/contain no-repeat}
+body.immersive-run #clearBanner.gv-descent-shell .descent-heading>small{font:600 19px/1.2 var(--r2-display);color:#12d9fa;background:#061631;border:1px solid #245087;border-radius:5px;padding:4px 16px}
+body.immersive-run #clearBanner.gv-descent-shell .header-crystal{position:absolute;width:125px;height:140px;bottom:0;object-fit:contain;pointer-events:none}
+body.immersive-run #clearBanner.gv-descent-shell .header-crystal.left{right:calc(100% - 12px)}
+body.immersive-run #clearBanner.gv-descent-shell .header-crystal.right{left:calc(100% - 12px)}
+body.immersive-run #clearBanner.gv-descent-shell #clearTitle{font:600 42px/1.12 var(--r2-display);display:block;margin:0;color:#fff;paint-order:stroke fill;-webkit-text-stroke:2px #02091d;text-shadow:0 3px #02091d}
+body.immersive-run #clearBanner.gv-descent-shell #clearSubtitle{font:800 22px/1.3 var(--r2-body);color:#badbff}
+body.immersive-run #clearBanner.gv-descent-shell #floorLoot{
+ width:100%;box-sizing:border-box;flex:none;display:flex;flex-wrap:nowrap;justify-content:flex-start;align-items:stretch;gap:0;
+ margin:12px 0 0;padding:16px 10px;min-height:102px;border:3px solid #102f5a;border-radius:13px;background:#04122c;
+ box-shadow:0 0 0 2px #010717,inset 0 1px #1b4679;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-color:#25517a #06122c;
+}
+body.immersive-run #clearBanner.gv-descent-shell #floorLoot .floor-loot-label{display:flex;align-items:center;text-align:left;flex:0 0 150px;padding:0 18px;color:#bed6f8!important;font:800 16px/1.3 var(--r2-body)}
+body.immersive-run #clearBanner.gv-descent-shell #floorLoot>div:not(.floor-materials){flex:1 0 155px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;padding:0 16px;border-left:1px solid #1c3559;min-width:0}
+body.immersive-run #clearBanner.gv-descent-shell #floorLoot strong{display:flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;font:600 25px/1.3 var(--r2-display);color:#ffda1a}
+body.immersive-run #clearBanner.gv-descent-shell #floorLoot small{font:800 14px/1.3 var(--r2-body)!important;color:#bed6f8!important}
+body.immersive-run #clearBanner.gv-descent-shell #floorLoot :is(img,svg){width:34px;height:34px;object-fit:contain;flex:none}
+body.immersive-run #clearBanner.gv-descent-shell #floorLoot .floor-materials{display:flex;flex-wrap:nowrap;flex:0 0 auto;gap:0;margin:0}
+body.immersive-run #clearBanner.gv-descent-shell #floorLoot .floor-materials>span{display:flex;flex-direction:column;justify-content:center;align-items:center;flex:0 0 85px;gap:4px;min-width:85px;padding:0 10px;border-left:1px solid #1c3559;white-space:nowrap;font:600 21px/1.2 var(--r2-display)}
+body.immersive-run #clearBanner.gv-descent-shell #floorLoot .floor-materials:empty{display:none}
+body.immersive-run #clearBanner.gv-descent-shell #floorLoot .floor-record-drop{white-space:normal;max-width:250px;font:800 15px/1.3 var(--r2-body)}
+body.immersive-run #clearBanner.gv-descent-shell #choiceGuard{min-height:0;margin:0;color:#ffdf49}
+body.immersive-run #clearBanner.gv-descent-shell #choiceGuard:not(:empty){margin-top:12px}
+body.immersive-run #clearBanner.gv-descent-shell #cardOffers{width:min(1160px,100%);grid-template-columns:repeat(3,minmax(0,1fr));gap:44px;margin:32px 0 78px;align-items:stretch;flex:none}
+body.immersive-run #clearBanner.gv-descent-shell .gem-card{min-height:460px;gap:10px;padding:22px 20px 18px;border-radius:18px;cursor:pointer}
+body.immersive-run #clearBanner.gv-descent-shell .gem-card .card-role{font:600 21px/1.25 var(--r2-display)}
+body.immersive-run #clearBanner.gv-descent-shell .gem-card .card-raster-slot{width:min(160px,100%);height:auto;aspect-ratio:1}
+body.immersive-run #clearBanner.gv-descent-shell .gem-card>strong{font-size:26px;line-height:1.15}
+body.immersive-run #clearBanner.gv-descent-shell .gem-card p{font:800 18px/1.35 var(--r2-body)}
+body.immersive-run #clearBanner.gv-descent-shell .gem-card .card-detail{padding:12px 8px;font:800 18px/1.3 var(--r2-body)}
+body.immersive-run #clearBanner.gv-descent-shell .gem-card>small{font:600 19px/1.3 var(--r2-display)}
+body.immersive-run #clearBanner.gv-descent-shell .gem-card::after{content:"";position:absolute;left:-8px;right:-8px;bottom:-66px;height:60px;pointer-events:none;background:var(--descent-pedestal-art,none) center/contain no-repeat;translate:none;animation:none}
+body.immersive-run #clearBanner.gv-descent-shell #confirmCard{flex:none;width:min(450px,100%);min-height:66px;margin:0;padding:16px 20px;border:3px solid #0b1832;background:linear-gradient(#ffdc24,#ffa412);color:#fff;font:600 22px/1.25 var(--r2-display);paint-order:stroke fill;-webkit-text-stroke:2px #041027;box-shadow:0 0 0 2px #020716,inset 0 2px #fff39c,inset 0 -4px #c97b0c}
+body.immersive-run #clearBanner.gv-descent-shell #confirmCard:disabled{background:linear-gradient(#202d51,#101a35);color:#97a4c8;border-style:solid;border-color:#3b4c71;box-shadow:0 0 0 2px #020716,inset 0 2px #4e5d7b,inset 0 -4px #0b142c}
+body.immersive-run #clearBanner.gv-descent-shell .floor-actions{width:min(800px,100%)}
+body.immersive-run #clearBanner.gv-descent-shell #floorLoot:focus-visible{outline:3px solid #fff49a;outline-offset:3px}
+@media(max-width:1450px),(max-height:820px){
+ body.immersive-run #clearBanner.gv-card-lighting.gv-descent-shell .floor-choice{width:calc(100% - 64px);padding-top:16px}
+ body.immersive-run #clearBanner.gv-descent-shell .descent-heading{width:640px;min-height:130px;padding:12px 28px}
+ body.immersive-run #clearBanner.gv-descent-shell #clearTitle{font-size:36px}
+ body.immersive-run #clearBanner.gv-descent-shell #clearSubtitle{font-size:20px}
+ body.immersive-run #clearBanner.gv-descent-shell #floorLoot{padding:12px 6px;min-height:90px}
+ body.immersive-run #clearBanner.gv-descent-shell #floorLoot .floor-loot-label{flex-basis:125px;padding:0 12px;font-size:14px}
+ body.immersive-run #clearBanner.gv-descent-shell #floorLoot>div:not(.floor-materials){flex-basis:145px;padding:0 12px}
+ body.immersive-run #clearBanner.gv-descent-shell #floorLoot .floor-materials>span{min-width:76px;flex-basis:76px;padding:0 8px}
+ body.immersive-run #clearBanner.gv-descent-shell #cardOffers{width:min(1080px,100%);gap:32px;margin:32px 0 78px}
+ body.immersive-run #clearBanner.gv-descent-shell .gem-card{padding:18px 16px;min-height:430px}
+ body.immersive-run #clearBanner.gv-descent-shell .gem-card .card-raster-slot{width:min(144px,100%)}
+ body.immersive-run #clearBanner.gv-descent-shell .gem-card>strong{font-size:24px}
+}
+@media(max-width:760px){
+ body.immersive-run #clearBanner.gv-descent-shell::after{display:none}
+ body.immersive-run #clearBanner.gv-card-lighting.gv-descent-shell .floor-choice{width:calc(100% - 32px)}
+ body.immersive-run #clearBanner.gv-descent-shell .descent-heading{width:100%;padding:14px 18px}
+ body.immersive-run #clearBanner.gv-descent-shell .header-crystal{display:none}
+ body.immersive-run #clearBanner.gv-descent-shell #clearTitle{font-size:30px}
+ body.immersive-run #clearBanner.gv-descent-shell #cardOffers{grid-template-columns:1fr;gap:64px;width:min(420px,100%)}
+ body.immersive-run #clearBanner.gv-descent-shell .gem-card{display:flex;flex-direction:column;align-items:center;text-align:center}
+}

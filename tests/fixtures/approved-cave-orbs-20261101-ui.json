@@ -1,0 +1,14 @@
+{
+  "id": "CAVE-ORBS-UI-INTEGRATION-20261101",
+  "authorization": "Ficou muito bom, aprovado. Pode aplicar as orbs no jogo oficial, mantendo esse visual e o game feel, sem alterar as regras nem remover nenhuma funcionalidade. Depois pode seguir para a próxima tela.",
+  "scope": "Approved orb UI only; no rule, wallet, collision, save, rhythm or lighting edits.",
+  "files": {
+    "run-orb-hud.js": "fdbd148e29c637eb6d99bd9e6b590aedbad87c392e2e65c30f11584506b63ebf",
+    "run-orb-hud.css": "29d7c72db81d35dbabadb418b2309f0f295e9ba6fa750d632d870de8e557838c",
+    "cave-merchant-art.js": "3b6978c0fb62bcfcc9d4a41a1157ae8cb1df4280c2fed6c7fef4055760670e0a",
+    "expedition-hud-view.js": "b6cfc9c5ba2fcc1aeaade4ad8200c7374c5514022087cdfc0b94866a39bb2f25",
+    "approved-orb-presentation.js": "92fdd9ce83d6382519b25b2b2a34cdecb0ed1d8f8223b917431d27b943813257",
+    "approved-orb-assets.js": "f0bad452a3c6f559160990146be529dfeb6c2f5dbcb19577e52c0b7ebcbc9f6b"
+  },
+  "receipt": "E:\\Genventure\\coordination\\CAVE-ORBS-UI-INTEGRATION-20261101\\APPLIED-RECEIPT.json"
+}

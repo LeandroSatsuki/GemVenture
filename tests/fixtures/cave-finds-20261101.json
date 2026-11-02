@@ -1,0 +1,18 @@
+{
+  "id": "CHESTS-MUSHROOMS-20261101-R1",
+  "authorization": "Pedido humano direto neste chat: aplicar baús com recompensa garantida e cogumelos de cura, proteção de combo e explosão nos inimigos, sem parar o ritmo.",
+  "sourceReceipt": "E:/Genventure/coordination/chests-mushrooms-20261101-r1/APPLICATION.json",
+  "scope": "Guaranteed finite chests; three hit-activated mushrooms; separate targets and native cached cave art. Technical registration; human visual approval remains pending.",
+  "files": {
+    "core.js": "e58237d07ca87ce43d3cb2af853966d4c976252d1a40ec439d4c767ff2510dcf",
+    "run.js": "f32c85de3a4fe4e76ede3fd9e589fa5087e6469c590c90445c6fcab98fab19fd",
+    "world.js": "f96c0126d58b032e63d05f7489a4ab6f7881cc89dcdc344b34dfbfdcdd710384",
+    "art-kit.js": "8aa04cb7e0ed4ea4b1e04af00b6b28595ee11ee82dd41918317ee64deca1e4a8",
+    "expedition-hud-view.js": "799f19ad9c055342e50bac078224b5b214dcb20aed3a9e04590f250987fbfc5a",
+    "cave-finds.js": "ceb8a8f271f21ee5a7cb7bde6cc02951a6ee72b3aeaeedcc00556f12e7f0fdcf",
+    "cave-find-shapes.js": "f08515017c6130ef61d5d8117ca0dea00a87b554286b832c99b9ee3e0440e92d",
+    "cave-find-art.js": "e38368d3935a65ba18fde420f2f102acdb5989ab2935c866dc08260dbb27f395",
+    "cave-find-hud.js": "c075a56b6d4099d2e4c0c0f33f0e7daef20f291fc4763037b6f8f325ca151eb0",
+    "cave-find-hud.css": "6ef8e9fa43545d150ba39ad84d006af344a064e212062b7758245028bba31ea1"
+  }
+}

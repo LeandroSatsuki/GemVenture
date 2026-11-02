@@ -1,0 +1,11 @@
+{
+  "id": "ABYSS-PREPARATION-UI-INTEGRATION-20261101",
+  "authorization": "Ficou muito bom, aprovado. Pode aplicar a Preparação do Abismo no jogo oficial e seguir para a próxima tela que ainda falta, mantendo esse padrão, com pouco texto e sem remover nenhuma funcionalidade.",
+  "scope": "Approved preparation UI only; domain, economy and old receipts preserved.",
+  "files": {
+    "approved-lift-ui.js": "85f397aecb051e88817291e310a01df31e36179227f5ea441b372a9065a5247e",
+    "approved-abyss-preparation.js": "c326a8041462f6295fb9aac5abd2c64f990a17144424bd3b516a04b58b8b7463",
+    "approved-abyss-preparation.css": "4e669728f649ea86df74470acd9e08f0779b8e3f5c257b323cf6ae53ada0e97d"
+  },
+  "receipt": "E:\\Genventure\\coordination\\ABYSS-PREPARATION-UI-INTEGRATION-20261101\\APPLIED-RECEIPT.json"
+}

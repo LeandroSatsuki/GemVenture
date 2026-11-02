@@ -1,0 +1,15 @@
+{
+  "id": "RABBIT-OFFICIAL-20261102-R1",
+  "approval": "aprovado, pode aplicar no jogo real",
+  "source": "RABBIT-TEST01 r1",
+  "scope": "Seven approved rabbit presentation files; World preserves concurrently added chest-treasure integration; no palette or combat change",
+  "files": {
+    "world.js": "c632db7a5c2b59beae99fdafff059a667aa2c371dc31319aae6c97f8d781f810",
+    "audio.js": "44d8d5a2165ca13504ba5c0225ad3e1fcee0bb8df811f9e4639a10fc2d796911",
+    "rabbit-presentation.js": "51e7d7d4729f480f05d462864e5cc4619c9beea2d9aa380401cf6e69b052a738",
+    "rabbit-impact-vfx.js": "dfd9f69cb3a8a041477c9c45a5f86ec9ad4eac0db47c1c15546112455870dca6",
+    "carrot-telegraph-art.js": "6eedd222b151861c123ed196f081e71d2be2248ea37cc7039707d8b3f084e079",
+    "rabbit-polished.js": "e825706e51341bb7812cbb7bdd647680dc39755437803bba9b5e174f8de43ac9",
+    "rabbit-polished-sfx.js": "e2468bff5b4de016ebcdbe50cbd30e77491a6a65eff8d26fd6ae907787d0dd83"
+  }
+}

@@ -7,8 +7,8 @@ import {depthDifficulty,mineralYield,rarePayment} from '../dist/balance.js';
 import {heatState,secureCargo} from '../dist/frenzy.js';
 import {forgeProject} from '../dist/forge.js';
 import {sightRange} from '../dist/cavern.js';
-test('30 different permanent echoes cost 35 stars, offer three unowned choices and cannot reroll an unpaid or pending offer',()=>{
- assert.equal(ASTRAL_RELICS.length,30);assert.equal(new Set(ASTRAL_RELICS.map(r=>r.effect)).size,30);const s=E.createState(15);s.stars=34;assert.equal(rollAstral(s),false);s.stars=70;assert.ok(rollAstral(s));assert.equal(s.stars,35);const offer=[...s.astral.offer];assert.equal(new Set(offer).size,3);assert.equal(rollAstral(s),false);
+test('30 different permanent echoes cost four stars, offer three unowned choices and cannot reroll an unpaid or pending offer',()=>{
+ assert.equal(ASTRAL_RELICS.length,30);assert.equal(new Set(ASTRAL_RELICS.map(r=>r.effect)).size,30);const s=E.createState(15);s.stars=ASTRAL_COST-1;assert.equal(rollAstral(s),false);s.stars=ASTRAL_COST*2;assert.ok(rollAstral(s));assert.equal(s.stars,ASTRAL_COST);const offer=[...s.astral.offer];assert.equal(new Set(offer).size,3);assert.equal(rollAstral(s),false);
  const t=E.restoreState(JSON.stringify(s));assert.deepEqual(t.astral.offer,offer);assert.ok(chooseAstral(t,offer[0]));assert.equal(chooseAstral(t,offer[1]),false);assert.ok(rollAstral(t));assert.equal(t.astral.offer.includes(offer[0]),false);assert.equal(t.stars,0);
 });
 test('collection completes without duplicates, last offers shrink and equipment is limited to three',()=>{

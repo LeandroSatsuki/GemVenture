@@ -1,0 +1,34 @@
+@font-face{font-family:'Expedition Fredoka';src:url('assets/expedition-fonts/Fredoka-600-Static.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'Expedition Nunito';src:url('assets/expedition-fonts/Nunito-600-Static.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'Expedition Nunito';src:url('assets/expedition-fonts/Nunito-800-Static.ttf') format('truetype');font-weight:800;font-display:swap}
+@font-face{font-family:'Expedition Nunito';src:url('assets/expedition-fonts/Nunito-900-Static.ttf') format('truetype');font-weight:900;font-display:swap}
+#dialog.gv-expedition-theme[data-gv-expedition]{--body:'Expedition Nunito','Trebuchet MS','Segoe UI',sans-serif;--arcade:'Expedition Fredoka','Arial Rounded MT Bold',sans-serif;--exp-surface:#005f41;--exp-inset:#053239;--exp-text:#fbbe82;--exp-muted:#c5cddb;--exp-action:#ecab11;--exp-ink:#180d2f;--exp-selected:#de9751;--exp-depth:#8a4926;--exp-focus:#e8ff75;background:var(--exp-surface);color:var(--exp-text);font-family:var(--body);border-color:var(--exp-depth)}
+#dialog.gv-expedition-theme[data-gv-expedition] .dialog-top{background:var(--exp-surface)}
+#dialog.gv-expedition-theme[data-gv-expedition] #dialogLabel{font:600 24px/1.2 var(--arcade);color:var(--exp-text);text-transform:none;letter-spacing:0}
+#dialog.gv-expedition-theme[data-gv-expedition] :is(h2,h3){font-family:var(--arcade)!important;font-weight:600!important;color:var(--exp-text)!important;text-shadow:none}
+#dialog.gv-expedition-theme[data-gv-expedition] #close{background:var(--exp-inset);color:var(--exp-text);border-color:var(--exp-depth)}
+#dialog.gv-expedition-theme[data-gv-expedition] :is(button,strong,small,span,p,label,summary){font-family:var(--body)}
+#dialog.gv-expedition-theme[data-gv-expedition] :is(small,.lift-unknown,.lift-floor-address,.lift-floor-resource,.lift-unexplored-note,.lift-floor-record,.lift-progress span){color:var(--exp-muted);font-weight:600}
+#dialog.gv-expedition-theme[data-gv-expedition] :is(.lift-floor-panel,.lift-mode-nav button,.lift-floor-nav .map-floor,.lift-biome-nav button){background:var(--exp-inset);color:var(--exp-text);border-color:var(--exp-depth)}
+#dialog.gv-expedition-theme[data-gv-expedition] :is(.lift-biome-nav strong,.lift-progress strong,.lift-floor-record strong,.lift-biome-number){color:var(--exp-text)}
+#dialog.gv-expedition-theme[data-gv-expedition] :is(.lift-mode-nav button,.lift-biome-nav button,.lift-floor-nav .map-floor)[aria-pressed=true]{background:var(--exp-selected);color:var(--exp-ink);border-color:var(--exp-focus);box-shadow:inset 0 -3px var(--exp-depth)}
+#dialog.gv-expedition-theme[data-gv-expedition] :is(.lift-mode-nav button,.lift-biome-nav button,.lift-floor-nav .map-floor)[aria-pressed=true] :is(strong,small,span){color:inherit}
+#dialog.gv-expedition-theme[data-gv-expedition] :is(.lift-stop-caption,.lift-stop-price>span){color:var(--exp-text)!important}
+#dialog.gv-expedition-theme[data-gv-expedition] .lift-stop-price>span.insufficient{color:#f78d8d!important}
+#dialog.gv-expedition-theme[data-gv-expedition] .lift-stop-state{color:var(--exp-text)}
+#dialog.gv-expedition-theme[data-gv-expedition] :is(.lift-progress,.lift-floor-action){border-color:var(--exp-depth)}
+#dialog.gv-expedition-theme[data-gv-expedition] button{color:var(--exp-text);background:var(--exp-inset);border-color:var(--exp-depth);translate:none!important;transform:none!important;filter:none!important;transition:box-shadow 90ms,background-color 90ms,color 90ms}
+#dialog.gv-expedition-theme[data-gv-expedition] button:not(:disabled){box-shadow:inset 0 2px #ffffff25,inset 0 -3px var(--exp-depth)}
+#dialog.gv-expedition-theme[data-gv-expedition] button:not(:disabled):hover{box-shadow:inset 0 2px #ffffff45,inset 0 -4px var(--exp-depth)}
+#dialog.gv-expedition-theme[data-gv-expedition] button:not(:disabled):active{box-shadow:inset 0 3px var(--exp-depth),inset 0 -1px #ffffff20}
+#dialog.gv-expedition-theme[data-gv-expedition] button.primary{background:var(--exp-action)!important;color:var(--exp-ink)!important;border-color:var(--exp-depth)!important;font-weight:800}
+#dialog.gv-expedition-theme[data-gv-expedition] button.primary:not(:disabled){box-shadow:inset 0 2px #ffffff25,inset 0 -4px var(--exp-depth)!important}
+#dialog.gv-expedition-theme[data-gv-expedition] button.primary:not(:disabled):hover{box-shadow:inset 0 2px #ffffff45,inset 0 -5px var(--exp-depth)!important}
+#dialog.gv-expedition-theme[data-gv-expedition] button.primary:not(:disabled):active{box-shadow:inset 0 4px var(--exp-depth),inset 0 -1px #ffffff20!important}
+#dialog.gv-expedition-theme[data-gv-expedition] button:disabled{background:var(--exp-inset)!important;color:var(--exp-muted)!important;opacity:1!important;box-shadow:none!important;border-color:var(--exp-depth)!important;border-style:dashed}
+#dialog.gv-expedition-theme[data-gv-expedition] button:focus-visible{outline:3px solid var(--exp-focus);outline-offset:3px}
+#dialog.gv-expedition-theme[data-gv-expedition] :is(.lift-biome-nav small,.lift-biome-heading small,.lift-biome-heading>span,.lift-floor-address,.lift-floor-resource,.lift-floor-record,.lift-progress span,.lift-unknown){font-size:12px}
+#dialog.gv-expedition-theme[data-gv-expedition] .lift-stop-price .lift-stop-caption{font:600 12px var(--body)}
+#dialog.gv-expedition-theme[data-gv-expedition] .map-floor small{font-size:11px}
+.soft-fx #dialog.gv-expedition-theme[data-gv-expedition] button{transition:none}
+@media(prefers-reduced-motion:reduce){#dialog.gv-expedition-theme[data-gv-expedition] button{transition:none}}

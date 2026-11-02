@@ -1,0 +1,9 @@
+{
+  "authorization": "User requested stronger biome-colored ambient particles, correction of reversed held pickaxe and redder ruby",
+  "files": {
+    "dungeon-miner.js": "d2e44b6974eee8319e72b96503ee7287308fd80d5454c620d53884abbde67508",
+    "dungeon-environment.js": "df2485a2c73a372d5dd1b705385e522c02d61fe168e11ef4fa00ffdf1aaa22f1",
+    "world.js": "e703e6b80ac90098d386677550079a287699ea70b0e84cc9c6bca53a426ac9ed",
+    "crystal-veins.js": "987d16dec91b8dc5c81875a919420181d11763ee5b34821ff2103b0de4aef8ac"
+  }
+}

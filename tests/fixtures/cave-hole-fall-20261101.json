@@ -1,0 +1,9 @@
+{
+  "id": "CAVE-HOLE-FALL-20261101-R6",
+  "authority": "Pedido humano direto: queda no buraco até desaparecer, conclusão visível após animação.",
+  "files": {
+    "world.js": "aba88ef9d072b9a8cd9608a7211b1f1e7cb6de19ad8d1a662bca6c9ac5c4742b",
+    "run.js": "0b246cd9c3ab48384872b9670befb026e28e6bfd2069a6bbc9751f7dbce9b05e",
+    "cave-hole-descent.js": "5895b8de54c4180ecc8c56b9a9f945a1e8f63bf9b4012ffadea9e12cba541e98"
+  }
+}

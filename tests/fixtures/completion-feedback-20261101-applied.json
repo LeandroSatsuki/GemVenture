@@ -1,0 +1,10 @@
+{
+  "id": "VFX/COMPLETION-REWARDS/APPLIED",
+  "approvedOn": "2026-11-01",
+  "authorization": "Aprovado. ... aplica essa tela ... Direção de Som ... aplicar o barulhinho de som de moedinha enchendo.",
+  "scope": "Approved P1 completion effects on current official UI; remove pilot-only tracing. Audio delegated to Direção de Som. Preserve payout, save, layout, icons, native sound and counters.",
+  "files": {
+    "completion-feedback.js": "0e2228fa543ce1239d8e87a736d582a92d5e2d6f885ed4325bcfb32ac83f1e55",
+    "return-screen.js": "9c0239cbf54cde29bcff0f40cf18b7506fa1338913dd680f6fc4eb6c12673bef"
+  }
+}

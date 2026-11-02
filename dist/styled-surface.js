@@ -1,0 +1,20 @@
+// Shadow stylesheets do not block the document's first paint. Hold the whole
+// subtree atomically, including descendants that explicitly set visibility.
+export function prepareStyledSurface(host,shadow,{timeoutMs=12000}={}){
+ if(host.gvStyledSurface)return host.gvStyledSurface;
+ const doc=host.ownerDocument,win=doc.defaultView;
+ if(!win?.MutationObserver||!win?.requestAnimationFrame)return {ready:Promise.resolve(true),dispose(){}};
+ const owned=['opacity','contain','width','height','overflow'],original=new Map(owned.map(k=>[k,[host.style.getPropertyValue(k),host.style.getPropertyPriority(k)]])),originalInert=host.inert;
+ let disposed=false,generation=0,notice=null,timer=null,offs=[],resolve;const ready=new Promise(r=>resolve=r);
+ function hold(){host.style.setProperty('opacity','0','important');for(const [k,v]of Object.entries({contain:'size layout paint',width:'100%',height:'100%',overflow:'clip'}))host.style.setProperty(k,v,'important');host.inert=true;host.dataset.uiSurfaceState='loading';host.setAttribute('aria-busy','true');}
+ function cleanup(){clearTimeout(timer);timer=null;for(const off of offs)off();offs=[];}
+ function restoreKeys(keys){for(const key of keys){const value=original.get(key);if(value[0])host.style.setProperty(key,...value);else host.style.removeProperty(key);}}
+ function restore(){restoreKeys(owned);host.inert=originalInert;host.removeAttribute('aria-busy');}
+ function fail(epoch){if(disposed||epoch!==generation)return;cleanup();host.dataset.uiSurfaceState='error';host.style.setProperty('height','0px','important');resolve(false);if(!host.isConnected)return;notice?.remove();notice=doc.createElement('div');notice.setAttribute('role','alert');notice.style.cssText='padding:20px;background:#06132b;color:#edf4ff;border:2px solid #26538c;border-radius:12px;font:600 16px Nunito,sans-serif';notice.innerHTML='<p>Não foi possível carregar esta tela.</p><button type="button">Tentar novamente</button>';host.after(notice);notice.querySelector('button').onclick=()=>{for(const link of shadow.querySelectorAll('link[rel="stylesheet"]'))if(!link.sheet){const url=new URL(link.href);url.searchParams.set('uiRetry',String(Date.now()));link.href=url.href;}load();};}
+ function stylesheet(link){return new Promise((ok,no)=>{if(link.sheet){ok();return;}const done=()=>ok(),error=()=>no(Error('stylesheet'));link.addEventListener('load',done,{once:true});link.addEventListener('error',error,{once:true});offs.push(()=>{link.removeEventListener('load',done);link.removeEventListener('error',error);});});}
+ async function load(){if(disposed)return;const epoch=++generation;cleanup();notice?.remove();notice=null;hold();timer=setTimeout(()=>fail(epoch),timeoutMs);try{const links=[...shadow.querySelectorAll('link[rel="stylesheet"]')].filter(l=>!l.disabled);await Promise.all(links.map(stylesheet));await doc.fonts?.ready;if(disposed||epoch!==generation||host.dataset.uiSurfaceState==='error')return;restoreKeys(owned.filter(k=>k!=='opacity'));for(let i=0;i<2;i++)await new Promise(r=>win.requestAnimationFrame(()=>r()));if(disposed||epoch!==generation||host.dataset.uiSurfaceState==='error')return;cleanup();restore();host.dataset.uiSurfaceState='ready';resolve(true);
+   const active=doc.activeElement,dialog=host.closest?.('dialog');if(host.isConnected&&!host.closest?.('[hidden]')&&(active===doc.body||active===host||active===dialog))shadow.querySelector('button:not(:disabled),[tabindex="0"]')?.focus?.({preventScroll:true});
+  }catch{fail(epoch);}}
+ hold();const observer=new win.MutationObserver(records=>{if(records.some(r=>[...r.addedNodes,...r.removedNodes].some(n=>n.nodeType===1&&(n.matches?.('link[rel="stylesheet"]')||n.querySelector?.('link[rel="stylesheet"]')))))void load();});observer.observe(shadow,{childList:true,subtree:true});
+ queueMicrotask(()=>void load());const api={ready,dispose(){if(disposed)return;disposed=true;generation++;cleanup();observer.disconnect();notice?.remove();restore();resolve(false);}};host.gvStyledSurface=api;return api;
+}

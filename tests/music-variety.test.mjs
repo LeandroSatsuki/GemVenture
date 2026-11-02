@@ -4,6 +4,7 @@ import {RECORDS,restoreRecords,recordById} from '../dist/records.js';
 import {arrangementStep,ARRANGEMENTS} from '../dist/music-arrangements.js';
 import {ALL_TRACKS,trackBeatTime,trackIndexForFloor} from '../dist/score.js';
 import {Music} from '../dist/audio.js';
+import {homeAudioContext} from './fixtures/home-audio.mjs';
 import {playInstrument} from '../dist/music-instruments.js';
 
 test('all collectible discs have distinct scores, including techno, rock and new vocal arrangements',()=>{
@@ -30,7 +31,7 @@ test('biome harmony gives different phrases even to regions sharing a base key',
 });
 test('previewing techno and rock for five seconds leaves the equipped disc intact',()=>{
  for(const id of ['circuit','iron','dusk','voice','rush','pixel','swing','turbo']){
-  const m=new Music(),notes=[];m.enabled=true;m.ctx={currentTime:2,state:'running'};m.master={gain:{setTargetAtTime(){}}};m.tone=(...a)=>notes.push(a);m.noise=()=>{};
+  const m=new Music(),notes=[];m.enabled=true;m.ctx=homeAudioContext(2);m.master={gain:{setTargetAtTime(){}}};m.tone=(...a)=>notes.push(a);m.noise=()=>{};
   assert.ok(m.previewRecord(id));m.home(0);assert.equal(m.track,recordById(id).previewTrack);assert.ok(notes.length);
   assert.equal(m.record.id,'pulse');m.ctx.currentTime=7;m.home(0);assert.equal(m.preview,null);assert.equal(m.track,'home');
  }

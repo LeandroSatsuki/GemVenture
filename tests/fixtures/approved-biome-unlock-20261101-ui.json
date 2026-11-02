@@ -1,0 +1,11 @@
+{
+  "id": "BIOME-UNLOCK-UI-INTEGRATION-20261101",
+  "authorization": "aprovado, pode apligar no agme oficial, pode seguir com o proximo",
+  "scope": "Only approved biome unlock presentation; no domain or economy writes.",
+  "files": {
+    "approved-lift-ui.js": "44fab67d4de8e94ee87bc1ccda7b1a2e4911d10c170a23e382c4b072d0e71803",
+    "approved-biome-unlock.js": "8b033dcf14497c153b4c1774a7a802bf69c4a84558f91958b591e1fcc8c6cc6e",
+    "approved-biome-unlock.css": "8656919af0310bff2089670067f2e613c810a7f25f8e252e79a58f0f6744c210"
+  },
+  "receipt": "E:\\Genventure\\coordination\\BIOME-UNLOCK-UI-INTEGRATION-20261101\\APPLIED-RECEIPT.json"
+}

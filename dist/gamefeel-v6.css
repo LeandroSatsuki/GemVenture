@@ -1,0 +1,110 @@
+/* Measured Forja language; content-sized desktop dialogs, not its full dimensions. */
+body #dialog[data-service]:is([data-service=rest],[data-service=help],[data-service=wardrobe],[data-service=missions],[data-service=statue],[data-service=records],[data-service=shop],[data-service=retreat]){
+ --r2-page:#0b2450;--r2-panel:#0b2450;--r2-inset:#071a37;--r2-ink:#020816;--r2-text:#edf4ff;--r2-muted:#bfd0e8;
+ position:fixed!important;inset:50% auto auto 50%!important;transform:translate(-50%,-50%)!important;margin:0!important;
+ width:min(var(--compact-width,880px),calc(100vw - 40px))!important;height:auto!important;min-height:0!important;max-height:calc(100dvh - 40px)!important;
+ padding:0!important;overflow:hidden!important;background:#0b2450!important;border:3px solid #020816!important;border-radius:18px!important;color:#edf4ff!important;font:600 16px/1.4 'GV R2 Body',sans-serif!important;
+}
+body #dialog[data-service=help],body #dialog[data-service=shop]{--compact-width:660px}
+body #dialog[data-service=rest],body #dialog[data-service=retreat]{--compact-width:760px}
+body #dialog[data-service=wardrobe]{--compact-width:850px}
+body #dialog[data-service=statue]{--compact-width:820px}
+body #dialog[data-service=missions],body #dialog[data-service=records]{--compact-width:1000px}
+body #dialog[data-service]:is([data-service=rest],[data-service=help],[data-service=wardrobe],[data-service=missions],[data-service=statue],[data-service=records],[data-service=shop],[data-service=retreat]) .dialog-top{height:66px!important;min-height:66px!important;padding:10px 20px!important;background:linear-gradient(#0b2e70,#071d45)!important;border-bottom:3px solid #020816!important;display:flex!important;align-items:center!important}
+body #dialog[data-service] #dialogLabel{font:600 32px/1.2 'GV R2 Display',sans-serif!important;color:#edf4ff!important;letter-spacing:0!important}
+body #dialog[data-service]:is([data-service=rest],[data-service=help],[data-service=wardrobe],[data-service=missions],[data-service=statue],[data-service=records],[data-service=shop],[data-service=retreat]) #dialogBody{height:auto!important;min-height:0!important;max-height:calc(100dvh - 114px)!important;flex:0 1 auto!important;overflow:auto!important;padding:16px 20px 20px!important;font:600 16px/1.4 'GV R2 Body',sans-serif!important;background:transparent!important}
+body #dialog[data-service]:is([data-service=rest],[data-service=help],[data-service=wardrobe],[data-service=missions],[data-service=statue],[data-service=records],[data-service=shop],[data-service=retreat]) :is(.primary,.secondary){min-height:44px!important;height:auto!important;padding:8px 14px!important;font:600 18px/1.2 'GV R2 Display',sans-serif!important;border:3px solid #020816!important;border-radius:12px!important;color:#edf4ff!important;box-shadow:inset 0 2px #ffffff22,0 2px #020816!important}
+body #dialog[data-service] .primary{background:linear-gradient(#ffbc00,#ff7600)!important;color:#fff!important;text-shadow:0 2px #563112!important}
+body #dialog[data-service] .secondary{background:linear-gradient(#10416a,#0b254a)!important}
+body #dialog[data-service] #close{width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;padding:0!important;border:3px solid #020816!important;border-radius:12px!important;background:linear-gradient(#ff5264,#b41b42)!important;color:#edf4ff!important;font:32px 'GV R2 Display',sans-serif!important}
+body #dialog[data-service=rest] .camp-scene{display:block!important;width:120px!important;height:100px!important;margin:0 auto 4px!important}
+body #dialog[data-service=rest] .camp-scene img{width:100%!important;height:100%!important;object-fit:contain}
+body #dialog[data-service=rest] .rest-heading{background:transparent!important}
+body #dialog[data-service=rest] .rest-heading h2{font:600 28px/1.2 'GV R2 Display',sans-serif!important;margin:4px 0!important;color:#edf4ff!important}
+body #dialog[data-service=rest] .rest-heading p{font:800 14px/1.4 'GV R2 Body',sans-serif!important;color:#bfd0e8!important;margin:4px 0!important}
+body #dialog[data-service=rest] .rest-heading>strong{display:block!important;font:800 16px/1.4 'GV R2 Body',sans-serif!important;padding:8px!important;border-radius:10px!important;background:#071a37!important}
+body #dialog[data-service=rest] .camp-offers{gap:10px!important;margin:12px 0!important;background:transparent!important}
+body #dialog[data-service=rest] .camp-offers article{padding:12px!important;gap:8px!important;min-height:0!important;background:#071a37!important}
+body #dialog[data-service=rest] .camp-offers h3{font:600 20px/1.2 'GV R2 Display',sans-serif!important}
+body #dialog[data-service=rest] .camp-offers strong,body #dialog[data-service=rest] .camp-offers p{font:800 16px/1.3 'GV R2 Body',sans-serif!important;color:#edf4ff!important;margin:0!important}
+body #dialog[data-service=rest] .rest-actions{margin:12px 0 0!important;gap:10px!important}
+body #dialog[data-service=help] :is(h2,strong){font:600 22px/1.2 'GV R2 Display',sans-serif!important}
+body #dialog[data-service=help] .help-grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important}
+body #dialog[data-service=help] .help-grid>div{padding:12px;background:#071a37;border-radius:10px}
+body #dialog[data-service=help] p{font:600 16px/1.4 'GV R2 Body',sans-serif!important;margin:8px 0!important}
+body #dialog[data-service=help] .mission-rules{margin:12px 0!important;padding:10px!important;background:#071a37!important}
+body #dialog[data-service=wardrobe] .nl-wardrobe{padding:0!important;background:transparent!important}
+body #dialog[data-service=wardrobe] .nl-wardrobe-layout{display:grid!important;grid-template-columns:260px minmax(0,1fr)!important;gap:18px!important;min-height:0!important}
+body #dialog[data-service=wardrobe] .nl-model{min-height:0!important;padding:0!important;display:flex;flex-direction:column;justify-content:center;background:#071a37!important;border-radius:12px}
+body #dialog[data-service=wardrobe] .nl-model canvas{width:250px!important;height:219px!important;max-width:100%!important}
+body #dialog[data-service=wardrobe] .nl-model strong{font-size:15px!important}
+body #dialog[data-service=wardrobe] .nl-wardrobe-detail{padding:0!important}
+body #dialog[data-service=wardrobe] .nl-tabs{margin:0 0 12px!important;gap:8px!important}
+body #dialog[data-service=wardrobe] .nl-tabs button{min-height:36px!important;padding:7px 12px!important;font:800 15px 'GV R2 Body',sans-serif!important}
+body #dialog[data-service=wardrobe] .outfit-tabs{display:flex;flex-wrap:wrap;gap:5px}
+body #dialog[data-service=wardrobe] .outfit-tabs button{padding:7px 9px!important;min-height:34px!important;font:800 14px 'GV R2 Body',sans-serif!important;background:#071a37!important;color:#bfd0e8!important;border:2px solid #244975!important;border-radius:8px!important}
+body #dialog[data-service=wardrobe] .outfit-tabs button[aria-selected=true]{background:#10416a!important;color:#fff!important;border-color:#78f5ff!important}
+body #dialog[data-service=wardrobe] .outfit-options{display:flex;flex-wrap:wrap;gap:10px;padding:12px 0;min-height:125px}
+body #dialog[data-service=wardrobe] .outfit-item{width:124px!important;display:flex;flex-direction:column;align-items:center;position:relative;gap:5px}
+body #dialog[data-service=wardrobe] .outfit-item svg{width:92px;height:70px}
+body #dialog[data-service=wardrobe] .outfit-item b{position:absolute;right:5px;top:3px;color:#a2e66f}
+body #dialog[data-service=wardrobe] dl{display:flex;gap:14px;margin:6px 0 12px!important}
+body #dialog[data-service=wardrobe] dl>div{padding:6px!important;background:transparent!important}
+body #dialog[data-service=wardrobe] :is(dt,dd){font-size:14px!important;margin:0!important}
+#wardrobeStatus:empty{display:none}
+/* The tiny list belongs to the star column, not to the combo burst. */
+body.hud-clean-v5.hud-v5 #hud5Root #runCards{position:absolute!important;left:auto!important;top:auto!important;bottom:95px!important;right:116px!important;width:174px!important;max-width:174px!important;max-height:calc(100% - 300px)!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;flex-wrap:nowrap!important;gap:4px!important;padding:0!important;pointer-events:auto!important}
+body.hud-clean-v5.hud-v5 #hud5Root #runCards .card-chip{display:flex!important;flex:none!important;align-items:center!important;width:100%!important;height:30px!important;min-height:30px!important;padding:3px 6px!important;gap:5px!important;border:1px solid #244975!important;border-left:3px solid var(--card)!important;border-radius:7px!important;background:#071a37e6!important;box-shadow:none!important}
+body.hud-clean-v5.hud-v5 #hud5Root #runCards .card-chip>div{display:flex!important;align-items:center!important;flex:1;min-width:0;gap:4px}
+body.hud-clean-v5.hud-v5 #hud5Root #runCards .card-chip strong{display:block!important;font:800 11px/1.1 'GV R2 Body',sans-serif!important;white-space:normal!important;color:#edf4ff!important;flex:1}
+body.hud-clean-v5.hud-v5 #hud5Root #runCards .card-chip b{display:block!important;font:800 10px 'GV R2 Body',sans-serif!important;color:#ffd95a!important;white-space:nowrap}
+body.hud-clean-v5.hud-v5 #hud5Root #runCards .card-chip :is(svg,img,.glyph){width:23px!important;height:23px!important;flex:0 0 23px!important}
+body.hud-clean-v5.hud-v5 #hud5Root #runCards :is(.cards-caption,.cards-empty,.card-chip small){display:none!important}
+body.hud-clean-v5.hud-v5 #hud5Root #procFeed{position:absolute!important;left:auto!important;top:auto!important;bottom:76px!important;right:116px!important;width:174px!important}
+body.hud-clean-v5.hud-v5 #hud5Root #procFeed .proc-label{font-size:11px!important;padding:3px!important}
+body.hud-clean-v5.hud-v5 #hud5Root #procFeed img{width:20px!important;height:20px!important}
+body.hud-clean-v5 .hud .exploration{top:auto!important;bottom:0!important;left:0!important;width:200px!important;height:45px!important}
+body.hud-clean-v5.hud-v5 #hud5Root #frenzyHud{position:absolute!important;top:auto!important;bottom:51px!important;left:0!important;width:200px!important;min-height:0!important;padding:5px!important;font-size:11px!important}
+/* Settings share Forja fields; radios must not inherit the range-input dimensions. */
+body #menuShell .menu-settings{position:absolute!important;inset:50% auto auto 50%!important;transform:translate(-50%,-50%);margin:0!important;width:min(560px,calc(100vw - 32px))!important;max-height:calc(100dvh - 32px);overflow:auto;padding:20px!important;background:#0b2450!important;border:3px solid #020816!important;border-radius:18px!important;color:#edf4ff!important;font:600 16px/1.4 'GV R2 Body',sans-serif!important}
+body #menuShell .menu-settings h1{font:600 32px/1.2 'GV R2 Display',sans-serif!important;color:#edf4ff!important;margin:0 0 14px!important}
+body #menuShell .menu-settings :is(label,legend,output){font:800 16px/1.4 'GV R2 Body',sans-serif!important;color:#edf4ff!important}
+body #menuShell .settings-range{margin:12px 0!important;gap:5px!important}
+body #menuShell .settings-visual{display:flex!important;gap:8px!important}
+body #menuShell .settings-visual label{flex:1!important;min-width:0!important;min-height:38px!important;padding:7px!important;background:#071a37!important;border:2px solid #244975!important}
+body #menuShell .settings-visual input[type=radio],body #menuShell input[type=checkbox]{appearance:auto!important;position:static!important;transform:none!important;width:18px!important;height:18px!important;min-width:18px!important;min-height:18px!important;margin:0!important;accent-color:#ffbc00;box-shadow:none!important}
+body #menuShell #settingsAudioStatus{min-height:0!important;margin:12px 0!important;font:600 13px/1.4 'GV R2 Body',sans-serif!important;color:#bfd0e8!important}
+body #menuShell #settingsBack{min-height:44px!important;padding:8px 14px!important;font:600 18px 'GV R2 Display',sans-serif!important;background:linear-gradient(#ffbc00,#ff7600)!important;border:3px solid #020816!important;border-radius:12px!important;color:#fff!important}
+.tutor-root[data-step=hub-catalog] .tutor-panel{width:min(640px,calc(100vw - 28px))!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;max-height:calc(100dvh - 100px)!important;background:#0b2450!important;padding:20px!important;border:3px solid #020816!important;border-radius:18px!important}
+.tutor-root[data-step=hub-catalog] .tutor-panel h2{font:600 28px/1.2 'GV R2 Display',sans-serif!important;margin:0 0 10px!important}
+.tutor-root[data-step=hub-catalog] .tutor-panel p{font:600 16px/1.4 'GV R2 Body',sans-serif!important}
+.tutor-root[data-step=hub-catalog] .hub-guide-list{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.tutor-root[data-step=hub-catalog] .hub-guide-list button{min-height:44px!important;padding:6px 9px!important;font:800 14px 'GV R2 Body',sans-serif!important;background:#071a37!important;border:2px solid #244975!important;border-radius:9px!important;color:#edf4ff!important}
+.tutor-root[data-step=hub-catalog] .hub-guide-list img{width:30px!important;height:30px!important}
+@media(max-width:780px){body #dialog[data-service=wardrobe] .nl-wardrobe-layout{grid-template-columns:190px minmax(0,1fr)!important}body #dialog[data-service=wardrobe] .nl-model canvas{width:180px!important;height:158px!important}}
+
+body #dialog[data-service=statue] .statue-score{grid-template-columns:160px minmax(0,1fr)!important;gap:20px!important;padding:14px!important;min-height:0!important;background:#071a37!important}
+body #dialog[data-service=statue] .statue-score-art img{width:150px!important;height:220px!important}
+body #dialog[data-service=statue] .statue-score :is(p,summary,li){font-size:15px!important;color:#bfd0e8!important}
+body #dialog[data-service=records] .records-head{min-height:0!important;padding:10px 14px!important;gap:18px!important;margin-bottom:12px!important}
+body #dialog[data-service=records] .records-head h2{font:600 26px 'GV R2 Display',sans-serif!important}
+body #dialog[data-service=records] .records-head :is(strong,p){font-size:15px!important}
+body #dialog[data-service=records] .gramophone-scene{width:120px!important;height:94px!important;transform:scale(.65);transform-origin:left top;margin-right:-40px;margin-bottom:-35px}
+body #dialog[data-service=missions] .missions-board{min-height:0!important}
+body #dialog[data-service=shop] .nl-collection-menu{padding:12px!important}
+body #dialog[data-service=shop] .nl-collection-menu p{font-size:16px!important}
+
+body #dialog[data-service=wardrobe] .outfit-slots{display:block!important;grid-template-columns:none!important;padding:0!important}
+body #dialog[data-service=wardrobe] .outfit-tabs{display:flex!important;flex-direction:row!important;flex-wrap:wrap!important}
+body #dialog[data-service=wardrobe] .outfit-tabs button{height:34px!important;flex:0 0 auto!important}
+body #dialog[data-service=wardrobe] dl{justify-content:flex-start!important}
+body #dialog[data-service=wardrobe] dl>div{display:flex!important;gap:7px!important}
+
+body.hud-clean-v5.hud-v5 #hud5Root #frenzyHud :is(strong,#heatValue,#heatLoot){font:800 12px/1.2 "GV R2 Body",sans-serif!important}
+body.hud-clean-v5.hud-v5 #hud5Root #frenzyHud .heat-track{height:5px!important;margin:4px 0!important}
+body.hud-clean-v5.hud-v5 #hud5Root #runCards{background:transparent!important;border:0!important;box-shadow:none!important}
+
+body #dialog[data-service=help] .help-grid>div:last-child:nth-child(odd){grid-column:1/-1}
+body #dialog[data-service=statue] .statue-score :is(p,summary,li){font:600 15px/1.4 'GV R2 Body',sans-serif!important}
+body #dialog[data-service=statue] .statue-score-data>strong{font-family:'GV R2 Display',sans-serif!important}
+body #dialog[data-service=wardrobe] .outfit-item svg{overflow:hidden!important}

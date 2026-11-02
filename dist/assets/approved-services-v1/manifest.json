@@ -1,0 +1,12 @@
+{
+  "id": "approved-forge-echo-tree-20261031",
+  "approval": "Direct human approval in UI chat on 2026-10-31: apply Forja v6 and Árvore dos Ecos v9 with their approved visuals and game feel",
+  "file": "ecos-cave.png",
+  "sha256": "df404fb094cf5432d98c474193081bace1bec792c02707b4a88d940f73714082",
+  "source": "coordination/UI-SYSTEM-PROPOSAL-20261030/v9/cave-background-original.png",
+  "productionMetadata": "coordination/UI-SYSTEM-PROPOSAL-20261030/v9/ART-METADATA.json",
+  "tool": "built-in image_gen",
+  "operation": "Original PNG copied byte for byte; quiet blue overlay is CSS only",
+  "consumers": ["approved-services.css", "approved-tree-ui.js"],
+  "scope": "Talent-map backdrop only; no world-scene or gameplay change"
+}

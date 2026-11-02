@@ -1,0 +1,3397 @@
+{
+  "id": "PICKAXE-VIGOR-BALANCE-20261102-R1",
+  "authority": "coordination/pickaxe-vigor-balance-20261102-r1/HUMAN-APPROVAL.json",
+  "files": {
+    "forge.js": "7994617e876dde464a9de79ed56febc123ecd9649008cab6ae65710c44420909",
+    "core.js": "0edc3c81a4ef5d3ed931fc7cad32b674f53aaa77cc9113a02312ae94ce07170d"
+  },
+  "priceAndBenefitBaseline": {
+    "sourceSha256": "ce95b51a861dbc40abce9ab03af10547b468114072cad260286b0b6379b57f8c",
+    "rows": [
+      {
+        "equipment": "pickaxe",
+        "to": 2,
+        "coins": 35,
+        "materials": [
+          4,
+          2,
+          0,
+          0
+        ],
+        "A": {
+          "value": 1.16
+        },
+        "B": {
+          "value": 1.2
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 3,
+        "coins": 43,
+        "materials": [
+          8,
+          4,
+          0,
+          0
+        ],
+        "A": {
+          "value": 1.319265
+        },
+        "B": {
+          "value": 1.398449
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 4,
+        "coins": 53,
+        "materials": [
+          12,
+          6,
+          0,
+          0
+        ],
+        "A": {
+          "value": 1.477796
+        },
+        "B": {
+          "value": 1.595347
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 5,
+        "coins": 64,
+        "materials": [
+          16,
+          8,
+          4,
+          0
+        ],
+        "A": {
+          "value": 1.635592
+        },
+        "B": {
+          "value": 1.790694
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 6,
+        "coins": 77,
+        "materials": [
+          20,
+          10,
+          5,
+          0
+        ],
+        "A": {
+          "value": 1.792653
+        },
+        "B": {
+          "value": 1.98449
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 7,
+        "coins": 91,
+        "materials": [
+          24,
+          12,
+          6,
+          0
+        ],
+        "A": {
+          "value": 1.94898
+        },
+        "B": {
+          "value": 2.176735
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 8,
+        "coins": 107,
+        "materials": [
+          28,
+          14,
+          7,
+          0
+        ],
+        "A": {
+          "value": 2.104571
+        },
+        "B": {
+          "value": 2.367429
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 9,
+        "coins": 124,
+        "materials": [
+          32,
+          16,
+          8,
+          0
+        ],
+        "A": {
+          "value": 2.259429
+        },
+        "B": {
+          "value": 2.556571
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 10,
+        "coins": 143,
+        "materials": [
+          36,
+          18,
+          9,
+          0
+        ],
+        "A": {
+          "value": 2.413551
+        },
+        "B": {
+          "value": 2.744163
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 11,
+        "coins": 164,
+        "materials": [
+          40,
+          20,
+          10,
+          0
+        ],
+        "A": {
+          "value": 2.566939
+        },
+        "B": {
+          "value": 2.930204
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 12,
+        "coins": 188,
+        "materials": [
+          44,
+          22,
+          11,
+          0
+        ],
+        "A": {
+          "value": 2.719592
+        },
+        "B": {
+          "value": 3.114694
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 13,
+        "coins": 213,
+        "materials": [
+          48,
+          24,
+          12,
+          0
+        ],
+        "A": {
+          "value": 2.87151
+        },
+        "B": {
+          "value": 3.297633
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 14,
+        "coins": 240,
+        "materials": [
+          54,
+          27,
+          14,
+          0
+        ],
+        "A": {
+          "value": 3.022694
+        },
+        "B": {
+          "value": 3.47902
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 15,
+        "coins": 270,
+        "materials": [
+          60,
+          30,
+          15,
+          0
+        ],
+        "A": {
+          "value": 3.173143
+        },
+        "B": {
+          "value": 3.658857
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 16,
+        "coins": 302,
+        "materials": [
+          67,
+          34,
+          17,
+          0
+        ],
+        "A": {
+          "value": 3.322857
+        },
+        "B": {
+          "value": 3.837143
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 17,
+        "coins": 336,
+        "materials": [
+          74,
+          37,
+          19,
+          0
+        ],
+        "A": {
+          "value": 3.471837
+        },
+        "B": {
+          "value": 4.013878
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 18,
+        "coins": 373,
+        "materials": [
+          81,
+          41,
+          21,
+          0
+        ],
+        "A": {
+          "value": 3.620082
+        },
+        "B": {
+          "value": 4.189061
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 19,
+        "coins": 412,
+        "materials": [
+          89,
+          45,
+          23,
+          0
+        ],
+        "A": {
+          "value": 3.767592
+        },
+        "B": {
+          "value": 4.362694
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 20,
+        "coins": 454,
+        "materials": [
+          97,
+          49,
+          25,
+          0
+        ],
+        "A": {
+          "value": 3.914367
+        },
+        "B": {
+          "value": 4.534776
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 21,
+        "coins": 499,
+        "materials": [
+          106,
+          53,
+          27,
+          0
+        ],
+        "A": {
+          "value": 4.060408
+        },
+        "B": {
+          "value": 4.705306
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 22,
+        "coins": 547,
+        "materials": [
+          115,
+          58,
+          29,
+          0
+        ],
+        "A": {
+          "value": 4.205714
+        },
+        "B": {
+          "value": 4.874286
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 23,
+        "coins": 598,
+        "materials": [
+          125,
+          63,
+          32,
+          0
+        ],
+        "A": {
+          "value": 4.350286
+        },
+        "B": {
+          "value": 5.041714
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 24,
+        "coins": 651,
+        "materials": [
+          135,
+          68,
+          34,
+          0
+        ],
+        "A": {
+          "value": 4.494122
+        },
+        "B": {
+          "value": 5.207592
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 25,
+        "coins": 708,
+        "materials": [
+          146,
+          73,
+          37,
+          0
+        ],
+        "A": {
+          "value": 4.637224
+        },
+        "B": {
+          "value": 5.371918
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 26,
+        "coins": 768,
+        "materials": [
+          157,
+          79,
+          40,
+          0
+        ],
+        "A": {
+          "value": 4.779592
+        },
+        "B": {
+          "value": 5.534694
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 27,
+        "coins": 832,
+        "materials": [
+          169,
+          85,
+          43,
+          0
+        ],
+        "A": {
+          "value": 4.921224
+        },
+        "B": {
+          "value": 5.695918
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 28,
+        "coins": 899,
+        "materials": [
+          181,
+          91,
+          46,
+          0
+        ],
+        "A": {
+          "value": 5.062122
+        },
+        "B": {
+          "value": 5.855592
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 29,
+        "coins": 969,
+        "materials": [
+          195,
+          98,
+          49,
+          0
+        ],
+        "A": {
+          "value": 5.202286
+        },
+        "B": {
+          "value": 6.013714
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 30,
+        "coins": 1043,
+        "materials": [
+          209,
+          105,
+          53,
+          0
+        ],
+        "A": {
+          "value": 5.341714
+        },
+        "B": {
+          "value": 6.170286
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 31,
+        "coins": 1120,
+        "materials": [
+          223,
+          112,
+          56,
+          0
+        ],
+        "A": {
+          "value": 5.480408
+        },
+        "B": {
+          "value": 6.325306
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 32,
+        "coins": 1201,
+        "materials": [
+          239,
+          120,
+          60,
+          0
+        ],
+        "A": {
+          "value": 5.618367
+        },
+        "B": {
+          "value": 6.478776
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 33,
+        "coins": 1287,
+        "materials": [
+          255,
+          128,
+          64,
+          0
+        ],
+        "A": {
+          "value": 5.755592
+        },
+        "B": {
+          "value": 6.630694
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 34,
+        "coins": 1376,
+        "materials": [
+          272,
+          136,
+          68,
+          0
+        ],
+        "A": {
+          "value": 5.892082
+        },
+        "B": {
+          "value": 6.781061
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 35,
+        "coins": 1469,
+        "materials": [
+          290,
+          145,
+          73,
+          0
+        ],
+        "A": {
+          "value": 6.027837
+        },
+        "B": {
+          "value": 6.929878
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 36,
+        "coins": 1566,
+        "materials": [
+          309,
+          155,
+          78,
+          0
+        ],
+        "A": {
+          "value": 6.162857
+        },
+        "B": {
+          "value": 7.077143
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 37,
+        "coins": 1667,
+        "materials": [
+          329,
+          165,
+          83,
+          0
+        ],
+        "A": {
+          "value": 6.297143
+        },
+        "B": {
+          "value": 7.222857
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 38,
+        "coins": 1773,
+        "materials": [
+          350,
+          175,
+          88,
+          0
+        ],
+        "A": {
+          "value": 6.430694
+        },
+        "B": {
+          "value": 7.36702
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 39,
+        "coins": 1883,
+        "materials": [
+          372,
+          186,
+          93,
+          0
+        ],
+        "A": {
+          "value": 6.56351
+        },
+        "B": {
+          "value": 7.509633
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 40,
+        "coins": 1997,
+        "materials": [
+          395,
+          198,
+          99,
+          0
+        ],
+        "A": {
+          "value": 6.695592
+        },
+        "B": {
+          "value": 7.650694
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 41,
+        "coins": 2116,
+        "materials": [
+          420,
+          210,
+          105,
+          0
+        ],
+        "A": {
+          "value": 6.826939
+        },
+        "B": {
+          "value": 7.790204
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 42,
+        "coins": 2240,
+        "materials": [
+          445,
+          223,
+          112,
+          0
+        ],
+        "A": {
+          "value": 6.957551
+        },
+        "B": {
+          "value": 7.928163
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 43,
+        "coins": 2368,
+        "materials": [
+          472,
+          236,
+          118,
+          0
+        ],
+        "A": {
+          "value": 7.087429
+        },
+        "B": {
+          "value": 8.064571
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 44,
+        "coins": 2502,
+        "materials": [
+          500,
+          250,
+          125,
+          0
+        ],
+        "A": {
+          "value": 7.216571
+        },
+        "B": {
+          "value": 8.199429
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 45,
+        "coins": 2640,
+        "materials": [
+          530,
+          265,
+          133,
+          0
+        ],
+        "A": {
+          "value": 7.34498
+        },
+        "B": {
+          "value": 8.332735
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 46,
+        "coins": 2783,
+        "materials": [
+          561,
+          281,
+          141,
+          0
+        ],
+        "A": {
+          "value": 7.472653
+        },
+        "B": {
+          "value": 8.46449
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 47,
+        "coins": 2931,
+        "materials": [
+          593,
+          297,
+          149,
+          0
+        ],
+        "A": {
+          "value": 7.599592
+        },
+        "B": {
+          "value": 8.594694
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 48,
+        "coins": 3084,
+        "materials": [
+          627,
+          314,
+          157,
+          0
+        ],
+        "A": {
+          "value": 7.725796
+        },
+        "B": {
+          "value": 8.723347
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 49,
+        "coins": 3243,
+        "materials": [
+          663,
+          332,
+          166,
+          0
+        ],
+        "A": {
+          "value": 7.851265
+        },
+        "B": {
+          "value": 8.850449
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 50,
+        "coins": 3407,
+        "materials": [
+          700,
+          350,
+          175,
+          0
+        ],
+        "A": {
+          "value": 7.976
+        },
+        "B": {
+          "value": 8.976
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 51,
+        "coins": 3576,
+        "materials": [
+          740,
+          370,
+          185,
+          0
+        ],
+        "A": {
+          "value": 8.1
+        },
+        "B": {
+          "value": 9.1
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 52,
+        "coins": 3751,
+        "materials": [
+          781,
+          391,
+          196,
+          0
+        ],
+        "A": {
+          "value": 8.223265
+        },
+        "B": {
+          "value": 9.222449
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 53,
+        "coins": 3932,
+        "materials": [
+          824,
+          412,
+          206,
+          0
+        ],
+        "A": {
+          "value": 8.345796
+        },
+        "B": {
+          "value": 9.343347
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 54,
+        "coins": 4118,
+        "materials": [
+          869,
+          435,
+          218,
+          0
+        ],
+        "A": {
+          "value": 8.467592
+        },
+        "B": {
+          "value": 9.462694
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 55,
+        "coins": 4310,
+        "materials": [
+          917,
+          459,
+          230,
+          0
+        ],
+        "A": {
+          "value": 8.588653
+        },
+        "B": {
+          "value": 9.58049
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 56,
+        "coins": 4508,
+        "materials": [
+          966,
+          483,
+          242,
+          0
+        ],
+        "A": {
+          "value": 8.70898
+        },
+        "B": {
+          "value": 9.696735
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 57,
+        "coins": 4711,
+        "materials": [
+          1018,
+          509,
+          255,
+          0
+        ],
+        "A": {
+          "value": 8.828571
+        },
+        "B": {
+          "value": 9.811429
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 58,
+        "coins": 4921,
+        "materials": [
+          1073,
+          537,
+          269,
+          0
+        ],
+        "A": {
+          "value": 8.947429
+        },
+        "B": {
+          "value": 9.924571
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 59,
+        "coins": 5137,
+        "materials": [
+          1130,
+          565,
+          283,
+          0
+        ],
+        "A": {
+          "value": 9.065551
+        },
+        "B": {
+          "value": 10.036163
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 60,
+        "coins": 5360,
+        "materials": [
+          1189,
+          595,
+          298,
+          0
+        ],
+        "A": {
+          "value": 9.182939
+        },
+        "B": {
+          "value": 10.146204
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 61,
+        "coins": 5588,
+        "materials": [
+          1252,
+          626,
+          313,
+          0
+        ],
+        "A": {
+          "value": 9.299592
+        },
+        "B": {
+          "value": 10.254694
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 62,
+        "coins": 5823,
+        "materials": [
+          1317,
+          659,
+          330,
+          0
+        ],
+        "A": {
+          "value": 9.41551
+        },
+        "B": {
+          "value": 10.361633
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 63,
+        "coins": 6065,
+        "materials": [
+          1386,
+          693,
+          347,
+          0
+        ],
+        "A": {
+          "value": 9.530694
+        },
+        "B": {
+          "value": 10.46702
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 64,
+        "coins": 6313,
+        "materials": [
+          1457,
+          729,
+          365,
+          0
+        ],
+        "A": {
+          "value": 9.645143
+        },
+        "B": {
+          "value": 10.570857
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 65,
+        "coins": 6567,
+        "materials": [
+          1532,
+          766,
+          383,
+          0
+        ],
+        "A": {
+          "value": 9.758857
+        },
+        "B": {
+          "value": 10.673143
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 66,
+        "coins": 6829,
+        "materials": [
+          1610,
+          805,
+          403,
+          0
+        ],
+        "A": {
+          "value": 9.871837
+        },
+        "B": {
+          "value": 10.773878
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 67,
+        "coins": 7097,
+        "materials": [
+          1692,
+          846,
+          423,
+          0
+        ],
+        "A": {
+          "value": 9.984082
+        },
+        "B": {
+          "value": 10.873061
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 68,
+        "coins": 7373,
+        "materials": [
+          1778,
+          889,
+          445,
+          0
+        ],
+        "A": {
+          "value": 10.095592
+        },
+        "B": {
+          "value": 10.970694
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 69,
+        "coins": 7655,
+        "materials": [
+          1868,
+          934,
+          467,
+          0
+        ],
+        "A": {
+          "value": 10.206367
+        },
+        "B": {
+          "value": 11.066776
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 70,
+        "coins": 7944,
+        "materials": [
+          1962,
+          981,
+          491,
+          0
+        ],
+        "A": {
+          "value": 10.316408
+        },
+        "B": {
+          "value": 11.161306
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 71,
+        "coins": 8241,
+        "materials": [
+          2060,
+          1030,
+          515,
+          0
+        ],
+        "A": {
+          "value": 10.425714
+        },
+        "B": {
+          "value": 11.254286
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 72,
+        "coins": 8545,
+        "materials": [
+          2162,
+          1081,
+          541,
+          0
+        ],
+        "A": {
+          "value": 10.534286
+        },
+        "B": {
+          "value": 11.345714
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 73,
+        "coins": 8856,
+        "materials": [
+          2269,
+          1135,
+          568,
+          0
+        ],
+        "A": {
+          "value": 10.642122
+        },
+        "B": {
+          "value": 11.435592
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 74,
+        "coins": 9175,
+        "materials": [
+          2381,
+          1191,
+          596,
+          0
+        ],
+        "A": {
+          "value": 10.749224
+        },
+        "B": {
+          "value": 11.523918
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 75,
+        "coins": 9501,
+        "materials": [
+          2499,
+          1250,
+          625,
+          0
+        ],
+        "A": {
+          "value": 10.855592
+        },
+        "B": {
+          "value": 11.610694
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 76,
+        "coins": 9835,
+        "materials": [
+          2621,
+          1311,
+          656,
+          0
+        ],
+        "A": {
+          "value": 10.961224
+        },
+        "B": {
+          "value": 11.695918
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 77,
+        "coins": 10177,
+        "materials": [
+          2749,
+          1375,
+          688,
+          0
+        ],
+        "A": {
+          "value": 11.066122
+        },
+        "B": {
+          "value": 11.779592
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 78,
+        "coins": 10527,
+        "materials": [
+          2882,
+          1441,
+          721,
+          0
+        ],
+        "A": {
+          "value": 11.170286
+        },
+        "B": {
+          "value": 11.861714
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 79,
+        "coins": 10884,
+        "materials": [
+          3022,
+          1511,
+          756,
+          0
+        ],
+        "A": {
+          "value": 11.273714
+        },
+        "B": {
+          "value": 11.942286
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 80,
+        "coins": 11250,
+        "materials": [
+          3168,
+          1584,
+          792,
+          0
+        ],
+        "A": {
+          "value": 11.376408
+        },
+        "B": {
+          "value": 12.021306
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 81,
+        "coins": 11623,
+        "materials": [
+          3320,
+          1660,
+          830,
+          0
+        ],
+        "A": {
+          "value": 11.478367
+        },
+        "B": {
+          "value": 12.098776
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 82,
+        "coins": 12005,
+        "materials": [
+          3479,
+          1740,
+          870,
+          0
+        ],
+        "A": {
+          "value": 11.579592
+        },
+        "B": {
+          "value": 12.174694
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 83,
+        "coins": 12395,
+        "materials": [
+          3646,
+          1823,
+          912,
+          0
+        ],
+        "A": {
+          "value": 11.680082
+        },
+        "B": {
+          "value": 12.249061
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 84,
+        "coins": 12793,
+        "materials": [
+          3819,
+          1910,
+          955,
+          0
+        ],
+        "A": {
+          "value": 11.779837
+        },
+        "B": {
+          "value": 12.321878
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 85,
+        "coins": 13200,
+        "materials": [
+          4000,
+          2000,
+          1000,
+          0
+        ],
+        "A": {
+          "value": 11.878857
+        },
+        "B": {
+          "value": 12.393143
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 86,
+        "coins": 13616,
+        "materials": [
+          4190,
+          2095,
+          1048,
+          0
+        ],
+        "A": {
+          "value": 11.977143
+        },
+        "B": {
+          "value": 12.462857
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 87,
+        "coins": 14040,
+        "materials": [
+          4387,
+          2194,
+          1097,
+          0
+        ],
+        "A": {
+          "value": 12.074694
+        },
+        "B": {
+          "value": 12.53102
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 88,
+        "coins": 14472,
+        "materials": [
+          4594,
+          2297,
+          1149,
+          0
+        ],
+        "A": {
+          "value": 12.17151
+        },
+        "B": {
+          "value": 12.597633
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 89,
+        "coins": 14914,
+        "materials": [
+          4809,
+          2405,
+          1203,
+          0
+        ],
+        "A": {
+          "value": 12.267592
+        },
+        "B": {
+          "value": 12.662694
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 90,
+        "coins": 15364,
+        "materials": [
+          5034,
+          2517,
+          1259,
+          0
+        ],
+        "A": {
+          "value": 12.362939
+        },
+        "B": {
+          "value": 12.726204
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 91,
+        "coins": 15824,
+        "materials": [
+          5269,
+          2635,
+          1318,
+          0
+        ],
+        "A": {
+          "value": 12.457551
+        },
+        "B": {
+          "value": 12.788163
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 92,
+        "coins": 16292,
+        "materials": [
+          5514,
+          2757,
+          1379,
+          0
+        ],
+        "A": {
+          "value": 12.551429
+        },
+        "B": {
+          "value": 12.848571
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 93,
+        "coins": 16770,
+        "materials": [
+          5769,
+          2885,
+          1443,
+          0
+        ],
+        "A": {
+          "value": 12.644571
+        },
+        "B": {
+          "value": 12.907429
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 94,
+        "coins": 17256,
+        "materials": [
+          6036,
+          3018,
+          1509,
+          0
+        ],
+        "A": {
+          "value": 12.73698
+        },
+        "B": {
+          "value": 12.964735
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 95,
+        "coins": 17753,
+        "materials": [
+          6314,
+          3157,
+          1579,
+          0
+        ],
+        "A": {
+          "value": 12.828653
+        },
+        "B": {
+          "value": 13.02049
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 96,
+        "coins": 18258,
+        "materials": [
+          6605,
+          3303,
+          1652,
+          0
+        ],
+        "A": {
+          "value": 12.919592
+        },
+        "B": {
+          "value": 13.074694
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 97,
+        "coins": 18773,
+        "materials": [
+          6908,
+          3454,
+          1727,
+          0
+        ],
+        "A": {
+          "value": 13.009796
+        },
+        "B": {
+          "value": 13.127347
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 98,
+        "coins": 19298,
+        "materials": [
+          7224,
+          3612,
+          1806,
+          0
+        ],
+        "A": {
+          "value": 13.099265
+        },
+        "B": {
+          "value": 13.178449
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 99,
+        "coins": 19832,
+        "materials": [
+          7554,
+          3777,
+          1889,
+          0
+        ],
+        "A": {
+          "value": 13.188
+        },
+        "B": {
+          "value": 13.228
+        }
+      },
+      {
+        "equipment": "pickaxe",
+        "to": 100,
+        "coins": 20376,
+        "materials": [
+          7898,
+          3949,
+          1975,
+          0
+        ],
+        "A": {
+          "value": 13.276
+        },
+        "B": {
+          "value": 13.276
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 1,
+        "coins": 45,
+        "materials": [
+          0,
+          0,
+          0,
+          12
+        ],
+        "A": {
+          "value": 103
+        },
+        "B": {
+          "value": 104
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 2,
+        "coins": 54,
+        "materials": [
+          0,
+          0,
+          0,
+          24
+        ],
+        "A": {
+          "value": 106
+        },
+        "B": {
+          "value": 108
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 3,
+        "coins": 65,
+        "materials": [
+          0,
+          0,
+          0,
+          36
+        ],
+        "A": {
+          "value": 109
+        },
+        "B": {
+          "value": 112
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 4,
+        "coins": 77,
+        "materials": [
+          0,
+          0,
+          0,
+          48
+        ],
+        "A": {
+          "value": 112
+        },
+        "B": {
+          "value": 116
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 5,
+        "coins": 90,
+        "materials": [
+          0,
+          0,
+          0,
+          60
+        ],
+        "A": {
+          "value": 115
+        },
+        "B": {
+          "value": 120
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 6,
+        "coins": 105,
+        "materials": [
+          0,
+          0,
+          0,
+          72
+        ],
+        "A": {
+          "value": 118
+        },
+        "B": {
+          "value": 124
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 7,
+        "coins": 121,
+        "materials": [
+          0,
+          0,
+          0,
+          84
+        ],
+        "A": {
+          "value": 121
+        },
+        "B": {
+          "value": 128
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 8,
+        "coins": 139,
+        "materials": [
+          0,
+          0,
+          0,
+          100
+        ],
+        "A": {
+          "value": 124
+        },
+        "B": {
+          "value": 132
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 9,
+        "coins": 158,
+        "materials": [
+          0,
+          0,
+          0,
+          116
+        ],
+        "A": {
+          "value": 127
+        },
+        "B": {
+          "value": 136
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 10,
+        "coins": 179,
+        "materials": [
+          0,
+          0,
+          0,
+          134
+        ],
+        "A": {
+          "value": 130
+        },
+        "B": {
+          "value": 140
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 11,
+        "coins": 202,
+        "materials": [
+          0,
+          0,
+          0,
+          152
+        ],
+        "A": {
+          "value": 132
+        },
+        "B": {
+          "value": 143
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 12,
+        "coins": 227,
+        "materials": [
+          0,
+          0,
+          0,
+          172
+        ],
+        "A": {
+          "value": 134
+        },
+        "B": {
+          "value": 146
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 13,
+        "coins": 254,
+        "materials": [
+          0,
+          0,
+          0,
+          192
+        ],
+        "A": {
+          "value": 136
+        },
+        "B": {
+          "value": 149
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 14,
+        "coins": 283,
+        "materials": [
+          0,
+          0,
+          0,
+          214
+        ],
+        "A": {
+          "value": 138
+        },
+        "B": {
+          "value": 152
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 15,
+        "coins": 314,
+        "materials": [
+          0,
+          0,
+          0,
+          238
+        ],
+        "A": {
+          "value": 140
+        },
+        "B": {
+          "value": 155
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 16,
+        "coins": 347,
+        "materials": [
+          0,
+          0,
+          0,
+          262
+        ],
+        "A": {
+          "value": 142
+        },
+        "B": {
+          "value": 158
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 17,
+        "coins": 382,
+        "materials": [
+          0,
+          0,
+          0,
+          288
+        ],
+        "A": {
+          "value": 144
+        },
+        "B": {
+          "value": 161
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 18,
+        "coins": 420,
+        "materials": [
+          0,
+          0,
+          0,
+          316
+        ],
+        "A": {
+          "value": 146
+        },
+        "B": {
+          "value": 164
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 19,
+        "coins": 460,
+        "materials": [
+          0,
+          0,
+          0,
+          345
+        ],
+        "A": {
+          "value": 148
+        },
+        "B": {
+          "value": 167
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 20,
+        "coins": 502,
+        "materials": [
+          0,
+          0,
+          0,
+          376
+        ],
+        "A": {
+          "value": 150
+        },
+        "B": {
+          "value": 170
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 21,
+        "coins": 548,
+        "materials": [
+          0,
+          0,
+          0,
+          408
+        ],
+        "A": {
+          "value": 152
+        },
+        "B": {
+          "value": 173
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 22,
+        "coins": 595,
+        "materials": [
+          0,
+          0,
+          0,
+          443
+        ],
+        "A": {
+          "value": 154
+        },
+        "B": {
+          "value": 176
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 23,
+        "coins": 646,
+        "materials": [
+          0,
+          0,
+          0,
+          479
+        ],
+        "A": {
+          "value": 156
+        },
+        "B": {
+          "value": 179
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 24,
+        "coins": 699,
+        "materials": [
+          0,
+          0,
+          0,
+          517
+        ],
+        "A": {
+          "value": 158
+        },
+        "B": {
+          "value": 182
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 25,
+        "coins": 755,
+        "materials": [
+          0,
+          0,
+          0,
+          558
+        ],
+        "A": {
+          "value": 160
+        },
+        "B": {
+          "value": 185
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 26,
+        "coins": 814,
+        "materials": [
+          0,
+          0,
+          0,
+          600
+        ],
+        "A": {
+          "value": 162
+        },
+        "B": {
+          "value": 188
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 27,
+        "coins": 876,
+        "materials": [
+          0,
+          0,
+          0,
+          645
+        ],
+        "A": {
+          "value": 164
+        },
+        "B": {
+          "value": 191
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 28,
+        "coins": 941,
+        "materials": [
+          0,
+          0,
+          0,
+          692
+        ],
+        "A": {
+          "value": 166
+        },
+        "B": {
+          "value": 194
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 29,
+        "coins": 1009,
+        "materials": [
+          0,
+          0,
+          0,
+          742
+        ],
+        "A": {
+          "value": 168
+        },
+        "B": {
+          "value": 197
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 30,
+        "coins": 1081,
+        "materials": [
+          0,
+          0,
+          0,
+          795
+        ],
+        "A": {
+          "value": 170
+        },
+        "B": {
+          "value": 200
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 31,
+        "coins": 1155,
+        "materials": [
+          0,
+          0,
+          0,
+          850
+        ],
+        "A": {
+          "value": 171
+        },
+        "B": {
+          "value": 202
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 32,
+        "coins": 1233,
+        "materials": [
+          0,
+          0,
+          0,
+          908
+        ],
+        "A": {
+          "value": 172
+        },
+        "B": {
+          "value": 204
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 33,
+        "coins": 1315,
+        "materials": [
+          0,
+          0,
+          0,
+          969
+        ],
+        "A": {
+          "value": 173
+        },
+        "B": {
+          "value": 206
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 34,
+        "coins": 1400,
+        "materials": [
+          0,
+          0,
+          0,
+          1033
+        ],
+        "A": {
+          "value": 174
+        },
+        "B": {
+          "value": 208
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 35,
+        "coins": 1488,
+        "materials": [
+          0,
+          0,
+          0,
+          1101
+        ],
+        "A": {
+          "value": 175
+        },
+        "B": {
+          "value": 210
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 36,
+        "coins": 1581,
+        "materials": [
+          0,
+          0,
+          0,
+          1172
+        ],
+        "A": {
+          "value": 176
+        },
+        "B": {
+          "value": 212
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 37,
+        "coins": 1677,
+        "materials": [
+          0,
+          0,
+          0,
+          1247
+        ],
+        "A": {
+          "value": 177
+        },
+        "B": {
+          "value": 214
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 38,
+        "coins": 1776,
+        "materials": [
+          0,
+          0,
+          0,
+          1325
+        ],
+        "A": {
+          "value": 178
+        },
+        "B": {
+          "value": 216
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 39,
+        "coins": 1880,
+        "materials": [
+          0,
+          0,
+          0,
+          1408
+        ],
+        "A": {
+          "value": 179
+        },
+        "B": {
+          "value": 218
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 40,
+        "coins": 1988,
+        "materials": [
+          0,
+          0,
+          0,
+          1494
+        ],
+        "A": {
+          "value": 180
+        },
+        "B": {
+          "value": 220
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 41,
+        "coins": 2100,
+        "materials": [
+          0,
+          0,
+          0,
+          1585
+        ],
+        "A": {
+          "value": 181
+        },
+        "B": {
+          "value": 222
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 42,
+        "coins": 2215,
+        "materials": [
+          0,
+          0,
+          0,
+          1681
+        ],
+        "A": {
+          "value": 182
+        },
+        "B": {
+          "value": 224
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 43,
+        "coins": 2335,
+        "materials": [
+          0,
+          0,
+          0,
+          1781
+        ],
+        "A": {
+          "value": 183
+        },
+        "B": {
+          "value": 226
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 44,
+        "coins": 2460,
+        "materials": [
+          0,
+          0,
+          0,
+          1886
+        ],
+        "A": {
+          "value": 184
+        },
+        "B": {
+          "value": 228
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 45,
+        "coins": 2588,
+        "materials": [
+          0,
+          0,
+          0,
+          1996
+        ],
+        "A": {
+          "value": 185
+        },
+        "B": {
+          "value": 230
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 46,
+        "coins": 2721,
+        "materials": [
+          0,
+          0,
+          0,
+          2112
+        ],
+        "A": {
+          "value": 186
+        },
+        "B": {
+          "value": 232
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 47,
+        "coins": 2858,
+        "materials": [
+          0,
+          0,
+          0,
+          2234
+        ],
+        "A": {
+          "value": 187
+        },
+        "B": {
+          "value": 234
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 48,
+        "coins": 3000,
+        "materials": [
+          0,
+          0,
+          0,
+          2361
+        ],
+        "A": {
+          "value": 188
+        },
+        "B": {
+          "value": 236
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 49,
+        "coins": 3147,
+        "materials": [
+          0,
+          0,
+          0,
+          2494
+        ],
+        "A": {
+          "value": 189
+        },
+        "B": {
+          "value": 238
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 50,
+        "coins": 3298,
+        "materials": [
+          0,
+          0,
+          0,
+          2634
+        ],
+        "A": {
+          "value": 190
+        },
+        "B": {
+          "value": 240
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 51,
+        "coins": 3454,
+        "materials": [
+          0,
+          0,
+          0,
+          2781
+        ],
+        "A": {
+          "value": 191
+        },
+        "B": {
+          "value": 242
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 52,
+        "coins": 3615,
+        "materials": [
+          0,
+          0,
+          0,
+          2935
+        ],
+        "A": {
+          "value": 192
+        },
+        "B": {
+          "value": 244
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 53,
+        "coins": 3781,
+        "materials": [
+          0,
+          0,
+          0,
+          3096
+        ],
+        "A": {
+          "value": 193
+        },
+        "B": {
+          "value": 246
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 54,
+        "coins": 3952,
+        "materials": [
+          0,
+          0,
+          0,
+          3265
+        ],
+        "A": {
+          "value": 194
+        },
+        "B": {
+          "value": 248
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 55,
+        "coins": 4128,
+        "materials": [
+          0,
+          0,
+          0,
+          3441
+        ],
+        "A": {
+          "value": 195
+        },
+        "B": {
+          "value": 250
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 56,
+        "coins": 4309,
+        "materials": [
+          0,
+          0,
+          0,
+          3627
+        ],
+        "A": {
+          "value": 196
+        },
+        "B": {
+          "value": 252
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 57,
+        "coins": 4495,
+        "materials": [
+          0,
+          0,
+          0,
+          3821
+        ],
+        "A": {
+          "value": 197
+        },
+        "B": {
+          "value": 254
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 58,
+        "coins": 4687,
+        "materials": [
+          0,
+          0,
+          0,
+          4024
+        ],
+        "A": {
+          "value": 198
+        },
+        "B": {
+          "value": 256
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 59,
+        "coins": 4884,
+        "materials": [
+          0,
+          0,
+          0,
+          4236
+        ],
+        "A": {
+          "value": 199
+        },
+        "B": {
+          "value": 258
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 60,
+        "coins": 5086,
+        "materials": [
+          0,
+          0,
+          0,
+          4459
+        ],
+        "A": {
+          "value": 200
+        },
+        "B": {
+          "value": 260
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 61,
+        "coins": 5294,
+        "materials": [
+          0,
+          0,
+          0,
+          4692
+        ],
+        "A": {
+          "value": 201
+        },
+        "B": {
+          "value": 261
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 62,
+        "coins": 5508,
+        "materials": [
+          0,
+          0,
+          0,
+          4936
+        ],
+        "A": {
+          "value": 202
+        },
+        "B": {
+          "value": 262
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 63,
+        "coins": 5727,
+        "materials": [
+          0,
+          0,
+          0,
+          5191
+        ],
+        "A": {
+          "value": 203
+        },
+        "B": {
+          "value": 263
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 64,
+        "coins": 5952,
+        "materials": [
+          0,
+          0,
+          0,
+          5458
+        ],
+        "A": {
+          "value": 204
+        },
+        "B": {
+          "value": 264
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 65,
+        "coins": 6182,
+        "materials": [
+          0,
+          0,
+          0,
+          5737
+        ],
+        "A": {
+          "value": 205
+        },
+        "B": {
+          "value": 265
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 66,
+        "coins": 6419,
+        "materials": [
+          0,
+          0,
+          0,
+          6029
+        ],
+        "A": {
+          "value": 206
+        },
+        "B": {
+          "value": 266
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 67,
+        "coins": 6662,
+        "materials": [
+          0,
+          0,
+          0,
+          6334
+        ],
+        "A": {
+          "value": 207
+        },
+        "B": {
+          "value": 267
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 68,
+        "coins": 6910,
+        "materials": [
+          0,
+          0,
+          0,
+          6654
+        ],
+        "A": {
+          "value": 208
+        },
+        "B": {
+          "value": 268
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 69,
+        "coins": 7165,
+        "materials": [
+          0,
+          0,
+          0,
+          6988
+        ],
+        "A": {
+          "value": 209
+        },
+        "B": {
+          "value": 269
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 70,
+        "coins": 7426,
+        "materials": [
+          0,
+          0,
+          0,
+          7338
+        ],
+        "A": {
+          "value": 210
+        },
+        "B": {
+          "value": 270
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 71,
+        "coins": 7693,
+        "materials": [
+          0,
+          0,
+          0,
+          7703
+        ],
+        "A": {
+          "value": 211
+        },
+        "B": {
+          "value": 271
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 72,
+        "coins": 7966,
+        "materials": [
+          0,
+          0,
+          0,
+          8085
+        ],
+        "A": {
+          "value": 212
+        },
+        "B": {
+          "value": 272
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 73,
+        "coins": 8246,
+        "materials": [
+          0,
+          0,
+          0,
+          8484
+        ],
+        "A": {
+          "value": 213
+        },
+        "B": {
+          "value": 273
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 74,
+        "coins": 8533,
+        "materials": [
+          0,
+          0,
+          0,
+          8901
+        ],
+        "A": {
+          "value": 214
+        },
+        "B": {
+          "value": 274
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 75,
+        "coins": 8826,
+        "materials": [
+          0,
+          0,
+          0,
+          9337
+        ],
+        "A": {
+          "value": 215
+        },
+        "B": {
+          "value": 275
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 76,
+        "coins": 9125,
+        "materials": [
+          0,
+          0,
+          0,
+          9793
+        ],
+        "A": {
+          "value": 216
+        },
+        "B": {
+          "value": 276
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 77,
+        "coins": 9431,
+        "materials": [
+          0,
+          0,
+          0,
+          10269
+        ],
+        "A": {
+          "value": 217
+        },
+        "B": {
+          "value": 277
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 78,
+        "coins": 9744,
+        "materials": [
+          0,
+          0,
+          0,
+          10766
+        ],
+        "A": {
+          "value": 218
+        },
+        "B": {
+          "value": 278
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 79,
+        "coins": 10064,
+        "materials": [
+          0,
+          0,
+          0,
+          11286
+        ],
+        "A": {
+          "value": 219
+        },
+        "B": {
+          "value": 279
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 80,
+        "coins": 10391,
+        "materials": [
+          0,
+          0,
+          0,
+          11829
+        ],
+        "A": {
+          "value": 220
+        },
+        "B": {
+          "value": 280
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 81,
+        "coins": 10725,
+        "materials": [
+          0,
+          0,
+          0,
+          12396
+        ],
+        "A": {
+          "value": 221
+        },
+        "B": {
+          "value": 281
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 82,
+        "coins": 11066,
+        "materials": [
+          0,
+          0,
+          0,
+          12988
+        ],
+        "A": {
+          "value": 222
+        },
+        "B": {
+          "value": 282
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 83,
+        "coins": 11414,
+        "materials": [
+          0,
+          0,
+          0,
+          13606
+        ],
+        "A": {
+          "value": 223
+        },
+        "B": {
+          "value": 283
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 84,
+        "coins": 11769,
+        "materials": [
+          0,
+          0,
+          0,
+          14252
+        ],
+        "A": {
+          "value": 224
+        },
+        "B": {
+          "value": 284
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 85,
+        "coins": 12131,
+        "materials": [
+          0,
+          0,
+          0,
+          14927
+        ],
+        "A": {
+          "value": 225
+        },
+        "B": {
+          "value": 285
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 86,
+        "coins": 12501,
+        "materials": [
+          0,
+          0,
+          0,
+          15631
+        ],
+        "A": {
+          "value": 226
+        },
+        "B": {
+          "value": 286
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 87,
+        "coins": 12879,
+        "materials": [
+          0,
+          0,
+          0,
+          16366
+        ],
+        "A": {
+          "value": 227
+        },
+        "B": {
+          "value": 287
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 88,
+        "coins": 13263,
+        "materials": [
+          0,
+          0,
+          0,
+          17133
+        ],
+        "A": {
+          "value": 228
+        },
+        "B": {
+          "value": 288
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 89,
+        "coins": 13656,
+        "materials": [
+          0,
+          0,
+          0,
+          17935
+        ],
+        "A": {
+          "value": 229
+        },
+        "B": {
+          "value": 289
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 90,
+        "coins": 14056,
+        "materials": [
+          0,
+          0,
+          0,
+          18771
+        ],
+        "A": {
+          "value": 230
+        },
+        "B": {
+          "value": 290
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 91,
+        "coins": 14464,
+        "materials": [
+          0,
+          0,
+          0,
+          19644
+        ],
+        "A": {
+          "value": 231
+        },
+        "B": {
+          "value": 291
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 92,
+        "coins": 14880,
+        "materials": [
+          0,
+          0,
+          0,
+          20555
+        ],
+        "A": {
+          "value": 232
+        },
+        "B": {
+          "value": 292
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 93,
+        "coins": 15303,
+        "materials": [
+          0,
+          0,
+          0,
+          21505
+        ],
+        "A": {
+          "value": 233
+        },
+        "B": {
+          "value": 293
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 94,
+        "coins": 15735,
+        "materials": [
+          0,
+          0,
+          0,
+          22497
+        ],
+        "A": {
+          "value": 234
+        },
+        "B": {
+          "value": 294
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 95,
+        "coins": 16174,
+        "materials": [
+          0,
+          0,
+          0,
+          23532
+        ],
+        "A": {
+          "value": 235
+        },
+        "B": {
+          "value": 295
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 96,
+        "coins": 16622,
+        "materials": [
+          0,
+          0,
+          0,
+          24612
+        ],
+        "A": {
+          "value": 236
+        },
+        "B": {
+          "value": 296
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 97,
+        "coins": 17078,
+        "materials": [
+          0,
+          0,
+          0,
+          25739
+        ],
+        "A": {
+          "value": 237
+        },
+        "B": {
+          "value": 297
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 98,
+        "coins": 17542,
+        "materials": [
+          0,
+          0,
+          0,
+          26915
+        ],
+        "A": {
+          "value": 238
+        },
+        "B": {
+          "value": 298
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 99,
+        "coins": 18014,
+        "materials": [
+          0,
+          0,
+          0,
+          28141
+        ],
+        "A": {
+          "value": 239
+        },
+        "B": {
+          "value": 299
+        }
+      },
+      {
+        "equipment": "vigor",
+        "to": 100,
+        "coins": 18495,
+        "materials": [
+          0,
+          0,
+          0,
+          29420
+        ],
+        "A": {
+          "value": 240
+        },
+        "B": {
+          "value": 300
+        }
+      }
+    ],
+    "source": "Human-approved analysis, before gameplay changes"
+  }
+}

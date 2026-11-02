@@ -1,3 +1,4 @@
+import {rectangularRoom} from './helpers/rectangular-room.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as E from '../dist/core.js';
@@ -5,6 +6,7 @@ import {isAbyss,musicFloor,heatState,BOOSTS,activeBoost,sectionMutator,rescueAva
 import {beatTime,beatPhase} from '../dist/score.js';
 import {awardScore} from '../dist/stars.js';
 import {Music} from '../dist/audio.js';
+import {homeAudioContext} from './fixtures/home-audio.mjs';
 import {abyssCameraY,project} from '../dist/world.js';
 test('abyss keeps the miner below the overlay even when pushed to the upstream edge',()=>{
  for(const y of [5,8,12,15])for(const phase of [28,29,31.9]){
@@ -20,10 +22,10 @@ test('abyss introduction spaces smaller waves and postpones meteors without chan
  advance(s,96);assert.ok(heatState(r).damage>=1);assert.ok(r.events.filter(e=>e.type==='horde').at(-1).count>=5);assert.equal(musicFloor(r),16);
  const restored=E.restoreState(JSON.stringify(s));assert.equal(restored.run.abyss.section,2);
 });
-test('refuge music has slow sine notes, long envelopes, lower gain and no percussion',()=>{
- const music=new Music(),notes=[],gains=[];music.enabled=true;music.ctx={state:'running',currentTime:10};music.master={gain:{setTargetAtTime:(...a)=>gains.push(a)}};music.tone=(...a)=>notes.push(a);music.noise=()=>assert.fail('No percussion at refuge');
- for(let t=0;t<12;t+=.05)music.home(t);
- assert.ok(notes.length>4&&notes.length<18);assert.ok(notes.every(n=>n[2]==='sine'&&n[1]>=2.3&&n[3]<=.05&&n[6]>=.35));assert.equal(gains[0][0],.14);assert.equal(music.track,'home');
+test('approved refuge has quiet sine phrases, sustained pads, lower master and no percussion',()=>{
+ const music=new Music(),gains=[];music.enabled=true;music.ctx=homeAudioContext(10);music.master={gain:{setTargetAtTime:(...a)=>gains.push(a)}};music.noise=()=>assert.fail('No percussion at refuge');
+ for(let t=0;t<12;t+=.05){music.ctx.advance(10+t);music.home(t);}
+ const notes=music.ctx.nodes;assert.ok(notes.length>18&&notes.length<90);assert.ok(notes.every(n=>n.type==='sine'&&n.endAt>n.startAt&&n.endAt-n.startAt<9));assert.ok(notes.some(n=>n.endAt-n.startAt>7));assert.ok(music.ctx.events.filter(e=>e[0]==='linear').every(e=>e[1]<=.105));assert.equal(gains[0][0],.14);assert.equal(music.track,'home');
 });
 test('sonic adds audible subdivisions without changing the shared input beat clock',()=>{
  const notes=[];const music=new Music();music.enabled=true;music.ctx={state:'running',currentTime:10};music.tone=(...a)=>notes.push(a);music.noise=()=>{};
@@ -40,14 +42,14 @@ test('abyss streams many strips with bounded entities, no clear screen, no camp 
  assert.equal(s.abyssBest,2995);const saved=E.restoreState(JSON.stringify(s));E.finishRun(saved,'death');assert.equal(saved.abyssBest,2995);
 });
 test('normal rooms still clear tactically while abyss cannot clear by charge or score',()=>{
- for(const mode of ['floors','abyss']){const s=run(mode),r=s.run;r.room.charge=r.room.quota;r.room.minBeats=0;r.combo=20;r.room.rocks=[];r.room.explored=null;E.act(s,{type:'dodge',dx:1,dy:0},0);assert.equal(r.room.cleared,mode==='floors');}
+ for(const mode of ['floors','abyss']){const s=run(mode),r=s.run;r.room.charge=r.room.quota;r.room.minBeats=0;r.combo=20;r.room.rocks=[];r.room.explored=null;if(mode==='floors'){r.player={x:r.room.exit.x,y:r.room.exit.y+1};E.act(s,{type:'move',...r.room.exit},0);}else E.act(s,{type:'dodge',dx:1,dy:0},0);assert.equal(r.room.cleared,mode==='floors');}
 });
 test('heat raises rewards and danger together, glass adds bounded bonus loot and sonic is deterministic',()=>{
  const infinite=run();infinite.run.beat=900;const first=heatState(infinite.run).loot;infinite.run.abyss.section=25;assert.ok(heatState(infinite.run).loot>first&&heatState(infinite.run).loot<=3.5);
  const s=run('floors'),r=s.run;assert.equal(heatState(r).loot,1);r.beat=400;const hot=heatState(r);assert.ok(hot.loot>1&&hot.damage>1);r.frenzy.mutator='glass';assert.equal(heatState(r).loot,hot.loot*1.8);assert.equal(heatState(r).damage,hot.damage*1.5);assert.deepEqual(sectionMutator(r,7),sectionMutator(r,7));
 });
 test('live vein challenge is paid at destruction, once, even on the last hit of a floor',()=>{
- const s=run('floors'),r=s.run;r.room.rocks=[];r.room.explored=null;r.room.enemies=[];r.room.minBeats=0;r.room.charge=r.room.quota;r.combo=3;
+ const s=run('floors');rectangularRoom(s);const r=s.run;r.room.rocks=[];r.room.explored=null;r.room.enemies=[];r.room.minBeats=0;r.room.charge=r.room.quota;r.combo=3;
  const n={id:999,type:'crystal',kind:0,x:4,y:11,hp:1,maxHp:1,value:5,born:0};r.room.nodes=[n];r.frenzy.quest={kind:'vein',name:'VEIA',target:999,goal:1,progress:0,until:48,done:false};
  E.act(s,{type:'hit',id:999},0);assert.ok(r.frenzy.quest.done);assert.ok(r.room.cleared);assert.ok(r.materials[0]>=18);const before=r.materials[0];E.act(s,{type:'hit',id:999},0);assert.equal(r.materials[0],before);
 });
@@ -74,8 +76,8 @@ test('meteor and section warnings precede impact; invaders have readable cross a
  const s=run();advance(s,88);assert.ok(s.run.events.some(e=>e.type==='sectionWarning'));advance(s,96);assert.equal(s.run.abyss.section,2);advance(s,124);assert.ok(s.run.events.some(e=>e.type==='meteorWarning'));assert.equal(s.run.frenzy.meteors[0].due,128);advance(s,128);assert.ok(s.run.events.some(e=>e.type==='meteor'));
  const r=s.run;r.room.enemies=[{id:888,type:'enemy',kind:2,elite:true,x:r.player.x+2,y:r.player.y,hp:100,maxHp:100,stunUntil:-1}];E.enemyBeat(s,132);assert.equal(r.room.enemies[0].windup.beat,135);assert.ok(r.room.enemies[0].windup.tiles.length>=10);
 });
-test('stars remain capped per run and biome gates spend prestige instead of mining currency',()=>{
- const s=run();s.run.room.scoreLimit=1000000;awardScore(s,999999,0);assert.equal(s.stars,5);awardScore(s,999999,1);assert.equal(s.stars,5);E.finishRun(s);s.best=5;const bank=s.bank;assert.ok(E.purchaseSeal(s));assert.equal(s.stars,2);assert.equal(s.bank,bank);
+test('abyss cannot farm campaign stars; seals use lifetime rating without spending currency',()=>{
+ const s=run();s.run.room.scoreLimit=1000000;awardScore(s,999999,0);assert.equal(s.stars,0);awardScore(s,999999,1);assert.equal(s.stars,0);E.finishRun(s);s.stars=3;s.best=5;const bank=s.bank;assert.ok(E.purchaseSeal(s));assert.equal(s.stars,3);assert.equal(s.bank,bank);
 });
 test('invalid mode and malformed endless state are rejected without losing valid old saves',()=>{
  const s=E.createState();assert.equal(E.startRun(s,'unknown'),false);E.startRun(s);const old=JSON.parse(JSON.stringify(s));delete old.run.mode;delete old.run.frenzy;delete old.run.spiceVersion;assert.ok(E.restoreState(JSON.stringify(old)));

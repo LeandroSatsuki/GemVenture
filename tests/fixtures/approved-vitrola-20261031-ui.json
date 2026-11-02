@@ -1,0 +1,11 @@
+{
+  "authorization": "Pedido direto31/10/2026: aplicar Vitrola v1 aprovada preservando aparência/game feel/funções",
+  "scope": "Vitrola v1; sobrepõe hashes compartilhados de run.js e shell somente neste delta. Recibos anteriores preservados.",
+  "files": {
+    "approved-records-ui.css": "662f063f397e2707c630cc6d3a4efb4e83da86df3ee2621de9732df93d6b6d81",
+    "approved-records-ui.js": "21008944cd93258743d47baa47d018286317f7e140ffb83ccce61af26a32710c",
+    "approved-records-assets.js": "5442f90fe1afb26c1bb32c928097fb8b7674560495c9acfdea91855d8bb0ca25",
+    "approved-services-shell.css": "a06e4ff32fd0687b1e41bb11ccb2589ee24addf35fd934644a996edf1ad8b6c0",
+    "run.js": "48630b35011b0866dfaec237854a6f586f57d1631b2af68ec1243329f1668b45"
+  }
+}

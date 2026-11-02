@@ -1,0 +1,702 @@
+{
+  "id": "GEODE-CROWN-OFFICIAL-20261102-R1",
+  "authorization": "Atenção, o Rei de Geoldo mudou, tá? É outro. Só verifica se ele não foi aplicado. Se ele não foi, pode aplicar no jogo real e ajusta ele.",
+  "scope": "Apply Coroa Fraturada TESTE09 with native approved art, mechanics, collision and audio to fresh official Geode encounters; adapt approved neon to actual atlas frames. Preserve other bosses, saves, settings and paused monitor. Frozen packages remain unchanged.",
+  "files": {
+    "approved-scenery-emission.js": "3836a2243553b00e97b6fbe5589fb678a15f75821cc7b69786158e976ef54850",
+    "attack-readability.js": "e4e67d98c8921c463fcb12c4ab44f156f1101c6f1dd4bd23651de26f34098a58",
+    "boss-emission-materials.js": "89415f1c2a77c4297f120ec1f18dc6453c7adb04645bae34b7fd0a98e653180f",
+    "boss-help-view.js": "4a45be7a3169f222c7134c94d01589be4acc5d7bfdda38e54d65af79241fefd7",
+    "boss-impact-audio.js": "a3aec697e222b4ae10ca84ecee552569c935a0236cc2aefb4763c1829d0d63a4",
+    "bosses.js": "86a36f824d19ac96b23d86591be6607582c1f81a0954a790b0206c1a9261c835",
+    "core.js": "098045394ea83f34d33a134fdbf82eaf09f04c0683c29d05c8b88d2fe76133e8",
+    "geode-body.js": "162a7269bf0fdc83f9df42f3b1292a5dadf73f10a414e741eab41342b461e8a1",
+    "geode-collision.js": "cea5d3f25b53d0d83f73e135988729d656a167949bfa903b45926bb23a5a68d9",
+    "geode-crown-art.js": "51a697e6dbeb52424ddcaeedc9578db72eb3afdcf1f96242cd22ba0484031287",
+    "geode-crown-atlas.js": "31161cca8f5771e8bcf3199dba28c5213c789e80362b42fb6bc227da50598752",
+    "geode-crown-audio.js": "be40d86cf157f451424d13638f19ac6ff11fd86e6d6679d9b84b237088371277",
+    "geode-crown.js": "06b574c80268c62796385a0d6309a8132926e62b8daf5075ace53269b5ecc299",
+    "geode-fan.js": "95862e189f29a7bd5c434cf44bbae18feeef1f4fe32f9a0db6215a8e83c6590f",
+    "geode-polish.js": "ca5bf3950a0522d8cb1e8ca1269343e52ca3a090190b99ccbba5bab93b4f4e20",
+    "geode-slam-contract.js": "c441e3aeef28683ef6dbef672747f583cb00fa1aa77ba5e64a846ee68b8b8b07",
+    "run.js": "e28bd0fe4c9a10d41b1548b3deeb8e4afdbce1651ea5faefba8a58c04af27b83",
+    "world.js": "018999b7a7b1d30a4f62e1ed144d21f8891d79b9f5d1481deff47af7b58506bb"
+  },
+  "baseNormalizedFiles": {
+    "approved-scenery-emission.js": "8e2ada0d845cdb41a87acd24f99908621fc0abc7582102fb67dc8ca7d30667b8",
+    "attack-readability.js": "686d949f6baea012c6bd83dc8996ba998e40ad3fdd937f856779621d0ed38a33",
+    "boss-emission-materials.js": "2194f01587fa25da3fc6b23dc6b47eb30d461c8c3e0cc4d6e626237c0e660a4b",
+    "boss-help-view.js": "6f1f56caae51b08393caaed2241b9276f04e1f79d1d1c68ec08951766d914ab0",
+    "boss-impact-audio.js": "b8b9528c10bd80c5d95dae0568fca5f5dacd6d19d84cb1d6457b81dc96703a26",
+    "bosses.js": "54d62be81513bdf09397644b70427279417353daa2a3891465a0c6f2bac2d82a",
+    "core.js": "503b5a9474157d98dbebdd8bf180791b11ec8707e3dc09510fbeee014dbbf770",
+    "run.js": "53d6fe54f0efae789b255e04f2380345b8adc47d2ef4f06638506012b406713a",
+    "world.js": "76101436752480c1f154c0a4b8c19abde9260504549c35168ddfb48862b5af82"
+  },
+  "integrationDeltas": [
+    {
+      "file": "dist/core.js",
+      "before": "import {acceptConsumableInput}",
+      "after": "import {geodeObstacleBlocks,solidGeodeObstacles,geodeContactReach,escapeGeodeBody,setGeodeCollisionPhase,escapeGeodeWave} from './geode-collision.js';\nimport {enableGeodeCrown,crownActive,crownAdvanceRun,crownPrimary,crownApproach,crownAllowsDamage,crownResolveHazards} from './geode-crown.js';\nimport {acceptConsumableInput}",
+      "count": 1
+    },
+    {
+      "file": "dist/core.js",
+      "before": "isFloor(room,x,y)&&!mysticBodyBlocks",
+      "after": "isFloor(room,x,y)&&!geodeObstacleBlocks(room,x,y)&&!mysticBodyBlocks",
+      "count": 1
+    },
+    {
+      "file": "dist/core.js",
+      "before": "...rootBodyCells(room),...mysticBodyCells(room)]",
+      "after": "...rootBodyCells(room),...mysticBodyCells(room),...solidGeodeObstacles(room)]",
+      "count": 2
+    },
+    {
+      "file": "dist/core.js",
+      "before": "finalizeCampaignCave(r,biomeIndex(r.floor));",
+      "after": "finalizeCampaignCave(r,biomeIndex(r.floor));const geode=r.room.enemies.find(n=>n.boss&&n.bossIndex===0);if(geode)enableGeodeCrown(geode);",
+      "count": 1
+    },
+    {
+      "file": "dist/core.js",
+      "before": "if(target.boss&&!linked){damage=mysticActive(target)?",
+      "after": "if(crownActive(target)&&crownPrimary(s,target,Math.max(r.acted,r.beat),visual))return;if(!crownAllowsDamage(target,Math.max(r.acted,r.beat)))return;if(target.boss&&!linked){damage=mysticActive(target)?",
+      "count": 1
+    },
+    {
+      "file": "dist/core.js",
+      "before": "r.acted=beat;\n const intangible=",
+      "after": "r.acted=beat;setGeodeCollisionPhase(r.room,beat);const outsideGeode=escapeGeodeBody(r.room,r.player);if(outsideGeode){const from={...r.player};r.player=outsideGeode;event(r,'knockback',{from,to:outsideGeode,path:[outsideGeode],dx:Math.sign(outsideGeode.x-from.x),dy:Math.sign(outsideGeode.y-from.y)});}crownAdvanceRun(s,beat);\n const intangible=",
+      "count": 1
+    },
+    {
+      "file": "dist/core.js",
+      "before": "nav=flying?{...r.room,rocks:[],terrain:null}:r.room",
+      "after": "nav=flying?setGeodeCollisionPhase({...r.room,rocks:[],terrain:null},beat):r.room",
+      "count": 1
+    },
+    {
+      "file": "dist/core.js",
+      "before": "else if(rootActive(target))destination=rootApproach(target,r.player);",
+      "after": "else if(rootActive(target))destination=rootApproach(target,r.player);else if(crownActive(target))destination=crownApproach(target,r.player,action.crownSide);",
+      "count": 1
+    },
+    {
+      "file": "dist/core.js",
+      "before": "((rootActive(target)||mysticActive(target)||mysticCopy(target))?2:1)",
+      "after": "((rootActive(target)||mysticActive(target)||mysticCopy(target))?2:geodeContactReach(target))",
+      "count": 5
+    },
+    {
+      "file": "dist/core.js",
+      "before": "export function tick(s,beat){",
+      "after": "function resolveCrownContact(s,boss,damage,beat,push){const r=s.run;\n const nudge=()=>{const from={...r.player},to=escapeGeodeWave(r.room,r.player,boss);if(to){r.player=to;reveal(r.room,to,sightRange(r));event(r,'knockback',{from,to,path:[to],dx:Math.sign(to.x-from.x),dy:Math.sign(to.y-from.y)});}};\n if(r.guardUntil>=beat){event(r,'shieldBlock',{...r.player});if(!push)nudge();return {blocked:true};}\n const from={...r.player},recoil=push?geodeKnockback(r.room,r.player,boss,boss,2):null;\n const result=lose(s,damage,'attack',true);if(!s.run||r.recovery?.active)return result;\n if(result?.blocked){if(!push)nudge();return result;}\n if(push){r.player={...recoil.to};reveal(r.room,r.player,sightRange(r));event(r,'knockback',{from,...recoil});}else nudge();return result;\n}\n\nexport function tick(s,beat){",
+      "count": 1
+    },
+    {
+      "file": "dist/core.js",
+      "before": "r.beat=beat;petMusicBeat(s,beat);",
+      "after": "r.beat=beat;setGeodeCollisionPhase(r.room,beat);crownAdvanceRun(s,beat);petMusicBeat(s,beat);",
+      "count": 1
+    },
+    {
+      "file": "dist/core.js",
+      "before": " if(beat>=4){for(const e of r.room.enemies)",
+      "after": " crownResolveHazards(s,beat,(boss,damage,at,push)=>resolveCrownContact(s,boss,damage,at,push));if(!s.run||r.recovery?.active)return;\n if(beat>=4){for(const e of r.room.enemies)",
+      "count": 1
+    },
+    {
+      "file": "dist/core.js",
+      "before": "if(e.boss&&e.bossIndex===0){const resolved=",
+      "after": "if(crownActive(e)){finishBossAttack(e,beat);continue;}if(e.boss&&e.bossIndex===0){const resolved=",
+      "count": 1
+    },
+    {
+      "file": "dist/core.js",
+      "before": "initializeAccountScore(s,{legacy:true});return s;",
+      "after": "initializeAccountScore(s,{legacy:true});if(s.run)setGeodeCollisionPhase(s.run.room,Math.max(s.run.beat,s.run.acted));return s;",
+      "count": 2
+    },
+    {
+      "file": "dist/bosses.js",
+      "before": "import {bossArenaSize",
+      "after": "import {crownActive,advanceCrown,crownAllowsDamage,validCrown} from './geode-crown.js';\nimport {bossArenaSize",
+      "count": 1
+    },
+    {
+      "file": "dist/bosses.js",
+      "before": "export function bossStep(boss,player,beat){",
+      "after": "export function bossStep(boss,player,beat){\n if(crownActive(boss)){advanceCrown(boss,beat);return null;}",
+      "count": 1
+    },
+    {
+      "file": "dist/bosses.js",
+      "before": "export function finishBossAttack(boss,beat){",
+      "after": "export function finishBossAttack(boss,beat){if(crownActive(boss)){boss.crown.guardAt=beat;boss.windup=null;return;}",
+      "count": 1
+    },
+    {
+      "file": "dist/bosses.js",
+      "before": "export function bossDamage(boss,damage,beat){",
+      "after": "export function bossDamage(boss,damage,beat){\n if(!crownAllowsDamage(boss,beat))return 0;if(crownActive(boss))damage=Math.max(damage*3,Math.ceil(boss.maxHp/24));",
+      "count": 1
+    },
+    {
+      "file": "dist/bosses.js",
+      "before": "if(b.bossIndex!==0)return true;",
+      "after": "if(b.bossIndex!==0)return true;\n if(b.crown!==undefined)return validBossArenaSize(b)&&validCrown(b);",
+      "count": 1
+    },
+    {
+      "file": "dist/geode-crown.js",
+      "before": "import {GEODE_BODY}",
+      "after": "import {bossArenaSize} from './boss-arena-space.js';\nimport {GEODE_BODY}",
+      "count": 1
+    },
+    {
+      "file": "dist/geode-crown.js",
+      "before": "// Test 02: opt-in Geode mechanics.",
+      "after": "// Coroa Fraturada TESTE09, selected for fresh official Geode encounters.",
+      "count": 1
+    },
+    {
+      "file": "dist/geode-crown.js",
+      "before": "const c=b.crown;if(!crownActive(b)||",
+      "after": "const c=b.crown,arena=bossArenaSize(b);if(!crownActive(b)||",
+      "count": 1
+    },
+    {
+      "file": "dist/geode-crown.js",
+      "before": "p.x>19||p.y<1||p.y>13",
+      "after": "p.x>=arena.cols-1||p.y<1||p.y>=arena.rows-1",
+      "count": 1
+    },
+    {
+      "file": "dist/geode-crown.js",
+      "before": "w.x>19||w.y<1||w.y>13",
+      "after": "w.x>=arena.cols-1||w.y<1||w.y>=arena.rows-1",
+      "count": 1
+    },
+    {
+      "file": "dist/world.js",
+      "before": "import {syncGeodeAmbience",
+      "after": "import {crownActive,crownCaption} from './geode-crown.js';\nimport {wavePillars} from './geode-fan.js';\nimport {densifyWaveCrests,crestVisible} from './geode-polish.js';\nimport {loadGeodeCrownArt,resetCrownPresentation,acceptCrownEvents,paintCrownArt,paintCrownGround,paintCrownAir,paintCrownGhost,paintCrownPillar} from './geode-crown-art.js';\nimport {syncGeodeAmbience",
+      "count": 1
+    },
+    {
+      "file": "dist/world.js",
+      "before": "void loadGeodeArt();",
+      "after": "void loadGeodeArt();void loadGeodeCrownArt();",
+      "count": 1
+    },
+    {
+      "file": "dist/world.js",
+      "before": "place(s){this.chestOpening",
+      "after": "place(s){resetCrownPresentation();this.crownBoss=s.run?.room.enemies.find(crownActive)||null;this.chestOpening",
+      "count": 1
+    },
+    {
+      "file": "dist/world.js",
+      "before": "consume(events){this.chestOpening",
+      "after": "consume(events){acceptCrownEvents(events,this.crownBoss,this.geodeVisualBeat||0);this.chestOpening",
+      "count": 1
+    },
+    {
+      "file": "dist/world.js",
+      "before": "if(n.hp!=null&&n.hp<=0||!sceneEntityVisible(r.room,n))return false;",
+      "after": "if(n.hp!=null&&n.hp<=0||!crestVisible(r.room,n,sceneEntityVisible))return false;",
+      "count": 1
+    },
+    {
+      "file": "dist/world.js",
+      "before": "pillars=r.room.enemies.filter(e=>e.bossIndex===0&&e.hp>0).flatMap(e=>(e.geodePillars||[]).filter(p=>phase<=p.until).map(p=>({...p,type:'geodePillar'})))",
+      "after": "pillars=densifyWaveCrests(r.room.enemies.filter(e=>e.bossIndex===0&&e.hp>0).flatMap(e=>(crownActive(e)?wavePillars(r.room,e,phase):e.geodePillars||[]).filter(p=>phase<=p.until).map(p=>({...p,type:'geodePillar'}))))",
+      "count": 1
+    },
+    {
+      "file": "dist/world.js",
+      "before": "   const entities=[...mysticTargets(r.room)",
+      "after": "   for(const b of r.room.enemies)if(crownActive(b)&&b.hp>0)paintCrownGround(c,b,this.geodeVisualBeat,geodeSoft);paintCrownGhost(c,this.geodeVisualBeat,geodeSoft);\n   const entities=[...mysticTargets(r.room)",
+      "count": 1
+    },
+    {
+      "file": "dist/world.js",
+      "before": "else if(n.bossIndex===0){const frame=",
+      "after": "else if(crownActive(n)){paintCrownArt(c,n,x,y,this.geodeVisualBeat,this.reduced||!!this.motionPreference?.matches);}else if(n.bossIndex===0){const frame=",
+      "count": 1
+    },
+    {
+      "file": "dist/world.js",
+      "before": "if(s.run)this.attackReadability?.crisp(c);",
+      "after": "if(s.run){this.attackReadability?.crisp(c);for(const b of s.run.room.enemies)if(crownActive(b)&&b.hp>0)paintCrownAir(c,b,this.geodeVisualBeat,this.reduced||!!this.motionPreference?.matches);}",
+      "count": 1
+    },
+    {
+      "file": "dist/world.js",
+      "before": "  if(boss.bossIndex===6&&boss.rabbitMechanic===2)top=y-94;",
+      "after": "  if(crownActive(boss))top=y-84;\n  if(boss.bossIndex===6&&boss.rabbitMechanic===2)top=y-94;",
+      "count": 1
+    },
+    {
+      "file": "dist/world.js",
+      "before": " geodePillar(c,n,x,y,phase,seed){",
+      "after": " geodePillar(c,n,x,y,phase,seed){\n  if(n.crownPillar)return paintCrownPillar(c,n,x,y,phase,this.reduced||!!this.motionPreference?.matches);",
+      "count": 1
+    },
+    {
+      "file": "dist/world.js",
+      "before": "if(boss.windup.geodePulse)continue;",
+      "after": "if(crownActive(boss)||boss.windup.geodePulse)continue;",
+      "count": 1
+    },
+    {
+      "file": "dist/attack-readability.js",
+      "before": "if(!r.w.geodePulse)for(const t of r.w.tiles)",
+      "after": "if(!r.w.geodePulse&&!r.w.crown)for(const t of r.w.tiles)",
+      "count": 1
+    },
+    {
+      "file": "dist/attack-readability.js",
+      "before": "   const m=this.mask(r.w.tiles),color=r.w.geodePulse?P.silver:DANGER;",
+      "after": "   if(r.w.crown)continue;\n   const m=this.mask(r.w.tiles),color=r.w.geodePulse?P.silver:DANGER;",
+      "count": 1
+    },
+    {
+      "file": "dist/run.js",
+      "before": "import {bindConsumableButton}",
+      "after": "import {crownActive,crownCaption,crownApproach} from './geode-crown.js';\nimport {createCrownAudio} from './geode-crown-audio.js';\nimport {bindConsumableButton}",
+      "count": 1
+    },
+    {
+      "file": "dist/run.js",
+      "before": "const expeditionMusic=attachRecordedExpedition(music);",
+      "after": "const crownAudio=createCrownAudio(music);const expeditionMusic=attachRecordedExpedition(music);",
+      "count": 1
+    },
+    {
+      "file": "dist/run.js",
+      "before": "music.events(events);",
+      "after": "music.events(events);crownAudio.consume(events);",
+      "count": 1
+    },
+    {
+      "file": "dist/run.js",
+      "before": "function screenTarget(point){",
+      "after": "function crownGroundTarget(point){const b=s.run?.room.enemies.find(n=>crownActive(n)&&n.hp>0);if(!b||!visible(s.run.room,b))return null;const p=crownApproach(b,s.run.player,b.crown.side),q=project(p.x,p.y);return Math.hypot(point.x-q.x,point.y-q.y)<28?{type:'hit',id:b.id,crownSide:b.crown.side}:null;}\nfunction screenTarget(point){",
+      "count": 1
+    },
+    {
+      "file": "dist/run.js",
+      "before": "const hole=holeClickTarget(s.run,p,project);",
+      "after": "const fissure=crownGroundTarget(p);if(fissure){selected=fissure.id;perform(fissure);return;}const hole=holeClickTarget(s.run,p,project);",
+      "count": 1
+    },
+    {
+      "file": "dist/boss-help-view.js",
+      "before": "import {mysticActive",
+      "after": "import {crownActive,crownCaption} from './geode-crown.js';\nimport {mysticActive",
+      "count": 1
+    },
+    {
+      "file": "dist/boss-help-view.js",
+      "before": " if(mysticActive(boss))return",
+      "after": " if(crownActive(boss))return crownCaption(boss,phase);\n if(mysticActive(boss))return",
+      "count": 1
+    },
+    {
+      "file": "dist/boss-impact-audio.js",
+      "before": " return {prepare,consume,status:",
+      "after": " function play(id,{gain:level=.4,rate=1,at=engine.ctx?.currentTime}={}){\n  const ctx=engine.ctx,buffer=buffers.get(id);if(!engine.enabled||ctx?.state!=='running'||!buffer||engine.effectVoices.size>=16)return false;\n  const source=ctx.createBufferSource(),gain=ctx.createGain();source.buffer=buffer;source.playbackRate.value=Math.max(.5,Math.min(1.6,rate));gain.gain.value=Math.max(0,Math.min(.8,level));source.connect(gain);gain.connect(engine.outputFor?.(true)??engine.master);engine.effectVoices.add(source);\n  source.onended=()=>{engine.effectVoices.delete(source);source.disconnect();gain.disconnect();};source.start(Math.max(ctx.currentTime,at));return true;\n }\n return {prepare,consume,play,status:",
+      "count": 1
+    },
+    {
+      "file": "dist/geode-crown-art.js",
+      "before": "import {GEODE_BODY}",
+      "after": "import {captureSceneryEmission} from './scenery-emission-bridge.js';\nimport {GEODE_BODY}",
+      "count": 1
+    },
+    {
+      "file": "dist/geode-crown-art.js",
+      "before": "c.drawImage(ready.image,sx,sy,fw,fh,x-spec.pivotX/2*scale,y-spec.pivotY/2*scale,fw/2*scale,fh/2*scale);",
+      "after": "const rect=[x-spec.pivotX/2*scale,y-spec.pivotY/2*scale,fw/2*scale,fh/2*scale];c.drawImage(ready.image,sx,sy,fw,fh,...rect);captureSceneryEmission(c,'occluder',[ready.image,sx,sy,fw,fh,...rect]);captureSceneryEmission(c,'boss-atlas',{image:ready.image,sourceRect:[sx,sy,fw,fh],rect,index:0,anchor:{x,y},alpha:c.globalAlpha});",
+      "count": 1
+    },
+    {
+      "file": "dist/boss-emission-materials.js",
+      "before": "maxRasterMasks:3,",
+      "after": "maxRasterMasks:3,maxAtlasFrames:12,",
+      "count": 1
+    },
+    {
+      "file": "dist/boss-emission-materials.js",
+      "before": "rasters=new Map();let dead=false;",
+      "after": "rasters=new Map(),frames=new Map(),imageIds=new WeakMap();let dead=false,nextImageId=0;",
+      "count": 1
+    },
+    {
+      "file": "dist/boss-emission-materials.js",
+      "before": " function raster(image){if(dead)return null;if(rasters.has(image))return rasters.get(image);const raw=makeCanvas(image.width,image.height),c=raw.getContext('2d');c.drawImage(image,0,0);",
+      "after": " function buildRaster(image,rect=null){const raw=makeCanvas(rect?rect[2]:image.width,rect?rect[3]:image.height),c=raw.getContext('2d');if(rect)c.drawImage(image,...rect,0,0,raw.width,raw.height);else c.drawImage(image,0,0);",
+      "count": 1
+    },
+    {
+      "file": "dist/boss-emission-materials.js",
+      "before": "const v={raw,canvas,pixels};while(rasters.size>=",
+      "after": "return {raw,canvas,pixels};\n }\n function raster(image){if(dead)return null;if(rasters.has(image))return rasters.get(image);const v=buildRaster(image);while(rasters.size>=",
+      "count": 1
+    },
+    {
+      "file": "dist/boss-emission-materials.js",
+      "before": "selected=b>115&&b>r*1.24&&g>r*1.12",
+      "after": "selected=rect?b>115&&b>r*1.60&&g>r*1.45:b>115&&b>r*1.24&&g>r*1.12",
+      "count": 1
+    },
+    {
+      "file": "dist/boss-emission-materials.js",
+      "before": " function status(){const values=[...resident.keys(),...dynamic.values(),...rasters.values()];",
+      "after": " function atlas(image,rect){if(dead||!Array.isArray(rect)||rect.length!==4||!rect.every(Number.isFinite)||rect[2]<=0||rect[3]<=0||rect[2]>512||rect[3]>512)return null;if(!imageIds.has(image))imageIds.set(image,++nextImageId);const key=[imageIds.get(image),...rect].join(':');if(frames.has(key)){const v=frames.get(key);frames.delete(key);frames.set(key,v);return v;}const v=buildRaster(image,rect);while(frames.size>=BOSS_EMISSION_SPEC.maxAtlasFrames){const key=frames.keys().next().value;release(frames.get(key));frames.delete(key);}frames.set(key,v);return v;}\n function status(){const values=[...resident.keys(),...dynamic.values(),...rasters.values(),...frames.values()];",
+      "count": 1
+    },
+    {
+      "file": "dist/boss-emission-materials.js",
+      "before": "rasterMasks:rasters.size,canvasBytes:",
+      "after": "rasterMasks:rasters.size,atlasFrames:frames.size,canvasBytes:",
+      "count": 1
+    },
+    {
+      "file": "dist/boss-emission-materials.js",
+      "before": "return {mesh,raster,status,dispose()",
+      "after": "return {mesh,raster,atlas,status,dispose()",
+      "count": 1
+    },
+    {
+      "file": "dist/boss-emission-materials.js",
+      "before": "resident.clear();dynamic.clear();rasters.clear();",
+      "after": "for(const v of frames.values())release(v);frames.clear();resident.clear();dynamic.clear();rasters.clear();",
+      "count": 1
+    },
+    {
+      "file": "dist/approved-scenery-emission.js",
+      "before": "  if(kind==='boss-raster')",
+      "after": "  if(kind==='boss-atlas'){if(!(data.alpha>0)||!bossVisible(data.anchor)||!inView(c,data.anchor.x,data.anchor.y))return;bossSource(data);const v=bossMaterials.atlas(data.image,data.sourceRect);if(!v?.pixels)return;const q=context(c);q.save();q.globalAlpha=data.alpha;q.drawImage(v.canvas,...data.rect);q.restore();draws++;return;}\n  if(kind==='boss-raster')",
+      "count": 1
+    },
+    {
+      "file": "export-art-studio.mjs",
+      "before": "\"boss-emission-materials\"",
+      "after": "\"boss-emission-materials\",\"geode-crown\",\"geode-body\",\"geode-collision\",\"geode-fan\",\"geode-slam-contract\",\"geode-crown-art\",\"geode-crown-atlas\",\"geode-crown-audio\",\"geode-polish\"",
+      "count": 1
+    },
+    {
+      "file": "tests/geode.test.mjs",
+      "before": "Object.assign(livingBoss(s.run.room),{x:10,y:6});",
+      "after": "delete livingBoss(s.run.room).crown;livingBoss(s.run.room).windup=null;livingBoss(s.run.room).recoverUntil=3;Object.assign(livingBoss(s.run.room),{x:10,y:6});",
+      "count": 1
+    },
+    {
+      "file": "tests/geode.test.mjs",
+      "before": "import test from 'node:test';",
+      "after": "// Legacy encounter fixtures preserve in-progress save compatibility; see geode-crown-official.test.mjs for fresh Coroa Fraturada arenas.\nimport test from 'node:test';",
+      "count": 1
+    },
+    {
+      "file": "tests/bosses.test.mjs",
+      "before": "E.generateRoom(s);return s;",
+      "after": "E.generateRoom(s);const legacy=s.run.room.enemies.find(n=>n.bossIndex===0);if(legacy){delete legacy.crown;legacy.windup=null;legacy.recoverUntil=3;}return s;",
+      "count": 1
+    },
+    {
+      "file": "tests/bosses.test.mjs",
+      "before": "import test from 'node:test';",
+      "after": "// Legacy encounter fixtures preserve in-progress save compatibility; see geode-crown-official.test.mjs for fresh Coroa Fraturada arenas.\nimport test from 'node:test';",
+      "count": 1
+    },
+    {
+      "file": "tests/revision-gameplay.test.mjs",
+      "before": "E.generateRoom(s);return s;",
+      "after": "E.generateRoom(s);const legacy=s.run.room.enemies.find(n=>n.bossIndex===0);if(legacy){delete legacy.crown;legacy.windup=null;legacy.recoverUntil=3;}return s;",
+      "count": 1
+    },
+    {
+      "file": "tests/revision-gameplay.test.mjs",
+      "before": "import test from 'node:test';",
+      "after": "// Legacy encounter fixtures preserve in-progress save compatibility; see geode-crown-official.test.mjs for fresh Coroa Fraturada arenas.\nimport test from 'node:test';",
+      "count": 1
+    },
+    {
+      "file": "tests/dungeon-refinement-v3.test.mjs",
+      "before": "generateRoom(s);s.run.player={x:9,y:6};",
+      "after": "generateRoom(s);delete s.run.room.enemies[0].crown;s.run.room.enemies[0].windup=null;s.run.room.enemies[0].recoverUntil=3;s.run.player={x:9,y:6};",
+      "count": 1
+    },
+    {
+      "file": "tests/dungeon-refinement-v3.test.mjs",
+      "before": "import test from 'node:test';",
+      "after": "// Legacy encounter fixtures preserve in-progress save compatibility; see geode-crown-official.test.mjs for fresh Coroa Fraturada arenas.\nimport test from 'node:test';",
+      "count": 1
+    },
+    {
+      "file": "tests/cards.test.mjs",
+      "before": "const r=s.run,b=r.room.enemies[0];r.player={x:9,y:6};",
+      "after": "const r=s.run,b=r.room.enemies[0];delete b.crown;b.windup=null;b.recoverUntil=3;r.player={x:9,y:6};",
+      "count": 1
+    },
+    {
+      "file": "tests/cards.test.mjs",
+      "before": "import test from 'node:test';",
+      "after": "// Legacy encounter fixtures preserve in-progress save compatibility; see geode-crown-official.test.mjs for fresh Coroa Fraturada arenas.\nimport test from 'node:test';",
+      "count": 1
+    },
+    {
+      "file": "tests/materials.test.mjs",
+      "before": "const boss=x.run.room.enemies[0];",
+      "after": "const boss=x.run.room.enemies[0];delete boss.crown;boss.windup=null;boss.recoverUntil=3;",
+      "count": 1
+    },
+    {
+      "file": "tests/materials.test.mjs",
+      "before": "import test from 'node:test';",
+      "after": "// Legacy encounter fixtures preserve in-progress save compatibility; see geode-crown-official.test.mjs for fresh Coroa Fraturada arenas.\nimport test from 'node:test';",
+      "count": 1
+    },
+    {
+      "file": "tests/boss-help.test.mjs",
+      "before": " b.windup={hint:'Saia da marca'};",
+      "after": " delete b.crown;\n b.windup={hint:'Saia da marca'};",
+      "count": 1
+    },
+    {
+      "file": "dist/run.js",
+      "before": "if(mysticActive(n)||mysticCopy(n)){$('targetTip')",
+      "after": "if(crownActive(n)){$('targetTip').innerHTML='<strong>REI GEODO</strong><span>'+crownCaption(n,Math.max(r.acted,r.beat))+'</span>';return;}if(mysticActive(n)||mysticCopy(n)){$('targetTip')",
+      "count": 1
+    },
+    {
+      "file": "tests/rabbit-polished.test.mjs",
+      "before": "import{withoutApprovedBossEmission}",
+      "after": "import{withoutApprovedGeodeCrown}from'./helpers/approved-geode-crown-source.mjs';\nimport{withoutApprovedBossEmission}",
+      "count": 1
+    },
+    {
+      "file": "tests/rabbit-polished.test.mjs",
+      "before": "assert.deepEqual(fs.readFileSync(new URL('../dist/'+n,import.meta.url)),fs.readFileSync(new URL('../asset-work/rabbit-test01/baseline/dist/'+n,import.meta.url)))",
+      "after": "assert.equal(withoutApprovedGeodeCrown(n,fs.readFileSync(new URL('../dist/'+n,import.meta.url),'utf8')),fs.readFileSync(new URL('../asset-work/rabbit-test01/baseline/dist/'+n,import.meta.url),'utf8').replaceAll('\\r\\n','\\n'))",
+      "count": 1
+    },
+    {
+      "file": "tests/art.test.mjs",
+      "before": " for(const file of await readdir(new URL('../dist/',import.meta.url)))",
+      "after": " Object.assign(approvedUI,JSON.parse(await readFile(new URL('./fixtures/geode-crown-20261102-approved.json',import.meta.url),'utf8')).files);\n for(const file of await readdir(new URL('../dist/',import.meta.url)))",
+      "count": 1
+    },
+    {
+      "file": "dist/core.js",
+      "before": "r.enemyBeat=beat;advanceMicelial(s,beat);",
+      "after": "r.enemyBeat=beat;setGeodeCollisionPhase(r.room,beat);crownAdvanceRun(s,beat);advanceMicelial(s,beat);",
+      "count": 1
+    },
+    {
+      "file": "dist/world.js",
+      "before": "this.crownBoss=s.run?.room.enemies.find(crownActive)||null;",
+      "after": "this.crownBoss=s.run?.room?.enemies?.find(crownActive)||null;",
+      "count": 1
+    },
+    {
+      "file": "tests/player-bot.mjs",
+      "before": "import {usesStairs}",
+      "after": "import {crownActive} from '../dist/geode-crown.js';\nimport {demoAction as crownDemoAction} from './helpers/geode-crown-demo.mjs';\nimport {usesStairs}",
+      "count": 1
+    },
+    {
+      "file": "tests/player-bot.mjs",
+      "before": "  // The approved mirage/head encounter",
+      "after": "  // The crown requires three explicit flank fractures before direct damage.\n  if(crownActive(boss)){const action=crownDemoAction(s,boss,beat);E.act(s,action,beat);if(s.run)E.tick(s,beat);if(onBeat)onBeat(s,beat,action);continue;}\n  // The approved mirage/head encounter",
+      "count": 1
+    },
+    {
+      "file": "tests/cave-completion.test.mjs",
+      "before": "r.player={x:b.x-1,y:b.y};b.hp=1;",
+      "after": "delete b.crown;b.windup=null;b.recoverUntil=3;r.player={x:b.x-1,y:b.y};b.hp=1;",
+      "count": 1
+    },
+    {
+      "file": "tests/cave-completion.test.mjs",
+      "before": "import test from 'node:test';",
+      "after": "// Forced low-HP departure fixtures exercise legacy saves; fresh crown victories are covered by geode-crown-official.test.mjs.\nimport test from 'node:test';",
+      "count": 1
+    },
+    {
+      "file": "tests/cave-descent.test.mjs",
+      "before": "r.player={x:b.x-1,y:b.y};b.hp=1;",
+      "after": "delete b.crown;b.windup=null;b.recoverUntil=3;r.player={x:b.x-1,y:b.y};b.hp=1;",
+      "count": 2
+    },
+    {
+      "file": "tests/cave-descent.test.mjs",
+      "before": "import test from 'node:test';",
+      "after": "// Forced low-HP departure fixtures exercise legacy saves; fresh crown victories are covered by geode-crown-official.test.mjs.\nimport test from 'node:test';",
+      "count": 1
+    },
+    {
+      "file": "tests/boss-arena-space.test.mjs",
+      "before": "for(const bi of [0,1,5,6]){const s=arena(bi),r=s.run.room,b=r.enemies.find(n=>n.boss);",
+      "after": "for(const bi of [0,1,5,6]){const s=arena(bi),r=s.run.room,b=r.enemies.find(n=>n.boss);if(bi===0){delete b.crown;b.windup=null;b.recoverUntil=3;}",
+      "count": 1
+    },
+    {
+      "file": "tests/boss-arena-space.test.mjs",
+      "before": "test('targeted mechanics cover the added edge cells;",
+      "after": "test('legacy targeted mechanics cover the added edge cells;",
+      "count": 1
+    }
+  ],
+  "frozenSources": [
+    {
+      "file": "geode-crown.js",
+      "source": "E:\\Genventure\\gemventure\\asset-work\\geode-crown-test09\\runtime\\geode-crown.js",
+      "sha256": "b0ba1bf40e67126482f01854c550bd1fad382b2c52fa5c602e4c339b8f0ec6d7"
+    },
+    {
+      "file": "geode-body.js",
+      "source": "E:\\Genventure\\gemventure\\asset-work\\geode-crown-test08\\runtime\\geode-body.js",
+      "sha256": "162a7269bf0fdc83f9df42f3b1292a5dadf73f10a414e741eab41342b461e8a1"
+    },
+    {
+      "file": "geode-collision.js",
+      "source": "E:\\Genventure\\gemventure\\asset-work\\geode-crown-test09\\runtime\\geode-collision.js",
+      "sha256": "cea5d3f25b53d0d83f73e135988729d656a167949bfa903b45926bb23a5a68d9"
+    },
+    {
+      "file": "geode-fan.js",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test06\\runtime\\geode-fan.js",
+      "sha256": "95862e189f29a7bd5c434cf44bbae18feeef1f4fe32f9a0db6215a8e83c6590f"
+    },
+    {
+      "file": "geode-slam-contract.js",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test06\\runtime\\geode-slam-contract.js",
+      "sha256": "c441e3aeef28683ef6dbef672747f583cb00fa1aa77ba5e64a846ee68b8b8b07"
+    },
+    {
+      "file": "geode-crown-art.js",
+      "source": "E:\\Genventure\\gemventure\\asset-work\\geode-crown-test08\\runtime\\geode-crown-art.js",
+      "sha256": "5834f76be8a5b25a0d9c3f4eb7397d194a87fbc966ad7e614e7f038d3e494ef9"
+    },
+    {
+      "file": "geode-crown-atlas.js",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test06\\runtime\\geode-crown-atlas.js",
+      "sha256": "31161cca8f5771e8bcf3199dba28c5213c789e80362b42fb6bc227da50598752"
+    },
+    {
+      "file": "geode-crown-audio.js",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test06\\runtime\\geode-crown-audio.js",
+      "sha256": "be40d86cf157f451424d13638f19ac6ff11fd86e6d6679d9b84b237088371277"
+    },
+    {
+      "file": "geode-polish.js",
+      "source": "E:\\Genventure\\gemventure\\asset-work\\geode-crown-test07\\runtime\\geode-polish.js",
+      "sha256": "ca5bf3950a0522d8cb1e8ca1269343e52ca3a090190b99ccbba5bab93b4f4e20"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\cue-0.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\cue-0.png",
+      "sha256": "71572c8bd4ce50633ef3c368cb8fbd6462ee47da5a1589135014667a91779a5c"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\cue-1.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\cue-1.png",
+      "sha256": "4038d653148ea89c8fd5e12b3403c35740cf7bdfe4d9e253777a95faaf19c99e"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\cue-2.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\cue-2.png",
+      "sha256": "9b44abfa55b3ace9a15fde2e6b07185c7f2a3cdfcedb995745fa452b424b3e78"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\defeat.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\defeat.png",
+      "sha256": "c953e08d4c8a808b2118e45f55b82fe9539e7fd60df708e8e4af623de3ae822e"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\fan-sweep-0.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\fan-sweep-0.png",
+      "sha256": "44c1f0d1776923a3c9b15791f5832c4c1ca65c7ea3b134b032584da95fb5ec53"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\fan-sweep-1.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\fan-sweep-1.png",
+      "sha256": "08a8dd20817fcee48009e3c8b52391e8bf0833b5ab8ee024911878e353ca40a7"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\fan-sweep-2.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\fan-sweep-2.png",
+      "sha256": "11772feb8051647c0169caf24c9c5a00ac5a7dbcada6b9840dc6a0a9967d4c91"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\fracture-1.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\fracture-1.png",
+      "sha256": "e9ff07d43fd29f5640290dec894b654c14b71c9bc200062ab5f7f977afd41af6"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\fracture-2.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\fracture-2.png",
+      "sha256": "e450dabb32ce130f9d3e027622abc80ca1784be841258aea0c7b09cce888856d"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\fracture-3.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\fracture-3.png",
+      "sha256": "bb156485059191161de05a68c27b34bdf4821f8794c067942d6959e59d37848f"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\guard-0.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\guard-0.png",
+      "sha256": "09a6f376e7316aed3233df67c2865c8a1527e090046ef8d0abf877f04bb32577"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\guard-1.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\guard-1.png",
+      "sha256": "77e455176dad66469aaedbe83a82e6c3120cfcce42919b463e0e2e3cd7c9edd7"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\guard-2.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\guard-2.png",
+      "sha256": "1eec1481a2c945818c8a7ea4f697ca530781cc3401d0b657b21b925b273f4345"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\guard-3.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\guard-3.png",
+      "sha256": "5b170523d5794a2cad8b085b39645b485772f9df2630743228515ecde4c72e8b"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\idle-0.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\idle-0.png",
+      "sha256": "77d0e43300ce940e4f4a214d8e8d0ee33a6311695f66c96a99e0bcaf59512cde"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\idle-1.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\idle-1.png",
+      "sha256": "9cf45ae7346600e8d75552a79644c8787464046973fe4ad152c442de1adaf764"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\idle-2.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\idle-2.png",
+      "sha256": "e6e412edc9541cf531d415f735bf099c454c0432d7cf38fdae6c99277a2d4d91"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\open.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\open.png",
+      "sha256": "eb09f99f2afe070dc6b667d7f8a566139d80e5ed27759eb503ef397f86edf0d5"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\pillar-rise.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\pillar-rise.png",
+      "sha256": "005c1b0a8b65b645ee2355dd8276dbd8af7302fa2e0bf1c1916554b0b560500f"
+    },
+    {
+      "file": "dist\\assets\\geode-crown-test05\\reform.png",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\work\\geode-crown-test05\\runtime\\assets\\geode-crown-test05\\reform.png",
+      "sha256": "c31a35cd858bb6843470b04ca0a8d0fbe50328d35c48f0bc4936d43e9f3f5195"
+    }
+  ],
+  "monitorResumed": false
+}

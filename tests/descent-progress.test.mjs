@@ -25,16 +25,16 @@ test('partial deposits preserve each color, clamp to inventory and never charge 
  for(const [i,n]of [[-1,10],[4,10],[0,-1],[0,Infinity],[0,2.5]])assert.equal(depositGate(t,i,n),0);
 });
 test('stops require discovery, biome access and exact payment; fresh departures retain no run bonuses',()=>{
- const s=E.createState(12);s.best=11;s.materials=[999,999,999,999];const old=[...s.materials];
+ const s=E.createState(12);s.best=12;s.materials=[999,999,999,999];const old=[...s.materials];
  assert.equal(unlockStop(s,12),false);assert.equal(unlockStop(s,11),false);assert.deepEqual(s.materials,old);
- s.seals=2;assert.ok(unlockStop(s,11));assert.deepEqual(s.materials,old.map((n,i)=>n-stopCost(11)[i]));assert.equal(unlockStop(s,11),false);
- assert.equal(E.startRun(s,'floors',10),false);assert.equal(E.startRun(s,'floors',500003),false);assert.ok(E.startRun(s,'floors',11));
- assert.equal(s.run.floor,11);assert.equal(s.run.combo,0);assert.deepEqual(s.run.cards,{});assert.equal(s.run.bag,0);assert.equal(s.run.health,E.maxHealth(s));
- const t=E.restoreState(JSON.stringify(s));assert.ok(t.descent.stops.includes(11));E.finishRun(t,'death');assert.ok(E.startRun(t,'floors',11));
+ s.seals=2;assert.equal(unlockStop(s,11),false,'biome entrance already free');assert.ok(unlockStop(s,12));assert.deepEqual(s.materials,old.map((n,i)=>n-stopCost(12)[i]));assert.equal(unlockStop(s,12),false);
+ assert.equal(E.startRun(s,'floors',10),false);assert.equal(E.startRun(s,'floors',500003),false);assert.ok(E.startRun(s,'floors',12));
+ assert.equal(s.run.floor,12);assert.equal(s.run.combo,0);assert.deepEqual(s.run.cards,{});assert.equal(s.run.bag,0);assert.equal(s.run.health,E.maxHealth(s));
+ const t=E.restoreState(JSON.stringify(s));assert.ok(t.descent.stops.includes(12));E.finishRun(t,'death');assert.ok(E.startRun(t,'floors',12));
 });
-test('real boss kill permanently records victory once; abyss invaders do not unlock the campaign gate',()=>{
+test('legacy boss kill permanently records victory once; abyss invaders do not unlock the campaign gate',()=>{
  const s=E.createState(55);s.seals=3;s.best=20;E.startRun(s);s.run.floor=20;E.generateRoom(s);
- const r=s.run,boss=r.room.enemies.find(e=>e.boss);boss.hp=1;boss.exposedUntil=999;boss.windup=null;r.room.rocks=[];r.room.nodes=[];r.player={x:boss.x-1,y:boss.y};
+ const r=s.run,boss=r.room.enemies.find(e=>e.boss);delete boss.mirage;boss.hp=1;boss.exposedUntil=999;boss.windup=null;r.room.rocks=[];r.room.nodes=[];r.player={x:boss.x-1,y:boss.y};
  E.act(s,{type:'hit',id:boss.id},0);assert.ok(r.room.bossDefeated);assert.deepEqual(s.descent.bosses,[20]);recordBossVictory(s,20);assert.deepEqual(s.descent.bosses,[20]);
  r.mode='abyss';recordBossVictory(s,5);assert.deepEqual(s.descent.bosses,[20]);
 });
@@ -44,7 +44,9 @@ test('legacy saves preserve active abyss runs but do not manufacture gate contri
  t.descent.bosses.push(20);t.descent.gate=[...ABYSS_GATE_COST];E.startRun(t,'abyss');delete t.descent;assert.equal(E.restoreState(JSON.stringify(t)).run.mode,'abyss');
  const bad=E.createState();bad.descent.gate[0]=1501;assert.equal(E.restoreState(JSON.stringify(bad)),null);bad.descent.gate[0]=0;bad.descent.stops.push(9);assert.equal(E.restoreState(JSON.stringify(bad)),null);
 });
-test('gate view exposes progress, named mineral costs and disabled entry; departure lists purchased stops only',()=>{
+test('gate and selected floor expose exact costs and preserve discovery, stop and seal restrictions',()=>{
  const s=E.createState();const gate=gateMarkup(s);assert.match(gate,/PORTÃO SELADO/);assert.match(gate,/id="abyssStart" disabled/);assert.match(gate,/Quartzo/);assert.match(gate,/aria-valuenow="0"/);
- s.best=15;assert.doesNotMatch(departureMarkup(s),/value="11"/);s.descent.stops.push(11);s.seals=2;assert.match(departureMarkup(s),/value="11"/);
+ s.best=15;s.seals=2;assert.match(departureMarkup(s,12),/data-stop="12"/);assert.doesNotMatch(departureMarkup(s,12),/data-depart=/);s.descent.stops.push(11);assert.match(departureMarkup(s,11),/data-depart="11"/);
+ s.seals=0;assert.match(departureMarkup(s,11),/data-depart="11"[^>]*disabled/);s.best=2;assert.doesNotMatch(departureMarkup(s,5),/data-stop=|data-depart=|Rei Geodo/);
 });
+

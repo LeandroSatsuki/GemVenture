@@ -1,0 +1,11 @@
+{
+  "id": "VIDEO-SETTINGS-UI-INTEGRATION-20261101",
+  "authorization": "Ficou muito bom, aprovado. Pode aplicar as Configurações no jogo oficial, mantendo todos os controles e funcionalidades, e seguir para a próxima tela que ainda falta padronizar. Pode seguir o fluxo normal, ok?",
+  "proposal": "../VIDEO-SETTINGS-UI-PROPOSAL-20261101/v1/DELIVERY.json",
+  "files": {
+    "index.html": "aa8dfc9ae09770d54bff6fafe1e8b2ae3b3d9fd9d090a69c1a0e082ef669adca",
+    "menu-controller.js": "de7a840cbc005bd08421c3c9d91c248fc5655c6a630be9dd15ffa8dc034d80ed",
+    "approved-settings-ui.css": "7f3eeffd8eb9450f4fc3ce43d69c1cd59fcd45677a4d97a1c76962c72d730ea6",
+    "settings-panels.js": "a60e6801d0cd9e475d92a173fe01f1e4d1bbad30fe987ad178f5bfeae7d5afc0"
+  }
+}

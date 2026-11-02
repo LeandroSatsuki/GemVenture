@@ -1,0 +1,258 @@
+/* UI audit 2026-10-29: command states and targeted fixes over the approved family.
+   Kept last in index: the historical screen themes have competing !important rules. */
+:root{--ui-surface:#081a30;--ui-text:#edf4ff;--ui-muted:#bdd0e8;--ui-focus:#fff;--ui-edge:#020816;--ui-disabled:#243b57}
+/* Important command states live in a layer so legacy screen specificity cannot
+   make disabled actions look available or erase keyboard/pressed feedback. */
+@layer ui-command-states{
+body button{touch-action:manipulation}
+body :is(#dialog,#clearBanner,#abyssCardDialog,#refugeLobby,#hud5Root) button:not(:disabled):not([aria-disabled=true]){transition:filter 90ms ease-out,box-shadow 90ms ease-out,border-color 90ms ease-out}
+body :is(#dialog,#clearBanner,#abyssCardDialog,#refugeLobby,#hud5Root) button:focus-visible,
+body :is(#dialog,#clearBanner,#abyssCardDialog,#refugeLobby) summary:focus-visible{outline:3px solid var(--ui-focus)!important;outline-offset:3px!important}
+body :is(#dialog,#clearBanner,#abyssCardDialog,#refugeLobby,#hud5Root) button:not([data-gv-button]):is(:active,[data-ui-pressed=true]):not(:disabled):not([aria-disabled=true]){filter:brightness(.9)!important;box-shadow:inset 0 4px 6px #02081688!important}
+body #dialog button.primary:disabled,body #dialog #forgeAction:disabled,
+body #clearBanner #confirmCard:disabled,body #dialog .camp-offers button:disabled,
+body #dialog .gv-v2-cta:disabled{background:var(--ui-disabled)!important;border-color:#526b87!important;color:#d1dbea!important;-webkit-text-fill-color:#d1dbea!important;box-shadow:inset 0 1px #526b87!important;text-shadow:none!important;-webkit-text-stroke:0!important;opacity:1!important;cursor:not-allowed!important;filter:none!important}
+body #refugeLobby .nl-action:disabled{opacity:.48;filter:saturate(.35);cursor:default}
+body #refugeLobby .nl-action:disabled>b{visibility:hidden}
+}
+.ui-command-result{margin:8px 0!important;padding:10px 12px!important;border:1px solid #3ba988!important;border-radius:10px!important;background:#0a302e!important;color:#baffdf!important;font:800 15px/1.35 'GV R2 Body',Nunito,sans-serif!important;min-height:20px;overflow-wrap:anywhere}
+body #dialog .forge-scene>.ui-command-result{position:absolute;bottom:8px;left:12px;right:12px;z-index:4;pointer-events:none}
+body #refugeLobby .ui-vitrola-caption{position:absolute;top:-24px;left:50%;translate:-50% 0;width:170px;color:#edf4ff;font:900 11px/1.3 Nunito,sans-serif;text-shadow:0 2px #020816;text-align:center;white-space:nowrap;pointer-events:none}
+body #dialog .building-upgrade>summary{list-style:none}
+body #dialog .building-upgrade>summary::-webkit-details-marker{display:none}
+body #dialog[data-service=missions] .building-upgrade>summary>span::after{content:none!important}
+
+/* Keep missing-resource quantities readable; colour is accompanied by a label. */
+body #dialog.forge-dialog .recipe-gem.missing,
+body #dialog.forge-dialog .recipe-gem.missing :is(b,.recipe-amount,.recipe-percent){color:#ffc5ce!important;-webkit-text-fill-color:#ffc5ce!important}
+body #dialog.forge-dialog .recipe-gem.missing{border-color:#b8667a!important}
+body #dialog.forge-dialog.gv-forge-v1 .recipe-gem.missing .recipe-percent{background:#2c3349!important;color:#ffc5ce!important}
+body #dialog.forge-dialog .recipe-gem.missing .recipe-amount::after{content:'FALTA';display:block;font:900 11px 'GV R2 Body',sans-serif;color:#ffc5ce}
+body #dialog.forge-dialog .forge-celebration{pointer-events:none}
+body #dialog.forge-dialog .forge-celebration.show{animation:ui-result-in 180ms ease-out}
+@keyframes ui-result-in{from{opacity:0;translate:0 4px}to{opacity:1;translate:0 0}}
+
+/* Same readable card surface for every input state; timer and keys fit on desktop. */
+body #abyssCardDialog{--r2-panel:#0b2450;--r2-inset:#081a30;--r2-ink:#020816;--r2-text:#edf4ff;--r2-muted:#bdd0e8;background:#0b2450!important;border-color:#020816!important;padding:18px 22px!important;min-height:0!important;height:fit-content!important}
+body #abyssCardDialog #abyssCardTitle{margin:6px 0!important;font-size:30px!important}
+body #abyssCardDialog header p{margin:5px 0!important}
+body #abyssCardDialog .abyss-card-clock{margin:10px 0!important}
+body #abyssCardDialog #abyssCardOffers{margin:12px 0!important;gap:14px!important}
+body #abyssCardDialog .abyss-card{background:#081a30!important;gap:7px!important;padding:12px!important}
+body #abyssCardDialog .abyss-card:is(:hover,:focus-visible,:active){background:#102e50!important}
+body #abyssCardDialog .abyss-card:is(:hover,:focus-visible,:active),
+body #abyssCardDialog .abyss-card:is(:hover,:focus-visible,:active)>:is(strong,span,small){color:#edf4ff!important;-webkit-text-fill-color:#edf4ff!important}
+body #abyssCardDialog .abyss-card>strong{font-size:24px!important}
+body #abyssCardDialog .abyss-card>span{font-size:16px!important;line-height:1.35!important}
+body #abyssCardDialog .abyss-card>.abyss-card-detail{width:100%;padding:6px;border-radius:6px;background:#020816;color:#93e4ff!important;-webkit-text-fill-color:#93e4ff!important;font-weight:900!important}
+body #abyssCardDialog .abyss-card>small,body #abyssCardDialog .abyss-card>b{font-size:14px!important}
+body #abyssCardDialog .abyss-card>i.card-raster-slot{width:min(180px,100%)!important;height:clamp(96px,18vh,180px)!important;aspect-ratio:auto!important}
+body #abyssCardDialog>p:last-child{margin:8px 0 0!important;font-size:14px!important}
+
+/* Pending invocation is a full-width choice row, not a squeezed toolbar. */
+body #dialog.relic-dialog.gv-relic-v10 .r2-relic-invoke:has(.r2-relic-offers){display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:12px!important;min-width:0!important}
+body #dialog.relic-dialog.gv-relic-v10 .r2-relic-offers{width:100%!important;min-width:0!important}
+body #dialog.relic-dialog.gv-relic-v10 .r2-relic-offers article{min-width:0!important}
+body #dialog.relic-dialog.gv-relic-v10 .r2-relic-offers h3{overflow-wrap:anywhere}
+
+/* An independent action footer stays visible while floor details scroll. */
+body #dialog.map-dialog[data-service=lift] .gv-v2-floors{display:flex!important;flex-direction:column!important;gap:8px!important;overflow:hidden!important;padding:0!important;min-height:0!important}
+body #dialog.map-dialog[data-service=lift] .gv-v2-scroll{flex:1 1 auto;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;display:grid;grid-template-rows:100px 100px 78px minmax(330px,1fr);gap:8px;padding:3px 5px 8px}
+body #dialog.map-dialog[data-service=lift] .gv-v2-lower{grid-row:auto!important;min-height:330px!important}
+body #dialog.map-dialog[data-service=lift] .gv-v2-floor-card{padding-bottom:14px!important;min-height:0!important;overflow:auto!important}
+body #dialog.map-dialog[data-service=lift] .gv-v2-floor-detail{grid-template-columns:minmax(0,1fr) minmax(140px,.8fr)!important;align-items:start!important}
+body #dialog.map-dialog[data-service=lift] .gv-v2-objective{align-self:start!important}
+body #dialog.map-dialog[data-service=lift] .gv-v2-side-card{overflow:auto!important}
+body #dialog.map-dialog[data-service=lift] .gv-v2-floor-card header{padding-right:0!important}
+body #dialog.map-dialog[data-service=lift] .gv-v2-banner-copy{top:8px!important;bottom:auto!important;padding:0 16px!important}
+body #dialog.map-dialog[data-service=lift] .gv-v2-banner-copy h2{font-size:24px!important;margin:2px 0!important}
+body #dialog.map-dialog[data-service=lift] .gv-v2-banner-copy p{margin:3px 0!important}
+body #dialog.map-dialog[data-service=lift] .gv-v2-enemies{position:static!important;width:auto!important;max-width:100%!important;flex-wrap:wrap!important}
+body #dialog.map-dialog[data-service=lift] .gv-v2-departure{flex:none;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;padding:10px 12px;border:2px solid #315d99;border-radius:12px;background:#0b2450}
+body #dialog.map-dialog[data-service=lift] .gv-v2-departure>p{margin:0;flex:1 1 220px;font:800 15px/1.3 'GV R2 Body',sans-serif;color:#edf4ff}
+body #dialog.map-dialog[data-service=lift] .gv-v2-departure .gv-v2-cta{position:static!important;inset:auto!important;grid-row:auto!important;margin:0!important;width:clamp(220px,30vw,340px)!important;min-height:52px!important;height:52px!important;flex:none!important;align-self:center!important;padding:6px 16px!important}
+body #dialog.map-dialog[data-service=lift] .gv-v2-departure .gv-v2-elevator-icon{height:36px!important;width:36px!important}
+body #dialog.map-dialog[data-service=lift] .gv-v2-departure .gv-v2-cta-label strong{font-size:22px!important}
+
+/* Compact live facts occupy the existing left column, leaving the playfield clear. */
+body.hud-clean-v5 #hud5Root .hud5-left{width:236px!important;gap:8px!important;pointer-events:none!important}
+body.hud-clean-v5 #hud5Root .hud5-status{display:grid;gap:7px;padding:10px 12px;border:1px solid #317cbd;border-radius:12px;background:#07152eed;color:#edf4ff;font:800 13px/1.25 Nunito,sans-serif;pointer-events:none}
+body.hud-clean-v5 #hud5Root .hud5-status strong{color:#ffe28a;font:600 19px/1.2 Fredoka,sans-serif}
+body.hud-clean-v5 #hud5Root .hud5-status [data-hud-field=runBag]{border-top:1px solid #315377;padding-top:7px;color:#c6e3ff;font-size:12px}
+body.hud-clean-v5 #hud5Root .hud5-left .mission{width:100%!important}
+body.hud-clean-v5 #hud5Root .hud5-left .mission footer{display:block!important;font-size:11px!important;margin-top:5px!important}
+body.hud-clean-v5 #hud5Root .hud5-left .exploration{position:relative!important;inset:auto!important;width:100%!important;height:48px!important;flex:none!important}
+body.hud-clean-v5 #hud5Root .hud5-left .hud5-critical{order:4}
+body.hud-clean-v5 #hud5Root .hud5-left .hud5-status{order:0}
+body.hud-clean-v5 #hud5Root .hud5-left .mission{order:1}
+body.hud-clean-v5 #hud5Root .hud5-left .exploration{order:2}
+body.hud-clean-v5 #hud5Root #toast.show{display:block!important;background:#0b2450ee;color:#edf4ff;max-height:82px!important;overflow:hidden}
+body.hud-clean-v5 #hud5Root .wallet [data-hud-field=bank]::after{content:' NA BASE';display:block;font:800 9px Nunito,sans-serif;color:#bdd0e8}
+
+/* The same intention uses the same order and weight in both return confirmations. */
+@layer ui-command-states{
+body #dialog:is([data-service=safe-return],[data-service=retreat]) :is(#keepGoing,#stayInMine){background:#18375c!important;color:#edf4ff!important;box-shadow:inset 0 1px #52759e!important}
+body #dialog:is([data-service=safe-return],[data-service=retreat]) :is(#confirmRetreat,#confirmSafeReturn):not(:disabled){background:linear-gradient(#ffdb52,#ff9f19)!important;color:#17213d!important;-webkit-text-fill-color:#17213d!important;-webkit-text-stroke:0!important;box-shadow:inset 0 -3px #ba660c!important;text-shadow:none!important}
+}
+body #dialog[data-service=retreat] .shop-items button{flex:1;min-height:48px!important}
+body #clearBanner #clearSubtitle{display:block!important;font-size:15px!important;line-height:1.25!important;margin:10px 0 8px!important;color:#d5e7ff!important}
+body #clearBanner #descend small{color:#17213d!important;text-shadow:none!important}
+body #dialog[data-service=rest] .camp-offers button:disabled{border-style:solid!important}
+@layer ui-command-states{body #dialog[data-service=rest] .camp-offers button{height:68px!important;min-height:68px!important}}
+body #dialog[data-service=rest] .camp-cost small{display:block;margin-top:4px;color:#c6e3ff;font:800 12px/1.3 Nunito,sans-serif}
+body #returnDialog .reward-card.is-empty{min-height:180px!important;height:auto!important;justify-content:center!important;padding:24px!important}
+body #returnDialog .reward-card.is-empty :is(.reward-art,[data-count],small){display:none!important}
+body #dialog .nl-tabs small{color:#edf4ff!important;background:#18375c!important;border-radius:6px;padding:3px 6px}
+body #dialog[data-service=rest] .camp-offers .camp-result{font-size:16px!important;color:#baffdf!important}
+/* Secondary catalogue filters stay available without dominating small collections. */
+body #dialog .record-genre-filter{padding:6px 12px;margin:0 0 10px;border:1px solid #315377;border-radius:10px;background:#081a30}
+body #dialog .record-genre-filter>summary{min-height:32px;display:list-item;align-content:center;color:#bdd0e8;font:800 14px/1.35 Nunito,sans-serif;cursor:pointer}
+body #dialog .record-genre-filter .record-filters{padding:8px 0!important;margin:0!important}
+body #dialog .record-collection-filters{margin-bottom:6px!important}
+body #dialog .gv-pets--caregiver .gv-pets__cards{grid-template-columns:repeat(auto-fit,minmax(180px,240px))!important;grid-auto-rows:auto!important}
+body #dialog .gv-pets--caregiver .gv-pets__sidebar{overflow:auto!important}
+body #dialog .gv-pets--caregiver .gv-pets__scene{height:130px!important;min-height:130px!important;flex:none!important}
+body #dialog .gv-pets--caregiver .gv-pets__detail .relic-art{height:96px!important;width:110px!important}
+body #dialog .gv-pets--caregiver .gv-pets__requirement:has(+.gv-pets__journey){display:none!important}
+body #dialog .gv-pets--caregiver .gv-pets__ability{font-size:22px!important;margin:6px 0!important}
+body #dialog .gv-pets--caregiver .gv-pets__detail{gap:8px!important}
+body #dialog .gv-pets--caregiver .gv-pets__information{padding:10px 2px 0!important}
+body #dialog .gv-pets--caregiver .gv-pets__information strong{font-size:17px!important;margin-bottom:8px!important}
+body #dialog .gv-pets--caregiver .gv-pets__journey{font-size:14px!important;line-height:1.35!important;margin:8px 0!important;padding-left:4px!important}
+body #dialog .gv-pets--caregiver .gv-pets__journey-note{font:800 14px/1.35 Nunito,sans-serif!important;color:#ffdc88!important;border:1px solid #6f5f36;border-radius:8px;padding:8px;margin:8px 0}
+body #dialog .gv-pets--caregiver .gv-pets__actions{padding-top:8px!important}
+body #dialog .gv-pets--caregiver .gv-pets__actions button{height:48px!important;font-size:20px!important}
+body #dialog .web-points>span:last-child{font-size:12px!important;max-width:160px;white-space:normal!important;text-align:center}
+body #dialog .dialog-top .web-points{margin-right:64px!important;min-height:56px!important;height:auto!important;padding:6px 12px!important}
+body #dialog.tree-dialog #close{top:0!important}
+body #dialog:is(.records-dialog,.relic-dialog,.tree-dialog,.forge-dialog,.missions-dialog,.wardrobe-dialog,.pets-dialog)[open][data-service] #close{width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;max-width:48px!important;max-height:48px!important;font-size:30px!important;line-height:1!important;border-radius:12px!important;padding:0!important}
+body #dialog[data-service=missions]:has(.r2-missions-receipt){width:min(680px,calc(100vw - 32px))!important;height:auto!important;min-height:0!important}
+body #dialog[data-service=missions]:has(.r2-missions-receipt) #dialogBody{min-height:0!important;height:auto!important}
+body #dialog[data-service=missions]:has(.r2-missions-receipt) #dialogLabel{text-transform:uppercase}
+body #dialog[data-service=missions]:has(.r2-missions-receipt) #dialogLabel::before{content:'';display:inline-block;width:36px;height:36px;margin-right:12px;vertical-align:middle;background:url('assets/refuge-night-v3/scroll.png') center/contain no-repeat}
+body #dialog .web-current-effect{color:#c7d9ee!important}
+@media(max-height:800px){body #abyssCardDialog .abyss-card>i.card-raster-slot{height:112px!important}body #abyssCardDialog .abyss-card{gap:5px!important}body #dialog.map-dialog[data-service=lift] .gv-v2-scroll{grid-template-rows:80px 96px 78px minmax(270px,1fr)}body #dialog.map-dialog[data-service=lift] .gv-v2-lower{min-height:270px!important}}
+body.soft-fx :is(#dialog,#clearBanner,#abyssCardDialog,#refugeLobby,#hud5Root) button{transition:none!important}
+body.soft-fx .forge-celebration.show{animation:none!important}
+@media(prefers-reduced-motion:reduce){body :is(#dialog,#clearBanner,#abyssCardDialog,#refugeLobby,#hud5Root) button{transition:none!important}body .forge-celebration.show{animation:none!important}}
+
+/* R2: intrinsic text sizing; a single scroll surface per service. */
+@layer ui-layout-r2 {
+body #clearBanner .floor-choice{height:auto!important;min-height:0!important;gap:12px!important;padding:16px!important}
+body #clearBanner .descent-heading{flex:none!important;display:flex!important;flex-direction:column!important;align-items:center!important;gap:6px!important;width:min(920px,100%)!important;height:auto!important;min-height:0!important;max-height:none!important;padding:14px 24px!important;margin:0!important;box-sizing:border-box!important}
+body #clearBanner .descent-heading>small{position:static!important;inset:auto!important;margin:0!important;padding:0 12px!important;font-size:13px!important;line-height:1.3!important;flex:none!important}
+body #clearBanner #clearTitle{flex:none!important;height:auto!important;margin:0!important;font-size:28px!important;line-height:1.2!important}
+body #clearBanner #clearSubtitle{position:static!important;display:block!important;flex:none!important;width:100%!important;height:auto!important;max-height:none!important;margin:0!important;padding:0!important;font-size:15px!important;line-height:1.35!important;letter-spacing:0!important;color:#d5e7ff!important}
+body #clearBanner #clearSubtitle:has(.ui-run-fact){display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px!important;margin-top:6px!important}
+body #clearBanner .ui-run-fact{display:flex!important;flex-direction:column!important;justify-content:center!important;gap:3px!important;padding:8px 10px!important;border:1px solid #315377!important;border-radius:8px!important;background:#0b2342!important;min-width:0!important;white-space:normal!important}
+body #clearBanner .ui-run-fact small{font:800 11px/1.3 'GV R2 Body',sans-serif!important;letter-spacing:.04em!important;color:#bdd0e8!important}
+body #clearBanner .ui-run-fact strong{font:600 19px/1.2 'GV R2 Display',sans-serif!important;color:#edf4ff!important;overflow-wrap:anywhere!important}
+body #clearBanner .descent-header-art{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;pointer-events:none!important}
+body #clearBanner .header-crystal{width:72px!important;height:80px!important;top:50%!important;bottom:auto!important;translate:0 -50%!important}
+body #clearBanner .header-crystal.left{left:auto!important;right:calc(100% + 8px)!important}
+body #clearBanner .header-crystal.right{right:auto!important;left:calc(100% + 8px)!important}
+body #clearBanner #cardOffers{flex:none!important;height:auto!important;min-height:0!important;grid-auto-rows:auto!important;align-items:stretch!important;margin:0!important}
+body #clearBanner .gem-card{display:flex!important;flex-direction:column!important;align-items:center!important;height:auto!important;min-height:0!important;max-height:none!important;gap:8px!important;padding:14px!important}
+body #clearBanner .gem-card>*{flex-shrink:0!important;position:relative!important;inset:auto!important;grid-area:auto!important}
+body #clearBanner .gem-card>strong{height:auto!important;min-height:1.25em!important;margin:0!important;font:600 22px/1.25 'GV R2 Display',sans-serif!important;white-space:normal!important;overflow-wrap:anywhere!important}
+body #clearBanner .gem-card>p{height:auto!important;min-height:2.7em!important;margin:0!important;padding:0!important;font-size:15px!important;line-height:1.35!important}
+body #clearBanner .gem-card .card-raster-slot{width:clamp(96px,16vh,144px)!important;height:clamp(96px,16vh,144px)!important}
+body #clearBanner .gem-card .card-role{width:100%!important;min-height:0!important;padding:4px!important;font-size:13px!important;line-height:1.3!important;text-align:left!important}
+body #clearBanner .gem-card .card-detail{height:auto!important;min-height:40px!important;display:grid!important;place-items:center!important;margin:0!important;padding:8px!important;font-size:15px!important;line-height:1.3!important}
+body #clearBanner .gem-card>small{height:auto!important;min-height:0!important;margin-top:auto!important;padding:8px 2px 0!important;font-size:15px!important;line-height:1.3!important}
+body #clearBanner #confirmCard{flex:none!important;height:auto!important;min-height:48px!important;padding:10px 16px!important}
+body #clearBanner #chosenCard{flex:none!important;height:auto!important;min-height:0!important;padding:10px!important}
+body #clearBanner #floorActions button{height:auto!important;min-height:70px!important;padding:12px 16px!important}
+body #clearBanner #floorActions .post-action-copy{display:flex!important;flex-direction:column!important;gap:5px!important;min-width:0!important}
+body #clearBanner #floorActions button small{margin:0!important;white-space:normal!important}
+body #abyssCardDialog .abyss-card{height:auto!important;min-height:0!important}
+body #abyssCardDialog .abyss-card>*{flex-shrink:0!important}
+body #abyssCardDialog .abyss-card>:is(strong,span,small,b){height:auto!important}
+body #abyssCardDialog .abyss-card>strong{line-height:1.25!important}
+
+/* User correction: preserve the existing floor design; only add horizontal room. */
+#dialog[data-service=lift]{width:min(1620px,calc(100vw - 28px))!important;max-width:none!important}
+#dialog[data-service=lift] .gv-v2-reward-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+
+#dialog[data-service=lift] .gv-v2-abyss-rewards{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)!important;align-items:center!important;gap:20px!important;padding:16px!important;height:auto!important;min-height:0!important}
+#dialog[data-service=lift] .gv-v2-abyss-reward-copy{min-width:0!important}
+#dialog[data-service=lift] .gv-v2-abyss-reward-copy p{margin:8px 0 12px!important;line-height:1.35!important}
+#dialog[data-service=lift] .gv-v2-abyss-categories{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+#dialog[data-service=lift] .gv-v2-abyss-categories>span{height:auto!important;min-height:56px!important;padding:8px!important;gap:6px!important;font-size:14px!important;line-height:1.25!important;white-space:normal!important;overflow-wrap:anywhere!important}
+#dialog[data-service=lift] .gv-v2-abyss-categories .gv-v2-abyss-icon{width:30px!important;height:30px!important}
+#dialog[data-service=lift] .gv-v2-abyss-reward-tiles{width:100%!important;min-width:0!important;height:auto!important;max-height:none!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;align-self:center!important}
+#dialog[data-service=lift] .is-reference .gv-v2-abyss-reward-tiles{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+#dialog[data-service=lift] .gv-v2-abyss-reward-tile{min-width:0!important;min-height:108px!important;height:auto!important;padding:8px!important;overflow:visible!important;box-sizing:border-box!important}
+#dialog[data-service=lift] .gv-v2-abyss-reward-tile :is(img,svg){width:min(100%,104px)!important;height:96px!important;max-width:100%!important;max-height:none!important;object-fit:contain!important}
+#dialog[data-service=lift] .gv-v2-detail-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+#dialog[data-service=lift] .gv-v2-detail-grid>article{min-width:0!important;height:auto!important}
+#dialog[data-service=lift] .gv-v2-detail-grid>article>div{min-width:0!important;overflow-wrap:anywhere!important}
+#dialog[data-service=lift] .gv-v2-abyss-copy h2 i{color:#d29cff!important}
+
+#dialog[data-r2-screen=tree] .web-map-legend{gap:16px!important;padding:10px 12px!important;align-items:center!important;flex-wrap:wrap!important}
+#dialog[data-r2-screen=tree] .web-map-legend>span{gap:7px!important}
+#dialog[data-r2-screen=tree] .tree-legend-dot{box-sizing:border-box!important;display:block!important;flex:0 0 20px!important;width:20px!important;height:20px!important;min-width:20px!important;min-height:20px!important;padding:0!important;margin:0!important;border:2px solid #82dcff!important;border-radius:50%!important;background:linear-gradient(145deg,#9ae6ff 0%,#37b7fb 32%,#1265b9 78%)!important;box-shadow:inset 0 1px 1px #d9f8ff99,inset 0 -3px 2px #06295288,0 2px 0 #020816!important}
+#dialog[data-r2-screen=tree] .tree-legend-dot[data-legend-kind=milestone]{border-color:#ffe898!important;background:linear-gradient(145deg,#fff3ae,#ffce3e 34%,#d38418 85%)!important;box-shadow:inset 0 0 0 2px #b17a21,inset 0 -4px 2px #7c4b2580,0 2px 0 #020816!important}
+#dialog[data-r2-screen=tree] .tree-legend-dot[data-legend-kind=ability]{border-color:#96fff4!important;background:linear-gradient(145deg,#c0fff5,#26deed 35%,#167caa 85%)!important;border-radius:6px!important}
+#dialog[data-r2-screen=tree] .web-map-legend svg{width:22px!important;height:22px!important;filter:drop-shadow(0 2px 0 #020816)!important}
+
+@media(max-width:1050px){
+ #dialog[data-service=lift] .gv-v2-abyss-rewards{grid-template-columns:minmax(0,1fr)!important}
+ body #clearBanner .header-crystal{display:none!important}
+}
+@media(max-width:700px){
+ body #clearBanner #clearSubtitle:has(.ui-run-fact){grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ #dialog[data-service=lift] .gv-v2-reward-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+}
+
+/* Bottom HUD: readable meters, centered commands and room for the rhythm cue. */
+@layer ui-hud-r4 {
+body.hud-clean-v5 #hud5Root .hud5-left{bottom:156px!important}
+body.hud-clean-v5 #hud5Root .hud>.exploration{position:absolute!important;left:0!important;right:auto!important;top:auto!important;bottom:0!important;width:300px!important;height:62px!important;padding:8px 12px!important;gap:12px!important}
+body.hud-clean-v5 #hud5Root .exploration-art{width:42px!important;height:42px!important}
+body.hud-clean-v5 #hud5Root .exploration .meter-body{min-width:0!important;flex:1!important}
+body.hud-clean-v5 #hud5Root .exploration .meter-heading{font-size:15px!important;line-height:22px!important}
+body.hud-clean-v5 #hud5Root .exploration .meter-heading b{font-size:24px!important}
+body.hud-clean-v5 #hud5Root .exploration .meter{height:12px!important}
+body.hud-clean-v5 #hud5Root #frenzyHud{left:0!important;right:auto!important;top:auto!important;bottom:72px!important;width:300px!important;min-height:62px!important;height:auto!important;padding:9px 12px!important;font-size:14px!important}
+body.hud-clean-v5 #hud5Root #frenzyHud :is(strong,#heatValue,#heatLoot){font-size:14px!important;line-height:20px!important}
+body.hud-clean-v5 #hud5Root #frenzyHud .heat-track{height:8px!important;margin:5px 0!important}
+body.hud-clean-v5 #hud5Root .items{left:50%!important;right:auto!important;top:auto!important;bottom:0!important;transform:translateX(-50%)!important;gap:12px!important;width:auto!important}
+body.hud-clean-v5 #hud5Root .item{width:88px!important;min-width:88px!important;height:96px!important;min-height:96px!important;padding:10px 6px 6px!important;gap:3px!important}
+body.hud-clean-v5 #hud5Root .item .asset-slot{width:52px!important;height:52px!important;flex:none!important}
+body.hud-clean-v5 #hud5Root .item :is(svg,img){width:52px!important;height:52px!important}
+body.hud-clean-v5 #hud5Root .item>strong{display:block!important;font-size:14px!important;line-height:18px!important}
+body.hud-clean-v5 #hud5Root .item kbd{font-size:18px!important;line-height:24px!important;top:-13px!important}
+body.hud-clean-v5 #hud5Root .item .quantity{font-size:17px!important;top:5px!important;right:6px!important}
+body.hud-clean-v5 #hud5Root .rail{left:auto!important;right:154px!important;top:auto!important;bottom:0!important;width:calc(50% - 312px)!important;height:100px!important;min-height:100px!important;padding:10px!important}
+body.hud-clean-v5 #hud5Root .rail .track{height:46px!important;margin:0!important}
+body.hud-clean-v5 #hud5Root .rail .hud-note{width:34px!important;height:34px!important;top:50%!important}
+body.hud-clean-v5 #hud5Root .rail-footer{height:24px!important;min-height:24px!important;margin:4px 0 0!important;padding:0!important;line-height:24px!important;font-size:14px!important;width:100%!important}
+body.hud-clean-v5 #hud5Root .extract{height:100px!important;min-height:100px!important}
+body.hud-clean-v5 #hud5Root .extract span{font-size:14px!important}
+body.hud-clean-v5 #hud5Root .score{bottom:150px!important}
+body.hud-clean-v5 #hud5Root #runCards{bottom:150px!important}
+body.hud-clean-v5 #hud5Root #procFeed{bottom:122px!important}
+@media(max-width:1150px){
+body.hud-clean-v5 #hud5Root .rail{right:0!important;bottom:116px!important;width:calc(50% - 12px)!important}
+body.hud-clean-v5 #hud5Root :is(.score,#runCards){bottom:240px!important}
+body.hud-clean-v5 #hud5Root #procFeed{bottom:220px!important}
+body.hud-clean-v5 #hud5Root .hud>.exploration,body.hud-clean-v5 #hud5Root #frenzyHud{width:260px!important}
+}
+}
+
+/* Rewards show their identity; the floor exit requirements are separate from score stars. */
+#dialog[data-service=lift] .gv-v2-reward-item{grid-template-rows:auto auto;align-content:center;gap:7px}
+#dialog[data-service=lift] .gv-v2-objective li>span:first-child{color:#bdd0e8}
+
+/* Equal floor/reward panels keep more room for the reward artwork. */
+@media(min-width:761px){
+ #dialog[data-service=lift] .gv-v2-lower{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+#dialog[data-service=lift] .gv-v2-reward-art{width:84px;max-width:100%;height:80px}
+#dialog[data-service=lift] .gv-v2-reward-art>:is(img,svg,.glyph,.approved-interface-icon){width:80px!important;height:80px!important}
+@media(max-width:1100px),(max-height:760px){
+ #dialog[data-service=lift] .gv-v2-reward-art{width:62px;height:58px}
+ #dialog[data-service=lift] .gv-v2-reward-art>:is(img,svg,.glyph,.approved-interface-icon){width:56px!important;height:56px!important}
+}

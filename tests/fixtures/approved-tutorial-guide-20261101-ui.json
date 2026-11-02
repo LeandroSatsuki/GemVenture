@@ -1,0 +1,17 @@
+{
+  "id": "TUTORIAL-GUIDE-INTEGRATION-20261101",
+  "at": "2026-11-01T08:12:26.090502+00:00",
+  "files": {
+    "approved-guide-model.js": "746f5d3cc0ac6aae1d25273c554fe868be0402db5f7967f16fa4704940d980b6",
+    "approved-guide-view.js": "8157667c725dd3abd6e30f6f0b9375273e9182afec5a11cdef8bab8d58a720e4",
+    "approved-guide-ui.css": "c82d7e9c0f0224a93f66ea032846177ec931cc8d7f69778141f0412768660769",
+    "tutorial-hub-guide.js": "bc217190be2e477b7e820903e899a3a38163b66796f922c98ea0c3274fb632ec",
+    "ui-bubble-feedback.js": "eb408cdccd7b45182c09a5662dd5cb956d53c2ba472a4404501a441fd260e72d"
+  },
+  "authorization": "HUMAN-APPROVAL.json",
+  "monitorResumed": false,
+  "nativeAdjustment": {
+    "at": "2026-11-01T08:43:19.869919+00:00",
+    "reason": "Legacy !important rules cross into body components; use the same approved Shadow DOM boundary as other services; preserve button-feedback host registration and event paths."
+  }
+}

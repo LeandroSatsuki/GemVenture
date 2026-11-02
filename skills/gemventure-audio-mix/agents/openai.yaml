@@ -1,0 +1,4 @@
+interface:
+  display_name: "GemVenture · Mixagem de áudio"
+  short_description: "Mixar arranjos sob o pulso real do GemVenture"
+  default_prompt: "Use $gemventure-audio-mix para preparar uma candidata auditiva com arranjo licenciado e batidas claras no relógio do jogo."

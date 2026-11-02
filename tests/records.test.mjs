@@ -4,6 +4,7 @@ import {createState,restoreState} from '../dist/core.js';
 import {RECORDS,buyRecord,equipRecord,floorRecordDrop,missionRecordDrop} from '../dist/records.js';
 import {recordsMarkup} from '../dist/records-view.js';
 import {Music} from '../dist/audio.js';
+import {homeAudioContext} from './fixtures/home-audio.mjs';
 import {claimMission,missionOffers} from '../dist/missions.js';
 
 test('old saves gain the starter disc; malformed collections cannot erase or duplicate purchases',()=>{
@@ -13,10 +14,10 @@ test('old saves gain the starter disc; malformed collections cannot erase or dup
  assert.equal(restoreState(JSON.stringify(invalid)),null);
 });
 
-test('records spend essence once and equip only in the village',()=>{
+test('records spend stars once and equip only in the village',()=>{
  const s=createState(11),disc=RECORDS.find(r=>r.id==='iron');
- s.essence=disc.cost-1;assert.equal(buyRecord(s,disc.id),false);
- s.essence++;assert.equal(buyRecord(s,disc.id),true);assert.equal(s.essence,0);
+ s.stars=disc.cost-1;assert.equal(buyRecord(s,disc.id),false);
+ s.stars++;assert.equal(buyRecord(s,disc.id),true);assert.equal(s.stars,0);
  assert.equal(buyRecord(s,disc.id),false);assert.equal(s.records.active,disc.id);
  assert.equal(equipRecord(s,'pulse'),true);s.run={};assert.equal(equipRecord(s,disc.id),false);
 });
@@ -43,18 +44,18 @@ test('mission disc roll is rare, tied to delivery, and does not reroll an owned 
  const offer=missionOffers(s)[0];s.mission={...offer,status:'ready',progress:offer.goal};
  assert.equal(claimMission(s,offer.id),true);
  assert.equal(s.mission,null);
- assert.ok(s.essence>0);
+ assert.ok(s.bank>30);
 });
 test('every disc can be previewed without buying or equipping it',()=>{
- const s=createState(42),before=structuredClone(s.records),essence=s.essence,html=recordsMarkup(s);
+ const s=createState(42),before=structuredClone(s.records),stars=s.stars,html=recordsMarkup(s);
  assert.equal((html.match(/data-record-preview=/g)||[]).length,RECORDS.length);
  assert.match(html,/data-record-preview="iron"[^>]*>▶ OUVIR 5s/);
- assert.deepEqual(s.records,before);assert.equal(s.essence,essence);
+ assert.deepEqual(s.records,before);assert.equal(s.stars,stars);
  assert.match(recordsMarkup(s,'ROCK','iron'),/previewing/);
  assert.match(recordsMarkup(s,'ROCK','iron'),/■ PARAR/);
 });
 test('five-second preview plays the chosen arrangement and restores the equipped disc',()=>{
- const m=new Music(),notes=[];m.enabled=true;m.ctx={state:'running',currentTime:10};m.master={gain:{setTargetAtTime(){}}};m.tone=(...args)=>notes.push(args);m.noise=()=>{};
+ const m=new Music(),notes=[];m.enabled=true;m.ctx=homeAudioContext(10);m.master={gain:{setTargetAtTime(){}}};m.tone=(...args)=>notes.push(args);m.noise=()=>{};
  assert.equal(m.previewRecord('missing'),false);assert.equal(m.previewRecord('iron'),true);
  assert.equal(m.record.id,'pulse');assert.equal(m.preview.until,15);
  m.home(0,true);assert.equal(m.track,3);assert.equal(m.record.id,'pulse');assert.ok(notes.some(n=>n[2]==='sawtooth'));

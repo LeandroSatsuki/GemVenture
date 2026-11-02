@@ -62,7 +62,7 @@ Render: janela fixa 13×7, 30 FPS, até 96 cubos de destroço, 8 números, 20 m�
 
 Música suave da mineradora permanece; seis sons próprios distinguem contato, fricção, desvio, dinamite, pulso e frenesi, com limites de vozes e silêncio ao ocultar o painel. Não altera a música de combate.
 
-Novo sprite: `dist/assets/village-hept32/mining-machine-v2.png`. Original amarelo preservado em `mining-machine.png`. Corpo chanfrado de aço, cabeça larga de bate-estacas, esteiras, caçamba e lâmpada de quartzo; paleta HEPT32 normalizada uma vez, cache máximo 512 px. Vila usa o mesmo sprite e preserva proporção e ponto de apoio.
+Novo sprite: `dist/assets/village-hept32/mining-machine-v2.png`. A versão amarela anterior sem uso foi removida na limpeza de 25/10/2026. Corpo chanfrado de aço, cabeça larga de bate-estacas, esteiras, caçamba e lâmpada de quartzo; paleta HEPT32 normalizada uma vez, cache máximo 512 px. Vila usa o mesmo sprite e preserva proporção e ponto de apoio.
 
 ## Validação
 `tests/miner.test.mjs` cobre migração, equivalência temporal, limites, relógio, pausa, eventos, materiais separados, compras, runs, estabilidade das células e auditoria de raridade. Auditoria de arte: 5.922 variantes, 33 famílias, 7 biomas, 32 cores. QA manual usa origem isolada, preservando a partida real.

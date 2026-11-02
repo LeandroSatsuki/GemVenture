@@ -1,0 +1,19 @@
+{
+  "status": "candidate-not-art-approval",
+  "files": {
+    "cave-layout.js": "1344077bdd8575cc3bad7b29a3015edded91ee32c2f82da8c4ab1c78a8170c5c",
+    "cave-wall-occlusion.js": "3c1a22e2b540699165f852cb5b1b14a777364067c48f40e3fdb1c5165f4a5451",
+    "core.js": "b16e223e52be66ea66188270e5f60a9bbc264e706b7d5da90758d6c6ae8896be",
+    "dungeon-volumes.js": "c2fc07ba83d82af00b770e5140bdf6f680530d25e11ca977adb62d45a12941c0",
+    "expedition-hud-view.js": "0eec765d48b0ad504632be4d4195216eb7bde69091f993e984f06eb96afefa25",
+    "gamefeel-v5.js": "fedae3c2cab1f042e12579fadc98041644167f20fffb53619465f1eb55b3c59a",
+    "gamefeel-v6.css": "fa94c46b004cdcb8ea9844838e0dd80f87d6a81522d4f3a1d737d799e6a67155",
+    "index.html": "0c0431e88339b67d7d0b626a9db4bde1fefe09f9a87db3e3fc452732f751612a",
+    "miner-outfit.js": "65efec6de4d5e52a66a5a05ddb0bcb8a1e268a6f0d72cc3467e08a5520d2e9a8",
+    "player-appearance.js": "b95fdf175febdabcbad5511273166fb6922dfaf1a684fba992d55cffab0e26c1",
+    "refuge-art-ready.js": "640bcc48874e44368c01616c6adbdae7fdae30636c0a0524268f0b4a69cfddea",
+    "refuge-lobby.js": "b824b0564a6572df224edc8da620392794f294086990f02004ed37f8d8ca60cd",
+    "run.js": "d35b661dc1c8f01db80b7f007642c0c27dfc7d2ffbe2c71c75f0b29fc63e7d0a",
+    "tutorial-hub-guide.js": "aac9ae9f41c6b248009cf327ac1b20623be54d185089cff456190beb75ab7967"
+  }
+}

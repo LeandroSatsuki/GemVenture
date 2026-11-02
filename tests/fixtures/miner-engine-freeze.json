@@ -1,0 +1,13 @@
+{
+  "authorization": "AUTH-20261015-0706-OFFICIAL-FINALIZED",
+  "engineSources": [
+    {
+      "file": "miner.js",
+      "sha256": "d60e610313be4875c637d6551056211358887f2d36ae0b380840682acae5881d"
+    },
+    {
+      "file": "miner-contact.js",
+      "sha256": "9e0a2c7a22de0835cffdfc09ed46d30d20098ecb1e1e965963eddb4747503f29"
+    }
+  ]
+}

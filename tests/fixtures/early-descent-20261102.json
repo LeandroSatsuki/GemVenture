@@ -1,0 +1,9 @@
+{
+  "id": "EARLY-DESCENT-20261102-R1",
+  "authorization": "Pedido atual de corrigir a descida precoce na primeira sala",
+  "files": {
+    "campaign-cave-layout.js": "70334b6015a9e81dd94b7193f810f399090363e2a62be5f50ba2578100816d1a",
+    "cave-descent.js": "ee4dbbc7fc06c89832ed49749236d8cf497ab205c0b653a55ac448ce0d24ad8e",
+    "expedition-hud-view.js": "173abc0eb73df2fa76b36bf258449290dde42b1e3d0b92a28fabf6915dffa523"
+  }
+}

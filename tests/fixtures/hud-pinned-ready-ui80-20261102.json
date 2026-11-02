@@ -1,0 +1,19 @@
+{
+  "id": "HUD-PINNED-READY-UI80-20261102-R1",
+  "authorization": "Direct user request for default UI80, fixed mission and descent targets, strong localized readiness flashing.",
+  "files": {
+    "approved-cave-alerts-ui.css": "2a4eb8060c05cfce70de025f9377aee26b6b7d9b721dfa77589da270409ecfc6",
+    "approved-cave-alerts-ui.js": "42fd3e01b21490e58fa70104e1250f8fbaa505f23e7330a26cb155905371ae10",
+    "approved-expedition-hud.css": "8c23d5f5de2289707954c693259bc7298f144990c2238203404e1cc91f2d45b0",
+    "boss-hud.css": "d431f643bbaae272f66ef56c1b2fa52e0921036d470ca84276b544dd91adf493",
+    "boss-hud.js": "ab9379198a2eb8af7dbadbfa8dbf6cef2fcc3c98bb64d4a93be114d3cbf27f50",
+    "cave-descent-hud.css": "ff1ff97e3ebd4c26e33201a5db29d94231863b084607a91528c183c321f78b83",
+    "cave-miniboss-hud.css": "a3546926fe57e54d292bfbebd23311fdbc39cca0be913ca4485cfa147b94d36b",
+    "cave-miniboss-hud.js": "9b85734b6564fa1f1475952a8d9aec16d9a9c28024ff09016c603d521287abee",
+    "expedition-hud-view.js": "9ac629bc30e4a00f51a00999e12ce13b8cd91c902967d9b42af3b37874775773",
+    "hud-pinned-panel.js": "088adc600ae17b92ad7ce89368e0ebfc654c569f0928947c6cb5549065dad52e",
+    "menu-controller.js": "88efd7aae24c5e954ce45458eba9692236f9982b408924ec044851227e332c70",
+    "ui-display.js": "0f6e6d33d75d30c414d635f01899a78230803ca0c9c1bd30e0d3f0f0e5ee9265",
+    "index.html": "5267d94da23df66887f2eca0b8a18c942c6b54c5a75bbe955505a3a039ad18a5"
+  }
+}

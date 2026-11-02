@@ -1,0 +1,9 @@
+{
+  "files": {
+    "pets-view.js": "200d691a356176a1d74ade1263614b816edb70e94fe6d7a26348e2934e07c3c7",
+    "pets-selection.js": "c319aefd587397013d6e1bdbc771de8c5600f2aca5880da49de6417aff2ec8a5",
+    "pet-companions.css": "71836fd3e9f815ab298dfb3a310b51d5816bad4d3a8afc18042d189ec4a74d89",
+    "pet-companion-roster.js": "e813b9155692d776fd13a97f600816800f398602cb56fa1b622da7218330f1a1"
+  },
+  "scope": "User requested eight pets per page with arrows, small companion relative to pedestal like cards, and complete rarity classification. Presentation metadata only; art, abilities, unlock requirements and save unchanged."
+}

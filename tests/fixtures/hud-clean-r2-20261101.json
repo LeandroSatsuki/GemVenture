@@ -1,0 +1,9 @@
+{
+  "id": "GV-043/HUD-CLEAN-R2",
+  "authorization": "Explicit current user correction: lower frameless buffs and compact named card list, no heading",
+  "files": {
+    "approved-expedition-hud.css": "4e2304b668f1b8169de1d8ad4fbb8360091c4e512060dd19e883af04f300bc39",
+    "expedition-hud-view.js": "b3b1174dc98088eea22d832e472a5a7a942ff83ddd2db345a034640da029c670",
+    "card-hud.js": "ae8cfe0b6b67495b5ed0f982996315639620807b151faaff4ccfd73d438934b6"
+  }
+}

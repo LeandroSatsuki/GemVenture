@@ -1,0 +1,9 @@
+{
+  "id": "TUTORIAL-HUD-OWNERSHIP-20261102-R1",
+  "authorization": "Direct current bug-fix request with screenshot",
+  "files": {
+    "run.js": "6ca8aadf90b8b6e78069cf6465c8939de0dea06f9733a76c83a8bc555d92a593",
+    "expedition-hud-view.js": "3dc44decc3a505999569b4408a1a164e6f309487907cef391264d3d0353e5afd",
+    "contextual-learning.js": "5f577aae0199a260797910ec1d575c932506c0ef6132ae70be804bd3d24be6cf"
+  }
+}

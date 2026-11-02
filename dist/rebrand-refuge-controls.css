@@ -1,0 +1,18 @@
+/* Refuge typography/faces only. Approved containers,dock/transfer geometry and icons stay owned. */
+body.immersive-base #experienceHud{border-color:var(--r2-ink,#180d2f);border-radius:14px;background:var(--r2-inset,#353658);color:var(--r2-text,#fff);box-shadow:inset 0 2px #ffffff44,inset 0 -4px #180d2f66}
+body.immersive-base #experienceHud .experience-label{font-family:var(--r2-body,'GV R2 Body',sans-serif);font-weight:800;color:var(--r2-text,#fff);white-space:normal;overflow-wrap:anywhere}
+body.immersive-base #experienceHud .experience-label b{min-width:0;max-width:100%;font:600 22px/1.3 var(--r2-display,'GV R2 Display',sans-serif);font-variant-numeric:tabular-nums;color:var(--r2-action,#ece910);white-space:normal;overflow-wrap:anywhere}
+body.immersive-base #experienceHud .experience-label span{min-width:0;max-width:100%;font:800 16px/1.4 var(--r2-body,'GV R2 Body',sans-serif);font-variant-numeric:tabular-nums;color:var(--r2-text,#fff);white-space:normal;overflow-wrap:anywhere}
+body.immersive-base #experienceHud .experience-label strong{min-width:0;max-width:100%;font:900 16px/1.4 var(--r2-body,'GV R2 Body',sans-serif);font-variant-numeric:tabular-nums;color:var(--r2-select,#5ee9e9);white-space:normal;overflow-wrap:anywhere}
+body.immersive-base #experienceHud .experience-bar{border-color:var(--r2-ink,#180d2f);background:var(--r2-ink,#180d2f)}
+body.immersive-base #experienceHud .experience-bar i{background:var(--r2-select,#5ee9e9);box-shadow:inset 0 2px #ffffff33}
+body.immersive-base #experienceHud .blessing-tag{font:800 16px/1.4 var(--r2-body,'GV R2 Body',sans-serif);color:var(--r2-select,#5ee9e9);white-space:normal;overflow-wrap:anywhere}
+body.immersive-base>header.game-toolbar .top-actions button{border-color:var(--r2-ink,#180d2f);border-radius:12px;background:var(--r2-inset,#353658);color:var(--r2-text,#fff);box-shadow:inset 0 2px #ffffff44,inset 0 -3px #180d2f66}
+body.immersive-base>header.game-toolbar #openApplicationMenu{background:var(--r2-action,#ece910);color:var(--r2-ink,#180d2f)}
+body.immersive-base>header.game-toolbar .top-actions button:hover:not(:disabled){border-color:var(--r2-select,#5ee9e9);color:var(--r2-text,#fff)}
+body.immersive-base>header.game-toolbar #openApplicationMenu:hover:not(:disabled){background:var(--r2-action-edge,#ecab11);color:var(--r2-ink,#180d2f)}
+body.immersive-base>header.game-toolbar :is(#sound[aria-pressed=true],#effects[aria-pressed=false]){border-color:var(--r2-select,#5ee9e9);color:var(--r2-select,#5ee9e9)}
+body.immersive-base>header.game-toolbar .top-actions button:disabled,body.immersive-base>header.game-toolbar #openApplicationMenu:disabled{border-color:var(--r2-lock,#686b72);border-style:dashed;background:var(--r2-inset,#353658);color:var(--r2-muted,#c5cddb);box-shadow:none;opacity:1;cursor:default}
+body.immersive-base>header.game-toolbar .top-actions button:focus-visible{outline:3px solid var(--r2-focus,#fff);outline-offset:3px;box-shadow:0 0 0 6px var(--r2-ink,#180d2f)}
+body.immersive-base.soft-fx #experienceHud .experience-bar i{transition:none}
+@media(prefers-reduced-motion:reduce){body.immersive-base #experienceHud .experience-bar i{transition:none}}

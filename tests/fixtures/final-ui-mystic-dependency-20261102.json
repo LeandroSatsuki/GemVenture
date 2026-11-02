@@ -1,0 +1,22 @@
+{
+  "id": "FINAL-UI-MYSTIC-DEPENDENCY-20261102",
+  "dependency": "MYSTIC-FIRE01-OFFICIAL-R1",
+  "sourceReceipt": "asset-work/mystic-fire01/official-r1/APPLIED.json",
+  "sourceReceiptSha256": "cb0d3615acb67939adac4dc953c77882ff3099cb5e658f46fc48b33257ef9e76",
+  "approvalContext": "Current UI review authorizes compatibility reconciliation; producer APPLIED receipt records approved official application. Its separate verification remains owned by producer.",
+  "sourceChat": "Chat geral Genventure /01a172ed-96f1-7a10-9cb9-8d69c99b32c4: current explicit user application request observed read-only",
+  "producerState": "applied_checks_running",
+  "runtimeMutated": false,
+  "files": {
+    "core.js": "673f3dbd955b9f894cbc9ef3e9b671fecb2655ce8a6baaec9c8edf747af10a22",
+    "world.js": "dc4027b704efb7ada67db327a7e7ea584f08a3777e1f460765bc27edf0b46da8",
+    "audio.js": "d99842b2368b1d216369d173e75ff6a7f136896aa7bc100587817f58bb2d271d",
+    "run.js": "84f48fac974ee3a4d46851a89a72712d5befaca9d69edde9fe27951a8568bfd6",
+    "campaign-cave-runtime.js": "8452e017733fb485b7246ab69c96c76dbf0dedec40743babbe10aaf9f2ec6927",
+    "mystic-mechanic.js": "76657ef5da88bc377afb029d1d524d97d5a956e311700d18920372d32167e5d8",
+    "mystic-art.js": "08d79ff8e8d3da126e9b03d098b8b3d9c2ac5f2f1bde50b6562b202cf8632d5c",
+    "mystic-presentation.js": "e1206bae20e21b8607d8553979fae161b0152e16626d6aeb07c8ac00752d1697",
+    "mystic-sfx.js": "c4480ea3bb3770a04f871c2f9592286b773c9aefa470468919f3c825b3507944",
+    "mystic-fire.js": "8fc8e4feac99b087fb75a34878bc1e444db5735606bcd33a67ad66ceeda73cac"
+  }
+}

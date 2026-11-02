@@ -1,0 +1,20 @@
+{
+  "id": "ZAG-NPC-ONLY-20261102-R1",
+  "authority": "Pedido humano: remover loja da caverna e arquivos exclusivos, manter somente Zag.",
+  "removed": [
+    "cave-merchant.js",
+    "cave-merchant-art.js"
+  ],
+  "files": {
+    "core.js": "29f5d8969ab3e58ed31400486b2093d792b5c6e61eda6a953fd8397ec2f8d203",
+    "world.js": "cfe53c4ced2a7668a39d97f435d5f9ec6eea74c06c2a2251fa95058224e0a17f",
+    "cave-finds.js": "01cb96ea34107fa5c178399570804ef84b7a74aeea6b85e4c7e86ebc195819b8",
+    "cave-miniboss.js": "8bca3ad4deebd9ea329e5eb2eeb62e321b16ec13a5bd1b6fcfc405ef5c6e0ff7",
+    "cave-zag.js": "2d563ab253378a5e63229d6d929f34a8a59fb3f38f45f60ef21f860a1b777a7c",
+    "cave-zag-art.js": "9d5d35d70dbf8b5bd10660f6079ba43c75c8285c53af055a1a4104a125723445",
+    "run-orb-hud.js": "05c80b909b1f18209e04a67da4ca6ddc4aa3d983a2089ab6347068a101d18a08",
+    "run-orb-hud.css": "3948465ebf205733697fcf1623ab1fce05a94458d3cc2bbe47477c9767580e0d",
+    "approved-orb-presentation.js": "ff473c8ff74236006007b1df9fcb7cd16c2889224cd40e67410c0c5e4abf88b3",
+    "approved-orb-assets.js": "4ef479746f5dc56f1f23ca62dacecafaa805ed75105d49e736896c1aa12d7bc8"
+  }
+}

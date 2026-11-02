@@ -1,0 +1,6 @@
+/* M4: existing objective values only; owners retain quotas, anchors, visibility and meter widths. */
+body.immersive-run #objective{font-family:var(--r2-body,'GV R2 Body','Trebuchet MS',sans-serif);font-weight:800;border-radius:12px;background:var(--r2-inset,#353658);color:var(--r2-text,#fff);border-left-color:var(--r2-select,#5ee9e9);box-shadow:inset 0 2px #ffffff33,inset 0 -3px #180d2f66;white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #objective>small{font:600 16px/1.3 var(--r2-display,'GV R2 Display','Arial Rounded MT Bold',sans-serif);color:var(--r2-select,#5ee9e9);white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #objective>div:not(.meter)>span{font:800 16px/1.4 var(--r2-body,'GV R2 Body','Trebuchet MS',sans-serif);color:var(--r2-muted,#c5cddb);white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #objective strong{font:900 18px/1.3 var(--r2-body,'GV R2 Body','Trebuchet MS',sans-serif);font-variant-numeric:tabular-nums;color:var(--r2-text,#fff);white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #objective #bagLabel{font:800 16px/1.4 var(--r2-body,'GV R2 Body','Trebuchet MS',sans-serif);font-variant-numeric:tabular-nums;color:var(--r2-select,#5ee9e9);white-space:normal;overflow-wrap:anywhere}

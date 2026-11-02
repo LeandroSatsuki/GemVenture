@@ -1,0 +1,25 @@
+{
+  "id": "ITENS-01",
+  "authority": "Direct user authorization: implement ITENS-01 only. Code/input/copy changes; no new art, palette or balance acceptance.",
+  "files": {
+    "action-effect-clock.js": "eb40659e3a28548687e0ac2f2b00dc23d5e4649eb13091ede22533b71ae9fc88",
+    "approved-training-ui.js": "61078379dbed3454605b1ccc5614ffb987674089ce3cefecc2da1ce5ea255f3e",
+    "cave-finds.js": "7b89e4a7551dde99c6d05a601bb9df2873df200e9a658366c23ec6944a94b430",
+    "consumable-input.js": "c49912db83427a3716dfd28e097b292fa58cbc7ba34ea4506f53fc1c2a6f36e6",
+    "core.js": "503b5a9474157d98dbebdd8bf180791b11ec8707e3dc09510fbeee014dbbf770",
+    "expedition-hud-view.js": "af79b9ee15bd05dda5d96c4af3283b16e96056165bd7bc0f14978bf1f154e99d",
+    "frenzy.js": "db0a183a3f3689d0e76e8b28cf3a6592fe5ec952f57d5507206a85b89946714d",
+    "learning-path.js": "5f187dfd95ac543cf0ab67ce4b681000825eba1400fe64ecff412a4b5fe47e87",
+    "missions.js": "69d5959167db86ab2e267e477d7d807d89427f9a64293cf27b61f01c63caac77",
+    "player-action-resolution.js": "453863d227e0e8069405bbccc27f51ac4a2753da98a768d9100fe242ddd9756c",
+    "run.js": "77a799ac32dd0f691d32327dfd954c7c9e39822172f89eed091da7d5bba99acc",
+    "stars.js": "c57f01154b44701a63fe6df6ea75c5d6219f877e7658e4e0c99ed89696b16f59",
+    "tutorial-controller.js": "9cbf0bfa7500b4d144c6d4c30750aa0e514275c315ac94d76975bbc9f2484966",
+    "tutorial-runtime.js": "451436974b97008d9b3ebc8b0b20ba57187d9f2f1aee52fdf02fdab6efabac64",
+    "tutorial-training.js": "511a58448a05893c8cdb276e6c36f90bbf2a7d38d3d88e89dc525e312f0828b1"
+  },
+  "finalAccessibilityFiles": {
+    "index.html": "843bde24cc5179ed59e1eecb0f47d6ad3a9973c7f50da1c83030cbd1c80ce215",
+    "run.js": "53d6fe54f0efae789b255e04f2380345b8adc47d2ef4f06638506012b406713a"
+  }
+}

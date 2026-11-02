@@ -1,0 +1,16 @@
+{
+  "id": "PRIMEIRA-HORA-01",
+  "authorization": "Direct implementation request; not human balance acceptance.",
+  "files": {
+    "tutorial-reward.js": "9a686703cc01ab496ae7cf9f5f65f909be7c98a0a3fa27811819fe7ac09f9d25",
+    "contextual-learning.js": "0825f4faae896884dfdf1fccb1071883d3dff6f439e38e40d2b9ab755f9aebaa",
+    "learning-path.js": "6cef545442f4a6ac62d23a30ab3b67e1ee9f71df42156b6f2848767c9ca162ad",
+    "learning-view.js": "12e0f915090359eb9f688d11f90831ded029a1c4cd5bd5cc867ad4ed541c15ce",
+    "learning-ui.css": "08a3ebdbbf75376e04459393de25fa7299958401f042753cd96785970c0997f0",
+    "tutorial-runtime.js": "948e776934960b6c6b933384aa261f8caea6fc04cc907c95835f427712104c7f",
+    "tutorial-controller.js": "6f88c80e80fcec06a94a269f8221445eed0e0695ca2631694fde0cf7fa23db75",
+    "run.js": "0f5c5b1bf630fdb6abf4a50338e1e8c8c5901eb6fb8e705f7acd7608fdacd52e",
+    "first-hour.js": "e09cb9dede0548c0135b904a89ce70abe6420a2bb0318dc344294755a91afc51",
+    "lift-v2ab-model.js": "d325067dd1dd22ef5e8fbca3a591d6efd246d72feea99846518d968aadb0262e"
+  }
+}

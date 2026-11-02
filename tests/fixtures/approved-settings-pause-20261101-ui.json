@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-01T03:50:55.779492+00:00",
+  "authorization": "E:/Genventure/coordination/SETTINGS-PAUSE-UI-INTEGRATION-20261101/HUMAN-APPROVAL.json",
+  "scope": "Approved Configura\u00e7\u00f5es v1 plus requested compact pause; presentation only",
+  "files": {
+    "index.html": "fced5c6ef377195a7cea9d6db8ad218b073bfce93a0833c6de9fed78bf967fcf",
+    "menu-controller.js": "c800af787a1ee5e746b969bae257cd00a4633c5a37558fbd4f9b2e74f131b3fc",
+    "expedition-hud-view.js": "a2a51c817280ad0035d07fbfc15e9fff9e1dd3c6f00770735ee370fc059cd38b",
+    "approved-expedition-hud.css": "bb257034f1815e607d71693d0c3c0e2eb89ff0cb331697ae57bfa9c58b67ff02",
+    "approved-settings-ui.css": "f9e47a40c2cc82c1076ab7fc07823c57c279589b03fbd1a857abc4a29bc5dae3",
+    "approved-pause-summary.js": "2fd10d3ce9677e4c97a330fe2c759190fb2f5294d7a358fd2baafc198f25d64b"
+  }
+}

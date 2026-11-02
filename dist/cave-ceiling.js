@@ -1,4 +1,5 @@
 import {isFloor} from './cave-layout.js';
+import {openingRockHp} from './opening-mining.js';
 const distance=(a,b)=>Math.abs(a.x-b.x)+Math.abs(a.y-b.y);
 export function initCeiling(room){room.ceiling={falls:[],next:24,landed:0,budget:12,stock:room.rocks.length};}
 function safeLanding(r,p){
@@ -15,7 +16,7 @@ export function ceilingTick(r,beat,random){
  const ceiling=room.ceiling;
  for(const p of ceiling.falls.filter(p=>p.due<=beat)){
   if(safeLanding(r,p)){
-   const hp=24+Math.floor((r.floor-1)*.8);
+   const hp=openingRockHp(r,2,24+Math.floor((r.floor-1)*.8));
    room.rocks.push({id:room.nextId++,type:'rock',kind:2,x:p.x,y:p.y,hp,maxHp:hp,value:1,falling:true});ceiling.landed++;
    r.events.push({type:'rockfall',x:p.x,y:p.y});
   }else r.events.push({type:'rockfallDust',x:p.x,y:p.y});
@@ -27,7 +28,7 @@ export function ceilingTick(r,beat,random){
  if(live>=ceiling.stock*.65)return;
  const cols=room.cols||21,rows=room.rows||15;
  for(let attempt=0;attempt<96&&ceiling.falls.length<3&&ceiling.landed+ceiling.falls.length<ceiling.budget;attempt++){
-  const p={x:2+Math.floor(random()*(cols-4)),y:2+Math.floor(random()*(rows-4)),born:beat,due:beat+3,kind:2};
+  const local=room.campaignCave?.version===1;const p={x:local?Math.max(2,Math.min(cols-3,r.player.x-9+Math.floor(random()*19))):2+Math.floor(random()*(cols-4)),y:local?Math.max(2,Math.min(rows-3,r.player.y-9+Math.floor(random()*19))):2+Math.floor(random()*(rows-4)),born:beat,due:beat+3,kind:2};
   if(safeLanding(r,p)&&distance(r.player,p)<=9&&!ceiling.falls.some(q=>distance(p,q)<4)){
    ceiling.falls.push(p);r.events.push({type:'ceilingWarning',...p});
   }

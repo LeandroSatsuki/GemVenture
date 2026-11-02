@@ -1,0 +1,12 @@
+{
+  "status": "human-approved-official-application",
+  "approvalSource": "Pedido humano direto: integração com cristais ... tá aprovado, pode aplicar no game e já analisa a próxima fase.",
+  "scope": "Contato/quebra Crystal P1 e adaptação de ciclo de vida, coordenadas e agregação de cascata; sem alteração de gameplay, Bomba ou áudio.",
+  "receipt": "E:/Genventure/coordination/VFX-CRYSTAL-APPLIED-20261031/APPLICATION-RECEIPT.json",
+  "approvedDrawAndPoseSHA256": "bb712a7651d6bbd1982f1cd2291a377dac964be707af67640395e984890c8917",
+  "files": {
+    "effects.js": "4913c7acf06eb9f49b5cddf0bee29cdf01b566d75c5309fc9fa68c40460a9d5d",
+    "world.js": "cbb11cb1b5e1a4cb63ee2326896cba178b4fce7159fb77af79206c752356388d",
+    "mining-vfx.js": "f7d4543bf7a53504d2a3619155ab96fb12e32d5b58640d03fc20c3cddcc18e15"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "GV-043/HUD-MINIATURES-R1",
+  "scope": "Human clarified: temporary buffs left, canonical cards right; retire card-only SVG payloads",
+  "files": {
+    "approved-card-raster.js": "a813132a10e9c3e7ff946f5a6ba8b3f1ce66566380b470007bca746c3c43703f",
+    "approved-expedition-hud.css": "71cc34c6b498584fb1e6004526d362c38781342827bacbadc86ddc325167d99d",
+    "approved-interface-icons.js": "420ad8b3a359d382ee37879da227ff56df662b16b457b05851cf065c966f9c07",
+    "card-art-registry.js": "c16c7e31de4dc8e201d358a5b3b96a37ff69c3dae9787237419c02d3308193a6",
+    "card-hud.js": "0051981798fbf310ba6374f4c90b5462fd823789d13adeed45fd6d820a11abeb",
+    "expedition-hud-view.js": "412f12c0edf0d65faa692aa2ca6cfbf6afb251d57ce1c012a26650d5865b8bae",
+    "run.js": "782cf9b2c96f425220a35fd9da27f439106822c29a0ee24d4a343e2ca8e89dbf"
+  }
+}

@@ -1,0 +1,11 @@
+import {STATUE_FAMILY} from './statue-family-manifest.js';
+import {THRESHOLDS} from './account-score.js';
+const number=n=>n.toLocaleString('pt-BR'),escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+// Read-only presentation of the canonical domain snapshot. No state/ACK/award API.
+export function statueScoreMarkup(view,{portraitUrl=null,portraitLabel=null}={}){
+ const portrait=portraitUrl?'<figure class="statue-score-art"><img src="'+escape(portraitUrl)+'" alt="'+escape(portraitLabel||'Estátua · '+STATUE_FAMILY[view?.tier??0]?.name)+'" width="1055" height="1491"></figure>':'';
+ const unavailable=!view||!Number.isSafeInteger(view.total)||!Number.isFinite(view.fill);
+ if(unavailable)return '<section class="statue-score statue-score-unavailable" aria-label="Pontuação geral">'+portrait+'<div><h2>Pontuação indisponível</h2><p>Seu progresso foi preservado.</p></div></section>';
+ const fill=Math.max(0,Math.min(1,view.fill)),last=view.next===null,remaining=last?0:Math.max(0,view.next-view.total),rows=THRESHOLDS.map((points,i)=>'<li'+(i===view.tier?' aria-current="step"':'')+'><span>Elo '+(i+1)+' · '+escape(STATUE_FAMILY[i].name)+'</span><b>'+number(points)+'</b></li>').join('');
+ return '<section class="statue-score gv-r2" aria-label="Pontuação geral">'+portrait+'<div class="statue-score-content"><p class="statue-score-kicker">PONTUAÇÃO ACUMULADA</p><strong class="statue-score-total">'+number(view.total)+'</strong><p class="statue-score-stage">Elo <b>'+view.stage+'</b> de '+THRESHOLDS.length+' · '+escape(STATUE_FAMILY[view.tier].name)+'</p><div class="statue-score-progress" role="progressbar" aria-label="Progresso do elo atual" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+Math.round(fill*100)+'" aria-valuetext="'+(last?'Último elo':number(remaining)+' pontos para o próximo elo')+'" style="--statue-fill:'+fill*100+'%"><i></i></div><p class="statue-score-next">'+(last?'Último elo alcançado.':'Faltam <b>'+number(remaining)+'</b> pontos para o próximo elo.')+'</p><p class="statue-score-caption">A pontuação cresce com suas expedições.</p><details class="statue-score-milestones"><summary>Ver marcos</summary><ol>'+rows+'</ol></details></div></section>';
+}

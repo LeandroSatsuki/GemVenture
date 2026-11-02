@@ -66,6 +66,12 @@ if(new URLSearchParams(location.search).has('mole')){
  if(pose==='surface'){r.player={x:13,y:10};r.acted=7;tick(state,7);}
  r.elapsed=beatTime(30,pose==='surface'?7.65:5.5);r.musicClock=2;r.events=[];r.cardOffer=[];r.combo=16;
 }
+if(new URLSearchParams(location.search).has('geode')){
+ const pose=new URLSearchParams(location.search).get('geode');state.run.floor=5;state.best=5;generateRoom(state);
+ const r=state.run;r.player={x:10,y:9};r.combo=16;r.rhythm=75;r.beat=4;r.acted=4;r.enemyBeat=-1;enemyBeat(state,4);
+ if(pose!=='warning'){if(pose==='dodge')r.player={x:14,y:9};r.acted=7;tick(state,7);}
+ r.elapsed=beatTime(5,pose==='warning'?5.4:7.5);r.musicClock=2;r.cardOffer=[];
+}
 if(new URLSearchParams(location.search).has('missionboard')){state.run=null;state.lastResult=null;state.best=30;state.seals=5;state.village.missions=Math.min(150,Math.max(1,Number(new URLSearchParams(location.search).get('missionboard'))||1));state.bank=2000000;state.materials=[100000,100000,100000,100000];}
 if(new URLSearchParams(location.search).has('missionroster')){state.run=null;state.lastResult=null;state.village.missions=150;state.best=30;state.seals=5;for(let i=0;i<3;i++)acceptMission(state,missionOffers(state)[0].id);missionList(state).forEach((m,i)=>{m.progress=i===0?m.goal:Math.floor(m.goal*.3);if(i===0)m.status='ready';});}
 if(new URLSearchParams(location.search).has('inputcheck')){const {prepareInputCheck}=await import('/input-check.js');prepareInputCheck(state,new URLSearchParams(location.search).get('inputcheck')||'floors');}
@@ -80,7 +86,15 @@ if(new URLSearchParams(location.search).has('minerperf')){
  const meter=document.createElement('output');meter.id='minerPerf';meter.style.cssText='position:fixed;bottom:2px;left:2px;font:12px monospace;color:white;z-index:10000;background:#180d2f';document.body.append(meter);
  MinerGame.prototype.draw=function(...args){const at=performance.now();draw.apply(this,args);samples.push(performance.now()-at);if(samples.length>900)samples.shift();peakParticles=Math.max(peakParticles,this.particles.length);if(++measured%30===0){const sorted=[...samples].sort((a,b)=>a-b);meter.textContent=JSON.stringify({frames:samples.length,p50:sorted[Math.floor(sorted.length*.5)],p95:sorted[Math.floor(sorted.length*.95)],peakParticles,rows:13,tiles:91});}};
 }
+if(new URLSearchParams(location.search).has('approved')){
+ const index=Math.max(0,Math.min(6,Number(new URLSearchParams(location.search).get('approved'))||0));
+ state=createState(712);state.seals=6;state.best=35;startRun(state);state.run.floor=index*5+(new URLSearchParams(location.search).has('boss')?5:1);generateRoom(state);
+ state.run.cardOffer=[];state.run.events=[];state.run.beat=4;state.run.acted=4;state.run.enemyBeat=4;state.run.elapsed=beatTime(state.run.floor,4.4);state.run.musicClock=2;
+ if(new URLSearchParams(location.search).has('reveal')){delete state.run.room.explored;delete state.run.room.visible;}
+}
+if(new URLSearchParams(location.search).has('hedgehogcheck')){state=createState(712);startRun(state);const {prepareHedgehogCheck}=await import('/hedgehog-check.js');prepareHedgehogCheck(state);}
 localStorage.setItem('gemventure-save-v2',JSON.stringify(state));
 await import('/run.js');
+if(new URLSearchParams(location.search).has('approved')){const {loadApprovedArt}=await import('/approved-art.js');const status=await loadApprovedArt();const report=document.createElement('output');report.id='approvedArtQA';report.style.cssText='position:fixed;bottom:2px;left:2px;z-index:10000;color:#e8ff75;background:#180d2f;font:11px monospace';report.textContent='QA · ARTES '+status.ready+'/'+status.total+' · ERROS '+status.failed.length+(new URLSearchParams(location.search).has('reveal')?' · CENA REVELADA':'');document.body.append(report);}
 if(new URLSearchParams(location.search).has('watchcards')){const dialog=document.getElementById('abyssCardDialog');let opened=0;new MutationObserver(()=>{if(dialog.open){opened=performance.now();return;}if(!opened)return;const seconds=(performance.now()-opened)/1000;opened=0;document.getElementById('pause').click();const result=document.createElement('p');result.id='abyssChoiceQA';result.style.cssText='position:fixed;bottom:10px;left:10px;z-index:9999;background:#180d2f;color:#e8ff75;padding:14px;font-size:20px';result.textContent='ESCOLHA '+seconds.toFixed(2)+'s · COMBO '+document.getElementById('combo').textContent+' · FÔLEGO '+document.getElementById('breathLabel').textContent;document.body.append(result);}).observe(dialog,{attributes:true,attributeFilter:['open']});}
 if(new URLSearchParams(location.search).has('freeze')){const style=document.createElement('style');style.textContent='#pauseCover{display:none!important}.immersive-run #controlDeck{visibility:visible!important}';document.head.append(style);document.getElementById(new URLSearchParams(location.search).has('journey')?'scoreHud':'breathHud').scrollIntoView({block:'start'});}

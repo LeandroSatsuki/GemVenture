@@ -1,0 +1,9 @@
+{
+  "authorization": "Human approval31/10/2026: Wardrobe v1, larger existing character art, real instant outfits, category/pagination and local pose; legacy pets path retained.",
+  "files": {
+    "approved-wardrobe-ui.js": "79ec8b74a887cddc60b32aafaba767af323918ead116f648defa0bb8a0e3ccf1",
+    "approved-wardrobe-ui.css": "2171e7dece00b5515138cf952f713e013db01336bef26be40085da72eed2d9df",
+    "run.js": "361aa6b75ad4e52e402052057805cbf093595f6196a72761d93abc933c7fef9e",
+    "approved-services-shell.css": "c6f55699dd38f8cbb77e0dab112e9d41feb9eda56f207efe3998cc5679f8ed4f"
+  }
+}

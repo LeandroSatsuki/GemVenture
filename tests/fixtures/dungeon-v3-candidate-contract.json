@@ -1,0 +1,20 @@
+{
+  "status": "candidate; requested refinements, user visual approval pending",
+  "files": {
+    "audio.js": "bcd17d4174ee7bd8a97b6aba5d867ce8ebbc65e87e140b34b3b1d4f9b65ad6dd",
+    "boss-arena.js": "1a68f58b9d1a6f93c4a0a22c5bd4b1fb98acb4969b3fd5b73225395ddb78b781",
+    "boss-impact-audio.js": "b8b9528c10bd80c5d95dae0568fca5f5dacd6d19d84cb1d6457b81dc96703a26",
+    "cave-atmosphere.js": "cd156b32c066ea18887d463adabe60cd01a89df10f77f583408ed6fda2b6e97f",
+    "cave-player-art.js": "65e6d629470c97e3ec66b692a9beb14380c84c95677af5bc70c43bcecf8b3a09",
+    "dungeon-environment.js": "fbe95aaa19fbc046397c414a5ccdd0764ac628af5c9639228e1bb98787f495bf",
+    "dungeon-miner.js": "72604e9673552934e71d467844c97b2e2ba1fa49a5bb5ad5377e579fd44da743",
+    "dungeon-pickaxe.js": "159ebc6c35a7671b8bc92f087c77c43f8cb7e27eb29fdd344ea9e33f18e69e33",
+    "dungeon-volumes.js": "df2376117b059517d29ab9caeb6aea3ac291784db7851e8490d6e3d6a90d2730",
+    "geode-articulation.js": "7811d06bbcd7127bf54191d49334f9964884789f01094b22137fd7db6c3be09d",
+    "geode-rig.js": "0f3e6c4ecf9510225918bc5883eb8412cb8ca44b25aec026d3089fe2ddf5519f",
+    "global-screen-finish.js": "2025d574a286bd016e657de04868f602aecd4a62408804963e28d60f66995afe",
+    "pickaxe-art.js": "09c63c8c7c4a764c7d00259bc9ff57b8b8694f5b1c804baefdebefab1c9f16c4",
+    "screen-finish.js": "a1dff8beb570800643966ce118aa20c4faf9b5710ce12f36ad43b252aae69221",
+    "world.js": "99466e0e791ce63709f17212284569b2c485fcdab8a5803ad0eb9e1e08b2f39b"
+  }
+}

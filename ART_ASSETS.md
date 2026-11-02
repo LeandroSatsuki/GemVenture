@@ -1,11 +1,33 @@
 # Gemventure — biblioteca de arte
 
+## PNGs aprovados em uso · 14/10/2026
+
+`dist/assets/approved-art/` contém 78 imagens ativas: 49 recursos,
+21 criaturas, sete chefes e um filhote. Fontes preservadas, sem recolor;
+âncoras e proporções estão em `dist/approved-art-manifest.js`.
+[Integração, caminhos e validação](docs/art/approved-runtime-art.md).
+O catálogo marca essas entradas como **APROVADO · EM USO**; a seção
+histórica de referências procedurais abaixo não é mais o destino delas.
+
+## Terrenos · em produção
+
+Um atlas por material, com 64 posições: 47 máscaras de conexão e 17 complementos.
+[Contrato e caminhos](docs/art/terrain-kit-v2.md). Prévia em `/terrain-studio.html`.
+Os guias são técnicos; ainda não substituem os terrenos ativos do jogo.
+
+## Efeitos em PNG
+
+Pasta ativa: `dist/assets/vfx/`. Cinco famílias: impacto, explosão, escudo,
+poder e recompensa. Prévia animada: `/vfx-gallery.html`.
+[Guia de substituição](docs/art/vfx-assets.md). O catálogo inclui os destinos.
+
 ## Versão pública no GitHub · 14/10/2026
 
 Corpo e capacete procedurais usam partes originais em `dist/pack-art.js`.
 As entradas de packs importados na seção histórica abaixo não são componentes
-ativos da versão pública. Os vetores antigos e o importador permanecem apenas
-no ambiente local, fora do Git, por restrições de redistribuição. As referências
+ativos da versão pública. Os packs originais e registros de origem permanecem apenas
+no ambiente local, fora do Git, por restrições de redistribuição. O importador
+legado foi removido na limpeza de 25/10/2026; ele sobrescrevia as partes próprias. As referências
 do catálogo foram regeneradas com as peças originais. Veja `CREDITS.md`.
 
 ## Direção visual
@@ -24,9 +46,9 @@ QA de interface usa `node tests/ui-review-server.mjs`, porta 4175, para manter a
 
 Abrir `http://127.0.0.1:4173/asset-catalog.html` (ou a mesma página no servidor QA 4174). O catálogo apresenta as peças atuais, referências PNG/SVG exportadas, origem no código, destino proposto e necessidades de animação. Dados completos em `dist/asset-reference/catalog.json`.
 
-- `dist/assets/village-hept32/`: 13 PNGs ativos da vila, incluindo `mining-machine-v2.png` da Broca AFK de aço. `mining-machine.png` é a versão amarela anterior, preservada. A normalização de paleta e os recortes animados atuais ainda se aplicam.
+- `dist/assets/village-hept32/`: 13 PNGs ativos da vila, incluindo `mining-machine-v2.png` da Broca AFK de aço. A versão amarela anterior sem uso foi removida na limpeza de 25/10/2026. A normalização de paleta e os recortes animados atuais ainda se aplicam.
 - `dist/asset-reference/`: referências por código exportadas, separadas por personagem, criaturas, chefes, recursos, cenário, equipamento, cartas, ícones, dados do Zag e biomas. São referências, não novos assets integrados.
-- `asset-work/novos-assets/`: pastas de entrega para novas imagens das demais famílias. O jogo **não carrega automaticamente** esta pasta; a integração será feita por família, com tamanho, ponto de apoio e animação revisados.
+- Novas entregas raster devem ficar fora de `dist/assets/` até a integração revisada por família. As candidatas antigas e `asset-work/novos-assets/` foram removidas na limpeza autorizada de 25/10/2026. O jogo carrega somente URLs e manifestos explícitos.
 
 As 209 entradas incluem reutilizações: 7 chefes e 2 invocações, 21 inimigos e 7 ouriços por bioma, 4 minerais sobre 7 bases, 3 resistências de rocha por bioma, 10 picaretas, 4 variantes do minerador, 24 símbolos de cartas (incluindo 3 de recuperação do Abismo), 35 ícones compartilhados e 6 faces de dado, além da mineradora AFK. Não gerar um desenho por semente ou por andar. Biomas usam a miniatura real do elevador como referência de composição; chão, paredes, perigos, efeitos e painéis ainda exigem partes próprias, descritas no catálogo.
 
@@ -44,7 +66,11 @@ HEPT32, por ENDESGA: https://lospec.com/palette-list/hept32
 
 Uma única paleta no mundo, na interface e nos efeitos. Silhuetas amplas, contorno escuro, luz superior esquerda, cor sólida e uma sombra por material. Personagem e quadro de missões são referências locais. Corpos orgânicos e construções usam curvas e cantos suaves; cristais mantêm facetas regulares. Os quatro minerais conservam sua cor nos seis biomas.
 
-## Origem dos assets atuais
+## Histórico de pacotes avaliados
+
+Esta seção documenta a importação anterior, sem definir os consumidores atuais.
+O runtime público usa partes próprias; consulte a seção de versão pública acima
+e os manifestos de cada família antes de integrar qualquer fonte.
 
 | Fonte fornecida em `../Assets` | Uso e adaptação |
 | --- | --- |
@@ -57,7 +83,7 @@ As famílias do gerador receberam polimento conjunto: telhado regular da Forja, 
 
 ## Outros pacotes avaliados
 
-Os novos conjuntos `cartoon-game-icons...`, `fun-variety-knight-elements`, `set-game-icons...` e `video-game-game-health-bar-element...` foram catalogados. Os conjuntos de HUD e medieval servem como referência de composição; não substituem automaticamente a interface. Os arquivos adicionais `(1)` e `(2)` permanecem disponíveis no inventário para seleção futura.
+Os novos conjuntos `cartoon-game-icons...`, `fun-variety-knight-elements`, `set-game-icons...` e `video-game-game-health-bar-element...` foram catalogados. Os conjuntos de HUD e medieval servem como referência de composição; não substituem automaticamente a interface. Os packs originais e seu inventário permanecem disponíveis para consulta; não são arquivos carregados pelo jogo.
 
 Sunnyside, Solaria e os pacotes de VFX/pixel UI não entram diretamente no renderizador: suas texturas, resoluções ou sombreamentos diferem da direção escolhida. O pacote de músicas não foi alterado nesta integração.
 
@@ -73,9 +99,9 @@ Referências de direção, sem copiar desenhos: [Forager, HopFrog](https://hopfr
 
 1. Colocar os packs originais em `../Assets`; o importador não altera os originais.
 2. Para os vetores Illustrator, instalar a dependência de edição: `python -m pip install --target asset-work/python-deps pymupdf==1.28.2`.
-3. `python tools/import-art-pack.py` atualiza o catálogo `dist/pack-art.js`. Cada cor exige mapeamento explícito; executar o importador não deve substituir os desenhos próprios atuais. O jogo usa desse catálogo apenas corpo e capacete do explorador.
+3. Integrar arte por manifesto de família e revisão do consumidor. O importador legado foi aposentado: não sobrescrever os desenhos próprios atuais de `dist/pack-art.js` com os vetores históricos.
 4. Consultar `asset-work/inventory.json` e `asset-work/import-manifest.json` para fontes e hashes. Novos ZIPs entram no inventário; sua integração visual exige seleção deliberada.
 5. Seguir [a skill de arte procedural](skills/gemventure-procedural-art/SKILL.md). Revisar contato, silhuetas e `art-studio.html`, nos seis ambientes e no tamanho real de jogo. Conferir os dez tiers da picareta, todos os chefes, sombras, camadas animadas e distinção parede/rocha.
-6. Executar `npm test` e `node export-art-studio.mjs` para atualizar o ateliê portátil.
+6. Executar `npm run audit:assets`, `npm run check` e `npm test`. Gerar o ateliê portátil com `node export-art-studio.mjs` somente quando necessário; a exportação é descartável.
 
 Sem dependência de Python, Illustrator ou ZIPs no jogo publicado. As peças usam o mesmo desenho vetorial em Canvas e SVG; o cache de sprites continua limitado a 256 superfícies. Cada peça tem no máximo 30 formas e os efeitos mantêm seus limites de partículas e duração.

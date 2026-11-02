@@ -1,20 +1,124 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#180d2f"><meta name="description" content="Mine, lute e exploda no pulso. Uma descida arcade até o coração da Terra."><title>Gemventure — Pulsebreaker</title><link rel="icon" href="icon.svg"><link rel="stylesheet" href="screen.css"><link rel="stylesheet" href="expedition.css"><link rel="stylesheet" href="readable.css"><link rel="stylesheet" href="stars.css"><link rel="stylesheet" href="missions.css"><link rel="stylesheet" href="forge.css"><link rel="stylesheet" href="gear.css"><link rel="stylesheet" href="village.css"><link rel="stylesheet" href="progression-ui.css"><link rel="stylesheet" href="pillars.css"><link rel="stylesheet" href="combat-feedback.css"><link rel="stylesheet" href="journey.css"><link rel="stylesheet" href="abyss.css"><link rel="stylesheet" href="immersive.css"><link rel="stylesheet" href="lift.css"><link rel="stylesheet" href="village-upgrades.css"><link rel="stylesheet" href="pickaxe.css"><link rel="stylesheet" href="zag.css"><link rel="stylesheet" href="hud-emphasis.css"><link rel="stylesheet" href="refuge-layout.css"><link rel="stylesheet" href="talents.css"><link rel="stylesheet" href="astral.css"><link rel="stylesheet" href="records.css"></head>
-<body>
+<html lang="pt-BR" data-entry-pending="true"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#180d2f"><meta name="description" content="Mine, lute e exploda no pulso. Uma descida arcade até o coração da Terra."><title>Gemventure — Pulsebreaker</title><link rel="icon" href="icon.svg"><link rel="stylesheet" href="screen.css"><link rel="stylesheet" href="expedition.css"><link rel="stylesheet" href="readable.css"><link rel="stylesheet" href="stars.css"><link rel="stylesheet" href="missions.css"><link rel="stylesheet" href="forge.css"><link rel="stylesheet" href="gear.css"><link rel="stylesheet" href="village.css"><link rel="stylesheet" href="progression-ui.css"><link rel="stylesheet" href="pillars.css"><link rel="stylesheet" href="combat-feedback.css"><link rel="stylesheet" href="journey.css"><link rel="stylesheet" href="abyss.css"><link rel="stylesheet" href="immersive.css"><link rel="stylesheet" href="lift.css"><link rel="stylesheet" href="village-upgrades.css"><link rel="stylesheet" href="pickaxe.css"><link rel="stylesheet" href="zag.css"><link rel="stylesheet" href="hud-emphasis.css"><link rel="stylesheet" href="refuge-layout.css"><link rel="stylesheet" href="talents.css"><link rel="stylesheet" href="astral.css"><link rel="stylesheet" href="records.css"><link rel="stylesheet" href="statue-view.css"><link rel="stylesheet" href="tutorial.css"><link rel="stylesheet" href="return-layout.css">
+<link rel="stylesheet" href="card-lighting.css">
+<link rel="stylesheet" href="card-floating.css">
+<link rel="stylesheet" href="descent-shell.css">
+<link rel="stylesheet" href="post-choice.css">
+<link rel="stylesheet" href="forge-layout.css">
+<link rel="stylesheet" href="forge-v4-adjustments.css">
+<link rel="stylesheet" href="relicario.css">
+<link rel="stylesheet" href="refuge-polish-v3.css">
+<link rel="stylesheet" href="dungeon-refinement-v2.css">
+
+<link rel="stylesheet" href="gamefeel-v5.css">
+<link rel="stylesheet" href="gamefeel-v6.css">
+<link rel="stylesheet" href="gamefeel-v7.css">
+<link rel="stylesheet" href="pet-companions.css"><link rel="stylesheet" href="resume-view.css">
+</head>
+<body class="application-menu-open"><style>#entryLoading{position:fixed;inset:0;z-index:2147482001;display:grid;place-items:center;background:#180d2f;color:#ffffff;font:800 20px/1.4 sans-serif}#entryLoading[hidden]{display:none}#entryLoading>div{max-width:500px;padding:28px;text-align:center}#entryRetry{min-height:48px;padding:12px 20px;border:2px solid #180d2f;background:#fbbe82;color:#180d2f;border-radius:9px;font:900 18px sans-serif}.entry-beta{box-sizing:border-box;width:min(560px,calc(100vw - 24px));padding:28px;border:3px solid #180d2f;border-radius:16px;background:#353658;color:#ffffff;font:800 19px/1.5 var(--r2-body,sans-serif)}.entry-beta p{display:block;color:#ffffff;font:800 19px/1.5 var(--r2-body,sans-serif);margin:16px 0}.entry-beta::backdrop{background:#180d2fcc}.entry-beta h2{font:600 30px var(--r2-display,sans-serif);color:#fbbe82!important;-webkit-text-fill-color:#fbbe82!important}.entry-beta button{display:block;min-height:48px;width:100%;margin-top:20px;background:#fbbe82;color:#180d2f;border:2px solid #180d2f;border-radius:9px;font:900 18px var(--r2-body,sans-serif);padding:12px}</style><link rel="stylesheet" href="entry-loading-v1.css"><div id="entryLoading" aria-busy="true"><img class="entry-cover" src="assets/loading-v1/cover.png" alt="Minerador e criaturas em uma caverna musical"><img class="entry-brand" src="assets/ui-r2/gemventure-wordmark-master-v01.png" alt="GemVenture"><div class="entry-bottom"><div id="entryProgress" role="progressbar" aria-label="Carregamento" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="entry-fill"></div><canvas id="entryRunner" width="128" height="128" aria-hidden="true"></canvas></div><strong id="entryPercent">0%</strong><p id="entryLoadingPhase" hidden></p><button id="entryRetry" hidden onclick="location.reload()">Tentar de novo</button><noscript>Ative JavaScript para abrir o jogo.</noscript></div></div><script>window.addEventListener('error',function(e){if(e.target&&e.target.tagName==='SCRIPT'){document.getElementById('entryLoadingPhase').hidden=false;document.getElementById('entryLoadingPhase').textContent='A interface não carregou. Verifique a conexão e tente novamente.';document.getElementById('entryRetry').hidden=false;document.getElementById('entryLoading').hidden=false;}},true);</script>
+<link rel="stylesheet" href="menu.css">
+<div id="menuHost"><section id="menuShell" hidden class="menu-shell gv-r2-menu" aria-label="Configurações do jogo">
+ <div class="menu-layout" id="menuMain">
+  <!-- Historical menu controls remain inert for settings-controller compatibility; no old cover is loaded. -->
+  <nav class="menu-actions" aria-label="Ações principais"><button id="menuStart" class="menu-primary">Jogar</button><button id="menuSettings">Configurações</button><button id="menuExit">Sair</button><p id="menuNotice" role="status" aria-live="polite" tabindex="-1"></p></nav>
+ </div>
+ <section id="gameSettings" class="menu-settings" role="dialog" aria-modal="true" aria-labelledby="settingsTitle" hidden tabindex="-1">
+  <header class="head"><span class="symbol" aria-hidden="true">⚙</span><h2 id="settingsTitle">Configurações</h2><button type="button" id="settingsClose" class="close" aria-label="Fechar configurações">×</button></header>
+  <div class="settings-tabs" role="tablist" aria-label="Configurações">
+   <button type="button" id="settingsAudioTab" class="tab" data-settings-tab="audio" role="tab" aria-controls="settingsAudioPanel" aria-selected="false" tabindex="-1">Áudio</button>
+   <button type="button" id="settingsVideoTab" class="tab" data-settings-tab="video" role="tab" aria-controls="settingsVideoPanel" aria-selected="true">Vídeo</button>
+   <button type="button" id="settingsInterfaceTab" class="tab" data-settings-tab="interface" role="tab" aria-controls="settingsInterfacePanel" aria-selected="false" tabindex="-1">Interface</button>
+  </div>
+  <section class="section audio" id="settingsAudioPanel" role="tabpanel" aria-labelledby="settingsAudioTab" hidden>
+   <h3 id="settingsAudioTitle" class="sr-only">Áudio</h3>
+   <label class="sound-toggle audio-preference"><span>Som</span><b id="settingsSoundValue">Ligado</b><input type="checkbox" id="settingsSoundEnabled" checked></label>
+   <div class="sliders">
+    <label class="slider audio-preference"><span class="label"><span id="settingsMusicLabel">Música</span><output id="settingsMusicValue" for="settingsMusicVolume">100%</output></span><input type="range" id="settingsMusicVolume" aria-label="Volume da música" min="0" max="100" step="1" value="100"></label>
+    <label class="slider audio-preference"><span class="label"><span id="settingsSfxLabel">Efeitos sonoros</span><output id="settingsSfxValue" for="settingsSfxVolume">100%</output></span><input type="range" id="settingsSfxVolume" aria-label="Volume dos efeitos sonoros" min="0" max="100" step="1" value="100"></label>
+   </div>
+  </section>
+  <section class="section" id="settingsVideoPanel" role="tabpanel" aria-labelledby="settingsVideoTab">
+   <div class="scope"><h3>Iluminação</h3><span>Biomas e Abismo</span></div>
+   <div class="sliders">
+    <label class="slider"><span class="label"><span>Luz do ambiente</span><output id="settingsAmbientValue" for="settingsAmbient">103%</output></span><input id="settingsAmbient" data-video-key="luz_ambiente_pct" aria-controls="settingsAmbientValue" type="range" min="0" max="200" step="1" value="103"></label>
+    <label class="slider"><span class="label"><span>Brilho neon</span><output id="settingsNeonValue" for="settingsNeon">106%</output></span><input id="settingsNeon" data-video-key="neon_cristais_pct" aria-controls="settingsNeonValue" type="range" min="0" max="250" step="1" value="106" aria-describedby="settingsNeonDetail"><span id="settingsNeonDetail" class="detail">Cristais, líquidos e partículas</span></label>
+    <label class="slider"><span class="label"><span>Luz do personagem</span><output id="settingsPlayerLightValue" for="settingsPlayerLight">200%</output></span><input id="settingsPlayerLight" data-video-key="luz_personagem_pct" aria-controls="settingsPlayerLightValue" type="range" min="0" max="200" step="1" value="200"></label>
+    <label class="slider"><span class="label"><span>Alcance do personagem</span><output id="settingsPlayerReachValue" for="settingsPlayerReach">200%</output></span><input id="settingsPlayerReach" data-video-key="alcance_personagem_pct" aria-label="Alcance da luz do personagem" aria-controls="settingsPlayerReachValue" type="range" min="50" max="200" step="1" value="200"></label>
+    <label class="slider"><span class="label"><span>Alcance dos cristais</span><output id="settingsCrystalReachValue" for="settingsCrystalReach">144%</output></span><input id="settingsCrystalReach" data-video-key="alcance_cristais_pct" aria-label="Alcance da luz dos cristais" aria-controls="settingsCrystalReachValue" type="range" min="50" max="200" step="1" value="144"></label>
+    <label class="slider"><span class="label"><span>Escuridão</span><output id="settingsDarkValue" for="settingsDark">68%</output></span><input id="settingsDark" data-video-key="escuridao_pct" aria-controls="settingsDarkValue" type="range" min="0" max="100" step="1" value="68"></label>
+   </div>
+   <div class="layers" role="group" aria-label="Camadas de iluminação">
+    <label class="toggle"><input type="checkbox" data-video-layer="braseiros" checked>Braseiros</label><label class="toggle"><input type="checkbox" data-video-layer="cristais" checked>Cristais</label><label class="toggle"><input type="checkbox" data-video-layer="nevoa" checked>Névoa</label>
+   </div>
+   <div class="camera-setting"><label class="slider"><span class="label"><span>Distância da câmera</span><output id="settingsCameraValue" for="settingsCamera">100%</output></span><input type="range" id="settingsCamera" aria-label="Distância da câmera" min="70" max="150" step="5" value="100"></label><div class="camera-ends"><span>Perto</span><span>Na caverna</span><span>Longe</span></div><button type="button" id="settingsCameraReset" class="button">Câmera padrão</button></div>
+  </section>
+  <section class="section ui-size-section" id="settingsInterfacePanel" role="tabpanel" aria-labelledby="settingsInterfaceTab" hidden>
+   <label class="slider"><span class="label"><span id="settingsUiTitle">Tamanho da UI</span><output id="settingsUiValue" for="settingsUiScale">80%</output></span><input type="range" id="settingsUiScale" aria-label="Tamanho da interface" min="75" max="150" step="5" value="80"></label>
+   <button type="button" id="settingsEditHud" class="button primary">Organizar UI</button>
+   <label class="toggle boss-help-toggle"><input type="checkbox" id="settingsBossHelp"><span>Habilitar ajuda<span class="detail">Balões dos bosses</span></span></label>
+   <div class="scale-demo"><strong id="settingsUiPreview" aria-hidden="true">Aa</strong><span>Todas as telas</span></div>
+  </section>
+  <div class="effects"><span id="settingsVisualTitle">Efeitos visuais</span><fieldset class="choices" aria-labelledby="settingsVisualTitle"><label class="choice"><input type="radio" name="settingsVisualEffects" value="intense" id="settingsVisualEffects" checked><span>Intensos</span></label><label class="choice"><input type="radio" name="settingsVisualEffects" value="soft" id="settingsVisualSoft"><span>Suaves</span></label></fieldset><img id="settingsEffectSample" src="assets/hud-v5/star.png" alt=""><span id="settingsPreviewTitle" class="sr-only"></span><span id="settingsPreviewCopy" class="sr-only"></span></div>
+  <footer class="footer"><button type="button" id="settingsApply" class="button primary" hidden>Aplicar e continuar</button><button type="button" id="settingsBack" class="button back">Voltar</button><button type="button" id="settingsVideoReset" class="button reset" data-settings-reset="video">Padrão de luz</button><button type="button" id="settingsAudioReset" class="button reset" data-settings-reset="audio" hidden>Áudio padrão</button><button type="button" id="settingsUiReset" class="button reset" data-settings-reset="interface" hidden>Tamanho padrão</button></footer>
+  <p class="status" id="settingsAudioStatus" role="status" aria-live="polite"></p>
+ </section>
+</section></div>
 <link rel="stylesheet" href="ui-theme.css">
 <link rel="stylesheet" href="miner.css">
-<link rel="stylesheet" href="ui-refinement.css">
-<header><a class="brand" href="./"><img src="icon.svg" alt="">GEM<span>VENTURE</span><b>PULSEBREAKER</b></a><div class="top-actions"><span id="saved">SALVO LOCALMENTE</span><button id="sound" aria-label="Ativar música">♫ <span>ATIVAR SOM</span></button><button id="effects" aria-label="Alternar intensidade dos efeitos" aria-pressed="true" title="Efeitos intensos">✹</button><button id="help" aria-label="Como jogar">?</button><button id="fullscreen" aria-label="Tela cheia">⛶</button></div></header>
-<main>
-<div class="scene-heading"><div><span class="eyebrow" id="sceneEyebrow">BASE · ZONA SEGURA</span><h1 id="sceneTitle">REFÚGIO</h1></div><div class="balances"><div class="gem-balance"><i></i><section><small>MOEDAS</small><strong id="bank">30</strong></section></div><div><section><small title="Compre discos na Vitrola.">✦ ESSÊNCIAS</small><strong id="essence">0</strong></section></div><div class="star-wallet"><section><small>★ ESTRELAS</small><strong id="stars">0</strong></section></div><div><section><small>↓ RECORDE</small><strong id="record">—</strong></section></div></div></div>
-<div id="experienceHud" class="experience-hud" aria-label="Nível e experiência"></div><div id="materialWallet" class="material-wallet" aria-label="Cristais guardados"></div>
+<link rel="stylesheet" href="ui-refinement.css"><link rel="stylesheet" href="miner-presentation.css">
+<link rel="stylesheet" href="ui-bosque.css">
+<link rel="stylesheet" href="expedition-theme.css">
+<link rel="stylesheet" href="rebrand-tokens.css"><link rel="stylesheet" href="rebrand-pilot.css">
+<link rel="stylesheet" href="rebrand-hud.css">
+<link rel="stylesheet" href="rebrand-refuge-dock.css">
+<link rel="stylesheet" href="rebrand-approved.css">
+<link rel="stylesheet" href="rebrand-lift.css">
+<link rel="stylesheet" href="lift-v2ab-host.css">
+
+<link rel="stylesheet" href="rebrand-relic.css">
+<link rel="stylesheet" href="cuidadora.css">
+<link rel="stylesheet" href="cuidadora-host.css">
+<link rel="stylesheet" href="rebrand-fortune.css">
+<link rel="stylesheet" href="rebrand-return.css">
+<link rel="stylesheet" href="rebrand-missions.css">
+<link rel="stylesheet" href="missions-fonts.css">
+<link rel="stylesheet" href="missions-vila.css">
+<link rel="stylesheet" href="rebrand-tree.css">
+<link rel="stylesheet" href="rebrand-tree-layout.css">
+<link rel="stylesheet" href="tree-composition.css">
+<link rel="stylesheet" href="tree-buy-gold.css">
+<link rel="stylesheet" href="rebrand-records.css">
+<link rel="stylesheet" href="vitrola.css">
+<link rel="stylesheet" href="rebrand-expedition-hud.css">
+<link rel="stylesheet" href="rebrand-journey-choices.css">
+<link rel="stylesheet" href="rebrand-expedition-status.css">
+<link rel="stylesheet" href="rebrand-rest.css">
+<link rel="stylesheet" href="rebrand-pause-help.css">
+<link rel="stylesheet" href="rebrand-exit-confirmations.css">
+<link rel="stylesheet" href="rebrand-refuge-controls.css">
+<link rel="stylesheet" href="rebrand-abyss-hud.css">
+<link rel="stylesheet" href="rebrand-refuge-labels.css">
+<link rel="stylesheet" href="rebrand-feedback-text.css">
+<link rel="stylesheet" href="rebrand-exploration.css">
+<link rel="stylesheet" href="rebrand-depth.css">
+<link rel="stylesheet" href="rebrand-objective.css">
+<link rel="stylesheet" href="rebrand-music-cue.css">
+<link rel="stylesheet" href="rebrand-active-chips.css">
+<link rel="stylesheet" href="rebrand-cave-notices.css">
+<link rel="stylesheet" href="rebrand-cave-round.css">
+<link rel="stylesheet" href="refuge-lobby.css"><link rel="stylesheet" href="expedition-hud.css"><link rel="stylesheet" href="hud-notices.css"><link rel="stylesheet" href="expedition-hud-host.css"><link rel="stylesheet" href="completion-v4.css"><link rel="stylesheet" href="ui-consistency.css"><link rel="stylesheet" href="approved-services-shell.css">
+<link rel="stylesheet" href="combo-impact.css">
+<header data-game-surface hidden inert class="game-toolbar" aria-label="Opções do jogo"><div class="top-actions"><button id="openApplicationMenu" aria-label="Configurações" title="Configurações">⚙</button><span id="saved" role="status" aria-live="polite">SALVO LOCALMENTE</span><button id="sound" aria-label="Ativar música" title="Ativar música">♫</button><button id="effects" aria-label="Alternar intensidade dos efeitos" aria-pressed="true" title="Efeitos intensos">✹</button><button id="openPets" type="button" hidden aria-label="Cuidadora">Cuidadora</button><button id="help" aria-label="Como jogar">?</button><button id="fullscreen" aria-label="Tela cheia">⛶</button></div></header>
+<main data-game-surface hidden inert>
+<div class="scene-heading"><div id="sceneIdentity" hidden><span class="eyebrow" id="sceneEyebrow">BASE · ZONA SEGURA</span><h1 id="sceneTitle">REFÚGIO</h1></div><div class="balances"><div class="gem-balance"><span class="balance-icon" data-icon="coin" aria-hidden="true"></span><section><small>MOEDAS</small><strong id="bank">30</strong></section></div><div class="star-wallet"><span class="balance-icon" data-icon="star" aria-hidden="true"></span><section><small>ESTRELAS</small><strong id="stars">0</strong></section></div><div><span class="balance-icon" data-icon="depth" aria-hidden="true"></span><section><small>RECORDE</small><strong id="record">—</strong></section></div></div></div>
+<section id="refugeResourceDock" data-game-surface hidden inert aria-label="Recursos do refúgio"><div id="refugeDockContent"><div id="experienceHud" class="experience-hud" aria-label="Nível e experiência"></div><div id="materialWallet" class="material-wallet" aria-label="Cristais guardados"></div></div></section>
 <section id="scoreHud" class="score-hud" hidden aria-label="Pontuação da expedição"><div class="score-total"><small>PONTOS</small><strong id="scoreValue">0</strong><span id="scoreMultiplier">×1 COMBO</span></div><div class="score-track"><div class="score-caption"><strong id="scoreNext">PRÓXIMA ESTRELA</strong><span id="scoreTarget">0 / 5 ★</span></div><div class="star-road"><div id="starProgress" class="star-progress" role="progressbar" aria-label="Pontuação acumulada da descida" aria-valuemin="0" aria-valuemax="100"><i id="scoreFill"></i></div><div id="earnedStars" class="earned-stars" aria-label="0 de 5 estrelas"><span id="starSlot1" aria-hidden="true">★</span><span id="starSlot2" aria-hidden="true">★</span><span id="starSlot3" aria-hidden="true">★</span><span id="starSlot4" aria-hidden="true">★</span><span id="starSlot5" aria-hidden="true">★</span></div></div><p id="scoreWindow">PONTOS GUARDADOS NA DESCIDA</p></div></section><div id="starAnnouncements" class="star-announcements" aria-live="polite"></div>
 <section id="bossHud" class="boss-hud" hidden aria-label="Batalha de chefe"><div><small id="bossPhase">FASE 1</small><strong id="bossName"></strong><b id="bossHP"></b><div class="boss-health"><i id="bossFill"></i></div></div><div class="boss-command" role="status"><strong id="bossAttack"></strong><span id="bossInstruction"></span></div></section>
 <section class="breath-hud" id="breathHud" hidden aria-label="Fôlego de ritmo"><div class="breath-heading"><strong>ϟ FÔLEGO</strong><span id="breathHint">ACERTE O PULSO</span><b id="breathLabel">100 / 100</b></div><div class="breath-meter" id="breathMeter" role="progressbar" aria-label="Fôlego" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><i id="breathBar"></i></div></section>
 <section id="frenzyHud" class="frenzy-hud" hidden><div class="heat-block"><strong>♨ CALOR <b id="heatValue">0%</b></strong><div class="heat-track"><i id="heatFill"></i></div><span id="heatLoot">SAQUE ×1</span></div><div class="mutator-block"><strong id="mutatorName">FLUXO</strong><small id="mutatorHint"></small></div><div id="liveQuest" class="live-quest" hidden><strong id="questName"></strong><b id="questCount"></b></div><div id="rescueHud" class="rescue-hud" hidden><strong>RESGATE <b id="rescueTimer"></b></strong><button id="sendCargo">ENVIAR SAQUE ↑</button><button id="riskCargo">ARRISCAR →</button></div></section>
 <section class="stage" id="stage">
 <div id="explorationHud" class="exploration-hud" hidden></div>
-<canvas id="world" tabindex="0" aria-label="Caverna. Clique para minerar ou atacar; espaço repete; WASD esquiva; Tab abre habilidades; Q troca alvo; 1, 2 e 3 usam itens no pulso."></canvas><nav id="villageActions" class="village-actions" aria-label="Construções da vila"></nav><div id="villagePlaceName" class="village-place-name" role="status" aria-live="polite" hidden></div>
+<canvas id="world" tabindex="0" aria-label="Caverna. Clique para minerar ou atacar; espaço repete; WASD esquiva; Tab abre habilidades; Q troca alvo; 1, 2 e 3 usam itens a qualquer momento, sem gastar a ação no pulso."></canvas><nav id="villageActions" class="village-actions" aria-label="Construções da vila"></nav><div id="villagePlaceName" class="village-place-name" role="status" aria-live="polite" hidden></div>
 <div class="music-cue" id="musicCue" hidden role="status" aria-label="Mudança musical"><strong id="musicCueLabel">ACELERA</strong><b id="musicCueCount">4</b></div>
 <div id="runControls" class="pulse-rail" hidden><div class="rhythm-label"><span><i id="beatLamp"></i> NO PULSO</span><b id="bpmLabel">116 BPM</b><button id="pause" aria-label="Pausar jogo">Ⅱ</button></div><div class="beat-track"><div id="perfectZone"></div><div class="center-line"></div><i class="note"></i><i class="note"></i><i class="note"></i><i class="note"></i><i class="note"></i><span class="hit-line">AGORA</span></div><div class="hit-history" id="hitHistory" aria-label="Últimos acertos"></div><strong id="railMultiplier">×1.00</strong><small>MULTIPLICADOR</small><div class="rhythm-caption"><span id="timing">SIGA O PULSO</span></div></div><div class="proc-feed" id="procFeed" aria-live="polite"></div>
 <div class="combo-burst" id="comboBurst" aria-hidden="true"><small id="burstCaption">RESSONÂNCIA</small><strong id="burstNumber">5<span>×</span></strong><span id="burstDetail">COMBO!</span></div>
@@ -31,7 +135,13 @@
 <section class="run-cards" id="runCards" hidden aria-label="Cartas ativas desta expedição"></section>
 <footer><span id="footerState">QUEBRE O CHÃO. SEGURE O PULSO.</span><span><a href="music-lab.html">PRÉVIA MUSICAL ♫</a> · <a href="art-studio.html">ATELIÊ DE ARTE ↗</a> · <a href="https://lospec.com/palette-list/hept32" target="_blank" rel="noreferrer">HEPT32 ↗</a> · ALPHA 0.27</span></footer>
 </main>
-<dialog id="dialog"><div class="dialog-top"><span class="eyebrow" id="dialogLabel">REFÚGIO</span><button id="close" aria-label="Fechar">×</button></div><div id="dialogBody"></div></dialog><div class="toast" id="toast" role="status" aria-live="polite"></div>
-<dialog id="returnDialog" class="return-dialog" aria-label="Recursos da expedição"></dialog>
-<dialog id="abyssCardDialog" class="abyss-card-dialog" aria-labelledby="abyssCardTitle"><header><span>ABISMO · NOVO MARCO</span><h2 id="abyssCardTitle">ESCOLHA SEU PODER</h2><p>4s · DEPOIS, ESCOLHA ALEATÓRIA</p></header><div class="abyss-card-clock"><div id="abyssCardTimer" role="progressbar" aria-label="Tempo para escolher a carta" aria-valuemin="0" aria-valuemax="4" aria-valuenow="4"><i id="abyssCardFill"></i></div><strong id="abyssCardSeconds">4s</strong></div><div id="abyssCardOffers" class="abyss-card-offers"></div><p id="abyssCardHint">CLIQUE OU USE 1 · 2 · 3</p></dialog>
-<script type="module" src="run.js"></script></body></html>
+<nav id="refugeDockNav" class="gv-r2" data-game-surface hidden inert aria-label="Navegação da vila"><button type="button" id="refugeDockVillage" aria-controls="stage">Vila</button><button type="button" id="refugeDockResources" aria-controls="materialWallet">Recursos</button></nav>
+<dialog data-game-surface hidden inert id="dialog"><div class="dialog-top"><span class="eyebrow" id="dialogLabel">REFÚGIO</span><button id="close" aria-label="Fechar">×</button></div><div id="dialogBody"></div></dialog><div data-game-surface hidden inert class="toast" id="toast" role="status" aria-live="polite"></div>
+<dialog data-game-surface hidden inert id="returnDialog" class="return-dialog" aria-label="Recursos da expedição"></dialog>
+<dialog data-game-surface hidden inert id="abyssCardDialog" class="abyss-card-dialog" aria-labelledby="abyssCardTitle"><header><span>ABISMO · NOVO MARCO</span><h2 id="abyssCardTitle">ESCOLHA SEU PODER</h2><p>4s · DEPOIS, ESCOLHA ALEATÓRIA</p></header><div class="abyss-card-clock"><div id="abyssCardTimer" role="progressbar" aria-label="Tempo para escolher a carta" aria-valuemin="0" aria-valuemax="4" aria-valuenow="4"><i id="abyssCardFill"></i></div><strong id="abyssCardSeconds">4s</strong></div><div id="abyssCardOffers" class="abyss-card-offers"></div><p id="abyssCardHint">CLIQUE OU USE 1 · 2 · 3</p></dialog>
+<script type="module">import {installRefugeDock} from './rebrand-refuge-dock.js';installRefugeDock(document);</script>
+<script type="module">import {installCaveNoticeLayout} from './cave-notice-layout.js';import {installCaveHudLayout} from './cave-hud-layout.js';const notices=installCaveNoticeLayout(document);installCaveHudLayout(document,{onLayout:()=>notices?.sync()});</script>
+<script type="module" src="menu-entry.js"></script><link rel="stylesheet" href="approved-expedition-hud.css"><link rel="stylesheet" href="approved-settings-ui.css"><link rel="stylesheet" href="hud-editor.css"><link rel="stylesheet" href="approved-help-ui.css"><link rel="stylesheet" href="approved-refuge-ui.css">
+</body></html>
+
+

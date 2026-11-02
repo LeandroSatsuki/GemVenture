@@ -1,10 +1,12 @@
+import {reveal,sightRange} from '../dist/cavern.js';
+// Legacy encounter fixtures preserve in-progress save compatibility; see geode-crown-official.test.mjs for fresh Coroa Fraturada arenas.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as E from '../dist/core.js';
 import {livingBoss} from '../dist/bosses.js';
 import {blessingEffects,WISH_FAMILIES,makeOffering} from '../dist/pillars.js';
 import {ZAG_MINING_GOAL,redeemZagGear,zagTile,moveZag,settleZag,autoZagStep,planZagTurn,upgradeZagModule,adjustZagDie,dealZag,spinZag,restoreZag} from '../dist/zag.js';
-const arena=()=>{const s=E.createState(712);s.seals=5;E.startRun(s);s.run.floor=5;E.generateRoom(s);return s;};
+const arena=()=>{const s=E.createState(712);s.seals=5;E.startRun(s);s.run.floor=5;E.generateRoom(s);const legacy=s.run.room.enemies.find(n=>n.bossIndex===0);if(legacy){delete legacy.crown;legacy.windup=null;legacy.recoverUntil=3;}return s;};
 test('a missing boss marker cannot clear a room or unlock descent with a live boss',()=>{
  const s=arena(),r=s.run;delete r.room.bossFloor;r.room.charge=999;r.combo=99;
  E.act(s,{type:'move',x:4,y:11},0);assert.equal(r.room.cleared,false);assert.ok(livingBoss(r.room));
@@ -16,11 +18,11 @@ test('missing boss data repairs the arena without discarding carried resources',
  const t=E.restoreState(JSON.stringify(s));assert.ok(t);assert.ok(livingBoss(t.run.room));assert.equal(t.run.bag,173);assert.equal(t.run.health,62);assert.deepEqual(t.run.materials,r.materials);
 });
 test('a saved legitimate boss victory remains cleared and permits descent',()=>{
- const s=arena(),r=s.run,b=livingBoss(r.room);r.player={x:b.x-1,y:b.y};b.hp=1;E.act(s,{type:'hit',id:b.id},0);assert.ok(r.room.cleared);E.chooseCard(s,r.cardOffer[0]);
+ const s=arena(),r=s.run,b=livingBoss(r.room);r.player={x:b.x-1,y:b.y};b.hp=1;E.act(s,{type:'hit',id:b.id},0);assert.equal(r.room.cleared,false);r.player={x:r.room.exit.x,y:r.room.exit.y+1};reveal(r.room,r.player,sightRange(r));E.act(s,{type:'move',...r.room.exit},1);assert.ok(r.room.cleared);E.chooseCard(s,r.cardOffer[0]);
  const t=E.restoreState(JSON.stringify(s));assert.ok(t.run.room.cleared);assert.equal(E.descend(t),true);
 });
-test('well offers three different surprises per crystal and preserves every outcome on reload',()=>{
- for(let kind=0;kind<4;kind++){const seen=new Set();for(let seed=0;seed<100;seed++){const s=E.createState(seed);s.materials=[100,100,100,100];const b=makeOffering(s,kind);seen.add(b.id);const copy=E.restoreState(JSON.stringify(s));assert.equal(copy.pendingBlessing,b.id);}assert.deepEqual([...seen].sort(),[...WISH_FAMILIES[kind].ids].sort());}
+test('every previously saved blessing still survives migration',()=>{
+ for(const family of WISH_FAMILIES)for(const id of family.ids){const s=E.createState(12);s.pendingBlessing=id;s.pendingBlessingLevel=3;const copy=E.restoreState(JSON.stringify(s));assert.equal(copy.pendingBlessing,id);assert.equal(makeOffering(copy,0),null);}
 });
 test('floor shield renews on descent without healing and life wish raises max health',()=>{
  const s=E.createState();s.pendingBlessing='floorward';s.pendingBlessingRoll={version:1,tier:2,risk:0};E.startRun(s);assert.equal(s.run.guardUntil,10);s.run.health=48;s.run.room.cleared=true;s.run.cardChosen=true;assert.ok(E.descend(s));assert.equal(s.run.guardUntil,10);assert.equal(s.run.health,48);

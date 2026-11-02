@@ -1,0 +1,11 @@
+{
+  "id": "CAVE-COMPLETION-20261102-R1",
+  "authority": "Pedido humano após playtest: buraco opcional, critério principal definido para concluir sem localizar a saída.",
+  "files": {
+    "core.js": "a485c363ccbf3916198cc14da4adfc442c7c9ac25a5e6dc3f4fcd65ec74ed9f5",
+    "cave-descent.js": "9a875188ba62ef5ee975cadeacf67e9501c498dd769f0849fa98191e8d513922",
+    "expedition-hud-view.js": "5d6b8e694b4a889f1cb70dff4a4c2ba542b77720cff6f016540a47337748c09f",
+    "cave-descent-hud.css": "ca46cf0ae25a924f77ff49f763d39ba0308e9a4b158a76ce537c0aec877fba48",
+    "run.js": "0695d58f1e566439fcaa707c638c8e735196de2328edc2cdca850318c8b63f64"
+  }
+}

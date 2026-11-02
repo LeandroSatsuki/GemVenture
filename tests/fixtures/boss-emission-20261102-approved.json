@@ -1,0 +1,246 @@
+{
+  "id": "BOSS-EMISSION-OFFICIAL-20261102-R1",
+  "authorization": "Os bosses precisam de emitir luz ... luz em volta dele ... mais neon nessas peças ... ajustar os bosses novos ... não os protótipos antigos",
+  "scope": "Native current boss meshes/poses and local light, no mechanics/prototype/save changes",
+  "files": {
+    "scenery-emission-bridge.js": "6caaaaab824fba218476433b72163cf2235ed6c864c9dd5fbc13b3d04f621544",
+    "dungeon-creature-mesh.js": "f0774bd9955508832e251716e3153cfbd9fe7d90e12f0f69c2959f0a70292082",
+    "dungeon-bosses-v2.js": "d5501700953eb6508b251b437f31ee68b0c1bd4541bf01b1da78a9fc30da5dc6",
+    "mystic-art.js": "4e36862a0152832d77d33e9efa0affefa43b2829b988298cb1b1c26dd6c59eb7",
+    "mystic-presentation.js": "8bdabaef6f9c09a1f4ced99843650ea98bd6261233f6d2f109c297097a418cc8",
+    "micelial-art.js": "d2cf1cfed2ec47d4057ede0eef1bc81bb1ad5f1003ea408aaae9f8bc7be5b880",
+    "matriarch-art.js": "6e320344d60a0ed7e35f50356e6e5da6a5396bee802fd8e257375398b33d6c1c",
+    "rabbit-polished.js": "eb05cb03ab46dfb458496cede867de9a2e739d5a52ddcec01921947af79c8564",
+    "geode-articulation.js": "9e2e370e639a1a43ffa3c494d2cb6ff8e9e615dcd406da5987c8a738d7e84cec",
+    "geode-rig.js": "43db4e36b9ee94830e26340f81bb93657d28e8ffeebae1ad9cca1f42fd2c951e",
+    "approved-scenery-emission.js": "8e2ada0d845cdb41a87acd24f99908621fc0abc7582102fb67dc8ca7d30667b8",
+    "geode-ambience.js": "7c4c7600c48344e4e948c8ce9c19ec3c6d5ca8d3e388777ee384171e822a5edf",
+    "boss-emission-materials.js": "2194f01587fa25da3fc6b23dc6b47eb30d461c8c3e0cc4d6e626237c0e660a4b"
+  },
+  "visualDeltas": [
+    {
+      "file": "scenery-emission-bridge.js",
+      "old": "export function captureSceneryEmission(c,kind,data){receivers.get(c.canvas)?.capture(c,kind,data);}",
+      "new": "export function captureSceneryEmission(c,kind,data){const receiver=receivers.get(c.canvas);if(!receiver)return false;receiver.capture(c,kind,data);return true;}"
+    },
+    {
+      "file": "dungeon-creature-mesh.js",
+      "old": "const white=['#ffffe0','#c4ccc7','#8394a6'];",
+      "new": "import {recordBossMeshEmission} from './boss-emission-materials.js';\nconst white=['#ffffe0','#c4ccc7','#8394a6'];"
+    },
+    {
+      "file": "dungeon-creature-mesh.js",
+      "old": "scale=1,{shadow=true}={}){",
+      "new": "scale=1,{shadow=true,emissionIndex=null}={}){"
+    },
+    {
+      "file": "dungeon-creature-mesh.js",
+      "old": "c.stroke();}c.restore();\n}",
+      "new": "c.stroke();}c.restore();if(emissionIndex!==null)recordBossMeshEmission(c,emissionIndex,faces,x,y,scale);\n}"
+    },
+    {
+      "file": "dungeon-bosses-v2.js",
+      "old": "paintCreatureMesh(c,faces,x,y,width/83);",
+      "new": "paintCreatureMesh(c,faces,x,y,width/83,{emissionIndex:n.bossIndex});"
+    },
+    {
+      "file": "mystic-art.js",
+      "old": "paintCreatureMesh(c,mesh,x,y,width/83,{shadow});",
+      "new": "paintCreatureMesh(c,mesh,x,y,width/83,{shadow,emissionIndex:3});"
+    },
+    {
+      "file": "mystic-presentation.js",
+      "old": "import {paintMystic,mysticMesh,MYSTIC_MATERIALS} from './mystic-art.js';",
+      "new": "import {captureCachedBossEmission} from './boss-emission-materials.js';\nimport {paintMystic,mysticMesh,MYSTIC_MATERIALS} from './mystic-art.js';"
+    },
+    {
+      "file": "mystic-presentation.js",
+      "old": "c.drawImage(image,x-58,y-90,116,108);",
+      "new": "c.drawImage(image,x-58,y-90,116,108);captureCachedBossEmission(c,image,x-58,y-90,116,108,x,y);"
+    },
+    {
+      "file": "mystic-presentation.js",
+      "old": "94/83,{shadow:true})",
+      "new": "94/83,{shadow:true,emissionIndex:3})"
+    },
+    {
+      "file": "micelial-art.js",
+      "old": "import {captureSceneryEmission} from './scenery-emission-bridge.js';",
+      "new": "import {captureCachedBossEmission} from './boss-emission-materials.js';\nimport {captureSceneryEmission} from './scenery-emission-bridge.js';"
+    },
+    {
+      "file": "micelial-art.js",
+      "old": "66,99,1.24,{shadow:true});",
+      "new": "66,99,1.24,{shadow:true,emissionIndex:4});"
+    },
+    {
+      "file": "micelial-art.js",
+      "old": "c.drawImage(image,x-66,y-99,132,120);",
+      "new": "c.drawImage(image,x-66,y-99,132,120);captureCachedBossEmission(c,image,x-66,y-99,132,120,x,y);"
+    },
+    {
+      "file": "matriarch-art.js",
+      "old": "import {creatureBuilder} from './dungeon-creature-mesh.js';",
+      "new": "import {recordBossMeshEmission} from './boss-emission-materials.js';\nimport {creatureBuilder} from './dungeon-creature-mesh.js';"
+    },
+    {
+      "file": "matriarch-art.js",
+      "old": "c.stroke();}c.restore();return true;",
+      "new": "c.stroke();}c.restore();recordBossMeshEmission(c,1,faces,x,y,scale);return true;"
+    },
+    {
+      "file": "rabbit-polished.js",
+      "old": "import{creatureBuilder,paintCreatureMesh}from'./dungeon-creature-mesh.js';",
+      "new": "import {captureCachedBossEmission} from './boss-emission-materials.js';\nimport{creatureBuilder,paintCreatureMesh}from'./dungeon-creature-mesh.js';"
+    },
+    {
+      "file": "rabbit-polished.js",
+      "old": "{shadow:kind==='boss'});return true;",
+      "new": "{shadow:kind==='boss',emissionIndex:kind==='boss'?6:null});return true;"
+    },
+    {
+      "file": "rabbit-polished.js",
+      "old": "{shadow:kind==='boss'});if(frames.size",
+      "new": "{shadow:kind==='boss',emissionIndex:kind==='boss'?6:null});if(frames.size"
+    },
+    {
+      "file": "rabbit-polished.js",
+      "old": "c.drawImage(image,x-90*k,y-110*k,180*k,140*k);",
+      "new": "c.drawImage(image,x-90*k,y-110*k,180*k,140*k);captureCachedBossEmission(c,image,x-90*k,y-110*k,180*k,140*k,x,y);"
+    },
+    {
+      "file": "geode-articulation.js",
+      "old": "// Articulated presentation of the existing Geode pixels. No new boss model,",
+      "new": "import {captureSceneryEmission} from './scenery-emission-bridge.js';\n// Articulated presentation of the existing Geode pixels. No new boss model,"
+    },
+    {
+      "file": "geode-articulation.js",
+      "old": "c.drawImage(rig.torso,left,top,width,height);",
+      "new": "c.drawImage(rig.torso,left,top,width,height);captureSceneryEmission(c,'occluder',[rig.torso,left,top,width,height]);captureSceneryEmission(c,'boss-raster',{index:0,image:rig.torso,rect:[left,top,width,height],alpha:c.globalAlpha});"
+    },
+    {
+      "file": "geode-articulation.js",
+      "old": "c.drawImage(part.bitmap,left,top,width,height);",
+      "new": "c.drawImage(part.bitmap,left,top,width,height);captureSceneryEmission(c,'occluder',[part.bitmap,left,top,width,height]);captureSceneryEmission(c,'boss-raster',{index:0,image:part.bitmap,rect:[left,top,width,height],alpha:c.globalAlpha});"
+    },
+    {
+      "file": "geode-rig.js",
+      "old": "import {geodeArticulation,createGeodeLimbs,paintGeodeLimbs} from './geode-articulation.js';",
+      "new": "import {captureSceneryEmission} from './scenery-emission-bridge.js';\nimport {geodeArticulation,createGeodeLimbs,paintGeodeLimbs} from './geode-articulation.js';"
+    },
+    {
+      "file": "geode-rig.js",
+      "old": "c.restore();\n}\n// Event consumer",
+      "new": "c.restore();captureSceneryEmission(c,'boss-source',{index:0,anchor:{x:x+(pose.dx||0)*width/75,y:y+((pose.dy||0)+(motion.lift||0))*width/75},alpha:c.globalAlpha});\n}\n// Event consumer"
+    },
+    {
+      "file": "approved-scenery-emission.js",
+      "old": "import {bindSceneryEmission} from './scenery-emission-bridge.js';",
+      "new": "import {createBossEmissionMaterials,BOSS_EMISSION_PROFILES,BOSS_EMISSION_SPEC} from './boss-emission-materials.js';\nimport {bindSceneryEmission} from './scenery-emission-bridge.js';"
+    },
+    {
+      "file": "approved-scenery-emission.js",
+      "old": "const halos=new Map();",
+      "new": "const bossMaterials=createBossEmissionMaterials(makeCanvas),bossKeys=new Set();let bossSources=[];\n const halos=new Map();"
+    },
+    {
+      "file": "approved-scenery-emission.js",
+      "old": "function capture(c,kind,data){if(dead)return;",
+      "new": "function bossSource(data){if(!BOSS_EMISSION_PROFILES[data.index]||!(data.alpha>0))return;const {x,y}=data.anchor,key=[data.index,x.toFixed(2),y.toFixed(2)].join(':');if(bossKeys.has(key)||bossSources.length>=BOSS_EMISSION_SPEC.maxSources)return;bossKeys.add(key);const gy=(y-57.5)/16;bossSources.push({index:data.index,x,y,alpha:Math.min(1,data.alpha),color:BOSS_EMISSION_PROFILES[data.index].color,grid:{x:(x-50-2*gy)/22,y:gy}});}\n function capture(c,kind,data){if(dead)return;\n  if(kind==='boss-source'){if(inView(c,data.anchor.x,data.anchor.y))bossSource(data);return;}\n  if(kind==='boss-raster'){const v=bossMaterials.raster(data.image);if(!v?.pixels)return;const q=context(c);q.save();q.globalAlpha=data.alpha;q.drawImage(v.canvas,...data.rect);q.restore();draws++;return;}\n  if(kind==='boss-mesh'){if(!(data.alpha>0)||!inView(c,data.anchor.x,data.anchor.y))return;const v=bossMaterials.mesh(data.faces,data.index,data.cache);if(!v)return;const q=context(c);q.save();q.transform(...data.matrix);q.globalAlpha=data.alpha;\n   if(!data.cache&&draws){q.globalCompositeOperation='destination-out';q.beginPath();for(const f of data.faces){f.points.forEach(([a,b,z],i)=>i?q.lineTo(a+b/11,b*8/11-z):q.moveTo(a+b/11,b*8/11-z));q.closePath();}q.fillStyle='#000000';q.fill();}\n   q.globalCompositeOperation='source-over';q.drawImage(v.canvas,v.x,v.y,v.w,v.h);q.restore();bossSource(data);draws++;return;}\n"
+    },
+    {
+      "file": "approved-scenery-emission.js",
+      "old": "sources=[];draws=occlusions=additions=pyres=0;",
+      "new": "sources=[];bossSources=[];bossKeys.clear();draws=occlusions=additions=pyres=0;"
+    },
+    {
+      "file": "approved-scenery-emission.js",
+      "old": "function paint(c,masks,{gain=1,lights=true,duck=1}={})",
+      "new": "function paint(c,masks,{gain=1,lights=true,duck=1,bossMasks=masks,ambientGain=1}={})"
+    },
+    {
+      "file": "approved-scenery-emission.js",
+      "old": "c.drawImage(v.canvas,v.x,v.y,v.w,v.h);}c.restore();c.save();c.resetTransform();",
+      "new": "c.drawImage(v.canvas,v.x,v.y,v.w,v.h);}for(const b of bossSources){for(const [kind,color,radius,alpha]of [['boss-body',scene.data.material.light||scene.data.material.gem[0],BOSS_EMISSION_SPEC.bodyRadius,.14*ambientGain],['boss-part',b.color,43,.18*gain]]){const v=halo({...b,kind,color,radius,alpha},bossMasks);if(!v)continue;c.globalAlpha=Math.min(1,alpha*b.alpha*duck);c.drawImage(v.canvas,v.x,v.y,v.w,v.h);}}c.restore();c.save();c.resetTransform();"
+    },
+    {
+      "file": "approved-scenery-emission.js",
+      "old": "return {ready,begin,capture,paint,",
+      "new": "function paintBossNight(c,viewport,hole,masks,{strength=1}={}){if(dead||strength<=0)return;for(const b of bossSources){c.save();c.translate(-viewport.x+4,-viewport.y+4);if(masks?.sourcePath)c.clip(masks.sourcePath(b.grid,true));c.translate(viewport.x-4,viewport.y-4);hole(b.x-viewport.x+4,b.y-viewport.y-22,BOSS_EMISSION_SPEC.bodyRadius,BOSS_EMISSION_SPEC.bodyPower*b.alpha*Math.min(1.25,strength));c.restore();}}\n return {ready,begin,capture,paint,paintBossNight,"
+    },
+    {
+      "file": "approved-scenery-emission.js",
+      "old": "draws,occlusions,haloCaches:",
+      "new": "draws,occlusions,bossSources:bossSources.map(p=>({...p})),bossMaterials:bossMaterials.status(),haloCaches:"
+    },
+    {
+      "file": "approved-scenery-emission.js",
+      "old": "canvasBytes:(layer?",
+      "new": "canvasBytes:bossMaterials.status().canvasBytes+(layer?"
+    },
+    {
+      "file": "approved-scenery-emission.js",
+      "old": "resolveReady();unbind();materials?.dispose();",
+      "new": "resolveReady();unbind();bossMaterials.dispose();bossSources=[];bossKeys.clear();materials?.dispose();"
+    },
+    {
+      "file": "geode-ambience.js",
+      "old": "let masks=arena?",
+      "new": "let bossMasks=null,masks=arena?"
+    },
+    {
+      "file": "geode-ambience.js",
+      "old": "originals.ground?.(c,time,reduced);",
+      "new": "bossMasks=arena?createExplorationLightingMasks(room,scene.view||{center:[world.camera.x/2+world.viewWidth/4,world.camera.y/2+world.viewHeight/4],width:world.viewWidth/2,height:world.viewHeight/2},bossMasks,{depth:scene.metrics?.depth||0}):masks;originals.ground?.(c,time,reduced);"
+    },
+    {
+      "file": "geode-ambience.js",
+      "old": "const boss=room.enemies.find(n=>n.boss&&n.hp>0&&lightingVisible(room,n.x,n.y));if(boss){const [x,y]=project(boss.x,boss.y);hole(x-viewport.x+4,y-viewport.y-25,44,.54);}",
+      "new": "emission.paintBossNight(m,viewport,hole,bossMasks,{strength:options.strength});if(legacy){const boss=room.enemies.find(n=>n.boss&&n.hp>0&&lightingVisible(room,n.x,n.y));if(boss){const [x,y]=project(boss.x,boss.y);hole(x-viewport.x+4,y-viewport.y-25,44,.54);}}"
+    },
+    {
+      "file": "geode-ambience.js",
+      "old": "emission.paint(c,masks,{gain:options.neonIntensity,lights:options.lights,duck:",
+      "new": "emission.paint(c,masks,{gain:options.neonIntensity,bossMasks,ambientGain:options.strength,lights:options.lights,duck:"
+    },
+    {
+      "file": "approved-scenery-emission.js",
+      "old": "function bossSource(data){if(!BOSS_EMISSION_PROFILES",
+      "new": "function bossVisible(p){if(!scene.room.explored)return true;const y=Math.round((p.y-57.5)/16),x=Math.round((p.x-50-2*((p.y-57.5)/16))/22);return !!scene.room.visible?.[y*scene.room.cols+x];}\n function bossSource(data){if(!bossVisible(data.anchor)||!BOSS_EMISSION_PROFILES"
+    },
+    {
+      "file": "approved-scenery-emission.js",
+      "old": "if(kind==='boss-mesh'){if(!(data.alpha>0)||!inView(c,data.anchor.x,data.anchor.y))return;const v=bossMaterials.mesh(data.faces,data.index,data.cache);if(!v)return;",
+      "new": "if(kind==='boss-mesh'){if(!(data.alpha>0)||!bossVisible(data.anchor)||!inView(c,data.anchor.x,data.anchor.y))return;bossSource(data);const v=bossMaterials.mesh(data.faces,data.index,data.cache);if(!v)return;"
+    },
+    {
+      "file": "approved-scenery-emission.js",
+      "old": "if(dead||!draws||gain<=0)return;c.save();",
+      "new": "if(dead||(!draws&&!bossSources.length)||gain<=0)return;c.save();"
+    },
+    {
+      "file": "approved-scenery-emission.js",
+      "old": "c.drawImage(layer,0,0);c.restore();",
+      "new": "if(layer)c.drawImage(layer,0,0);c.restore();"
+    },
+    {
+      "file": "dungeon-bosses-v2.js",
+      "old": "emissionIndex:n.bossIndex",
+      "new": "emissionIndex:[2,5].includes(n.bossIndex)?n.bossIndex:null"
+    }
+  ],
+  "baseNormalizedFiles": {
+    "approved-scenery-emission.js": "db05819a98a0e8b3247d9a3b8552a2f28fb9307c1747a9b6a0552f00484df14e",
+    "dungeon-bosses-v2.js": "ada303274a193780fa075a03648adec94d834a6e17e7288153ed4c213aa8f8a9",
+    "dungeon-creature-mesh.js": "f917d1715647ef225cadbef9b1a7141f699e25b73703cd888aca0b7e26d5b881",
+    "geode-ambience.js": "fa3f0c60c2f3043eb412132108a569efe237af17c4edfc64a9589777f263ec07",
+    "geode-articulation.js": "f9392d8796763907d0e8c84348af6c00cbdd9f06960db704707fb042fd09bdc4",
+    "geode-rig.js": "78ef6f015e81a3bddeaa57b24816a1a823f22ae7da52f7f414cf726300be5ec5",
+    "matriarch-art.js": "851a7e545efd14ca3638e110312fa6fe7bcf9a1fed973b1054b26bbb04344a3a",
+    "micelial-art.js": "51e3ec5f710442c524fc7c690c4174aa66cbfc0388b3e51b28216d3fa524ee79",
+    "mystic-art.js": "08d79ff8e8d3da126e9b03d098b8b3d9c2ac5f2f1bde50b6562b202cf8632d5c",
+    "mystic-presentation.js": "5a850bba3feaeef9059414ecf5e165ce0e3f4f5a55e08d18fab7b6631346362f",
+    "rabbit-polished.js": "e825706e51341bb7812cbb7bdd647680dc39755437803bba9b5e174f8de43ac9",
+    "scenery-emission-bridge.js": "5920ef0a6e8b174e81de12c114ce72729217d851a1fab0a9e06de049880f8ee1"
+  }
+}

@@ -1,0 +1,5 @@
+import{creatureBuilder}from'./dungeon-creature-mesh.js';
+function facePath(c,points){c.beginPath();points.forEach(([x,y,z],i)=>i?c.lineTo(x+y/11,y*8/11-z):c.moveTo(x+y/11,y*8/11-z));c.closePath();}
+function paintMesh(c,mesh,x,y){c.save();c.translate(x,y);for(const f of mesh){facePath(c,f.points);c.fillStyle=f.fill;c.fill();c.strokeStyle=f.fill;c.lineWidth=.3;c.stroke();}c.restore();}
+export function summonBushMesh(n,beat,soft=false){const m=creatureBuilder({soft:true}),ramp=['#a2e66f','#288a3f','#005a41'],shake=soft?0:Math.sin((beat-n.born)*18)*.7;for(const[id,x,y,z,w,d,h]of[['base',0,1,0,28,17,8],['left',-8,0,4,16,17,16],['right',8,0,5,16,17,15],['top',0,-1,16,17,15,12]])m.box('bush-'+id,x+shake,y,z,w,d,h,ramp,2);return m.finish();}
+export function paintSummonBush(c,n,x,y,beat,soft){paintMesh(c,summonBushMesh(n,beat,soft),x,y);c.save();c.textAlign='center';c.fillStyle='#f7bf6f';c.strokeStyle='#161928';c.lineWidth=2;c.font='bold 7px Arial';c.strokeText('!',x,y-31);c.fillText('!',x,y-31);c.restore();}

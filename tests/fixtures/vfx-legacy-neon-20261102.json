@@ -1,0 +1,17 @@
+{
+  "id": "GV-043/LEGACY-NEON-AUDIT/R1",
+  "authorization": "User asks to adjust remaining legacy VFX, specifically rising yellow effect, and all missed neon coverage.",
+  "scope": "Retire old raster VFX, reuse approved crisp family; fill missing geometric/minion/rabbit/buff illumination. Approved red bomb, creature atlases and domain intact.",
+  "files": {
+    "vfx-assets.js": "7b2e04462dd54ead14207e48a0ca04fe8e45afe0dc0934c75df9ec8ec9ef96b3",
+    "vfx-family.js": "5311f9b8c8d121d495f1b6056286fedd94b4ad614014bfa66394d865716fd547",
+    "vfx-emission.js": "01bd20a4e551024fda07f40d9413f8ab5d8aad3a41aa3e640783b96e32849e80",
+    "effects.js": "80bee16191204d48c500c4ca5c7d2ccb4601345cd6a76ac231e08d7f24babc5e",
+    "geode-vfx.js": "9b41b5e738480a7b553faeae4013d714d70ac39ab2eef48fe24c988a5a16bc7b",
+    "geode-particle-light.js": "965abf01a9bebee41d3d3a54d3081ac99fba51a6b5216eae60324a233b739c0e",
+    "minion-effects.js": "968595e0fec4e44b6fcbe8807ef3c36c762d6b646d8048e900a369642645cb88",
+    "minion-effects-player.js": "ce037b8a1d6a67032fc94dd15d4695bfa8cb9f84773a594c4168333954a5a230",
+    "vfx-crisp-assets.js": "09cbeed6642c28c6c3a60efb8c084c515474cf9eb223a3ab53e477a0f25cfe31",
+    "vfx-actor-emission.js": "a8783108a49524d656f62b715fc8aa031e57b4195718451376f5de2172eee57a"
+  }
+}

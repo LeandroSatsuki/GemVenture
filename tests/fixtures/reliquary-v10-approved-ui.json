@@ -1,0 +1,7 @@
+{
+  "origin": "Human V10 application verified by Marcia, plus external-only subtle backdrop blur instruction",
+  "files": {
+    "relicario.css": "70c64b77c598d3bd6192dc43ab971279c976257d2d00ddc77ee86192d41bffa9"
+  },
+  "reconciliation": "Approved declarations unchanged; scoped priority raised to defeat ui-theme/ui-refinement important button/heading/disabled colors and fonts"
+}

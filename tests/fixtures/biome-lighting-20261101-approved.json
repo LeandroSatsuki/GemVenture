@@ -1,0 +1,12 @@
+{
+  "id": "BIOME-AMBIENCE-OFFICIAL-20261101-R1",
+  "authorization": "Direct human instruction: apply approved lighting in all biomes and Abismo, following biome tint.",
+  "receipt": "E:/Genventure/coordination/biome-ambience-official-20261101-r1/APPLIED.json",
+  "files": {
+    "world.js": "c66875e5ef22a3707dd3e2daee2f8167d501b8a81477b6b7bfc8d9ce64a5620f",
+    "geode-ambience.js": "bcfb6ebe7b2e344e59fd6f998e4d0786e8ac058137a4219b0040f1e7f8115f78",
+    "geode-lighting-runtime.js": "a0da6f444195cb8bf9f0d4b6d3ce007dc492198a7fd771a3f0d0d160ae21a23b",
+    "geode-particle-light.js": "2e32bad95076eeef8171981b0c0d8185bd221588c404d6991e04ec08f28263ce",
+    "cave-lighting-masks.js": "2a6bd46216a9075c4cb2a5d619b786d1791d05d3f66fe3922260bd514117a065"
+  }
+}

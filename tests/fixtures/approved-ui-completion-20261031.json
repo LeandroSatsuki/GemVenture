@@ -1,0 +1,22 @@
+{
+  "id": "APPROVED-UI-COMPLETION-20261031",
+  "authorization": "User current approval authorizes applying statue and missing previously approved UI",
+  "files": {
+    "approved-statue-ui.js": "e2526ea689571aef97d192d46c7a786ba93df93606d07a65924397566fd75dc0",
+    "approved-statue-ui.css": "558be49dd3f9863a95770459514a25dc21017642f00aed1f5beeab5256236b8c",
+    "approved-statue-shell.css": "9faa73c042581daee718be3a4c260c8dd9d776c13ec7fedef0aaad446046af58",
+    "approved-lift-ui.js": "94015d841ab044a7e2f8bc95c9efac07561ed68b2eec76ae5f38956dda04dc0d",
+    "approved-lift-ui.css": "3797c18f00e0a97ec12de22e79fcb7fe2ce4268c748b16f4a71e4fc968f3e1bf",
+    "approved-lift-shell.css": "452928dbd1656e558412d4eb580e44e170b0dca998b6dd8b73e9f220dd7dd551",
+    "approved-expedition-hud.css": "b0dd1913d97e7143ec1d9791281a6b3f27cd7a4979df1d79762190228e688862",
+    "approved-pulse-feel.js": "7258ec44419aec39166c14128ed9c364158e0be88a06c42212c0bf632c07c9f7",
+    "hud-markup.js": "58b3edcd14ae825b42945ab721792284998f9e98c13dbc0acd70e0bc8936f806",
+    "hud-art.js": "ad5335c6dda275b0d48e2a1da74157132746cd734df8d311eb15cfbaa9f8d734",
+    "expedition-hud-view.js": "fb94ef85afbf49e51b0b23044b1746325a083a600a22496077154c055700adaf",
+    "run.js": "37393aba8614c3110436a969d55a64eff04650d05e3ba22fffc50a6cfc793fff",
+    "index.html": "cc454e6ae211ee66b12d00163966a7fbe28884c4786d1e3fd32d4868c3b26f69",
+    "tutorial-runtime.js": "023520d9a09cc73eb990c4767f71d3cca11016b8fcde4053a121ac6b106722ac"
+  },
+  "at": "2026-11-01T03:03:38.471215+00:00",
+  "compositionIncludes": "Current cards delivery plus own statue/lift/HUD deltas"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "FOSSIL-FISSURES-OFFICIAL-20261101-R1",
+  "authorization": "Muito bom, pode aplicar o jogo oficial. Eu adicionaria algumas pequenas partículazinhas saindo das rachaduras, como se tivesse algo querendo sair de dentro, tipo umas partículazinhas luminosas saindo de dentro",
+  "approvedPilot": "FOSSIL-FISSURES-PILOT-20261101-R1",
+  "scope": "Approved native crack geometry/emission and small bounded luminous fissure particles. New emission colors remain local; legacy palettes, terrain and gameplay unchanged.",
+  "files": {
+    "geode-ambience.js": "a4794ec38ccfe0506a66e169d6a1b91d821a97655b32bb1e66ec5204301ca5bf",
+    "fossil-fissures.js": "34349ace7e2cb1c0fdb9c5498e1e5fb5cb68c9f4dd3634ecccd83a87a24a6adb"
+  }
+}

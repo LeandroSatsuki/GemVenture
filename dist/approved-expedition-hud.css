@@ -1,0 +1,242 @@
+/* Reuse the existing early layout layer: its important declarations outrank historical HUD layers. */
+@layer ui-layout-r2 {
+/* Approved HUD v4: native world stays visible; layout is scoped to the active HUD. */
+@font-face{font-family:GVExpBody;src:url('assets/menu-fonts/Nunito-600-Static.ttf');font-weight:600}
+@font-face{font-family:GVExpDisplay;src:url('assets/menu-fonts/Fredoka-600-Static.ttf');font-weight:600}
+body.hud-v5 #stage #hud5Root{--edge:#020816!important;--bg:#06132b!important;--inset:#041025!important;--panel:#102a52!important;--raised:#173f73!important;--line:#26538c!important;--text:#edf4ff!important;--muted:#bfd0e8!important;--cyan:#35d6f2!important;--gold:#ffbc00!important;--success:#67e3b8!important;color:var(--text)!important;font:600 15px/1.3 GVExpBody,sans-serif!important;container:approved-exp/inline-size!important}
+body.hud-v5 #stage #hud5Root .hud{inset:0!important;pointer-events:none!important}
+body.hud-v5 #stage #hud5Root .panel{background:linear-gradient(var(--panel),var(--bg))!important;border:2px solid var(--line)!important;border-radius:11px!important;box-shadow:0 3px var(--edge)!important;padding:8px!important}
+body.hud-v5 #stage #hud5Root button{min-height:44px!important;padding:7px 11px!important;border:3px solid var(--edge)!important;border-radius:10px!important;background:linear-gradient(var(--raised),var(--panel))!important;box-shadow:inset 0 2px var(--line),inset 0 -4px var(--bg),0 3px var(--edge)!important;font:600 16px/1.15 GVExpDisplay!important;color:var(--text)!important;filter:none!important;touch-action:manipulation!important}
+body.hud-v5 #stage #hud5Root button:hover:not(:disabled){background:linear-gradient(#214f88,var(--raised))!important;filter:none!important}
+body.hud-v5 #stage #hud5Root button:active:not(:disabled){box-shadow:inset 0 4px var(--bg),0 1px var(--edge)!important}
+body.hud-v5 #stage #hud5Root button:disabled{opacity:1!important;background:var(--bg)!important;color:var(--muted)!important;box-shadow:inset 0 2px var(--panel)!important}
+body.hud-v5 #stage #hud5Root .top{position:absolute!important;left:12px!important;top:12px!important;width:190px!important;height:auto!important;display:grid!important;gap:7px!important;grid-template-columns:none!important}
+body.hud-v5 #stage #hud5Root .vital,body.hud-v5 #stage #hud5Root .breath{position:relative!important;display:flex!important;align-items:center!important;gap:6px!important;height:auto!important;min-height:48px!important;padding:5px 8px!important;border:2px solid var(--line)!important;background:linear-gradient(var(--panel),var(--bg))!important;box-shadow:0 3px var(--edge)!important;border-radius:11px!important}
+body.hud-v5 #stage #hud5Root .health-art,body.hud-v5 #stage #hud5Root .breath-art{position:static!important;width:30px!important;height:34px!important;flex:none!important;filter:none!important}
+body.hud-v5 #stage #hud5Root :is(.health-art,.breath-art) .asset-slot,body.hud-v5 #stage #hud5Root :is(.health-art,.breath-art) img{width:100%!important;height:100%!important;object-fit:contain!important}
+body.hud-v5 #stage #hud5Root .vital-body,body.hud-v5 #stage #hud5Root .meter-body{flex:1!important;min-width:0!important;position:relative!important;font-size:12px!important;color:var(--muted)!important}
+body.hud-v5 #stage #hud5Root .vital-body>span,body.hud-v5 #stage #hud5Root .meter-body>span:not([hidden]){display:block!important;margin-bottom:4px!important}
+body.hud-v5 #stage #hud5Root .meter,body.hud-v5 #stage #hud5Root .vital .health-meter,body.hud-v5 #stage #hud5Root .breath .meter{position:relative!important;inset:auto!important;height:8px!important;border:0!important;border-radius:6px!important;box-shadow:none!important;background:var(--inset)!important;transform:none!important;overflow:visible!important}
+body.hud-v5 #stage #hud5Root .meter i{border-radius:6px!important;box-shadow:none!important;background:#ff5264!important}
+body.hud-v5 #stage #hud5Root .breath .meter i{background:#5ee9e9!important}
+body.hud-v5 #stage #hud5Root .vital [data-hud-field=hpLabel],body.hud-v5 #stage #hud5Root .breath [data-hud-field=breathLabel]{position:absolute!important;left:auto!important;right:0!important;top:-25px!important;bottom:auto!important;padding:0!important;display:block!important;font:600 17px GVExpDisplay!important;color:var(--text)!important}
+body.hud-v5 #stage #hud5Root .combo{position:absolute!important;left:228px!important;right:auto!important;top:12px!important;width:96px!important;height:auto!important;padding:0!important;text-align:center!important;text-shadow:0 3px var(--edge)!important}
+body.hud-v5 #stage #hud5Root .combo strong{font:600 43px/1 GVExpDisplay!important;color:var(--combo-color)!important;-webkit-text-stroke:0!important}
+body.hud-v5 #stage #hud5Root .combo small{display:block!important;margin-top:5px!important;font:600 13px GVExpDisplay!important;color:var(--muted)!important}
+body.hud-v5 #stage #hud5Root .location{position:absolute!important;right:12px!important;top:12px!important;display:flex!important;align-items:center!important;gap:7px!important}
+body.hud-v5 #stage #hud5Root .place{position:static!important;inset:auto!important;text-align:left!important;font:600 19px/1.1 GVExpDisplay!important;color:var(--text)!important}
+body.hud-v5 #stage #hud5Root .tools{display:flex!important;gap:0!important}
+body.hud-v5 #stage #hud5Root .tools button{width:44px!important;min-height:55px!important;padding:3px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:2px!important;font-size:20px!important;box-shadow:0 3px var(--edge)!important}
+body.hud-v5 #stage #hud5Root kbd{font:600 12px GVExpBody!important}
+body.hud-v5 #stage #hud5Root .mission{position:absolute!important;left:auto!important;right:134px!important;top:82px!important;width:190px!important;max-height:160px!important;overflow:auto!important;display:grid!important;grid-template-columns:29px minmax(0,1fr)!important;gap:6px!important;align-items:center!important;padding:9px!important}
+body.hud-v5 #stage #hud5Root .mission .objective-art{width:29px!important;height:36px!important;overflow:hidden!important;display:flex!important;align-items:center!important;justify-content:center!important}
+body.hud-v5 #stage #hud5Root .mission .asset-slot,body.hud-v5 #stage #hud5Root .mission .asset-slot img{display:block!important;width:29px!important;height:36px!important;object-fit:contain!important}
+body.hud-v5 #stage #hud5Root .mission .asset-slot[data-mission=guardians],body.hud-v5 #stage #hud5Root .mission .asset-slot[data-mission=guardians] img{width:48px!important;height:60px!important;max-width:none!important;flex:none!important}
+body.hud-v5 #stage #hud5Root .mission [data-hud-field=missionTask]{display:block!important;font-size:12px!important;color:var(--muted)!important}
+body.hud-v5 #stage #hud5Root .mission [data-hud-field=missionProgress]{font:600 17px GVExpDisplay!important;white-space:nowrap!important}
+body.hud-v5 #stage #hud5Root .mission [data-hud-field=missionTime]{display:block!important;margin-top:2px!important;font-size:11px!important;color:var(--muted)!important}
+body.hud-v5 #stage #hud5Root .mission[data-ready=true]{border-color:var(--success)!important;animation:none!important;box-shadow:inset 0 0 0 1px var(--success),0 3px var(--edge)!important}
+body.hud-v5 #stage #hud5Root .mission[data-ready=true] *{animation:none!important}
+body.hud-v5 #stage #hud5Root .mission[data-ready=true] :is(strong,small){color:var(--success)!important}
+body.hud-v5 #stage #hud5Root .score{position:absolute!important;right:12px!important;top:74px!important;bottom:164px!important;width:110px!important;padding:10px!important;min-height:160px!important}
+body.hud-v5 #stage #hud5Root .score-top{gap:1px!important;margin:0!important;font-size:11px!important;color:var(--muted)!important}
+body.hud-v5 #stage #hud5Root .score-top b{font:600 25px GVExpDisplay!important;color:var(--text)!important}
+body.hud-v5 #stage #hud5Root .score-progress{position:relative!important;flex:1!important;min-height:0!important;margin:24px 0 18px!important;width:100%!important;height:auto!important}
+body.hud-v5 #stage #hud5Root .score .meter{position:absolute!important;left:24px!important;bottom:0!important;top:auto!important;width:9px!important;height:100%!important;overflow:hidden!important;background:var(--inset)!important;z-index:0!important}
+body.hud-v5 #stage #hud5Root .score .meter i{background:var(--gold)!important;width:100%!important;position:absolute!important;bottom:0!important}
+body.hud-v5 #stage #hud5Root .score-stars{position:absolute!important;inset:0!important;z-index:2!important}
+body.hud-v5 #stage #hud5Root .hud5-star-anchor{left:28px!important}
+body.hud-v5 #stage #hud5Root .hud5-star{left:0!important;width:25px!important;height:27px!important;transform:translate(-50%,-50%)!important}
+body.hud-v5 #stage #hud5Root .score-marks{position:absolute!important;inset:0!important;pointer-events:none!important}
+body.hud-v5 #stage #hud5Root .score-marks i{position:absolute!important;left:45px!important;font:600 11px GVExpBody!important;color:var(--muted)!important;height:auto!important;width:auto!important;transform:translateY(50%)!important;border:0!important}
+body.hud-v5 #stage #hud5Root .score small{font:600 11px/1.2 GVExpBody!important;margin:0!important;color:var(--muted)!important;overflow-wrap:anywhere!important}
+body.hud-v5 #stage #hud5Root .rail{position:absolute!important;left:12px!important;right:12px!important;top:auto!important;bottom:12px!important;height:76px!important;padding:8px 12px!important;border-radius:11px!important}
+body.hud-v5 #stage #hud5Root .track{height:37px!important;border:0!important;border-radius:5px!important;background:var(--inset)!important;box-shadow:0 0 var(--feel-glow,4px) #5ee9e92e!important}
+body.hud-v5 #stage #hud5Root .rhythm-wave{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;pointer-events:none!important;opacity:.35!important}
+body.hud-v5 #stage #hud5Root .rhythm-wave path{fill:none!important;stroke:#5ee9e9!important;stroke-width:.5!important}
+body.hud-v5 #stage #hud5Root .perfect-zone{background:var(--raised)!important;border:0!important}
+body.hud-v5 #stage #hud5Root .hit-line{border-color:var(--text)!important;box-shadow:none!important}
+body.hud-v5 #stage #hud5Root .hud-note{width:20px!important;height:20px!important;filter:none!important;z-index:2!important}
+body.hud-v5 #stage #hud5Root .rail-footer{display:flex!important;justify-content:space-between!important;align-items:center!important;gap:8px!important;margin:6px 0 0!important;width:100%!important;min-height:0!important;padding:0!important;font:600 13px/1 GVExpDisplay!important;color:var(--muted)!important}
+body.hud-v5 #stage #hud5Root .rail-footer strong{color:var(--text)!important;white-space:nowrap!important}
+body.hud-v5 #stage #hud5Root .items{position:absolute!important;left:50%!important;bottom:100px!important;transform:translateX(-50%)!important;display:grid!important;grid-template-columns:repeat(3,68px)!important;gap:9px!important}
+body.hud-v5 #stage #hud5Root .item{width:68px!important;height:78px!important;min-height:78px!important;padding:6px 5px 4px!important;display:grid!important;grid-template-columns:18px 1fr!important;grid-template-rows:39px 23px!important;gap:3px!important;border-color:var(--line)!important;background:linear-gradient(var(--raised),var(--panel))!important}
+body.hud-v5 #stage #hud5Root .item .asset-slot,body.hud-v5 #stage #hud5Root .item .asset-slot img{width:39px!important;height:39px!important;grid-column:1/3!important;justify-self:center!important;object-fit:contain!important}
+body.hud-v5 #stage #hud5Root .item kbd{position:static!important;grid-column:1!important;grid-row:2!important;border:0!important;border-radius:0!important;background:none!important;padding:0!important;font:600 12px GVExpBody!important;color:var(--muted)!important;align-self:center!important}
+body.hud-v5 #stage #hud5Root .item .quantity{position:static!important;grid-column:2!important;grid-row:2!important;font:600 23px/1 GVExpDisplay!important}
+body.hud-v5 #stage #hud5Root .item[data-ready=true]:not(:disabled){border-color:#5ee9e9!important;background:linear-gradient(#2890dc,var(--raised))!important;box-shadow:inset 0 2px var(--text),inset 0 -4px var(--line),0 3px var(--edge),0 0 13px #5ee9e93d!important}
+body.hud-v5 #stage #hud5Root .item:disabled img{opacity:.42!important}
+body.hud-v5 #stage #hud5Root .hud5-left{position:absolute!important;left:12px!important;top:132px!important;bottom:220px!important;width:190px!important;min-height:0!important;pointer-events:none!important}
+body.hud-v5 #stage #hud5Root .hud5-details{width:100%!important;border:0!important;padding:0!important;gap:6px!important;scrollbar-width:thin!important;pointer-events:auto!important}
+
+
+
+
+
+
+body.hud-v5 #stage #hud5Root .hud5-critical{position:absolute!important;left:12px!important;bottom:100px!important;width:180px!important;max-height:calc(100% - 260px)!important;overflow:auto!important;pointer-events:none!important;display:flex!important;flex-direction:column!important;gap:6px!important}
+body.hud-v5 #stage #hud5Root .hud5-critical>*{pointer-events:auto!important}
+body.hud-v5 #stage #hud5Root #objective{font:600 13px GVExpBody!important;background:var(--bg)!important;border-color:var(--line)!important;padding:10px!important}
+body.hud-v5 #stage #hud5Root #objective :is(small,p){display:none!important}
+body.hud-v5 #stage #hud5Root #objective .meter{height:6px!important;overflow:hidden!important}
+body.hud-v5 #stage #hud5Root #objective .meter i{background:var(--success)!important}
+body.hud-v5 #stage #hud5Root #objective>:not(.meter){font:600 13px GVExpBody!important;color:var(--text)!important}
+body.hud-v5 #stage #hud5Root #boostHud{position:absolute!important;right:134px!important;left:auto!important;top:auto!important;bottom:164px!important;width:190px!important;max-height:calc(100% - 340px)!important;overflow:auto!important;display:flex!important;flex-direction:column-reverse!important;gap:6px!important;pointer-events:auto!important;background:none!important;border:0!important;padding:0!important;box-shadow:none!important}
+body.hud-v5 #stage #hud5Root #boostHud[hidden]{display:none!important}
+body.hud-v5 #stage #hud5Root #boostHud>*{position:static!important;inset:auto!important;min-height:0!important;display:block!important;padding:5px 8px!important;border:0!important;border-radius:6px!important;background:var(--bg)!important;font:600 13px GVExpDisplay!important}
+body.hud-v5 #stage #hud5Root .cargo{position:absolute!important;left:auto!important;right:12px!important;bottom:100px!important;display:flex!important;align-items:center!important;gap:8px!important;font:600 13px GVExpDisplay!important}
+body.hud-v5 #stage #hud5Root .extract{position:static!important;width:auto!important;height:auto!important;min-height:44px!important;display:flex!important;gap:6px!important;align-items:center!important;color:var(--text)!important;font:600 14px GVExpDisplay!important}
+body.hud-v5 #stage #hud5Root .extract .asset-slot,body.hud-v5 #stage #hud5Root .extract img{width:24px!important;height:28px!important;object-fit:contain!important}
+body.hud-v5 #stage #hud5Root .energy-fill{position:absolute!important;inset:0 auto 0 0!important;background:#5ee9e9!important;opacity:.06!important;transition:width 180ms ease-out!important;pointer-events:none!important}
+body.hud-v5 #stage #hud5Root .energy-edge{position:absolute!important;bottom:0!important;left:0!important;height:2px!important;background:#5ee9e9!important;opacity:.85!important;transition:width 180ms ease-out!important;pointer-events:none!important}
+body.hud-v5 #stage #hud5Root .contact{position:absolute!important;left:15%!important;top:50%!important;width:26px!important;height:26px!important;margin:-13px 0 0 -13px!important;border:2px solid #5ee9e9!important;border-radius:50%!important;opacity:0!important;pointer-events:none!important}
+body.hud-v5 #stage #hud5Root .contact-rays{position:absolute!important;left:15%!important;top:50%!important;width:4px!important;height:4px!important;background:var(--text)!important;opacity:0!important;pointer-events:none!important}
+body.hud-v5 #bossHud{top:135px!important;left:calc(50% - 220px)!important;right:auto!important;width:440px!important;max-width:45vw!important}
+body.hud-v5 #pauseCover{background:#020816e8!important;padding:18px!important;overflow:auto!important;display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:12px!important;z-index:40!important}
+body.hud-v5 #pauseCover[hidden]{display:none!important}
+body.hud-v5 #pauseCover>span{display:none!important}
+body.hud-v5 #pauseCover h2{font:600 27px GVExpDisplay!important;color:#edf4ff!important;margin:0!important}
+body.hud-v5 #pauseCover button{min-height:48px!important;font:600 18px GVExpDisplay!important;padding:9px 14px!important;color:#edf4ff!important;background:linear-gradient(#173f73,#102a52)!important;border:3px solid #020816!important;border-radius:10px!important;box-shadow:inset 0 2px #26538c,inset 0 -4px #06132b,0 3px #020816!important}
+body.hud-v5 #pauseCover .approved-pause-tabs{display:flex!important;gap:8px!important;width:min(620px,100%)!important}
+body.hud-v5 #pauseCover .approved-pause-tabs button{flex:1!important}
+body.hud-v5 #pauseCover .approved-pause-tabs [aria-pressed=true]{outline:2px solid #35d6f2!important}
+body.hud-v5 #pauseCover .approved-pause-content{width:min(620px,100%)!important;height:min(300px,40vh)!important;overflow:auto!important;background:#102a52!important;border-radius:12px!important;padding:16px!important;font:600 14px/1.35 GVExpBody!important;color:#bfd0e8!important}
+body.hud-v5 #pauseCover .approved-pause-content article+article{margin-top:15px!important}
+body.hud-v5 #pauseCover .approved-pause-content header{display:flex!important;justify-content:space-between!important;gap:8px!important;font:600 18px GVExpDisplay!important;color:#edf4ff!important}
+body.hud-v5 #pauseCover .approved-pause-content header b{font-size:13px!important;white-space:nowrap!important}
+body.hud-v5 #pauseCover .approved-pause-content p{font:600 13px/1.35 GVExpBody!important;color:#bfd0e8!important;margin:5px 0 0!important}
+body.hud-v5 #pauseCover .approved-pause-content dl{display:grid!important;grid-template-columns:1fr auto!important;gap:10px!important}
+body.hud-v5 #pauseCover #resume{width:min(620px,100%)!important;min-height:52px!important;background:linear-gradient(#ffbc00,#ff7600)!important;color:#17213d!important}
+body.soft-fx #hud5Root :is(.energy-fill,.energy-edge){transition:none!important}
+@media(prefers-reduced-motion:reduce){body.hud-v5 #stage #hud5Root :is(.energy-fill,.energy-edge){transition:none!important}}
+@container approved-exp (max-width:900px){body.hud-v5 #stage #hud5Root .combo{left:215px!important;width:80px!important}body.hud-v5 #stage #hud5Root .combo strong{font-size:38px!important}body.hud-v5 #stage #hud5Root .items{grid-template-columns:repeat(3,64px)!important}body.hud-v5 #stage #hud5Root .item{width:64px!important}}
+@container approved-exp (max-width:680px){body.hud-v5 #stage #hud5Root .top{top:8px!important;left:8px!important;right:8px!important;width:auto!important;grid-template-columns:1fr 1fr!important;gap:6px!important}body.hud-v5 #stage #hud5Root .location{top:68px!important;left:8px!important;right:8px!important;justify-content:space-between!important}body.hud-v5 #stage #hud5Root .place{font-size:15px!important}body.hud-v5 #stage #hud5Root .combo{top:73px!important;left:42%!important;width:78px!important}body.hud-v5 #stage #hud5Root .combo strong{font-size:35px!important}body.hud-v5 #stage #hud5Root .mission{top:134px!important;right:103px!important;width:155px!important}body.hud-v5 #stage #hud5Root .score{top:132px!important;bottom:310px!important;right:8px!important;width:86px!important}body.hud-v5 #stage #hud5Root .score-top b{font-size:21px!important}body.hud-v5 #stage #hud5Root .score .meter{left:13px!important}body.hud-v5 #stage #hud5Root .hud5-star-anchor{left:17px!important}body.hud-v5 #stage #hud5Root .score-marks i{left:34px!important;font-size:10px!important}body.hud-v5 #stage #hud5Root .items{bottom:100px!important;grid-template-columns:repeat(3,64px)!important;gap:7px!important}body.hud-v5 #stage #hud5Root .rail{left:8px!important;right:8px!important;bottom:8px!important;padding:6px 8px!important}body.hud-v5 #stage #hud5Root .rail-footer{font-size:11px!important;gap:4px!important}body.hud-v5 #stage #hud5Root .rail-footer [data-hud-field=timing]{display:none!important}body.hud-v5 #stage #hud5Root .hud5-left{left:8px!important;top:200px!important;bottom:310px!important;width:145px!important}body.hud-v5 #stage #hud5Root .hud5-critical{left:8px!important;bottom:190px!important;width:140px!important;max-height:160px!important}body.hud-v5 #stage #hud5Root #boostHud{right:103px!important;bottom:310px!important;width:155px!important;max-height:160px!important}body.hud-v5 #stage #hud5Root .cargo{right:8px!important;bottom:190px!important;width:140px!important;flex-wrap:wrap!important;font-size:11px!important;gap:4px!important}body.hud-v5 #stage #hud5Root .extract{width:100%!important;margin:0!important}body.hud-v5 #bossHud{top:260px!important}}
+
+body.hud-v5 #stage #hud5Root .top{background:none!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0!important;min-height:0!important;align-items:stretch!important}
+body.hud-v5 #stage #hud5Root .vital-line{display:flex!important;justify-content:space-between!important;align-items:center!important;gap:5px!important;margin-bottom:4px!important;color:var(--muted)!important;font:600 12px GVExpBody!important}
+body.hud-v5 #stage #hud5Root .vital-line b{position:static!important;inset:auto!important;padding:0!important;width:auto!important;height:auto!important;display:block!important;font:600 17px GVExpDisplay!important;color:var(--text)!important;text-align:right!important;white-space:nowrap!important}
+body.hud-v5 #stage #hud5Root .vital-line span{font:600 12px GVExpBody!important;color:var(--muted)!important}
+body.hud-v5 #stage #hud5Root .rail{min-height:0!important;width:auto!important}
+body.hud-v5 #stage #hud5Root .item{min-width:0!important}
+body.hud-v5 #stage #hud5Root .rail-footer{height:auto!important;line-height:1!important}
+
+
+
+
+
+body.hud-v5 #stage #hud5Root #frenzyHud{position:relative!important;inset:auto!important;width:100%!important;max-width:none!important}
+body.hud-v5 #pauseCover .approved-pause-content header{background:none!important;border:0!important;padding:0!important;margin:0!important;min-height:0!important;box-shadow:none!important}
+
+body.hud-v5 #stage #hud5Root .place small{display:block!important;font:600 11px GVExpBody!important;color:var(--muted)!important;margin-top:3px!important}
+body.hud-v5 #stage #hud5Root .score-top b{max-width:100%!important;overflow-wrap:anywhere!important}
+
+body.hud-v5 #stage #hud5Root [hidden],body.hud-v5 #stage #hud5Root [hidden] *,body.hud-v5 #stage #hud5Root[hidden]{display:none!important}
+
+body.hud-v5 #stage #hud5Root .hud5-details{display:flex!important;flex-direction:column!important;overflow:auto!important;min-height:0!important}
+body.hud-v5 #stage #hud5Root #objective{display:grid!important}
+body.hud-v5 #stage #hud5Root .rail :is([data-hud-field=trackName],[data-hud-field=railMultiplier]){display:block!important}
+body.hud-v5 #stage #hud5Root .hud5-critical #message:empty{display:none!important}
+
+
+body.hud-v5 #stage #hud5Root#hud5Root [hidden],body.hud-v5 #stage #hud5Root#hud5Root [hidden] *,body.hud-v5 #stage #hud5Root#hud5Root[hidden]{display:none!important}
+body.hud-v5 #stage #hud5Root .hud5-buffs{position:absolute!important;right:134px!important;bottom:164px!important;width:190px!important;max-height:calc(100% - 340px)!important;overflow:auto!important;display:flex!important;flex-direction:column-reverse!important;gap:6px!important;pointer-events:none!important}
+body.hud-v5 #stage #hud5Root .hud5-buffs :is(#procFeed,#boostHud){position:relative!important;inset:auto!important;width:100%!important;max-width:none!important;max-height:none!important;overflow:visible!important;margin:0!important;pointer-events:none!important}
+@container approved-exp (max-width:680px){body.hud-v5 #stage #hud5Root .hud5-buffs{right:103px!important;bottom:310px!important;width:155px!important;max-height:160px!important}}
+
+body.hud-v5 #stage #hud5Root .vital-body .vital-line [data-hud-field=hpLabel],body.hud-v5 #stage #hud5Root .meter-body .vital-line [data-hud-field=breathLabel]{position:static!important;inset:auto!important;width:auto!important;height:auto!important;display:block!important;padding:0!important;font:600 17px GVExpDisplay!important;color:var(--text)!important}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:6px!important}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective>div:not(.meter){display:flex!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;width:100%!important;grid-column:1/-1!important}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective>div :is(span,strong){width:auto!important;min-width:0!important;max-width:none!important;white-space:nowrap!important;overflow-wrap:normal!important}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective strong{font:600 17px GVExpDisplay!important}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective span{font:600 13px GVExpBody!important}
+
+body.hud-v5 #stage #hud5Root .hud5-left{display:flex!important;flex-direction:column!important;gap:10px!important;bottom:100px!important}
+body.hud-v5 #stage #hud5Root .hud5-left .hud5-details{flex:1 1 0!important;min-height:0!important}
+body.hud-v5 #stage #hud5Root .hud5-left .hud5-critical{position:relative!important;inset:auto!important;flex:none!important;max-height:55%!important;width:100%!important;overflow:auto!important}
+@container approved-exp (max-width:680px){body.hud-v5 #stage #hud5Root .hud5-left{top:240px!important;bottom:190px!important;width:140px!important}}
+
+body.hud-v5 #pauseCover .approved-pause-window{width:min(620px,100%)!important;min-width:0!important;padding:16px!important;background:#06132b!important;border:3px solid #26538c!important;border-radius:14px!important;box-shadow:inset 0 2px #173f73,0 6px #020816!important}
+body.hud-v5 #pauseCover .approved-pause-head{display:flex!important;justify-content:space-between!important;align-items:center!important;gap:12px!important;min-height:44px!important;padding:0!important;margin:0 0 14px!important;border:0!important;background:none!important;box-shadow:none!important}
+body.hud-v5 #pauseCover .approved-pause-close{width:44px!important;height:44px!important;min-height:44px!important;flex:none!important;padding:0!important;background:linear-gradient(#ff5264,#b41b42)!important;font:600 28px GVExpDisplay!important}
+body.hud-v5 #pauseCover .approved-pause-tabs{width:100%!important;margin:0 0 14px!important}
+body.hud-v5 #pauseCover .approved-pause-content{width:100%!important;height:min(260px,35vh)!important}
+body.hud-v5 #pauseCover .approved-pause-footer{display:flex!important;gap:8px!important;padding:0!important;margin:16px 0 0!important;background:none!important;border:0!important}
+body.hud-v5 #pauseCover .approved-pause-footer button{flex:1!important;width:auto!important;min-width:0!important}
+body.hud-v5 #pauseCover .approved-pause-footer #resume{flex:1.4!important;width:auto!important}
+body.hud-v5 #pauseCover #pauseText:empty{display:none!important}
+@media(max-width:680px){body.hud-v5 #pauseCover .approved-pause-window{padding:12px!important}body.hud-v5 #pauseCover .approved-pause-footer{flex-direction:column!important}body.hud-v5 #pauseCover .approved-pause-footer button{width:100%!important}}
+
+/* Interactive HUD controls must receive the pointer instead of the world canvas. */
+body.hud-v5 #stage #hud5Root button,body.hud-v5 #stage #hud5Root .items{pointer-events:auto!important}
+
+/* Compact pause keeps every real stack, chance and condition in a single row. */
+body.hud-v5 #pauseCover .approved-pause-content{padding:8px!important}
+body.hud-v5 #pauseCover .approved-pause-content .pause-card-row{display:grid!important;grid-template-columns:38px minmax(0,1fr) 28px minmax(150px,43%)!important;align-items:center!important;gap:9px!important;min-height:54px!important;margin:0!important;padding:8px!important;border-radius:8px!important;background:#173f73!important}
+body.hud-v5 #pauseCover .pause-card-row+.pause-card-row{margin-top:6px!important}
+body.hud-v5 #pauseCover .pause-card-icon,body.hud-v5 #pauseCover .pause-card-icon svg{display:block!important;width:38px!important;height:38px!important;flex:none!important}
+body.hud-v5 #pauseCover .pause-card-name{font:600 15px/1.15 GVApprovedDisplay,sans-serif!important;color:#edf4ff!important;overflow-wrap:anywhere!important}
+body.hud-v5 #pauseCover .pause-card-level{display:grid!important;place-items:center!important;width:28px!important;height:28px!important;border:2px solid #26538c!important;border-radius:7px!important;background:#06132b!important;font:600 16px GVApprovedDisplay,sans-serif!important;color:#35d6f2!important}
+body.hud-v5 #pauseCover .pause-card-effect{font:600 13px/1.25 GVApprovedBody,sans-serif!important;color:#edf4ff!important;text-align:right!important;font-variant-numeric:tabular-nums!important;overflow-wrap:anywhere!important}
+body.hud-v5 #pauseCover .pause-facts{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+body.hud-v5 #pauseCover .pause-fact{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:10px!important;min-height:120px!important;padding:12px 4px!important;border-radius:10px!important;background:#173f73!important}
+body.hud-v5 #pauseCover .pause-fact .asset-slot,body.hud-v5 #pauseCover .pause-fact img{display:block!important;width:48px!important;height:48px!important;object-fit:contain!important}
+body.hud-v5 #pauseCover .pause-fact strong{font:600 22px/1.2 GVApprovedDisplay,sans-serif!important;color:#edf4ff!important;text-align:center!important;overflow-wrap:anywhere!important;max-width:100%!important}
+@media(max-width:520px){body.hud-v5 #pauseCover .approved-pause-content .pause-card-row{grid-template-columns:32px minmax(0,1fr) 28px!important;gap:5px 8px!important}body.hud-v5 #pauseCover .pause-card-icon{grid-row:1/3!important}body.hud-v5 #pauseCover .pause-card-icon,body.hud-v5 #pauseCover .pause-card-icon svg{width:32px!important;height:32px!important}body.hud-v5 #pauseCover .pause-card-effect{grid-column:2/4!important;text-align:left!important}body.hud-v5 #pauseCover .pause-fact strong{font-size:17px!important}body.hud-v5 #pauseCover .pause-fact .asset-slot,body.hud-v5 #pauseCover .pause-fact img{width:38px!important;height:38px!important}}
+
+/* Abyss readability R1: keep official icons/time intact in the existing buff rail. */
+body.hud-v5 #stage #hud5Root .hud5-buffs{pointer-events:auto!important;flex-direction:column!important;overscroll-behavior:contain;scroll-padding:4px}
+body.hud-v5 #stage #hud5Root .hud5-buffs #boostHud{order:0!important;flex:0 0 auto!important;padding:2px!important;margin-top:auto!important;gap:4px!important;box-sizing:border-box!important}
+body.hud-v5 #stage #hud5Root .hud5-buffs #boostHud .boost-node{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:8px!important;width:auto!important;align-self:flex-start!important;height:auto!important;min-height:26px!important;flex:0 0 auto!important;box-sizing:border-box!important;transform:none!important;padding:2px 0!important;border:0!important;border-radius:0!important;background:none!important;box-shadow:none!important;filter:none!important;animation:none!important}
+body.hud-v5 #stage #hud5Root .hud5-buffs #boostHud .boost-node b{display:block!important;flex:0 0 22px!important;width:22px!important;height:22px!important;line-height:22px!important}
+body.hud-v5 #stage #hud5Root .hud5-buffs #boostHud .boost-node b>:is(svg,img,.glyph){display:block!important;width:22px!important;height:22px!important;object-fit:contain!important}
+body.hud-v5 #stage #hud5Root .hud5-buffs #boostHud .boost-node small{display:block!important;flex:0 0 auto!important;white-space:nowrap!important;overflow-wrap:normal!important;font:600 15px/1.2 GVExpBody,sans-serif!important;font-variant-numeric:tabular-nums}
+body.hud-v5 #stage #hud5Root .hud5-buffs #procFeed{order:1!important}
+
+/* Human correction: temporary powers LEFT, canonical card miniatures RIGHT. */
+body.hud-v5 #stage #hud5Root .hud5-left .hud5-details{flex:0 1 auto!important;max-height:32%!important}
+body.hud-v5 #stage #hud5Root .hud5-left .hud5-buffs{position:relative!important;inset:auto!important;width:100%!important;max-height:none!important;min-height:0!important;flex:1 1 0!important}
+body.hud-v5 #stage #hud5Root .hud5-cards{position:absolute!important;right:134px!important;top:132px!important;bottom:164px!important;width:190px!important;max-height:calc(100dvh - 296px)!important;min-height:0!important;height:auto!important;padding:0!important;margin:0!important;border:0!important;background:none!important;box-shadow:none!important;display:flex!important;flex-direction:column!important;gap:8px!important;overflow:auto!important;pointer-events:auto!important;overscroll-behavior:contain}
+body.hud-v5 #stage #hud5Root .hud5-cards #runCards{position:relative!important;inset:auto!important;width:100%!important;max-width:none!important;max-height:none!important;display:flex!important;flex-direction:column!important;gap:3px!important;flex:0 0 auto!important;overflow:visible!important;padding:2px!important;margin-top:auto!important;box-sizing:border-box!important;border:0!important;background:none!important}
+body.hud-v5 #stage #hud5Root .hud5-cards #runCards .card-chip{position:relative!important;display:grid!important;grid-template-columns:20px minmax(0,1fr) max-content!important;align-items:center!important;gap:6px!important;flex:0 0 auto!important;width:100%!important;min-width:0!important;min-height:28px!important;height:auto!important;padding:3px 0!important;box-sizing:border-box!important;border:0!important;background:none!important;box-shadow:none!important;border-radius:0!important;pointer-events:auto!important}
+body.hud-v5 #stage #hud5Root .hud5-cards #runCards .card-chip>img{display:block!important;width:20px!important;height:20px!important;object-fit:contain!important;image-rendering:auto!important;filter:none!important;pointer-events:none!important}
+body.hud-v5 #stage #hud5Root .hud5-cards #runCards .hud-card-name{position:static!important;display:block!important;width:auto!important;height:auto!important;min-width:0!important;overflow:visible!important;clip-path:none!important;white-space:normal!important;overflow-wrap:normal!important;padding:0!important;color:var(--text)!important;font:600 13px/1.3 GVExpBody,sans-serif!important}
+body.hud-v5 #stage #hud5Root .hud5-cards #runCards .hud-card-level{position:static!important;display:block!important;padding:0!important;background:none!important;border-radius:0!important;color:var(--muted)!important;font:600 11px/1.3 GVExpBody,sans-serif!important;white-space:nowrap!important}
+body.hud-v5 #stage #hud5Root .hud5-cards #runCards .card-chip:focus-visible{outline:2px solid var(--card)!important;outline-offset:1px!important}
+body.hud-v5 #stage #hud5Root .hud5-cards #runCards .card-chip{position:relative!important;display:grid!important;grid-template-columns:20px minmax(0,1fr) max-content!important;align-items:center!important;gap:6px!important;flex:0 0 auto!important;width:100%!important;min-width:0!important;min-height:28px!important;height:auto!important;padding:3px 0!important;box-sizing:border-box!important;border:0!important;background:none!important;box-shadow:none!important;border-radius:0!important;pointer-events:auto!important}
+body.hud-v5 #stage #hud5Root .hud5-cards[hidden],body.hud-v5 #stage #hud5Root .hud5-cards #runCards[hidden]{display:none!important}
+}
+
+@layer ui-layout-r2 {
+/* Approved polish: keep the climb and its numeric milestones, remove repeated prose. */
+body.hud-v5 #stage #hud5Root [data-hud-field=scoreNext]{display:none!important}
+body.hud-v5 #stage #hud5Root .score-progress{margin-bottom:10px!important}
+body.hud-v5 #stage #hud5Root .cargo [data-hud-field=runBag]{font:600 min(12px,1em)/1.2 GVExpDisplay,Fredoka,sans-serif!important}
+/* Passive announcements never resize the objective group. */
+body.hud-v5 #stage #hud5Root .hud5-critical #objective[data-approved-alerts]{padding:10px!important}
+}
+
+/* Current user decision: strong completion beacon, without moving the card. */
+@keyframes gv-quest-ready{0%,100%{opacity:.12}50%{opacity:1}}
+body.hud-v5 #stage #hud5Root .mission[data-ready=true]::after{content:'';position:absolute;inset:0;border:3px solid #67e3b8;border-radius:inherit;background:#67e3b81a;box-shadow:inset 0 0 16px #67e3b870,0 0 18px #67e3b8;pointer-events:none;animation:gv-quest-ready 1.05s ease-in-out infinite}
+body.hud-v5 #stage #hud5Root[data-feedback-held=true] .mission::after{animation-play-state:paused}
+body.soft-fx #stage #hud5Root .mission[data-ready=true]::after{animation:none;opacity:1;box-shadow:inset 0 0 0 1px #67e3b8}
+@media(prefers-reduced-motion:reduce){body.hud-v5 #stage #hud5Root .mission[data-ready=true]::after{animation:none;opacity:1;box-shadow:inset 0 0 0 1px #67e3b8}}
+
+@layer ui-layout-r2 {
+/* Layout and empty scroll space are not input surfaces. Keep only the visible
+   controls/panels and actual scroll rows interactive, never their flex gaps. */
+body.hud-v5 #stage #hud5Root .hud :is(.top,.location,.tools,.items,.cargo,.hud5-left,.hud5-critical,.hud5-abyss-critical,.hud5-details,.hud5-buffs,.hud5-cards,.run-orb-tray){pointer-events:none!important}
+body.hud-v5 #stage #hud5Root .hud .hud5-buffs #boostHud,body.hud-v5 #stage #hud5Root .hud .hud5-cards #runCards{pointer-events:none!important}
+body.hud-v5 #stage #hud5Root .hud :is(.vital,.breath,.location .place,.boost-node,.run-orb-slots){pointer-events:auto!important}
+/* The music rail has no mouse action; animated notes and light may extend
+   beyond its artwork but must never cover the cave with an input rectangle. */
+body.hud-v5 #stage #hud5Root .hud .rail,body.hud-v5 #stage #hud5Root .hud .rail *{pointer-events:none!important}
+body.hud-v5 #stage #hud5Root .hud button{pointer-events:auto!important}
+body.hud-v5 #stage #hud5Root .hud button *,body.hud-v5 #stage #hud5Root .hud button::before,body.hud-v5 #stage #hud5Root .hud button::after{pointer-events:none!important}
+}
+
+@layer ui-layout-r2 {
+/* Overflowing content fills its viewport and owns its native scrollbar. Empty
+   flex space stays transparent to input; child rows still receive wheel/focus. */
+body.hud-v5 #stage #hud5Root .hud :is(.hud5-details,.hud5-buffs,.hud5-cards)[data-hud-scrollable=true]{pointer-events:auto!important}
+}

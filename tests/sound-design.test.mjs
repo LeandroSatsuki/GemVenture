@@ -36,9 +36,9 @@ test('changing musical scene preserves a reward cue, while mute stops both buses
  m.stop();assert.equal(effectStops,1);assert.equal(m.effectVoices.size,0);
 });
 
-test('mining lounge is quiet, avoids duplicate beats and obeys mute, suspension and voice limits',()=>{
+test('mining arcade groove varies its phrase, avoids duplicate beats and obeys mute, suspension and voice limits',()=>{
  const m=new Music(),notes=[],noises=[];m.ctx={state:'running',currentTime:0};m.master={gain:{setTargetAtTime:()=>{}}};m.tone=(...a)=>notes.push(a);m.noise=(...a)=>noises.push(a);
- m.mining(0);assert.equal(notes.length,0);m.enabled=true;m.mining(0);assert.equal(notes.length,3);m.mining(0);assert.equal(notes.length,3);
- for(let i=1;i<128;i++){m.ctx.currentTime=i/4;m.mining(i/4);}assert.ok(notes.every(n=>n[3]<=.09));assert.ok(noises.every(n=>n[1]<=.012));assert.equal(m.track,'mining');
+ m.mining(0);assert.equal(notes.length,0);m.enabled=true;m.mining(0);assert.ok(notes.length>0);const first=notes.length;m.mining(0);assert.equal(notes.length,first);
+ for(let i=1;i<256;i++){m.ctx.currentTime=i/8;m.mining(i/8);}assert.ok(notes.every(n=>n[3]<=.13));assert.ok(noises.every(n=>n[1]<=.028));assert.ok(new Set(notes.map(n=>n[0])).size>10);assert.equal(m.track,'mining');
  const count=notes.length;m.ctx.state='suspended';m.mining(40);assert.equal(notes.length,count);m.ctx.state='running';m.voices=new Set(Array.from({length:71},(_,i)=>i));m.mining(40);assert.equal(notes.length,count);m.enabled=false;m.mining(40);assert.equal(notes.length,count);
 });

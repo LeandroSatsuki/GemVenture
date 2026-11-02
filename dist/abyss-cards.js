@@ -14,7 +14,7 @@ export function offerAbyssCards(s){
  // Elevator charge has no effect in a continuous descent.
  const offers=cardOffer(roll,r,s,c=>c.id!=='battery');
  for(const c of ABYSS_RECOVERY_CARDS){if(offers.length===3)break;offers.push(c.id);}
- a.cardSection=a.section;a.cardChoice={section:a.section,offers,remaining:ABYSS_CHOICE_SECONDS,autoIndex:Math.floor(roll()*offers.length)};
+ r.cardChosenId=null;a.cardSection=a.section;a.cardChoice={section:a.section,offers,remaining:ABYSS_CHOICE_SECONDS,autoIndex:Math.floor(roll()*offers.length)};
  r.events.push({type:'abyssCardOffer',section:a.section});return true;
 }
 export function advanceAbyssChoice(r,seconds){

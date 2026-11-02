@@ -1,0 +1,98 @@
+{
+  "version": 2,
+  "source": "approved v3 rig; additive front presentation and Jamal adaptation",
+  "danceReference": "https://youtube.com/shorts/qYcKjB_Lk1Q",
+  "files": {
+    "miner-front.png": {
+      "sha256": "ea1dd1100d40c3c7de19e4a18f8c02b39dfd120828e70261e41f555a11d53fe1",
+      "size": [
+        512,
+        512
+      ]
+    },
+    "miner-idle.png": {
+      "sha256": "10c64a000eb540d33b91e8e503d9bff2040abd53a8c13c0023cbae70b40b9925",
+      "size": [
+        4096,
+        2048
+      ]
+    },
+    "miner-jamal.png": {
+      "sha256": "d1b14bf85ce41bbff77da54081de01059e91169ac8bc6060e78b039f98b62789",
+      "size": [
+        4096,
+        3072
+      ]
+    },
+    "miner-wardrobe.png": {
+      "sha256": "160b993dba241b0a624624b0edadd4d66ee5c59823e0877c9a05c73359c4746f",
+      "size": [
+        512,
+        512
+      ]
+    },
+    "statue-amethyst.png": {
+      "sha256": "34e2380ed8ff50dac5f73611098075ccb4dd44677b8b7a3a0f38da8327f0f10d",
+      "size": [
+        154,
+        251
+      ]
+    },
+    "statue-copper.png": {
+      "sha256": "a17ea6a7f44f7f2a926e6ee82235dc8d1db2ada86909ee38a31b7e4a3ff99324",
+      "size": [
+        154,
+        251
+      ]
+    },
+    "statue-emerald.png": {
+      "sha256": "2b80093b932c6b0d78974bab00bba2d184450cafa46e72ff3438a3ca62fada38",
+      "size": [
+        154,
+        251
+      ]
+    },
+    "statue-gold.png": {
+      "sha256": "ab3ae8f6d42e254a5c8d5843e82100e485f3067f6cc37bc6464fbc6f96523663",
+      "size": [
+        154,
+        251
+      ]
+    },
+    "statue-ruby.png": {
+      "sha256": "cf5346adb0aaa18fd69703103a1bf56b7cacd18e566afa95361bb190547517cf",
+      "size": [
+        154,
+        251
+      ]
+    },
+    "statue-silver.png": {
+      "sha256": "318ddf8519435c6f79cb3482c38b5227d2357f1040f1149f906837d67e7849be",
+      "size": [
+        154,
+        251
+      ]
+    },
+    "statue-stellar.png": {
+      "sha256": "76c28f7efeab72cc2f8825a07a5d3d2a315f03177f8114d2c661ed5318e9fa3e",
+      "size": [
+        154,
+        251
+      ]
+    },
+    "tree-icon.png": {
+      "sha256": "e9bae0c101f5ca9504ff54d1b0fbef220197bf48f749a0ff940943ec28fe8b19",
+      "size": [
+        165,
+        256
+      ]
+    },
+    "tree.png": {
+      "sha256": "ee872420a6f8c011b0f84b70149c6c1462cb089ec8f84428fcc15d491a657491",
+      "size": [
+        3072,
+        2304
+      ]
+    }
+  }
+}

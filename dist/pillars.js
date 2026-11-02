@@ -87,11 +87,7 @@ export function blessingInfo(id,level=1,roll=null){
  return{...b,good,rarity:roll?WISH_TIERS[roll.tier]:null,riskRank:roll?WISH_RISKS[roll.risk]:null,risk:['−'+pct(1-e.loot)+'% CRISTAIS','INIMIGOS: +'+pct(e.incoming-1)+'% DANO','−'+pct(1-e.power)+'% FORÇA','−'+pct(1-e.health)+'% VIDA MÁXIMA'][b.kind]};
 }
 export const OFFERING_COST=45;
-export function makeOffering(s,kind){if(s.run||s.pendingBlessing||!Number.isInteger(kind)||kind<0||kind>3||!validMaterials(s.materials)||s.materials[kind]<OFFERING_COST)return null;
- const offering=(s.offerings||0)+1;if(!Number.isSafeInteger(offering))return null;const level=buildingLevel(s,'well'),draw=rollWish(s.seed,offering,level);
- s.materials[kind]-=OFFERING_COST;s.offerings=offering;s.pendingBlessing=WISH_FAMILIES[kind].ids[draw.choice];s.pendingBlessingLevel=level;s.pendingBlessingRoll=draw.roll;
- return blessingInfo(s.pendingBlessing,level,draw.roll);
-}
+export function makeOffering(s,kind){return null;}
 export const RELICS=[
  {id:'aurora',name:'ESCUDO DA AURORA',text:'Comece protegido.',detail:'Escudo nos primeiros 8 pulsos.',cost:12,icon:'guard'},
  {id:'phoenix',name:'CORAÇÃO FÊNIX',text:'Uma segunda chance.',detail:'Reviva uma vez por descida.',cost:24,icon:'revive'},

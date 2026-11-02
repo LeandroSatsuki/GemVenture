@@ -1,0 +1,15 @@
+{
+  "id": "CAVE-FINDS-UI-INTEGRATION-20261101",
+  "authorization": "Tá aprovado, pode ir para a próxima fase. O resto é com os outros. Pedido explícito: encaminhar luz de tesouro abrindo para Efeitos Gamefeel e emissão de luz, mais forte aberto, ao responsável de shaders.",
+  "proposal": "../CAVE-FINDS-UI-PROPOSAL-20261101/v3/DELIVERY.json",
+  "files": {
+    "approved-chest-opening-art.js": "d459c30379abda1f74af4dde8a6a8b0889f07749e7bdb753b68b2a9e5f88b34d",
+    "chest-opening-presentation.js": "0f2ed2f92e475650a04870b723cc01f3390581bcf3926d3377a99b0f2450616e",
+    "cave-find-art.js": "406e78892a1628ae45f526aab51b66405e83857eac1a96a882e593bc8e2f224c",
+    "approved-cave-find-tip.js": "f140706acffc801db5164b59d9827eef35e69637b87fe6487fd9ab820f755d2d",
+    "cave-find-hud.js": "40267dc069f23a1fd076fb7d85b3281831c792538680d5581948c480a872919a",
+    "cave-find-hud.css": "e9d71c32810fe1890d16c2d26e0e2ca422925d87b8ba3a938417efe9d6b1cb01",
+    "run.js": "11bd2bc79968e07b7809736bc290d2b00dd552c03d949f103f5efbd1d31c4c53",
+    "world.js": "0a4a05806ded8b5fe8a2a6300b9d5e0808dbb543cc1e8c73b7f8ddb7e1c8e802"
+  }
+}

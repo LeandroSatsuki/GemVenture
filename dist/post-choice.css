@@ -1,0 +1,89 @@
+/* Post-choice only. No selector applies before the owner sets cardChosen=true. */
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .floor-choice{width:min(1260px,calc(100% - 72px));padding:36px 0;gap:0}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .descent-heading{width:min(820px,100%);min-height:160px;padding:18px 32px}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #clearTitle{font-size:44px;line-height:1.12;-webkit-text-stroke:3px #031837;text-shadow:0 3px #031837}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-life-current{color:#ff3f68}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorLoot{width:min(1120px,100%);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 0;margin:24px 0 0;padding:20px 20px 16px;overflow-x:auto;min-height:0;border-color:#144a7e}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorLoot .floor-loot-label{grid-column:1/-1;display:block;text-align:center;padding:0;font-size:18px;flex:auto}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorLoot>div:not(.floor-materials):not(.floor-record-drop){min-width:190px;flex:auto;padding:0 18px;gap:5px;min-height:62px}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorLoot strong{font-size:30px;gap:12px}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorLoot :is(img,svg){width:42px;height:42px}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorLoot .floor-materials{grid-column:1/-1;justify-content:center;flex-wrap:wrap;gap:6px;min-width:0}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorLoot .floor-materials>span{flex:0 1 200px;min-width:150px;flex-direction:row;gap:12px;border:1px solid #164371;border-radius:10px;padding:10px 14px;background:#04112a;font-size:25px}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorLoot .floor-record-drop{grid-column:1/-1;max-width:none;border-left:0;padding:0;text-align:center;white-space:normal}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #chosenCard{display:flex;justify-content:center;align-items:center;gap:36px;width:min(780px,100%);padding:0;margin:40px 0 32px;min-height:270px;text-align:left;color:#fff}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-chosen-face{flex:0 0 200px;width:200px;height:256px;display:grid;place-items:center;padding:12px;border:4px solid var(--chosen-color);border-radius:16px;background:radial-gradient(ellipse at center,#2b1b27,#07142d 75%);box-shadow:0 0 0 3px #030a1d,0 0 24px #ff9b244d,inset 0 0 0 2px #020a1c;rotate:-4deg}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-chosen-art{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-equipped-copy{flex:0 1 440px;min-width:0}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-equipped-label{display:block;font:600 29px/1.2 var(--r2-display);color:#ffe04b;text-shadow:0 2px #061127}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-equipped-copy h3{font:600 27px/1.2 var(--r2-display);margin:16px 0 10px;color:#fff;overflow-wrap:anywhere}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-equipped-copy p{font:800 18px/1.4 var(--r2-body);color:#cfddf2;margin:10px 0 14px;overflow-wrap:anywhere}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-chosen-detail{font:800 18px/1.4 var(--r2-body);color:#22f2c5;background:#04112a;border:2px solid #243f65;border-radius:12px;padding:14px 18px;overflow-wrap:anywhere}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #chosenCard[data-identity-status=missing]{min-height:170px}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorActions{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;width:min(960px,100%);margin:0;padding:0}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorActions button{display:flex;align-items:center;justify-content:center;gap:20px;flex:1 1 360px;min-height:104px;min-width:0;padding:18px 24px;border:3px solid #ffe34b;border-radius:16px;background:linear-gradient(#ffda25,#ffa51a 65%,#f38a0d);color:#07142d;box-shadow:0 0 0 3px #020916,inset 0 3px #fff3a0,inset 0 -5px #c76a0a}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorActions #safeReturn{border-color:#1bd7fd;background:linear-gradient(#1167b2,#063878 65%,#082653);color:#d8f1ff;box-shadow:0 0 0 3px #020916,inset 0 3px #36bcf5,inset 0 -5px #031a42}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-action-icon{display:block;flex:none;width:52px;height:52px;object-fit:contain;pointer-events:none}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-action-icon.descend{rotate:none;background:none;border-radius:0;box-shadow:none}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-action-copy{display:block;text-align:center;min-width:0}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-action-copy strong{display:block;font:600 27px/1.2 var(--r2-display);overflow-wrap:anywhere}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-action-copy small{display:block;font:800 13px/1.3 var(--r2-body);margin-top:5px}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorActions #safeReturn small{color:#64d5ff}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorActions #floorRescue{flex:1 1 100%;min-height:60px;background:#0b254c;border-color:#315782;color:#e3eeff;box-shadow:inset 0 1px #426792;font:600 20px/1.3 var(--r2-display)}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorActions button:disabled{border-style:dashed;box-shadow:inset 0 0 0 3px #07142d;cursor:default}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorActions button:focus-visible{outline:3px solid #fff49a;outline-offset:6px}
+@media(max-width:1450px),(max-height:820px){
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .floor-choice{padding:24px 0}
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .descent-heading{min-height:140px}
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #clearTitle{font-size:38px}
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorLoot{margin-top:18px;padding:16px;gap:12px 0}
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #chosenCard{margin:32px 0;gap:28px;min-height:230px}
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-chosen-face{width:180px;height:230px;flex-basis:180px}
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorActions button{min-height:92px}
+}
+@media(max-width:760px){
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .floor-choice{width:calc(100% - 32px)}
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #clearTitle{font-size:30px}
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorLoot{grid-template-columns:repeat(2,minmax(160px,1fr))}
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorLoot>div:not(.floor-materials):not(.floor-record-drop){min-width:160px;padding:0 8px}
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #chosenCard{flex-direction:column;gap:28px;text-align:center}
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-equipped-copy{flex:auto}
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorActions{gap:16px}
+}
+@media(prefers-reduced-motion:reduce){body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-chosen-face{rotate:none}}
+.soft-fx #clearBanner.gv-descent-shell.gv-post-choice .post-chosen-face{rotate:none}
+
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-effect-label{display:block;font:800 12px/1.4 var(--r2-body);letter-spacing:.06em;color:#b6cdea;margin-bottom:5px}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-effect-text{display:block}
+
+/* Explicit two-row effect layout; content can grow inside the existing scroll shell. */
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-chosen-detail{display:grid;grid-template-columns:minmax(0,1fr);row-gap:6px;height:auto;max-height:none;white-space:normal}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-effect-label{margin:0;min-width:0;color:#b6cdea}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-effect-text{min-width:0;color:#22f2c5;white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #chosenCard{flex-shrink:0;height:auto;max-height:none}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorActions{flex-shrink:0}
+
+/* Full approved crystal wrappers; no pixel filters, stroke or silhouette changes. */
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorLoot .floor-materials>span{display:flex;align-items:center;flex-direction:row;gap:12px;flex:0 1 220px;min-width:180px}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorLoot .floor-materials>span>img{width:56px;height:62px;flex:none;object-fit:contain;filter:none;border:0;box-shadow:none}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorLoot .floor-materials>span>b{min-width:0;overflow-wrap:anywhere}
+/* Separate stage keeps the light behind the opaque card, including its dark rim. */
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-card-stage{position:relative;isolation:isolate;flex:0 0 200px;width:200px;height:256px;overflow:visible}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-card-stage::before{content:"";position:absolute;inset:-42px;z-index:-1;pointer-events:none;border-radius:50%;background:radial-gradient(ellipse at center,rgba(255,180,73,.7) 0%,rgba(255,146,48,.35) 38%,rgba(255,132,37,0) 72%);opacity:.26;animation:gv-post-warm-light 9s ease-in-out infinite}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-card-stage>.post-chosen-face{width:100%;height:100%}
+@keyframes gv-post-warm-light{0%,100%{opacity:.22}50%{opacity:.34}}
+@media(max-width:1450px),(max-height:820px){
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-card-stage{width:180px;height:230px;flex-basis:180px}
+ body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorLoot .floor-materials>span>img{width:52px;height:58px}
+}
+@media(max-width:760px){body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-card-stage{flex:none}}
+@media(prefers-reduced-motion:reduce){body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-card-stage::before{animation:none;opacity:.26}}
+body.immersive-run.soft-fx #clearBanner.gv-descent-shell.gv-post-choice .post-card-stage::before{animation:none;opacity:.26}
+
+/* Explicit surface for DESCER only. Disabled semantics remain owned by the host. */
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorActions #descend{background-color:#ffbd1b;background-image:linear-gradient(180deg,#ffdf35 0%,#ffb51b 58%,#f28b0c 100%);border-color:#07142d;color:#07142d;opacity:1;filter:none}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorActions #descend:not(:disabled){box-shadow:0 0 0 2px #020916,inset 0 3px #fff3a0,inset 0 -5px #c76a0a}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorActions #descend .post-action-copy{color:#07142d}
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorActions #descend:disabled{border-style:dashed;box-shadow:inset 0 0 0 3px #07142d;cursor:default}
+
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice #floorActions #descend .post-action-copy strong{color:#fff;text-shadow:0 1px 2px #07142d}

@@ -1,0 +1,18 @@
+{
+  "id": "MYSTIC-FIRE01-OFFICIAL-R1",
+  "date": "2026-11-02",
+  "authority": "coordination/boss-evolution/mystic-r1/FIRE01-R4-HUMAN-APPROVAL.json",
+  "scope": "Human-approved Mystic art/domain and fire r4, current official shared-file delta",
+  "files": {
+    "campaign-cave-runtime.js": "8452e017733fb485b7246ab69c96c76dbf0dedec40743babbe10aaf9f2ec6927",
+    "audio.js": "d99842b2368b1d216369d173e75ff6a7f136896aa7bc100587817f58bb2d271d",
+    "world.js": "dc4027b704efb7ada67db327a7e7ea584f08a3777e1f460765bc27edf0b46da8",
+    "run.js": "84f48fac974ee3a4d46851a89a72712d5befaca9d69edde9fe27951a8568bfd6",
+    "mystic-presentation.js": "e1206bae20e21b8607d8553979fae161b0152e16626d6aeb07c8ac00752d1697",
+    "mystic-sfx.js": "c4480ea3bb3770a04f871c2f9592286b773c9aefa470468919f3c825b3507944",
+    "mystic-fire.js": "8fc8e4feac99b087fb75a34878bc1e444db5735606bcd33a67ad66ceeda73cac",
+    "mystic-mechanic.js": "76657ef5da88bc377afb029d1d524d97d5a956e311700d18920372d32167e5d8",
+    "mystic-art.js": "08d79ff8e8d3da126e9b03d098b8b3d9c2ac5f2f1bde50b6562b202cf8632d5c",
+    "core.js": "673f3dbd955b9f894cbc9ef3e9b671fecb2655ce8a6baaec9c8edf747af10a22"
+  }
+}

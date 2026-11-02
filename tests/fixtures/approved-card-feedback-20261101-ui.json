@@ -1,0 +1,11 @@
+{
+  "id": "GV-043/CARDS-P2",
+  "sourceApproval": "../../../coordination/VFX-CARDS-APPLIED-P2-20261101/AUTHORIZATION-BASELINE.json",
+  "composition": "Approved new card UI plus approved VFX callbacks; source rules, layout and PNGs preserved",
+  "files": {
+    "run.js": "c3cd71a4d6a266e024b98dd811edbbef2b361ab494117d744157ab83942e44a4",
+    "approved-expedition-cards-ui.js": "ff72bcaa0f1ce55197b62916388b6f7756542b7c02a0a5c50d906cc254c8a43e",
+    "card-feedback.js": "bce5ae7e96faf85c9a4f8259998b1e6b7bc90b7986a5c7f7cf5883a87ad45ddc",
+    "card-feedback.css": "d9ff926012e26894131a7625031e6ed63238c419e88ec3739d1b625d3de05956"
+  }
+}

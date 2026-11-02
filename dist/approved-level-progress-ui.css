@@ -1,0 +1,14 @@
+@font-face{font-family:GVLevelDisplay;src:url('assets/menu-fonts/Fredoka-600-Static.ttf');font-weight:600}
+@font-face{font-family:GVLevelBody;src:url('assets/menu-fonts/Nunito-600-Static.ttf');font-weight:600}
+#approvedLevelNotice{position:absolute;z-index:14;box-sizing:border-box;pointer-events:none!important}
+#approvedLevelNotice[hidden]{display:none!important}
+#approvedLevelNotice *{box-sizing:border-box;pointer-events:none!important}
+#approvedLevelNotice .gv-level-notice{display:flex;align-items:center;gap:12px;padding:12px;background:linear-gradient(#102a52,#06132b);border:2px solid #26538c;border-radius:13px;box-shadow:0 4px #020816,inset 0 1px #35d6f21a;color:#edf4ff;font-family:GVLevelBody,Nunito,sans-serif;text-shadow:none}
+#approvedLevelNotice img{display:block;width:58px;height:64px;flex:none;object-fit:contain;transform-origin:center}
+#approvedLevelNotice .gv-level-copy{min-width:0;flex:1;display:grid;gap:8px}
+#approvedLevelNotice .gv-level-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px 12px}
+#approvedLevelNotice strong{font:600 24px/1.1 GVLevelDisplay,Fredoka,sans-serif;color:#edf4ff;letter-spacing:0;text-transform:none;overflow-wrap:anywhere}
+#approvedLevelNotice b{font:600 16px/1.15 GVLevelDisplay,Fredoka,sans-serif;color:#35d6f2;overflow-wrap:anywhere}
+#approvedLevelNotice .gv-level-track{height:8px;border-radius:5px;background:#020816;overflow:hidden}
+#approvedLevelNotice .gv-level-track i{display:block;height:100%;background:linear-gradient(90deg,#31d7c5,#35d6f2);border-radius:inherit;transform-origin:left center}
+#approvedLevelNotice small{display:block;text-align:right;font:600 13px/1.15 GVLevelBody,Nunito,sans-serif;color:#bfd0e8;letter-spacing:0;text-transform:none}

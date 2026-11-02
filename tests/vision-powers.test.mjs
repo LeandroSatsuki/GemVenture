@@ -18,8 +18,8 @@ test('abyss exploration rebases with the world and old saves acquire sight witho
  r.room.explored=null;r.room.visible=null;r.materials=[9,8,7,6];const t=E.restoreState(JSON.stringify(s));assert.ok(t.run.room.visible);assert.deepEqual(t.run.materials,[9,8,7,6]);
 });
 test('wings fly over intact rocks and water, expire onto free ground and preserve their timer on reload',()=>{
- const s=arena(),r=s.run;r.player={x:3,y:11};r.room.rocks=Array.from({length:4},(_,i)=>({id:900+i,x:4+i,y:11,type:'rock',kind:0,hp:20,maxHp:20,value:2}));r.room.terrain[11*r.room.cols+4]=1;
- r.frenzy.buffs.wings=4;reveal(r.room,r.player);E.act(s,{type:'dodge',dx:1,dy:0},0);assert.equal(r.player.x,7);assert.ok(r.room.rocks.every(n=>n.hp===20));
+ const s=arena(),r=s.run;r.player={x:20,y:15};r.room.rocks=Array.from({length:4},(_,i)=>({id:900+i,x:21+i,y:15,type:'rock',kind:0,hp:20,maxHp:20,value:2}));r.room.terrain[15*r.room.cols+21]=1;
+ r.frenzy.buffs.wings=4;reveal(r.room,r.player);E.act(s,{type:'dodge',dx:1,dy:0},0);assert.equal(r.player.x,24);assert.ok(r.room.rocks.every(n=>n.hp===20));
  const restored=E.restoreState(JSON.stringify(s));assert.equal(restored.run.frenzy.buffs.wings,4);E.settleFlight(restored.run,5);assert.ok(E.walkable(restored.run.room,restored.run.player.x,restored.run.player.y));assert.equal(restored.run.airborne,false);
 });
 test('golden bubble blocks attacks, but never removes rhythm penalties or outlives the timer',()=>{

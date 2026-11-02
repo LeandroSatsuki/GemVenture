@@ -1,0 +1,15 @@
+{
+  "id": "MICELIAL-OFFICIAL-R1",
+  "approval": "aprovado, pode aplicar no jogo oficial, e vamos para a topeira, gostaria de manter a mesma essencia de habilidade",
+  "source": "MICELIAL-TEST02",
+  "files": {
+    "core.js": "17b538e5af7ce4e2bf940debb72095a298c00d9fd34dfc82c90ef6389a486ab6",
+    "world.js": "828f0ef0fa09ef34128664a5e578a9978460b8cdd10cb86139a0bceda034cd47",
+    "audio.js": "e305c40d6ff63fbcaff994edc7bd29ce5478359db891161d3120fe359ffcb071",
+    "run.js": "a9fb3d4a5cfd6e7e582d3fe6dcb94d10fe027ac0949e0824b5843187994bb151",
+    "micelial-mechanic.js": "1b10e7057ee3bb417768218345abb57661c4a7e9393af68973c0ded964d3eb10",
+    "micelial-art.js": "5e9c25895d3affaf6b209ed330b69dc2a452f827fc0776f54580774eec49895a",
+    "micelial-sfx.js": "7cb2c05ac8386b1526381c6c925f8470929a4810593e9d7325adf5dc32291330",
+    "export-art-studio.mjs": "90dfd3a7624adfa5409fdb76fde4e09e45f1973d3b392b0563949b4283aa2fed"
+  }
+}

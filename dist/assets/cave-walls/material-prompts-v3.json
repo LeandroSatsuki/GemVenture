@@ -1,0 +1,17 @@
+{
+  "revision": 3,
+  "date": "2026-10-14",
+  "tool": "image_gen.imagegen",
+  "status": "implemented; awaiting artistic review",
+  "floorReference": "#353658",
+  "sources": {
+    "style": "E:/assets GemVenture/output/imagegen/walls/parede-pedra-mestre-v02.png",
+    "front": "exec-5363ae86-380f-4052-9341-4dde269fafd2.png",
+    "pillar": "exec-0a2cb9f7-c6cd-44eb-9a41-22330c18f5fa.png",
+    "cap": "stone-cap-dark.png retained from v2"
+  },
+  "prompts": {
+    "front": "Create a production game material for Gemventure, using the supplied approved stone wall only as a shape and finish reference. A very wide rectangular stone wall FRONT material filling the entire opaque image edge to edge. Four rows of large chunky rectangular rock masses with softened chamfered corners and broad matte bevel faces. Only 4 or 5 stones across each row, staggered broad joints. All four courses have the same height. Almost front-on orthographic elevation, no skyline, no visible outer side face, no floor or border around the whole image. The game supplies the projection and silhouette. Sharply defined large geometric planes, smooth antialiasing but no blur, no noise, no little cracks, no particles. Dark desaturated purple slate, principal faces close to #353658, restrained bevel around #4b4d67, recess #23213d. Low contrast suitable next to the floor #353658. A left-upper lighting convention. Horizontally tileable: at both left and right outermost boundaries put the SAME straight dark vertical mortar seam, no half stones or decorative outline; the regular course boundaries align on both edges. No top/bottom periodic blending needed, the whole image will cover the wall height once. No gradient across the overall image, no varying light between ends. No text. Raster game art, matching the approved softened geometric blocks, not photorealistic masonry.\n",
+    "pillar": "Edit the supplied timber post for Gemventure. Preserve the straight tall structural silhouette, but remove the overhanging T beam and the two diagonal braces entirely. Instead a short squared slightly wider timber joint collar at the very top, only 1.15 times the shaft width. This is an embedded vertical wall-junction timber, not a free-standing sign or decorative pole. Dark desaturated brown wood, base near #51382f, shaded side #342734, subtle broad bevel #725242, deep purple outline #180d2f. About half the brightness of the previous gold wood. Very simple geometric softened rectangle, straight vertical sides and flat foot, near-frontal elevated orthographic view with a narrow right face. A small box lantern fixed to upper third, dark muted iron casing and a small amber pane (#d8a15d), no bright white or yellow hotspot, NO glow in empty space. One dark iron bottom collar. Complete object isolated on true transparent background, no glow halo, no floor, no shadow outside the silhouette, no lettering. Match the softened cuboid geometry and restrained matte finish of the supplied blue slime; do not use blue colors or crystal.\n"
+  }
+}

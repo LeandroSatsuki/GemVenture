@@ -1,0 +1,3 @@
+@layer ui-layout-r2 {
+body.hud-v5 #stage #hud5Root [data-hud-layout-hidden=true],body.hud-v5 #stage #hud5Root [data-hud-layout-hidden=true] *{visibility:hidden!important;pointer-events:none!important}
+}

@@ -1,0 +1,9 @@
+{
+  "scope": "Equal floor and reward panel widths; larger reward art while keeping floor navigation sizes",
+  "humanAuthorization": "Direct user request in this chat on 30 October 2026",
+  "humanVisualApproval": false,
+  "integrationReceipt": "coordination/UI-CORRECTIONS-20261029/r6/INTEGRATION.json",
+  "files": {
+    "ui-consistency.css": "a964d15e4119a93df4071a14bb240bca0042fadc76960c768cdd9848fe64bfef"
+  }
+}

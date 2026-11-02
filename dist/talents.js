@@ -1,10 +1,10 @@
 import {P} from './palette.js';
 
 export const TALENT_SECTORS=[
- {name:'CADÊNCIA',color:P.cyan,icon:'ear',skills:['ear','breath','dash','guard','flow'],effects:['timing','breath','rhythmGuard']},
+ {name:'CADÊNCIA',color:P.cyan,icon:'ear',skills:['ear','breath','dash','guard','flow','breath-encore'],effects:['timing','breath','rhythmGuard']},
  {name:'FRENESI',color:P.pink,icon:'fury',skills:['force','shatter','stun','chain','fury'],effects:['critical','criticalPower','lowLifePower']},
  {name:'RESSONÂNCIA',color:P.orange,icon:'echo',skills:['echo','thunder','bossbane'],effects:['procPower','burnPower','bossPower']},
- {name:'VIGÍLIA',color:P.yellow,icon:'guard',skills:['revive','starter','renewal'],effects:['potion','lowLifeGuard','shield']},
+ {name:'VIGÍLIA',color:P.yellow,icon:'guard',skills:['revive','starter','renewal','prism-shelter'],effects:['potion','lowLifeGuard','shield']},
  {name:'LAPIDAÇÃO',color:P.lime,icon:'gem',skills:['fortune','gemcraft','geologist','caravan'],effects:['rareYield','focusYield','salvage']},
  {name:'SIMBIOSE',color:P.blue,icon:'seed',skills:['harvest','seed','symbiosis','hunter','questluck'],effects:['killHeal','xp','vision']}
 ];

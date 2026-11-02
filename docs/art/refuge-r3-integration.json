@@ -1,0 +1,173 @@
+{
+  "id": "refuge-r3-approved",
+  "geometryRevision": 3,
+  "approval": {
+    "humanSource": "Coordenadora de Equipe Marcia / turn01a13d5a-b64d-77c2-a35a-07556307cc13",
+    "scope": [
+      "GV008 projected island shape, exposure and layout",
+      "GV028 walking/dash and arrival-gated station visits",
+      "GV030 initial copper statue"
+    ]
+  },
+  "projection": {
+    "origin": [
+      500,
+      85
+    ],
+    "u": [
+      20,
+      10
+    ],
+    "v": [
+      -20,
+      10
+    ],
+    "worldScale": 2
+  },
+  "statue": {
+    "file": "dist/assets/refuge-v1/v3-statue-copper.png",
+    "sha256": "5a33d6380355f1b60c7dad060ef1129dfe22ebe8cbf7a6a5fa1a3c3ad6a0db31",
+    "sourceSize": [
+      1055,
+      1491
+    ],
+    "bounds": [
+      95,
+      224,
+      946,
+      1393
+    ],
+    "groundAnchor": [
+      565,
+      1392
+    ],
+    "feetAnchor": [
+      600,
+      1217
+    ],
+    "localAnchor": [
+      520,
+      350
+    ],
+    "uniformScale": 0.08695652173913043,
+    "ownPedestal": true,
+    "secondPlatform": false
+  },
+  "approvedFiles": [
+    {
+      "file": "dist/refuge-art.js",
+      "sha256": "58fa00c6fc4f26134f7c9d4080575d76f60594b01cee717b126135e07f20b378"
+    },
+    {
+      "file": "dist/refuge-picking.js",
+      "sha256": "7a0077d51b7ef3e908482b7bc59b9abfb52b96f4651497a33e8eaa9125d50000"
+    },
+    {
+      "file": "dist/flow-village.js",
+      "sha256": "e062dedb213e848f1a8a4454c235b5500508f0bbac500764a15f230dd0f75b56"
+    },
+    {
+      "file": "dist/refuge-scene.js",
+      "sha256": "54545f7d106c0621fe029fa747573e857e91befe936fe608843d91be67267817"
+    },
+    {
+      "file": "dist/refuge-terrain.js",
+      "sha256": "14f2778c955b58ce93bf45ff5711115592b9febf89f451e08308d0879a69201e"
+    },
+    {
+      "file": "dist/refuge-art-manifest.js",
+      "sha256": "b54e101c94a99f67af8de8bc3f9bba86113e90bb3dd61b6373fd48325350ba02"
+    },
+    {
+      "file": "dist/assets/refuge-v1/v3-statue-copper.png",
+      "sha256": "5a33d6380355f1b60c7dad060ef1129dfe22ebe8cbf7a6a5fa1a3c3ad6a0db31"
+    },
+    {
+      "file": "dist/refuge-runtime.js",
+      "sha256": "8608f293ee49de4f44ecbd26b40745f3bf2270315edb7d878895d4f549eddfe3"
+    },
+    {
+      "file": "dist/geometry-adapter.js",
+      "sha256": "ca3c1bb53cf08159a27f1d99e47f6fc65b6d93fb8903064b646de036d06a19e5"
+    },
+    {
+      "file": "dist/refuge-navigation.js",
+      "sha256": "b7f97630dc663939498726dd37ac799ca57a8378eab9d8c48ead0f77dc6019b2"
+    },
+    {
+      "file": "dist/refuge-movement.js",
+      "sha256": "e4351d6d8dfce5e38aa705f09e01c221d1075a92105b791c6859a2c73e724288"
+    },
+    {
+      "file": "dist/world.js",
+      "sha256": "c82f7f06d2d9ffed9242bac4690b25442b4158bee49dc7e03a4090ee9673081e"
+    },
+    {
+      "file": "dist/run.js",
+      "sha256": "f465c6983085505d2da1f521c049d414361ceab9318126a5e74cf5c0d66ddc1f"
+    },
+    {
+      "file": "dist/refuge-layout.css",
+      "sha256": "61d20e103e3058b06056323873962a167789ad1834fe0b908a5dfc40f7b6ce48"
+    },
+    {
+      "file": "export-art-studio.mjs",
+      "sha256": "0243176829194af167fa24444bba412203f15bef984309d3f8d64ea55ccd2b23"
+    },
+    {
+      "file": "tests/refuge-terrain.test.mjs",
+      "sha256": "95bb3b7f55ff577f5f09136287e14c2b650a9d7326f45d33a278d90b9dbe198d"
+    },
+    {
+      "file": "tests/refuge-layout.test.mjs",
+      "sha256": "5e48aee5b377eaa887a801bd501a2aa1db61b15595c7d53bef50d3244119ee3f"
+    },
+    {
+      "file": "tests/refuge-loading.test.mjs",
+      "sha256": "4b32329fc2845a4d592628ebd124f73eceb39e64a8906fa4b4c633df024bd691"
+    },
+    {
+      "file": "tests/world-composition.test.mjs",
+      "sha256": "b8d1aab09fc1d88bb5ac307210f7e5396b7ff319a17883030cf2adaa6775de14"
+    },
+    {
+      "file": "tests/fixtures/refuge-r3-cave-motion.json",
+      "sha256": "427658243a7787fabcba3de934cb4a21284ac90324ab33ed6cb225c402cd48a7"
+    },
+    {
+      "file": "tests/refuge-navigation.test.mjs",
+      "sha256": "fc1b467e5f9aca089f6f7312b3a62232831a8ba8a0a3d27e7801c43a498a4ebd"
+    },
+    {
+      "file": "tests/refuge-picking.test.mjs",
+      "sha256": "a25e1e58e57497070252a399200e117f5d92eb66ce17e223966926e0bd22ec7d"
+    }
+  ],
+  "preservation": {
+    "dist/core.js": "9b0afc6f21a48e38a9fad7022ac825f9ab4c86c1ef65d01a5598702a8b07f650",
+    "dist/miner.js": "b5579094f577c6c8a39c56b64b8758f7637d3c5a99a2af67c5f00d7a3adba261",
+    "dist/talents.js": "2dc7c1acc8e7506a1d14b3a2bdbc5054d952952e43a73061fe5a480ba5b2ac73",
+    "dist/gear.js": "8018188decb9d12af9cbfb05df4929d6a40b0e7f723f3283e7e5b58a203f7641",
+    "dist/forge.js": "831b7ed2a11f708b19c481945cb2339307c294893547629cfc74f0d3ea0ded49",
+    "dist/score.js": "f97b029438fce47ba19616927b22394401d84490305f1f8ebd8277c5fe7de868",
+    "dist/records.js": "212db3f2a4fe7e59ff2979852950f43cd461f0229b27ea2a3f979174f77a55a5",
+    "dist/expedition-map.js": "fabca119af55e88f5edc3f7cd5f46b6ce768171da7f3eab9c83f31ede051b90a",
+    "dist/ui-art.js": "b037490dbc680fcddcad96a1a2793d6a0b490a3549b8957435c5a939174831b7",
+    "dist/world-finish.js": "65e0a9aa31672ae41074d1ba167af1d8575d77c84f8d9f10b4d90a9221ca7f33",
+    "dist/crisp-layer.js": "8e13613acf80690a2004f3a4ff609bd2f0b97c6304c1d8f01f86fb4f4e8b95a8",
+    "dist/refuge-effects.js": "6631ac880e7032b2dd7174410b9a980ea75f6343374887fdc4ddf409a2c7858b",
+    "dist/refuge-local-fx.js": "5f00fb52d747097949cd9272ef261b07d0daff63e4541d768a6268512f06336e",
+    "dist/refuge-volumes.js": "1d439d4359dccc50102bb839b95b2e08235b6158ba3d7fa3a5db6b09f423442a"
+  },
+  "pending": [
+    "stone route connection refinements",
+    "platform material/palette A/B",
+    "GV009 replacement crystal tree",
+    "GV010-012 frame water",
+    "GV029 yellow outline",
+    "new idle cycles",
+    "GV031/032 score and statue tier celebration",
+    "global CRT/type/theme and unrelated glyph changes"
+  ],
+  "saves": "No QA initialization, fixture, economy or save schema changes are part of this release."
+}

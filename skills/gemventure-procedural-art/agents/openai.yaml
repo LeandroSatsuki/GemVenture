@@ -1,4 +1,4 @@
 interface:
   display_name: "Gemventure · Arte procedural"
-  short_description: "Silhuetas, cenários e animação na identidade HEPT32"
-  default_prompt: "Use $gemventure-procedural-art para criar e validar assets coerentes com o Gemventure."
+  short_description: "Cavernas, tiles e arte procedural do GemVenture"
+  default_prompt: "Use $gemventure-procedural-art para avaliar ou criar cavernas, tiles e assets coerentes com a câmera, a mecânica e o bioma do GemVenture."

@@ -1,0 +1,10 @@
+{
+  "id": "LIQUID-AMBIENCE-OFFICIAL-20261101-R1",
+  "authorization": "Direct human request: incandescent neon liquids; magical water, hot lava and particles above liquid surfaces.",
+  "receipt": "E:/Genventure/coordination/liquid-ambience-official-20261101-r1/APPLIED.json",
+  "scope": "Native visible water and lava only; base palette and terrain mechanics unchanged",
+  "files": {
+    "geode-ambience.js": "d0b67929eebb30e66cbd2264d6ae82dee570476566ac27afde1d8ead4503f46c",
+    "liquid-ambience.js": "f37c3bfda1855ccd292450098986b934b441d75bc8ee4cc80c00321a172638e1"
+  }
+}

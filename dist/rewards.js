@@ -1,5 +1,5 @@
 import {MATERIALS} from './materials.js';
-export function createLoot(){return{crystals:Array.from({length:4},()=>({count:0,gems:0})),rocks:{count:0,gems:0},enemies:{count:0,gems:0},essence:0};}
+export function createLoot(){return{crystals:Array.from({length:4},()=>({count:0,gems:0})),rocks:{count:0,gems:0},enemies:{count:0,gems:0}};}
 const amount=n=>Number.isFinite(n)?Math.max(0,Math.floor(n)):0;
 // Saved gem rewards are distributed without losing fractions or crediting twice.
 export function returnRewards(loot,bag,kept,materials=null){
@@ -12,6 +12,5 @@ export function returnRewards(loot,bag,kept,materials=null){
  for(const g of groups){const share=total?saved*g.gross/total:0;g.value=Math.floor(share);g.remainder=share-g.value;allocated+=g.value;}
  const ranked=[...groups].sort((a,b)=>b.remainder-a.remainder);for(let i=0;i<saved-allocated;i++)ranked[i%ranked.length].value++;
  const result=groups.filter(g=>g.gross>0).map(({remainder,...g})=>g);
- if(amount(loot?.essence))result.push({id:'essence',name:'Essências',art:'crystal',kind:1,count:amount(loot.essence),value:amount(loot.essence),destination:'essence'});
  return result.length?result:[{id:'empty',name:'Gemas salvas',art:'crystal',kind:0,count:0,value:0,destination:'bank'}];
 }

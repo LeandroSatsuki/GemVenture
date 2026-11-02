@@ -12,11 +12,11 @@ test('tonics and healing skills still restore health inside a floor',()=>{
  s.equipped=['breath'];s.run.rhythm=70;s.run.combo=7;s.run.room.rocks=[];E.act(s,{type:'move',x:2,y:11},1);assert.equal(s.run.health,45);assert.equal(s.run.rhythm,75);
 });
 test('floor summary shows only that floor and never pays rewards a second time',()=>{
- const s=cleared();s.run.bag=80;s.run.loot.essence=1;s.run.score.points=321;s.run.score.earned=1;
- assert.deepEqual(E.floorRewards(s),{gems:80,essence:1,points:321,stars:1});
- E.chooseCard(s,'muscle');E.descend(s);assert.deepEqual(E.floorRewards(s),{gems:0,essence:0,points:0,stars:0});
- s.run.bag+=25;s.run.loot.essence++;s.run.score.points+=51;const before=s.bank;
- const restored=E.restoreState(JSON.stringify(s));assert.deepEqual(E.floorRewards(restored),{gems:25,essence:1,points:51,stars:0});E.floorRewards(s);assert.equal(s.bank,before);
+ const s=cleared();s.run.bag=80;s.run.loot.essence=1;s.run.score.points=321;s.run.score.totalPoints=321;s.run.score.earned=1;
+ assert.deepEqual(E.floorRewards(s),{gems:80,points:321,stars:1});
+ E.chooseCard(s,'muscle');E.descend(s);assert.deepEqual(E.floorRewards(s),{gems:0,points:0,stars:0});
+ s.run.bag+=25;s.run.loot.essence++;s.run.score.points+=51;s.run.score.totalPoints+=51;const before=s.bank;
+ const restored=E.restoreState(JSON.stringify(s));assert.deepEqual(E.floorRewards(restored),{gems:25,points:51,stars:0});E.floorRewards(s);assert.equal(s.bank,before);
  delete s.run.room.floorStart;assert.equal(E.floorRewards(s),null);
 });
 test('held mining input must be released and quiet before choices become available',()=>{

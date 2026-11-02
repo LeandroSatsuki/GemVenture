@@ -1,0 +1,13 @@
+{
+  "id": "GEODE-AMBIENCE-OFFICIAL-20261101-R1",
+  "authorization": "Human approved R4 tuning values and explicit apply to real game; subsequent faint particle emission using same neon control.",
+  "receipt": "E:/Genventure/coordination/geode-ambience-official-20261101-r1/APPLIED.json",
+  "scope": "Geode arena lighting and faint emission; base palette is unchanged",
+  "files": {
+    "world.js": "4cb7cf0d0420021cb7cbe294e300b7023c5d5acfc5dcd73f4162b6dcd57def98",
+    "geode-ambience.js": "fb0235535668a674716646e057d44e9f60c3736063f38ceb889651d80fa92813",
+    "geode-lighting-runtime.js": "ed7735c037e1d00b84bca48a9e2134d493f867ab7f3614994d6f67377231accc",
+    "geode-particle-light.js": "a4809b172e722b8fafb0d869cba7f820e17fea87744b9afafeef16890264449c",
+    "video-preferences.js": "6e298b008fceb452d6b6d4a1cb194d837de5fa81cdb471daacbe86568b16cfb1"
+  }
+}

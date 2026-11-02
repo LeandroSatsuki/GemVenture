@@ -48,11 +48,11 @@ test('shared actions advance relevant contracts in both modes; clocks pause at d
 test('each delivery pays only its contract once and rerolls without collecting other completed missions',()=>{
  const s=roster();for(const m of Q.missionList(s)){m.progress=m.goal;m.status='ready';}
  const ids=Q.missionList(s).map(m=>m.id),before=Q.missionOffers(s);E.startRun(s);assert.equal(Q.claimMission(s,ids[2]),false);E.finishRun(s);
- const bank=s.bank,essence=s.essence;assert.ok(Q.claimMission(s,ids[2]));assert.equal(s.bank,bank+200);assert.equal(s.essence,essence+1);assert.equal(s.missionsCompleted,1);
+ const bank=s.bank,essence=s.essence;assert.ok(Q.claimMission(s,ids[2]));assert.equal(s.bank,bank+200);assert.ok(!('essence' in s));assert.equal(s.missionsCompleted,1);
  assert.equal(Q.missionList(s).length,4);assert.ok(Q.missionList(s).every(m=>m.status==='ready'));assert.notDeepEqual(Q.missionOffers(s),before);
  assert.equal(Q.claimMission(s,ids[2]),false);const t=E.restoreState(JSON.stringify(s));assert.ok(t);assert.equal(Q.claimMission(t,ids[2]),false);
  for(const id of ids.filter(id=>id!==ids[2]))assert.ok(Q.claimMission(t,id));
- assert.equal(t.bank,bank+1000);assert.equal(t.essence,essence+5);assert.equal(t.missionsCompleted,5);assert.equal(t.mission,null);assert.deepEqual(t.extraMissions,[]);
+ assert.equal(t.bank,bank+1000);assert.ok(!('essence' in t));assert.equal(t.missionsCompleted,5);assert.equal(t.mission,null);assert.deepEqual(t.extraMissions,[]);
 });
 
 test('expired contracts free capacity, deadlines are independent and removing a contract preserves the others',()=>{

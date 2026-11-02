@@ -1,0 +1,4 @@
+interface:
+  display_name: "GemVenture — VFX nítidos e implementação"
+  short_description: "Resolução final, partículas, ritmo e execução de VFX"
+  default_prompt: "Use $gemventure-vfx-implementation para diagnosticar a perda de nitidez dos efeitos e preparar um piloto isolado na resolução do GemVenture."

@@ -1,0 +1,11 @@
+{
+  "scope": "Count recorded unique floor completions; restore lower exploration, larger centered consumables and uncropped rhythm HUD",
+  "humanAuthorization": "Direct requests in this chat on 29/30 October 2026",
+  "humanVisualApproval": false,
+  "integrationReceipt": "coordination/UI-CORRECTIONS-20261029/r4/INTEGRATION.json",
+  "files": {
+    "expedition-map.js": "7f2385316b270bdec156e3f76f2202b67c8270eb9f0b1e717f4e67e9becf6734",
+    "expedition-hud-view.js": "f79943a9b7d517a4f6698c910cb6c6488053b281d1086bcfb6f6e4e303033306",
+    "ui-consistency.css": "5e41cc4a9ab3fb358faae5738d78ef60705f035f4693122ad72997f82fcc5685"
+  }
+}

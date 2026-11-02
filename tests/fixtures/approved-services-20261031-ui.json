@@ -1,0 +1,15 @@
+{
+  "authorization": "Human approval 2026-10-31 in UI chat: apply Forja v6 and \u00c1rvore v9; palette is extracted from those approved proposals",
+  "scope": "Only Forge and Echo Tree; historical palette and other menu consumers untouched",
+  "files": {
+    "approved-services-shell.css": "1c9be3f6daffe5c181943ebd9bfb50360be1d75420f2cd01cb4e8b8294bc8986",
+    "approved-services.css": "e2398e96e54918852e3b685e804707b13eba1312538b47650a593cf67d3eab7d",
+    "approved-tree-ui.js": "84a7c010d6f8c15bf5f461ae821dee97735f85ee307b9b2ae7bd6bcddd539265",
+    "approved-forge-ui.css": "a0d787df14f46709ea2d6a8cebc40030fbc330d2a35db8c17c03acfbdbaa8716",
+    "approved-forge-ui.js": "3c5030f2a0a4084944fdf7c87eb1fb626d3ac135675d527c333cad4190dcc93c",
+    "core.js": "9b80b67e03fcf636f0561bf11f9adddb1886c417cfa970f13de7ffa9b071cac5",
+    "forge.js": "b5322817357da93cd195c4d4cd6e05b19dff3d37035f8a6b74c68c91d49ceaa0",
+    "run.js": "216731b5c9ed707b03fe1137b801b6d5197265c31bf707da3950c00ecc538f52",
+    "index.html": "407683a5b6f91c4eabd061927f62a0738795160741b17a324b8dddbc6a1c57de"
+  }
+}

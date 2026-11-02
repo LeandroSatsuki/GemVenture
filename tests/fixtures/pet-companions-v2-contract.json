@@ -1,0 +1,20 @@
+{
+  "authorization": "User: ok, prepare no game oficial. Visual integration of approved procedural pets v2; existing ownership, effects and saves retained. Eight new companions are read-only preparations pending gameplay activation scope.",
+  "baselineCommit": "104e0140d923532a6477cc34120881eb9c6f58c3",
+  "files": {
+    "pet-art-catalog.js": "f5f34609c3a88bc25a08d06a2b18c88bb31cdf2c82b73854adc5c4fea16ce436",
+    "pet-art-runtime.js": "7da1147ec6c99d972197940834850ca2a2a90448447303a4a9f0f2dad5163543",
+    "pet-companions.css": "77b1b3574587bddf58cda2386be89790a5da91ee6c22838e6abd6e8cd1ac0302",
+    "lobby-pets.js": "73bf310896eead2ca94f7090b829c4cd7a5a4d9b35db3b822adcb23ab0c5d651",
+    "pet-follower.js": "7d8d015a8aae07fdc1dd1165ba2ae3bbef80e4d462a884791d5d4f2ec9fbb1bb",
+    "pet-follower-art.js": "c9ff99ab4870bc73ab4d88ee55b63e6d3e6726c7db2d57996a236033a583ec62",
+    "pets-view.js": "6109e4637ac89d56e97ff9fae93db981de209018ad29af542dca1e22b8726d31",
+    "pets-service.js": "af9e48d392ec4316cacc01a470b93294d7f75f27a05a3145c63f7170c28963eb",
+    "pets-details.js": "f9f0834b4f1abaade445963155e46bd90f43dd14061d68f2b4278b16e88cef33",
+    "pet-preparation.js": "a5067d90dfb3273bff7f6fd3d779a60893da36372c5be38f3cfe0a8378a63435",
+    "home-collection.js": "5f7d0feb5a25f83984bff7f137f255e18fd5db9cfb17192951574af8b2b7fe5f",
+    "refuge-lobby.js": "8398546388a2f91fdeba7a421a7452e5e8e903a700a9c9b4c3463fa6a68bcd13",
+    "run.js": "699c92190db4fbdebadaf5fc43d0ebcd590b4a2d52d1184a32668c602ff15fe5",
+    "index.html": "f931e217e297f40c16f5cc7ec349d04c2ef0fb9006faf12b7634b72882fa045c"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "STAIR-DESCENT-VISUAL-20261101-R2",
+  "authority": "Pedido humano direto: abrir novamente e conferir visualmente escada e avisos, preservar identidade e pouco texto.",
+  "files": {
+    "cave-descent-hud.css": "5d17c9cd275271d0507efc790e1dbe2fa0a96a5562b9428447d0368108e8e5b0",
+    "cave-descent.js": "246951d02a25d3488b35ee712487e0f1964dfabb73b717871e238a2bfaa015b0",
+    "run.js": "f54601d0c87e1f199425fa591e65ec9861ade4403b5f7ee9ee368fc01e5ad8b1"
+  }
+}

@@ -1,0 +1,143 @@
+/* TREE-ECOS-PLAN-01: isolated presentation delta, not a replacement stylesheet.
+   Load after current rebrand-tree.css only in this candidate.
+   Structure in progress; raster/markup/physical review remain pending. */
+#dialog.gv-r2[data-r2-screen=tree] {
+  --tree-ink: #02091e;
+  --tree-panel: #071734;
+  --tree-inset: #08112b;
+  --tree-edge: #168bed;
+  --tree-text: #f8f9ff;
+  width: calc(100vw - 16px);
+  max-width: 1518px;
+  height: calc(100dvh - 54px);
+  max-height: 970px;
+  border: 3px solid var(--tree-ink);
+  border-radius: 16px;
+  background: var(--tree-panel);
+  box-shadow: inset 0 0 0 2px var(--tree-edge), 0 0 0 1px var(--tree-edge);
+  color: var(--tree-text);
+}
+#dialog.gv-r2[data-r2-screen=tree] .dialog-top {
+  min-height: 74px;
+  padding: 8px 12px 8px 162px;
+  background: linear-gradient(100deg,#08275b,#04102d);
+  border-bottom: 2px solid #16477a;
+}
+#dialog.gv-r2[data-r2-screen=tree] #dialogLabel {
+  font-size: 44px;
+  color: var(--tree-text);
+  text-shadow: -2px 0 var(--tree-ink),2px 0 var(--tree-ink),0 2px var(--tree-ink),0 -2px var(--tree-ink);
+}
+#dialog.gv-r2[data-r2-screen=tree] #close { width:60px; min-width:60px; height:60px; }
+#dialog.gv-r2[data-r2-screen=tree] #dialogBody {
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  padding:12px 16px 14px;
+  min-height:0;
+  overflow:auto;
+}
+/* Points remain in normal flow until header markup is reconciled. */
+#dialog.gv-r2[data-r2-screen=tree] .web-top {
+  flex:none; margin:0; padding:8px 14px; justify-content:flex-end;
+  background:var(--tree-inset); border:1px solid #194a85;
+}
+#dialog.gv-r2[data-r2-screen=tree] .web-sectors {
+  flex:none; grid-template-columns:repeat(6,minmax(0,1fr)); gap:8px; margin:0;
+}
+#dialog.gv-r2[data-r2-screen=tree] .web-sectors button {
+  min-height:60px; padding:8px; gap:12px; font-size:18px;
+  background:linear-gradient(#05102c,#020b23);
+  border:2px solid #125a99; color:var(--tree-text);
+}
+#dialog.gv-r2[data-r2-screen=tree] .web-sectors button[aria-pressed=true] {
+  background:linear-gradient(#51e4ff,#15ceef); border-color:#8ff4ff; color:#041333;
+  box-shadow:0 0 0 2px #061029,0 0 0 4px #168bed;
+}
+#dialog.gv-r2[data-r2-screen=tree] .web-sectors svg {width:34px;height:34px;flex:none;}
+#dialog.gv-r2[data-r2-screen=tree] .web-layout {
+  flex:1; min-height:440px; grid-template-columns:minmax(0,1fr) 388px;
+  gap:14px; align-items:stretch;
+}
+#dialog.gv-r2[data-r2-screen=tree] .web-map-wrap {
+  height:auto; min-height:440px; flex-direction:column; position:relative;
+  border:3px solid var(--tree-ink); border-radius:16px;
+  background:var(--tree-inset); box-shadow:inset 0 0 0 2px #1b3977;
+}
+#dialog.gv-r2[data-r2-screen=tree] .web-tools {
+  align-self:flex-start; gap:8px; padding:14px; background:transparent;
+}
+#dialog.gv-r2[data-r2-screen=tree] .web-tools button {min-width:56px;min-height:56px;}
+#dialog.gv-r2[data-r2-screen=tree] #webCenter {min-width:132px;}
+#dialog.gv-r2[data-r2-screen=tree] .web-tools details {flex:1 1 100%;}
+#dialog.gv-r2[data-r2-screen=tree] .web-viewport {min-height:240px;}
+/* No decorative background substituted for the pending cave artwork. */
+#dialog.gv-r2[data-r2-screen=tree] .web-canvas {background:var(--tree-inset);}
+#dialog.gv-r2[data-r2-screen=tree] .web-map-legend {
+  flex:none; align-self:flex-start; margin:8px; padding:10px 12px; gap:22px;
+  border:1px solid #365da1; border-radius:9px; background:#020b23; color:#71c4ff;
+}
+#dialog.gv-r2[data-r2-screen=tree] .web-sidebar {
+  min-height:0; overflow:auto; padding:18px;
+  border:3px solid var(--tree-ink); border-radius:16px;
+  background:var(--tree-panel); box-shadow:inset 0 0 0 2px #1c4480;
+}
+#dialog.gv-r2[data-r2-screen=tree] .web-detail-icon {width:80px;height:84px;flex:none;}
+#dialog.gv-r2[data-r2-screen=tree] .web-next {
+  background:#051739; border:2px solid #194b91; border-radius:8px;
+}
+#dialog.gv-r2[data-r2-screen=tree] #webBuy {
+  width:100%; min-height:54px; margin-top:10px;
+  background:linear-gradient(#ff9608,#ff6500); color:#fff;
+  border:3px solid #03091d; box-shadow:inset 0 2px #ffc83b;
+  text-shadow:-1px 0 #03091d,1px 0 #03091d,0 2px #03091d;
+}
+#dialog.gv-r2[data-r2-screen=tree] #webBuy:disabled {filter:saturate(.35);opacity:.75;}
+
+/* Selection is a separate layer from ownership, maximum rank and equipment.
+   Border/background/badges belonging to those states remain in the baseline. */
+#dialog.gv-r2[data-r2-screen=tree] .web-node:is(.selected,[aria-pressed=true]) {
+  outline:3px solid var(--sector);
+  outline-offset:10px;
+  box-shadow:0 0 14px 3px color-mix(in srgb,var(--sector) 50%,transparent);
+  z-index:2;
+}
+#dialog.gv-r2[data-r2-screen=tree] .web-node:is(.selected,[aria-pressed=true]) svg {
+  color:var(--sector);
+  filter:drop-shadow(0 0 3px currentColor);
+}
+#dialog.gv-r2[data-r2-screen=tree] .web-node.owned:is(.selected,[aria-pressed=true]) svg {
+  /* Dark keyline retains the sector-colored glyph over its owned fill. */
+  filter:drop-shadow(1px 0 #02091e) drop-shadow(-1px 0 #02091e) drop-shadow(0 1px #02091e) drop-shadow(0 -1px #02091e) drop-shadow(0 0 3px currentColor);
+}
+#dialog.gv-r2[data-r2-screen=tree] .web-node.maxed:is(.selected,[aria-pressed=true]) {
+  box-shadow:0 0 0 2px var(--r2-ink),0 0 14px 3px color-mix(in srgb,var(--sector) 50%,transparent);
+}
+#dialog.gv-r2[data-r2-screen=tree] .web-node:focus-visible {
+  outline:3px dashed #fff;
+  outline-offset:16px;
+  z-index:3;
+}
+#dialog.gv-r2[data-r2-screen=tree] .web-node:is(.selected,[aria-pressed=true]):focus-visible {
+  /* Focus uses the outline; selection keeps a separate colored ring. */
+  box-shadow:0 0 0 10px var(--tree-inset),0 0 0 13px var(--sector),0 0 17px 13px color-mix(in srgb,var(--sector) 25%,transparent);
+}
+#dialog.gv-r2[data-r2-screen=tree] #webDetail .web-detail-icon {
+  color:var(--tree-selection-color,currentColor);
+  border:2px solid var(--tree-selection-color,#214988);
+  border-radius:12px; padding:12px; box-sizing:border-box;
+  box-shadow:0 0 8px color-mix(in srgb,var(--tree-selection-color,#214988) 30%,transparent);
+}
+#dialog.gv-r2[data-r2-screen=tree] #webDetail :is(.web-kicker,.web-rank) {color:var(--tree-selection-color,#37ddff);}
+@media(max-width:1400px) {
+  #dialog.gv-r2[data-r2-screen=tree] .web-layout {grid-template-columns:minmax(0,1fr) 344px;}
+  #dialog.gv-r2[data-r2-screen=tree] #dialogLabel {font-size:36px;}
+  #dialog.gv-r2[data-r2-screen=tree] .web-sectors button {font-size:16px;gap:8px;}
+}
+@media(max-width:900px) {
+  #dialog.gv-r2[data-r2-screen=tree] .dialog-top {padding-left:16px;}
+  #dialog.gv-r2[data-r2-screen=tree] .web-sectors {grid-template-columns:repeat(3,minmax(0,1fr));}
+  #dialog.gv-r2[data-r2-screen=tree] .web-layout {display:flex;flex-direction:column;}
+  #dialog.gv-r2[data-r2-screen=tree] .web-map-wrap {height:480px;flex:none;}
+  #dialog.gv-r2[data-r2-screen=tree] .web-sidebar {overflow:visible;}
+}

@@ -1,0 +1,21 @@
+{
+  "authorization": "User explicitly approved integrating all ten pets: art, idles, abilities and unlock requirements, and correcting feet placement on collection pedestals. Existing ownership retained.",
+  "phase": "art-v2/gameplay-v1",
+  "files": {
+    "core.js": "2e6dbe5602eff6661985bfb1a90fdacb053dac46490d951a97901f77fd70c5c5",
+    "home-collection.js": "c8b96106ce8f3bd9d7d35098f4b2537725245a2da9cde21f784e06996d5e5201",
+    "pet-bonds.js": "77a656c34c6454db2ae98d88646c329fdb2fab3d62459a082d620b273725db8f",
+    "pet-powers.js": "eb975cb50f0ae19935e509bdd3f7c88a926b35e882a2420ccbf27f3cd34681ed",
+    "pet-companion-roster.js": "fa2daf7182d9b346be99beaebf95e78ce1dbdbc0ce5e4e7655a98efd87f3f559",
+    "pets-service.js": "3ba1f389a5c5ec2f3e2978d1ee59e0b6198856c5da582e2732a240dc7255f7e8",
+    "pets-details.js": "84305052b36a890e11f8187523620bfb550e59388750730a435d3c456c91df20",
+    "pet-art-runtime.js": "fc7fdbba5909d79b921e03556aa701f57659216342536821748f7b743a8c8af6",
+    "pets-view.js": "42034bc5236901c94ae2659153d355093e207d6276adb08f0064e9dba4561f7d",
+    "pet-companions.css": "aee5725a059b4f216a6854f299bf6af8a90c7a87efe096aeb0adf3d19f93e9ed",
+    "cavern.js": "cf91e86d7a25d79b2c1e34555a2c881ee9491b99b531d52d1009bd2576c405b9",
+    "frenzy.js": "3494209cd89de6093f0c763bd180ebe585acfada8170263fe3ff0e48c6806931",
+    "missions.js": "e7f3f008e789b9dd68e41f786d4c5c89bbed2641f1ef31d7e491778f49b50be3",
+    "run.js": "8e41bd83a983d2cc72c1ff1dc2b45cb82b50fcef72a342d3d5bdc8da2e6e00b0",
+    "refuge-lobby.js": "2fc60247044bb3014c67129b2e28f5292feb473dbb425480ffee5224e1b194b7"
+  }
+}

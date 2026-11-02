@@ -1,0 +1,46 @@
+@font-face{font-family:GVLearnDisplay;src:url('assets/menu-fonts/Fredoka-600-Static.ttf');font-weight:600}
+@font-face{font-family:GVLearnBody;src:url('assets/menu-fonts/Nunito-600-Static.ttf');font-weight:600}
+#gvLearningHost{position:fixed;inset:0;margin:0;padding:0;border:0;width:100vw;height:100dvh;max-width:none;max-height:none;background:transparent;overflow:visible;pointer-events:none;z-index:2147481005;font:600 15px/1.35 GVLearnBody,Nunito,sans-serif;color:#edf4ff}
+#gvLearningHost[hidden],#gvLearningHost [hidden]{display:none!important}
+#gvLearningHost *{box-sizing:border-box}
+#gvLearningHost .gl-shade{position:absolute;inset:0;background:rgb(2 8 22 / .65);pointer-events:auto}
+#gvLearningHost .gl-ring{position:absolute;border:3px solid #35d6f2;border-radius:10px;box-shadow:0 0 0 3px #020816;pointer-events:none}
+#gvLearningHost .gl-window{position:absolute;pointer-events:auto;overflow:auto;width:min(390px,calc((100vw - 24px)/var(--gv-ui-scale,1)));padding:16px;background:linear-gradient(#102a52,#06132b);border:3px solid #26538c;border-radius:15px;box-shadow:0 5px #020816,inset 0 2px #173f73}
+#gvLearningHost .gl-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;background:transparent;border:0;box-shadow:none;padding:0}
+#gvLearningHost .gl-eyebrow{font:600 13px GVLearnBody;color:#bfd0e8;letter-spacing:.06em}
+#gvLearningHost .gl-lesson{display:flex;align-items:center;gap:14px}
+#gvLearningHost .gl-art{display:block;width:64px;height:76px;object-fit:contain;flex:none}
+#gvLearningHost .gl-lesson>div{min-width:0;flex:1}
+#gvLearningHost h2{margin:0 0 8px;font:600 24px/1.1 GVLearnDisplay,Fredoka,sans-serif;overflow-wrap:anywhere}
+#gvLearningHost p{margin:0;color:#bfd0e8;font:600 15px/1.35 GVLearnBody,Nunito,sans-serif;overflow-wrap:anywhere}
+#gvLearningHost .gl-button{position:relative;min-height:44px;padding:9px 13px;border:3px solid #020816;border-radius:10px;background:linear-gradient(#173f73,#102a52);box-shadow:inset 0 2px #26538c,0 3px #020816;color:#edf4ff;font:600 16px/1.15 GVLearnDisplay,Fredoka,sans-serif;touch-action:manipulation}
+#gvLearningHost .gl-button:hover{filter:brightness(1.12)}
+#gvLearningHost .gl-button:active{box-shadow:inset 0 2px #26538c,0 1px #020816}
+#gvLearningHost .gl-primary{min-height:50px;background:linear-gradient(#ffbc00,#ff7600);color:#17213d;box-shadow:inset 0 2px #ffd36a,0 3px #020816}
+#gvLearningHost .gl-close{flex:none;min-width:44px;padding:6px;font-size:21px}
+#gvLearningHost .gl-name{display:grid;gap:6px;margin-top:14px;color:#bfd0e8;font-size:13px}
+#gvLearningHost input{width:100%;min-height:48px;background:#06132b;border:2px solid #26538c;border-radius:9px;padding:10px 12px;font:600 17px GVLearnBody;color:#edf4ff}
+#gvLearningHost .gl-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px;margin-top:16px}
+#gvLearningHost .gl-actions>.gl-primary{flex:1}
+#gvLearningHost .gl-progress{display:flex;align-items:center;gap:10px;margin-top:16px;color:#bfd0e8;font-size:13px}
+#gvLearningHost .gl-progress>div{flex:1;height:7px;background:#020816;border-radius:4px;overflow:hidden}
+#gvLearningHost .gl-progress i{display:block;height:100%;background:#35d6f2;border-radius:inherit;transition:width 180ms ease-out}
+#gvLearningHost .gl-error{margin-top:12px;color:#ff8b91;font-size:14px}
+#gvLearningHost .gl-catalog{display:flex;flex-direction:column;width:min(760px,calc((100vw - 24px)/var(--gv-ui-scale,1)));height:min(640px,calc((100dvh - 24px)/var(--gv-ui-scale,1)));overflow:hidden}
+#gvLearningHost .gl-catalog>*{flex-shrink:0}
+#gvLearningHost .gl-library-actions{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+#gvLearningHost .gl-library{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;min-height:0;flex:1;overflow:auto;align-content:start;padding:2px 4px 5px 0}
+#gvLearningHost .gl-topic{display:flex;align-items:center;gap:10px;text-align:left;min-height:66px;padding:9px;border:2px solid #26538c;border-radius:11px;background:#102a52;color:#edf4ff}
+#gvLearningHost .gl-topic:disabled{opacity:.6}
+#gvLearningHost .gl-topic:not(:disabled):hover{background:#173f73;border-color:#35d6f2}
+#gvLearningHost .gl-topic img{width:38px;height:42px;object-fit:contain;flex:none}
+#gvLearningHost .gl-topic span{min-width:0;display:grid;gap:4px}
+#gvLearningHost .gl-topic strong{font:600 17px/1.1 GVLearnDisplay,Fredoka,sans-serif;overflow-wrap:anywhere}
+#gvLearningHost .gl-topic small{font:600 12px/1.2 GVLearnBody,Nunito,sans-serif;color:#bfd0e8}
+body.soft-fx #gvLearningHost .gl-progress i{transition:none}
+@media(prefers-reduced-motion:reduce){#gvLearningHost .gl-progress i{transition:none}}
+
+#gvLearningHost .gl-goal{display:grid;gap:7px;margin-top:14px;padding:12px;background:#06132b;border:2px solid #26538c;border-radius:10px}
+#gvLearningHost .gl-goal p:first-child{color:#edf4ff}
+#gvLearningHost .gl-help{margin-top:12px;color:#ff8b91}
+#gvLearningHost [data-skip-training],#gvLearningHost [data-retry-help]{width:100%;margin-top:12px}

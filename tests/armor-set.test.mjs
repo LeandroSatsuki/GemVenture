@@ -1,3 +1,4 @@
+import {rectangularRoom} from './helpers/rectangular-room.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as E from '../dist/core.js';
@@ -32,6 +33,6 @@ test('piece traits change actual run stats and the forge shows gear, color and u
  E.finishRun(s,'return');const html=forgeMarkup(s,'armor',0,0,false,'pickaxe',0,1);assert.match(html,/EQUIPAMENTO/);assert.match(html,/MOCHILA/);assert.match(html,/ROLETAR OUTRO/);assert.match(html,/APRIMORAR/);assert.doesNotMatch(html,/INVENTÁRIO/);
 });
 test('a developed ruby mining trait removes one required hit from tough crystals and rocks',()=>{
- const hit=(type,traitId)=>{const s=ready();s.level=100;if(traitId)s.forge.gear.items.pickaxe.traits[0]={id:traitId,kind:1,rank:7};assert.ok(E.startRun(s));Object.assign(s.run.room,{explored:null,visible:null,wave:null,terrain:Array(s.run.room.cols*s.run.room.rows).fill(0),nodes:[],rocks:[],enemies:[]});const n={id:999,type,kind:0,x:4,y:11,hp:6,maxHp:6,value:5,born:0};s.run.room[type==='rock'?'rocks':'nodes'].push(n);assert.equal(E.act(s,{type:'hit',id:n.id},0).ok,true);return n.hp;};
+ const hit=(type,traitId)=>{const s=ready();s.level=100;if(traitId)s.forge.gear.items.pickaxe.traits[0]={id:traitId,kind:1,rank:7};assert.ok(E.startRun(s));rectangularRoom(s);Object.assign(s.run.room,{explored:null,visible:null,wave:null,terrain:Array(s.run.room.cols*s.run.room.rows).fill(0),nodes:[],rocks:[],enemies:[]});const n={id:999,type,kind:0,x:4,y:11,hp:6,maxHp:6,value:5,born:0};s.run.room[type==='rock'?'rocks':'nodes'].push(n);assert.equal(E.act(s,{type:'hit',id:n.id},0).ok,true);return n.hp;};
  assert.ok(hit('crystal','crystal')<hit('crystal',null));assert.ok(hit('rock','rock')<hit('rock',null));
 });

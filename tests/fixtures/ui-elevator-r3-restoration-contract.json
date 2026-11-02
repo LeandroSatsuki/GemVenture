@@ -1,0 +1,10 @@
+{
+  "scope": "Restore original elevator heights, typography and vertical arrangement; only expand width and place five rewards in one row",
+  "authorization": "User correction: do not shrink or redesign the elevator; only stretch sideways to fit the coin",
+  "visualHumanApproval": false,
+  "integrationReceipt": "coordination/UI-CORRECTIONS-20261029/r3/INTEGRATION.json",
+  "files": {
+    "ui-consistency.css": "41cdd6fa954a2b0d41e381e4313288b4a96d23d43abc80dac72e80c70f42ed7f"
+  },
+  "shortViewportCorrection": "Reserve the original 78px floor-control height; move the lower panel down 18px to prevent overlap."
+}

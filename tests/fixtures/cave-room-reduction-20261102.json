@@ -1,0 +1,13 @@
+{
+  "id": "CAVE-ROOM-REDUCTION-20261102-R1",
+  "authorization": "Direct human request to reduce common room count by40 percent",
+  "scope": "Generator counts and explicit compatible layout profiles, no palette/asset changes",
+  "files": {
+    "campaign-cave-expedition.js": "8348901c8d1b4ecc37338e45ba3dcad7e75927a5f6ec7ce5609003c85fe1a48d",
+    "campaign-cave-layout.js": "2c4373e21fa68c732e15cfb945a84dca16bf2504d3bc226100e0e781ea9305e8",
+    "campaign-cave-profile.js": "38b3750de7cee5b71d69403429da8eed885aa7700985a71f913fcf1f914bebf5",
+    "cave-arrival-plan.js": "98a083c8e40597345eafd474aa0b3eb7fbb6fdf868d48f0e43d0b3d395654967",
+    "cave-layout.js": "e4a7b88ad223bcbdee25bc365ed25fab4599fe8a098535646ac39994b120c3d5",
+    "cavern.js": "98f5902327d073b2a82ac3a56b6ea8802c170fc798f796da65d78424edc188e1"
+  }
+}

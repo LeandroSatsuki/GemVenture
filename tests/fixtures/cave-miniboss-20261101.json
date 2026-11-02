@@ -1,0 +1,17 @@
+{
+  "id": "OPTIONAL-MINIBOSSES-20261101-R1",
+  "authorization": "Pedido humano direto neste chat: aplicar minibosses opcionais nas salas, alerta vermelho de proximidade, boa recompensa de recursos, sem parar o ritmo e mantendo primeiro andar tranquilo.",
+  "sourceReceipt": "E:/Genventure/coordination/optional-minibosses-20261101-r1/APPLICATION.json",
+  "scope": "Finite optional room sentries from floor two, explicit opt-in, musical telegraph/recovery, retreat, resource bonus and red proximity warning. Technical registration; human playtest remains pending.",
+  "files": {
+    "core.js": "d3d61b441d741a7a43874ab9ed74680d967cae6180f33e72afc239a940f5e383",
+    "world.js": "09f41eabc3c1fee6cac95ab65150896f29645e2220b6b34d5d3cf20cf613b810",
+    "run.js": "9343690cd5f6bc99c6fbb41390fa226fa6a6b4c14572f7bab7ee08a56e5649aa",
+    "expedition-hud-view.js": "80dc0928fe3df6cb5877a8f29839dcf8d2fa0c762da63ab6ce1cfc199a81b4e8",
+    "stars.js": "73275f66450c36c17834a0ea28ca84d59c2cd47d5a5cbc0ec2233f64d74ee9de",
+    "cave-miniboss.js": "08c56b4c494cde9ff7482e0a9e78550edcbaf40ad58c0c857d4072d7216f2da8",
+    "cave-miniboss-art.js": "76524ca74861d31daf7a5a8c486394218ea211595ef573f607ecc581a1749c95",
+    "cave-miniboss-hud.js": "832841a5b57b25e8437c7c2719244de10e49d7ea09529a694c6e7239e0a167d4",
+    "cave-miniboss-hud.css": "3d0d87e9a4d75f044f0989e9d019cc3075e6c3b5e954656aab7f997de86ac3da"
+  }
+}

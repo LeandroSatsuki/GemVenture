@@ -1,0 +1,12 @@
+{
+  "id": "APPROVED-REST-20261031",
+  "approval": "../../../coordination/EXPEDITION-REST-INTEGRATION-20261031/HUMAN-APPROVAL.json",
+  "approvedProposal": "../../../coordination/EXPEDITION-REST-PROPOSAL-20261031/v2/DELIVERY.json",
+  "files": {
+    "approved-rest-ui.css": "05137b7807c97ca2f887b4e32bebc5d64cc637b9ab4b342aaea40a9ed1d83bdf",
+    "approved-rest-shell.css": "f16e5e694a98083036e1d2a685e727ab2060b6ab9746f7415a52c2cfaf183fc4",
+    "run.js": "4156c1e40d51b742676554c1d5aafbcd22695cfa4887d5d3ab6b92863a796311",
+    "approved-rest-ui.js": "ada137da81d8f37d3de76fe0bf43b4314b1dc6b5591b3df6cd92b2634f246dfa",
+    "approved-rest-markup.js": "7e00dc4e8e16b2506b07a1d26e7bee7717dd18a58b8bb0c55a51198960ebe744"
+  }
+}

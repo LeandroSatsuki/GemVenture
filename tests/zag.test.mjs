@@ -4,6 +4,7 @@ import {createState,restoreState,startRun,finishRun,act} from '../dist/core.js';
 import {createZag,restoreZag,spinZag,dealZag,moveZag,chooseZagRoute,zagDestination,craftZagTool,useZagTool,investZag,withdrawZag,bankZag,settleZag,zagTile,zagRoundState,recordZagCrystal,ZAG_WHEEL} from '../dist/zag.js';
 import {zagMarkup,boardPoint,zagBoardBase,zagRewardDisplay} from '../dist/zag-view.js';
 import {Music} from '../dist/audio.js';
+import {homeAudioContext} from './fixtures/home-audio.mjs';
 const now=100000;
 function base(){const s=createState(712);s.zag.passes=5;s.materials=[1000,1000,1000,1000];return s;}
 function rollZag(s,now,random){if(s.run||s.zag.active)return false;if(!s.zag.hand.length&&!dealZag(s,random))return false;return moveZag(s,0,now);}
@@ -72,7 +73,7 @@ test('deep paths regenerate deterministically without storing an ever growing bo
  const boardStart=zagBoardBase(s.zag.position),continued=zagMarkup(s,0,false,null,boardStart);assert.equal(boardStart,s.zag.position-3);assert.match(continued,new RegExp('data-position="'+(s.zag.position-1)+'"'));assert.match(continued,new RegExp('data-position="'+(s.zag.position+8)+'"'));
 });
 test('Zag cues obey mute and return to gentle village music',()=>{
- const m=new Music(),notes=[];m.ctx={state:'running',currentTime:1};m.master={gain:{setTargetAtTime(){}}};m.tone=(...args)=>notes.push(args);
+ const m=new Music(),notes=[];m.ctx=homeAudioContext(1);m.master={gain:{setTargetAtTime(){}}};m.tone=(...args)=>notes.push(args);
  m.zag(0);assert.equal(notes.length,0);m.enabled=true;m.zag(0);assert.equal(m.track,'zag');const first=notes.length;m.zag(0);assert.equal(notes.length,first);m.zag(2);assert.ok(notes.length>first);m.home(0);assert.equal(m.track,'home');
 });
 test('a hand spends reserve once; every unused die and chosen route survive reload',()=>{

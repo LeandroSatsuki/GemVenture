@@ -1,0 +1,56 @@
+/* Opt-in paint layer: common descent offers only. No raster filters or gameplay hooks. */
+body.immersive-run #clearBanner.gv-card-lighting{
+ --r2-panel:#071a3b;--r2-inset:#07142d;--r2-ink:#020a1c;
+ --r2-text:#f7f8ff;--r2-muted:#c1d4ef;--r2-select:#18e9f7;--r2-action:#ffcf20;--r2-focus:#fff49a;
+ --r2-display:Fredoka,Arial,sans-serif;--r2-body:Nunito,Arial,sans-serif;
+}
+body.immersive-run #clearBanner.gv-card-lighting .floor-choice{
+ background:linear-gradient(145deg,#071a3b,#050e24);border-color:#020a1c;
+ box-shadow:inset 0 1px #18345b,0 8px 28px #0008;
+}
+body.immersive-run #clearBanner.gv-card-lighting .gem-card{
+ --card-light:color-mix(in srgb,var(--card) 72%,#fff 28%);
+ --card-glow:color-mix(in srgb,var(--card) 34%,transparent);
+ background:radial-gradient(ellipse at 50% 32%,color-mix(in srgb,var(--card) 22%,#07142d) 0%,#07142d 56%),#07142d;
+ border-color:var(--card-light);
+ box-shadow:0 0 0 2px #020a1c,0 0 17px var(--card-glow),inset 0 0 0 2px #020a1c,inset 0 3px 0 var(--card-light),inset 0 -6px 13px color-mix(in srgb,var(--card) 35%,transparent);
+ transition:background-color 100ms,box-shadow 100ms;
+}
+body.immersive-run #clearBanner.gv-card-lighting .gem-card .card-role{
+ color:var(--card-light);text-shadow:0 1px 2px #020a1c,0 0 9px var(--card-glow);
+}
+body.immersive-run #clearBanner.gv-card-lighting .gem-card>strong{
+ color:#f7f8ff;paint-order:stroke fill;-webkit-text-stroke:2px #020a1c;text-shadow:0 2px #020a1c;
+}
+body.immersive-run #clearBanner.gv-card-lighting .gem-card p{color:#d4e2f7}
+body.immersive-run #clearBanner.gv-card-lighting .gem-card .card-detail{
+ background:#040e23;border-color:#243f65;color:#22f2c5;box-shadow:inset 0 1px #112a4d;
+}
+body.immersive-run #clearBanner.gv-card-lighting .gem-card>small{
+ color:var(--card-light);border-top-color:var(--card);
+ background:linear-gradient(transparent,color-mix(in srgb,var(--card) 16%,#07142d));
+ text-shadow:0 1px 2px #020a1c;
+}
+body.immersive-run #clearBanner.gv-card-lighting .gem-card:hover:not(:disabled){
+ background:radial-gradient(ellipse at 50% 32%,color-mix(in srgb,var(--card) 30%,#07142d) 0%,#07142d 64%);
+ box-shadow:0 0 0 2px #020a1c,0 0 22px var(--card-glow),inset 0 0 0 2px #020a1c,inset 0 3px var(--card-light),inset 0 -6px 16px var(--card-glow);
+}
+body.immersive-run #clearBanner.gv-card-lighting .gem-card:is(.selected,[aria-pressed=true]){
+ outline:4px solid #ffdf49;outline-offset:3px;border-color:#fff0a6;
+ box-shadow:0 0 0 2px #020a1c,0 0 24px var(--card-glow),inset 0 0 0 2px #020a1c,inset 0 3px #fff0a6,inset 0 -6px 18px var(--card-glow);
+}
+body.immersive-run #clearBanner.gv-card-lighting .gem-card:disabled{
+ border-color:var(--card);box-shadow:0 0 0 2px #020a1c,inset 0 1px var(--card),inset 0 -3px var(--card-glow);
+}
+body.immersive-run #clearBanner.gv-card-lighting .gem-card:focus-visible{
+ outline:3px solid #fff49a;outline-offset:5px;box-shadow:0 0 0 3px #020a1c,0 0 0 8px #fff49a,inset 0 0 0 2px #020a1c;
+}
+@media(prefers-reduced-motion:reduce){body.immersive-run #clearBanner.gv-card-lighting .gem-card{transition:none}}
+.soft-fx #clearBanner.gv-card-lighting .gem-card{transition:none}
+
+/* Dungeon refresh: text must not inherit the dark art/lighting fill. */
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-equipped-copy h3,
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-equipped-copy p,
+body.immersive-run #clearBanner.gv-descent-shell.gv-post-choice .post-effect-text{
+ color:#e8eff7;-webkit-text-fill-color:#e8eff7;text-shadow:0 1px 2px #10192a;
+}

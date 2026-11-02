@@ -1,0 +1,18 @@
+{
+  "id": "CONTEXTUAL-TUTORIAL-20261102-R1",
+  "authorization": "Current direct user request",
+  "files": {
+    "learning-path.js": "6b0b2d0d95acfdab3a7d7513c40d54ee71c0d106a087f414d83976a87a716654",
+    "learning-view.js": "db6d30f0316640c534910fb417f3cf3401ca927a70cf104eeab3f57cd51c7d12",
+    "learning-ui.css": "8dc858cbbf367ca5c2b201d59b16fedc00dcc0ee59ff0ea445e1a302a5249904",
+    "contextual-learning.js": "1f9ecbcaad1d8bb47d57d3b2fa7d8b4c8c5275ba660645efe59fa20b324e50d6",
+    "sentinel-world-rewards.js": "4d45bd00fec95d1ff0c1e2955703df7f7ad910257c395f4e5ad6b70a4895b06e",
+    "run.js": "214b7f83a0b622eef26db1c31998789af1c2c146fbafee87a60bccebc518d735",
+    "effects.js": "a18a972790894cf15a01e4615bfc43cd9e72224c11506087e581ee2767aab09a",
+    "tutorial-runtime.js": "1807264cbdcd753efb511051afb4ecdedca9a80f1681aaef00a0c1f2cd60e960",
+    "tutorial-training.js": "35771ec912eec4ac65a9f29f5bdacd3c412d9d9776565cac44e59a7aecd4414c",
+    "approved-training-ui.js": "28e11016166b94cd5fdbb4b861bea5998551364b738673d8cf0089f24f0c4cf5",
+    "refuge-onboarding.js": "f79e96d22b3939d40db2e43f34398cbbc754b693a290e10c3b62efd27285e6bd",
+    "approved-sentinel-reward-ui.js": "5cd17c4fa041de799ce823499c4e2f209811df0a4f01a516288c172b0d3f3985"
+  }
+}

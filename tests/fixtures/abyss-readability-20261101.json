@@ -1,0 +1,11 @@
+{
+  "id": "GV-043/ABYSS-READABILITY-R1",
+  "authorization": "../../../coordination/VFX-ABYSS-READABILITY-R1-20261101/BASELINE-RESERVATION.json",
+  "scope": "Presentation-only damage-number hierarchy and buff clipping fix; preserve rules, HP, deadlines, fonts and icons",
+  "files": {
+    "effects.js": "3c64e21e1f829f9673d793f847da06556e26b474036ee699a190bbbfebeccee0",
+    "approved-expedition-hud.css": "ac554c2daabae2acfe860dcfd5f2cf5f0d5bfa2782b5b29c7fa284106f52c569",
+    "expedition-hud-view.js": "295d822f961186bc4c64b83495a0ac835d9c403426d40a61812d02ee2d6335af",
+    "damage-labels.js": "af21e72b2d93f09dc8ee4e1f43dfdbf71c9f207379c94405aa4907c7935c00db"
+  }
+}

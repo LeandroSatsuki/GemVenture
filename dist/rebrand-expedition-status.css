@@ -1,0 +1,41 @@
+/* R2 status only. Original owners retain all anchors, clock, values and combat VFX. */
+body.immersive-run #scoreHud .score-total{min-width:0;max-width:100%;flex-shrink:0}
+body.immersive-run #scoreHud .score-total>small{font:900 12px/1.25 var(--r2-body,'GV R2 Body',sans-serif);color:var(--r2-muted,#c5cddb);letter-spacing:0;white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #scoreHud #scoreValue{max-width:100%;font:900 18px/1.25 var(--r2-body,'GV R2 Body',sans-serif);font-variant-numeric:tabular-nums;color:var(--r2-text,#fff);white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #scoreHud .star-progress{border-color:var(--r2-ink,#180d2f);background:var(--r2-inset,#353658)}
+body.immersive-run #scoreHud #scoreFill{background:var(--r2-action,#ece910)}
+body.immersive-run #scoreHud .earned-stars>.lit{color:var(--r2-action,#ece910)}
+body.immersive-run #runHud .combo{border-radius:12px;background:var(--r2-inset,#353658);box-shadow:inset 0 2px #ffffff33,inset 0 -4px #180d2f66;overflow-wrap:anywhere}
+body.immersive-run #runHud .combo>small{font-family:var(--r2-body,'GV R2 Body',sans-serif);font-weight:900;letter-spacing:0;color:var(--r2-muted,#c5cddb)}
+body.immersive-run #runHud #combo{font-family:var(--r2-display,'GV R2 Display',sans-serif);font-weight:600;font-variant-numeric:tabular-nums;white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #comboHint{font:800 16px/1.3 var(--r2-body,'GV R2 Body',sans-serif);color:var(--r2-select,#5ee9e9);letter-spacing:0;white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #novaMeter{border-color:var(--r2-ink,#180d2f);border-radius:8px;background:var(--r2-ink,#180d2f)}
+body.immersive-run #novaFill{background:var(--r2-select,#5ee9e9)}
+body.immersive-run #runHud .combo #novaHint{font:900 14px/1.3 var(--r2-body,'GV R2 Body',sans-serif);color:var(--r2-action,#ece910);letter-spacing:0;white-space:normal;overflow-wrap:anywhere}
+/* Boss DOM stays clipped by its owner; the visible badge remains in World. */
+body.immersive-run #bossHud :is(#bossName,#bossHP,#bossAttack,#bossInstruction,#bossPhase){font-family:var(--r2-body,'GV R2 Body',sans-serif);font-weight:900;color:var(--r2-text,#fff)}
+body.immersive-run #frenzyHud{border-color:var(--r2-ink,#180d2f);border-radius:14px;background:var(--r2-inset,#353658);box-shadow:inset 0 2px #ffffff33,inset 0 -4px #180d2f66}
+body.immersive-run #frenzyHud .heat-block>strong{gap:4px;flex-wrap:wrap;font:900 16px/1.3 var(--r2-body,'GV R2 Body',sans-serif);color:var(--r2-text,#fff);letter-spacing:0;overflow-wrap:anywhere}
+body.immersive-run #frenzyHud #heatValue{font:900 24px/1.25 var(--r2-body,'GV R2 Body',sans-serif);font-variant-numeric:tabular-nums;color:var(--r2-action,#ece910)}
+body.immersive-run #frenzyHud .heat-track{border-radius:8px;background:var(--r2-ink,#180d2f)}
+body.immersive-run #frenzyHud #heatLoot{font:900 20px/1.3 var(--r2-body,'GV R2 Body',sans-serif);color:var(--r2-select,#5ee9e9);white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #frenzyHud #liveQuest{border-color:var(--r2-action,#ece910);border-radius:12px;background:var(--r2-inset,#353658);box-shadow:inset 0 2px #ffffff33,inset 0 -4px #180d2f66;white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #frenzyHud #liveQuest #questName{font:600 22px/1.2 var(--r2-display,'GV R2 Display',sans-serif);color:var(--r2-text,#fff);letter-spacing:0;white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #frenzyHud #liveQuest #questCount{font:900 22px/1.3 var(--r2-body,'GV R2 Body',sans-serif);font-variant-numeric:tabular-nums;color:var(--r2-action,#ece910);white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #frenzyHud #rescueHud{border-color:var(--r2-ink,#180d2f);border-radius:12px;background:var(--r2-inset,#353658);box-shadow:inset 0 2px #ffffff33,inset 0 -4px #180d2f66}
+body.immersive-run #rescueHud>strong{font:900 18px/1.3 var(--r2-body,'GV R2 Body',sans-serif);color:var(--r2-text,#fff);white-space:normal;overflow-wrap:anywhere}
+body.immersive-run #rescueHud #rescueTimer{font:900 22px/1.3 var(--r2-body,'GV R2 Body',sans-serif);font-variant-numeric:tabular-nums;color:var(--r2-action,#ece910)}
+body.immersive-run #rescueHud :is(#sendCargo,#riskCargo){box-sizing:border-box;min-width:48px;min-height:48px;padding:12px;border:3px solid var(--r2-ink,#180d2f);border-radius:12px;background:var(--r2-action,#ece910);color:var(--r2-ink,#180d2f);box-shadow:inset 0 2px #ffffff55,inset 0 -4px #180d2f66;font:900 18px/1.3 var(--r2-body,'GV R2 Body',sans-serif);white-space:normal;overflow-wrap:anywhere;clip-path:none;touch-action:manipulation}
+body.immersive-run #rescueHud #riskCargo{background:var(--r2-inset,#353658);color:var(--r2-text,#fff)}
+body.immersive-run #rescueHud button:focus-visible{outline:3px solid var(--r2-focus,#fff);outline-offset:3px;box-shadow:0 0 0 6px var(--r2-ink,#180d2f)}
+body.immersive-run #boostHud .boost-node{border-color:var(--boost);border-radius:12px;background:var(--r2-inset,#353658)}
+body.immersive-run #boostHud .boost-node small{font:900 16px/1.25 var(--r2-body,'GV R2 Body',sans-serif);font-variant-numeric:tabular-nums;color:var(--r2-text,#fff);white-space:normal;overflow-wrap:anywhere}
+@media(max-width:800px){
+ body.immersive-run #scoreHud .score-total>small{font-size:10px}
+ body.immersive-run #scoreHud #scoreValue{font-size:16px}
+ body.immersive-run #frenzyHud #heatValue{font-size:22px}
+ body.immersive-run #frenzyHud #heatLoot{font-size:18px}
+ body.immersive-run #frenzyHud #liveQuest #questName{font-size:20px}
+ body.immersive-run #frenzyHud #liveQuest #questCount{font-size:20px}
+}
+/* Existing soft/reduced rules and WAAPI branches remain the motion owners. */

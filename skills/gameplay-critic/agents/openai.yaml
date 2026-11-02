@@ -1,0 +1,4 @@
+interface:
+  display_name: "Crítico de gameplay"
+  short_description: "Crítica fundamentada de desafio, foco e experiência"
+  default_prompt: "Use $gameplay-critic para analisar este jogo com evidências independentes e propor prioridades de polimento."

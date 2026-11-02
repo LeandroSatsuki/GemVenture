@@ -1,0 +1,16 @@
+/* R2 proposal. HEPT32 materials retained; semantic roles belong to UI components. */
+@font-face{font-family:'GV R2 Display';src:url('assets/menu-fonts/Fredoka-600-Static.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'GV R2 Body';src:url('assets/menu-fonts/Nunito-800-Static.ttf') format('truetype');font-weight:800;font-display:swap}
+@font-face{font-family:'GV R2 Body';src:url('assets/menu-fonts/Nunito-600-Static.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'GV R2 Body';src:url('assets/menu-fonts/Nunito-900-Static.ttf') format('truetype');font-weight:900;font-display:swap}
+:where(.gv-r2,#menuShell.gv-r2-menu){--r2-ink:#180d2f;--r2-page:#1831a7;--r2-panel:#2890dc;--r2-inset:#353658;--r2-text:#ffffff;--r2-muted:#c5cddb;--r2-action:#ece910;--r2-action-edge:#ecab11;--r2-select:#5ee9e9;--r2-success:#47f641;--r2-danger:#da2424;--r2-lock:#686b72;--r2-focus:#ffffff;--r2-radius:14px;--r2-line:3px;--r2-depth:5px;--r2-space:8px;--r2-display:'GV R2 Display','Arial Rounded MT Bold',sans-serif;--r2-body:'GV R2 Body','Trebuchet MS',sans-serif;font-family:var(--r2-body);font-weight:800;color:var(--r2-text);font-variant-numeric:tabular-nums}
+:is(.gv-r2,#menuShell.gv-r2-menu) :is(button,summary,input):focus-visible{outline:3px solid var(--r2-focus)!important;outline-offset:3px;box-shadow:0 0 0 6px var(--r2-ink)!important}
+:is(.gv-r2,#menuShell.gv-r2-menu) button{box-sizing:border-box;min-height:48px;touch-action:manipulation;border:3px solid var(--r2-ink);border-radius:12px;color:var(--r2-text);background:var(--r2-page);font:900 18px/1.2 var(--r2-body);box-shadow:inset 0 2px #ffffff55,inset 0 -5px #180d2f66;transform:none;translate:none;filter:none;cursor:pointer;transition:box-shadow 100ms,background-color 100ms}
+:is(.gv-r2,#menuShell.gv-r2-menu) button:hover:not(:disabled){box-shadow:inset 0 3px #ffffff88,inset 0 -6px #180d2f88}
+:is(.gv-r2,#menuShell.gv-r2-menu) button:active:not(:disabled){box-shadow:inset 0 5px #180d2f88,inset 0 -1px #ffffff55}
+:is(.gv-r2,#menuShell.gv-r2-menu) button:disabled{background:var(--r2-inset);color:var(--r2-muted);border-color:var(--r2-ink);border-style:dashed;box-shadow:none;cursor:not-allowed}
+:is(.gv-r2,#menuShell.gv-r2-menu) :is(button.primary,button.menu-primary):not(:disabled){background:var(--r2-action);color:var(--r2-ink);box-shadow:inset 0 3px #ffffff88,inset 0 -6px var(--r2-action-edge)}
+:is(.gv-r2,#menuShell.gv-r2-menu) :is(button.primary,button.menu-primary):active:not(:disabled){box-shadow:inset 0 5px var(--r2-action-edge),inset 0 -1px #ffffff88}
+:is(.gv-r2,#menuShell.gv-r2-menu) button[aria-pressed=true]:not(:disabled){background:var(--r2-select);color:var(--r2-ink);border-color:var(--r2-ink);box-shadow:inset 0 3px #ffffff88,inset 0 -5px #2890dc}
+@media(prefers-reduced-motion:reduce){:is(.gv-r2,#menuShell.gv-r2-menu) button{transition:none!important;animation:none!important}}
+.soft-fx :is(.gv-r2,#menuShell.gv-r2-menu) button{transition:none!important;animation:none!important}

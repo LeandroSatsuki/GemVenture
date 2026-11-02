@@ -1,0 +1,58 @@
+/* Isolated tutorial pilot. Approved fonts, palette and global CRT remain in use. */
+#tutorialButton{font:900 15px var(--r2-body,var(--body));padding:8px 14px;min-height:44px;width:auto;min-width:88px;max-width:none;flex-shrink:0;color:#ffffff}
+.tutor-root{position:fixed!important;inset:0!important;width:100vw!important;height:100dvh!important;max-width:none!important;max-height:none!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;z-index:2147482000!important;pointer-events:none;color:#ffffff;font:800 17px/1.4 var(--r2-body,var(--body,sans-serif));letter-spacing:0;text-transform:none;isolation:isolate}
+.tutor-root::backdrop{background:transparent;pointer-events:none}
+#tutorialOverlay.tutor-root .tutor-panel h2{margin:4px 0 10px;font:600 26px/1.1 var(--r2-display,var(--body));color:#ffffff;text-transform:none}
+#tutorialOverlay.tutor-root .tutor-panel p{font:800 17px/1.4 var(--r2-body,var(--body));color:#ffffff;margin:0 0 14px;text-transform:none}
+#tutorialOverlay.tutor-root .tutor-top :is(button,select),#tutorialOverlay.tutor-root .tutor-panel button{min-height:44px;min-width:0;font:900 16px/1.25 var(--r2-body,var(--body));letter-spacing:0;padding:8px 14px}
+.tutor-root[hidden],.tutor-training[hidden],.tutor-pulse[hidden]{display:none!important}
+.tutor-shade{position:absolute;background:rgba(24,13,47,.76);pointer-events:auto}
+.tutor-ring{position:absolute;box-sizing:border-box;border:3px solid #fbbe82;border-radius:12px;pointer-events:none;box-shadow:0 0 0 2px #180d2f}
+.tutor-arrow{position:absolute;color:#fbbe82;font-size:38px;line-height:1;pointer-events:none;filter:drop-shadow(0 2px #180d2f)}
+.tutor-panel{position:absolute;box-sizing:border-box;width:min(360px,calc(100vw - 24px));padding:18px;border:3px solid #180d2f;border-radius:14px;background:#353658;box-shadow:0 6px #180d2f;pointer-events:auto;color:#ffffff;text-align:left}
+.tutor-panel h2{margin:4px 0 10px;font:600 26px/1.1 var(--r2-display,var(--body));color:#ffffff;text-transform:none}
+.tutor-panel p{margin:0 0 14px;color:#ffffff;font:800 17px/1.4 var(--r2-body,var(--body));text-transform:none}
+.tutor-kicker{font-size:12px;letter-spacing:1px;color:#c5cddb}
+.tutor-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.tutor-panel button,.tutor-top button,.tutor-top select{min-height:44px;border:2px solid #180d2f;border-radius:9px;padding:8px 14px;font:900 16px/1.25 var(--r2-body,var(--body));letter-spacing:0;background:#fbbe82;color:#180d2f;cursor:pointer}
+.tutor-panel button:focus-visible,.tutor-top :focus-visible,.tutor-training button:focus-visible{outline:3px solid #ffffff;outline-offset:3px}
+.tutor-panel .tutor-secondary{background:#353658;color:#ffffff;border-color:#8b97b6}
+.tutor-top{position:fixed;top:12px;left:50%;transform:translateX(-50%);max-width:calc(100vw - 24px);display:flex;align-items:center;gap:10px;padding:6px 10px;background:#353658;border:2px solid #180d2f;border-radius:12px;pointer-events:auto;color:#ffffff;font:900 15px var(--r2-body,var(--body));z-index:2}
+.tutor-top label{display:flex;align-items:center;gap:8px;white-space:nowrap}.tutor-top select{padding:4px 8px;background:#353658;color:#ffffff}
+.tutor-live{font-size:14px;color:#fbbe82;min-height:22px}
+.tutor-training{position:fixed;inset:0;background:#180d2f;z-index:2147481000;display:grid;grid-template-rows:auto minmax(0,1fr) auto;color:#ffffff}
+.tutor-training header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:14px 18px 8px;background:#353658;font:900 16px var(--r2-body,var(--body))}
+.tutor-training header small{color:#c5cddb;font-size:13px}
+.tutor-arena{position:relative;min-height:0;overflow:hidden}.tutor-arena canvas{width:100%;height:100%;display:block;outline:none;touch-action:none}
+.tutor-training .tutor-vitals{position:absolute;top:16px;left:16px;padding:10px;border:2px solid #180d2f;border-radius:9px;background:#353658;max-width:calc(100% - 32px);font:900 14px var(--r2-body,var(--body))}
+.tutor-meter{height:12px;width:160px;max-width:35vw;margin:5px 0 8px;background:#180d2f;border:2px solid #180d2f;border-radius:6px;overflow:hidden}.tutor-meter i{display:block;height:100%;background:#5ee9e9}
+[data-tutor-life] .tutor-meter i{background:#f78d8d}
+.tutor-training footer{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;padding:12px;background:#353658}
+.tutor-training footer button{display:flex;align-items:center;gap:9px;min-width:120px;min-height:54px;padding:8px 12px;border:2px solid #180d2f;border-radius:10px;background:#353658;color:#ffffff;font:900 15px var(--r2-body,var(--body))}
+.tutor-training footer svg{width:26px;height:30px}.tutor-training footer kbd{color:#fbbe82}.tutor-training footer button:disabled{opacity:.45}
+.tutor-pulse{position:absolute;width:164px;height:42px;border:2px solid #180d2f;border-radius:22px;background:#353658ee;pointer-events:none;display:flex;align-items:center;justify-content:center;transform:translate(-50%,-50%);color:#fbbe82;font:900 13px var(--r2-body,var(--body));box-sizing:border-box}
+.tutor-pulse:before{content:'';position:absolute;left:50%;height:24px;width:4px;top:7px;background:#ffffff;border-radius:3px}
+.tutor-pulse-dot{position:absolute;left:var(--pulse-position,50%);top:8px;width:20px;height:22px;transform:translateX(-50%);border:2px solid #180d2f;background:#5ee9e9;border-radius:6px}
+.tutor-pulse-label{position:absolute;top:42px;white-space:nowrap;background:#353658;padding:2px 8px;border-radius:5px;font-size:12px}
+.tutor-root[data-mode=practice] .tutor-panel{width:min(300px,calc(100vw - 24px));padding:12px}
+#tutorialOverlay.tutor-root[data-mode=practice] .tutor-panel h2{font-size:20px}
+#tutorialOverlay.tutor-root[data-mode=practice] .tutor-panel p{font-size:15px;line-height:1.35}
+.tutor-training [data-tutor-life]{font-size:18px;margin-bottom:10px}
+.tutor-training [data-tutor-combo]{display:inline-block;transform-origin:left center;padding:4px;border-radius:6px;font-size:18px}
+.tutor-training [data-tutor-count-in]{display:block;max-width:220px;font-size:12px;color:#c5cddb;margin-top:4px}
+.tutor-training .tutor-vitals{background:#180d2fcc}
+#runHud .vital{position:fixed!important;top:12px!important;left:16px!important;inset-inline-end:auto!important;width:auto!important;height:auto!important;min-width:110px;padding:6px 12px!important;margin:0!important;overflow:visible!important;clip-path:none!important;white-space:nowrap!important;z-index:850;background:#180d2f;border:1px solid #8b97b6!important;border-radius:8px;color:#ffffff}
+#runHud .vital #hpLabel{display:block;font:900 20px var(--r2-body,var(--body));color:#ffffff}
+#runHud .vital>span{display:block;font:800 11px var(--r2-body,var(--body));color:#c5cddb}
+.tutor-star-track{margin-top:10px;width:200px;max-width:55vw}.tutor-star-track small{display:block;font-size:12px}.tutor-star-bar{position:relative;height:12px;background:#180d2f;border:2px solid #180d2f;border-radius:5px;margin:9px 8px 8px 0}.tutor-star-bar i{display:block;height:100%;background:#841252}.tutor-star-bar span{position:absolute;top:-7px;transform:translateX(-50%);color:#8b97b6;font-size:18px}.tutor-star-bar span.lit{color:#fbbe82}
+.tutorial-gated [data-village][data-tutorial-locked=true]{opacity:.45;filter:saturate(.3)}
+.tutorial-gated [data-village][data-tutorial-locked=true]:after{content:'Orientação · Pular libera';display:none;position:absolute;bottom:4px;left:0;right:0;color:#ffffff;background:#353658e8;border-radius:6px;padding:3px;font:900 12px var(--r2-body,var(--body));text-align:center}
+.tutorial-gated [data-village][data-tutorial-locked=true]:is(:hover,:focus-visible):after{display:block}
+@media(max-width:600px){.tutor-top{top:6px;width:calc(100vw - 16px);box-sizing:border-box;justify-content:space-between;font-size:12px;gap:4px;padding:4px}.tutor-top button,.tutor-top select{font-size:14px;padding:5px 8px}.tutor-panel{padding:12px}.tutor-panel h2{font-size:23px}.tutor-panel p{font-size:16px}.tutor-training header{padding-top:65px;font-size:13px}.tutor-training footer{gap:5px;padding:8px}.tutor-training footer button{min-width:0;flex:1;padding:8px 5px;font-size:12px}.tutor-training footer svg{width:22px}.tutor-training .tutor-vitals{top:8px;left:8px}.tutor-meter{width:110px}.tutor-pulse{width:132px}}
+
+/* R3 guide catalog: reuse the tutorial surface without another visual family. */
+.hub-guide-list{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}.hub-guide-list[hidden]{display:none}.hub-guide-list button{text-align:left;width:100%}#hubGuideOverlay .tutor-panel{width:min(440px,calc(100vw - 24px))}#hubGuideOverlay .tutor-panel h2{color:#ffffff}#hubGuideOverlay .tutor-panel p{color:#ffffff}
+
+@media(min-width:900px) and (min-height:600px){#tutorialOverlay[data-step=welcome] .tutor-panel{left:18px!important;top:150px!important;width:340px}}
+
+[data-tutor-resets]{display:block;max-width:250px;color:#fbbe82;font-size:13px}

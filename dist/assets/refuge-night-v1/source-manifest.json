@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "date": "2026-10-27",
+  "character": "approved procedural v3; explicitly reconfirmed for lobby/wardrobe",
+  "newPresentation": "candidate integrated for visual review",
+  "sourceProject": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\diorama-library\\projects\\gemventure-creatures",
+  "sources": [
+    {
+      "file": "src/miner/lobby.ts",
+      "sha256": "8b4e967dbb2de5b04ef35cc0e89cff35dbf51c0ed0627ebf6f7cc0319a5266be"
+    },
+    {
+      "file": "sheets/base/refuge-floating-tree.ts",
+      "sha256": "fb603b99514a82df109ca06c244e5a8aac0672b8b8529ebd246e05e3ae4ed2c3"
+    },
+    {
+      "file": "src/miner/spec.ts",
+      "sha256": "9c4bcef8b45230e02f3037bc5589a2f763f1e7ec7a5dec73a84fe8270948c84c"
+    },
+    {
+      "file": "src/miner/motion.ts",
+      "sha256": "1b344c054321f54d1d467e710df53c0265a2f2c196d8c84b71fba81ea08dee9e"
+    },
+    {
+      "file": "src/miner/outfit.ts",
+      "sha256": "4cf5e4d0b05f2207387997445358fadee2e8e1088616580e57263d4a0aef430e"
+    },
+    {
+      "file": "src/base/tree-altar.ts",
+      "sha256": "47f12639c26574d82b336adb8888c1ac949d6467e8b9dd41c88c211b2e8db398"
+    },
+    {
+      "file": "src/theme.ts",
+      "sha256": "958f23b91a66c76575967d2ad53bda9dc18d29b92a0eeada829a2306126b3811"
+    },
+    {
+      "file": "src/projection.ts",
+      "sha256": "a388d3195ff014cce609e47791891d86eb86f70f58b02e93546017d37d75161c"
+    }
+  ],
+  "background": {
+    "tool": "imagegen",
+    "sourceConcept": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\output\\imagegen\\refugio-noturno-v02\\refugio-noturno-conceito-v02.png",
+    "prompt": "background-prompt.txt",
+    "treeActorsAndCrystalsRemoved": true
+  },
+  "files": [
+    {
+      "file": "assets/miner-procedural-v3/front.png",
+      "sha256": "2be8873159ff4a7c4aa4ac6c69a183ae788303ff6bf21b87ddfd1cbad4c49daf",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\diorama-library\\libraries\\gemventure\\generated\\miner-v3\\front.png"
+    },
+    {
+      "file": "assets/miner-procedural-v3/happy-bounce.png",
+      "sha256": "25d66222893a41aec5e033a09cf13b7465462d65200d78082c145b96f2989842",
+      "source": "native lobby export or background plate"
+    },
+    {
+      "file": "assets/miner-procedural-v3/idle.png",
+      "sha256": "ece76df01f93d5730f5a9c38ce13ad6facbc6f124fb68243b07e9e4073db36c9",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\diorama-library\\libraries\\gemventure\\generated\\miner-v3\\idle.png"
+    },
+    {
+      "file": "assets/miner-procedural-v3/step-touch.png",
+      "sha256": "2f73a2a963649799ff726f06a25bb29650195ba6791f19b755c24e67bc36c2fe",
+      "source": "native lobby export or background plate"
+    },
+    {
+      "file": "assets/miner-procedural-v3/wardrobe.png",
+      "sha256": "16fe095eed444a5debce10b2b74cf6dde2800ee5d67ebc0352b1e3876a0dc8a3",
+      "source": "native lobby export or background plate"
+    },
+    {
+      "file": "assets/pets-procedural-v1/bat-fly.png",
+      "sha256": "2d134f7142bd692b60015627580068508513c88c93f3ce4845558722cb53cfe3",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\diorama-library\\libraries\\gemventure\\generated\\bats-v1\\sapphire\\fly.png"
+    },
+    {
+      "file": "assets/pets-procedural-v1/bat-front.png",
+      "sha256": "cc8f3090de8d19df5994858a6f7dba844ad922e2e11e698a7892e2ca5b324bff",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\diorama-library\\libraries\\gemventure\\generated\\bats-v1\\sapphire\\front.png"
+    },
+    {
+      "file": "assets/pets-procedural-v1/slime-front.png",
+      "sha256": "aaad9fc9cf62029c91d381ccff277a838f6e6a41eb54649b26cad1b64dede6b5",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\diorama-library\\libraries\\gemventure\\generated\\slimes-motion-v1\\quartz\\front.png"
+    },
+    {
+      "file": "assets/pets-procedural-v1/slime-hop.png",
+      "sha256": "b22cf1bb3337850e18288f34fd5b1b8fd8d6b183fc9ff9acb71c592fad260109",
+      "source": "C:\\Users\\lpsan\\Documents\\Codex\\2026-10-25\\x20-https-github-com-leduardo99-diorama-2\\diorama-library\\libraries\\gemventure\\generated\\slimes-motion-v1\\quartz\\hop.png"
+    },
+    {
+      "file": "assets/refuge-night-v1/floating-tree.png",
+      "sha256": "e5f0f0ee9c8e8e5717b55c1830f2fa1a5af949b980d73ebe93b85a11211cf199",
+      "source": "native lobby export or background plate"
+    },
+    {
+      "file": "assets/refuge-night-v1/forest.png",
+      "sha256": "d0f98ed8c17241c53c300c34892d4b7b5866b567e5cd47543e8ed2611ef5e395",
+      "source": "native lobby export or background plate"
+    },
+    {
+      "file": "assets/refuge-night-v1/tree-icon.png",
+      "sha256": "3cc9cac6e5e5905a2d9c8676ff57c495adeb81d8c13febcf697cbf827f853ed9",
+      "source": "native lobby export or background plate"
+    }
+  ]
+}

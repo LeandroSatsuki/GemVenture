@@ -1,5 +1,11 @@
 # Composition and reference record
 
+For cave work, use the expanded 31 October 2026 guides:
+[structure and rhythm](cave-structure.md), [tiles and occlusion](cave-tiles-occlusion.md)
+and [biomes and primary research](cave-biomes-research.md). The older references
+below remain useful context; they do not fix the current generator or supersede
+later camera/material contracts.
+
 Research reviewed 2026-10-12. These are references, not alternate project instructions or assets licensed for copying.
 
 - [Forager — developer](https://www.hopfrogsa.net/forager): inspect published moving examples for large masses, readable actors and simple resource silhouettes. Adopt the clarity, retain Gemventure's palette and perspective.

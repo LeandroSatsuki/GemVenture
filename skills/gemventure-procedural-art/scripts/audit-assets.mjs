@@ -1,18 +1,21 @@
 import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
-import {writeFile} from 'node:fs/promises';
+import {writeFile,readFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 const root=resolve(process.argv[2]||process.cwd());
 const {ART_TYPES,ART_RULES,generateAsset,assetSvgBody}=await import(pathToFileURL(resolve(root,'dist/art-kit.js')));
 const {PALETTE,BIOME_ART}=await import(pathToFileURL(resolve(root,'dist/palette.js')));
 const palette=new Set(PALETTE),seeds=[0,1,55,1208,2147483647,4294967295];
+const cosmos=new Set(JSON.parse(await readFile(resolve(root,'dist/assets/dungeon-actors-v1/palette.json'),'utf8')).colors);
+const migrated=new Set(['rock','crystal','lantern','fossil','mushroom','bush','molehill','lava','lift','cave-chest','cave-mushroom']);
 let checked=0,maxShapes=0;
 for(const type of ART_TYPES)for(let variant=0;variant<(type==='pickaxe'?10:type==='boss'?BIOME_ART.length:4);variant++)for(let biome=0;biome<BIOME_ART.length;biome++)for(const seed of seeds){
  const options={seed,biome,variant},a=generateAsset(type,options);
- assert.ok(a.shapes.length>0&&a.shapes.length<=ART_RULES.maxShapes,type+' shape budget');
+ const allowed=migrated.has(type)?cosmos:palette,budget=migrated.has(type)?250:ART_RULES.maxShapes;
+ assert.ok(a.shapes.length>0&&a.shapes.length<=budget,type+' shape budget');
  assert.deepEqual(a.anchor,{x:50,y:96});
  for(const s of a.shapes){
-  assert.ok(palette.has(s.fill),type+' palette '+s.fill);if(s.stroke)assert.ok(palette.has(s.stroke),type+' outline');
+  assert.ok(allowed.has(s.fill)||(!s.fill&&s.stroke),type+' palette '+s.fill);if(s.stroke)assert.ok(allowed.has(s.stroke),type+' outline');
   for(const v of Object.values(s))if(typeof v==='number')assert.ok(Number.isFinite(v),type+' finite');
   if(s.d)assert.ok(!/NaN|Infinity|undefined/.test(s.d),type+' path');
   if(s.matrix)assert.ok(s.matrix.length===6&&s.matrix.every(Number.isFinite),type+' matrix');

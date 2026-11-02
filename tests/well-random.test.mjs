@@ -19,12 +19,8 @@ test('well levels alter only quality odds; all outcomes and extreme risks remain
   const roll={version:1,tier,risk};assert.deepEqual(blessingEffects({blessing:'might',blessingLevel:1,blessingRoll:roll}),blessingEffects({blessing:'might',blessingLevel:10,blessingRoll:roll}));
  }
 });
-test('paid outcome is frozen across upgrades, reload and a run, and cannot reroll for free',()=>{
- const s=rich(),result=makeOffering(s,1),roll=structuredClone(s.pendingBlessingRoll),before=[...s.materials];
- assert.equal(makeOffering(s,1),null);assert.deepEqual(s.materials,before);assert.ok(upgradeBuilding(s,'well'));assert.deepEqual(s.pendingBlessingRoll,roll);
- const b=restoreState(JSON.stringify(s));assert.deepEqual(blessingInfo(b.pendingBlessing,b.pendingBlessingLevel,b.pendingBlessingRoll),result);
- startRun(b);assert.deepEqual(b.run.blessingRoll,roll);assert.equal(b.pendingBlessingRoll,null);assert.equal(makeOffering(b,0),null);assert.deepEqual(restoreState(JSON.stringify(b)).run.blessingRoll,roll);
- finishRun(b,'death');startRun(b);assert.equal(b.run.blessingRoll,null);
+test('legacy paid outcome stays frozen after well retirement',()=>{
+ const s=rich();s.pendingBlessing='might';s.pendingBlessingLevel=3;s.pendingBlessingRoll={version:1,tier:2,risk:1};const roll=structuredClone(s.pendingBlessingRoll),before=[...s.materials];assert.equal(makeOffering(s,1),null);assert.deepEqual(s.materials,before);assert.equal(upgradeBuilding(s,'well'),false);assert.deepEqual(s.pendingBlessingRoll,roll);const b=restoreState(JSON.stringify(s));startRun(b);assert.deepEqual(b.run.blessingRoll,roll);assert.equal(b.pendingBlessingRoll,null);assert.equal(makeOffering(b,0),null);assert.deepEqual(restoreState(JSON.stringify(b)).run.blessingRoll,roll);finishRun(b,'death');startRun(b);assert.equal(b.run.blessingRoll,null);
 });
 test('random blessings apply their strong bonuses and severe downsides in the actual run',()=>{
  const run=id=>{const s=rich();s.pendingBlessing=id;s.pendingBlessingRoll={version:1,tier:2,risk:2};startRun(s);return s;};
@@ -40,7 +36,6 @@ test('legacy blessings retain purchased power; corrupt or orphaned new rolls can
  s.pendingBlessing=null;s.pendingBlessingRoll={version:1,tier:1,risk:1};assert.equal(restoreState(JSON.stringify(s)),null);
  copy.run.blessingRoll={version:1,tier:1,risk:7};assert.equal(restoreState(JSON.stringify(copy)),null);
 });
-test('well hides outcome odds and possibilities, then reveals the purchased blessing and curse',()=>{
- const s=rich();s.village.well=10;let html=wellMarkup(s,false,1);assert.doesNotMatch(html,/wish-odds|wish-possibilities|wish-chances|48%|40%|12%|60%|RISCO EXTREMO/);assert.match(html,/FORÇA · CRÍTICOS/);assert.ok(html.includes("BÊNÇÃO + MALDIÇÃO"));assert.match(html,/OFERECER 45/);
- makeOffering(s,1);const b=blessingInfo(s.pendingBlessing,s.pendingBlessingLevel,s.pendingBlessingRoll);html=wellMarkup(s,true,1);assert.ok(html.includes(b.good));assert.ok(html.includes(b.risk));assert.doesNotMatch(html,/wish-odds|wish-chances/);
+test('retired well has no purchase or result screen',()=>{
+ const s=rich();s.village.well=10;assert.equal(wellMarkup(s,false,1),'');assert.equal(makeOffering(s,1),null);assert.equal(wellMarkup(s,true,1),'');
 });

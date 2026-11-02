@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {World,caveEdges,HOTSPOTS,BASE_SIZE,project,caveCameraY} from '../dist/world.js';
+import {World,caveEdges,HOTSPOTS,project,caveCameraY} from '../dist/world.js';
 import {createState,startRun,generateRoom} from '../dist/core.js';
+import {REFUGE_SIZE} from '../dist/refuge-scene.js';
 import {isFloor} from '../dist/cavern.js';
 
 test('wall contours frame only non-walkable boundaries across chamber layouts',()=>{
@@ -15,12 +16,9 @@ test('wall contours frame only non-walkable boundaries across chamber layouts',(
  }
 });
 
-test('village building targets remain separated and contained in the enlarged world',()=>{
- for(const h of HOTSPOTS){assert.ok(h.x-h.w/2>0&&h.x+h.w/2<BASE_SIZE.width);assert.ok(h.y-h.h/2>0&&h.labelY<BASE_SIZE.height);}
- for(let i=0;i<HOTSPOTS.length;i++)for(let j=i+1;j<HOTSPOTS.length;j++){
-  const a=HOTSPOTS[i],b=HOTSPOTS[j],overlapX=Math.abs(a.x-b.x)<(a.w+b.w)/2,overlapY=Math.abs(a.y-b.y)<(a.h+b.h)/2;
-  assert.ok(!(overlapX&&overlapY),a.id+' / '+b.id);
- }
+test('village semantic targets remain unique and contained in the enlarged world',()=>{
+ for(const h of HOTSPOTS){assert.ok(h.x-h.w/2>0&&h.x+h.w/2<REFUGE_SIZE.width);assert.ok(h.y-h.h/2>0&&h.y+h.h/2<REFUGE_SIZE.height&&h.labelY<REFUGE_SIZE.height);}
+ assert.equal(new Set(HOTSPOTS.map(h=>h.id)).size,10,'semantic keyboard targets remain unique; pointers use visible alpha instead of overlapping rectangles');
 });
 
 test('creature visuals settle continuously, freeze while paused and honor reduced motion',()=>{
@@ -29,8 +27,8 @@ test('creature visuals settle continuously, freeze while paused and honor reduce
  actor.x=5;const goal=project(5,5),p=World.prototype.actorPosition.call(world,actor,.016);
  assert.ok(p.x>before.x&&p.x<goal.x);const frozen={...p};
  assert.deepEqual(World.prototype.actorPosition.call(world,actor,0),frozen);
- world.reduced=true;assert.deepEqual(World.prototype.actorPosition.call(world,actor,.016),goal);
- actor.x=10;actor.boss=true;assert.deepEqual(World.prototype.actorPosition.call(world,actor,.016),project(10,5));
+ world.reduced=true;const reduced=World.prototype.actorPosition.call(world,actor,.016);assert.deepEqual({x:reduced.x,y:reduced.y},goal);assert.equal(reduced.direction,'right');
+ actor.x=10;actor.boss=true;const boss=World.prototype.actorPosition.call(world,actor,.016);assert.deepEqual({x:boss.x,y:boss.y},project(10,5));
 });
 
 test('northern spectator burrows fit above the cave without snapping the camera',()=>{

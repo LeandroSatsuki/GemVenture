@@ -1,7 +1,8 @@
+import {rectangularRoom} from './helpers/rectangular-room.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as E from '../dist/core.js';
-function arena(){const s=E.createState(12);E.startRun(s);Object.assign(s.run.room,{floorMask:null,layout:null,explored:null,visible:null,wave:null,terrain:Array((s.run.room.cols||21)*(s.run.room.rows||15)).fill(0),rocks:[],nodes:[],enemies:[],quota:999});return s;}
+function arena(){const s=E.createState(12);E.startRun(s);rectangularRoom(s);Object.assign(s.run.room,{floorMask:null,layout:null,explored:null,visible:null,wave:null,terrain:Array((s.run.room.cols||21)*(s.run.room.rows||15)).fill(0),rocks:[],nodes:[],enemies:[],quota:999});return s;}
 test('movement starts at four legal tiles, ranks add speed, unequipping removes it',()=>{
  const s=arena();E.act(s,{type:'move',x:18,y:11},0);assert.equal(s.run.player.x,7);
  E.act(s,{type:'dodge',dx:-1,dy:0},1);assert.equal(s.run.player.x,3);

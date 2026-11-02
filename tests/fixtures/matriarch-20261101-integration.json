@@ -1,0 +1,21 @@
+{
+  "id": "MATRIARCH-OFFICIAL-R1",
+  "approvedOn": "2026-11-01",
+  "authorization": "Ok, aprovado, pode aplicar no jogo e pode seguir. O próximo boss é ver qual que é, qual a mecânica que você sugere e a gente vai discutindo.",
+  "scope": "Approved Test07 art and combat, native runtime integration only; original palette/camera contracts stay separate.",
+  "files": {
+    "audio.js": "da644323ef51439902ec56499144fe5d9bbd3135f0ab41d50432247b80a9df39",
+    "bosses.js": "54d62be81513bdf09397644b70427279417353daa2a3891465a0c6f2bac2d82a",
+    "core.js": "97ab0f73c6cd6c392a16a9a2bf5afc043310991f6b543ed11f089d1ef25402b2",
+    "matriarch-arena.js": "ce6f0d4aa7d0dbacd65f7356e3f1a71e6229babbb1044a2a34455275408c5526",
+    "matriarch-art.js": "851a7e545efd14ca3638e110312fa6fe7bcf9a1fed973b1054b26bbb04344a3a",
+    "matriarch-bush.js": "5d16f5b1380ea003926d070e1503d126f492d01a421fdaa7662e74c5d8c3c5cf",
+    "matriarch-effects.js": "a722efa2a0e0e3ec520ae7c750d5e32ecb88d09cd8b565826fb7062f06152ffc",
+    "matriarch-egg.js": "f8f6d531dbe2fee907a77f90b1dea026e11b2af5c5b36b0c38778db36ceb9fa7",
+    "matriarch-mechanic.js": "47faf983e78eda5352cd817a24bab797b31aef98735c5757a32b93e3df4900eb",
+    "matriarch-root-geometry.js": "33893c914cb28b07907ba29d4c214cc50d40d6bf428a49e47fb55e005fdaed6b",
+    "matriarch-sfx.js": "1990a6b3194f9fd8a06f25361b952a7720c7b7a9ef6e163bbbde4a84343781be",
+    "run.js": "c0612c6cbbcd420a1605f5d778624a0efe96623ddf9f3a9b6120f95fc4ae489e",
+    "world.js": "10a3d78303668e077ad97dc4b3669f37058c9065991db1b0ebdba961f1936f07"
+  }
+}

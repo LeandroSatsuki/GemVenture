@@ -1,0 +1,4304 @@
+{
+  "epoch": 1700000000000,
+  "engine": "GV046 exact runtime",
+  "cases": [
+    {
+      "id": "credit-kind-0",
+      "before": {
+        "version": 2,
+        "campaignVersion": 2,
+        "talents": {
+          "version": 1,
+          "revision": 0,
+          "ranks": {},
+          "spent": {}
+        },
+        "astral": {
+          "version": 1,
+          "revision": 0,
+          "rolls": 0,
+          "owned": [],
+          "equipped": [],
+          "offer": [],
+          "last": null
+        },
+        "descent": {
+          "version": 1,
+          "bosses": [],
+          "stops": [
+            1
+          ],
+          "gate": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": {}
+        },
+        "zag": {
+          "version": 4,
+          "bonusDice": 0,
+          "sigils": [],
+          "gears": 0,
+          "collections": 0,
+          "modules": {
+            "treasure": 0,
+            "protection": 0,
+            "precision": 0
+          },
+          "adjustments": 0,
+          "passes": 0,
+          "mined": 0,
+          "rounds": 0,
+          "position": 0,
+          "dice": 0,
+          "hand": [],
+          "route": "safe",
+          "lastRoute": "safe",
+          "jump": 0,
+          "swap": null,
+          "fragments": 0,
+          "tools": {
+            "jump": 0,
+            "magnet": 0,
+            "invert": 0
+          },
+          "investment": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "satchel": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "guard": 0,
+          "luck": 0,
+          "active": null,
+          "result": null,
+          "history": []
+        },
+        "miner": {
+          "version": 4,
+          "seed": 6,
+          "enabled": true,
+          "level": 1,
+          "core": 0,
+          "power": 0,
+          "side": 0,
+          "bombs": 0,
+          "offline": 0,
+          "focus": -1,
+          "gravel": 0,
+          "fragments": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crystals": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "cuts": [],
+          "steps": 0,
+          "blocks": 0,
+          "pulses": 0,
+          "combo": 0,
+          "col": 3,
+          "origin": 3,
+          "direction": 1,
+          "overdrive": 0,
+          "crystalRush": 8000,
+          "doubleLoot": 0,
+          "oreCharge": 90000,
+          "passes": 0,
+          "lastAt": 1700000000000,
+          "carry": 0,
+          "impacts": 0,
+          "motions": 0,
+          "rewardSeq": 0,
+          "tipRow": 0,
+          "tipCol": 3,
+          "launch": false,
+          "damage": null,
+          "legacyCarry": false
+        },
+        "village": {
+          "forge": 1,
+          "well": 1,
+          "missions": 1
+        },
+        "records": {
+          "owned": [
+            "pulse"
+          ],
+          "active": "pulse"
+        },
+        "experience": {
+          "level": 1,
+          "xp": 0,
+          "points": 0
+        },
+        "legacyForce": 0,
+        "offerings": 0,
+        "pendingBlessing": null,
+        "pendingBlessingLevel": 1,
+        "pendingBlessingRoll": null,
+        "relics": [],
+        "materials": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "forge": {
+          "version": 5,
+          "legacy": {
+            "pickaxe": 0,
+            "vigor": 0,
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "levels": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "invested": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "materials": {
+            "anvil": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "armor": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "tonic": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "vault": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "gear": {
+            "version": 1,
+            "items": {
+              "helmet": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "chest": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pants": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "boots": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "necklace": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "ring": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "backpack": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pickaxe": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              }
+            },
+            "pending": null
+          }
+        },
+        "seed": 6,
+        "abyssBest": 0,
+        "bank": 30,
+        "essence": 0,
+        "mission": null,
+        "extraMissions": [],
+        "missionRoll": 0,
+        "missionBoard": {
+          "key": "",
+          "offers": []
+        },
+        "missionsCompleted": 0,
+        "stars": 0,
+        "starUpgrades": {
+          "supplies": 0,
+          "charge": 0,
+          "yield": 0
+        },
+        "level": 1,
+        "core": 0,
+        "seals": 0,
+        "best": 0,
+        "attempts": 0,
+        "deaths": 0,
+        "unlocked": [],
+        "equipped": [],
+        "skillRanks": {},
+        "totalGems": 0,
+        "bestCombo": 0,
+        "run": null,
+        "lastResult": null
+      },
+      "elapsedMs": 1000,
+      "gain": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "credit-kind-1",
+      "before": {
+        "version": 2,
+        "campaignVersion": 2,
+        "talents": {
+          "version": 1,
+          "revision": 0,
+          "ranks": {},
+          "spent": {}
+        },
+        "astral": {
+          "version": 1,
+          "revision": 0,
+          "rolls": 0,
+          "owned": [],
+          "equipped": [],
+          "offer": [],
+          "last": null
+        },
+        "descent": {
+          "version": 1,
+          "bosses": [],
+          "stops": [
+            1
+          ],
+          "gate": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": {}
+        },
+        "zag": {
+          "version": 4,
+          "bonusDice": 0,
+          "sigils": [],
+          "gears": 0,
+          "collections": 0,
+          "modules": {
+            "treasure": 0,
+            "protection": 0,
+            "precision": 0
+          },
+          "adjustments": 0,
+          "passes": 0,
+          "mined": 0,
+          "rounds": 0,
+          "position": 0,
+          "dice": 0,
+          "hand": [],
+          "route": "safe",
+          "lastRoute": "safe",
+          "jump": 0,
+          "swap": null,
+          "fragments": 0,
+          "tools": {
+            "jump": 0,
+            "magnet": 0,
+            "invert": 0
+          },
+          "investment": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "satchel": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "guard": 0,
+          "luck": 0,
+          "active": null,
+          "result": null,
+          "history": []
+        },
+        "miner": {
+          "version": 4,
+          "seed": 1,
+          "enabled": true,
+          "level": 1,
+          "core": 0,
+          "power": 0,
+          "side": 0,
+          "bombs": 0,
+          "offline": 0,
+          "focus": -1,
+          "gravel": 0,
+          "fragments": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crystals": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "cuts": [],
+          "steps": 0,
+          "blocks": 0,
+          "pulses": 0,
+          "combo": 0,
+          "col": 3,
+          "origin": 3,
+          "direction": 1,
+          "overdrive": 0,
+          "crystalRush": 8000,
+          "doubleLoot": 0,
+          "oreCharge": 90000,
+          "passes": 0,
+          "lastAt": 1700000000000,
+          "carry": 0,
+          "impacts": 0,
+          "motions": 0,
+          "rewardSeq": 0,
+          "tipRow": 0,
+          "tipCol": 3,
+          "launch": false,
+          "damage": null,
+          "legacyCarry": false
+        },
+        "village": {
+          "forge": 1,
+          "well": 1,
+          "missions": 1
+        },
+        "records": {
+          "owned": [
+            "pulse"
+          ],
+          "active": "pulse"
+        },
+        "experience": {
+          "level": 1,
+          "xp": 0,
+          "points": 0
+        },
+        "legacyForce": 0,
+        "offerings": 0,
+        "pendingBlessing": null,
+        "pendingBlessingLevel": 1,
+        "pendingBlessingRoll": null,
+        "relics": [],
+        "materials": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "forge": {
+          "version": 5,
+          "legacy": {
+            "pickaxe": 0,
+            "vigor": 0,
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "levels": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "invested": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "materials": {
+            "anvil": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "armor": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "tonic": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "vault": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "gear": {
+            "version": 1,
+            "items": {
+              "helmet": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "chest": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pants": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "boots": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "necklace": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "ring": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "backpack": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pickaxe": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              }
+            },
+            "pending": null
+          }
+        },
+        "seed": 1,
+        "abyssBest": 0,
+        "bank": 30,
+        "essence": 0,
+        "mission": null,
+        "extraMissions": [],
+        "missionRoll": 0,
+        "missionBoard": {
+          "key": "",
+          "offers": []
+        },
+        "missionsCompleted": 0,
+        "stars": 0,
+        "starUpgrades": {
+          "supplies": 0,
+          "charge": 0,
+          "yield": 0
+        },
+        "level": 1,
+        "core": 0,
+        "seals": 0,
+        "best": 0,
+        "attempts": 0,
+        "deaths": 0,
+        "unlocked": [],
+        "equipped": [],
+        "skillRanks": {},
+        "totalGems": 0,
+        "bestCombo": 0,
+        "run": null,
+        "lastResult": null
+      },
+      "elapsedMs": 1000,
+      "gain": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "credit-kind-2",
+      "before": {
+        "version": 2,
+        "campaignVersion": 2,
+        "talents": {
+          "version": 1,
+          "revision": 0,
+          "ranks": {},
+          "spent": {}
+        },
+        "astral": {
+          "version": 1,
+          "revision": 0,
+          "rolls": 0,
+          "owned": [],
+          "equipped": [],
+          "offer": [],
+          "last": null
+        },
+        "descent": {
+          "version": 1,
+          "bosses": [],
+          "stops": [
+            1
+          ],
+          "gate": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": {}
+        },
+        "zag": {
+          "version": 4,
+          "bonusDice": 0,
+          "sigils": [],
+          "gears": 0,
+          "collections": 0,
+          "modules": {
+            "treasure": 0,
+            "protection": 0,
+            "precision": 0
+          },
+          "adjustments": 0,
+          "passes": 0,
+          "mined": 0,
+          "rounds": 0,
+          "position": 0,
+          "dice": 0,
+          "hand": [],
+          "route": "safe",
+          "lastRoute": "safe",
+          "jump": 0,
+          "swap": null,
+          "fragments": 0,
+          "tools": {
+            "jump": 0,
+            "magnet": 0,
+            "invert": 0
+          },
+          "investment": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "satchel": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "guard": 0,
+          "luck": 0,
+          "active": null,
+          "result": null,
+          "history": []
+        },
+        "miner": {
+          "version": 4,
+          "seed": 7,
+          "enabled": true,
+          "level": 1,
+          "core": 0,
+          "power": 0,
+          "side": 0,
+          "bombs": 0,
+          "offline": 0,
+          "focus": -1,
+          "gravel": 0,
+          "fragments": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crystals": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "cuts": [],
+          "steps": 0,
+          "blocks": 0,
+          "pulses": 0,
+          "combo": 0,
+          "col": 3,
+          "origin": 3,
+          "direction": 1,
+          "overdrive": 0,
+          "crystalRush": 8000,
+          "doubleLoot": 0,
+          "oreCharge": 90000,
+          "passes": 0,
+          "lastAt": 1700000000000,
+          "carry": 0,
+          "impacts": 0,
+          "motions": 0,
+          "rewardSeq": 0,
+          "tipRow": 0,
+          "tipCol": 3,
+          "launch": false,
+          "damage": null,
+          "legacyCarry": false
+        },
+        "village": {
+          "forge": 1,
+          "well": 1,
+          "missions": 1
+        },
+        "records": {
+          "owned": [
+            "pulse"
+          ],
+          "active": "pulse"
+        },
+        "experience": {
+          "level": 1,
+          "xp": 0,
+          "points": 0
+        },
+        "legacyForce": 0,
+        "offerings": 0,
+        "pendingBlessing": null,
+        "pendingBlessingLevel": 1,
+        "pendingBlessingRoll": null,
+        "relics": [],
+        "materials": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "forge": {
+          "version": 5,
+          "legacy": {
+            "pickaxe": 0,
+            "vigor": 0,
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "levels": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "invested": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "materials": {
+            "anvil": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "armor": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "tonic": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "vault": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "gear": {
+            "version": 1,
+            "items": {
+              "helmet": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "chest": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pants": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "boots": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "necklace": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "ring": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "backpack": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pickaxe": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              }
+            },
+            "pending": null
+          }
+        },
+        "seed": 7,
+        "abyssBest": 0,
+        "bank": 30,
+        "essence": 0,
+        "mission": null,
+        "extraMissions": [],
+        "missionRoll": 0,
+        "missionBoard": {
+          "key": "",
+          "offers": []
+        },
+        "missionsCompleted": 0,
+        "stars": 0,
+        "starUpgrades": {
+          "supplies": 0,
+          "charge": 0,
+          "yield": 0
+        },
+        "level": 1,
+        "core": 0,
+        "seals": 0,
+        "best": 0,
+        "attempts": 0,
+        "deaths": 0,
+        "unlocked": [],
+        "equipped": [],
+        "skillRanks": {},
+        "totalGems": 0,
+        "bestCombo": 0,
+        "run": null,
+        "lastResult": null
+      },
+      "elapsedMs": 1000,
+      "gain": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "credit-kind-3",
+      "before": {
+        "version": 2,
+        "campaignVersion": 2,
+        "talents": {
+          "version": 1,
+          "revision": 0,
+          "ranks": {},
+          "spent": {}
+        },
+        "astral": {
+          "version": 1,
+          "revision": 0,
+          "rolls": 0,
+          "owned": [],
+          "equipped": [],
+          "offer": [],
+          "last": null
+        },
+        "descent": {
+          "version": 1,
+          "bosses": [],
+          "stops": [
+            1
+          ],
+          "gate": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": {}
+        },
+        "zag": {
+          "version": 4,
+          "bonusDice": 0,
+          "sigils": [],
+          "gears": 0,
+          "collections": 0,
+          "modules": {
+            "treasure": 0,
+            "protection": 0,
+            "precision": 0
+          },
+          "adjustments": 0,
+          "passes": 0,
+          "mined": 0,
+          "rounds": 0,
+          "position": 0,
+          "dice": 0,
+          "hand": [],
+          "route": "safe",
+          "lastRoute": "safe",
+          "jump": 0,
+          "swap": null,
+          "fragments": 0,
+          "tools": {
+            "jump": 0,
+            "magnet": 0,
+            "invert": 0
+          },
+          "investment": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "satchel": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "guard": 0,
+          "luck": 0,
+          "active": null,
+          "result": null,
+          "history": []
+        },
+        "miner": {
+          "version": 4,
+          "seed": 3,
+          "enabled": true,
+          "level": 1,
+          "core": 0,
+          "power": 0,
+          "side": 0,
+          "bombs": 0,
+          "offline": 0,
+          "focus": -1,
+          "gravel": 0,
+          "fragments": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crystals": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "cuts": [],
+          "steps": 0,
+          "blocks": 0,
+          "pulses": 0,
+          "combo": 0,
+          "col": 3,
+          "origin": 3,
+          "direction": 1,
+          "overdrive": 0,
+          "crystalRush": 8000,
+          "doubleLoot": 0,
+          "oreCharge": 90000,
+          "passes": 0,
+          "lastAt": 1700000000000,
+          "carry": 0,
+          "impacts": 0,
+          "motions": 0,
+          "rewardSeq": 0,
+          "tipRow": 0,
+          "tipCol": 3,
+          "launch": false,
+          "damage": null,
+          "legacyCarry": false
+        },
+        "village": {
+          "forge": 1,
+          "well": 1,
+          "missions": 1
+        },
+        "records": {
+          "owned": [
+            "pulse"
+          ],
+          "active": "pulse"
+        },
+        "experience": {
+          "level": 1,
+          "xp": 0,
+          "points": 0
+        },
+        "legacyForce": 0,
+        "offerings": 0,
+        "pendingBlessing": null,
+        "pendingBlessingLevel": 1,
+        "pendingBlessingRoll": null,
+        "relics": [],
+        "materials": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "forge": {
+          "version": 5,
+          "legacy": {
+            "pickaxe": 0,
+            "vigor": 0,
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "levels": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "invested": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "materials": {
+            "anvil": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "armor": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "tonic": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "vault": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "gear": {
+            "version": 1,
+            "items": {
+              "helmet": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "chest": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pants": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "boots": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "necklace": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "ring": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "backpack": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pickaxe": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              }
+            },
+            "pending": null
+          }
+        },
+        "seed": 3,
+        "abyssBest": 0,
+        "bank": 30,
+        "essence": 0,
+        "mission": null,
+        "extraMissions": [],
+        "missionRoll": 0,
+        "missionBoard": {
+          "key": "",
+          "offers": []
+        },
+        "missionsCompleted": 0,
+        "stars": 0,
+        "starUpgrades": {
+          "supplies": 0,
+          "charge": 0,
+          "yield": 0
+        },
+        "level": 1,
+        "core": 0,
+        "seals": 0,
+        "best": 0,
+        "attempts": 0,
+        "deaths": 0,
+        "unlocked": [],
+        "equipped": [],
+        "skillRanks": {},
+        "totalGems": 0,
+        "bestCombo": 0,
+        "run": null,
+        "lastResult": null
+      },
+      "elapsedMs": 1000,
+      "gain": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "empty-reserve",
+      "before": {
+        "version": 2,
+        "campaignVersion": 2,
+        "talents": {
+          "version": 1,
+          "revision": 0,
+          "ranks": {},
+          "spent": {}
+        },
+        "astral": {
+          "version": 1,
+          "revision": 0,
+          "rolls": 0,
+          "owned": [],
+          "equipped": [],
+          "offer": [],
+          "last": null
+        },
+        "descent": {
+          "version": 1,
+          "bosses": [],
+          "stops": [
+            1
+          ],
+          "gate": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": {}
+        },
+        "zag": {
+          "version": 4,
+          "bonusDice": 0,
+          "sigils": [],
+          "gears": 0,
+          "collections": 0,
+          "modules": {
+            "treasure": 0,
+            "protection": 0,
+            "precision": 0
+          },
+          "adjustments": 0,
+          "passes": 0,
+          "mined": 0,
+          "rounds": 0,
+          "position": 0,
+          "dice": 0,
+          "hand": [],
+          "route": "safe",
+          "lastRoute": "safe",
+          "jump": 0,
+          "swap": null,
+          "fragments": 0,
+          "tools": {
+            "jump": 0,
+            "magnet": 0,
+            "invert": 0
+          },
+          "investment": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "satchel": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "guard": 0,
+          "luck": 0,
+          "active": null,
+          "result": null,
+          "history": []
+        },
+        "miner": {
+          "version": 4,
+          "seed": 1,
+          "enabled": true,
+          "level": 1,
+          "core": 0,
+          "power": 0,
+          "side": 0,
+          "bombs": 0,
+          "offline": 0,
+          "focus": -1,
+          "gravel": 0,
+          "fragments": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crystals": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "cuts": [],
+          "steps": 0,
+          "blocks": 0,
+          "pulses": 0,
+          "combo": 0,
+          "col": 3,
+          "origin": 3,
+          "direction": 1,
+          "overdrive": 0,
+          "crystalRush": 8000,
+          "doubleLoot": 0,
+          "oreCharge": 0,
+          "passes": 0,
+          "lastAt": 1700000000000,
+          "carry": 0,
+          "impacts": 0,
+          "motions": 0,
+          "rewardSeq": 0,
+          "tipRow": 0,
+          "tipCol": 3,
+          "launch": false,
+          "damage": null,
+          "legacyCarry": false
+        },
+        "village": {
+          "forge": 1,
+          "well": 1,
+          "missions": 1
+        },
+        "records": {
+          "owned": [
+            "pulse"
+          ],
+          "active": "pulse"
+        },
+        "experience": {
+          "level": 1,
+          "xp": 0,
+          "points": 0
+        },
+        "legacyForce": 0,
+        "offerings": 0,
+        "pendingBlessing": null,
+        "pendingBlessingLevel": 1,
+        "pendingBlessingRoll": null,
+        "relics": [],
+        "materials": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "forge": {
+          "version": 5,
+          "legacy": {
+            "pickaxe": 0,
+            "vigor": 0,
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "levels": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "invested": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "materials": {
+            "anvil": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "armor": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "tonic": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "vault": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "gear": {
+            "version": 1,
+            "items": {
+              "helmet": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "chest": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pants": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "boots": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "necklace": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "ring": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "backpack": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pickaxe": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              }
+            },
+            "pending": null
+          }
+        },
+        "seed": 1,
+        "abyssBest": 0,
+        "bank": 30,
+        "essence": 0,
+        "mission": null,
+        "extraMissions": [],
+        "missionRoll": 0,
+        "missionBoard": {
+          "key": "",
+          "offers": []
+        },
+        "missionsCompleted": 0,
+        "stars": 0,
+        "starUpgrades": {
+          "supplies": 0,
+          "charge": 0,
+          "yield": 0
+        },
+        "level": 1,
+        "core": 0,
+        "seals": 0,
+        "best": 0,
+        "attempts": 0,
+        "deaths": 0,
+        "unlocked": [],
+        "equipped": [],
+        "skillRanks": {},
+        "totalGems": 0,
+        "bestCombo": 0,
+        "run": null,
+        "lastResult": null
+      },
+      "elapsedMs": 1000,
+      "gain": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "double-jazida",
+      "before": {
+        "version": 2,
+        "campaignVersion": 2,
+        "talents": {
+          "version": 1,
+          "revision": 0,
+          "ranks": {},
+          "spent": {}
+        },
+        "astral": {
+          "version": 1,
+          "revision": 0,
+          "rolls": 0,
+          "owned": [],
+          "equipped": [],
+          "offer": [],
+          "last": null
+        },
+        "descent": {
+          "version": 1,
+          "bosses": [],
+          "stops": [
+            1
+          ],
+          "gate": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": {}
+        },
+        "zag": {
+          "version": 4,
+          "bonusDice": 0,
+          "sigils": [],
+          "gears": 0,
+          "collections": 0,
+          "modules": {
+            "treasure": 0,
+            "protection": 0,
+            "precision": 0
+          },
+          "adjustments": 0,
+          "passes": 0,
+          "mined": 0,
+          "rounds": 0,
+          "position": 0,
+          "dice": 0,
+          "hand": [],
+          "route": "safe",
+          "lastRoute": "safe",
+          "jump": 0,
+          "swap": null,
+          "fragments": 0,
+          "tools": {
+            "jump": 0,
+            "magnet": 0,
+            "invert": 0
+          },
+          "investment": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "satchel": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "guard": 0,
+          "luck": 0,
+          "active": null,
+          "result": null,
+          "history": []
+        },
+        "miner": {
+          "version": 4,
+          "seed": 1,
+          "enabled": true,
+          "level": 1,
+          "core": 0,
+          "power": 0,
+          "side": 0,
+          "bombs": 0,
+          "offline": 0,
+          "focus": -1,
+          "gravel": 0,
+          "fragments": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crystals": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "cuts": [],
+          "steps": 0,
+          "blocks": 0,
+          "pulses": 0,
+          "combo": 0,
+          "col": 3,
+          "origin": 3,
+          "direction": 1,
+          "overdrive": 0,
+          "crystalRush": 8000,
+          "doubleLoot": 8000,
+          "oreCharge": 90000,
+          "passes": 0,
+          "lastAt": 1700000000000,
+          "carry": 0,
+          "impacts": 0,
+          "motions": 0,
+          "rewardSeq": 0,
+          "tipRow": 0,
+          "tipCol": 3,
+          "launch": false,
+          "damage": null,
+          "legacyCarry": false
+        },
+        "village": {
+          "forge": 1,
+          "well": 1,
+          "missions": 1
+        },
+        "records": {
+          "owned": [
+            "pulse"
+          ],
+          "active": "pulse"
+        },
+        "experience": {
+          "level": 1,
+          "xp": 0,
+          "points": 0
+        },
+        "legacyForce": 0,
+        "offerings": 0,
+        "pendingBlessing": null,
+        "pendingBlessingLevel": 1,
+        "pendingBlessingRoll": null,
+        "relics": [],
+        "materials": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "forge": {
+          "version": 5,
+          "legacy": {
+            "pickaxe": 0,
+            "vigor": 0,
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "levels": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "invested": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "materials": {
+            "anvil": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "armor": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "tonic": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "vault": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "gear": {
+            "version": 1,
+            "items": {
+              "helmet": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "chest": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pants": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "boots": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "necklace": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "ring": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "backpack": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pickaxe": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              }
+            },
+            "pending": null
+          }
+        },
+        "seed": 1,
+        "abyssBest": 0,
+        "bank": 30,
+        "essence": 0,
+        "mission": null,
+        "extraMissions": [],
+        "missionRoll": 0,
+        "missionBoard": {
+          "key": "",
+          "offers": []
+        },
+        "missionsCompleted": 0,
+        "stars": 0,
+        "starUpgrades": {
+          "supplies": 0,
+          "charge": 0,
+          "yield": 0
+        },
+        "level": 1,
+        "core": 0,
+        "seals": 0,
+        "best": 0,
+        "attempts": 0,
+        "deaths": 0,
+        "unlocked": [],
+        "equipped": [],
+        "skillRanks": {},
+        "totalGems": 0,
+        "bestCombo": 0,
+        "run": null,
+        "lastResult": null
+      },
+      "elapsedMs": 1000,
+      "gain": [
+        0,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pulse-empty",
+      "before": {
+        "version": 2,
+        "campaignVersion": 2,
+        "talents": {
+          "version": 1,
+          "revision": 0,
+          "ranks": {},
+          "spent": {}
+        },
+        "astral": {
+          "version": 1,
+          "revision": 0,
+          "rolls": 0,
+          "owned": [],
+          "equipped": [],
+          "offer": [],
+          "last": null
+        },
+        "descent": {
+          "version": 1,
+          "bosses": [],
+          "stops": [
+            1
+          ],
+          "gate": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": {}
+        },
+        "zag": {
+          "version": 4,
+          "bonusDice": 0,
+          "sigils": [],
+          "gears": 0,
+          "collections": 0,
+          "modules": {
+            "treasure": 0,
+            "protection": 0,
+            "precision": 0
+          },
+          "adjustments": 0,
+          "passes": 0,
+          "mined": 0,
+          "rounds": 0,
+          "position": 0,
+          "dice": 0,
+          "hand": [],
+          "route": "safe",
+          "lastRoute": "safe",
+          "jump": 0,
+          "swap": null,
+          "fragments": 0,
+          "tools": {
+            "jump": 0,
+            "magnet": 0,
+            "invert": 0
+          },
+          "investment": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "satchel": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "guard": 0,
+          "luck": 0,
+          "active": null,
+          "result": null,
+          "history": []
+        },
+        "miner": {
+          "version": 4,
+          "seed": 1,
+          "enabled": true,
+          "level": 1,
+          "core": 0,
+          "power": 0,
+          "side": 0,
+          "bombs": 0,
+          "offline": 0,
+          "focus": -1,
+          "gravel": 0,
+          "fragments": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crystals": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "cuts": [],
+          "steps": 0,
+          "blocks": 0,
+          "pulses": 0,
+          "combo": 49,
+          "col": 3,
+          "origin": 3,
+          "direction": 1,
+          "overdrive": 0,
+          "crystalRush": 0,
+          "doubleLoot": 0,
+          "oreCharge": 0,
+          "passes": 0,
+          "lastAt": 1700000000000,
+          "carry": 0,
+          "impacts": 0,
+          "motions": 0,
+          "rewardSeq": 0,
+          "tipRow": 0,
+          "tipCol": 3,
+          "launch": false,
+          "damage": null,
+          "legacyCarry": false
+        },
+        "village": {
+          "forge": 1,
+          "well": 1,
+          "missions": 1
+        },
+        "records": {
+          "owned": [
+            "pulse"
+          ],
+          "active": "pulse"
+        },
+        "experience": {
+          "level": 1,
+          "xp": 0,
+          "points": 0
+        },
+        "legacyForce": 0,
+        "offerings": 0,
+        "pendingBlessing": null,
+        "pendingBlessingLevel": 1,
+        "pendingBlessingRoll": null,
+        "relics": [],
+        "materials": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "forge": {
+          "version": 5,
+          "legacy": {
+            "pickaxe": 0,
+            "vigor": 0,
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "levels": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "invested": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "materials": {
+            "anvil": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "armor": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "tonic": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "vault": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "gear": {
+            "version": 1,
+            "items": {
+              "helmet": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "chest": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pants": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "boots": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "necklace": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "ring": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "backpack": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pickaxe": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              }
+            },
+            "pending": null
+          }
+        },
+        "seed": 1,
+        "abyssBest": 0,
+        "bank": 30,
+        "essence": 0,
+        "mission": null,
+        "extraMissions": [],
+        "missionRoll": 0,
+        "missionBoard": {
+          "key": "",
+          "offers": []
+        },
+        "missionsCompleted": 0,
+        "stars": 0,
+        "starUpgrades": {
+          "supplies": 0,
+          "charge": 0,
+          "yield": 0
+        },
+        "level": 1,
+        "core": 0,
+        "seals": 0,
+        "best": 0,
+        "attempts": 0,
+        "deaths": 0,
+        "unlocked": [],
+        "equipped": [],
+        "skillRanks": {},
+        "totalGems": 0,
+        "bestCombo": 0,
+        "run": null,
+        "lastResult": null
+      },
+      "elapsedMs": 1000,
+      "gain": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pulse-paid",
+      "before": {
+        "version": 2,
+        "campaignVersion": 2,
+        "talents": {
+          "version": 1,
+          "revision": 0,
+          "ranks": {},
+          "spent": {}
+        },
+        "astral": {
+          "version": 1,
+          "revision": 0,
+          "rolls": 0,
+          "owned": [],
+          "equipped": [],
+          "offer": [],
+          "last": null
+        },
+        "descent": {
+          "version": 1,
+          "bosses": [],
+          "stops": [
+            1
+          ],
+          "gate": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": {}
+        },
+        "zag": {
+          "version": 4,
+          "bonusDice": 0,
+          "sigils": [],
+          "gears": 0,
+          "collections": 0,
+          "modules": {
+            "treasure": 0,
+            "protection": 0,
+            "precision": 0
+          },
+          "adjustments": 0,
+          "passes": 0,
+          "mined": 0,
+          "rounds": 0,
+          "position": 0,
+          "dice": 0,
+          "hand": [],
+          "route": "safe",
+          "lastRoute": "safe",
+          "jump": 0,
+          "swap": null,
+          "fragments": 0,
+          "tools": {
+            "jump": 0,
+            "magnet": 0,
+            "invert": 0
+          },
+          "investment": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "satchel": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "guard": 0,
+          "luck": 0,
+          "active": null,
+          "result": null,
+          "history": []
+        },
+        "miner": {
+          "version": 4,
+          "seed": 1,
+          "enabled": true,
+          "level": 1,
+          "core": 0,
+          "power": 0,
+          "side": 0,
+          "bombs": 0,
+          "offline": 0,
+          "focus": -1,
+          "gravel": 0,
+          "fragments": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crystals": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "cuts": [],
+          "steps": 0,
+          "blocks": 0,
+          "pulses": 0,
+          "combo": 49,
+          "col": 3,
+          "origin": 3,
+          "direction": 1,
+          "overdrive": 0,
+          "crystalRush": 0,
+          "doubleLoot": 0,
+          "oreCharge": 90000,
+          "passes": 0,
+          "lastAt": 1700000000000,
+          "carry": 0,
+          "impacts": 0,
+          "motions": 0,
+          "rewardSeq": 0,
+          "tipRow": 0,
+          "tipCol": 3,
+          "launch": false,
+          "damage": null,
+          "legacyCarry": false
+        },
+        "village": {
+          "forge": 1,
+          "well": 1,
+          "missions": 1
+        },
+        "records": {
+          "owned": [
+            "pulse"
+          ],
+          "active": "pulse"
+        },
+        "experience": {
+          "level": 1,
+          "xp": 0,
+          "points": 0
+        },
+        "legacyForce": 0,
+        "offerings": 0,
+        "pendingBlessing": null,
+        "pendingBlessingLevel": 1,
+        "pendingBlessingRoll": null,
+        "relics": [],
+        "materials": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "forge": {
+          "version": 5,
+          "legacy": {
+            "pickaxe": 0,
+            "vigor": 0,
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "levels": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "invested": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "materials": {
+            "anvil": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "armor": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "tonic": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "vault": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "gear": {
+            "version": 1,
+            "items": {
+              "helmet": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "chest": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pants": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "boots": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "necklace": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "ring": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "backpack": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pickaxe": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              }
+            },
+            "pending": null
+          }
+        },
+        "seed": 1,
+        "abyssBest": 0,
+        "bank": 30,
+        "essence": 0,
+        "mission": null,
+        "extraMissions": [],
+        "missionRoll": 0,
+        "missionBoard": {
+          "key": "",
+          "offers": []
+        },
+        "missionsCompleted": 0,
+        "stars": 0,
+        "starUpgrades": {
+          "supplies": 0,
+          "charge": 0,
+          "yield": 0
+        },
+        "level": 1,
+        "core": 0,
+        "seals": 0,
+        "best": 0,
+        "attempts": 0,
+        "deaths": 0,
+        "unlocked": [],
+        "equipped": [],
+        "skillRanks": {},
+        "totalGems": 0,
+        "bestCombo": 0,
+        "run": null,
+        "lastResult": null
+      },
+      "elapsedMs": 1000,
+      "gain": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "cascade",
+      "before": {
+        "version": 2,
+        "campaignVersion": 2,
+        "talents": {
+          "version": 1,
+          "revision": 0,
+          "ranks": {},
+          "spent": {}
+        },
+        "astral": {
+          "version": 1,
+          "revision": 0,
+          "rolls": 0,
+          "owned": [],
+          "equipped": [],
+          "offer": [],
+          "last": null
+        },
+        "descent": {
+          "version": 1,
+          "bosses": [],
+          "stops": [
+            1
+          ],
+          "gate": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": {}
+        },
+        "zag": {
+          "version": 4,
+          "bonusDice": 0,
+          "sigils": [],
+          "gears": 0,
+          "collections": 0,
+          "modules": {
+            "treasure": 0,
+            "protection": 0,
+            "precision": 0
+          },
+          "adjustments": 0,
+          "passes": 0,
+          "mined": 0,
+          "rounds": 0,
+          "position": 0,
+          "dice": 0,
+          "hand": [],
+          "route": "safe",
+          "lastRoute": "safe",
+          "jump": 0,
+          "swap": null,
+          "fragments": 0,
+          "tools": {
+            "jump": 0,
+            "magnet": 0,
+            "invert": 0
+          },
+          "investment": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "satchel": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "guard": 0,
+          "luck": 0,
+          "active": null,
+          "result": null,
+          "history": []
+        },
+        "miner": {
+          "version": 4,
+          "seed": 11,
+          "enabled": true,
+          "level": 1,
+          "core": 0,
+          "power": 0,
+          "side": 0,
+          "bombs": 2,
+          "offline": 0,
+          "focus": -1,
+          "gravel": 0,
+          "fragments": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crystals": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "cuts": [],
+          "steps": 0,
+          "blocks": 0,
+          "pulses": 0,
+          "combo": 49,
+          "col": 3,
+          "origin": 3,
+          "direction": 1,
+          "overdrive": 0,
+          "crystalRush": 0,
+          "doubleLoot": 0,
+          "oreCharge": 90000,
+          "passes": 0,
+          "lastAt": 1700000000000,
+          "carry": 0,
+          "impacts": 0,
+          "motions": 0,
+          "rewardSeq": 0,
+          "tipRow": 0,
+          "tipCol": 3,
+          "launch": false,
+          "damage": null,
+          "legacyCarry": false
+        },
+        "village": {
+          "forge": 1,
+          "well": 1,
+          "missions": 1
+        },
+        "records": {
+          "owned": [
+            "pulse"
+          ],
+          "active": "pulse"
+        },
+        "experience": {
+          "level": 1,
+          "xp": 0,
+          "points": 0
+        },
+        "legacyForce": 0,
+        "offerings": 0,
+        "pendingBlessing": null,
+        "pendingBlessingLevel": 1,
+        "pendingBlessingRoll": null,
+        "relics": [],
+        "materials": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "forge": {
+          "version": 5,
+          "legacy": {
+            "pickaxe": 0,
+            "vigor": 0,
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "levels": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "invested": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "materials": {
+            "anvil": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "armor": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "tonic": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "vault": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "gear": {
+            "version": 1,
+            "items": {
+              "helmet": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "chest": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pants": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "boots": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "necklace": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "ring": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "backpack": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pickaxe": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              }
+            },
+            "pending": null
+          }
+        },
+        "seed": 11,
+        "abyssBest": 0,
+        "bank": 30,
+        "essence": 0,
+        "mission": null,
+        "extraMissions": [],
+        "missionRoll": 0,
+        "missionBoard": {
+          "key": "",
+          "offers": []
+        },
+        "missionsCompleted": 0,
+        "stars": 0,
+        "starUpgrades": {
+          "supplies": 0,
+          "charge": 0,
+          "yield": 0
+        },
+        "level": 1,
+        "core": 0,
+        "seals": 0,
+        "best": 0,
+        "attempts": 0,
+        "deaths": 0,
+        "unlocked": [],
+        "equipped": [],
+        "skillRanks": {},
+        "totalGems": 0,
+        "bestCombo": 0,
+        "run": null,
+        "lastResult": null
+      },
+      "elapsedMs": 1000,
+      "gain": [
+        0,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tail-four",
+      "before": {
+        "version": 2,
+        "campaignVersion": 2,
+        "talents": {
+          "version": 1,
+          "revision": 0,
+          "ranks": {},
+          "spent": {}
+        },
+        "astral": {
+          "version": 1,
+          "revision": 0,
+          "rolls": 0,
+          "owned": [],
+          "equipped": [],
+          "offer": [],
+          "last": null
+        },
+        "descent": {
+          "version": 1,
+          "bosses": [],
+          "stops": [
+            1
+          ],
+          "gate": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": {}
+        },
+        "zag": {
+          "version": 4,
+          "bonusDice": 0,
+          "sigils": [],
+          "gears": 0,
+          "collections": 0,
+          "modules": {
+            "treasure": 0,
+            "protection": 0,
+            "precision": 0
+          },
+          "adjustments": 0,
+          "passes": 0,
+          "mined": 0,
+          "rounds": 0,
+          "position": 0,
+          "dice": 0,
+          "hand": [],
+          "route": "safe",
+          "lastRoute": "safe",
+          "jump": 0,
+          "swap": null,
+          "fragments": 0,
+          "tools": {
+            "jump": 0,
+            "magnet": 0,
+            "invert": 0
+          },
+          "investment": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "satchel": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "guard": 0,
+          "luck": 0,
+          "active": null,
+          "result": null,
+          "history": []
+        },
+        "miner": {
+          "version": 4,
+          "seed": 9,
+          "enabled": true,
+          "level": 1,
+          "core": 0,
+          "power": 0,
+          "side": 0,
+          "bombs": 0,
+          "offline": 0,
+          "focus": -1,
+          "gravel": 0,
+          "fragments": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crystals": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "cuts": [],
+          "steps": 0,
+          "blocks": 0,
+          "pulses": 0,
+          "combo": 0,
+          "col": 3,
+          "origin": 3,
+          "direction": 1,
+          "overdrive": 0,
+          "crystalRush": 8000,
+          "doubleLoot": 8000,
+          "oreCharge": 90000,
+          "passes": 0,
+          "lastAt": 1700000000000,
+          "carry": 0,
+          "impacts": 0,
+          "motions": 0,
+          "rewardSeq": 0,
+          "tipRow": 0,
+          "tipCol": 3,
+          "launch": false,
+          "damage": null,
+          "legacyCarry": false
+        },
+        "village": {
+          "forge": 1,
+          "well": 1,
+          "missions": 1
+        },
+        "records": {
+          "owned": [
+            "pulse"
+          ],
+          "active": "pulse"
+        },
+        "experience": {
+          "level": 1,
+          "xp": 0,
+          "points": 0
+        },
+        "legacyForce": 0,
+        "offerings": 0,
+        "pendingBlessing": null,
+        "pendingBlessingLevel": 1,
+        "pendingBlessingRoll": null,
+        "relics": [],
+        "materials": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "forge": {
+          "version": 5,
+          "legacy": {
+            "pickaxe": 0,
+            "vigor": 0,
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "levels": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "invested": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "materials": {
+            "anvil": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "armor": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "tonic": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "vault": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "gear": {
+            "version": 1,
+            "items": {
+              "helmet": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "chest": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pants": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "boots": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "necklace": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "ring": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "backpack": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pickaxe": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              }
+            },
+            "pending": null
+          }
+        },
+        "seed": 9,
+        "abyssBest": 0,
+        "bank": 30,
+        "essence": 0,
+        "mission": null,
+        "extraMissions": [],
+        "missionRoll": 0,
+        "missionBoard": {
+          "key": "",
+          "offers": []
+        },
+        "missionsCompleted": 0,
+        "stars": 0,
+        "starUpgrades": {
+          "supplies": 0,
+          "charge": 0,
+          "yield": 0
+        },
+        "level": 1,
+        "core": 0,
+        "seals": 0,
+        "best": 0,
+        "attempts": 0,
+        "deaths": 0,
+        "unlocked": [],
+        "equipped": [],
+        "skillRanks": {},
+        "totalGems": 0,
+        "bestCombo": 0,
+        "run": null,
+        "lastResult": null
+      },
+      "elapsedMs": 3000,
+      "gain": [
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tail-twentyfour",
+      "before": {
+        "version": 2,
+        "campaignVersion": 2,
+        "talents": {
+          "version": 1,
+          "revision": 0,
+          "ranks": {},
+          "spent": {}
+        },
+        "astral": {
+          "version": 1,
+          "revision": 0,
+          "rolls": 0,
+          "owned": [],
+          "equipped": [],
+          "offer": [],
+          "last": null
+        },
+        "descent": {
+          "version": 1,
+          "bosses": [],
+          "stops": [
+            1
+          ],
+          "gate": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": {}
+        },
+        "zag": {
+          "version": 4,
+          "bonusDice": 0,
+          "sigils": [],
+          "gears": 0,
+          "collections": 0,
+          "modules": {
+            "treasure": 0,
+            "protection": 0,
+            "precision": 0
+          },
+          "adjustments": 0,
+          "passes": 0,
+          "mined": 0,
+          "rounds": 0,
+          "position": 0,
+          "dice": 0,
+          "hand": [],
+          "route": "safe",
+          "lastRoute": "safe",
+          "jump": 0,
+          "swap": null,
+          "fragments": 0,
+          "tools": {
+            "jump": 0,
+            "magnet": 0,
+            "invert": 0
+          },
+          "investment": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "satchel": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "guard": 0,
+          "luck": 0,
+          "active": null,
+          "result": null,
+          "history": []
+        },
+        "miner": {
+          "version": 4,
+          "seed": 9,
+          "enabled": true,
+          "level": 20,
+          "core": 0,
+          "power": 0,
+          "side": 2,
+          "bombs": 3,
+          "offline": 0,
+          "focus": -1,
+          "gravel": 0,
+          "fragments": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crystals": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "cuts": [],
+          "steps": 0,
+          "blocks": 0,
+          "pulses": 0,
+          "combo": 0,
+          "col": 3,
+          "origin": 3,
+          "direction": 1,
+          "overdrive": 5000,
+          "crystalRush": 8000,
+          "doubleLoot": 8000,
+          "oreCharge": 90000,
+          "passes": 0,
+          "lastAt": 1700000000000,
+          "carry": 0,
+          "impacts": 0,
+          "motions": 0,
+          "rewardSeq": 0,
+          "tipRow": 0,
+          "tipCol": 3,
+          "launch": false,
+          "damage": null,
+          "legacyCarry": false
+        },
+        "village": {
+          "forge": 1,
+          "well": 1,
+          "missions": 1
+        },
+        "records": {
+          "owned": [
+            "pulse"
+          ],
+          "active": "pulse"
+        },
+        "experience": {
+          "level": 1,
+          "xp": 0,
+          "points": 0
+        },
+        "legacyForce": 0,
+        "offerings": 0,
+        "pendingBlessing": null,
+        "pendingBlessingLevel": 1,
+        "pendingBlessingRoll": null,
+        "relics": [],
+        "materials": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "forge": {
+          "version": 5,
+          "legacy": {
+            "pickaxe": 0,
+            "vigor": 0,
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "levels": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "invested": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "materials": {
+            "anvil": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "armor": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "tonic": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "vault": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "gear": {
+            "version": 1,
+            "items": {
+              "helmet": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "chest": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pants": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "boots": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "necklace": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "ring": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "backpack": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pickaxe": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              }
+            },
+            "pending": null
+          }
+        },
+        "seed": 9,
+        "abyssBest": 0,
+        "bank": 30,
+        "essence": 0,
+        "mission": null,
+        "extraMissions": [],
+        "missionRoll": 0,
+        "missionBoard": {
+          "key": "",
+          "offers": []
+        },
+        "missionsCompleted": 0,
+        "stars": 0,
+        "starUpgrades": {
+          "supplies": 0,
+          "charge": 0,
+          "yield": 0
+        },
+        "level": 1,
+        "core": 0,
+        "seals": 0,
+        "best": 0,
+        "attempts": 0,
+        "deaths": 0,
+        "unlocked": [],
+        "equipped": [],
+        "skillRanks": {},
+        "totalGems": 0,
+        "bestCombo": 0,
+        "run": null,
+        "lastResult": null
+      },
+      "elapsedMs": 60000,
+      "gain": [
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "offline",
+      "before": {
+        "version": 2,
+        "campaignVersion": 2,
+        "talents": {
+          "version": 1,
+          "revision": 0,
+          "ranks": {},
+          "spent": {}
+        },
+        "astral": {
+          "version": 1,
+          "revision": 0,
+          "rolls": 0,
+          "owned": [],
+          "equipped": [],
+          "offer": [],
+          "last": null
+        },
+        "descent": {
+          "version": 1,
+          "bosses": [],
+          "stops": [
+            1
+          ],
+          "gate": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": {}
+        },
+        "zag": {
+          "version": 4,
+          "bonusDice": 0,
+          "sigils": [],
+          "gears": 0,
+          "collections": 0,
+          "modules": {
+            "treasure": 0,
+            "protection": 0,
+            "precision": 0
+          },
+          "adjustments": 0,
+          "passes": 0,
+          "mined": 0,
+          "rounds": 0,
+          "position": 0,
+          "dice": 0,
+          "hand": [],
+          "route": "safe",
+          "lastRoute": "safe",
+          "jump": 0,
+          "swap": null,
+          "fragments": 0,
+          "tools": {
+            "jump": 0,
+            "magnet": 0,
+            "invert": 0
+          },
+          "investment": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "satchel": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "guard": 0,
+          "luck": 0,
+          "active": null,
+          "result": null,
+          "history": []
+        },
+        "miner": {
+          "version": 4,
+          "seed": 49,
+          "enabled": true,
+          "level": 20,
+          "core": 100,
+          "power": 0,
+          "side": 2,
+          "bombs": 3,
+          "offline": 0,
+          "focus": -1,
+          "gravel": 0,
+          "fragments": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crystals": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "cuts": [],
+          "steps": 0,
+          "blocks": 0,
+          "pulses": 0,
+          "combo": 0,
+          "col": 3,
+          "origin": 3,
+          "direction": 1,
+          "overdrive": 0,
+          "crystalRush": 0,
+          "doubleLoot": 0,
+          "oreCharge": 0,
+          "passes": 0,
+          "lastAt": 1700000000000,
+          "carry": 0,
+          "impacts": 0,
+          "motions": 0,
+          "rewardSeq": 0,
+          "tipRow": 0,
+          "tipCol": 3,
+          "launch": false,
+          "damage": null,
+          "legacyCarry": false
+        },
+        "village": {
+          "forge": 1,
+          "well": 1,
+          "missions": 1
+        },
+        "records": {
+          "owned": [
+            "pulse"
+          ],
+          "active": "pulse"
+        },
+        "experience": {
+          "level": 1,
+          "xp": 0,
+          "points": 0
+        },
+        "legacyForce": 0,
+        "offerings": 0,
+        "pendingBlessing": null,
+        "pendingBlessingLevel": 1,
+        "pendingBlessingRoll": null,
+        "relics": [],
+        "materials": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "forge": {
+          "version": 5,
+          "legacy": {
+            "pickaxe": 0,
+            "vigor": 0,
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "levels": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "invested": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "materials": {
+            "anvil": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "armor": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "tonic": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "vault": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "gear": {
+            "version": 1,
+            "items": {
+              "helmet": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "chest": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pants": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "boots": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "necklace": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "ring": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "backpack": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pickaxe": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              }
+            },
+            "pending": null
+          }
+        },
+        "seed": 49,
+        "abyssBest": 0,
+        "bank": 30,
+        "essence": 0,
+        "mission": null,
+        "extraMissions": [],
+        "missionRoll": 0,
+        "missionBoard": {
+          "key": "",
+          "offers": []
+        },
+        "missionsCompleted": 0,
+        "stars": 0,
+        "starUpgrades": {
+          "supplies": 0,
+          "charge": 0,
+          "yield": 0
+        },
+        "level": 1,
+        "core": 0,
+        "seals": 0,
+        "best": 0,
+        "attempts": 0,
+        "deaths": 0,
+        "unlocked": [],
+        "equipped": [],
+        "skillRanks": {},
+        "totalGems": 0,
+        "bestCombo": 0,
+        "run": null,
+        "lastResult": null
+      },
+      "elapsedMs": 3600000,
+      "gain": [
+        128,
+        107,
+        48,
+        65
+      ]
+    },
+    {
+      "id": "paused",
+      "before": {
+        "version": 2,
+        "campaignVersion": 2,
+        "talents": {
+          "version": 1,
+          "revision": 0,
+          "ranks": {},
+          "spent": {}
+        },
+        "astral": {
+          "version": 1,
+          "revision": 0,
+          "rolls": 0,
+          "owned": [],
+          "equipped": [],
+          "offer": [],
+          "last": null
+        },
+        "descent": {
+          "version": 1,
+          "bosses": [],
+          "stops": [
+            1
+          ],
+          "gate": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": {}
+        },
+        "zag": {
+          "version": 4,
+          "bonusDice": 0,
+          "sigils": [],
+          "gears": 0,
+          "collections": 0,
+          "modules": {
+            "treasure": 0,
+            "protection": 0,
+            "precision": 0
+          },
+          "adjustments": 0,
+          "passes": 0,
+          "mined": 0,
+          "rounds": 0,
+          "position": 0,
+          "dice": 0,
+          "hand": [],
+          "route": "safe",
+          "lastRoute": "safe",
+          "jump": 0,
+          "swap": null,
+          "fragments": 0,
+          "tools": {
+            "jump": 0,
+            "magnet": 0,
+            "invert": 0
+          },
+          "investment": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "satchel": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "guard": 0,
+          "luck": 0,
+          "active": null,
+          "result": null,
+          "history": []
+        },
+        "miner": {
+          "version": 4,
+          "seed": 9,
+          "enabled": false,
+          "level": 1,
+          "core": 0,
+          "power": 0,
+          "side": 0,
+          "bombs": 0,
+          "offline": 0,
+          "focus": -1,
+          "gravel": 0,
+          "fragments": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crystals": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "cuts": [],
+          "steps": 0,
+          "blocks": 0,
+          "pulses": 0,
+          "combo": 0,
+          "col": 3,
+          "origin": 3,
+          "direction": 1,
+          "overdrive": 0,
+          "crystalRush": 0,
+          "doubleLoot": 0,
+          "oreCharge": 0,
+          "passes": 0,
+          "lastAt": 1700000000000,
+          "carry": 0,
+          "impacts": 0,
+          "motions": 0,
+          "rewardSeq": 0,
+          "tipRow": 0,
+          "tipCol": 3,
+          "launch": false,
+          "damage": null,
+          "legacyCarry": false
+        },
+        "village": {
+          "forge": 1,
+          "well": 1,
+          "missions": 1
+        },
+        "records": {
+          "owned": [
+            "pulse"
+          ],
+          "active": "pulse"
+        },
+        "experience": {
+          "level": 1,
+          "xp": 0,
+          "points": 0
+        },
+        "legacyForce": 0,
+        "offerings": 0,
+        "pendingBlessing": null,
+        "pendingBlessingLevel": 1,
+        "pendingBlessingRoll": null,
+        "relics": [],
+        "materials": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "forge": {
+          "version": 5,
+          "legacy": {
+            "pickaxe": 0,
+            "vigor": 0,
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "levels": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "invested": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "materials": {
+            "anvil": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "armor": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "tonic": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "vault": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "gear": {
+            "version": 1,
+            "items": {
+              "helmet": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "chest": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pants": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "boots": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "necklace": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "ring": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "backpack": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pickaxe": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              }
+            },
+            "pending": null
+          }
+        },
+        "seed": 9,
+        "abyssBest": 0,
+        "bank": 30,
+        "essence": 0,
+        "mission": null,
+        "extraMissions": [],
+        "missionRoll": 0,
+        "missionBoard": {
+          "key": "",
+          "offers": []
+        },
+        "missionsCompleted": 0,
+        "stars": 0,
+        "starUpgrades": {
+          "supplies": 0,
+          "charge": 0,
+          "yield": 0
+        },
+        "level": 1,
+        "core": 0,
+        "seals": 0,
+        "best": 0,
+        "attempts": 0,
+        "deaths": 0,
+        "unlocked": [],
+        "equipped": [],
+        "skillRanks": {},
+        "totalGems": 0,
+        "bestCombo": 0,
+        "run": null,
+        "lastResult": null
+      },
+      "elapsedMs": 120000,
+      "gain": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "resumed",
+      "before": {
+        "version": 2,
+        "campaignVersion": 2,
+        "talents": {
+          "version": 1,
+          "revision": 0,
+          "ranks": {},
+          "spent": {}
+        },
+        "astral": {
+          "version": 1,
+          "revision": 0,
+          "rolls": 0,
+          "owned": [],
+          "equipped": [],
+          "offer": [],
+          "last": null
+        },
+        "descent": {
+          "version": 1,
+          "bosses": [],
+          "stops": [
+            1
+          ],
+          "gate": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": {}
+        },
+        "zag": {
+          "version": 4,
+          "bonusDice": 0,
+          "sigils": [],
+          "gears": 0,
+          "collections": 0,
+          "modules": {
+            "treasure": 0,
+            "protection": 0,
+            "precision": 0
+          },
+          "adjustments": 0,
+          "passes": 0,
+          "mined": 0,
+          "rounds": 0,
+          "position": 0,
+          "dice": 0,
+          "hand": [],
+          "route": "safe",
+          "lastRoute": "safe",
+          "jump": 0,
+          "swap": null,
+          "fragments": 0,
+          "tools": {
+            "jump": 0,
+            "magnet": 0,
+            "invert": 0
+          },
+          "investment": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "satchel": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "guard": 0,
+          "luck": 0,
+          "active": null,
+          "result": null,
+          "history": []
+        },
+        "miner": {
+          "version": 4,
+          "seed": 9,
+          "enabled": true,
+          "level": 1,
+          "core": 0,
+          "power": 0,
+          "side": 0,
+          "bombs": 0,
+          "offline": 0,
+          "focus": -1,
+          "gravel": 0,
+          "fragments": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crystals": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "cuts": [],
+          "steps": 0,
+          "blocks": 0,
+          "pulses": 0,
+          "combo": 0,
+          "col": 3,
+          "origin": 3,
+          "direction": 1,
+          "overdrive": 0,
+          "crystalRush": 8000,
+          "doubleLoot": 0,
+          "oreCharge": 90000,
+          "passes": 0,
+          "lastAt": 1700000120000,
+          "carry": 0,
+          "impacts": 0,
+          "motions": 0,
+          "rewardSeq": 0,
+          "tipRow": 0,
+          "tipCol": 3,
+          "launch": false,
+          "damage": null,
+          "legacyCarry": false
+        },
+        "village": {
+          "forge": 1,
+          "well": 1,
+          "missions": 1
+        },
+        "records": {
+          "owned": [
+            "pulse"
+          ],
+          "active": "pulse"
+        },
+        "experience": {
+          "level": 1,
+          "xp": 0,
+          "points": 0
+        },
+        "legacyForce": 0,
+        "offerings": 0,
+        "pendingBlessing": null,
+        "pendingBlessingLevel": 1,
+        "pendingBlessingRoll": null,
+        "relics": [],
+        "materials": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "forge": {
+          "version": 5,
+          "legacy": {
+            "pickaxe": 0,
+            "vigor": 0,
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "levels": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "invested": {
+            "anvil": 0,
+            "armor": 0,
+            "tonic": 0,
+            "vault": 0
+          },
+          "materials": {
+            "anvil": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "armor": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "tonic": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "vault": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "gear": {
+            "version": 1,
+            "items": {
+              "helmet": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "chest": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pants": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "boots": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "necklace": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "ring": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "backpack": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              },
+              "pickaxe": {
+                "traits": [
+                  null,
+                  null
+                ],
+                "strain": 0
+              }
+            },
+            "pending": null
+          }
+        },
+        "seed": 9,
+        "abyssBest": 0,
+        "bank": 30,
+        "essence": 0,
+        "mission": null,
+        "extraMissions": [],
+        "missionRoll": 0,
+        "missionBoard": {
+          "key": "",
+          "offers": []
+        },
+        "missionsCompleted": 0,
+        "stars": 0,
+        "starUpgrades": {
+          "supplies": 0,
+          "charge": 0,
+          "yield": 0
+        },
+        "level": 1,
+        "core": 0,
+        "seals": 0,
+        "best": 0,
+        "attempts": 0,
+        "deaths": 0,
+        "unlocked": [],
+        "equipped": [],
+        "skillRanks": {},
+        "totalGems": 0,
+        "bestCombo": 0,
+        "run": null,
+        "lastResult": null
+      },
+      "elapsedMs": 1000,
+      "gain": [
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

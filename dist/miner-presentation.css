@@ -1,0 +1,20 @@
+#dialog.miner-dialog{width:min(1120px,98vw)!important;max-width:1120px!important}
+#dialog.miner-dialog .miner-layout{grid-template-columns:minmax(0,var(--miner-theater-width,700px)) minmax(280px,320px);justify-content:center;gap:16px;align-items:start}
+#dialog.miner-dialog .miner-theater{max-height:none;overflow:visible;min-width:0;justify-self:center;width:max-content;max-width:100%;background:#180d2f}
+#dialog.miner-dialog .miner-stage-frame{position:relative;width:var(--miner-stage-width,700px);height:var(--miner-stage-height,800px);max-width:100%;overflow:hidden;isolation:isolate;border-radius:7px}
+#dialog.miner-dialog .miner-stage-frame canvas{width:100%;height:100%;max-height:none;aspect-ratio:700/800;object-fit:contain;image-rendering:auto;cursor:default;border:0;padding:0}
+#dialog.miner-dialog .miner-scene-bottom{position:static;padding:8px;display:flex;flex-wrap:wrap;min-height:44px;gap:8px;justify-content:space-between;background:#180d2f}
+#dialog.miner-dialog .miner-play-controls{margin-left:auto;align-items:center}
+#dialog.miner-dialog .miner-scene-bottom button{min-height:44px}
+#dialog.miner-dialog .miner-live-balance{position:absolute;left:var(--receipt-left);top:91.25%;width:22.642857%;height:7.5%;display:flex;gap:5px;align-items:center;justify-content:center;padding:3px;pointer-events:auto;cursor:help;color:#ffffff;border:2px solid transparent}
+#dialog.miner-dialog .miner-live-balance>svg{flex:none;width:clamp(18px,2.2vw,25px);height:clamp(20px,2.5vw,28px)}
+#dialog.miner-dialog .miner-live-balance>span{display:grid;gap:2px;min-width:0}
+#dialog.miner-dialog .miner-live-balance small{font:800 11px/1.1 var(--body,sans-serif);color:#c5cddb}
+#dialog.miner-dialog .miner-live-balance strong{font:900 clamp(14px,1.6vw,22px)/1.05 var(--body,sans-serif);color:#ffffff;white-space:nowrap}
+#dialog.miner-dialog .miner-live-balance.has-credit{border-color:var(--gem);box-shadow:inset 0 0 0 1px #180d2f}
+#dialog.miner-dialog .watch-mode{grid-template-columns:minmax(0,var(--miner-theater-width,700px))}
+#dialog.miner-dialog .miner-receipt-row{grid-column:1/-1;min-height:24px;margin:0;color:#e8ff75;font:800 15px/1.5 var(--body,sans-serif);text-align:center}
+@media(max-width:800px){#dialog.miner-dialog .miner-layout{grid-template-columns:minmax(0,1fr)}#dialog.miner-dialog .miner-controls{grid-template-columns:1fr}#dialog.miner-dialog .miner-live-balance small{display:none}#dialog.miner-dialog .miner-play-controls{flex-wrap:wrap}#dialog.miner-dialog .miner-scene-hud{font-size:18px}}
+#dialog.miner-dialog .miner-layout.miner-compact{grid-template-columns:minmax(0,1fr)}
+#dialog.miner-dialog .miner-compact .miner-controls{grid-template-columns:1fr}
+#dialog.miner-dialog .miner-compact .miner-live-balance small{display:none}

@@ -1,0 +1,57 @@
+/* Pet art consumes the existing panels, font sizes, colors and equipment actions. */
+.pet-companion-art{position:relative;display:block;width:100%;height:100%;min-height:30px}
+.pet-companion-art>img,.pet-companion-art>canvas{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom}
+.pet-companion-art>canvas{opacity:0;pointer-events:none}
+.pet-companion-art[data-ready="true"]>canvas{opacity:1}
+.pet-companion-art[data-ready="true"]>img{opacity:0}
+
+/* One real support surface for every species, including hovering companions. */
+#dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__card-stage{height:72px!important;width:120px!important}
+#dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__card-stage .gv-pets__pedestal{width:108px;height:32.4px}
+#dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__card-stage .relic-art,
+#dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__detail-stage .relic-art{position:absolute!important;inset:0!important;top:0!important;left:0!important;transform:none!important;width:100%!important;height:100%!important}
+#dialog.pets-dialog.gv-r2 .gv-pets__card-copy{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;height:13px}
+#dialog.pets-dialog.gv-r2 .gv-pets__scene .gv-pets__detail-stage{position:absolute;inset:0;width:100%;height:100%;z-index:2}
+
+#dialog.pets-dialog.gv-r2 .gv-pets__scene h3{top:auto!important;bottom:0;left:12px;right:12px;text-align:center;font-size:18px!important;line-height:20px!important;margin:0}
+
+/* The selected companion fills the available detail space, instead of a 130px strip. */
+body #dialog.pets-dialog.gv-r2 #dialogBody{height:auto!important;max-height:none!important;min-height:0!important;padding:12px 16px 14px!important;overflow:hidden!important}
+body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__detail{min-height:min-content;gap:10px!important}
+body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__scene{height:auto!important;min-height:210px!important;max-height:340px;flex:1 0 210px!important;aspect-ratio:auto}
+body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__information{flex:none}
+body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__eyebrow{margin:0 0 5px!important}
+body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__information .gv-pets__states{margin:6px 0 0!important}
+body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__actions{flex:none;margin-top:0}
+@media(max-height:650px){body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__scene{min-height:175px!important;flex-basis:175px!important;max-height:240px}}
+
+/* Collection v4: eight companions per page, no scrolling through a third row. */
+body #dialog.pets-dialog.gv-r2{height:min(700px,calc(100dvh - 32px))!important}
+body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__gallery{overflow:hidden}
+body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__cards{grid-template-columns:repeat(4,minmax(0,1fr))!important;grid-template-rows:repeat(2,190px);grid-auto-rows:190px!important;flex:none;gap:10px;max-height:none!important;min-height:0;overflow:visible;margin:0}
+body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__card{height:190px!important}
+body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__filters{display:flex;flex-wrap:wrap;height:auto;gap:6px;margin-bottom:6px}
+body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__filters button{flex:1 0 auto;font-size:12px;padding:7px 6px;min-height:30px}
+body #dialog.pets-dialog.gv-r2 .gv-pets__pagination{display:flex;align-items:center;justify-content:center;gap:14px;flex:none;margin-top:6px}
+body #dialog.pets-dialog.gv-r2 .gv-pets__pagination button{width:34px;height:30px;min-height:30px;padding:0;border:1px solid #315d99;border-radius:7px;background:#0b2854;color:#fff;font:600 26px/1 Fredoka,sans-serif}
+body #dialog.pets-dialog.gv-r2 [data-pet-page-label]{font:800 13px/1.2 Nunito,sans-serif;color:#d5e4ff;min-width:40px;text-align:center}
+body #dialog.pets-dialog.gv-r2 .gv-pets__card-tier{display:flex;align-items:center;justify-content:center;gap:4px;font:900 10px/12px Nunito,sans-serif;color:#d5e4ff}
+body #dialog.pets-dialog.gv-r2 .gv-pets__card-tier svg{width:10px;height:10px;flex-basis:10px}
+body #dialog.pets-dialog.gv-r2 .gv-pets__card-copy{display:none}
+body #dialog.pets-dialog.gv-r2 .gv-pets__card .gv-pets__state--cared{display:none}
+body #dialog.pets-dialog.gv-r2 #petsStatus:empty{display:none}
+
+/* Both presentations share one pedestal and the same pet-to-support ratio. */
+body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__card-stage{width:min(120px,100%)!important;height:auto!important;aspect-ratio:5/3}
+body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__detail-stage{inset:auto!important;left:50%!important;bottom:30px!important;transform:translateX(-50%);width:min(240px,100%)!important;height:auto!important;aspect-ratio:5/3}
+body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver :is(.gv-pets__card-stage,.gv-pets__detail-stage) .gv-pets__pedestal{width:90%;height:45%;bottom:0}
+body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__scene::after{display:none}
+@media(max-height:760px){
+ body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__cards{grid-template-rows:repeat(2,184px);grid-auto-rows:184px!important}
+ body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__card{height:184px!important}
+}
+@media(max-width:820px){
+ body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__layout{overflow:auto}
+ body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__gallery{overflow:visible}
+}
+@media(max-height:650px){body #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__gallery{overflow:auto}}

@@ -1,0 +1,13 @@
+{
+  "id": "SENTINEL-UI-INTEGRATION-20261102",
+  "authorization": "Ficou muito bom, aprovado. Pode aplicar a UI da Sentinela do Veio no jogo oficial e seguir para a próxima tela que ainda falta, mantendo esse padrão, com pouco texto e sem remover nenhuma funcionalidade.",
+  "proposal": "../SENTINEL-UI-PROPOSAL-20261102/v1/DELIVERY.json",
+  "files": {
+    "sentinel-presentation.js": "d67ad4d76650c8175edf334f4d45b8e911dec3579045d0f521019fc7de87c9e8",
+    "approved-sentinel-reward-ui.js": "169e9fe640b67bb29085f59bc882ac4fb9464ec2764917c68f61cd0abd56c6e8",
+    "cave-miniboss-hud.js": "0af0b11362393fe55472f9a5a59d938ed723b6fa54a4ccfac8de8a9725070b2a",
+    "cave-miniboss-hud.css": "c4f9038db6c316a3fc044488c037a2a7e04a8dc49989779ee7ef964b6897342a",
+    "run.js": "eb03d06bd9c2231a91f401771f240403182b1fd42af5a9f8c5678f13a6cce190",
+    "approved-discoveries-ui.js": "f2ab1b63acaa033e23ab201f95a122f253c29e6180d72b0c49e1b78207b59e3f"
+  }
+}

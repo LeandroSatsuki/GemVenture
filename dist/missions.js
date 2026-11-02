@@ -1,9 +1,11 @@
+import {questResourceReward,validQuestReward,grantQuestCollectibles} from './mission-rewards.js';
+import {recordPetBank,recordPetProgress} from './pet-bonds.js';
 import {depthLimit} from './campaign.js';
 import {buildingLevel,MISSION_BUILDING_CAP,missionSlots} from './village.js';
 import {missionRecordDrop} from './records.js';
-export const MISSION_VERSION=2;
+export const MISSION_VERSION=3;
 export const MISSION_MAX_SECONDS=7200;
-export const MISSION_TIERS={common:{name:'COMUM',scale:1,time:240,gems:200,essence:1,color:'#5ee9e9'},rare:{name:'RARA',scale:1.4,time:300,gems:500,essence:3,color:'#2890dc'},gold:{name:'DOURADA',scale:1.8,time:360,gems:1100,essence:6,color:'#e8ff75'}};
+export const MISSION_TIERS={common:{name:'COMUM',scale:1,time:240,gems:200,color:'#5ee9e9'},rare:{name:'RARA',scale:1.4,time:300,gems:500,color:'#2890dc'},gold:{name:'DOURADA',scale:1.8,time:360,gems:1100,color:'#e8ff75'}};
 export const MISSION_TYPES=[
  {id:'miner',name:'Febre de cristais',metric:'mine',goal:15,verb:'Quebre cristais',icon:'gem'},
  {id:'quartz',name:'Brilho azul',metric:'mine',kind:0,goal:8,verb:'Quebre quartzos',icon:'gem'},
@@ -20,9 +22,9 @@ export const MISSION_TYPES=[
  {id:'combo',name:'Não para!',metric:'combo',goal:30,verb:'Alcance o combo',icon:'flow'},
  {id:'points',name:'Chuva de pontos',metric:'points',goal:3500,verb:'Ganhe pontos',icon:'fortune'},
  {id:'floors',name:'Portas abertas',metric:'clear',goal:3,verb:'Complete andares',icon:'lift'},
- {id:'items',name:'Mochila esperta',metric:'item',goal:5,verb:'Use itens no pulso',icon:'empty'},
- {id:'bombs',name:'Festa explosiva',metric:'item',kind:'blast',goal:3,verb:'Use geobombas',icon:'blast'},
- {id:'cures',name:'Fôlego de sobra',metric:'item',kind:'tonic',goal:3,verb:'Use pulsos vitais',icon:'tonic'},
+ {id:'items',name:'Mochila esperta',metric:'item',goal:5,verb:'Use consumíveis',icon:'empty'},
+ {id:'bombs',name:'Festa explosiva',metric:'item',eventMetric:'bombEffect',kind:'blast',goal:3,verb:'Acerte alvos ou ative objetos com bombas',icon:'blast'},
+ {id:'cures',name:'Fôlego de sobra',metric:'item',eventMetric:'healed',kind:'tonic',goal:3,verb:'Recupere vida com Pulso vital',icon:'tonic'},
  {id:'depth4',name:'Primeira fronteira',metric:'floor',goal:5,fixed:true,verb:'Alcance o andar',icon:'lift'},
  {id:'depth8',name:'Além da floresta',metric:'floor',goal:10,fixed:true,minFloor:10,verb:'Alcance o andar',icon:'tree'}
 ];
@@ -50,13 +52,14 @@ export function missionTerms(template,tier,level){
  const speed=['beat','combo','floor'].includes(def.metric)?1:1+.006*(level-1);
  const duration=Math.min(MISSION_MAX_SECONDS,Math.ceil(Math.max(t.time,60+goal*pace/speed)/30)*30);
  const early=Math.min(level,10),growth=(1+.08*(early-1))*(scale/missionScale(def,early))**.9;
- const reward={gems:Math.round(t.gems*growth*(MISSION_PAY[def.metric]||1)),essence:t.essence+Math.floor((early-1)/3)+Math.floor(2*Math.log2(scale/missionScale(def,early)))};
+ const reward={gems:Math.round(t.gems*growth*(MISSION_PAY[def.metric]||1)),...questResourceReward(template,tier,growth)};
  return{goal,duration,reward};
 }
 export function missionReward(m){
- if(m.version===MISSION_VERSION)return {...m.reward};
+ if(m.version===MISSION_VERSION)return {...m.reward,materials:[...m.reward.materials]};
+ if(m.version===2)return {gems:m.reward.gems};
  // Already accepted legacy contracts keep their promised payout.
- const t=MISSION_TIERS[m.tier],n=(m.rewardLevel||1)-1;return{gems:Math.round(t.gems*(1+n*.08)),essence:t.essence+Math.floor(n/3)};
+ const t=MISSION_TIERS[m.tier],n=(m.rewardLevel||1)-1;return{gems:Math.round(t.gems*(1+n*.08))};
 }
 export function missionOffers(s){
  const level=buildingLevel(s,'missions'),count=Math.min(6,3+Math.floor((level-1)/3)),key=MISSION_VERSION+':'+(s.missionRoll||0)+':'+s.missionsCompleted+':'+level;
@@ -70,7 +73,7 @@ export function missionOffers(s){
  const available=Math.min(count,pool.length);
  for(let i=0;i<available;i++){
   const def=pool.splice(Math.floor(rand()*pool.length),1)[0],roll=rand(),tier=roll<odds.gold?'gold':roll<odds.gold+odds.rare?'rare':'common',terms=missionTerms(def.id,tier,level);
-  offers.push({id:key+':'+i,version:MISSION_VERSION,rewardLevel:level,template:def.id,tier,goal:terms.goal,reward:terms.reward,progress:0,remaining:terms.duration,duration:terms.duration,status:'active'});
+  offers.push({id:key+':'+i,version:MISSION_VERSION,rewardLevel:level,rewardSeed:s.seed>>>0,template:def.id,tier,goal:terms.goal,reward:terms.reward,progress:0,remaining:terms.duration,duration:terms.duration,status:'active'});
  }
  s.missionBoard={key,offers};return offers;
 }
@@ -82,13 +85,13 @@ export function acceptMission(s,id){
  if(s.run)return false;const current=missionList(s).filter(m=>m.status!=='expired');
  if(current.length>=missionSlots(s))return false;
  const offer=missionOffers(s).find(m=>m.id===id);if(!offer||current.some(m=>m.template===offer.template))return false;
- setMissions(s,[...current,{...offer,...(offer.reward?{reward:{...offer.reward}}:{})}]);refreshOffers(s);return true;
+ setMissions(s,[...current,{...offer,...(offer.reward?{reward:structuredClone(offer.reward)}:{})}]);refreshOffers(s);return true;
 }
 export function recordMission(s,metric,amount=1,kind){
  if(!s.run||!Number.isFinite(amount)||amount<=0)return;
  for(const m of missionList(s)){
   if(m.status!=='active')continue;const def=MISSION_TYPES.find(d=>d.id===m.template);
-  if(def.metric!==metric||def.kind!==undefined&&def.kind!==kind)continue;
+  if((def.eventMetric||def.metric)!==metric||def.kind!==undefined&&def.kind!==kind)continue;
   m.progress=Math.min(m.goal,['combo','floor'].includes(metric)?Math.max(m.progress,amount):m.progress+amount);
   if(m.progress>=m.goal){m.status='ready';s.run.events.push({type:'missionReady',name:def.name});}
  }
@@ -102,7 +105,9 @@ export function tickMission(s,seconds){
 export function claimMission(s,id){
  const list=missionList(s),m=id===undefined?list[0]:list.find(m=>m.id===id);
  if(s.run||!m||m.status!=='ready')return false;
- const t=missionReward(m);s.bank+=t.gems;s.essence+=t.essence;s.totalGems+=t.gems;s.missionsCompleted++;missionRecordDrop(s,m);
+ const t=missionReward(m);s.bank+=t.gems;s.totalGems+=t.gems;s.missionsCompleted++;
+ if(t.materials){t.materials.forEach((n,i)=>s.materials[i]+=n);recordPetBank(s,t.materials);}else recordPetProgress(s);
+ if(m.version===3)grantQuestCollectibles(s,m);else missionRecordDrop(s,m);
  setMissions(s,list.filter(x=>x!==m));refreshOffers(s);return true;
 }
 export function abandonMission(s,id){
@@ -115,8 +120,9 @@ export function validMissionRoster(s){
  return list.length<=missionSlots(s)&&list.every(validMission)&&new Set(list.map(m=>m.template)).size===list.length&&new Set(list.map(m=>m.id)).size===list.length;
 }
 export function validMission(m){
- if(!m||!MISSION_TYPES.some(d=>d.id===m.template)||!Object.hasOwn(MISSION_TIERS,m.tier)||!['active','ready','expired'].includes(m.status)||!Number.isInteger(m.goal)||m.goal<=0||m.goal>100000||!Number.isInteger(m.progress)||m.progress<0||m.progress>m.goal||!Number.isFinite(m.remaining)||m.remaining<0)return false;
+ if(!m||!MISSION_TYPES.some(d=>d.id===m.template)||!Object.hasOwn(MISSION_TIERS,m.tier)||!['active','ready','expired'].includes(m.status)||!Number.isInteger(m.goal)||m.goal<=0||m.goal>100000||!(m.template==='cures'?Number.isFinite(m.progress):Number.isInteger(m.progress))||m.progress<0||m.progress>m.goal||!Number.isFinite(m.remaining)||m.remaining<0)return false;
  if(m.version===undefined)return (m.rewardLevel===undefined||Number.isInteger(m.rewardLevel)&&m.rewardLevel>=1&&m.rewardLevel<=10)&&m.remaining<=360;
- if(m.version!==MISSION_VERSION||!Number.isInteger(m.rewardLevel)||m.rewardLevel<1||m.rewardLevel>MISSION_BUILDING_CAP||!Number.isInteger(m.duration)||m.duration<1||m.duration>MISSION_MAX_SECONDS||m.remaining>m.duration)return false;
- return !!m.reward&&Number.isSafeInteger(m.reward.gems)&&m.reward.gems>0&&m.reward.gems<=100000&&Number.isSafeInteger(m.reward.essence)&&m.reward.essence>0&&m.reward.essence<=100;
+ if(![2,MISSION_VERSION].includes(m.version)||!Number.isInteger(m.rewardLevel)||m.rewardLevel<1||m.rewardLevel>MISSION_BUILDING_CAP||!Number.isInteger(m.duration)||m.duration<1||m.duration>MISSION_MAX_SECONDS||m.remaining>m.duration)return false;
+ if(m.version===3&&(!Number.isInteger(m.rewardSeed)||m.rewardSeed<0||m.rewardSeed>0xffffffff||!validQuestReward(m.reward)||m.collectiblesResolved!==undefined))return false;
+ return !!m.reward&&Number.isSafeInteger(m.reward.gems)&&m.reward.gems>0&&m.reward.gems<=100000;
 }

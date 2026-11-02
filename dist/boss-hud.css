@@ -1,0 +1,26 @@
+@layer ui-layout-r2 {
+body.hud-v5 #stage #hud5Root #bossHud{height:auto!important;min-height:0!important;overflow:visible!important;clip:auto!important;clip-path:none!important;white-space:normal!important}
+/* Same blue family; the boss's canonical biome color is a localized accent. */
+body.hud-v5 #stage #hud5Root #bossHud{position:absolute!important;inset:auto!important;top:var(--boss-top,12px)!important;left:var(--boss-left,35%)!important;width:var(--boss-width,40%)!important;max-width:none!important;margin:0!important;padding:10px 14px!important;display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:7px!important;box-sizing:border-box!important;border:2px solid #26538c!important;border-radius:13px!important;background:linear-gradient(#102a52,#06132b)!important;box-shadow:0 4px #020816,inset 0 2px color-mix(in srgb,var(--boss) 35%,transparent)!important;color:#edf4ff!important;pointer-events:none!important;text-shadow:none!important;z-index:16!important}
+body.hud-v5 #stage #hud5Root #bossHud[hidden]{display:none!important}
+body.hud-v5 #stage #hud5Root #bossHud>div:first-child{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:4px 10px!important}
+body.hud-v5 #stage #hud5Root #bossName{grid-column:1!important;grid-row:1!important;font:600 21px/1.1 GVExpDisplay,Fredoka,sans-serif!important;color:#edf4ff!important;overflow-wrap:anywhere!important}
+body.hud-v5 #stage #hud5Root #bossPhase{grid-column:2!important;grid-row:1!important;font:600 10px/1.2 GVExpBody,Nunito,sans-serif!important;color:#bfd0e8!important;text-align:right!important}
+body.hud-v5 #stage #hud5Root #bossHP{grid-column:2!important;grid-row:2!important;font:600 13px/1.1 GVExpDisplay,Fredoka,sans-serif!important;color:#edf4ff!important;white-space:nowrap!important;font-variant-numeric:tabular-nums!important}
+body.hud-v5 #stage #hud5Root #bossHud .boss-health{grid-column:1!important;grid-row:2!important;height:12px!important;margin:0!important;border:2px solid #020816!important;border-radius:7px!important;background:#041025!important;overflow:hidden!important}
+body.hud-v5 #stage #hud5Root #bossFill{height:100%!important;border-radius:4px!important;background:linear-gradient(0deg,var(--boss),color-mix(in srgb,var(--boss) 65%,#edf4ff))!important;box-shadow:inset 0 2px #edf4ff55!important;transition:width 140ms ease-out!important}
+body.hud-v5 #stage #hud5Root #bossHud .boss-command{display:flex!important;flex-direction:column!important;gap:2px!important;min-width:0!important}
+body.hud-v5 #stage #hud5Root #bossAttack{font:600 13px/1.2 GVExpDisplay,Fredoka,sans-serif!important;color:#bfd0e8!important}
+body.hud-v5 #stage #hud5Root #bossInstruction{font:600 12px/1.2 GVExpBody,Nunito,sans-serif!important;color:#edf4ff!important}
+body.hud-v5 #stage #hud5Root #bossInstruction:empty{display:none!important}
+body.hud-v5 #stage #hud5Root #bossHud[data-open=true] #bossAttack{color:#67e3b8!important}
+/* Mission coordinates remain fixed when a boss appears. */
+body.soft-fx #stage #hud5Root #bossFill{transition:none!important}
+@media(prefers-reduced-motion:reduce){body.hud-v5 #stage #hud5Root #bossFill{transition:none!important}}
+}
+
+@layer ui-layout-r2 {
+/* Human correction: name and life only; explanations belong to optional world bubbles. */
+body.hud-v5 #stage #hud5Root #bossHud :is(.boss-command,#bossPhase){display:none!important}
+body.hud-v5 #stage #hud5Root #bossHud{gap:0!important}
+}

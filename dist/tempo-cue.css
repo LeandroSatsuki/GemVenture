@@ -1,0 +1,5 @@
+/* Complementary cue inside the existing BPM group; no overlay, flashing or rail animation. */
+body.hud-v5 #stage #hud5Root .tempo-cluster{display:flex;align-items:center;justify-content:flex-end;gap:7px;flex-wrap:wrap;min-width:0}
+body.hud-v5 #stage #hud5Root .tempo-cue{display:inline-block;max-width:100%;font:600 12px/1.15 GVExpDisplay,Fredoka,sans-serif;font-variant-numeric:tabular-nums;white-space:nowrap;color:#ffbc00;pointer-events:none}
+body.hud-v5 #stage #hud5Root .tempo-cue[data-mode=changing]{color:#35d6f2}
+body.hud-v5 #stage #hud5Root .tempo-cue[hidden]{display:none!important}

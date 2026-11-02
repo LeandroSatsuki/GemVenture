@@ -1,0 +1,19 @@
+{
+  "id": "BOSS-ARENA-SPACE-20261101-R1",
+  "authorization": "Current direct user instruction: modest boss-room expansion, slight camera pullback, centered boss and more room for mechanics.",
+  "scope": "Boss arenas only; preserve common caves, biome art, four flames, timings, HP, rewards, Abismo and legacy saves.",
+  "files": {
+    "campaign-cave-layout.js": "3f7614919815a105ac23942f32eb9dc71af8e871937cf21b10313122d8357eed",
+    "campaign-cave-runtime.js": "2b420611b4a9ffe7b4635987f0e13579a0fce20f74e92e0f5323285f89cf5dc8",
+    "cavern.js": "d89a7fc1b659a9cc004005121281db1004ba64341ad6bc0a9389b2e0c46cf196",
+    "core.js": "eb29ec8ea6390b5cfadbba603b68ed60ada90f494e41f4f10a4f3a3404f3638b",
+    "bosses.js": "2df59217204f4c37889ec477dad85f6c97753a0a298520489a58f80595221773",
+    "rabbit-mechanic.js": "e00855fc86f26d7cf50efb297ee9d57182e6370bc1d88c7d5f06fa4d0aa1f120",
+    "world.js": "ee7948a2d21ff96a9a136c52059171afe407b3c4965d414d88d8445fbe90b4d5",
+    "boss-arena-space.js": "bdf5561e9442b05cea6d2d87fa66abdc362bcb4aa11c499c7899873da9cf306f"
+  },
+  "followup": {
+    "id": "BOSS-ARENA-SPACE-20261101-R2",
+    "authorization": "Aumente mais um pouquinho o tamanho do mapa, do salão, um pouquinho o tamanho do salão."
+  }
+}

@@ -134,3 +134,6 @@ dialog.zag-dialog #dialogBody{height:100%;padding:14px 20px;overflow:hidden}
 @media(max-width:760px){.zag-collection{flex-wrap:wrap;gap:6px}.zag-collection>strong{font-size:13px}.zag-collection small{max-width:none}.zag-workshops{grid-template-columns:1fr}.zag-routes button{font-size:14px}.zag-controls .zag-auto small{font-size:12px}}
 
 @media(min-width:761px){.zag-workshops details[open]{width:calc(48% - 8px)}.zag-workshops details[open]:nth-child(1){left:0}.zag-workshops details[open]:nth-child(2){left:26%;right:auto}.zag-workshops details[open]:nth-child(3){right:0}.zag-collection{padding:7px 14px}.zag-collection span{display:flex;gap:5px;padding:4px 8px;min-width:0}.zag-collection span b{font-size:21px}}
+
+/* GV028: Canvas alpha picking owns pointer input; semantic buttons retain keyboard focus. */
+.stage[data-mode="base"] .village-building{pointer-events:none}

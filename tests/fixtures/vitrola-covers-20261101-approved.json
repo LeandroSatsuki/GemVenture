@@ -1,0 +1,105 @@
+{
+  "authorization": "Aprovado. Pode publicar o jogo oficial, ok.",
+  "destination": "Atualizar a versão oficial local",
+  "approval": "E:\\Genventure\\coordination\\GV-059-vitrola-covers-official-r1\\HUMAN-APPROVAL.json",
+  "sourceManifest": "E:\\Genventure\\gemventure\\asset-work\\gv-059-album-covers-r1\\MANIFEST.json",
+  "sourceReceipt": "E:\\Genventure\\coordination\\GV-059-vitrola-covers-official-r1\\INTEGRATION-RECEIPT.json",
+  "files": {
+    "recorded-album-art.js": "546ec9c77cd6732a0c3aad572d607c4d62798e8d9f52e5e0bc0079696449fb93"
+  },
+  "covers": [
+    {
+      "id": "dos88-checking-manifest",
+      "path": "assets/recorded-album-covers-r1/dos88-checking-manifest-v01.webp",
+      "sha256": "900a371218ea7cb0264415b55e9229c4444f08d52c5ceea2de4d9acb15720113",
+      "editions": [
+        "GV059-L04-01"
+      ]
+    },
+    {
+      "id": "dos88-city-stomper",
+      "path": "assets/recorded-album-covers-r1/dos88-city-stomper-v01.webp",
+      "sha256": "76cca0dcc6f0bb23e5870b8d6ea565926d6c5254306538c0d5325440bc8d792c",
+      "editions": [
+        "GV059-L05-01",
+        "GV059-L05-02"
+      ]
+    },
+    {
+      "id": "dos88-faraway",
+      "path": "assets/recorded-album-covers-r1/dos88-faraway-v01.webp",
+      "sha256": "89935051a18eb0cd201eee87f7f6f1ea4bbe994e984974a9bbc9f1e7e09d2f35",
+      "editions": [
+        "GV059-L04-02",
+        "GV059-L04-06"
+      ]
+    },
+    {
+      "id": "dos88-freeway-kings",
+      "path": "assets/recorded-album-covers-r1/dos88-freeway-kings-v01.webp",
+      "sha256": "922cdad3993e4eb0c3d36b2caffa5acdac55e08354743931f830f0500fcd4ee2",
+      "editions": [
+        "GV059-L05-07",
+        "GV059-L05-05"
+      ]
+    },
+    {
+      "id": "dos88-race-to-mars",
+      "path": "assets/recorded-album-covers-r1/dos88-race-to-mars-v01.webp",
+      "sha256": "ccfa9b90fb689c67bccafee9162393fcb5e938eddb44bd2dd6e45ce30d840c40",
+      "editions": [
+        "GV059-L03-01",
+        "GV059-L04-11"
+      ]
+    },
+    {
+      "id": "dos88-main-objective",
+      "path": "assets/recorded-album-covers-r1/dos88-main-objective-v01.webp",
+      "sha256": "8e1b699bb70218e0690cffd29a43a17228737bc7f0db8900bc62891779c84a21",
+      "editions": [
+        "GV059-L05-08",
+        "GV059-L04-13"
+      ]
+    },
+    {
+      "id": "dos88-punkers",
+      "path": "assets/recorded-album-covers-r1/dos88-punkers-v01.webp",
+      "sha256": "71b405943579f7e546d5d3d50aef2c10f7afcd0c0a2d2696e7fcfae124f3f3c0",
+      "editions": [
+        "GV059-L04-08"
+      ]
+    },
+    {
+      "id": "dos88-horizon",
+      "path": "assets/recorded-album-covers-r1/dos88-horizon-v01.webp",
+      "sha256": "2ee495c10c5bf9cdd2daf53322df2f09b0adf714094a3a424fb34417ae5902b8",
+      "editions": [
+        "GV059-L05-03"
+      ]
+    },
+    {
+      "id": "dos88-prepareto-fight",
+      "path": "assets/recorded-album-covers-r1/dos88-prepareto-fight-v01.webp",
+      "sha256": "67667772d8aafd8222d44c4e0b99eb0aa4d69de7a5f27534a09ef422e4e96f90",
+      "editions": [
+        "GV059-L05-06"
+      ]
+    },
+    {
+      "id": "dos88-smooth-sailing",
+      "path": "assets/recorded-album-covers-r1/dos88-smooth-sailing-v01.webp",
+      "sha256": "3ea7f142faf30e45b663cde0b418f403f970d80d2e666964f05c0d6c1c7698b2",
+      "editions": [
+        "GV059-L04-10"
+      ]
+    },
+    {
+      "id": "eric-digital-native",
+      "path": "assets/recorded-album-covers-r1/eric-digital-native-v01.webp",
+      "sha256": "e396a8c6820cbb161150387e1012c79714ef7eaf950fcdd7c4671d3e5f481082",
+      "editions": [
+        "GV059-L05-04"
+      ]
+    }
+  ]
+}

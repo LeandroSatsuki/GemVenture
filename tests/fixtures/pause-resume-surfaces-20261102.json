@@ -1,0 +1,21 @@
+{
+  "id": "PAUSE-RESUME-SURFACES-20261102-R1",
+  "authorization": "Direct user request: implementation and fixes for pause/settings/resume and UI flash",
+  "files": {
+    "run.js": "bc6c5d2214ea250bef183100843464a3bd85b9827492589775ccee29c473b3fa",
+    "core.js": "f0f2af7489ea3d6effe0e76a54e6c399c75f0711d8364f256eba58de8a9737a1",
+    "menu-entry.js": "6cbb547a3ded3cac660f1ac0ba405296f5f0744d9b63670269dc99c61998a1cc",
+    "menu-controller.js": "30347cdced84b47a9631cf3c78c01773c007f7363cee0cc691579d47153bf4ca",
+    "index.html": "f35959dbb386d3f7aee90f0a3d371155b604a301642eea06e9c34f01c3a69a8f",
+    "approved-service-host.js": "858562978fb0a1ff00eaef33aac190f2c3b9ee08713358f042ce52c59800b3d8",
+    "approved-expedition-cards-ui.js": "a900c46eda5e5f899ea68a80037e666606b944034b12037201cb8e9925947184",
+    "approved-return-ui.js": "ba50136d3f0516c8d6c2aed9cfdd21703864451508933fd2e5b51a96eba312da",
+    "approved-guide-view.js": "973583ec94b8d0435762a598be241c9e6308f1bb1d389552a2a899d61874bb4e",
+    "approved-intro-view.js": "558b21f9ce93a7b2d46bb0e2ec3274ca9083aff2c915646a6d53737eaee662c9",
+    "styled-surface.js": "021b1d9549a04b243b56925afe4cf05b81c2057d20d1613cae94f0e1e3337e3a",
+    "resume-flow.js": "a1d1b468e1f7730ac20bdd171baa8e47e855e0618bdefa4219316c1e1019ff5a",
+    "resume-rhythm.js": "475332074091913f1df2563d68e29eaa107d80a45cad4e69ea8e73fda6fbdbd1",
+    "resume-view.js": "9fb73743be87e1fa260b963e9591a4cf089021fde77b14c1e64f3304995f4536",
+    "resume-view.css": "2573c72c24cd9d90c40e0249a049302a45a8311880e72d46db983547780715ad"
+  }
+}

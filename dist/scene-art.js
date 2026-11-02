@@ -1,5 +1,6 @@
 import {P,BIOME_ART,GEM_RAMPS} from './palette.js';
 import {PACK_PARTS} from './pack-art.js';
+import {dungeonMineralShapes,dungeonDecorationShapes} from './dungeon-volumes.js';
 
 // Seed changes proportions, never construction, silhouette identity or materials.
 function place(name,m){return PACK_PARTS[name].map(shape=>{const b=shape.matrix||[1,0,0,1,0,0];return {...shape,matrix:Object.freeze([m[0]*b[0]+m[2]*b[1],m[1]*b[0]+m[3]*b[1],m[0]*b[2]+m[2]*b[3],m[1]*b[2]+m[3]*b[3],m[0]*b[4]+m[2]*b[5]+m[4],m[1]*b[4]+m[3]*b[5]+m[5]])};});}
@@ -14,6 +15,8 @@ export function softenPolygon(d,radius=2.2){return d.replace(/M[^M]+/g,part=>{
 });}
 
 export function sceneShapes(type,{variant=0,biome=0,j=0}={}){
+ if(['crystal','rock'].includes(type))return dungeonMineralShapes(type,{variant,biome,j});
+ const decoration=dungeonDecorationShapes(type,{biome});if(decoration)return decoration;
  const s=[],b=BIOME_ART[biome];let layer='base';
  const path=(d,fill,outline=true)=>s.push({type:'path',d,fill,layer,stroke:outline?P.ink:null}),rect=(x,y,width,height,fill,radius=0,outline=false)=>s.push({type:'rect',x,y,width,height,radius,fill,layer,stroke:outline?P.ink:null}),ellipse=(cx,cy,rx,ry,fill,outline=false)=>s.push({type:'ellipse',cx,cy,rx,ry,fill,layer,stroke:outline?P.ink:null});
  const shadow=(rx=38)=>ellipse(50,96,rx,5,P.ink);

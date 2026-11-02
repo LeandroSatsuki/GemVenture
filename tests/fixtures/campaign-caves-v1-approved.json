@@ -1,0 +1,31 @@
+{
+  "id": "CAVE-EXPEDITION-OFFICIAL-20261031-R1",
+  "humanAuthorization": "Isso tá simplesmente insano. Isso tá muito bom. Eu amei. Aprovadíssimo essa estrutura. Caminhei por ela, foi muito legal. Foi muito aquela sensação de exploração. Eu acho isso vai casar muito com o que a gente tá produzindo. Gostei mesmo, muito legal. Aprovado, pode aplicar no jogo oficial, ok?",
+  "approvedParentReceipt": "b5fde526f5f5650ff4f050c749b6bcfe16731c56a2399b6272f9dafad0b538f2",
+  "scope": "Approved seven-biome cave structure, tiles/materials, giant exploration and ahead-of-view preparation; approved boss arena and four flames. Preserve simulation, rewards, save data, current player/creature animations and separate Abismo.",
+  "files": {
+    "campaign-cave-arena-legacy.js": "eb108195b3f4d2b38ce6828293a04c78adef2a3bd9852d2049192300417a7872",
+    "campaign-cave-arena.js": "18febcde0d46c698ab727e505b90181069fa5e3594bb825f4223d6057b30f72d",
+    "campaign-cave-data.js": "9f7a461d8f7920f947adb09a721dae63718b840a5e062db45e32566041f1789a",
+    "campaign-cave-expedition.js": "92f5c09b8a6078c9751fbc67adbdc23040a0434432455d75f137d0d07ad3abab",
+    "campaign-cave-flame.js": "aeb5a41d9e89a950109099a8852747542b0017526b2533bbe0d606e6b2201325",
+    "campaign-cave-fog.js": "45258792feaec1a5738c63069cde5bb6ac2a0e34cd51337723d7911618c28f50",
+    "campaign-cave-geometry.js": "76f40e0ce6ad019911af9e617be23bb789e4e1702ab51ed3b30c8097606ada93",
+    "campaign-cave-host.js": "80c1cc57f8ecf01a2920f7bcb1e3c8a91b9751856935a83f973ece24184be4d3",
+    "campaign-cave-layout.js": "4499a8d7c9c6ed1572a0f1918e562d40de4095bd71ebe2acea79c3e05f9510d0",
+    "campaign-cave-runtime.js": "a962f80455dfceec716052fe45fea7db089ed1f1ae355cd70b35dd54cf317c5d",
+    "campaign-cave-stream.js": "3e28cdd6461a4bd343de7bfa82adfc305c6716dd94bdbad82f077239e355f3db",
+    "campaign-cave-surface.js": "a41fedae98845e43c10d444ad981b96ba9e5d0f0817d3f1a9aa45ed116a6e62f",
+    "campaign-cave-terrain.js": "ccf01712263b18fde002089639d841a45c13d3c8f6819a535f007f0bd32a525d",
+    "campaign-cave-walls.js": "2c5823831352f3830e99028aa1345af4ce0372754ed90be7740b4f3d8cdffa59",
+    "cave-arrival-plan.js": "415bc73cbee7589597710e680fdd221a712f1ad5b196537b5dd514c71b42a055",
+    "cave-arrival-presentation.js": "d23a0f19f6fe26ef736c23932f57625cf4b383e4fcdde355827cc0455316dce2",
+    "cave-ceiling.js": "374de31098d4b58c8ad1d2f28619c41884b17aee834155e6b18fd25170c953db",
+    "cave-layout.js": "1ac257215c8de2a54794d3beaefb3a57efd766ad9430820b7a2b963aa45ee5f3",
+    "cavern.js": "1c93f51308bb1c7f4e2c761ae6ea7d0d61b62ae8b87dad63e105e38a882c881c",
+    "combo-disco.js": "6b65e40f3b0374647f6ab42e94e21a557f6565fda95a7af4dffe6c59b37261ea",
+    "core.js": "f8bcabbec27601b948e27761d64cd66e19ceaec8c2fd2cd78f7b29608df87555",
+    "run.js": "a4fb10eaa6f83145c39b27cc5c0dad23e506ef14c502fb3179486353b8782671",
+    "world.js": "6f1ef92171a33f38c0a2fd964ad5e541bb834cde2efda32766ff1a1ace2ebef8"
+  }
+}

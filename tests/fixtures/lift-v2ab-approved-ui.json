@@ -1,0 +1,11 @@
+{
+  "origin": "PHASE-ACCEPTANCE.json V2AB approved direction/layout; exact specific UI bytes, not a global palette exemption",
+  "files": {
+    "abyss-selected-art-v2y.js": "251b9745c801b7b8a295499d9e078c861ede7518b3232925a7261b27715f2748",
+    "abyss-v2y.js": "6322ff3a5e1eb7ebebfbcf4e0de24428710c9b530ada42ac41dff5b331031b1b",
+    "dungeon-rewards-catalog.js": "9ca021510413fdbe41f95e759ca8d6e0cda2eab435ebaceeef6b97841c30f1ec",
+    "rebrand-lift.css": "66d727103febf1b40828df242e5f293198052adbe1af6446758ce8022d9b4b7a",
+    "rebrand-lift.js": "56a8db79f318a4b60b7bdabd81baa5a65856a771fb0a18bf7d661c663d13f022",
+    "reward-catalog-ui.js": "3440c22d83654eae4c1714b974bdf96df59f7d705ca53e30a648adcc7ab14264"
+  }
+}

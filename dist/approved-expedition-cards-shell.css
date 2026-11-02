@@ -1,0 +1,13 @@
+@font-face{font-family:GVExpeditionDisplay;src:url('assets/menu-fonts/Fredoka-600-Static.ttf');font-weight:600}@font-face{font-family:GVExpeditionBody;src:url('assets/menu-fonts/Nunito-600-Static.ttf');font-weight:600}
+/* Approved panel shell only. UI contents are isolated from historical cascade. */
+body #clearBanner[data-approved-expedition-cards]{position:fixed!important;inset:0!important;display:grid;grid-template-columns:minmax(0,1fr)!important;place-items:center;width:100%!important;height:100dvh!important;max-width:none!important;padding:12px!important;border:0!important;background:#020816aa!important;overflow:auto!important;box-sizing:border-box!important}
+body #clearBanner[data-approved-expedition-cards][hidden]{display:none!important}
+body #clearBanner[data-approved-expedition-cards]>.approved-service-host{width:min(960px,100%);max-height:calc(100dvh - 24px);overflow:auto;min-width:0;border-radius:14px}
+body #abyssCardDialog[data-approved-expedition-cards]{inset:0!important;margin:auto!important;width:min(960px,calc(100vw - 24px))!important;max-width:none!important;height:fit-content!important;max-height:calc(100dvh - 24px)!important;min-height:0!important;padding:0!important;border:0!important;border-radius:14px!important;background:transparent!important;overflow:auto!important;box-sizing:border-box!important}
+body #abyssCardDialog[data-approved-expedition-cards]>.approved-service-host{width:100%}
+body #abyssCardDialog[data-approved-expedition-cards]::backdrop{background:#020816aa}
+body #dialog.approved-ui-dialog[data-service=safe-return][data-approved-expedition-safe-return]{width:min(550px,calc(100vw - 24px))!important;max-width:none!important;max-height:calc(100dvh - 24px)!important;height:fit-content!important;min-height:0!important;transform:none!important;inset:0!important;margin:auto!important;padding:0!important;border:0!important;border-radius:12px!important;background:#06132b!important;overflow:auto!important}
+body #dialog.approved-ui-dialog[data-service=safe-return][data-approved-expedition-safe-return]>.dialog-top{display:none!important}
+body #dialog.approved-ui-dialog[data-service=safe-return][data-approved-expedition-safe-return] #dialogBody{display:block!important;height:auto!important;padding:0!important;min-height:0!important;max-height:none!important;overflow:visible!important;background:none!important}
+
+body #dialog.approved-ui-dialog[data-service=safe-return][data-approved-expedition-safe-return] .approved-service-host{height:auto!important;min-height:0!important;width:100%!important}

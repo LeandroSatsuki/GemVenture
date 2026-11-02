@@ -1,0 +1,458 @@
+/* GV-033/GV-035 V2 composition. Replace the old Lift rules at integration; do not stack themes. */
+:root{--v2-night:#07142f;--v2-panel:#0d1e42;--v2-blue:#1049c7;--v2-blue-light:#2f74eb;--v2-gold:#ffbd23;--v2-gold-deep:#f39016;--v2-ink:#08142c;--v2-white:#f7f8ff;--v2-muted:#b8c7e6;--v2-violet:#9c43f7;--v2-line:#4079d8}
+#dialog:has(.gv-lift-v2){box-sizing:border-box;width:min(1508px,calc(100vw - 28px));height:min(996px,calc(100vh - 28px));max-width:none;max-height:none;padding:0;border:5px solid #06112a;border-radius:26px;background:#0b2e70;color:var(--v2-white);overflow:hidden;box-shadow:0 18px 70px #030914c9;font-family:"GV R2 Body","Nunito",sans-serif}
+#dialog:has(.gv-lift-v2)::backdrop{background:#020611d9}
+.gv-lift-v2{box-sizing:border-box;width:100%;height:100%;padding:0 17px 12px;display:grid;grid-template-rows:98px 84px minmax(0,1fr);gap:8px;padding-bottom:21px;background:radial-gradient(ellipse at 52% 8%,#164b95 0,#0d3272 52%,#082657 100%);overflow:hidden}
+.gv-v2-header{display:grid;grid-template-columns:132px 1fr 70px;align-items:center;border-bottom:2px solid #194c96;position:relative}.gv-v2-lift-mark{width:112px;height:88px;display:grid;place-items:center}.gv-v2-lift-mark-img{width:90px;height:88px;object-fit:contain}.gv-v2-header small{font-weight:900;letter-spacing:.18em;color:#a6c3ef}.gv-v2-header h1{margin:0;font:900 36px/1 "GV R2 Display","Fredoka",sans-serif;letter-spacing:.04em;text-shadow:0 3px #082452}
+.gv-lift-v2 button{font:inherit;color:inherit;cursor:pointer}.gv-lift-v2 button:focus-visible{outline:3px solid #fff49a;outline-offset:2px}.gv-lift-v2 button:disabled{opacity:.48;cursor:not-allowed}
+.gv-lift-v2-modes{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:0 150px}.gv-v2-mode{border:2px solid #081b45;border-radius:18px;background:#191c4b;display:grid;grid-template-columns:64px 1fr;align-items:center;justify-items:center;min-width:0;box-shadow:inset 0 -5px #060f2a}.gv-v2-mode strong{font:900 28px/1 "GV R2 Display","Fredoka",sans-serif;letter-spacing:.06em}.gv-v2-mode small{grid-column:2;color:#e3d1ff;font-weight:800;margin-top:-6px}.gv-v2-tab-icon{width:36px;height:36px;display:grid;place-items:center}.gv-v2-tab-icon svg,.gv-v2-tab-icon img{max-width:100%;max-height:100%}.gv-v2-mode.is-active{background:linear-gradient(180deg,#ffda58,#f3a317);color:#172247;border-color:#ffe38d;box-shadow:inset 0 -5px #d4790e,0 3px 10px #06132f}
+.gv-v2-biome-rail,.gv-v2-floor-rail{display:grid;grid-template-columns:42px minmax(0,1fr) 42px;gap:8px;align-items:stretch}.gv-v2-rail-arrow{border:1px solid #1e559f;border-radius:14px;background:#0b2351;color:#b9d3ff;font-size:34px!important;line-height:1}.gv-v2-biome-track{display:flex;gap:10px;overflow:hidden;align-items:stretch}.gv-v2-biome{flex:0 0 250px;min-width:0;height:136px;align-self:center;display:grid;grid-template-rows:70px 1fr;padding:5px;border:2px solid #173e7d;border-radius:14px;background:#081c46;overflow:hidden;text-align:left}.gv-v2-biome.is-selected{border-color:#ffcc3b;box-shadow:0 0 0 2px #f69a16,inset 0 0 20px #d68d2233}.gv-v2-biome.is-locked{filter:saturate(.55);opacity:.72}.gv-v2-biome-art{display:grid;place-items:center;position:relative;overflow:hidden;border-radius:9px;background:linear-gradient(130deg,var(--biome-tone),#071126 80%)}.gv-v2-biome-sprite{max-height:64px;max-width:76px;object-fit:contain;filter:drop-shadow(0 3px 3px #020610)}.gv-v2-biome-copy{display:grid;grid-template-columns:28px 1fr 36px;gap:4px;align-items:center;padding:2px 5px}.gv-v2-biome-copy small,.gv-v2-biome-copy em{font-style:normal;font-size:12px;font-weight:900;color:#b7c8e8}.gv-v2-biome-copy strong{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.gv-v2-biome-copy em{text-align:right}
+.gv-v2-biome-banner{min-height:0;position:relative;display:grid;grid-template-columns:36% 64%;align-items:center;overflow:hidden;border:2px solid #184985;border-radius:18px;background:linear-gradient(105deg,#081c46 0%,#102d57 52%,var(--biome-tone,#1b437b) 100%);box-shadow:inset 0 -16px 30px #02091655}.gv-v2-banner-copy{position:relative;z-index:3;padding:14px 25px}.gv-v2-banner-copy span{font-size:15px;letter-spacing:.12em;font-weight:900;color:#c7d8fa}.gv-v2-banner-copy h2{margin:4px 0 0;font:900 32px/1.05 "GV R2 Display","Fredoka",sans-serif;text-shadow:0 3px #05132b}.gv-v2-lift-v2-figures,.gv-v2-figures{position:absolute;inset:0 0 0 35%;overflow:hidden}.gv-v2-figures::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(180deg,transparent,#07152fe0)}.gv-v2-crystal{position:absolute;right:46%;bottom:12px;width:72px;height:76px;object-fit:contain}.gv-v2-creature{position:absolute;bottom:6px;width:140px;height:124px;object-fit:contain;filter:drop-shadow(0 7px 4px #02061199)}.gv-v2-creature-0{right:35%}.gv-v2-creature-1{right:20%;width:166px;height:148px}.gv-v2-creature-2{right:4%;width:178px;height:158px}.gv-v2-art-gap{display:none}.gv-lift-v2[data-review="true"] .gv-v2-art-gap{display:block;position:absolute;z-index:4;right:14px;top:12px;padding:6px 10px;border:1px dashed #ffda58;border-radius:8px;background:#06132de8;color:#ffe28a;font-size:11px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+.gv-v2-floor-track{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.gv-v2-floor{display:flex;align-items:center;justify-content:space-between;padding:0 22px;border:2px solid #164996;border-radius:16px;background:linear-gradient(180deg,#1960d5,#1040a3);font-size:22px!important;font-weight:900!important;box-shadow:inset 0 -5px #0a2a73}.gv-v2-floor.is-selected{background:linear-gradient(180deg,#ffcf36,#fa9b1b);color:#142044;border-color:#ffdf73;box-shadow:inset 0 -5px #d67810,0 3px 12px #06132f}.gv-v2-floor.is-unknown{background:#0d2757;border-style:dashed;color:#9db1d5}
+.gv-v2-floors{min-height:0;display:grid;grid-template-rows:153px 116px 92px minmax(0,1fr);gap:10px}.gv-v2-floor-rail{margin-inline:28px}.gv-v2-lower{min-height:0;display:grid;grid-template-columns:1.2fr 1fr;gap:12px;margin-left:8px;margin-right:2px}.gv-v2-floor-card,.gv-v2-side-card{min-height:0;border:2px solid #234879;border-radius:18px;background:#0e1b39;padding:16px 20px;overflow:hidden}.gv-v2-floor-card{padding-bottom:7px}.gv-v2-floor-card{display:grid;grid-template-rows:auto 1fr;position:relative}.gv-v2-floor-card header>span:first-child{font-size:14px;font-weight:900;letter-spacing:.12em;color:#b8c9e8}.gv-v2-floor-card h3{margin:2px 0;font:900 25px/1.1 "GV R2 Display","Fredoka",sans-serif}.gv-v2-focus{display:inline-block;color:#ffcf53;font-weight:900}.gv-v2-objective{display:flex;flex-direction:column;gap:6px;align-self:end;position:relative;padding-right:20px}.gv-v2-objective>small{font-size:12px;letter-spacing:.14em;font-weight:900;color:#a9bce0}.gv-v2-objective p{margin:0;color:#d4e0f5}.gv-v2-cta{min-height:76px;width:100%;border:2px solid #ffe180;border-radius:13px;background:linear-gradient(180deg,#ffc83d,#f08d15);color:#172347!important;font-size:19px!important;font-weight:1000!important;letter-spacing:.04em;box-shadow:inset 0 -5px #d36b0b,0 3px 9px #020816; padding:8px 16px}.gv-v2-costs{display:flex;gap:8px;flex-wrap:wrap}.gv-v2-cost{display:grid;grid-template-columns:auto auto;gap:0 9px;align-items:center;padding:5px 9px;border:1px solid #325783;border-radius:10px;background:#0a1732;font-size:12px}.gv-v2-cost strong{color:#ffdc7b}.gv-v2-cost small{grid-column:1/-1;color:#bbcae4}.gv-v2-cost.is-short{border-color:#c26d51}.gv-v2-state{font-size:13px;font-weight:900;color:#bff3cc}.gv-v2-side-card{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;gap:12px;background:#0b1733}.gv-v2-side-card h3{margin:0 0 7px;font:900 16px "GV R2 Display","Fredoka",sans-serif;color:#f5ca5e}.gv-v2-materials>div{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px}.gv-v2-balance{display:flex;justify-content:space-between;border-bottom:1px solid #294064;padding:4px 0;font-size:13px}.gv-v2-balance strong{color:#cde0ff}.gv-v2-record{padding-left:12px;border-left:1px solid #294064}.gv-v2-record strong,.gv-v2-record span{display:block;margin:4px 0}.gv-v2-record strong{font:900 22px "GV R2 Display","Fredoka",sans-serif}.gv-v2-record span{color:#b8c9e8}.gv-v2-seal{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #294064;padding-top:7px;font-size:13px}.gv-v2-seal button{border:1px solid #9bb3d6;border-radius:8px;background:#183c72;padding:7px 12px}
+.gv-v2-abyss{min-height:0;display:grid;grid-template-rows:224px 102px 81px 159px minmax(0,1fr);gap:8px;overflow:auto;padding-bottom:4px}.gv-v2-abyss-hero{position:relative;min-height:0;display:grid;grid-template-columns:36% 42% 22%;align-items:center;border:2px solid #5a3b8d;border-radius:18px;overflow:hidden;background:linear-gradient(110deg,#07152f 0%,#102547 45%,#1d244f 100%)}.gv-v2-abyss-copy{position:relative;z-index:2;padding:18px 22px}.gv-v2-kicker{color:#b6a0ea;letter-spacing:.15em;font-weight:900;font-size:13px}.gv-v2-abyss-copy h2{font:900 36px/1 "GV R2 Display","Fredoka",sans-serif;margin:8px 0;color:#fff}.gv-v2-abyss-copy h2 i{color:#b873ff;font-style:normal}.gv-v2-abyss-copy p{max-width:330px;color:#c5d2ea;font-weight:700}.gv-v2-portal-art{position:relative;z-index:2;display:grid;place-items:center}.gv-v2-portal-art .r2-gate-hero{width:160px;height:141px;position:relative}.gv-v2-portal-art .r2-gate-image{width:100%;height:100%;object-fit:contain;position:absolute;inset:0}.gv-v2-portal-art .r2-gate-sockets{width:100%;height:100%;position:absolute;inset:0}.gv-v2-survival{z-index:2;justify-self:stretch;margin:15px;height:calc(100% - 30px);display:flex;flex-direction:column;justify-content:center;align-items:center;border:2px solid #704ab4;border-radius:18px;background:#141d45ed;box-shadow:inset 0 0 25px #7427d133}.gv-v2-survival small{letter-spacing:.15em;color:#cbb5f7;font-weight:900}.gv-v2-survival strong{font:900 38px "GV R2 Display","Fredoka",sans-serif;color:#fff}.gv-v2-survival em{font:800 19px "GV R2 Body","Nunito",sans-serif;color:#d4c8f0;margin-left:4px}.gv-v2-survival span{color:#d1b9ff;font-size:13px;font-weight:900}.gv-v2-abyss-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.gv-v2-abyss-stats article{display:flex;justify-content:center;align-items:center;gap:14px;border:2px solid #293b67;border-radius:15px;background:#051839}.gv-v2-abyss-stats small{color:#b3c1dd;font-weight:900;letter-spacing:.1em}.gv-v2-abyss-stats strong{font:900 22px "GV R2 Display","Fredoka",sans-serif}.gv-v2-abyss-start{width:100%;min-height:81px;font-size:21px!important}.gv-v2-abyss-details,.gv-v2-abyss-prep{padding:12px 18px;border:2px solid #283d68;border-radius:16px;background:#001947}.gv-v2-abyss-details h3,.gv-v2-abyss-prep h3{margin:0 0 8px;color:#c9b3ff;font:900 15px "GV R2 Display","Fredoka",sans-serif;letter-spacing:.1em}.gv-v2-detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.gv-v2-detail-grid article,.gv-v2-prep-grid article{display:flex;flex-direction:column;gap:4px;padding:9px 12px;border:1px solid #364878;border-radius:12px;background:#091a3b}.gv-v2-detail-grid b,.gv-v2-prep-grid b{color:#f3d786}.gv-v2-detail-grid span,.gv-v2-prep-grid span,.gv-v2-prep-grid small{color:#c2cee3;font-size:13px}.gv-v2-abyss-prep{display:grid;grid-template-columns:1fr 1.15fr;gap:16px;overflow:auto}.gv-v2-prep-gate,.gv-v2-prep-items{min-width:0}.gv-v2-gate-list{display:grid;grid-template-columns:1fr 1fr;gap:6px}.gv-v2-gate-material{display:grid;grid-template-columns:14px 1fr auto;gap:7px;align-items:center;padding:5px 7px;border:1px solid #354871;border-radius:9px;background:#091a3b}.gv-v2-gem-dot{width:11px;height:11px;border-radius:50%;background:var(--gem);box-shadow:0 0 8px var(--gem)}.gv-v2-gate-material strong,.gv-v2-gate-material small{display:block;font-size:12px}.gv-v2-gate-material small{color:#bac7de}.gv-v2-gate-material button{border:1px solid #6c579c;border-radius:7px;background:#29204b;padding:5px 8px;font-size:12px}.gv-v2-boss-state{margin:7px 0 0;font-size:12px;font-weight:800;color:#c2b6e2}.gv-v2-prep-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}.gv-v2-prep-items>p{color:#becbe2;font-size:13px;margin:0}
+@media(max-width:1100px),(max-height:760px){#dialog:has(.gv-lift-v2){width:calc(100vw - 12px);height:calc(100vh - 12px);border-width:3px;border-radius:16px}.gv-lift-v2{grid-template-rows:76px 70px minmax(0,1fr);padding:0 9px 8px;gap:6px}.gv-v2-header{grid-template-columns:80px 1fr 56px}.gv-v2-lift-mark{width:70px}.gv-v2-lift-mark-img{width:64px;height:66px}.gv-v2-header h1{font-size:27px}.gv-lift-v2-modes{padding:0 70px;gap:8px}.gv-v2-mode strong{font-size:22px}.gv-v2-floors{grid-template-rows:minmax(110px,18%) minmax(80px,14%) minmax(65px,11%) minmax(200px,1fr);gap:6px}.gv-v2-biome-rail,.gv-v2-floor-rail{grid-template-columns:32px minmax(0,1fr) 32px;gap:5px}.gv-v2-biome{grid-template-rows:55px 1fr;padding:3px}.gv-v2-biome-copy{grid-template-columns:18px 1fr;gap:2px}.gv-v2-biome-copy em{display:none}.gv-v2-biome-copy strong{font-size:12px}.gv-v2-biome-sprite{max-height:50px;max-width:54px}.gv-v2-floor{padding:0 10px;font-size:17px!important}.gv-v2-lower{grid-template-columns:1.1fr 1fr;gap:6px}.gv-v2-floor-card,.gv-v2-side-card{padding:9px 11px;border-radius:12px}.gv-v2-floor-card h3{font-size:20px}.gv-v2-cost{font-size:10px;padding:3px 5px}.gv-v2-cta{min-height:43px;font-size:15px!important}.gv-v2-abyss{grid-template-rows:minmax(160px,23%) minmax(72px,11%) 61px minmax(120px,16%) minmax(210px,1fr);gap:6px}.gv-v2-abyss-copy{padding:12px}.gv-v2-abyss-copy h2{font-size:28px}.gv-v2-portal-art .r2-gate-hero{width:120px;height:106px}.gv-v2-survival{margin:8px;height:calc(100% - 16px)}.gv-v2-survival strong{font-size:27px}.gv-v2-abyss-details,.gv-v2-abyss-prep{padding:8px 10px}.gv-v2-detail-grid{gap:5px}.gv-v2-detail-grid article{padding:6px}.gv-v2-abyss-prep{gap:8px}.gv-v2-prep-grid{gap:4px}}
+
+.gv-v2-biome-crop{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block}.gv-v2-empty-art{font-size:11px;color:#d4dff1;text-transform:uppercase;letter-spacing:.04em}.gv-v2-biome-track,.gv-v2-floor-track{min-width:0}.gv-v2-biome-track{overflow-x:auto;scrollbar-width:none}.gv-v2-floor-track{overflow-x:auto;scrollbar-width:thin}.gv-v2-banner-copy{max-width:520px}.gv-v2-abyss-hero>.gv-v2-art-gap{display:none}
+
+.gv-v2-floor-card header{padding-right:290px}.gv-v2-enemies>span{width:75px;display:flex;flex-direction:column;align-items:center;gap:2px}.gv-v2-enemy{height:66px;width:66px;object-fit:contain;filter:drop-shadow(0 4px 4px #020610)}.gv-v2-enemies small{max-width:100%;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#c5d3ea}
+
+.gv-v2-mode-abyss.is-active{background:linear-gradient(180deg,#c17aff,#8037d4);color:#fff;border-color:#e1c2ff;box-shadow:inset 0 -5px #57219a,0 3px 10px #06132f}.gv-v2-abyss-start{background:linear-gradient(180deg,#bd6aff,#8436dc);color:#fff!important;border-color:#e0b8ff;box-shadow:inset 0 -5px #54218e,0 3px 9px #020816}
+
+/* V2A corrections: PANO-01 split, real rail overflow, readable locked labels. */
+.gv-v2-biome-banner{grid-template-columns:minmax(0,1fr) 560px;background:#07152f}
+
+.gv-v2-banner-copy{grid-column:1;grid-row:1;z-index:1;background:#07152f;align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+.gv-v2-floor-track{display:flex;gap:12px;overflow-x:auto;scrollbar-width:thin}
+.gv-v2-floor{flex:0 0 240px;min-width:0}
+.gv-v2-biome:disabled{opacity:1}
+.gv-v2-biome.is-locked{filter:none;opacity:1}
+.gv-v2-biome.is-locked .gv-v2-biome-art{filter:saturate(.55) brightness(.82)}
+.gv-v2-biome.is-locked .gv-v2-biome-copy,.gv-v2-biome.is-locked .gv-v2-biome-copy strong{opacity:1;color:#f7f8ff}
+.gv-v2-rail-arrow[hidden]{display:none!important}
+.gv-v2-survival strong{font-size:20px;letter-spacing:.04em}
+@media(max-width:1100px),(max-height:760px){.gv-v2-biome-banner{grid-template-columns:minmax(0,1fr) minmax(220px,42%)}.gv-v2-floor{flex-basis:210px}}
+.gv-lift-v2 button.gv-v2-biome:disabled{opacity:1}
+.gv-lift-v2[data-review="true"] .gv-v2-abyss-hero>.gv-v2-art-gap{display:block}
+
+/* V2C · composição de referência 06 para a candidata de Andares. */
+#dialog:has(.gv-lift-v2){width:min(1508px,calc(100vw - 28px));height:min(996px,calc(100vh - 28px));border:5px solid #06112a;border-radius:26px}
+.gv-lift-v2{grid-template-rows:112px 74px minmax(0,1fr);gap:8px;padding:0 17px 14px}
+.gv-v2-header{grid-template-columns:152px 1fr 72px;align-items:center}
+.gv-v2-lift-mark{width:142px;height:104px}
+.gv-v2-lift-mark-img{width:122px;height:102px;transform:scale(1.08)}
+.gv-v2-header h1{font-size:42px}
+
+
+.gv-lift-v2-modes{padding:5px 118px;background:#071a43;border:2px solid #123469;border-radius:16px;gap:12px}
+.gv-v2-mode{width:100%;border-radius:12px;background:#111c49}
+.gv-v2-mode strong{font-size:26px}
+.gv-v2-mode.is-active{background:linear-gradient(180deg,#ffe76c,#ffc21b);color:#142044;border-color:#fff091;box-shadow:inset 0 -5px #dc8a0e,0 0 16px #ffda5860}
+.gv-v2-floors{grid-template-rows:minmax(96px,112px) minmax(102px,116px) minmax(76px,84px) minmax(0,1fr) 76px;gap:8px}
+.gv-v2-biome-rail,.gv-v2-floor-rail{grid-template-columns:56px minmax(0,1fr) 56px;gap:10px}
+.gv-v2-biome-rail{padding:4px 0;background:linear-gradient(90deg,#1350ba,#103e93 50%,#0e347c);border:2px solid #347ae0;border-radius:16px}
+.gv-v2-rail-arrow{border:2px solid #4c8be8;border-radius:12px;background:#0c2a66;color:#fff;font-size:44px!important;font-weight:900!important;box-shadow:inset 0 -4px #061b45}
+.gv-v2-biome-track{gap:8px;padding:0 5px}
+.gv-v2-biome{flex-basis:260px;height:96px;grid-template-rows:1fr;padding:7px 10px;border:2px solid #75a8f0;border-radius:12px;background:linear-gradient(145deg,#174994,#0a2254);box-shadow:inset 0 0 12px #9ac4ff24}
+.gv-v2-biome.is-selected{border-color:#ffe362;box-shadow:0 0 0 2px #ffd22f,inset 0 0 20px #e7ab263b}
+.gv-v2-biome-art{display:none}
+.gv-v2-biome-copy{grid-template-columns:56px minmax(0,1fr);grid-template-rows:auto auto;gap:0 9px;padding:0;align-content:center}
+.gv-v2-biome-copy small{grid-row:1/3;grid-column:1;font:900 35px/1 "GV R2 Display","Fredoka",sans-serif;color:#ffe36b;text-align:center}
+.gv-v2-biome-copy strong{grid-row:1;grid-column:2;font:900 19px/1.1 "GV R2 Display","Fredoka",sans-serif;color:#fff}
+.gv-v2-biome-copy em{grid-row:2;grid-column:2;text-align:left;font:900 12px/1.25 "GV R2 Body","Nunito",sans-serif;color:#ffe588}
+.gv-v2-biome.is-locked .gv-v2-biome-copy,.gv-v2-biome.is-locked .gv-v2-biome-copy strong{color:#fff}
+.gv-v2-biome.is-locked .gv-v2-biome-copy em{color:#ffe588}
+.gv-v2-biome-banner{grid-template-columns:minmax(0,1fr);border:2px solid #3065a9;border-radius:14px;background:#07152f;box-shadow:inset 0 -10px 24px #02091666}
+
+
+.gv-v2-banner-copy{max-width:610px;align-self:stretch;justify-content:center;padding:12px 28px;background:linear-gradient(90deg,#07152f 0%,#07152f 64%,#07152fb8 100%);z-index:2}
+.gv-v2-banner-copy span{font-size:16px;color:#ffe484;text-shadow:0 2px #061128}
+.gv-v2-banner-copy h2{font-size:36px;line-height:1.02}
+.gv-v2-banner-copy p{max-width:470px;margin:5px 0 0;color:#eef3ff;font-size:15px;font-weight:800;text-shadow:0 2px 3px #041128}
+.gv-v2-floor-rail{margin-inline:20px}
+.gv-v2-floor-track{gap:9px}
+.gv-v2-floor{flex:1 0 0;min-width:130px;display:flex;flex-direction:column;justify-content:center;gap:3px;padding:4px 7px;border:2px solid #4282df;border-radius:12px;background:linear-gradient(180deg,#2368cb,#16499d);box-shadow:inset 0 -4px #0a2a73}
+.gv-v2-floor strong{font:900 22px/1.05 "GV R2 Display","Fredoka",sans-serif}
+.gv-v2-floor-stars{display:flex;justify-content:center;gap:3px;color:#435372;font-size:14px;line-height:1}
+.gv-v2-floor-stars i{font-style:normal;text-shadow:0 1px #06142d}
+.gv-v2-floor-stars i.is-earned{color:#ffdb4c;text-shadow:0 1px #8c570c,0 0 6px #ffd93a}
+.gv-v2-floor.is-selected{border-color:#ffe27a;background:linear-gradient(180deg,#ffda51,#f49a1b);color:#172044;box-shadow:inset 0 -4px #cf730d,0 3px 12px #06132f}
+.gv-v2-floor.is-selected .gv-v2-floor-stars{color:#825e24}
+.gv-v2-floor.is-unknown .gv-v2-floor-stars{opacity:.5}
+.gv-v2-lower{grid-template-columns:minmax(0,1.65fr) minmax(330px,.9fr);gap:12px;margin:0 2px}
+.gv-v2-floor-card,.gv-v2-side-card{border:2px solid #315d99;border-radius:15px;background:linear-gradient(145deg,#0e2044,#091832);padding:13px 17px}
+.gv-v2-floor-card{grid-template-rows:auto minmax(0,1fr)}
+.gv-v2-floor-card header{padding-right:315px}
+.gv-v2-floor-card header>span:first-child{font-size:14px;color:#c4d7f8}
+.gv-v2-floor-card h3{margin:3px 0 1px;font-size:30px;line-height:1}
+.gv-v2-focus{font-size:16px;color:#ffdb60}
+.gv-v2-earned-stars{display:block;margin-top:3px;color:#ffdf72;font-size:12px;font-weight:900}
+.gv-v2-floor-detail{min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:12px;align-items:end}
+.gv-v2-objective{align-self:stretch;justify-content:flex-end;gap:7px;padding:8px 0 0}
+.gv-v2-objective>small{font-size:13px;color:#ffe17a}
+.gv-v2-objective ul{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.gv-v2-objective li{display:grid;grid-template-columns:18px 1fr;gap:7px;align-items:start;color:#eef3ff;font-size:14px;line-height:1.25;font-weight:800}
+.gv-v2-objective li>span:first-child{color:#ffdc4c;font-size:16px;line-height:1}
+.gv-v2-objective .gv-v2-boss-objective{margin:0;color:#fff;font-size:15px;font-weight:900}
+.gv-v2-objective .gv-v2-state{margin-top:1px;color:#b9f5cc}
+.gv-v2-enemies{position:static;display:flex;justify-content:center;align-items:end;gap:8px;padding:0 0 4px}
+.gv-v2-enemies>span{width:88px;gap:4px}
+.gv-v2-enemy{width:82px;height:88px;filter:drop-shadow(0 5px 4px #020610)}
+.gv-v2-enemies small{font-size:11px;color:#d3e2fb}
+.gv-v2-cta.gv-v2-floor-cta{min-height:72px;grid-row:5;align-self:stretch;border:2px solid #fff08f;border-radius:14px;background:linear-gradient(180deg,#ffe451,#ffba19);color:#17213d!important;font-size:24px!important;box-shadow:inset 0 -5px #d9800d,0 4px 10px #020816}
+.gv-v2-cta-label{display:flex;align-items:center;justify-content:center;gap:13px}
+.gv-v2-elevator-icon{width:42px;height:42px;display:inline-grid;place-items:center}
+.gv-v2-elevator-icon svg,.gv-v2-elevator-icon img{display:block;width:100%;height:100%;object-fit:contain}
+.gv-v2-side-card{display:grid;grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto auto;gap:9px;padding:12px 15px;background:linear-gradient(160deg,#0b1e40,#07152e)}
+.gv-v2-side-card h3{margin:0 0 6px;font-size:15px;color:#ffe17b;letter-spacing:.06em}
+.gv-v2-rewards{min-height:0}
+.gv-v2-reward-list{display:grid;grid-template-columns:1fr 1fr;gap:5px 10px}
+.gv-v2-reward{min-width:0;display:grid;grid-template-columns:14px minmax(0,1fr) auto;gap:6px;align-items:center;padding:5px 7px;border:1px solid #344f7a;border-radius:8px;background:#0b1933;font-size:12px;font-weight:900}
+.gv-v2-reward-gem{width:11px;height:11px;border-radius:50%;background:var(--gem);box-shadow:0 0 7px var(--gem)}
+.gv-v2-reward small,.gv-v2-rewards>small{color:#b9c9e3;font-size:10px}
+.gv-v2-rewards>small{display:block;margin-top:5px}
+.gv-v2-clear-reward{margin:5px 0 0;color:#d5e4ff;font-size:12px;font-weight:900}
+.gv-v2-performance{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.gv-v2-performance article{min-width:0;padding:7px 9px;border:1px solid #35527d;border-radius:9px;background:#091832}
+.gv-v2-performance h3{margin:0 0 3px;font-size:11px;color:#c6d7f2}
+.gv-v2-performance strong{font:900 16px/1.1 "GV R2 Display","Fredoka",sans-serif;color:#fff}
+.gv-v2-performance article>small{display:block;margin-top:3px;color:#b6c9e9;font-size:10px;line-height:1.2}
+.gv-v2-score{display:flex;align-items:center;gap:7px}
+.gv-v2-score>span{font-size:24px}
+.gv-v2-score h3{color:#ffe17b}
+.gv-v2-online{width:100%;min-height:35px;border:1px solid #7854b5;border-radius:9px;background:#28214a;color:#d8cbf7!important;font-size:12px!important;font-weight:900!important;opacity:1!important;cursor:not-allowed!important}
+.gv-v2-online:disabled{opacity:1!important}
+.gv-v2-seal{padding-top:5px}
+
+/* V2D · somente cabeçalho, moldura, X e abas cotejados com a referência 06. */
+#dialog:has(.gv-lift-v2){border:5px solid #030812;border-top:28px solid transparent;background-clip:padding-box;overflow:visible;box-shadow:inset 0 0 0 1px #31598a,inset 0 0 0 4px #0b2e70,0 18px 70px #030914c9}
+.gv-lift-v2{grid-template-rows:70px 84px minmax(0,1fr);overflow:visible}
+.gv-v2-header{grid-template-columns:147px minmax(0,1fr) 70px;align-items:start;border-bottom:0;overflow:visible}
+.gv-v2-lift-mark{position:relative;z-index:5;width:150px;height:150px;align-self:start;overflow:visible;transform:translate(-9px,-28px)}
+.gv-v2-lift-mark-img{position:absolute;top:-128px;left:-117px;width:380px;height:320px;max-width:none;object-fit:fill;transform:none;filter:drop-shadow(0 3px 0 #020611) drop-shadow(3px 6px 3px #020611)}
+.gv-v2-heading{position:relative;z-index:5;align-self:start;transform:translateY(-22px);text-shadow:0 2px 0 #030817}
+.gv-v2-heading h1{margin:0;font:900 50px/.98 "GV R2 Display","Fredoka",sans-serif;letter-spacing:.015em;color:#fff;-webkit-text-stroke:2.6px #061128;paint-order:stroke fill;text-shadow:0 3px 0 #030817,2px 0 #030817,-2px 0 #030817,0 -2px #030817,0 4px 2px #020713}
+.gv-v2-heading small{display:block;margin-top:3px;font:800 20px/1.1 "GV R2 Body","Nunito",sans-serif;letter-spacing:0;color:#91b9f6;-webkit-text-stroke:.65px #11244a;paint-order:stroke fill;text-shadow:0 2px 0 #08142d}
+
+
+.gv-lift-v2-modes{height:84px;min-height:84px;align-self:stretch;grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:3px 154px;background:#071a43;border:2px solid #102d5e;border-radius:16px;gap:12px}
+.gv-v2-mode{height:80px;min-height:80px;border:3px solid #030a19;border-radius:17px;background:linear-gradient(180deg,#282654,#191b46);box-shadow:inset 0 -4px #080f2c,0 2px 0 #42699b}
+.gv-v2-mode strong{font-size:29px;letter-spacing:.02em;color:#fff;-webkit-text-stroke:1.8px #101322;paint-order:stroke fill;text-shadow:0 2px #030817,1px 0 #030817,-1px 0 #030817}
+.gv-v2-mode small{font-size:15px;letter-spacing:0;color:#a8c9ff;-webkit-text-stroke:.5px #14264b;paint-order:stroke fill;text-shadow:0 1px #061128}
+.gv-v2-tab-icon{width:54px;height:54px;filter:drop-shadow(0 2px 1px #020611)}
+.gv-v2-tab-icon svg,.gv-v2-tab-icon img{max-width:100%;max-height:100%;object-fit:contain}
+.gv-v2-mode.is-active,.gv-v2-mode.is-active:hover{background:linear-gradient(180deg,#ffe661,#ffb91e);color:#fff;border-color:#030a19;box-shadow:inset 0 -5px #db7d0b,0 3px 0 #5384c5,0 0 0 1px #f9cb4a}
+.gv-v2-mode.is-active strong{color:#fff}
+.gv-v2-mode-abyss.is-active{background:linear-gradient(180deg,#bd6cff,#8036d8);color:#fff;border-color:#030a19;box-shadow:inset 0 -5px #57219a,0 3px 0 #5384c5,0 0 0 1px #bd8cff}
+@media(max-width:1100px),(max-height:760px){.gv-lift-v2{grid-template-rows:70px 84px minmax(0,1fr)}.gv-v2-header{grid-template-columns:115px minmax(0,1fr) 58px}.gv-v2-lift-mark{width:128px;height:136px;transform:translate(-8px,-26px)}.gv-v2-lift-mark-img{width:126px;height:134px}.gv-v2-heading{transform:translateY(-17px)}.gv-v2-heading h1{font-size:38px;-webkit-text-stroke:2px #061128}.gv-v2-heading small{font-size:15px}.gv-lift-v2-modes{padding-inline:105px}.gv-v2-mode{height:76px;min-height:76px}.gv-v2-mode strong{font-size:24px}.gv-v2-tab-icon{width:45px;height:45px}}
+
+/* V2E · contraste duplicado e iconografia agrupada nas abas. */
+.gv-v2-heading h1{color:#fff;-webkit-text-stroke:3px #061536;text-shadow:0 6px 0 #061a41,3px 0 0 #061a41,-3px 0 0 #061a41,0 -3px 0 #061a41,0 10px 7px #020918}
+.gv-v2-mode{display:flex;justify-content:center;align-items:center;gap:14px}
+.gv-v2-tab-label{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:0}
+.gv-v2-tab-label strong{font-size:29px;line-height:1;color:#fff;-webkit-text-stroke:2px #080f27;paint-order:stroke fill;text-shadow:0 4px 0 #081b45,2px 0 0 #081b45,-2px 0 0 #081b45,0 -2px 0 #081b45,0 6px 4px #030a1c}
+.gv-v2-tab-label small{grid-column:auto;margin:2px 0 0;font-size:15px;line-height:1;color:#a8c9ff;-webkit-text-stroke:.5px #14264b;paint-order:stroke fill;text-shadow:0 2px 0 #081b45,0 4px 3px #030a1c}
+@media(max-width:1100px),(max-height:760px){.gv-v2-tab-label strong{font-size:24px}.gv-v2-tab-label small{font-size:13px}}
+
+/* V2F · brilho azul suave, ícone do Abismo ampliado e faixa de bioma ilustrada. */
+.gv-v2-heading h1{font-size:54px;text-shadow:0 0 3px #17386f,0 0 8px #102b5d,0 0 13px #091b3e}
+.gv-v2-heading small{text-shadow:0 0 3px #17386f,0 0 8px #102b5d}
+.gv-v2-tab-label strong{text-shadow:0 0 3px #17386f,0 0 7px #123064,0 0 11px #081a40}
+.gv-v2-tab-label small{text-shadow:0 0 3px #17386f,0 0 7px #102b5d}
+.gv-v2-mode-abyss .gv-v2-tab-icon img{width:54px;height:54px;max-width:none;max-height:none;object-fit:contain}
+.gv-v2-biome{flex-basis:270px;height:142px;grid-template-rows:78px minmax(0,1fr);padding:5px}
+.gv-v2-biome-art{display:grid;min-height:0}
+.gv-v2-biome-sprite{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 0 5px #061936)}
+.gv-v2-biome-copy{grid-template-columns:35px minmax(0,1fr);grid-template-rows:auto auto;gap:1px 6px;padding:2px 6px;background:linear-gradient(180deg,#174994,#0a2254)}
+.gv-v2-biome-copy small{grid-column:1;grid-row:1/3;font:900 25px/1 "GV R2 Display","Fredoka",sans-serif;color:#ffe36b;text-align:center}
+.gv-v2-biome-copy strong{grid-column:2;grid-row:1;font:900 17px/1.05 "GV R2 Display","Fredoka",sans-serif;color:#fff}
+.gv-v2-biome-copy em{grid-column:2;grid-row:2;text-align:left;font:900 12px/1.1 "GV R2 Body","Nunito",sans-serif;color:#ffe588;white-space:nowrap}
+@media(max-width:1100px),(max-height:760px){.gv-v2-heading h1{font-size:42px}.gv-v2-mode-abyss .gv-v2-tab-icon img{width:45px;height:45px}.gv-v2-biome{grid-template-rows:60px minmax(0,1fr)}.gv-v2-biome-copy{grid-template-columns:28px minmax(0,1fr)}.gv-v2-biome-copy small{font-size:21px}.gv-v2-biome-copy strong{font-size:14px}.gv-v2-biome-copy em{display:block;font-size:10px}}
+
+/* V2G · legendas maiores, faixa marinho, setas compactas e leitura forte dos andares. */
+.gv-v2-biome-rail{background:linear-gradient(90deg,#092552,#071a3d 50%,#092552);border-color:#1d477e}
+.gv-v2-biome-copy{background:linear-gradient(180deg,#0a2859,#061735)}
+.gv-v2-biome-copy strong{font-size:20px;line-height:1.05}
+.gv-v2-biome-copy em{font-size:14px;line-height:1.1}
+
+.gv-v2-banner-copy{background:linear-gradient(90deg,#07152f 0%,#07152fe8 56%,#07152f00 100%)}
+.gv-v2-biome-rail,.gv-v2-floor-rail{grid-template-columns:50px minmax(0,1fr) 50px}
+.gv-v2-rail-arrow{width:40px;height:48px;justify-self:center;align-self:center;padding:0;font-size:52px!important;line-height:.8!important}
+.gv-v2-floor strong{font-size:29px;color:#fff!important;-webkit-text-stroke:1.5px #050914;paint-order:stroke fill;text-shadow:0 0 2px #030812}
+.gv-v2-floor-stars{gap:5px;font-size:19px;line-height:1}
+@media(max-width:1100px),(max-height:760px){.gv-v2-biome-copy strong{font-size:17px}.gv-v2-biome-copy em{font-size:12px}.gv-v2-floor strong{font-size:25px}.gv-v2-floor-stars{font-size:16px}.gv-v2-rail-arrow{width:36px;height:42px;font-size:46px!important}}
+
+/* V2H · geometria da referência 06 (1536 × 1024) e hierarquia compartilhada com 05. */
+#dialog:has(.gv-lift-v2){border-color:#020713;border-radius:23px;box-shadow:inset 0 0 0 2px #1b5aab,inset 0 0 0 5px #082c69,0 16px 50px #020713a8}
+.gv-lift-v2{padding:0 17px 17px;background:linear-gradient(180deg,#103f86,#0c3577 55%,#0c3270)}
+.gv-v2-heading h1{letter-spacing:.005em;color:#fff;-webkit-text-stroke:2.5px #07112c;text-shadow:0 2px 0 #020817,0 0 7px #0a1c46}
+.gv-v2-heading small{color:#a5c8ff;font-size:20px;letter-spacing:0}
+.gv-lift-v2-modes{padding:2px 154px 2px 154px;background:#071b44;border:2px solid #020714;border-radius:16px;gap:12px}
+.gv-v2-mode{height:80px;min-height:80px;border:3px solid #030817;border-radius:17px}
+.gv-v2-mode:not(.is-active){background:linear-gradient(180deg,#1b2858,#151c46)}
+.gv-v2-mode-abyss.is-active{background:linear-gradient(180deg,#bd4cff,#8210ed)}
+.gv-v2-tab-label strong{font-size:30px;text-transform:uppercase;-webkit-text-stroke:1.7px #06102a;text-shadow:0 1px 0 #030915,0 0 4px #081c49}
+.gv-v2-tab-label small{font-size:18px;color:#a9ccff;text-shadow:0 0 3px #071b45}
+.gv-v2-floors{grid-template-columns:minmax(0,1fr);grid-template-rows:154px 116px 92px minmax(0,1fr);gap:8px}
+.gv-v2-floors>.gv-v2-biome-rail{grid-column:1;grid-row:1;min-width:0}
+.gv-v2-floors>.gv-v2-biome-banner{grid-column:1;grid-row:2;min-width:0}
+.gv-v2-floors>.gv-v2-floor-rail{grid-column:1;grid-row:3;min-width:0}
+.gv-v2-floors>.gv-v2-lower{grid-column:1;grid-row:4;min-width:0}
+.gv-v2-floors>.gv-v2-floor-cta{grid-column:1;grid-row:4}
+.gv-v2-biome-rail{padding:3px 0;border:2px solid #030914;border-radius:17px;background:#061b45}
+.gv-v2-biome-track{gap:9px;padding:0 3px}
+.gv-v2-biome{flex:0 0 252px;height:138px;grid-template-rows:68px minmax(0,1fr);padding:3px;border:3px solid #214e9b;border-radius:15px;background:#091d47}
+.gv-v2-biome.is-selected{border-color:#ffe27a;box-shadow:0 0 0 2px #f4af21}
+.gv-v2-biome-art{border-radius:10px 10px 0 0}
+.gv-v2-biome-copy{grid-template-columns:51px minmax(0,1fr);gap:0 5px;padding:4px 8px;border-radius:0 0 9px 9px;background:linear-gradient(180deg,#102d65,#091c43)}
+.gv-v2-biome-copy small{font-size:31px;color:#f7f9ff;-webkit-text-stroke:1px #06132f}
+.gv-v2-biome-copy strong{font-size:18px;line-height:1;color:#fff}
+.gv-v2-biome-copy em{font-size:16px;line-height:1.05;color:#ffdc3d}
+.gv-v2-biome-banner{border:3px solid #020913;border-radius:18px}
+.gv-v2-banner-copy{display:grid;grid-template-columns:320px minmax(0,1fr);grid-template-rows:auto auto;align-content:center;column-gap:18px;max-width:960px;width:100%;padding:9px 26px;background:linear-gradient(90deg,#071631 0%,#071631ee 45%,#07163100 100%)}
+.gv-v2-banner-copy span{grid-column:1;grid-row:1;font-size:21px;color:#a6c9ff}
+.gv-v2-banner-copy h2{grid-column:1;grid-row:2;margin:0;font-size:36px;white-space:nowrap}
+.gv-v2-banner-copy p{grid-column:2;grid-row:1/3;align-self:center;max-width:none;margin:0;font-size:17px;line-height:1.25;color:#c6d7f6}
+.gv-v2-floor-rail{margin-inline:28px}
+.gv-v2-floor{border:3px solid #020913;border-radius:17px;background:linear-gradient(180deg,#1a6bd7,#13399e);box-shadow:inset 0 -4px #09276d}
+.gv-v2-floor.is-selected{border-color:#020913;background:linear-gradient(180deg,#ffde52,#ffa119);box-shadow:inset 0 -5px #cf6c0b}
+.gv-v2-floor strong{font-size:31px}
+.gv-v2-floor-stars{font-size:19px;gap:3px}
+.gv-v2-lower{grid-row:4;grid-template-columns:minmax(0,1.23fr) minmax(0,1fr);gap:8px;margin:0 9px}
+.gv-v2-floor-card,.gv-v2-side-card{border:3px solid #020913;border-radius:17px;background:linear-gradient(155deg,#0c244c,#071733);box-shadow:inset 0 0 0 2px #1e4d8b}
+.gv-v2-floor-card{padding-bottom:88px}
+.gv-v2-floor-cta{grid-row:4;z-index:2;align-self:end;justify-self:start;width:calc((100% - 26px)*.552);min-height:74px;margin:0 0 9px 17px;border:3px solid #030815;background:linear-gradient(180deg,#ffde4d,#ff9414)}
+.gv-v2-abyss{grid-template-rows:224px 102px 81px 159px minmax(0,1fr)}
+.gv-v2-abyss-hero,.gv-v2-abyss-details,.gv-v2-abyss-prep{border:3px solid #030817;box-shadow:inset 0 0 0 2px #184c91}
+.gv-v2-abyss-copy h2{font-size:52px;-webkit-text-stroke:1.5px #091035;text-shadow:0 0 5px #5720b8}
+.gv-v2-abyss-details h3,.gv-v2-abyss-prep h3{font-size:23px;color:#fff}
+.gv-v2-detail-grid article{min-height:90px}
+@media(max-width:1100px),(max-height:760px){.gv-v2-floors{grid-template-rows:minmax(100px,20%) minmax(90px,15%) minmax(80px,12%) minmax(0,1fr)}.gv-v2-banner-copy{grid-template-columns:1fr}.gv-v2-banner-copy p{display:none}.gv-v2-floor-card{padding-bottom:70px}.gv-v2-floor-cta{min-height:58px}.gv-v2-biome-copy strong{font-size:16px}.gv-v2-biome-copy em{font-size:13px}}
+
+/* V2I · contornos, setas desenhadas, slots vazios e classificação da referência 06. */
+.gv-v2-heading h1{-webkit-text-stroke:3.5px #030915}
+.gv-v2-tab-label strong,.gv-v2-floor strong,.gv-v2-cta-label strong{-webkit-text-stroke:2.6px #030915;paint-order:stroke fill}
+.gv-v2-banner-copy h2,.gv-v2-floor-card h3{-webkit-text-stroke:1.7px #030915;paint-order:stroke fill}
+.gv-v2-biome-copy strong{-webkit-text-stroke:1px #030915;paint-order:stroke fill}
+.gv-v2-floor-stars{font-size:22px;gap:4px}
+.gv-v2-floor-stars i{-webkit-text-stroke:1.5px #020815;paint-order:stroke fill;color:#ffdc48;text-shadow:0 0 3px #0a1025}
+.gv-v2-floor.is-unknown .gv-v2-floor-stars i{color:#8792ab}
+.gv-v2-biome-rail{grid-template-columns:47px minmax(0,1fr) 47px}
+.gv-v2-floor-rail{grid-template-columns:64px minmax(0,1fr) 64px}
+.gv-v2-rail-arrow{display:grid;place-items:center;padding:0;border:3px solid #030914;border-radius:13px;background:linear-gradient(180deg,#1d58a9,#0e3270);box-shadow:inset 0 0 0 2px #3974c2,inset 0 -5px #09255b,0 2px 2px #020714}
+.gv-v2-biome-rail .gv-v2-rail-arrow{width:44px;height:80px}
+.gv-v2-floor-rail .gv-v2-rail-arrow{width:60px;height:78px}
+.gv-v2-chevron{display:block;width:20px;height:20px;border-top:6px solid #dcecff;border-right:6px solid #dcecff;border-radius:2px;filter:drop-shadow(2px 2px 0 #030914)}
+.gv-v2-rail-arrow[data-biome-scroll="-1"] .gv-v2-chevron,.gv-v2-rail-arrow[data-floor-scroll="-1"] .gv-v2-chevron{transform:translateX(4px) rotate(-135deg)}
+.gv-v2-rail-arrow[data-biome-scroll="1"] .gv-v2-chevron,.gv-v2-rail-arrow[data-floor-scroll="1"] .gv-v2-chevron{transform:translateX(-4px) rotate(45deg)}
+.gv-v2-side-card{grid-template-rows:minmax(0,1fr) 80px 74px;gap:8px}
+.gv-v2-side-card h3{font-size:21px;color:#fff;letter-spacing:0;-webkit-text-stroke:1px #030914;paint-order:stroke fill}
+.gv-v2-reward-list{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;height:calc(100% - 29px)}
+.gv-v2-reward-slot{display:block;min-width:0;min-height:90px;border:2px solid #21477f;border-radius:13px;background:linear-gradient(180deg,#061632,#091d43);box-shadow:inset 0 -23px #0c2859}
+.gv-v2-online{display:flex;align-items:center;justify-content:flex-start;gap:14px;min-height:74px;padding:6px 18px;border:3px solid #030914;border-radius:14px;background:linear-gradient(180deg,#402b83,#24164d);box-shadow:inset 0 0 0 2px #6f4bba,inset 0 -5px #120d2e;color:#fff!important;opacity:1!important}
+.gv-v2-online strong{font:900 19px/1 "GV R2 Display","Fredoka",sans-serif;-webkit-text-stroke:1.2px #030914;paint-order:stroke fill}
+.gv-v2-ranking-icon{display:grid;place-items:center;width:56px;height:55px;flex:none}
+.gv-v2-ranking-icon img{width:48px;height:48px;object-fit:contain}
+.gv-v2-ranking-chevron{margin-left:auto;font-size:42px;color:#aaa2ff}
+@media(max-width:1100px),(max-height:760px){.gv-v2-floor-stars{font-size:18px}.gv-v2-biome-rail .gv-v2-rail-arrow{width:35px;height:60px}.gv-v2-floor-rail .gv-v2-rail-arrow{width:42px;height:55px}.gv-v2-chevron{width:16px;height:16px;border-width:5px}.gv-v2-side-card{grid-template-rows:minmax(0,1fr) 70px 58px}.gv-v2-online{min-height:58px}.gv-v2-online strong{font-size:14px}}
+
+/* V2J · caixas dos inimigos, estrelas contornadas e alturas da referência 06. */
+.gv-v2-floor-stars i{-webkit-text-stroke:2.5px #020611;paint-order:stroke fill;text-shadow:0 1px 0 #020611,1px 0 0 #020611,-1px 0 0 #020611}
+.gv-v2-floor-detail{grid-template-columns:minmax(0,1fr) 360px}
+.gv-v2-floor-card header{padding-right:370px}
+.gv-v2-enemies{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto 1fr;align-items:stretch;gap:5px;padding:5px 8px 8px;border:2px solid #24559a;border-radius:14px;background:#091a3b}
+.gv-v2-enemies>strong{grid-column:1/-1;color:#d7e6ff;font:900 17px/1 "GV R2 Display","Fredoka",sans-serif}
+.gv-v2-enemies>span{display:grid;place-items:center;align-content:center;width:auto;min-width:0;height:98px;border:2px solid #1c437e;border-radius:12px;background:linear-gradient(180deg,#091c43,#06132d);overflow:hidden}
+.gv-v2-enemy{width:94px;height:90px;object-fit:contain;filter:drop-shadow(0 4px 3px #020611)}
+.gv-v2-enemies small{display:none}
+.gv-v2-reward-list{height:126px;gap:16px}
+.gv-v2-reward-slot{height:126px;min-height:126px;border-radius:14px}
+.gv-v2-cta.gv-v2-floor-cta{height:76px;min-height:76px;align-self:end;margin-bottom:10px}
+.gv-v2-floor-cta .gv-v2-cta-label strong{color:#fff!important;-webkit-text-stroke:2.8px #030914;paint-order:stroke fill;text-shadow:0 1px 0 #030914}
+.gv-v2-online{height:76px;min-height:76px}
+@media(max-width:1100px),(max-height:760px){.gv-v2-floor-detail{grid-template-columns:minmax(0,1fr) 240px}.gv-v2-floor-card header{padding-right:250px}.gv-v2-enemies>span{height:72px}.gv-v2-enemy{width:65px;height:65px}.gv-v2-reward-list{height:90px;gap:6px}.gv-v2-reward-slot{height:90px;min-height:90px}.gv-v2-cta.gv-v2-floor-cta,.gv-v2-online{height:58px;min-height:58px}}
+
+/* V2K · corrige alinhamento real dos CTAs e proporções solicitadas. */
+.gv-v2-cta.gv-v2-floor-cta{grid-row:4;height:76px;min-height:76px;align-self:end;margin:0 0 12px 17px}
+.gv-v2-online{height:76px;min-height:76px;align-self:end}
+.gv-v2-floor-detail{grid-template-columns:minmax(0,1fr) 380px;gap:10px}
+.gv-v2-floor-card header{padding-right:390px}
+.gv-v2-enemies{min-height:140px;grid-template-rows:20px 1fr;gap:5px;padding:6px 10px 10px;border:2px solid #2b5598;border-radius:13px;background:linear-gradient(180deg,#0b2146,#071630)}
+.gv-v2-enemies>strong{font-size:18px;color:#aec9fc}
+.gv-v2-enemies>span{height:96px;border:2px solid #204c91;border-radius:12px;background:linear-gradient(180deg,#0a1b3a,#040d21)}
+.gv-v2-enemy{width:96px;height:90px}
+.gv-v2-biome.is-selected{border-color:#ffe976;box-shadow:0 0 0 3px #ffdc2e,0 0 15px #ffc329a8}
+.gv-v2-mode.is-active,.gv-v2-mode.is-active:hover{background:linear-gradient(180deg,#fff077,#ffc51e 55%,#ff9410);box-shadow:inset 0 -5px #bd5b08,0 3px 0 #3b67a1,0 0 0 2px #ffdc48}
+.gv-v2-mode-abyss.is-active,.gv-v2-mode-abyss.is-active:hover{background:linear-gradient(180deg,#cb69ff,#9b1df0 65%,#7910d6);box-shadow:inset 0 -5px #54108f,0 3px 0 #3b67a1,0 0 0 2px #d18aff}
+.gv-v2-floor.is-selected{background:linear-gradient(180deg,#fff06a,#ffc125 60%,#ff9516);box-shadow:inset 0 -5px #bf600b,0 0 0 2px #ffd94d,0 0 13px #ffca2e80}
+.gv-v2-reward-list{height:150px;gap:10px}
+.gv-v2-reward-slot{height:150px;min-height:150px;border-width:3px;box-shadow:inset 0 -30px #0c2859}
+
+@media(max-width:1100px),(max-height:760px){.gv-v2-cta.gv-v2-floor-cta,.gv-v2-online{height:58px;min-height:58px}.gv-v2-floor-detail{grid-template-columns:minmax(0,1fr) 250px}.gv-v2-floor-card header{padding-right:260px}.gv-v2-enemies{min-height:100px}.gv-v2-enemies>span{height:64px}.gv-v2-enemy{width:61px;height:60px}.gv-v2-reward-list{height:95px}.gv-v2-reward-slot{height:95px;min-height:95px}}
+
+/* V2L · botão fechar: geometria e símbolo vetorial únicos, sem métrica de glifo. */
+#dialog:has(.gv-lift-v2) .gv-v2-close{position:relative;z-index:6;top:0;right:0;justify-self:end;display:grid;place-items:center;box-sizing:border-box;width:66px;height:66px;min-width:66px;min-height:66px;margin-right:-10px;padding:0;transform:translate(2px,-21px);border:4px solid #030812;border-radius:14px;background:linear-gradient(180deg,#ff6570 0%,#f43f50 47%,#d8263a 100%);box-shadow:0 4px 0 #020610,inset 0 -5px #9d1d2b,inset 0 0 0 2px #ff9ca1,0 0 0 1px #5b2433;cursor:pointer}
+#dialog:has(.gv-lift-v2) .gv-v2-close-mark{display:block;flex:none;width:52px;height:52px;overflow:visible;filter:drop-shadow(0 1px 0 #540a17)}
+#dialog:has(.gv-lift-v2) .gv-v2-close:hover{background:linear-gradient(180deg,#ff7880,#e63747)}
+#dialog:has(.gv-lift-v2) .gv-v2-close:focus-visible{outline:3px solid #ffe086;outline-offset:2px}
+@media(max-width:1100px),(max-height:760px){#dialog:has(.gv-lift-v2) .gv-v2-close{width:60px;height:60px;min-width:60px;min-height:60px;transform:translate(7px,-17px)}#dialog:has(.gv-lift-v2) .gv-v2-close-mark{width:48px;height:48px}}
+
+/* V2M · contratos visuais restaurados da referência 06/05. */
+.gv-v2-biome-banner{display:grid;grid-template-columns:minmax(0,1fr) 560px;position:relative;overflow:hidden;background:#07152f}
+.gv-v2-biome-banner>.gv-v2-biome-panorama{position:relative;inset:auto;grid-column:2;grid-row:1;width:100%;height:100%;object-fit:cover;object-position:50% 50%;opacity:1;filter:none;mask-image:none;-webkit-mask-image:none}
+.gv-v2-banner-copy{grid-column:1;grid-row:1;max-width:none;width:100%;background:#07152f;z-index:1}
+.gv-v2-enemies{position:static;right:auto;top:auto}
+.gv-v2-cta.gv-v2-floor-cta{width:calc(55.2% - 48px);margin-left:29px}
+.gv-v2-cta.gv-v2-abyss-start{background:linear-gradient(180deg,#ffdc4c,#ff9e18);border:3px solid #030914;color:#fff!important;box-shadow:inset 0 -5px #bd5d08,0 3px 8px #020816}
+#dialog:has(.gv-lift-v2) .gv-v2-close{transform:translate(2px,-14px)}
+@media(max-width:1100px),(max-height:760px){.gv-v2-biome-banner{grid-template-columns:minmax(0,1fr) minmax(220px,42%)}.gv-v2-cta.gv-v2-floor-cta{width:calc(55.2% - 32px);margin-left:17px}#dialog:has(.gv-lift-v2) .gv-v2-close{transform:translate(7px,-10px)}}
+
+/* V2Q · catálogo contextual completo, com grupos e rolagem dentro do painel. */
+.gv-v2-rewards{display:grid;grid-template-rows:auto minmax(0,1fr);min-height:0;overflow:hidden}
+.gv-v2-rewards h3{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.gv-v2-rewards h3 small{font:800 11px "GV R2 Body",sans-serif;color:#a9c8f4;-webkit-text-stroke:0;white-space:nowrap}
+.gv-v2-reward-scroll{min-height:0;overflow-y:auto;overflow-x:hidden;padding:0 5px 5px 0;scrollbar-color:#4e7ab9 #07152e;scrollbar-width:thin;overscroll-behavior:contain}
+.gv-v2-reward-scroll:focus-visible,.gv-v2-reward-item:focus-visible{outline:2px solid #ffe086;outline-offset:-2px}
+.gv-v2-reward-group{margin-bottom:9px}
+.gv-v2-reward-group h4{margin:0 0 5px;color:#a9c8f4;font:900 10px/1.2 "GV R2 Body",sans-serif;letter-spacing:.09em}
+.gv-v2-reward-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.gv-v2-reward-item{box-sizing:border-box;min-width:0;height:143px;display:grid;grid-template-rows:69px auto minmax(0,1fr);justify-items:center;align-items:center;gap:2px;padding:6px 4px;border:2px solid #21477f;border-radius:13px;background:linear-gradient(180deg,#061632,#091d43);box-shadow:inset 0 -20px #0c2859;text-align:center;color:#fff}
+.gv-v2-reward-art{width:72px;height:68px;display:grid;place-items:center;overflow:hidden}
+.gv-v2-reward-art>img,.gv-v2-reward-art>svg,.gv-v2-reward-art>.glyph,.gv-v2-reward-art>.approved-interface-icon{display:block;width:64px!important;height:64px!important;max-width:100%;max-height:100%;object-fit:contain}
+.gv-v2-reward-item strong{font:900 12px/1.05 "GV R2 Body",sans-serif;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.gv-v2-reward-item small{font:800 10px/1.1 "GV R2 Body",sans-serif;color:#bfd3f1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.gv-v2-reward-empty{margin:8px 0;color:#bfd3f1;font-weight:800}
+.gv-v2-reward-art .record-cover{position:relative;display:block;width:60px;height:60px;border:5px solid var(--record);border-radius:50%;background:#180d2f;box-shadow:inset 0 0 0 6px #353658,inset 0 0 0 8px #8b97b6}
+.gv-v2-reward-art .record-cover i{position:absolute;inset:14px;border-radius:50%;background:var(--record)}
+.gv-v2-reward-art .record-cover b{position:absolute;inset:0;display:grid;place-items:center;color:#180d2f;font-size:16px}
+@media(max-width:1100px),(max-height:760px){.gv-v2-reward-grid{gap:5px}.gv-v2-reward-item{height:95px;grid-template-rows:44px auto minmax(0,1fr);padding:3px}.gv-v2-reward-art{width:45px;height:44px}.gv-v2-reward-art>img,.gv-v2-reward-art>svg,.gv-v2-reward-art>.glyph,.gv-v2-reward-art>.approved-interface-icon{width:42px!important;height:42px!important}.gv-v2-reward-item strong{font-size:10px}.gv-v2-reward-item small{font-size:8px}.gv-v2-reward-art .record-cover{width:42px;height:42px;border-width:3px}.gv-v2-reward-art .record-cover i{inset:10px}}
+
+/* V2R · tons cotejados com as superfícies dominantes das referências 06 e 05. */
+.gv-lift-v2{background:linear-gradient(180deg,#0c3272,#0b3171 55%,#0a2f70)}
+.gv-lift-v2[data-mode="abyss"]{background:linear-gradient(180deg,#002f70,#002c6b 55%,#002868)}
+.gv-lift-v2-modes{background:#07183e}
+.gv-v2-mode:not(.is-active){background:linear-gradient(180deg,#222253,#181846)}
+.gv-lift-v2[data-mode="abyss"] .gv-v2-mode:not(.is-active){background:linear-gradient(180deg,#0c2858,#071b43)}
+.gv-v2-mode.is-active,.gv-v2-mode.is-active:hover{background:linear-gradient(180deg,#fecd32,#fcb42a 55%,#f89c18);box-shadow:inset 0 -5px #bd5b08,0 3px 0 #3b67a1,0 0 0 2px #f9c53d}
+.gv-v2-mode-abyss.is-active,.gv-v2-mode-abyss.is-active:hover{background:linear-gradient(180deg,#9b43fb,#8820f9 55%,#7810f4);box-shadow:inset 0 -5px #54108f,0 3px 0 #3b67a1,0 0 0 2px #b866fb}
+.gv-v2-biome-rail{background:#071638}
+.gv-v2-biome-copy{background:linear-gradient(180deg,#10254e,#08183b)}
+.gv-v2-biome.is-selected{border-color:#ffd05a;box-shadow:0 0 0 3px #ffb51d,0 0 13px #ffb51d91}
+.gv-v2-biome-banner,.gv-v2-banner-copy{background:#091b42}
+.gv-v2-floor{background:linear-gradient(180deg,#1048c8,#1039b2);box-shadow:inset 0 -4px #09276d}
+.gv-v2-floor.is-selected{background:linear-gradient(180deg,#fecd32,#f9aa21 55%,#f39416);box-shadow:inset 0 -5px #b9650c,0 0 0 2px #f8c832,0 0 12px #f8b42880}
+.gv-v2-floor-card,.gv-v2-side-card{background:linear-gradient(155deg,#0d1e41,#081633)}
+.gv-v2-rail-arrow{background:linear-gradient(180deg,#1b4c99,#0e3475)}
+.gv-v2-online{background:linear-gradient(180deg,#2c235e,#201849);box-shadow:inset 0 0 0 2px #604c9d,inset 0 -5px #120d2e}
+.gv-v2-cta.gv-v2-floor-cta{background:linear-gradient(180deg,#ffcf31,#f79511)}
+.gv-v2-cta.gv-v2-abyss-start{background:linear-gradient(180deg,#ffbf05,#fd8200)}
+.gv-v2-abyss-hero{background:linear-gradient(110deg,#03072e,#0b123d 55%,#171449)}
+.gv-v2-abyss-stats article{background:#061839}
+.gv-v2-abyss-details,.gv-v2-abyss-prep{background:#001a47}
+
+/* V2V · composição isolada do Abismo; Andares permanece idêntico à V2R. */
+.gv-lift-v2[data-mode="abyss"] .gv-v2-abyss-v2v{min-height:0;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:224px 102px 81px 168px 168px auto;gap:8px;overflow-y:auto;overflow-x:hidden;scrollbar-color:#476ca8 #00245e;scrollbar-width:thin;padding:0 7px 4px}
+.gv-v2-abyss-v2v:focus-visible{outline:3px solid #ffe086;outline-offset:-3px}
+.gv-v2-abyss-v2v .gv-v2-abyss-hero{display:block;position:relative;min-height:0;width:1460px;max-width:calc(100% + 10px);margin-inline:-5px;overflow:hidden;border:2px solid #020915;border-radius:17px;background:#050a30;box-shadow:inset 0 0 0 2px #1a5297}
+
+.gv-v2-abyss-scene{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:contain;object-position:center;opacity:1;filter:none}
+.gv-v2-abyss-v2v .gv-v2-abyss-copy{position:absolute;z-index:2;left:32px;top:17px;width:570px;height:auto;padding:0;background:none}
+.gv-v2-abyss-badge{display:inline-block;padding:5px 22px;border-radius:30px;background:#4c1389;color:#f5dbff;font:900 20px/1.1 "GV R2 Body",sans-serif;-webkit-text-stroke:.3px #180629}
+.gv-v2-abyss-v2v .gv-v2-abyss-copy h2{margin:9px 0 3px 18px;color:#fff;font:900 52px/1 "GV R2 Display",sans-serif;-webkit-text-stroke:2px #03091e;text-shadow:0 3px 0 #070c36}
+.gv-v2-abyss-v2v .gv-v2-abyss-copy h2 i{font-style:normal;color:#bed0ff}
+.gv-v2-abyss-v2v .gv-v2-abyss-copy p{max-width:532px;margin:0 0 0 18px;color:#bcd7ff;font:800 18px/1.25 "GV R2 Body",sans-serif;text-shadow:0 2px 3px #02091c}
+.gv-v2-abyss-v2v .gv-v2-survival{position:absolute;z-index:3;top:20px;right:21px;width:202px;height:184px;margin:0;padding:10px;border:3px solid #071227;border-radius:16px;background:linear-gradient(180deg,#091d45,#06132e);box-shadow:inset 0 0 0 2px #254b8b;display:grid;grid-template-rows:auto minmax(0,1fr);justify-items:center;gap:4px}
+.gv-v2-abyss-v2v .gv-v2-survival strong{color:#fff;font:900 19px/1.15 "GV R2 Display",sans-serif;letter-spacing:0;text-align:center}
+.gv-v2-survival-art{position:relative;display:grid;place-items:center;min-height:0;width:100%;overflow:hidden}.gv-v2-survival-vortex{position:absolute;z-index:2;left:50%;top:51%;width:64px;height:65px;transform:translate(-50%,-30%);border-radius:35%;background:repeating-radial-gradient(ellipse at center,#ef55ff 0 3px,#ad21e8 4px 9px,#3d0b73 10px 16px,#190632 17px 23px);box-shadow:0 0 6px #9a24e3;pointer-events:none}
+.gv-v2-survival-art .r2-gate-hero{position:relative;z-index:1;width:145px;height:128px;max-height:100%}.gv-v2-survival-art .r2-gate-image,.gv-v2-survival-art .r2-gate-sockets{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.gv-v2-survival-art img{max-width:145px;max-height:124px;object-fit:contain}
+.gv-v2-abyss-v2v .gv-v2-abyss-stats{display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1fr) minmax(0,.99fr);gap:14px;min-height:0}
+.gv-v2-abyss-v2v .gv-v2-abyss-stats article{display:flex;align-items:center;justify-content:flex-start;gap:17px;min-width:0;padding:8px 13px;border:3px solid #030a1b;border-radius:16px;background:#061839;box-shadow:inset 0 0 0 2px #214985}
+.gv-v2-abyss-v2v .gv-v2-abyss-stats article:first-child{padding-left:20px;gap:28px}
+.gv-v2-stat-icon,.gv-v2-detail-icon{flex:none;display:grid;place-items:center;width:94px;height:78px;border:2px solid #173969;border-radius:12px;background:#081a3b;color:#ffe07b}
+.gv-v2-abyss-icon{width:51px;height:51px;filter:none;object-fit:contain}
+.gv-v2-abyss-v2v .gv-v2-stat-icon .gv-v2-abyss-icon,.gv-v2-abyss-v2v .gv-v2-detail-icon .gv-v2-abyss-icon{width:64px;height:64px}
+.gv-v2-abyss-v2v .gv-v2-detail-grid article>div{min-width:0;flex:1}
+.gv-v2-abyss-stats article:nth-child(2) .gv-v2-stat-icon{color:#dcecff}
+.gv-v2-abyss-stats article:nth-child(3) .gv-v2-stat-icon{color:#ffd02b}
+.gv-v2-abyss-v2v .gv-v2-abyss-stats small{display:block;color:#a9cbff;font:900 16px/1.1 "GV R2 Body",sans-serif;letter-spacing:0}
+.gv-v2-abyss-v2v .gv-v2-abyss-stats strong{display:block;margin-top:4px;color:#fff;font:900 31px/1 "GV R2 Display",sans-serif;white-space:nowrap}.gv-v2-abyss-v2v .gv-v2-abyss-stats article:first-child strong{font-size:38px}.gv-v2-stat-unit{display:inline-block;margin-left:7px;color:#c3d8ff;font:800 16px/1 "GV R2 Body",sans-serif;vertical-align:baseline}
+.gv-v2-abyss-v2v .gv-v2-abyss-start{width:calc(100% - 10px);margin-inline:5px;display:flex;align-items:center;justify-content:center;gap:16px;height:81px;min-height:81px;border:4px solid #030812;border-radius:16px;background:linear-gradient(180deg,#fec201 0%,#feb501 28%,#fe8801 84%,#fe8000 100%);box-shadow:inset 0 4px #fbf32e,inset 0 -5px #b75808,inset 0 0 0 2px #ffe977,0 4px 0 #06204b;color:#fff!important;opacity:1!important}
+.gv-v2-abyss-v2v .gv-v2-abyss-start:disabled{background:linear-gradient(180deg,#a78f57,#7f622f);color:#ecdfc5!important;cursor:not-allowed}
+.gv-v2-abyss-cta-icon{display:grid;place-items:center;width:52px;height:54px}
+.gv-v2-abyss-cta-icon .gv-v2-selected-cabin{width:48px;height:52px;object-fit:contain;filter:none}
+.gv-v2-abyss-v2v .gv-v2-abyss-start strong{font:900 27px/1 "GV R2 Display",sans-serif;-webkit-text-stroke:2.5px #030914;paint-order:stroke fill;text-shadow:0 2px #030914}
+.gv-v2-abyss-v2v .gv-v2-abyss-details{min-height:0;height:159px;align-self:end;padding:15px 15px 11px;border:3px solid #020914;border-radius:17px;background:#001a47;box-shadow:inset 0 0 0 2px #1c4b8d}
+.gv-v2-abyss-v2v .gv-v2-abyss-details h3,.gv-v2-abyss-rewards h3{margin:0 0 8px;color:#fff;font:900 25px/1 "GV R2 Display",sans-serif}
+.gv-v2-abyss-v2v .gv-v2-detail-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.gv-v2-abyss-v2v .gv-v2-detail-grid article{display:flex;flex-direction:row;align-items:center;gap:14px;min-width:0;min-height:92px;padding:3px 10px;border:2px solid #183c71;border-radius:12px;background:#061a3d}
+.gv-v2-abyss-v2v .gv-v2-detail-icon{width:92px;height:82px;color:#bd88ff}
+.gv-v2-detail-grid article:nth-child(2) .gv-v2-detail-icon{color:#ff4e67}
+.gv-v2-detail-grid article:nth-child(3) .gv-v2-detail-icon{color:#df65ff}
+.gv-v2-abyss-v2v .gv-v2-detail-grid b{display:block;color:#fff;font:900 17px/1.1 "GV R2 Display",sans-serif}
+.gv-v2-abyss-v2v .gv-v2-detail-grid span:not(.gv-v2-detail-icon){display:block;margin-top:4px;color:#bcd5ff;font:800 15px/1.2 "GV R2 Body",sans-serif}
+.gv-v2-abyss-rewards{display:grid;grid-template-columns:minmax(0,1fr) 731px;gap:23px;min-height:0;padding:19px 34px 17px 21px;border:3px solid #020914;border-radius:17px;background:#001a47;box-shadow:inset 0 0 0 2px #1c4b8d}
+.gv-v2-abyss-reward-copy h3{margin-bottom:4px}
+.gv-v2-abyss-reward-copy p{margin:0 0 3px;color:#b7d1ff;font:800 16px/1.2 "GV R2 Body",sans-serif}
+.gv-v2-abyss-categories{display:flex;gap:5px;min-width:0}
+.gv-v2-abyss-categories>span{display:flex;flex-direction:row;box-sizing:border-box;padding:0 8px;align-items:center;justify-content:center;gap:8px;flex:1;min-width:0;height:66px;border:3px solid #020817;border-radius:12px;background:linear-gradient(180deg,#143a79,#082451);color:#fff;font:900 18px/1 "GV R2 Display",sans-serif;white-space:nowrap;-webkit-text-stroke:.7px #020817}
+.gv-v2-abyss-categories>span:last-child{flex:1.35 1 0}.gv-v2-abyss-categories>span:first-child{background:linear-gradient(180deg,#b735f8,#7910df);box-shadow:inset 0 0 0 2px #d777ff}
+.gv-v2-abyss-categories .gv-v2-abyss-icon{flex:none;width:42px;height:42px;color:#ffdb55}
+.gv-v2-abyss-reward-tiles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px;height:126px;max-height:100%;align-self:start;min-width:0}
+.gv-v2-abyss-reward-tile{display:grid;place-items:center;min-width:0;border:2px solid #19427f;border-radius:14px;background:#04143a;color:#ffde70;text-align:center;overflow:hidden}
+.gv-v2-abyss-reward-tile img{width:116px;height:112px;object-fit:contain}
+.gv-v2-abyss-reward-tile svg{width:76px;height:76px}.gv-v2-abyss-reward-tile .gv-v2-abyss-reward-art{width:112px;max-width:100%;height:auto;max-height:100%;aspect-ratio:1;object-fit:contain;filter:none}.gv-v2-abyss-rewards.is-product .gv-v2-abyss-reward-tiles{grid-template-columns:repeat(3,132px);justify-content:start}
+.gv-v2-abyss-reward-tile.is-illustration{color:#ffdb67;background:linear-gradient(160deg,#061849,#120d3d)}
+.gv-v2-abyss-systems{min-height:0;margin:0 2px;border:2px solid #153b78;border-radius:12px;background:#041738;color:#cbdcff}
+.gv-v2-abyss-systems summary{padding:9px 15px;cursor:pointer;font:900 16px "GV R2 Body",sans-serif}
+.gv-v2-abyss-systems summary span{margin-left:12px;color:#a7bce1;font-size:12px}
+.gv-v2-abyss-system-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:10px 15px 16px}
+.gv-v2-abyss-system-grid h3{margin:0 0 6px;color:#fff;font:900 17px "GV R2 Display",sans-serif}
+.gv-v2-abyss-system-grid article{margin-bottom:6px}
+.gv-v2-abyss-system-grid article>span{display:block;color:#b9c9e3}
+@media(max-width:1400px),(max-height:850px){.gv-v2-abyss-reward-copy h3{margin-bottom:8px}.gv-v2-abyss-v2v .gv-v2-stat-icon .gv-v2-abyss-icon,.gv-v2-abyss-v2v .gv-v2-detail-icon .gv-v2-abyss-icon{width:50px;height:50px}.gv-v2-abyss-categories .gv-v2-abyss-icon{width:36px;height:36px}.gv-v2-abyss-cta-icon{width:48px;height:48px}.gv-v2-abyss-cta-icon .gv-v2-selected-cabin{width:42px;height:46px}.gv-v2-abyss-v2v .gv-v2-abyss-details{height:139px;padding:11px 15px}.gv-v2-abyss-v2v .gv-v2-abyss-stats article:first-child{padding-left:8px;gap:8px}.gv-v2-abyss-reward-tiles{height:100%;max-height:125px}.gv-lift-v2[data-mode="abyss"] .gv-v2-abyss-v2v{grid-template-rows:190px 88px 68px 148px 147px auto;gap:6px}.gv-v2-abyss-scene{inset:0;width:100%;height:100%}.gv-v2-abyss-v2v .gv-v2-abyss-copy{top:10px;left:20px;width:510px}.gv-v2-abyss-v2v .gv-v2-abyss-copy h2{font-size:42px}.gv-v2-abyss-v2v .gv-v2-abyss-copy p{font-size:15px}.gv-v2-abyss-badge{font-size:15px}.gv-v2-abyss-v2v .gv-v2-survival{width:160px;height:157px;top:13px}.gv-v2-abyss-v2v .gv-v2-survival strong{font-size:15px}.gv-v2-survival-art .r2-gate-hero{width:118px;height:100px}.gv-v2-abyss-v2v .gv-v2-abyss-stats article{gap:8px;padding:4px 8px}.gv-v2-stat-icon{width:68px;height:68px}.gv-v2-abyss-icon{width:38px;height:38px}.gv-v2-abyss-v2v .gv-v2-abyss-stats small{font-size:14px}.gv-v2-abyss-v2v .gv-v2-abyss-stats strong{font-size:23px}.gv-v2-abyss-v2v .gv-v2-abyss-stats article:first-child strong{font-size:29px}.gv-v2-stat-unit{font-size:14px}.gv-v2-abyss-v2v .gv-v2-abyss-start{height:68px;min-height:68px}.gv-v2-abyss-v2v .gv-v2-abyss-start strong{font-size:22px}.gv-v2-abyss-v2v .gv-v2-abyss-details h3,.gv-v2-abyss-rewards h3{font-size:21px}.gv-v2-abyss-v2v .gv-v2-detail-grid article{min-height:78px}.gv-v2-abyss-v2v .gv-v2-detail-icon{width:70px;height:68px}.gv-v2-abyss-v2v .gv-v2-detail-grid b{font-size:15px}.gv-v2-abyss-v2v .gv-v2-detail-grid span:not(.gv-v2-detail-icon){font-size:14px}.gv-v2-abyss-rewards{grid-template-columns:minmax(0,1fr) 46%;gap:14px;padding:8px}.gv-v2-abyss-reward-copy p{font-size:14px;margin-bottom:5px}.gv-v2-abyss-categories>span{font-size:15px;height:56px}.gv-v2-abyss-reward-tile img,.gv-v2-abyss-reward-tile .gv-v2-abyss-reward-art{width:96px;height:96px}.gv-v2-abyss-reward-tile.is-illustration svg{width:64px;height:64px}}
+
+
+
+
+
+
+
+
+
+
+
+/* Runtime shell isolation. Legacy .map-dialog/.lift-pane rules must not shrink V2. */
+#dialog.map-dialog[open]:has(.gv-lift-v2){width:min(1508px,calc(100vw - 28px));height:min(996px,calc(100dvh - 28px));max-height:calc(100dvh - 28px);padding:0;overflow:hidden;display:block}
+#dialog:has(.gv-lift-v2)>.dialog-top{display:none}
+#dialog:has(.gv-lift-v2)>#dialogBody{display:block;height:100%;width:100%;padding:0;overflow:hidden;max-height:none}
+#dialog .gv-lift-v2{height:100%;width:100%;min-height:0;padding:10px 16px 14px;grid-template-rows:80px 84px minmax(0,1fr);overflow:hidden;gap:8px}
+#dialog .gv-v2-header{display:grid;grid-template-columns:100px minmax(0,1fr) 68px;align-items:center;height:80px;min-height:0;padding:0;background:transparent;border:0;position:relative;box-shadow:none}
+#dialog .gv-v2-lift-mark{width:90px;height:80px;transform:none;align-self:center}
+#dialog .gv-v2-lift-mark-img{position:static;inset:auto;transform:none;width:80px;height:78px;object-fit:contain}
+#dialog .gv-v2-heading{transform:none;align-self:center}#dialog .gv-v2-heading h1{font-size:38px}#dialog .gv-v2-heading small{font-size:16px}
+#dialog:has(.gv-lift-v2) .gv-v2-close{transform:none;width:58px;height:58px;min-height:58px;min-width:58px;align-self:center}
+#dialog .gv-v2-biome-track,#dialog .gv-v2-floor-track{grid-column:2;grid-row:1;min-width:0}
+#dialog .gv-v2-rail-arrow:first-child{grid-column:1;grid-row:1}#dialog .gv-v2-rail-arrow:last-child{grid-column:3;grid-row:1}
+#dialog .gv-v2-biome-track{display:flex;overflow-x:auto;overflow-y:hidden}
+#dialog .gv-v2-biome{display:grid;grid-template-rows:minmax(0,1fr) 34px;flex:0 0 252px;height:100%;min-height:0;padding:5px}
+#dialog .gv-v2-biome-art{min-height:0;display:block}#dialog .gv-v2-biome-crop{display:block;width:100%;height:100%;object-fit:cover}
+#dialog .gv-v2-floor-card header{display:block;position:static;min-height:0;height:auto;background:transparent;border:0;box-shadow:none;padding:0;flex-direction:initial}
+#dialog .gv-v2-floors{overflow:auto;grid-template-rows:140px 110px 88px minmax(310px,1fr);min-height:0;padding:3px 5px 8px}
+#dialog .gv-v2-floor-card{min-height:300px}
+#dialog .gv-v2-floor-card header h3{margin:2px 0}
+@media(max-height:820px){#dialog .gv-lift-v2{grid-template-rows:72px 76px minmax(0,1fr);padding:8px 12px}#dialog .gv-v2-header{height:72px}#dialog .gv-lift-v2-modes{height:76px;min-height:76px;padding:0 90px}#dialog .gv-v2-mode{height:70px;min-height:70px}#dialog .gv-v2-floors{grid-template-rows:100px 88px 78px minmax(300px,1fr)}}
+@media(max-width:760px){#dialog .gv-v2-header{grid-template-columns:62px minmax(0,1fr) 54px}#dialog .gv-v2-lift-mark,#dialog .gv-v2-lift-mark-img{width:58px;height:64px}#dialog .gv-v2-heading h1{font-size:28px}#dialog .gv-v2-heading small{font-size:12px}#dialog .gv-lift-v2-modes{padding:0 3px}#dialog .gv-v2-mode strong{font-size:18px}#dialog .gv-v2-lower{grid-template-columns:1fr}#dialog .gv-v2-floors{grid-template-rows:100px 90px 80px auto}#dialog .gv-v2-side-card{min-height:300px}}
+#dialog .gv-v2-biome-banner{grid-template-rows:minmax(0,1fr)}
+#dialog .gv-v2-banner-copy{display:flex;flex-direction:column;min-height:0;height:100%;box-sizing:border-box;padding:6px 20px;justify-content:center}
+#dialog .gv-v2-banner-copy span{font-size:12px}#dialog .gv-v2-banner-copy h2{font-size:26px;margin:2px 0}#dialog .gv-v2-banner-copy p{font-size:12px;margin:2px 0;line-height:1.25}
+#dialog .gv-v2-lower{min-height:430px}#dialog .gv-v2-side-card{grid-template-rows:minmax(180px,1fr) auto auto auto}
+#dialog .gv-v2-floors{grid-template-rows:140px 110px 88px minmax(430px,1fr) 72px}
+#dialog .gv-v2-abyss{overflow-y:auto;min-height:0}
+@media(max-height:820px){#dialog .gv-v2-floors{grid-template-rows:100px 100px 78px minmax(430px,1fr) 72px}}
+@media(max-width:760px){#dialog .gv-v2-floors{grid-template-rows:100px 110px 80px auto 72px}#dialog .gv-v2-banner-copy{max-width:65%;padding:6px 10px}#dialog .gv-v2-banner-copy h2{font-size:20px}#dialog .gv-v2-lower{min-height:800px}}
+
+/* Biome previews deliberately suggest an atmosphere, not a playable map. */
+.gv-v2-biome-hero img,.gv-v2-panorama img,.gv-v2-biome-art img,.gv-v2-biome-banner img{filter:blur(4px);transform:scale(1.07)}
+
+.gv-v2-banner-img,.gv-v2-biome-crop{filter:blur(4.5px)!important;transform:scale(1.09)}

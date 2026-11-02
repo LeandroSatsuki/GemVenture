@@ -1,0 +1,130 @@
+{
+  "groundAnchor": [
+    645,
+    1135
+  ],
+  "nominalWidth": 915,
+  "layers": [
+    {
+      "id": "trunk-v1",
+      "scale": 1,
+      "left": 305,
+      "top": 177,
+      "motion": false,
+      "file": "trunk-v1.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "bounds": [
+        305,
+        177,
+        993,
+        1135
+      ],
+      "sha256": "d620d6bbf84130b4190598d590260ef2b04d7199f6d4ba65eb1116e4ad5e21d2"
+    },
+    {
+      "id": "crown-main-v1",
+      "width": 600,
+      "left": 380,
+      "top": 20,
+      "amp": 5,
+      "period": 11.3,
+      "phase": 0.3,
+      "scale": 0.5976095617529881,
+      "file": "crown-main-v1.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "bounds": [
+        385,
+        164,
+        1389,
+        842
+      ],
+      "sha256": "741ce6ce8223d2f554af0f72b4c82c5f4e15cebbd50301c1ad4af92f5ab441b2"
+    },
+    {
+      "id": "crown-left-v1",
+      "width": 310,
+      "left": 190,
+      "top": 190,
+      "amp": 5,
+      "period": 13.7,
+      "phase": 1.1,
+      "scale": 0.3979460847240051,
+      "file": "crown-left-v1.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "bounds": [
+        265,
+        273,
+        1044,
+        1002
+      ],
+      "sha256": "a41f89674bc9b68f634c0ff7ee5adb2c42fae5b81b73a49c470cb113f185f1df"
+    },
+    {
+      "id": "crown-low-left-v1",
+      "width": 250,
+      "left": 180,
+      "top": 520,
+      "amp": 4,
+      "period": 12.1,
+      "phase": 2.4,
+      "scale": 0.3654970760233918,
+      "file": "crown-low-left-v1.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "bounds": [
+        284,
+        278,
+        968,
+        1008
+      ],
+      "sha256": "0eec0235ec9cd18f334e5f084c838c83d8722ad388804ece1550b2c823a98237"
+    },
+    {
+      "id": "crown-low-right-v1",
+      "width": 300,
+      "left": 795,
+      "top": 400,
+      "amp": 5,
+      "period": 15.7,
+      "phase": 3.2,
+      "scale": 0.3931847968545216,
+      "file": "crown-low-right-v1.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "bounds": [
+        264,
+        284,
+        1027,
+        994
+      ],
+      "sha256": "49a8c402676006b853cfbb097b10960082b6477a3e16a7429f21a93c5166772f"
+    }
+  ],
+  "rigSha256": "84b7d58184bb04bc5edd6dfad90392f31558892754597bd447bbd6893917e8f8",
+  "otherGroups": {
+    "well": "888d550990dd917cd8da59f36c557349ac0677eb5109d41574e0b74991e2f56d",
+    "roulette": "954d36018bc31ee6c9f3461cbb68af12c44290caf1f29c24029221eaf6afbf10",
+    "lift": "98e527ee44e7092e73881ae791249b9de839b83c389aff2f22bc8c3a8c301841",
+    "gramophone": "4ff9fb3c90f371013d7eec9dda1ca89e29c195bbc9bca98ad04ca99f5b1ea7d4",
+    "board": "847b34d58632577c56580d1ee09f3c341f3d235cb5b7cf7204aad55df5d77b4f",
+    "bush": "2fac559f8c1aaba60a0fbef9c0ce3b1d129487c9430552ed801c4fa30663fc91",
+    "grove": "64be5a7fdb96054b11672019efa93b7aa4296136051831dbbbf3c61aace005b2",
+    "shrine": "f7df78f8169f32c285043e246e0cacf53eccf125467d2a96c2a013d77bd89b41",
+    "miningMachine": "55d4694b7beb80eda28a84693d0e2429c426c0f65bf928209953e9774987c064",
+    "zag": "f9c7640c97f5b8301442fe8794b68e20209569bff79f60392682a5c097087447",
+    "statueCopper": "fd4480bcda01d23b6dbc3376533cca6dc92c07e452e6a8c36e4a0e4d559e2976"
+  }
+}

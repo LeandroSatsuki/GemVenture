@@ -1,0 +1,12 @@
+{
+  "id": "QUEST-REWARDS-20261102-R1",
+  "authorization": "Pedido humano atual: gemas progressivas por quest/raridade/nível, disco inédito raro e pet",
+  "files": {
+    "approved-missions-ui.css": "7f8be359d199cf9514728a5cdd597a12b7f51282e5ae65a6f992524909cbdd8b",
+    "approved-missions-ui.js": "e30dbacadebb35e9480fae47c73fc2351a7bcaa4a33e2b311087a57a0d454ca8",
+    "mission-claim.js": "e0395d4089dcd0198121813fe23944e356e73c395db5fccd3212ea2c0898ff24",
+    "mission-rewards.js": "91a1ecbe8409f4acb53ea496241808c8d8ace71a50dc723665d9347eb5785f2d",
+    "missions.js": "f6de2fdc1882dff5de85e109dd7d801a889005caa9e1332f660a395e877bfd17",
+    "run.js": "7e2185ed3c882484ad4fa4a71b178ca354c4b9ed6ff67d2abac4277e7a82b3d6"
+  }
+}

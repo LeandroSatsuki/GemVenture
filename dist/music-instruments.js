@@ -55,7 +55,7 @@ export function playInstrument(m,event,at){
  }
  filter.connect(gain);let output=gain;
  if(pan&&ctx.createStereoPanner){const p=ctx.createStereoPanner();p.pan.value=pan;gain.connect(p);nodes.push(p);output=p;}
- output.connect(m.master);
+ output.connect(typeof m.outputFor==='function'?m.outputFor(false):m.master);
  gain.gain.setValueAtTime(.0001,at);gain.gain.exponentialRampToValueAtTime(level,at+Math.min(duration*.25,attack));
  gain.gain.exponentialRampToValueAtTime(Math.max(.0001,level*sustain),at+duration*.55);
  gain.gain.exponentialRampToValueAtTime(.0001,at+duration);

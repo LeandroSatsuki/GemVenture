@@ -1,0 +1,16 @@
+{
+  "id": "CAVE-RUNTIME-PERFORMANCE-20261102-R2",
+  "authorization": "User explicitly approved optimization only, without visual changes",
+  "scope": "Navigation equivalence/cache, notice invalidation, chunk scheduling and synchronous save serialization. No shaders, styles, assets, counts, game rules, migration or user save.",
+  "paletteUnchanged": true,
+  "visualAssetsUnchanged": true,
+  "gameplayEquivalence": "29 scenarios, 2666 complete state checkpoints against baseline",
+  "files": {
+    "core.js": "1475dd8222d5ffe26e4582ab6711d5be6b7a32d45d6a2354e42a7baaa371e724",
+    "run.js": "4acb926858a1aa5fe0b80dfbf3cbc324920f62a71f999bdea199fcc45a324a85",
+    "cave-notice-layout.js": "1602c3031170c2377e040be3a98579f54186bcf743520c4f88345c45c8b43e9c",
+    "campaign-cave-runtime.js": "31cf307035982e863faa35be6cb0e0e973a556e0ef206177b1a398c85337211c",
+    "cave-navigation.js": "0f2499489f269fb91b682669faf3747d64c6124bd2d9546e2ef13c2712381b61",
+    "save-snapshot.js": "16fb9a9484383452d27c52a72557ff37301e7ec2bd6316ec56dda0da71ffa42b"
+  }
+}

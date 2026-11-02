@@ -11,6 +11,9 @@ informações pessoais, tokens ou credenciais.
 
 ## Preparar uma mudança
 
+Para tarefas da equipe, baseline, reserva de interfaces, entrega e aprovação,
+consulte [o fluxo operacional](docs/TEAM_WORKFLOW.md).
+
 1. Use Node.js 24 e execute `npm start`.
 2. Faça alterações pequenas, preservando compatibilidade dos saves.
 3. Execute `npm run check`, `npm test` e a auditoria relevante.
@@ -21,7 +24,8 @@ informações pessoais, tokens ou credenciais.
 - Forja, árvore, poço, estrelas e sistemas AFK têm economias e papéis distintos.
 - Ritmo, criaturas e sinais usam o mesmo relógio musical.
 - Textos curtos, perigos claros, controles legíveis e efeitos com limites.
-- Use HEPT32, silhuetas definidas e uma sombra por material.
+- Use HEPT32 no runtime e silhuetas definidas. A regra de uma sombra por material
+  pertence à arte procedural; referências raster e ícones seguem seus contratos aprovados.
 - Teste em uma origem/porta separada; preserve a partida do jogador.
 - Não adicione assets de terceiros sem documentação de origem e permissão.
 - Não introduza dependências ou reescreva a engine para alterações pontuais.

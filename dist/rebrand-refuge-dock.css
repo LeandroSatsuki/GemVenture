@@ -1,0 +1,21 @@
+/* P1-B geometry only. Existing XP/P1-A card typography and artwork are retained. */
+#refugeResourceDock,#refugeDockContent{display:contents}
+#refugeDockNav{display:none}
+body.immersive-base main[data-refuge-dock=active]:not([hidden]){box-sizing:border-box;position:fixed;inset:0;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(var(--refuge-scene-min,216px),auto) auto;align-content:start;height:100dvh;min-height:0;margin:0;padding:0;overflow-x:hidden;overflow-y:auto;overscroll-behavior-y:contain;scrollbar-gutter:stable;isolation:isolate}
+body.immersive-base main[data-refuge-dock=active][data-refuge-insufficient=true]{bottom:64px;height:calc(100dvh - 64px)}
+body.immersive-base main[data-refuge-dock=active] #stage[data-mode=base]{box-sizing:border-box;position:relative;inset:auto;grid-row:1;grid-column:1;width:100%;height:var(--refuge-scene-height,auto);min-height:var(--refuge-scene-min,216px);margin:0;padding:0;border:0;border-radius:0;box-shadow:none;transform:none;translate:none}
+body.immersive-base main[data-refuge-dock=active] #stage[data-mode=base]>#world{position:absolute;inset:var(--refuge-top-reserve,0px) 0 0;width:100%;height:calc(100% - var(--refuge-top-reserve,0px));min-height:216px;transform:none;translate:none}
+body.immersive-base main[data-refuge-dock=active] #refugeResourceDock{box-sizing:border-box;position:relative;display:block;grid-row:2;grid-column:1;min-width:0;height:auto;max-height:none;margin:0;padding:12px 16px;z-index:8;background:#180d2f;overflow:visible;transform:none}
+body.immersive-base main[data-refuge-dock=active] #refugeDockContent{display:grid;grid-template-columns:280px minmax(0,1fr);align-items:end;gap:16px;min-width:0;height:auto;max-height:none}
+body.immersive-base main[data-refuge-dock=active] #refugeDockContent>#experienceHud{position:relative;inset:auto;width:auto;max-width:none;height:auto;max-height:none;min-width:0;align-self:end;margin:0;pointer-events:auto}
+body.immersive-base main[data-refuge-dock=active] #refugeDockContent>#materialWallet.gv-r2{position:relative;inset:auto;width:auto;max-width:none;height:auto;max-height:none;min-width:0;margin:0;align-self:end;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;overflow:visible}
+body.immersive-base main[data-refuge-dock=active] #materialWallet[data-refuge-transfer]>.resource-balance{min-height:var(--refuge-transfer-card-height)}
+body.immersive-base main[data-refuge-dock=active] #refugeDockContent>#materialWallet[data-refuge-transfer]{min-height:var(--refuge-transfer-wallet-height)}
+body.immersive-base main[data-refuge-dock=active][data-refuge-insufficient=true]~#refugeDockNav:not([hidden]){box-sizing:border-box;position:fixed;inset:auto 0 0;height:64px;display:flex;gap:12px;align-items:center;justify-content:center;padding:8px 12px;background:#180d2f;z-index:16}
+#refugeDockNav button{box-sizing:border-box;min-height:48px;min-width:96px;padding:8px 16px;touch-action:manipulation;font:900 20px/1.2 var(--r2-body);transform:none;translate:none;filter:none}
+#refugeDockNav[hidden]{display:none!important}
+@media(max-width:1099px){body.immersive-base main[data-refuge-dock=active] #refugeDockContent{grid-template-columns:240px minmax(0,1fr)}body.immersive-base main[data-refuge-dock=active] #refugeDockContent>#materialWallet.gv-r2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:759px){body.immersive-base main[data-refuge-dock=active] #refugeResourceDock{padding:12px}body.immersive-base main[data-refuge-dock=active] #refugeDockContent{grid-template-columns:minmax(0,1fr);gap:12px;align-items:start}body.immersive-base main[data-refuge-dock=active] #refugeDockContent>#experienceHud,body.immersive-base main[data-refuge-dock=active] #refugeDockContent>#materialWallet.gv-r2{align-self:start}}
+@media(max-width:600px){body.immersive-base main[data-refuge-dock=active] #refugeDockContent>#materialWallet.gv-r2{gap:6px}}
+@media(prefers-reduced-motion:reduce){#refugeDockNav button{transition:none;animation:none}}
+.soft-fx #refugeDockNav button{transition:none;animation:none}

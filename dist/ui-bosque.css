@@ -1,0 +1,83 @@
+@font-face{font-family:'GV Fredoka';src:url('./assets/ui-fonts/bosque/Fredoka-600-Static.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'GV Nunito';src:url('./assets/ui-fonts/bosque/Nunito-600-Static.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'GV Nunito';src:url('./assets/ui-fonts/bosque/Nunito-700-Static.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'GV Nunito';src:url('./assets/ui-fonts/bosque/Nunito-800-Static.ttf') format('truetype');font-weight:800;font-display:swap}
+@font-face{font-family:'GV Nunito';src:url('./assets/ui-fonts/bosque/Nunito-900-Static.ttf') format('truetype');font-weight:900;font-display:swap}
+#dialog.bosque-ui[data-gvui]{--gvui-body:'GV Nunito';--gvui-display:'GV Fredoka';--gvui-display-weight:600;--gvui-surface:#005f41;--gvui-inset:#053239;--gvui-text:#fbbe82;--gvui-muted:#c5cddb;--gvui-edge:#08b23b;--gvui-accent:#ecab11;--gvui-selected:#de9751;--gvui-selected-text:#180d2f;--gvui-button:#ecab11;--gvui-button-text:#180d2f;--gvui-depth:#8a4926;--gvui-hover:#ece910;--gvui-focus:#e8ff75;--gvui-disabled:#053239;--gvui-disabled-text:#c5cddb;}
+/* Isolated presentation proposal. Layout selectors retain their original grid, order and actions. */
+/* Every theme value is set on the pilot only, never on the live game's root. */
+#dialog.bosque-ui[data-gvui]{font-family:var(--gvui-body),'Trebuchet MS','Segoe UI',sans-serif;background:var(--gvui-surface);color:var(--gvui-text);border-color:var(--gvui-edge);box-shadow:0 8px 0 var(--gvui-depth);--body:var(--gvui-body),'Trebuchet MS','Segoe UI',sans-serif;--arcade:var(--gvui-display),'Arial Rounded MT Bold',sans-serif}
+#dialog.bosque-ui[data-gvui] .dialog-top{background:var(--gvui-surface);border-color:transparent}
+#dialog.bosque-ui[data-gvui] #dialogLabel{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}
+#dialog.bosque-ui[data-gvui] #close{background:var(--gvui-inset);color:var(--gvui-text);border-color:var(--gvui-edge)}
+#dialog.bosque-ui[data-gvui] :is(h1,h2,h3,h4,h5){font-family:var(--gvui-display),'Arial Rounded MT Bold',sans-serif!important;font-weight:var(--gvui-display-weight)!important;color:var(--gvui-text)!important;letter-spacing:.015em}
+#dialog.bosque-ui[data-gvui] h2{font-size:28px!important}
+#dialog.bosque-ui[data-gvui] :is(p,small,summary,label,button,strong,b,em){font-family:var(--gvui-body),'Trebuchet MS','Segoe UI',sans-serif}
+#dialog.bosque-ui[data-gvui] :is(p,small,summary,label){color:var(--gvui-muted);font-weight:600}
+#dialog.bosque-ui[data-gvui] button{position:relative;isolation:isolate;translate:none!important;transform:none!important;filter:none!important;color:var(--gvui-text);background:var(--gvui-inset);border-color:var(--gvui-edge);transition:background-color 90ms,color 90ms,box-shadow 90ms;touch-action:manipulation}
+/* Visual face moves inside a stationary button: hitbox never moves, actions never repeat. */
+#dialog.bosque-ui[data-gvui] button:not(:disabled):not(#close){box-shadow:inset 0 2px 0 #ffffff25,inset 0 -4px 0 var(--gvui-depth)}
+#dialog.bosque-ui[data-gvui] button.primary:not(:disabled)::before{content:"";position:absolute;pointer-events:none;inset:3px 5px auto;height:2px;border-radius:3px;background:#ffffff45;transition:opacity 90ms}
+#dialog.bosque-ui[data-gvui] button:not(:disabled):hover{box-shadow:inset 0 2px 0 #ffffff45,inset 0 -5px 0 var(--gvui-depth);border-color:var(--gvui-focus)}
+#dialog.bosque-ui[data-gvui] button:not(:disabled):active{box-shadow:inset 0 4px 0 var(--gvui-depth),inset 0 -1px 0 #ffffff20}
+#dialog.bosque-ui[data-gvui] button.primary:not(:disabled):active::before{opacity:0}
+#dialog.bosque-ui[data-gvui] button.gvui-clicked:not(:disabled){animation:gvui-click 120ms ease-out}
+#dialog.bosque-ui[data-gvui] button:focus-visible,#dialog.bosque-ui[data-gvui] summary:focus-visible{outline:3px solid var(--gvui-focus);outline-offset:3px}
+#dialog.bosque-ui[data-gvui] button:disabled{opacity:1!important;background:var(--gvui-disabled)!important;color:var(--gvui-disabled-text)!important;box-shadow:none!important;border-style:dashed;cursor:not-allowed}
+#dialog.bosque-ui[data-gvui] button.primary{background:var(--gvui-button)!important;color:var(--gvui-button-text)!important;border-color:var(--gvui-depth)!important;font-weight:800}
+#dialog.bosque-ui[data-gvui] button.primary:not(:disabled):hover{background:var(--gvui-hover)!important}
+/* Override only the inherited important action shadow. Press feedback stays inside the face. */
+#dialog.bosque-ui[data-gvui] button:is(.primary,.gear-roll):not(:disabled){box-shadow:inset 0 2px 0 #ffffff25,inset 0 -4px 0 var(--gvui-depth)!important}
+#dialog.bosque-ui[data-gvui] button:is(.primary,.gear-roll):not(:disabled):hover{box-shadow:inset 0 2px 0 #ffffff45,inset 0 -5px 0 var(--gvui-depth)!important}
+#dialog.bosque-ui[data-gvui] button:is(.primary,.gear-roll):not(:disabled):active,#dialog.bosque-ui[data-gvui] button:is(.primary,.gear-roll).gvui-clicked:not(:disabled){box-shadow:inset 0 4px 0 var(--gvui-depth),inset 0 -1px 0 #ffffff20!important}
+/* Important shadows cannot be interpolated by keyframes; the clicked class holds the pressed face
+   for the existing 120ms animation, then animationend/cancel releases it. No moving hitbox. */
+#dialog.bosque-ui[data-gvui] button.primary:disabled{background:var(--gvui-disabled)!important;color:var(--gvui-disabled-text)!important;border-color:var(--gvui-edge)!important}
+#dialog.bosque-ui[data-gvui] :is(.astral-header,.astral-collection-heading,.astral-legacy,.astral-slots){border-color:var(--gvui-edge)}
+#dialog.bosque-ui[data-gvui] :is(.astral-header>strong,.astral-sigil){color:var(--gvui-accent);text-shadow:none}
+#dialog.bosque-ui[data-gvui] :is(.astral-altar,.astral-offer article,.astral-slots>span,.astral-collection button,.relic-grid .relic){background:var(--gvui-inset);color:var(--gvui-text);border-color:var(--gvui-edge)}
+#dialog.bosque-ui[data-gvui] :is(.astral-altar h3,.astral-collection-heading h3){font-family:var(--gvui-display)!important}
+#dialog.bosque-ui[data-gvui] .astral-collection button.active{background:var(--gvui-selected);color:var(--gvui-selected-text);border-color:var(--gvui-focus)}
+#dialog.bosque-ui[data-gvui] .astral-collection button:is(.owned,.active) :is(b,small,em){color:inherit}
+#dialog.bosque-ui[data-gvui] .astral-collection button:disabled :is(b,small,em){color:inherit}
+#dialog.bosque-ui[data-gvui] :is(.astral-rule,.astral-slots>b,.astral-slots small,.astral-collection-heading>span,.relic-rule){color:var(--gvui-muted)}
+#dialog.bosque-ui[data-gvui] .relic-grid .relic.owned{border-color:var(--gvui-accent)}
+#dialog.bosque-ui[data-gvui] :is(.smith-header,.smith-selection,.smith-recipe,.smith-stock>div){border-color:var(--gvui-edge)}
+#dialog.bosque-ui[data-gvui] :is(.smith-header strong,.smith-header small,.smith-stock strong,.smith-stock span,.smith-kicker,.recipe-coins,.recipe-coins b,.forge-benefit){color:var(--gvui-text)}
+#dialog.bosque-ui[data-gvui] :is(.smith-projects button,.smith-recipe,.smith-stock>div,.building-upgrade){background:var(--gvui-inset);color:var(--gvui-text);border-color:var(--gvui-edge)}
+#dialog.bosque-ui[data-gvui] .smith-projects button.selected{background:var(--gvui-selected);color:var(--gvui-selected-text);border-color:var(--gvui-focus)}
+#dialog.bosque-ui[data-gvui] .smith-projects button strong{color:inherit}
+#dialog.bosque-ui[data-gvui] .smith-selection-icon .glyph{color:var(--gvui-text)}
+#dialog.bosque-ui[data-gvui] .recipe-gem{color:#180d2f;border-color:var(--gvui-edge)}
+#dialog.bosque-ui[data-gvui] .recipe-gem.missing{border-style:dashed;border-color:var(--gvui-focus)}
+#dialog.bosque-ui[data-gvui] .menu-cost-state,#dialog.bosque-ui[data-gvui] .forge-lock{color:var(--gvui-text)!important;font-weight:800}
+#dialog.bosque-ui[data-gvui] :is(.recipe-amount b,.recipe-coins b,.smith-stock strong,.astral-header>strong){font-variant-numeric:tabular-nums}
+@keyframes gvui-click{0%{box-shadow:inset 0 4px 0 var(--gvui-depth)}100%{box-shadow:inset 0 2px 0 #ffffff25,inset 0 -4px 0 var(--gvui-depth)}}
+@media(prefers-reduced-motion:reduce){#dialog.bosque-ui[data-gvui] button,#dialog.bosque-ui[data-gvui] button::before{transition:none!important}#dialog.bosque-ui[data-gvui] button.gvui-clicked{animation:none!important}}
+/* Complete existing Forja equipment/deposit/disclosure components; no grid or order changes. */
+#dialog.bosque-ui[data-gvui] :is(.gear-workbench,.menu-armor-upgrade,.building-popover){background:var(--gvui-inset);color:var(--gvui-text);border-color:var(--gvui-edge)}
+#dialog.bosque-ui[data-gvui] .building-upgrade>summary{background:var(--gvui-inset);color:var(--gvui-text);border-color:var(--gvui-edge)}
+#dialog.bosque-ui[data-gvui] .building-popover :is(b,strong,span){color:var(--gvui-text)}
+#dialog.bosque-ui[data-gvui] .gear-workbench :is(header>b,.gear-focus>b,.gear-current,.gear-equipped strong,.gear-equipped span,.gear-possible summary,.gear-possible span){color:var(--gvui-muted)}
+#dialog.bosque-ui[data-gvui] :is(.gear-equipped,.gear-possible span){background:var(--gvui-inset);border-color:var(--gvui-edge)}
+#dialog.bosque-ui[data-gvui] :is(.gear-pieces button,.gear-traits button,.gear-colors button,.gear-offers button[data-gear-offer]){background:var(--gvui-inset);color:var(--gvui-text);border-color:var(--gvui-edge)}
+#dialog.bosque-ui[data-gvui] :is(.gear-pieces button,.gear-traits button,.gear-colors button)[aria-pressed=true]{background:var(--gvui-selected);color:var(--gvui-selected-text);border-color:var(--gvui-focus)}
+#dialog.bosque-ui[data-gvui] :is(.gear-pieces button,.gear-traits button,.gear-colors button,.gear-offers button) :is(strong,small,b){color:inherit}
+#dialog.bosque-ui[data-gvui] .gear-pieces .glyph{color:inherit}
+#dialog.bosque-ui[data-gvui] .gear-focus .glyph{color:var(--gvui-text)}
+#dialog.bosque-ui[data-gvui] .gear-traits button>b{background:var(--gvui-surface);color:inherit}
+#dialog.bosque-ui[data-gvui] .gear-workbench .gear-roll{background:var(--gvui-button)!important;color:var(--gvui-button-text)!important;border-color:var(--gvui-depth)!important}
+#dialog.bosque-ui[data-gvui] .gear-workbench .gear-roll:disabled{background:var(--gvui-disabled)!important;color:var(--gvui-disabled-text)!important;border-color:var(--gvui-edge)!important}
+#dialog.bosque-ui[data-gvui] .gear-workbench :is(.gear-roll,.gear-upgrade) small{color:inherit}
+#dialog.bosque-ui[data-gvui] .gear-workbench :is(.gear-clear,.gear-keep){background:var(--gvui-inset)!important;color:var(--gvui-text)!important;border-color:var(--gvui-accent)!important}
+#dialog.bosque-ui[data-gvui] .menu-armor-upgrade>summary :is(strong,span){color:var(--gvui-text)}
+#dialog.bosque-ui[data-gvui] .smith-purpose b{color:var(--gvui-muted)}
+#dialog.bosque-ui[data-gvui] .relic-art .glyph{color:var(--gvui-accent)}
+#dialog.bosque-ui[data-gvui] :is(.relic h3,.relic strong,.relic-rule){color:var(--gvui-text)}
+#dialog.bosque-ui[data-gvui] .gear-workbench :is(small,header>b,.gear-focus>b,.gear-possible span,.gear-possible summary,.gear-pieces strong){font-size:12px}
+#dialog.bosque-ui[data-gvui] :is(.smith-kicker,.astral-rule,.astral-slots small,.astral-collection-heading>span){font-size:12px}
+.soft-fx #dialog.bosque-ui[data-gvui] button,.soft-fx #dialog.bosque-ui[data-gvui] button::before{transition:none!important}
+.soft-fx #dialog.bosque-ui[data-gvui] button.gvui-clicked{animation:none!important}
+/* If motion preference changes during a click, restore the face even before cancel cleanup. */
+.soft-fx #dialog.bosque-ui[data-gvui] button:is(.primary,.gear-roll).gvui-clicked:not(:disabled){box-shadow:inset 0 2px 0 #ffffff25,inset 0 -4px 0 var(--gvui-depth)!important}
+@media(prefers-reduced-motion:reduce){#dialog.bosque-ui[data-gvui] button:is(.primary,.gear-roll).gvui-clicked:not(:disabled){box-shadow:inset 0 2px 0 #ffffff25,inset 0 -4px 0 var(--gvui-depth)!important}}

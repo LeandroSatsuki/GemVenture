@@ -1,0 +1,7 @@
+Capas de álbum originais criadas para GemVenture.
+Produção: chat Clone e execute o diorama; image_gen integrado.
+Fontes, referências e prompts: gemventure/asset-work/gv-059-album-covers-r1/MANIFEST.json.
+Aprovadas pelo usuário na prévia da vitrola em 01/11/2026.
+Estas são interpretações visuais para GemVenture, não capas oficiais dos compositores.
+Créditos musicais e licenças: assets/audio/approved-library-r5/CREDITOS.txt.
+Uma capa por composição, compartilhada pelas versões por dificuldade.

@@ -1,0 +1,21 @@
+/* GV035 V2. Floating layout first; native scroll fallback only when it cannot fit. */
+body.immersive-run #explorationHud[data-gv-hud-placement=safe]{position:fixed;left:var(--gv-hud-left);top:var(--gv-hud-top);right:auto;bottom:auto;box-sizing:border-box;width:var(--gv-hud-width);max-width:none;margin:0}
+body.immersive-run #frenzyHud[data-gv-hud-placement=safe]{position:fixed;left:var(--gv-hud-left);top:var(--gv-hud-top);right:auto;bottom:auto;margin:0}
+body.immersive-run #runCards{flex-direction:column;flex-wrap:nowrap;align-items:stretch;overflow-x:hidden;overflow-y:auto;scrollbar-gutter:stable;overscroll-behavior:contain;max-height:var(--gv-hud-height,180px);min-height:0}
+body.immersive-run #runCards[data-gv-hud-placement=safe]{position:fixed;left:var(--gv-hud-left);top:var(--gv-hud-top);right:auto;bottom:auto;box-sizing:border-box;width:var(--gv-hud-width);margin:0}
+body.immersive-run #runCards>.card-chip{box-sizing:border-box;flex:0 0 auto;min-width:0;width:100%;overflow-wrap:anywhere}
+body.immersive-run #runCards>.card-chip>div{min-width:0}
+body.immersive-run #runCards[data-gv-hud-scroll=true]{pointer-events:auto;touch-action:auto}
+body.immersive-run .gv-cave-rail{position:fixed;left:var(--gv-hud-left);top:var(--gv-hud-top);width:var(--gv-hud-width);height:var(--gv-hud-height);box-sizing:border-box;z-index:6;padding:6px;overflow:auto;overscroll-behavior:contain;touch-action:auto;scrollbar-gutter:stable;border:1px solid var(--r2-muted,#c5cddb);border-radius:10px;background:var(--r2-inset,#353658);pointer-events:auto;scroll-padding:6px}
+body.immersive-run .gv-cave-rail>p{position:relative;margin:0 0 8px;padding:3px;background:var(--r2-inset,#353658);color:var(--r2-muted,#c5cddb);font:800 12px/1.4 var(--r2-body,'GV R2 Body',sans-serif);overflow-wrap:anywhere;z-index:1}
+body.immersive-run .gv-cave-rail [data-gv-flow]{position:relative!important;inset:auto!important;transform:none!important;box-sizing:border-box;min-width:0;max-width:100%!important;width:100%!important;height:auto;max-height:none!important;margin:0 0 12px!important;overflow:visible}
+body.immersive-run .gv-cave-rail #runCards{scrollbar-gutter:auto;overflow:visible;pointer-events:none}
+body.immersive-run .gv-cave-rail[data-gv-narrow] #runCards>.card-chip{flex-direction:column;align-items:flex-start}
+body.immersive-run .gv-cave-rail #frenzyHud :is(#liveQuest,#rescueHud){position:relative!important;inset:auto!important;transform:none!important;box-sizing:border-box;width:100%!important;max-width:100%!important;min-width:0;margin:0;flex-wrap:wrap}
+body.immersive-run .gv-cave-rail #frenzyHud #rescueHud button{min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+body.immersive-run .gv-cave-rail #runHud :is(.combo,.vital,.track-card){position:relative;inset:auto;transform:none;box-sizing:border-box;width:100%;max-width:100%;margin:0 0 10px}
+body.immersive-run .gv-cave-rail :is(#scoreHud,#boostHud,#bossHud){flex-wrap:wrap}
+body.immersive-run .gv-cave-rail [data-gv-flow] :is(strong,small,span,b,p){box-sizing:border-box;min-width:0;max-width:100%;overflow-wrap:anywhere}
+body.immersive-run .gv-cave-alerts{position:fixed;left:var(--gv-hud-left);top:var(--gv-hud-top);width:var(--gv-hud-width);height:var(--gv-hud-height);box-sizing:border-box;z-index:10;overflow:auto;overscroll-behavior:contain;touch-action:auto;scrollbar-gutter:stable;pointer-events:auto;border:1px solid var(--r2-select,#5ee9e9);border-radius:10px;background:var(--r2-inset,#353658)}
+body.immersive-run #toast.toast[data-gv-notice-flow],body.immersive-run #message.stage-message[data-gv-notice-flow]{position:relative;inset:auto;box-sizing:border-box;width:100%;max-width:none;max-height:none;margin:0 0 8px;transform:none}
+body.immersive-run :is(.gv-cave-rail,.gv-cave-alerts,#runCards[data-gv-hud-scroll=true]):focus-visible{outline:3px solid var(--r2-focus,#fff);outline-offset:-3px}

@@ -1,0 +1,1176 @@
+{
+  "checked": 78,
+  "sourceManifest": "E:/assets GemVenture/production/approved-art-v1/manifest.json",
+  "entries": [
+    {
+      "id": "slime-b1",
+      "sha256": "ed983b6e7d20dec5cb0dc2fde49f0af3ee6ae730b0036bba735eca784ed8ee9b",
+      "bbox": [
+        263,
+        308,
+        992,
+        990
+      ],
+      "zeroAlpha": 1137827,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "slime-b2",
+      "sha256": "c467877b75925d0e7400b1b969d8bb7a4cde15685fb5d848dca8b812a0866e8d",
+      "bbox": [
+        264,
+        284,
+        993,
+        989
+      ],
+      "zeroAlpha": 1144445,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "slime-b3",
+      "sha256": "b3fb9e5177ed53c749d8a84ad83ca59bf6e567c31f8045b0710a734b8cd26d39",
+      "bbox": [
+        262,
+        312,
+        993,
+        986
+      ],
+      "zeroAlpha": 1178186,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "slime-b4",
+      "sha256": "67bf99d1acb23ba381787700ba097d92a1d0caf1bd3c4c5496f05db140299d42",
+      "bbox": [
+        260,
+        274,
+        995,
+        988
+      ],
+      "zeroAlpha": 1174269,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "slime-b5",
+      "sha256": "fb2725ab0421d7e5cc05f19b73692e6418e47fb0444d8aaf0b900a2b72af3640",
+      "bbox": [
+        260,
+        277,
+        997,
+        997
+      ],
+      "zeroAlpha": 1155099,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "slime-b6",
+      "sha256": "e9967c7978f46254762b01daaf1dc45e0d87e45399796766a3387c37b5a46f4f",
+      "bbox": [
+        262,
+        295,
+        993,
+        997
+      ],
+      "zeroAlpha": 1151068,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "slime-b7",
+      "sha256": "c6ba6119e4183b2d523c74806658343360b7d6c3e4dd3721d796885aba705fbe",
+      "bbox": [
+        261,
+        271,
+        993,
+        1017
+      ],
+      "zeroAlpha": 1153065,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "bat-b1",
+      "sha256": "99adea14261554fda0bbb19d6dc591e9297470fb3a32cd63e396966fd77d1bc6",
+      "bbox": [
+        68,
+        322,
+        1194,
+        918
+      ],
+      "zeroAlpha": 1212181,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "bat-b2",
+      "sha256": "32b4a355e9833f117345ba38e47f3c234ff770ca8cb393f209e2c213b408d1ce",
+      "bbox": [
+        67,
+        321,
+        1197,
+        920
+      ],
+      "zeroAlpha": 1205475,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "bat-b3",
+      "sha256": "1f67916e2bbdacae36c0f3f6b0de3dbd77f458167176998683abddd3e4142605",
+      "bbox": [
+        67,
+        321,
+        1196,
+        919
+      ],
+      "zeroAlpha": 1204570,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "bat-b4",
+      "sha256": "c80aeaf79111163f04bbd815426aa43167b8f2d72b344adf929a17a67ec9841e",
+      "bbox": [
+        66,
+        321,
+        1196,
+        918
+      ],
+      "zeroAlpha": 1208641,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "bat-b5",
+      "sha256": "3ebb8ed2effa070f22872f0dabbf3cf38fa813c58f1e0323a88484776a56e2ca",
+      "bbox": [
+        66,
+        320,
+        1197,
+        919
+      ],
+      "zeroAlpha": 1206017,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "bat-b6",
+      "sha256": "d0087196ce7922fe479574d3c2ac1091584c03c48ebb351f477e2899d1435286",
+      "bbox": [
+        66,
+        318,
+        1197,
+        920
+      ],
+      "zeroAlpha": 1207196,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "bat-b7",
+      "sha256": "490c5c02aed026789a36bf9768d30f269ac2ec64dcafb1215f4ba77d8deeff90",
+      "bbox": [
+        64,
+        317,
+        1198,
+        919
+      ],
+      "zeroAlpha": 1205968,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "golem-b1",
+      "sha256": "4169c65cddc2847d70d77c3db3b3f1c1fc18c647077082767ff3d5ec297fd44a",
+      "bbox": [
+        112,
+        155,
+        1099,
+        1132
+      ],
+      "zeroAlpha": 887298,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "golem-b2",
+      "sha256": "b299f1e07b60bfc1e7c522dcf8bc1a0ed75a8e2079bd373e2e4de74eac49f669",
+      "bbox": [
+        112,
+        125,
+        1096,
+        1152
+      ],
+      "zeroAlpha": 867431,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "golem-b3",
+      "sha256": "35bd0a2f8f515991085c8fe7bfc8216ecf4494175a6a5507c06d253e3316d2d7",
+      "bbox": [
+        116,
+        164,
+        1096,
+        1130
+      ],
+      "zeroAlpha": 915537,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "golem-b4",
+      "sha256": "75f61b9d517ee44c3f17226351bd7b3aeff8e699bbbe99f516586f31b1a88401",
+      "bbox": [
+        110,
+        81,
+        1099,
+        1134
+      ],
+      "zeroAlpha": 894460,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "golem-b5",
+      "sha256": "562101c0240046306e84eb2493f7b1e018f285dbebae2d2f3e1be6fb2fbd87d6",
+      "bbox": [
+        125,
+        161,
+        1092,
+        1127
+      ],
+      "zeroAlpha": 904474,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "golem-b6",
+      "sha256": "730df3ceb416b04e7264c03296dea4e3988c08ee6339780f99760d33ea60eeb4",
+      "bbox": [
+        117,
+        162,
+        1097,
+        1131
+      ],
+      "zeroAlpha": 910278,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "golem-b7",
+      "sha256": "fa16b574789edf82cff0c3acf87a16bf55cd22c7c4596afc2eff0cc5569cae73",
+      "bbox": [
+        115,
+        84,
+        1098,
+        1164
+      ],
+      "zeroAlpha": 870368,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "boss-b1",
+      "sha256": "f343c8f33e0dd37ea5e31790b3636fd29d560a5afdf463fe63b69f188927a88c",
+      "bbox": [
+        37,
+        128,
+        1215,
+        1129
+      ],
+      "zeroAlpha": 739026,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "boss-b2",
+      "sha256": "ca4a6ef1966fa44541957b813cb74c1ebf8f44e3d619583f050ed9912a28345f",
+      "bbox": [
+        122,
+        57,
+        1146,
+        1165
+      ],
+      "zeroAlpha": 761558,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "boss-b3",
+      "sha256": "37052f450f9ce0c866a763ed235e51e0d0b0999eab0fd6d3a72cb0d2dad68809",
+      "bbox": [
+        53,
+        61,
+        1183,
+        1189
+      ],
+      "zeroAlpha": 730221,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "boss-b4",
+      "sha256": "856456f0c33c4a650260bfa0e1b54a62d2a615958da8ba1e3fdb8a22571e2edc",
+      "bbox": [
+        94,
+        47,
+        1180,
+        1126
+      ],
+      "zeroAlpha": 808396,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "boss-b5",
+      "sha256": "d825ede1adc5fb77537644c6fd8ebdd25d06655cc0025fa20af85069a5816613",
+      "bbox": [
+        40,
+        60,
+        1224,
+        1203
+      ],
+      "zeroAlpha": 665446,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "boss-b6",
+      "sha256": "49318c20c6ddc5407796dcee407e1b5c4536a15a017a438e939874fb336328d2",
+      "bbox": [
+        54,
+        51,
+        1484,
+        980
+      ],
+      "zeroAlpha": 778792,
+      "alphaRange": [
+        0,
+        254
+      ]
+    },
+    {
+      "id": "boss-b7",
+      "sha256": "42aa84d190459b64a8abb3b0f17652e2c0421108e829c6f82a448d2cc5f83123",
+      "bbox": [
+        73,
+        72,
+        1211,
+        1104
+      ],
+      "zeroAlpha": 761808,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rabbit-child",
+      "sha256": "7ee113988b568997b675a2ec8a555fc13cae57f99aa0e9004d24d06f5682f824",
+      "bbox": [
+        142,
+        147,
+        1157,
+        1134
+      ],
+      "zeroAlpha": 883966,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "quartz-b1",
+      "sha256": "1c27c647b380c5fb42b675a61b162666653166a5d603637dce213c87a48a747e",
+      "bbox": [
+        165,
+        127,
+        1092,
+        1146
+      ],
+      "zeroAlpha": 862191,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-1-b1",
+      "sha256": "9473ef9aed4c11bf8c4614a1a69acfaa29942780c4e7124b892e4adfc40843e5",
+      "bbox": [
+        144,
+        185,
+        1120,
+        1088
+      ],
+      "zeroAlpha": 932619,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-2-b1",
+      "sha256": "6df7800fe943da4cc373a375feaad9467bdf5cce45a3e31b272649bf4853fcba",
+      "bbox": [
+        144,
+        184,
+        1122,
+        1090
+      ],
+      "zeroAlpha": 934490,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-3-b1",
+      "sha256": "b37ae26b072337969789fefd87286a4595505f0ab05f270f96e1ef3892be6771",
+      "bbox": [
+        143,
+        183,
+        1125,
+        1091
+      ],
+      "zeroAlpha": 936249,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "ruby-b1",
+      "sha256": "17513e517a785a7246787da0cd3cff59376abf635f87e9c078f84186d28781d9",
+      "bbox": [
+        166,
+        127,
+        1090,
+        1145
+      ],
+      "zeroAlpha": 868986,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "topaz-b1",
+      "sha256": "a4e9bc831aa870920efdde51e622ac78c661c8d8fa22355b6ae2dc69e6c29cdb",
+      "bbox": [
+        164,
+        126,
+        1093,
+        1146
+      ],
+      "zeroAlpha": 866665,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "emerald-b1",
+      "sha256": "b3fc09aa0c73580e1699e96a516a7859e4ca17d19f166ef7fc2091c135307ac9",
+      "bbox": [
+        165,
+        127,
+        1091,
+        1146
+      ],
+      "zeroAlpha": 866493,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "quartz-b2",
+      "sha256": "48d0f563b408dd77fa037ffc356b6bdef22a8d539bb41521978be72c47e47a35",
+      "bbox": [
+        163,
+        126,
+        1094,
+        1147
+      ],
+      "zeroAlpha": 860086,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "ruby-b2",
+      "sha256": "10138363ac73180a687d6c30cb76a67b5d3c7c03755f2f1a8c3454936fe9f39d",
+      "bbox": [
+        164,
+        127,
+        1092,
+        1146
+      ],
+      "zeroAlpha": 863266,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "topaz-b2",
+      "sha256": "f0138335a916b7cdd2a5c3db669eaf0291e1460cc9629d5ebd6fad5f59bea645",
+      "bbox": [
+        163,
+        127,
+        1094,
+        1148
+      ],
+      "zeroAlpha": 862071,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "emerald-b2",
+      "sha256": "42fd6562820004a088960ebdd4a4595875b0b8f50e47628149e84458b26d572c",
+      "bbox": [
+        164,
+        126,
+        1094,
+        1147
+      ],
+      "zeroAlpha": 863553,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-1-b2",
+      "sha256": "4264b4787c1b8984a3f36a4a9073046eb355a41d4821d4aee84d3e939a70b06c",
+      "bbox": [
+        143,
+        184,
+        1122,
+        1090
+      ],
+      "zeroAlpha": 932271,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-2-b2",
+      "sha256": "f4a87dca7ca42c1cf97b4fe9b323ec7738a1570fc290fefc27788a951a98bee4",
+      "bbox": [
+        140,
+        183,
+        1123,
+        1091
+      ],
+      "zeroAlpha": 927110,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-3-b2",
+      "sha256": "1e37cfc7e66de7d1b38daede5c7a957a0b67c0180a7e26c8ccc9a46b9e274b77",
+      "bbox": [
+        141,
+        183,
+        1124,
+        1092
+      ],
+      "zeroAlpha": 932918,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "quartz-b3",
+      "sha256": "c856213cad5e96dd037507bd72e959f1cec69c691e07f4945ecd0382b3a092fb",
+      "bbox": [
+        164,
+        126,
+        1092,
+        1146
+      ],
+      "zeroAlpha": 865878,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "ruby-b3",
+      "sha256": "9a0bf0b21c7d3282c52b85b289c9b4e02215af949c4b739feeb288eef1889ad8",
+      "bbox": [
+        164,
+        127,
+        1092,
+        1146
+      ],
+      "zeroAlpha": 866997,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "topaz-b3",
+      "sha256": "850ddcb03eb6ca54969bef1683c1829b840eac3d9126d9bbbaa75b788a030e6e",
+      "bbox": [
+        163,
+        126,
+        1094,
+        1147
+      ],
+      "zeroAlpha": 865656,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "emerald-b3",
+      "sha256": "8ce6f3a84c8780881d3ee3bc64e03175644e13f7e0a8e942e0cd943fbc71f29e",
+      "bbox": [
+        163,
+        126,
+        1092,
+        1147
+      ],
+      "zeroAlpha": 864495,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-1-b3",
+      "sha256": "56b1f58a930b214a4d296cbde235c97a36f8851799c3055608d105f5696ee30d",
+      "bbox": [
+        143,
+        185,
+        1122,
+        1089
+      ],
+      "zeroAlpha": 937691,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-2-b3",
+      "sha256": "90ffd11b7d208b396bc8ae7060797446099b0441e874dabf0a5202a8087b3a5f",
+      "bbox": [
+        142,
+        184,
+        1124,
+        1091
+      ],
+      "zeroAlpha": 937829,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-3-b3",
+      "sha256": "cca3209de3435a7ff2cebc63609a6e1e1226e782bae3e5aa4fec271f19f33050",
+      "bbox": [
+        142,
+        183,
+        1125,
+        1091
+      ],
+      "zeroAlpha": 935002,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "quartz-b4",
+      "sha256": "5da29deb92d7e8ffbb90cf532d763fbe371514354a2d6521a178e39e016f8186",
+      "bbox": [
+        164,
+        126,
+        1093,
+        1147
+      ],
+      "zeroAlpha": 861977,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "ruby-b4",
+      "sha256": "ce972eba87badec95632dafb4de1b7016c5921a732585b617d8dc4ee41ab5a60",
+      "bbox": [
+        164,
+        127,
+        1091,
+        1145
+      ],
+      "zeroAlpha": 868477,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "topaz-b4",
+      "sha256": "1142eb26a8082181a7633276c839f86fa009417a4410bcd47fa8ad95f6e57a7b",
+      "bbox": [
+        163,
+        126,
+        1094,
+        1147
+      ],
+      "zeroAlpha": 862503,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "emerald-b4",
+      "sha256": "1fdf641bf695635a3b4966f48095aa912a408d1bc550c2dd8e8bb851bd34b4ec",
+      "bbox": [
+        163,
+        125,
+        1092,
+        1147
+      ],
+      "zeroAlpha": 865266,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-1-b4",
+      "sha256": "6b002c3ffc84b330b6d75ddf2d4ca04e8355a236656f46c42cd95c6128b73298",
+      "bbox": [
+        144,
+        184,
+        1122,
+        1089
+      ],
+      "zeroAlpha": 938913,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-2-b4",
+      "sha256": "2ec1594e640a3f7453d126afdebd9f27de8f5c44a3e85ea47dfc23ae82e86856",
+      "bbox": [
+        142,
+        183,
+        1124,
+        1091
+      ],
+      "zeroAlpha": 933534,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-3-b4",
+      "sha256": "8d985bfe25697b58ce755a6083945ef7ba7ab21b28b85fe7584044d7778e56c8",
+      "bbox": [
+        142,
+        183,
+        1126,
+        1090
+      ],
+      "zeroAlpha": 935848,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "quartz-b5",
+      "sha256": "2d1e4152cba6fccbab8f7c632ad7f0fd7c0c94191e711b325419c84a4abd7ea3",
+      "bbox": [
+        164,
+        126,
+        1093,
+        1147
+      ],
+      "zeroAlpha": 862787,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "ruby-b5",
+      "sha256": "dd9b25d09886e68c79137906f8854bbeb6ddf875357657245edfcec3100ba250",
+      "bbox": [
+        165,
+        127,
+        1091,
+        1146
+      ],
+      "zeroAlpha": 865474,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "topaz-b5",
+      "sha256": "465d84c305e1a0b6a5bf3a9d2ea19bf08d3273a4be86e83c0f661bbcf10ad4bf",
+      "bbox": [
+        164,
+        127,
+        1093,
+        1146
+      ],
+      "zeroAlpha": 863850,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "emerald-b5",
+      "sha256": "05e825ee87eee60e9d61d09aa3d6cdff1b1b5b62289c650136a4cd21a6fda8e6",
+      "bbox": [
+        162,
+        126,
+        1093,
+        1148
+      ],
+      "zeroAlpha": 864102,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-1-b5",
+      "sha256": "76a63dc25a6e0bd8f2482d46c369544561131f93585f1f6ada67db7f93fe7138",
+      "bbox": [
+        145,
+        185,
+        1121,
+        1089
+      ],
+      "zeroAlpha": 938414,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-2-b5",
+      "sha256": "7cbb209e12f764990ba1257f58bbbd75ec4daf0130db1ab2217a06f472354dfa",
+      "bbox": [
+        143,
+        184,
+        1123,
+        1091
+      ],
+      "zeroAlpha": 937345,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-3-b5",
+      "sha256": "05a69b9f00481808e4555be34920fddd7265641b7259df6c429c2bffae893944",
+      "bbox": [
+        141,
+        183,
+        1124,
+        1093
+      ],
+      "zeroAlpha": 929616,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "quartz-b6",
+      "sha256": "c856213cad5e96dd037507bd72e959f1cec69c691e07f4945ecd0382b3a092fb",
+      "bbox": [
+        164,
+        126,
+        1092,
+        1146
+      ],
+      "zeroAlpha": 865878,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "ruby-b6",
+      "sha256": "9a0bf0b21c7d3282c52b85b289c9b4e02215af949c4b739feeb288eef1889ad8",
+      "bbox": [
+        164,
+        127,
+        1092,
+        1146
+      ],
+      "zeroAlpha": 866997,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "topaz-b6",
+      "sha256": "850ddcb03eb6ca54969bef1683c1829b840eac3d9126d9bbbaa75b788a030e6e",
+      "bbox": [
+        163,
+        126,
+        1094,
+        1147
+      ],
+      "zeroAlpha": 865656,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "emerald-b6",
+      "sha256": "8ce6f3a84c8780881d3ee3bc64e03175644e13f7e0a8e942e0cd943fbc71f29e",
+      "bbox": [
+        163,
+        126,
+        1092,
+        1147
+      ],
+      "zeroAlpha": 864495,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-1-b6",
+      "sha256": "56b1f58a930b214a4d296cbde235c97a36f8851799c3055608d105f5696ee30d",
+      "bbox": [
+        143,
+        185,
+        1122,
+        1089
+      ],
+      "zeroAlpha": 937691,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-2-b6",
+      "sha256": "90ffd11b7d208b396bc8ae7060797446099b0441e874dabf0a5202a8087b3a5f",
+      "bbox": [
+        142,
+        184,
+        1124,
+        1091
+      ],
+      "zeroAlpha": 937829,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-3-b6",
+      "sha256": "cca3209de3435a7ff2cebc63609a6e1e1226e782bae3e5aa4fec271f19f33050",
+      "bbox": [
+        142,
+        183,
+        1125,
+        1091
+      ],
+      "zeroAlpha": 935002,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "quartz-b7",
+      "sha256": "675dc47449968effbff4364930c9fbe03283e7e68f3a7727f3ede06cabdbb7c2",
+      "bbox": [
+        165,
+        126,
+        1092,
+        1146
+      ],
+      "zeroAlpha": 866418,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "ruby-b7",
+      "sha256": "5000bb5eb67f6c4f002ef212629cfc1013f6f5cf917b4ced23e6de4391353a0c",
+      "bbox": [
+        164,
+        127,
+        1091,
+        1145
+      ],
+      "zeroAlpha": 870017,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "topaz-b7",
+      "sha256": "d250682a92a6f6c4ce57525d873059ce97080051dd1cbc762cbef2fc5d17e07f",
+      "bbox": [
+        163,
+        126,
+        1094,
+        1146
+      ],
+      "zeroAlpha": 862465,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "emerald-b7",
+      "sha256": "8e7358f628845ed4d761b0601e87a618d59012097c924b1308fa8fc120c1c39d",
+      "bbox": [
+        161,
+        127,
+        1092,
+        1146
+      ],
+      "zeroAlpha": 865852,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-1-b7",
+      "sha256": "53df19a46b19a03e503c6e77778aad7256bcd713423c4c69b150d299adbc461c",
+      "bbox": [
+        142,
+        184,
+        1122,
+        1089
+      ],
+      "zeroAlpha": 937820,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-2-b7",
+      "sha256": "ff3cfef438ef604c959278125a0f9321fca10cec66e765233655ef30785619de",
+      "bbox": [
+        141,
+        182,
+        1125,
+        1091
+      ],
+      "zeroAlpha": 935289,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-3-b7",
+      "sha256": "42471939cdad1da3ced823b7e7e490b850a29e98abd6e62979c0812bfd5ded4c",
+      "bbox": [
+        141,
+        183,
+        1123,
+        1092
+      ],
+      "zeroAlpha": 936913,
+      "alphaRange": [
+        0,
+        255
+      ]
+    }
+  ]
+}

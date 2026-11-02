@@ -1,0 +1,35 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>GemVenture — QA de efeitos das criaturas</title>
+<style>body{margin:0;background:#180d2f;color:#ccd5d8;font:18px system-ui}header{display:flex;gap:14px;align-items:center;padding:12px 24px}button,select{font:inherit;padding:8px;background:#343352;color:#e8ff75;border:1px solid #ecab11;border-radius:6px}#stage{height:650px;position:relative;background:#180d2f}canvas{width:100%;height:100%}output{display:block;padding:12px 24px}small{color:#ecab11}</style>
+<header><b>CRIATURAS · QA</b><button id="replay">Repetir</button><button id="soft">Modo suave</button><button id="freeze">Congelar</button><button id="isolate">Isolar VFX</button><select id="biome" aria-label="Bioma"><option value="0">Gruta azul</option><option value="6">Horta laranja</option></select><small>Sem acesso ao save</small></header>
+<div id="stage"><canvas id="world"></canvas></div><output id="status">Carregando…</output>
+<script type="module">
+import {World,project} from '/world.js';
+import * as E from '/core.js';
+import {isFloor} from '/cavern.js';
+import {loadApprovedArt} from '/approved-art.js';
+import {loadMinionEffects,minionVfxStatus} from '/minion-effects.js';
+import {beatTime} from '/score.js';
+const $=id=>document.getElementById(id),world=new World($('world')),query=new URLSearchParams(location.search),errors=[];
+let state,elapsed=0,last=0,frozen=true,biome=Number(query.get('biome'))===6?6:0,samples=[],peak=0,replayRevision=0,isolated=false;
+world.setSoft(query.has('soft'));$('biome').value=String(biome);
+addEventListener('error',e=>errors.push(e.message));addEventListener('unhandledrejection',e=>errors.push(String(e.reason)));
+async function replay(){
+ const revision=++replayRevision,current=E.createState(712);current.seals=6;current.best=35;current.descent.bosses=[5,10,15,20];current.descent.gate=[1500,1200,1000,800];E.startRun(current,query.has('abyss')?'abyss':'floors');
+ const r=current.run;r.floor=biome*5+1;E.generateRoom(current);r.guardUntil=10000;r.room.wave=null;r.room.nodes=[];r.room.rocks=[];r.room.quota=99999;r.room.minBeats=999;r.room.cleared=false;r.events=[];delete r.room.explored;delete r.room.visible;r.room.ceiling={falls:[]};
+ const cells=[];for(let y=1;y<r.room.rows-1;y++)for(let x=1;x<r.room.cols-1;x++)if(isFloor(r.room,x,y))cells.push({x,y});
+ const near=cells.filter(p=>Math.abs(p.x-r.player.x)+Math.abs(p.y-r.player.y)>0).sort((a,b)=>Math.abs(a.x-r.player.x)+Math.abs(a.y-r.player.y)-Math.abs(b.x-r.player.x)-Math.abs(b.y-r.player.y));
+ const source={id:800,type:'enemy',kind:0,...near[0],hp:10,maxHp:10,windup:{...r.player,beat:8,radius:0},stunUntil:-1};r.room.enemies=[source];r.beat=7;r.acted=8;r.enemyBeat=8;E.tick(current,8);
+ r.guardUntil=-1;r.room.enemies=[];r.events=[];r.room.charge=0;r.rhythm=100;r.health=100;
+ for(let kind=0;kind<3;kind++)r.room.enemies.push({id:810+kind,type:'enemy',kind,...near[kind*2],hp:1,maxHp:1,windup:null,stunUntil:-1});
+ await loadApprovedArt();await loadMinionEffects(biome,world.reduced);if(revision!==replayRevision)return;world.place(current);await world.fx.minions.setContext(biome,world.reduced);if(revision!==replayRevision)return;
+ for(let kind=0;kind<3;kind++)E.act(current,{type:'hit',id:810+kind},9+kind);
+ // Alive references remain beside the effects; all transient deaths above come from act().
+ for(let kind=0;kind<3;kind++)r.room.enemies.push({id:820+kind,type:'enemy',kind,...near[kind*2+7],hp:10,maxHp:10,windup:null,stunUntil:-1});
+ state=current;world.place(state);world.fx.minions.setContext(biome,world.reduced);world.consume(r.events.splice(0));world.fx.update(.12);elapsed=.12;render(0);
+}
+function render(dt){if(!state)return;const at=performance.now(),retained=isolated?{labels:world.fx.labels,rings:world.fx.rings,particles:world.fx.particles}:null;if(retained)for(const key of Object.keys(retained))world.fx[key]=[];world.draw(state,beatTime(state.run.floor,11.4),dt,null,null,false);if(retained)Object.assign(world.fx,retained);samples.push(performance.now()-at);if(samples.length>300)samples.shift();peak=Math.max(peak,world.fx.minions.items.length);const times=[...samples].sort((a,b)=>a-b),v=minionVfxStatus();$('status').textContent=JSON.stringify({mode:state.run.mode,biome,soft:world.reduced,isolated,age:+elapsed.toFixed(2),deathLayers:world.fx.minions.items.length,hazards:state.run.room.hazards.length,atlases:v.ready,atlasBytes:v.bytes,failed:v.failed,errors,p95:+times[Math.floor(times.length*.95)].toFixed(2),peak});}
+$('replay').onclick=()=>replay();$('soft').onclick=()=>{world.setSoft(!world.reduced);replay();};$('biome').onchange=()=>{biome=Number($('biome').value);replay();};$('freeze').onclick=()=>{frozen=!frozen;};
+$('isolate').onclick=()=>{isolated=!isolated;$('isolate').textContent=isolated?'VFX isolados':'Isolar VFX';render(0);};
+new ResizeObserver(()=>{world.resize();render(0);}).observe($('stage'));
+await replay();requestAnimationFrame(function frame(now){const dt=last?Math.min(.05,(now-last)/1000):0;last=now;if(!frozen){elapsed+=dt;render(dt);}requestAnimationFrame(frame);});
+</script></html>

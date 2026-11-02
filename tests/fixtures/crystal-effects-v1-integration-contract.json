@@ -1,0 +1,10 @@
+{
+  "authorization": "User requested colored mining sparks, biome-correct enchanted veins and matching glow",
+  "files": {
+    "materials.js": "191b21394cf60d1b343543e95ac539340ed86ce3ff71656c3199adb579ec2ea9",
+    "frenzy.js": "32c8e8abfa1a69de8992706814910da1eae966cf36fde4f82959af572098940d",
+    "core.js": "c20004114e89ebb939d60305f74da95f3d72ecb7cc617b52547ead274691bec6",
+    "effects.js": "5550133888b7c4826d4a691c58ad8f44ad3d30eb9a8695c2673898a21416222c",
+    "rare-ore-vfx.js": "6cc7c17dd109f5002dc27a81a5fc692367867722c46e33014cd47cc8c26c793e"
+  }
+}

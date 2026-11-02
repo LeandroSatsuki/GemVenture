@@ -1,0 +1,12 @@
+{
+  "id": "CAVE-STREAM-FLUIDITY-20261102-R1",
+  "authorization": "Human request to fix long exploration loading pauses, preserving current art and game state",
+  "scope": "Chunk scheduling, background raster execution and memory lifecycle; reuse same painters",
+  "files": {
+    "campaign-cave-raster-client.js": "26f8d06983b21816edb3713510dae28d3286bd4f65be36d1acb12deda1e60f09",
+    "campaign-cave-raster-worker.js": "fb2b030e9cd4c1312ed515020e923d76945c785c0aaa6de3bb7b2c89479bef58",
+    "campaign-cave-runtime.js": "ea2fa51f5610dfe613126efd2bc435760b913b09919560b878a14a11ad4200fc",
+    "campaign-cave-stream.js": "ed114c4e1e7229040eb46d3bb71243c58a440d2fcd15aa86e2d7a0a2688dfb37",
+    "campaign-cave-surface.js": "69c3323343081ec03065b8f1c45e196e93443034d0276a648d7a8e338f4f8b63"
+  }
+}

@@ -1,0 +1,5 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import{createHash}from'node:crypto';
+const receipt=JSON.parse(fs.readFileSync(new URL('../fixtures/boss-emission-20261102-approved.json',import.meta.url),'utf8')),hash=s=>createHash('sha256').update(s).digest('hex');
+// Preserve exact human-approved sources while accepting only the explicitly
+// receipted illumination delta. Future unrelated edits still fail the hash gate.
+export function withoutApprovedBossEmission(file,installed){const deltas=receipt.visualDeltas.filter(x=>x.file===file);if(!deltas.length)return installed.replaceAll('\r\n','\n');assert.equal(hash(installed),receipt.files[file],file+': installed approved illumination receipt changed');let source=installed.replaceAll('\r\n','\n');for(const delta of [...deltas].reverse()){assert.equal(source.split(delta.new).length-1,1,file+': ambiguous illumination delta');source=source.replace(delta.new,delta.old);}assert.equal(hash(source),receipt.baseNormalizedFiles[file],file+': original source changed outside illumination');return source;}

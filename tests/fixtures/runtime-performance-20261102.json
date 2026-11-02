@@ -1,0 +1,13 @@
+{
+  "id": "CLEANUP-PERFORMANCE-20261102-R1",
+  "authorization": "User asked for cleanup and stutter fixes without losing features",
+  "scope": "No palette, art, gameplay or save changes: HUD invalidation, bounded authored animation cache, audio scheduling overlap and equivalent emission pixels",
+  "files": {
+    "audio.js": "1418dee21192e4e8e2c18da5fc51eda2adb92fae0ea0b1b2e655b6fe2b9bbc6c",
+    "hud-layout-presenter.js": "3ca08c321ae607243b17c7ddbaf6521e95fa1359a88b159d9b4a8c616dec934d",
+    "player-appearance.js": "06c4cfad1607e182de7f2789eab71a618887466120b783e0d297cf1ed8dfc8f1",
+    "refuge-art-ready.js": "b9526bdc9d2ac73ef0a9ef0cfc8aef783bba690756e525546d36206eef1ee310",
+    "geode-ambience.js": "6df39d0fae270e15cec215fbc7522b6ecfd5bb87af5ea5ea69cb90198d9c0ef3",
+    "cave-notice-layout.js": "7e6bd0f4341c8c2fcb44be7cb34736ef9ff8e9aa9064620b9c6094287ff13ca2"
+  }
+}

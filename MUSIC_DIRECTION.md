@@ -80,3 +80,51 @@ discos foram renderizados com WebAudio real em
 e o trecho analisado usou no máximo 18 vozes simultâneas. Isso verifica áudio
 válido e margem de volume; percepção de gênero e satisfação musical continuam
 sendo avaliadas pelo jogador. Amostras de techno e rock estão na raiz do projeto.
+
+## Revisão GV-059 — 31/10/2026
+
+Direção humana: synthwave/chiptune 8 bits com rock leve, melodia sobre bateria
+e menos fadiga por repetição. Referência de intenção enviada pelo usuário:
+[Otrebil — 8 bit RETRO GAMES](https://youtu.be/qx7avPhISBo).
+Metadados confirmados; análise auditiva dessa referência não executada por
+indisponibilidade de créditos. O áudio do vídeo não foi incorporado.
+
+Três discos receberam partituras originais explícitas em `dist/music-chiprock.js`:
+Mina 8-Bit (pixel), Horizonte Violeta (dusk) e Ferro em Brasa (iron).
+Forma: oito compassos de tema, oito de subida, oito de resposta, oito de ponte
+esparsa e oito de retorno. Notas sustentadas, pausas e respostas substituem
+parte da atividade contínua; guitarra e chip têm funções separadas. O tema
+existe mesmo sem combo. Combo alto colore uma reprise, sem mudar o pulso.
+
+O arranjo usa o relógio existente, incluindo rampas e avisos. O motivo tem
+40 compassos; a harmonia de bioma conserva seu ciclo mais longo, portanto
+o retorno do motivo não significa repetição absoluta de todas as frequências.
+Outros doze discos, Home/Zag, prévia, IDs, preços e saves foram preservados.
+
+Skills adquiridas: `music-compose` e `music-evaluate`, MIT, commit
+`aa3933bc87f54a48ec018bb868bf6385b340db22` de sb-dev/music-production-skills.
+Complemento mantido: `skills/gemventure-music-arrangement/`, com contrato,
+linguagem de arranjo e auditoria executável. Sem dependências novas no jogo.
+
+Prova técnica e comparação de seis WAVs nativos de 48 kHz estéreo:
+`../coordination/GV-059-music-arrangement-r1/`. Ver `REPORT.md` e
+`NATIVE-AUDIO-QC.json`. Renderização offline não é escuta humana nem aprovação
+da identidade musical; esses pontos permanecem pendentes de avaliação do jogador.
+
+
+### Imersão com headset — GV-059 r2
+
+O pedido humano acrescentou a imersão ao usar headset. Nas três partituras,
+batida, baixo, avisos e melodia principal ficam centrados. Guitarras de apoio,
+arpejos e respostas usam lados complementares; pads distribuem as vozes do acorde.
+O StereoPanner existente mantém essas posições por nota: sem inverter fase,
+sem reverb adicional e sem alterações de notas, duração, volume ou andamento.
+É distribuição estéreo de instrumentos, não localização binaural/3D de inimigos.
+
+O render nativo de r2 e sua soma mono estão em
+`../coordination/GV-059-headphones-r2/OUVIR.html`. As três somas mono preservam
+mais de 99% da energia RMS estéreo; diferença L/R inferior a 0,01 dB no ciclo
+medido. Esses valores confirmam compatibilidade técnica, não qualidade percebida.
+Mina 8-Bit tem campo mais sutil e lead centrado; não se exige mais energia lateral
+como pontuação universal de imersão. Escuta física com headset e o conjunto de SFX
+permanece pendente. A skill passou a exigir essas distinções e provas.

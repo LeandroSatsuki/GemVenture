@@ -1,0 +1,22 @@
+{
+  "id": "INTRO-UI-SCALE-INTEGRATION-20261101",
+  "at": "2026-11-01T15:04:13.660571+00:00",
+  "files": {
+    "app-services.js": "f0d87870bd35b6802a57b8f87b454fadc0aa0f1afe75b94f27b47762fa8d2e85",
+    "approved-guide-ui.css": "e09ee2302878af49c1d4b0d211cf5f4ea6738082e94640c9b71bce7e8d102fcc",
+    "approved-intro-copy.js": "b505bf94245d88005dc04e69a257b55392132bc7b8b22739a36ee54f1dbc071c",
+    "approved-intro-ui.css": "5c87a06c6f99571458fd6c07738fa50b70b9fae3302accab75a2e14fec2e9079",
+    "approved-intro-view.js": "51673ca24ef12ec36138dc36ecf0427484ebffe3fbd8fb95bb572de73b53df3a",
+    "approved-refuge-ui.css": "c104d66f3066a244b2f47a6bf86e16edc0929b762d7750d34daa561a1c29128e",
+    "approved-settings-ui.css": "c0563b819eff068aaba507514d3d7224c605866977614e875acc04097409bc1d",
+    "approved-tree-ui.js": "7d09eb6245979f3f1c0059ccbaf679ad71157547c6f970ab76a0391697f9e38c",
+    "index.html": "88a9e64fc70706353aa482ce5c2d6aa7ea779537023f244ba1f9a90936615dc4",
+    "menu-controller.js": "06bf0177f85a461ebc50f7cd6e1273a0fbf08b0800f17cff65371a127c8a49fb",
+    "menu-entry.js": "eff83870e35043ad526c37087b4d5865e11f06ffcdbcd0d5e5349604f152d187",
+    "refuge-onboarding.js": "ec63ec746a7e1eb50e2e60ade483013757c646daf0dae38e23b7ec093b481d13",
+    "tutorial-view.js": "370d774e92f17655596a432fefe13e0df08c7997bc77979952cc2a60106bbe4c",
+    "ui-display.js": "24c4f71c16025523fdb799b5a87f5d1ea3b9f83c7111a23db7cb10d4e73272fe"
+  },
+  "authorization": "Current explicit approval of INTRO-TOUR-PROPOSAL-20261101/v1 and direct global UI size slider/responsive menu request.",
+  "monitorResumed": false
+}

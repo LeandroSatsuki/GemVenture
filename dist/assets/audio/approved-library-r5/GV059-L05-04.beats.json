@@ -1,0 +1,1957 @@
+{
+  "duration": 32.0,
+  "events": [
+    {
+      "time": 0.03,
+      "sourceTime": 16.054063,
+      "strength": 3.563188076019287,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 0.03,
+      "sourcePercussionErrorMs": 0.0,
+      "features": {
+        "percussionSpectralFlatness": 0.05233232115520725,
+        "lowFrequencyFraction": 0.10388448096885948,
+        "originalLowBandEarlyLateRatio": 0.2038790729055615
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 0
+    },
+    {
+      "time": 0.415,
+      "sourceTime": 16.439062,
+      "strength": 0.6109344363212585,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 0.405,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.002393789900900612,
+        "lowFrequencyFraction": 0.005133175847950612,
+        "originalLowBandEarlyLateRatio": 1.2473594143196145
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 1
+    },
+    {
+      "time": 0.535,
+      "sourceTime": 16.559063,
+      "strength": 1.3357404470443726,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 0.525,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.00988987859054722,
+        "lowFrequencyFraction": 0.09539098905613137,
+        "originalLowBandEarlyLateRatio": 2.0147718264345085
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 2
+    },
+    {
+      "time": 0.78,
+      "sourceTime": 16.804063,
+      "strength": 1.5047767162322998,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 0.775,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.01226033955393054,
+        "lowFrequencyFraction": 0.04468698006193707,
+        "originalLowBandEarlyLateRatio": 1.2902262219590792
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 3
+    },
+    {
+      "time": 0.92,
+      "sourceTime": 16.944063,
+      "strength": 0.6698781251907349,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 0.915,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.002568918369192563,
+        "lowFrequencyFraction": 0.005652361256332495,
+        "originalLowBandEarlyLateRatio": 1.4812551582408782
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 4
+    },
+    {
+      "time": 1.03,
+      "sourceTime": 17.054063,
+      "strength": 1.7341116666793823,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 1.025,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.004125306867480464,
+        "lowFrequencyFraction": 0.007950198212260657,
+        "originalLowBandEarlyLateRatio": 1.18039837990835
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 5
+    },
+    {
+      "time": 1.28,
+      "sourceTime": 17.304063,
+      "strength": 2.482604503631592,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 1.275,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.06678311183093064,
+        "lowFrequencyFraction": 0.15117136194041728,
+        "originalLowBandEarlyLateRatio": 0.20671221413972085
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 6
+    },
+    {
+      "time": 1.425,
+      "sourceTime": 17.449063,
+      "strength": 0.7849001884460449,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 1.425,
+      "sourcePercussionErrorMs": 0.0,
+      "features": {
+        "percussionSpectralFlatness": 0.002085176950872305,
+        "lowFrequencyFraction": 0.007034163581567154,
+        "originalLowBandEarlyLateRatio": 1.3261885175586179
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 7
+    },
+    {
+      "time": 1.535,
+      "sourceTime": 17.559063,
+      "strength": 2.0791409015655518,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 1.525,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.018130802468829612,
+        "lowFrequencyFraction": 0.04546071362146211,
+        "originalLowBandEarlyLateRatio": 2.3895279521747788
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 8
+    },
+    {
+      "time": 2.035,
+      "sourceTime": 18.059063,
+      "strength": 4.051454544067383,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 2.03,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.10274057523823753,
+        "lowFrequencyFraction": 0.36901454220959456,
+        "originalLowBandEarlyLateRatio": 0.3820352550948251
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 9
+    },
+    {
+      "time": 2.535,
+      "sourceTime": 18.559063,
+      "strength": 2.403520345687866,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 2.525,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.02277092496905696,
+        "lowFrequencyFraction": 0.16749785955763952,
+        "originalLowBandEarlyLateRatio": 2.939461550661084
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 10
+    },
+    {
+      "time": 2.78,
+      "sourceTime": 18.804063,
+      "strength": 1.7289319038391113,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 2.775,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.008347260261951518,
+        "lowFrequencyFraction": 0.00815078172265026,
+        "originalLowBandEarlyLateRatio": 1.1937447811233244
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 11
+    },
+    {
+      "time": 3.035,
+      "sourceTime": 19.059063,
+      "strength": 2.6103508472442627,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 3.03,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.03254253043284596,
+        "lowFrequencyFraction": 0.14781398214570207,
+        "originalLowBandEarlyLateRatio": 3.035708808093745
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 12
+    },
+    {
+      "time": 3.28,
+      "sourceTime": 19.304063,
+      "strength": 2.6081368923187256,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 3.28,
+      "sourcePercussionErrorMs": 0.0,
+      "features": {
+        "percussionSpectralFlatness": 0.06387705644439517,
+        "lowFrequencyFraction": 0.4132661040656313,
+        "originalLowBandEarlyLateRatio": 0.41797152605403143
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 13
+    },
+    {
+      "time": 3.53,
+      "sourceTime": 19.554063,
+      "strength": 1.8985464572906494,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 3.525,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.03860701707669997,
+        "lowFrequencyFraction": 0.25808286306452327,
+        "originalLowBandEarlyLateRatio": 3.683781210868107
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 14
+    },
+    {
+      "time": 3.665,
+      "sourceTime": 19.689062,
+      "strength": 0.7221453189849854,
+      "sourceBand": "main",
+      "percussionEvidenceTime": 3.66,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.019115509018179717,
+        "lowFrequencyFraction": 0.5010137532807387,
+        "originalLowBandEarlyLateRatio": 1.6886330997873473
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "noiseOnsetStrength": 0.12476050853729248,
+      "mainOnlyEvidence": "low-band-decaying-transient",
+      "id": 15
+    },
+    {
+      "time": 4.035,
+      "sourceTime": 20.059063,
+      "strength": 2.8736636638641357,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 4.03,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.04408999097347157,
+        "lowFrequencyFraction": 0.2337894034000348,
+        "originalLowBandEarlyLateRatio": 0.3564109790232706
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 16
+    },
+    {
+      "time": 4.285,
+      "sourceTime": 20.309063,
+      "strength": 0.5223251581192017,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 4.275,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.01686626752867696,
+        "lowFrequencyFraction": 0.006322309475860176,
+        "originalLowBandEarlyLateRatio": 1.2382100223534735
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 17
+    },
+    {
+      "time": 4.535,
+      "sourceTime": 20.559063,
+      "strength": 2.7079617977142334,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 4.53,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.035894796384197264,
+        "lowFrequencyFraction": 0.1383436100026785,
+        "originalLowBandEarlyLateRatio": 2.20759748966536
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 18
+    },
+    {
+      "time": 4.78,
+      "sourceTime": 20.804063,
+      "strength": 1.481783390045166,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 4.77,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.010942531529540937,
+        "lowFrequencyFraction": 0.01562945647847813,
+        "originalLowBandEarlyLateRatio": 1.2845400278776853
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 19
+    },
+    {
+      "time": 4.915,
+      "sourceTime": 20.939062,
+      "strength": 0.6586441397666931,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 4.91,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.0013279733430924228,
+        "lowFrequencyFraction": 0.001364797868200306,
+        "originalLowBandEarlyLateRatio": 0.9761862057934692
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 20
+    },
+    {
+      "time": 5.03,
+      "sourceTime": 21.054063,
+      "strength": 1.803052544593811,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 5.025,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.0030875379062320096,
+        "lowFrequencyFraction": 0.0033492086966419154,
+        "originalLowBandEarlyLateRatio": 0.9677475581189396
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 21
+    },
+    {
+      "time": 5.285,
+      "sourceTime": 21.309063,
+      "strength": 1.503889799118042,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 5.28,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.058701266370105705,
+        "lowFrequencyFraction": 0.6066779193800553,
+        "originalLowBandEarlyLateRatio": 0.6411619009038013
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 22
+    },
+    {
+      "time": 5.385,
+      "sourceTime": 21.409063,
+      "strength": 1.2417441606521606,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 5.385,
+      "sourcePercussionErrorMs": 0.0,
+      "features": {
+        "percussionSpectralFlatness": 0.03305474232562403,
+        "lowFrequencyFraction": 0.002776424224031021,
+        "originalLowBandEarlyLateRatio": 0.16252009881554794
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 23
+    },
+    {
+      "time": 5.54,
+      "sourceTime": 21.564062,
+      "strength": 0.9193058013916016,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 5.515,
+      "sourcePercussionErrorMs": -25.0,
+      "features": {
+        "percussionSpectralFlatness": 0.02073457930293813,
+        "lowFrequencyFraction": 0.10656239114897631,
+        "originalLowBandEarlyLateRatio": 2.6976172591050864
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 24
+    },
+    {
+      "time": 6.035,
+      "sourceTime": 22.059063,
+      "strength": 2.181103229522705,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 6.03,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.030162447131804885,
+        "lowFrequencyFraction": 0.36834527565820563,
+        "originalLowBandEarlyLateRatio": 0.37090376492477245
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 25
+    },
+    {
+      "time": 6.535,
+      "sourceTime": 22.559063,
+      "strength": 2.548125743865967,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 6.53,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.020764478819294174,
+        "lowFrequencyFraction": 0.08423255348312986,
+        "originalLowBandEarlyLateRatio": 1.4462633733134502
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 26
+    },
+    {
+      "time": 6.665,
+      "sourceTime": 22.689062,
+      "strength": 0.7333314418792725,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 6.66,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.011545352155992308,
+        "lowFrequencyFraction": 0.014643475082219559,
+        "originalLowBandEarlyLateRatio": 1.0380977435519134
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 27
+    },
+    {
+      "time": 6.78,
+      "sourceTime": 22.804063,
+      "strength": 1.5639814138412476,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 6.77,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.005573788736574809,
+        "lowFrequencyFraction": 0.004096125745795242,
+        "originalLowBandEarlyLateRatio": 0.8161828603867641
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 28
+    },
+    {
+      "time": 7.035,
+      "sourceTime": 23.059063,
+      "strength": 2.870577335357666,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 7.025,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.06172743229654024,
+        "lowFrequencyFraction": 0.1427037560390648,
+        "originalLowBandEarlyLateRatio": 1.2964361430589941
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 29
+    },
+    {
+      "time": 7.285,
+      "sourceTime": 23.309063,
+      "strength": 1.4426897764205933,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 7.28,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.05349605733601602,
+        "lowFrequencyFraction": 0.5559855564796161,
+        "originalLowBandEarlyLateRatio": 0.5499990351836622
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 30
+    },
+    {
+      "time": 7.385,
+      "sourceTime": 23.409063,
+      "strength": 1.2947224378585815,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 7.385,
+      "sourcePercussionErrorMs": 0.0,
+      "features": {
+        "percussionSpectralFlatness": 0.03415710955416258,
+        "lowFrequencyFraction": 0.0012446143984010086,
+        "originalLowBandEarlyLateRatio": 0.3423454889829049
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 31
+    },
+    {
+      "time": 7.515,
+      "sourceTime": 23.539062,
+      "strength": 1.5240533351898193,
+      "sourceBand": "main",
+      "percussionEvidenceTime": 7.535,
+      "sourcePercussionErrorMs": 20.0,
+      "features": {
+        "percussionSpectralFlatness": 0.045988113837838136,
+        "lowFrequencyFraction": 0.0073229798800250896,
+        "originalLowBandEarlyLateRatio": 1.0060166180545407
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "noiseOnsetStrength": 0.8842411041259766,
+      "mainOnlyEvidence": "broadband-noise-transient",
+      "id": 32
+    },
+    {
+      "time": 7.665,
+      "sourceTime": 23.689062,
+      "strength": 1.3763484954833984,
+      "sourceBand": "main",
+      "percussionEvidenceTime": 7.66,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.011137734909477313,
+        "lowFrequencyFraction": 0.5521987559732859,
+        "originalLowBandEarlyLateRatio": 1.3843330096922724
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "noiseOnsetStrength": 0.10198530554771423,
+      "mainOnlyEvidence": "low-band-decaying-transient",
+      "id": 33
+    },
+    {
+      "time": 8.035,
+      "sourceTime": 24.059063,
+      "strength": 4.478469371795654,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 8.035,
+      "sourcePercussionErrorMs": 0.0,
+      "features": {
+        "percussionSpectralFlatness": 0.11083886037476663,
+        "lowFrequencyFraction": 0.34601493427643193,
+        "originalLowBandEarlyLateRatio": 0.553811941363349
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 34
+    },
+    {
+      "time": 8.41,
+      "sourceTime": 24.434063,
+      "strength": 0.6042640805244446,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 8.405,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.0023641848085909495,
+        "lowFrequencyFraction": 0.0012146444192853675,
+        "originalLowBandEarlyLateRatio": 1.288344904752387
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 35
+    },
+    {
+      "time": 8.535,
+      "sourceTime": 24.559063,
+      "strength": 1.6805003881454468,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 8.53,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.011314660300350672,
+        "lowFrequencyFraction": 0.023157913141864467,
+        "originalLowBandEarlyLateRatio": 1.2784854425315741
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 36
+    },
+    {
+      "time": 8.78,
+      "sourceTime": 24.804063,
+      "strength": 1.6759099960327148,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 8.775,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.005580018970055123,
+        "lowFrequencyFraction": 0.013228131993085044,
+        "originalLowBandEarlyLateRatio": 0.8296865978826569
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 37
+    },
+    {
+      "time": 8.92,
+      "sourceTime": 24.944063,
+      "strength": 0.6799857020378113,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 8.915,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.0013198736383883186,
+        "lowFrequencyFraction": 0.0007133375582531478,
+        "originalLowBandEarlyLateRatio": 1.5043899129016276
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 38
+    },
+    {
+      "time": 9.035,
+      "sourceTime": 25.059063,
+      "strength": 1.6870880126953125,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 9.025,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.008096493571516946,
+        "lowFrequencyFraction": 0.026521523924063314,
+        "originalLowBandEarlyLateRatio": 1.3498919455268574
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 39
+    },
+    {
+      "time": 9.285,
+      "sourceTime": 25.309063,
+      "strength": 1.6027259826660156,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 9.28,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.06810304113995258,
+        "lowFrequencyFraction": 0.44622561284576406,
+        "originalLowBandEarlyLateRatio": 0.4838649523582041
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 40
+    },
+    {
+      "time": 9.385,
+      "sourceTime": 25.409063,
+      "strength": 1.1614636182785034,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 9.385,
+      "sourcePercussionErrorMs": 0.0,
+      "features": {
+        "percussionSpectralFlatness": 0.03824733568287268,
+        "lowFrequencyFraction": 0.0028899135983255888,
+        "originalLowBandEarlyLateRatio": 0.3752535895129826
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 41
+    },
+    {
+      "time": 9.535,
+      "sourceTime": 25.559063,
+      "strength": 0.9364610910415649,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 9.515,
+      "sourcePercussionErrorMs": -20.0,
+      "features": {
+        "percussionSpectralFlatness": 0.02118801197558809,
+        "lowFrequencyFraction": 0.04563695861958363,
+        "originalLowBandEarlyLateRatio": 1.3460626789342243
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 42
+    },
+    {
+      "time": 9.85,
+      "sourceTime": 25.874063,
+      "strength": 0.5816575884819031,
+      "sourceBand": "main",
+      "percussionEvidenceTime": 9.845,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.009809085732620048,
+        "lowFrequencyFraction": 0.5590259102839108,
+        "originalLowBandEarlyLateRatio": 2.473361744198589
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "noiseOnsetStrength": 0.06806517392396927,
+      "mainOnlyEvidence": "low-band-decaying-transient",
+      "id": 43
+    },
+    {
+      "time": 10.035,
+      "sourceTime": 26.059063,
+      "strength": 4.305206298828125,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 10.03,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.09198752433486881,
+        "lowFrequencyFraction": 0.5163602462176397,
+        "originalLowBandEarlyLateRatio": 0.46759788613894365
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 44
+    },
+    {
+      "time": 10.535,
+      "sourceTime": 26.559063,
+      "strength": 1.7420048713684082,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 10.53,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.02778105259771212,
+        "lowFrequencyFraction": 0.28552856723843595,
+        "originalLowBandEarlyLateRatio": 2.4291973024240323
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 45
+    },
+    {
+      "time": 10.78,
+      "sourceTime": 26.804063,
+      "strength": 1.8522628545761108,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 10.775,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.006750830696596354,
+        "lowFrequencyFraction": 0.0005895052148369794,
+        "originalLowBandEarlyLateRatio": 1.0294475391858895
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 46
+    },
+    {
+      "time": 11.035,
+      "sourceTime": 27.059063,
+      "strength": 2.606290102005005,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 11.03,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.03134233995622837,
+        "lowFrequencyFraction": 0.16554408994464567,
+        "originalLowBandEarlyLateRatio": 4.791784426978797
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 47
+    },
+    {
+      "time": 11.535,
+      "sourceTime": 27.559063,
+      "strength": 2.5820515155792236,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 11.53,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.027180623871292234,
+        "lowFrequencyFraction": 0.11236400069022823,
+        "originalLowBandEarlyLateRatio": 2.478568274493606
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 48
+    },
+    {
+      "time": 12.035,
+      "sourceTime": 28.059063,
+      "strength": 3.8112406730651855,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 12.03,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.07781917740898973,
+        "lowFrequencyFraction": 0.2468866626983088,
+        "originalLowBandEarlyLateRatio": 0.36179882976066197
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 49
+    },
+    {
+      "time": 12.29,
+      "sourceTime": 28.314062,
+      "strength": 0.566322922706604,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 12.275,
+      "sourcePercussionErrorMs": -15.0,
+      "features": {
+        "percussionSpectralFlatness": 0.01670570842984979,
+        "lowFrequencyFraction": 0.0057184467527447635,
+        "originalLowBandEarlyLateRatio": 1.1411947302555185
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 50
+    },
+    {
+      "time": 12.535,
+      "sourceTime": 28.559063,
+      "strength": 2.731611728668213,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 12.53,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.09164186060756527,
+        "lowFrequencyFraction": 0.06365064926042854,
+        "originalLowBandEarlyLateRatio": 1.225208560251876
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 51
+    },
+    {
+      "time": 12.78,
+      "sourceTime": 28.804063,
+      "strength": 1.4405003786087036,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 12.775,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.009868931354143011,
+        "lowFrequencyFraction": 0.015532000136695484,
+        "originalLowBandEarlyLateRatio": 1.3055023971377555
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 52
+    },
+    {
+      "time": 13.03,
+      "sourceTime": 29.054063,
+      "strength": 1.777417778968811,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 13.025,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.011690308985525534,
+        "lowFrequencyFraction": 0.013916792575712595,
+        "originalLowBandEarlyLateRatio": 1.030276464892816
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 53
+    },
+    {
+      "time": 13.425,
+      "sourceTime": 29.449063,
+      "strength": 0.6871567964553833,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 13.415,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.0008131729451534662,
+        "lowFrequencyFraction": 0.001669695202358898,
+        "originalLowBandEarlyLateRatio": 1.1265313411946531
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 54
+    },
+    {
+      "time": 13.535,
+      "sourceTime": 29.559063,
+      "strength": 2.3364815711975098,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 13.525,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.02737072572787258,
+        "lowFrequencyFraction": 0.03259270142729189,
+        "originalLowBandEarlyLateRatio": 1.2776563618807792
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 55
+    },
+    {
+      "time": 14.035,
+      "sourceTime": 30.059063,
+      "strength": 3.4079790115356445,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 14.03,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.05692697376732718,
+        "lowFrequencyFraction": 0.37131040340566607,
+        "originalLowBandEarlyLateRatio": 0.6081002338606905
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 56
+    },
+    {
+      "time": 14.535,
+      "sourceTime": 30.559063,
+      "strength": 2.4311256408691406,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 14.53,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.027700724384772314,
+        "lowFrequencyFraction": 0.14249248660243236,
+        "originalLowBandEarlyLateRatio": 1.3362889371241238
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 57
+    },
+    {
+      "time": 14.665,
+      "sourceTime": 30.689062,
+      "strength": 0.7061372995376587,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 14.66,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.01213391430497939,
+        "lowFrequencyFraction": 0.028865369289115598,
+        "originalLowBandEarlyLateRatio": 1.0919924435658097
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 58
+    },
+    {
+      "time": 14.78,
+      "sourceTime": 30.804063,
+      "strength": 1.553876280784607,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 14.77,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.010908761223013047,
+        "lowFrequencyFraction": 0.017266897728106884,
+        "originalLowBandEarlyLateRatio": 1.1307542572234375
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 59
+    },
+    {
+      "time": 15.035,
+      "sourceTime": 31.059063,
+      "strength": 2.632514476776123,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 15.025,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.04762586931015899,
+        "lowFrequencyFraction": 0.1431360215348354,
+        "originalLowBandEarlyLateRatio": 1.4644616320720674
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 60
+    },
+    {
+      "time": 15.535,
+      "sourceTime": 31.559063,
+      "strength": 2.231489419937134,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 15.53,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.029908608793276052,
+        "lowFrequencyFraction": 0.04778407753418306,
+        "originalLowBandEarlyLateRatio": 1.5721614948517753
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 61
+    },
+    {
+      "time": 15.67,
+      "sourceTime": 31.694063,
+      "strength": 1.2815794944763184,
+      "sourceBand": "main",
+      "percussionEvidenceTime": 15.665,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.00843998324487807,
+        "lowFrequencyFraction": 0.48499041230913303,
+        "originalLowBandEarlyLateRatio": 1.3509944828740423
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "noiseOnsetStrength": 0.2191978394985199,
+      "mainOnlyEvidence": "low-band-decaying-transient",
+      "id": 62
+    },
+    {
+      "time": 15.795,
+      "sourceTime": 31.819063,
+      "strength": 0.7110162973403931,
+      "sourceBand": "main",
+      "percussionEvidenceTime": 15.795,
+      "sourcePercussionErrorMs": 0.0,
+      "features": {
+        "percussionSpectralFlatness": 0.013046712208521768,
+        "lowFrequencyFraction": 0.4802346259541468,
+        "originalLowBandEarlyLateRatio": 2.595647281125831
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "noiseOnsetStrength": 0.14887410402297974,
+      "mainOnlyEvidence": "low-band-decaying-transient",
+      "id": 63
+    },
+    {
+      "time": 16.035,
+      "sourceTime": 32.059063,
+      "strength": 4.448660373687744,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 16.035,
+      "sourcePercussionErrorMs": 0.0,
+      "features": {
+        "percussionSpectralFlatness": 0.0871922861344707,
+        "lowFrequencyFraction": 0.2932732924300647,
+        "originalLowBandEarlyLateRatio": 0.5220336000303484
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 64
+    },
+    {
+      "time": 16.535,
+      "sourceTime": 32.559063,
+      "strength": 1.5504345893859863,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 16.525,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.010722053896877833,
+        "lowFrequencyFraction": 0.11193182627300123,
+        "originalLowBandEarlyLateRatio": 1.4373798832550917
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 65
+    },
+    {
+      "time": 16.78,
+      "sourceTime": 32.804063,
+      "strength": 1.3709293603897095,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 16.775,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.008298439593354884,
+        "lowFrequencyFraction": 0.03664041297694713,
+        "originalLowBandEarlyLateRatio": 1.5335363791898802
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 66
+    },
+    {
+      "time": 17.035,
+      "sourceTime": 33.059063,
+      "strength": 2.9690639972686768,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 17.03,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.037805657131531965,
+        "lowFrequencyFraction": 0.4511705059585066,
+        "originalLowBandEarlyLateRatio": 0.9140545131075792
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 67
+    },
+    {
+      "time": 17.285,
+      "sourceTime": 33.309063,
+      "strength": 1.389505386352539,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 17.28,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.050653694494242944,
+        "lowFrequencyFraction": 0.18048657625327172,
+        "originalLowBandEarlyLateRatio": 0.66656069039255
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 68
+    },
+    {
+      "time": 17.53,
+      "sourceTime": 33.554063,
+      "strength": 1.474387288093567,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 17.525,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.020811469452516572,
+        "lowFrequencyFraction": 0.08179636475439524,
+        "originalLowBandEarlyLateRatio": 1.5884106988882938
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 69
+    },
+    {
+      "time": 18.035,
+      "sourceTime": 34.059063,
+      "strength": 3.965385913848877,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 18.03,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.09042405131971311,
+        "lowFrequencyFraction": 0.5180431251632674,
+        "originalLowBandEarlyLateRatio": 0.9015474936501671
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 70
+    },
+    {
+      "time": 18.535,
+      "sourceTime": 34.559063,
+      "strength": 1.598165512084961,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 18.525,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.013049788227600698,
+        "lowFrequencyFraction": 0.04578135445786479,
+        "originalLowBandEarlyLateRatio": 1.2004133969990654
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 71
+    },
+    {
+      "time": 18.785,
+      "sourceTime": 34.809063,
+      "strength": 1.3938566446304321,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 18.775,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.008554965277581938,
+        "lowFrequencyFraction": 0.026299586308635322,
+        "originalLowBandEarlyLateRatio": 1.3163450814364863
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 72
+    },
+    {
+      "time": 19.04,
+      "sourceTime": 35.064062,
+      "strength": 3.271852493286133,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 19.035,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.04597927575139381,
+        "lowFrequencyFraction": 0.30702653563879095,
+        "originalLowBandEarlyLateRatio": 0.8586681213922238
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 73
+    },
+    {
+      "time": 19.285,
+      "sourceTime": 35.309063,
+      "strength": 1.5187424421310425,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 19.28,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.054359192159453486,
+        "lowFrequencyFraction": 0.2628886071396437,
+        "originalLowBandEarlyLateRatio": 0.6630345450145144
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 74
+    },
+    {
+      "time": 19.535,
+      "sourceTime": 35.559063,
+      "strength": 1.3316469192504883,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 19.53,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.00899167055445557,
+        "lowFrequencyFraction": 0.12035840484409988,
+        "originalLowBandEarlyLateRatio": 1.9522017786760657
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 75
+    },
+    {
+      "time": 20.04,
+      "sourceTime": 36.064062,
+      "strength": 2.8993959426879883,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 20.035,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.04595322483659038,
+        "lowFrequencyFraction": 0.3366741766797881,
+        "originalLowBandEarlyLateRatio": 0.6983933498974836
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 76
+    },
+    {
+      "time": 20.135,
+      "sourceTime": 36.159063,
+      "strength": 1.2665143013000488,
+      "sourceBand": "main",
+      "percussionEvidenceTime": 20.125,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.043398188910383696,
+        "lowFrequencyFraction": 0.3436883761085075,
+        "originalLowBandEarlyLateRatio": 1.3200018352511105
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "noiseOnsetStrength": 0.5151357054710388,
+      "mainOnlyEvidence": "broadband-noise-transient",
+      "id": 77
+    },
+    {
+      "time": 20.54,
+      "sourceTime": 36.564062,
+      "strength": 1.303821325302124,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 20.53,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.006230644730126004,
+        "lowFrequencyFraction": 0.09377016315012278,
+        "originalLowBandEarlyLateRatio": 1.397177400866833
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 78
+    },
+    {
+      "time": 20.785,
+      "sourceTime": 36.809063,
+      "strength": 1.1567115783691406,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 20.775,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.007317759024397877,
+        "lowFrequencyFraction": 0.024751822797376304,
+        "originalLowBandEarlyLateRatio": 1.4320185638596306
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 79
+    },
+    {
+      "time": 21.04,
+      "sourceTime": 37.064062,
+      "strength": 3.1066222190856934,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 21.03,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.021033051417076214,
+        "lowFrequencyFraction": 0.23823432277206014,
+        "originalLowBandEarlyLateRatio": 0.9214690198009257
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 80
+    },
+    {
+      "time": 21.39,
+      "sourceTime": 37.414062,
+      "strength": 1.2997618913650513,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 21.39,
+      "sourcePercussionErrorMs": 0.0,
+      "features": {
+        "percussionSpectralFlatness": 0.03948763619168963,
+        "lowFrequencyFraction": 0.0035976283143836613,
+        "originalLowBandEarlyLateRatio": 0.649767084299226
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 81
+    },
+    {
+      "time": 21.5,
+      "sourceTime": 37.524062,
+      "strength": 0.7923516035079956,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 21.52,
+      "sourcePercussionErrorMs": 20.0,
+      "features": {
+        "percussionSpectralFlatness": 0.05278629980068012,
+        "lowFrequencyFraction": 0.3130783795520713,
+        "originalLowBandEarlyLateRatio": 0.7056142043747163
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 82
+    },
+    {
+      "time": 22.04,
+      "sourceTime": 38.064062,
+      "strength": 2.7081265449523926,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 22.035,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.04347693838489638,
+        "lowFrequencyFraction": 0.5258446009034543,
+        "originalLowBandEarlyLateRatio": 0.8967815510588963
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 83
+    },
+    {
+      "time": 22.535,
+      "sourceTime": 38.559063,
+      "strength": 1.4154903888702393,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 22.53,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.010175441671598168,
+        "lowFrequencyFraction": 0.05845776309364295,
+        "originalLowBandEarlyLateRatio": 1.2598207994742263
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 84
+    },
+    {
+      "time": 22.785,
+      "sourceTime": 38.809063,
+      "strength": 1.4686163663864136,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 22.78,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.010755079380347058,
+        "lowFrequencyFraction": 0.022582181082784602,
+        "originalLowBandEarlyLateRatio": 1.4740248233500526
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 85
+    },
+    {
+      "time": 23.04,
+      "sourceTime": 39.064062,
+      "strength": 2.8584389686584473,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 23.03,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.03300577058576053,
+        "lowFrequencyFraction": 0.27117950809326535,
+        "originalLowBandEarlyLateRatio": 0.8126691565132819
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 86
+    },
+    {
+      "time": 23.29,
+      "sourceTime": 39.314062,
+      "strength": 0.914039671421051,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 23.285,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.046563401628979956,
+        "lowFrequencyFraction": 0.55937886191477,
+        "originalLowBandEarlyLateRatio": 0.6488745808599788
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 87
+    },
+    {
+      "time": 23.385,
+      "sourceTime": 39.409063,
+      "strength": 1.1080354452133179,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 23.38,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.04605236822183999,
+        "lowFrequencyFraction": 0.005607607184965662,
+        "originalLowBandEarlyLateRatio": 0.4168776874486898
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 88
+    },
+    {
+      "time": 23.525,
+      "sourceTime": 39.549063,
+      "strength": 0.6868664622306824,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 23.525,
+      "sourcePercussionErrorMs": 0.0,
+      "features": {
+        "percussionSpectralFlatness": 0.028779372418156132,
+        "lowFrequencyFraction": 0.02569074486230164,
+        "originalLowBandEarlyLateRatio": 1.1099977039807956
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 89
+    },
+    {
+      "time": 24.04,
+      "sourceTime": 40.064062,
+      "strength": 3.9026379585266113,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 24.035,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.07379735742192427,
+        "lowFrequencyFraction": 0.3598114506001387,
+        "originalLowBandEarlyLateRatio": 0.6244927506714814
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 90
+    },
+    {
+      "time": 24.54,
+      "sourceTime": 40.564062,
+      "strength": 1.3390138149261475,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 24.53,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.011306678549387845,
+        "lowFrequencyFraction": 0.17405054595081504,
+        "originalLowBandEarlyLateRatio": 2.060797998088141
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 91
+    },
+    {
+      "time": 24.785,
+      "sourceTime": 40.809063,
+      "strength": 1.5613642930984497,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 24.78,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.007816927402739426,
+        "lowFrequencyFraction": 0.026354704558125833,
+        "originalLowBandEarlyLateRatio": 0.9184042679516298
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 92
+    },
+    {
+      "time": 25.04,
+      "sourceTime": 41.064062,
+      "strength": 3.096787214279175,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 25.035,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.03588023900168393,
+        "lowFrequencyFraction": 0.48067865070547977,
+        "originalLowBandEarlyLateRatio": 1.013191549196288
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 93
+    },
+    {
+      "time": 25.29,
+      "sourceTime": 41.314062,
+      "strength": 0.8782086968421936,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 25.285,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.0274977317141936,
+        "lowFrequencyFraction": 0.35816709682876047,
+        "originalLowBandEarlyLateRatio": 0.890394069239385
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 94
+    },
+    {
+      "time": 25.39,
+      "sourceTime": 41.414062,
+      "strength": 1.2646387815475464,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 25.39,
+      "sourcePercussionErrorMs": 0.0,
+      "features": {
+        "percussionSpectralFlatness": 0.03224184540412729,
+        "lowFrequencyFraction": 0.0025602114417209608,
+        "originalLowBandEarlyLateRatio": 0.7960721272346533
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 95
+    },
+    {
+      "time": 25.5,
+      "sourceTime": 41.524062,
+      "strength": 0.7399093508720398,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 25.5,
+      "sourcePercussionErrorMs": 0.0,
+      "features": {
+        "percussionSpectralFlatness": 0.059782049179762244,
+        "lowFrequencyFraction": 0.3614709745551428,
+        "originalLowBandEarlyLateRatio": 1.3154818826397348
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 96
+    },
+    {
+      "time": 26.035,
+      "sourceTime": 42.059063,
+      "strength": 3.7847039699554443,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 26.035,
+      "sourcePercussionErrorMs": 0.0,
+      "features": {
+        "percussionSpectralFlatness": 0.11129253860497909,
+        "lowFrequencyFraction": 0.5566929163727796,
+        "originalLowBandEarlyLateRatio": 0.6529918528593709
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 97
+    },
+    {
+      "time": 26.54,
+      "sourceTime": 42.564062,
+      "strength": 0.8105846643447876,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 26.53,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.016711046558033717,
+        "lowFrequencyFraction": 0.3266122447198276,
+        "originalLowBandEarlyLateRatio": 1.926420718691114
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 98
+    },
+    {
+      "time": 26.785,
+      "sourceTime": 42.809063,
+      "strength": 1.8386539220809937,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 26.78,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.0072505406486591375,
+        "lowFrequencyFraction": 0.0010093423151593707,
+        "originalLowBandEarlyLateRatio": 1.163151233950527
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 99
+    },
+    {
+      "time": 27.04,
+      "sourceTime": 43.064062,
+      "strength": 3.1720123291015625,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 27.035,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.04979848736110949,
+        "lowFrequencyFraction": 0.27370816451283053,
+        "originalLowBandEarlyLateRatio": 0.7795789864897102
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 100
+    },
+    {
+      "time": 27.54,
+      "sourceTime": 43.564062,
+      "strength": 1.7115391492843628,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 27.53,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.007550520511604107,
+        "lowFrequencyFraction": 0.07255095733870613,
+        "originalLowBandEarlyLateRatio": 1.1318398663458882
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 101
+    },
+    {
+      "time": 28.04,
+      "sourceTime": 44.064062,
+      "strength": 3.658080577850342,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 28.035,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.09326937266932359,
+        "lowFrequencyFraction": 0.33888225372388336,
+        "originalLowBandEarlyLateRatio": 0.5818243578914617
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 102
+    },
+    {
+      "time": 28.54,
+      "sourceTime": 44.564062,
+      "strength": 1.3899410963058472,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 28.53,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.01237424543966321,
+        "lowFrequencyFraction": 0.10432835776530955,
+        "originalLowBandEarlyLateRatio": 1.0146492901051738
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 103
+    },
+    {
+      "time": 28.79,
+      "sourceTime": 44.814062,
+      "strength": 1.2727197408676147,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 28.775,
+      "sourcePercussionErrorMs": -15.0,
+      "features": {
+        "percussionSpectralFlatness": 0.006344274475275283,
+        "lowFrequencyFraction": 0.01874710316734163,
+        "originalLowBandEarlyLateRatio": 0.9679401075359791
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 104
+    },
+    {
+      "time": 29.04,
+      "sourceTime": 45.064062,
+      "strength": 2.492462635040283,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 29.03,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.031510642183715694,
+        "lowFrequencyFraction": 0.4747270358069237,
+        "originalLowBandEarlyLateRatio": 0.9191026536879408
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 105
+    },
+    {
+      "time": 29.54,
+      "sourceTime": 45.564062,
+      "strength": 1.450264811515808,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 29.53,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.01844118401145529,
+        "lowFrequencyFraction": 0.11978451435333645,
+        "originalLowBandEarlyLateRatio": 0.9244044199693913
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 106
+    },
+    {
+      "time": 30.04,
+      "sourceTime": 46.064062,
+      "strength": 3.222423553466797,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 30.035,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.0465452453423096,
+        "lowFrequencyFraction": 0.3043406015980834,
+        "originalLowBandEarlyLateRatio": 0.613454578719587
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 107
+    },
+    {
+      "time": 30.54,
+      "sourceTime": 46.564062,
+      "strength": 1.6462568044662476,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 30.53,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.01819062166267397,
+        "lowFrequencyFraction": 0.16957213844881222,
+        "originalLowBandEarlyLateRatio": 1.200893974566631
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 108
+    },
+    {
+      "time": 30.79,
+      "sourceTime": 46.814062,
+      "strength": 1.5809577703475952,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 30.78,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.0127932094464717,
+        "lowFrequencyFraction": 0.0420224576851652,
+        "originalLowBandEarlyLateRatio": 2.1497619642579346
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 109
+    },
+    {
+      "time": 31.04,
+      "sourceTime": 47.064062,
+      "strength": 2.799262762069702,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 31.035,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.024488611593456305,
+        "lowFrequencyFraction": 0.29813077827895734,
+        "originalLowBandEarlyLateRatio": 0.8027846613407211
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 110
+    },
+    {
+      "time": 31.54,
+      "sourceTime": 47.564062,
+      "strength": 1.4680461883544922,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 31.535,
+      "sourcePercussionErrorMs": -5.0,
+      "features": {
+        "percussionSpectralFlatness": 0.016817398144509315,
+        "lowFrequencyFraction": 0.11485081772074796,
+        "originalLowBandEarlyLateRatio": 1.0050692518065305
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 111
+    },
+    {
+      "time": 31.8,
+      "sourceTime": 47.824063,
+      "strength": 0.5897527933120728,
+      "sourceBand": "cymbal",
+      "percussionEvidenceTime": 31.79,
+      "sourcePercussionErrorMs": -10.0,
+      "features": {
+        "percussionSpectralFlatness": 0.0023283604968912575,
+        "lowFrequencyFraction": 0.04025049216180404,
+        "originalLowBandEarlyLateRatio": 2.6002327155361007
+      },
+      "method": "local observed source/percussion onset; no time grid",
+      "id": 112
+    }
+  ],
+  "loop": {
+    "enabled": true,
+    "start": 0,
+    "end": 32.0,
+    "duration": 32.0,
+    "frames": 1536000,
+    "sampleRate": 48000
+  },
+  "metrics": {
+    "meanAttackBpm": 211.875,
+    "gapP10": 0.11500000000000021,
+    "minimumGap": 0.09500000000000242,
+    "maximumGap": 0.5399999999999991,
+    "medianGap": 0.25,
+    "burstP95_1s": 6.0,
+    "burstMaximum1s": 7,
+    "fractionPairsUnder200ms": 0.2831858407079646,
+    "top4IntervalBinFraction": 0.8230088495575221,
+    "firstAction": 0.03,
+    "lastAction": 31.8,
+    "classification": "Insano",
+    "circularIntervals": true,
+    "densityTier": "Dificil"
+  },
+  "baseEdition": null,
+  "sourcePreparedRange": {
+    "start": 16.0240625,
+    "end": 48.0240625,
+    "transitionHandleEnd": 48.0440625
+  },
+  "additionalSpeed": 1,
+  "humanLoopApproval": false,
+  "officialApplied": false,
+  "id": "GV059-L05-04",
+  "title": "Digital Native",
+  "artist": "Eric Skiff",
+  "sourceEditionApproved": false,
+  "humanMapApproval": false,
+  "parentEdition": "GV059-L04-09",
+  "revisionNote": "Mapa refeito com ataques observados e subdivisões da percussão. O tier Insano descreve leitura rítmica variável; não afirma mudança do BPM métrico.",
+  "rhythmEvidence": {
+    "sourceCymbalAttacks": 112,
+    "sourceMainCandidates": 116,
+    "acceptedMainOnly": 7,
+    "rejectedOrMergedCandidates": 13,
+    "maximumSourcePercussionErrorMs": 25.0,
+    "uniformTimeGridUsed": false,
+    "tierReason": "Explicit human Insano classification for syncopated/variable reading, not only speed",
+    "discarded": [
+      {
+        "time": 3.79,
+        "sourceTime": 19.814062,
+        "strength": 0.7244528532028198,
+        "sourceBand": "main",
+        "percussionEvidenceTime": 3.785,
+        "sourcePercussionErrorMs": -5.0,
+        "features": {
+          "percussionSpectralFlatness": 0.010980674998174391,
+          "lowFrequencyFraction": 0.1923839127740177,
+          "originalLowBandEarlyLateRatio": 1.1241769491288511
+        },
+        "method": "local observed source/percussion onset; no time grid",
+        "noiseOnsetStrength": 0.4426358938217163
+      },
+      {
+        "time": 11.67,
+        "sourceTime": 27.694063,
+        "strength": 0.4527135491371155,
+        "sourceBand": "main",
+        "percussionEvidenceTime": 11.67,
+        "sourcePercussionErrorMs": 0.0,
+        "features": {
+          "percussionSpectralFlatness": 0.015572270543269276,
+          "lowFrequencyFraction": 0.2677327489056124,
+          "originalLowBandEarlyLateRatio": 1.1002350155491165
+        },
+        "method": "local observed source/percussion onset; no time grid",
+        "noiseOnsetStrength": 0.2759493291378021
+      },
+      {
+        "time": 11.795,
+        "sourceTime": 27.819063,
+        "strength": 0.4689820408821106,
+        "sourceBand": "main",
+        "percussionEvidenceTime": 11.795,
+        "sourcePercussionErrorMs": 0.0,
+        "features": {
+          "percussionSpectralFlatness": 0.009750990756542567,
+          "lowFrequencyFraction": 0.2608006359913473,
+          "originalLowBandEarlyLateRatio": 1.8007286998422718
+        },
+        "method": "local observed source/percussion onset; no time grid",
+        "noiseOnsetStrength": 0.302997887134552
+      },
+      {
+        "time": 12.925,
+        "sourceTime": 28.949063,
+        "strength": 0.7871004343032837,
+        "sourceBand": "main",
+        "percussionEvidenceTime": 12.915,
+        "sourcePercussionErrorMs": -10.0,
+        "features": {
+          "percussionSpectralFlatness": 0.0007164502836991118,
+          "lowFrequencyFraction": 0.001608504284774761,
+          "originalLowBandEarlyLateRatio": 1.5010303230449484
+        },
+        "method": "local observed source/percussion onset; no time grid",
+        "noiseOnsetStrength": 0.36860471963882446
+      },
+      {
+        "time": 22.34,
+        "sourceTime": 38.364063,
+        "strength": 0.499141126871109,
+        "sourceBand": "main",
+        "percussionEvidenceTime": 22.31,
+        "sourcePercussionErrorMs": -30.0,
+        "features": {
+          "percussionSpectralFlatness": 0.03034776374176209,
+          "lowFrequencyFraction": 0.1509176279104138,
+          "originalLowBandEarlyLateRatio": 1.2989267653510677
+        },
+        "method": "local observed source/percussion onset; no time grid",
+        "noiseOnsetStrength": 0.10768451541662216
+      },
+      {
+        "time": 2.115,
+        "sourceTime": 18.139063,
+        "strength": 1.0213053226470947,
+        "sourceBand": "cymbal",
+        "percussionEvidenceTime": 2.115,
+        "sourcePercussionErrorMs": 0.0,
+        "features": {
+          "percussionSpectralFlatness": 0.03874575307157805,
+          "lowFrequencyFraction": 0.6438878317942499,
+          "originalLowBandEarlyLateRatio": 1.272812818303296
+        },
+        "method": "local observed source/percussion onset; no time grid"
+      },
+      {
+        "time": 8.12,
+        "sourceTime": 24.144063,
+        "strength": 0.9521665573120117,
+        "sourceBand": "cymbal",
+        "percussionEvidenceTime": 8.12,
+        "sourcePercussionErrorMs": 0.0,
+        "features": {
+          "percussionSpectralFlatness": 0.049525595635021236,
+          "lowFrequencyFraction": 0.28190345193157745,
+          "originalLowBandEarlyLateRatio": 1.1611783742980428
+        },
+        "method": "local observed source/percussion onset; no time grid"
+      },
+      {
+        "time": 10.125,
+        "sourceTime": 26.149062,
+        "strength": 0.796278715133667,
+        "sourceBand": "cymbal",
+        "percussionEvidenceTime": 10.115,
+        "sourcePercussionErrorMs": -10.0,
+        "features": {
+          "percussionSpectralFlatness": 0.03800286394172278,
+          "lowFrequencyFraction": 0.232064061576936,
+          "originalLowBandEarlyLateRatio": 1.170365896426112
+        },
+        "method": "local observed source/percussion onset; no time grid"
+      },
+      {
+        "time": 12.11,
+        "sourceTime": 28.134062,
+        "strength": 0.8989799618721008,
+        "sourceBand": "cymbal",
+        "percussionEvidenceTime": 12.105,
+        "sourcePercussionErrorMs": -5.0,
+        "features": {
+          "percussionSpectralFlatness": 0.04324579732404335,
+          "lowFrequencyFraction": 0.13758222148837848,
+          "originalLowBandEarlyLateRatio": 1.1640902016450334
+        },
+        "method": "local observed source/percussion onset; no time grid"
+      },
+      {
+        "time": 14.12,
+        "sourceTime": 30.144063,
+        "strength": 0.8298941254615784,
+        "sourceBand": "cymbal",
+        "percussionEvidenceTime": 14.11,
+        "sourcePercussionErrorMs": -10.0,
+        "features": {
+          "percussionSpectralFlatness": 0.051030614856222595,
+          "lowFrequencyFraction": 0.13232471859700828,
+          "originalLowBandEarlyLateRatio": 1.1781943926360103
+        },
+        "method": "local observed source/percussion onset; no time grid"
+      },
+      {
+        "time": 21.295,
+        "sourceTime": 37.319063,
+        "strength": 1.0349032878875732,
+        "sourceBand": "cymbal",
+        "percussionEvidenceTime": 21.285,
+        "sourcePercussionErrorMs": -10.0,
+        "features": {
+          "percussionSpectralFlatness": 0.04297299885510447,
+          "lowFrequencyFraction": 0.4048572803466391,
+          "originalLowBandEarlyLateRatio": 0.9668181542681992
+        },
+        "method": "local observed source/percussion onset; no time grid"
+      },
+      {
+        "time": 28.12,
+        "sourceTime": 44.144063,
+        "strength": 1.5796656608581543,
+        "sourceBand": "main",
+        "percussionEvidenceTime": 28.12,
+        "sourcePercussionErrorMs": 0.0,
+        "features": {
+          "percussionSpectralFlatness": 0.05016968752304941,
+          "lowFrequencyFraction": 0.21710589467559016,
+          "originalLowBandEarlyLateRatio": 0.9738803149711356
+        },
+        "method": "local observed source/percussion onset; no time grid",
+        "noiseOnsetStrength": 0.583681583404541,
+        "mainOnlyEvidence": "broadband-noise-transient"
+      },
+      {
+        "time": 31.125,
+        "sourceTime": 47.149062,
+        "strength": 1.0296704769134521,
+        "sourceBand": "main",
+        "percussionEvidenceTime": 31.125,
+        "sourcePercussionErrorMs": 0.0,
+        "features": {
+          "percussionSpectralFlatness": 0.041107034658526956,
+          "lowFrequencyFraction": 0.35079198133123496,
+          "originalLowBandEarlyLateRatio": 0.7919239264601087
+        },
+        "method": "local observed source/percussion onset; no time grid",
+        "noiseOnsetStrength": 0.4008244276046753,
+        "mainOnlyEvidence": "broadband-noise-transient"
+      }
+    ]
+  },
+  "tier": "Insano"
+}

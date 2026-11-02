@@ -1,0 +1,22 @@
+{
+  "scope": "UI consistency and command feedback; direct user implementation authorization on 2026-10-29",
+  "authorization": "User: pode começar a aplicar as correções; responsividade dos comandos e padronização na UI",
+  "visualHumanApproval": false,
+  "integrationReceipt": "coordination/UI-CORRECTIONS-20261029/r1/INTEGRATION.json",
+  "files": {
+    "expedition-hud-view.js": "a9484b6c9b67d159f90660039af16a09cb88f20d4c6d3d45842a9217107f3c33",
+    "expedition-summary.js": "a30ef450651c196fbe38186d24bf7ace5bfafd7a143836b1503490ee774f40f4",
+    "index.html": "8e904effc7af0391167ddfa543cd1f7581a609001f0192e4bf54843f4989161e",
+    "pets-view.js": "79eeb5b87b0011112a26dfd08dbe8b41cf9da0403bc3150b49f7279eea4d6b90",
+    "rebrand-journey-choices.js": "a1b16ba40a1a9216beb0fb98c78cc142b8e3f1ddce2ec8931010db01f4ca7d97",
+    "rebrand-lift.js": "b46d9cb22c59bcebdd0f8d6abce715fad63888a06e76563c15f66d7aeaa81786",
+    "rebrand-missions.js": "feeb69bfeae93020c34104be7edcab3b857fa31364bb68f7628a2f9ec5c2f6f7",
+    "records-view.js": "f2cf99523ba73ee4c70f1e1fa8728fce0e3ecdeb58b1431442fda26f7800890a",
+    "refuge-lobby.js": "ff81c50d113e1097d748f6b3663dd3811728507015a7a681c308da016bb24401",
+    "return-screen.js": "f6e361946605cd6dfef11ba36ddf8c49a5972f4afabdf1b7a87da72d3b8a665a",
+    "run.js": "b0845641f98b883849fb56af344cb905aa957751cdf67703920412322a75a601",
+    "talent-view.js": "95dee698e268c00ca2d898057927be3e00b4f785ff25967279a492df45b994e2",
+    "ui-command-feedback.js": "091aa7991d019328f21cd95aa168fa6ecf86dec285666405e3e35001d32ced6e",
+    "ui-consistency.css": "98c54a2b5447f91bea3f7f8b867687597bdbf36d287743ea910cd316f7adafa7"
+  }
+}

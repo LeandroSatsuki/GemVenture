@@ -1,0 +1,36 @@
+{
+  "id": "miner-cave-tool-v7",
+  "date": "2026-10-31",
+  "status": "approved-applied-local",
+  "authorization": "User explicitly confirmed: correct left and down, preserve right and up.",
+  "files": {
+    "dungeon-miner-data.js": "0671eaca699e9b195ba48b93c3e35abeb52e11261519d4c5fca878313557d4af",
+    "dungeon-miner.js": "b7f24166f8b870e25a578ddab586c1da477bfc1977204e675b009b04416661db"
+  },
+  "frozenV6": {
+    "idle": {
+      "count": 1,
+      "seconds": 1,
+      "sockets": "779b956be3cf8073aa4ffdd557b272c01a031bc9f1dc41e2db8975982876bb40",
+      "headCenter": "94e00276fd367a6862bf7aa43d311eb9b8fd4b3ffa22f271218e8aa152a40be1"
+    },
+    "run": {
+      "count": 32,
+      "seconds": 0.64,
+      "sockets": "1efb316ec539955f5952053fda89ef1a740350fb58b137eb5f7f0a35891b2591",
+      "headCenter": "53f702f5ac50e3f74f3b666918eb656c32b8f889f58c74bae556242c38553f17"
+    },
+    "mine": {
+      "count": 32,
+      "seconds": 0.8,
+      "sockets": "1ef224c5d269e2a39dd9b2d61bce49fe27df8cb07380317b76a822b663d54d27",
+      "headCenter": "ca4056b3eed25246389731c408aadaeb79ff5907691f5d4393988a87854840c4"
+    }
+  },
+  "evidence": "outputs/miner-cave-tool-v7/ in Diorama workspace",
+  "humanApproval": {
+    "source": "Current user message in this chat: aprovado, pode aplicar nio game real",
+    "date": "2026-10-31",
+    "scope": "Pickaxe left and down v7; preserve right/up"
+  }
+}

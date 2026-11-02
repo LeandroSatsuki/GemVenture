@@ -1,0 +1,11 @@
+{
+  "id": "GV-043/COMBO-STAGES-APPLIED",
+  "approvedOn": "2026-11-01",
+  "authorization": "Gostei, tá aprovado. Pode aplicar essa progressão de combo no jogo oficial, mantendo a nitidez e sem poluir, e vamos para as recompensas de conclusão.",
+  "scope": "Approved P1 sampler/painters. Per-World visual memory and context cleanup; retire only the old perfect milestone ring. No gameplay, UI layout, audio or economy changes.",
+  "files": {
+    "combo-disco.js": "84d687e530ad103dba462af9c3a5e1f9e62e6129fa5bc41a77127c69b18b41f5",
+    "world.js": "867d7803415f57ec87ecbd1c9685c11a69c7993e9648e17beb8ebedfd788e50d",
+    "effects.js": "11460484e318caa570d548519fea2e2f273333f3ae26bffbc2bf5fa3c43410c4"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "HUD-EDITOR-CAMERA-20261102-R1",
+  "authorization": "Human approved 2026-11-02: aprovado, pode aplicar ao game; merged against current baseline without replacing parallel changes",
+  "files": {
+    "boss-help-view.js": "5277c673f33bb3885c32f9c05353a4e08df13961c701650b490f22f23543e773",
+    "boss-hud.js": "b83678007ebdd2ab21bb38b737e7596b02cbe1d0101fc8ccb5487fc3fddd8f86",
+    "cave-miniboss-hud.js": "cbb265a7795217d4cd26ac321afbea676d88752a31f89c39ea9ff2051c09049b",
+    "expedition-hud-view.js": "7bc39db9ae37555c11be056d0c826af2a657ea1b14331c6e71f80a40ad2a0d12",
+    "hud-editor-preview.js": "4d25817f37479fccebdf2d8f5fad3b7b533e9f910adabaa7d685eef5b186c295",
+    "hud-editor.css": "dded5e77ae5f27d80ec1f2f6d9c3e7c0ae6a309c714a489d43b1bff95a387ce7",
+    "hud-editor.js": "08e41dce500110b021214a6c540800ecbfb5c05762dd4368189b993fc5d5daff",
+    "hud-layout-presenter.js": "37724698d5fa738c9d580b635ed5b352acef5a3e32c8aec8a3f745969c93f62b",
+    "hud-layout.css": "09f6817d2cb244db6cb2501eab6d151fc47ba2b54a85e663374c25db5b5642dc",
+    "hud-layout.js": "de9f5087ec6eef3a5c6066d86b3a142cddf375c74a24fbc6586d78dd27f0a46d",
+    "index.html": "362e93f556f873a37ef75dca7dd473116b66867114786ef8cbf692d40cbae30c",
+    "settings-panels.js": "b0329a822863b5add16de6558e0c216f8cce0154dc3e737e7853f764591345de",
+    "video-preferences.js": "a007acb995b6af86faadb0a239f8ef076351c2c89d22096885c3c2f474ac1e1b",
+    "world.js": "f141406c3e1846ee0457f06e21a69b67f29b552e24307858ae09a8cf06b9713a"
+  }
+}

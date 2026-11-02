@@ -1,0 +1,78 @@
+/* Refúgio v3: scoped refinements of the approved blue UI. */
+#refugeLobby .nl-brand img{width:100%;height:auto;max-height:110px;object-fit:contain;transform:scale(1.15)}
+#refugeLobby .nl-left{top:3%;gap:10px}
+#refugeLobby .nl-main{gap:9px}
+#refugeLobby .nl-secondary{display:block}
+#refugeLobby .nl-missions{width:100%;display:grid;grid-template-columns:42px 1fr 28px;align-items:center;gap:8px;text-align:left;border-color:#839bd1!important;min-height:62px}
+.nl-missions img{width:42px;height:42px}.nl-missions strong,.nl-missions small{display:block}.nl-missions small{font-size:11px;color:#d4e5ff}.nl-missions b{background:#ffd141;color:#071d45;border:2px solid #020816;border-radius:50%;width:26px;height:26px;text-align:center}
+#refugeLobby .nl-action[data-refuge-action=stars] img{animation:relic-star-turn 7s ease-in-out infinite;transform-origin:center}
+@keyframes relic-star-turn{0%,20%{transform:rotate(0deg)}70%,100%{transform:rotate(360deg)}}
+#refugeLobby .nl-under-wallet{display:flex;align-items:flex-start;flex-direction:column;gap:0}
+#refugeLobby.night-lobby .nl-player{width:340px;max-width:100%!important;margin:0!important;display:flex;align-items:center;gap:8px;padding:7px 9px;border:2px solid #315c91;border-radius:9px;background:#06132be8;pointer-events:auto;order:-1}
+.nl-track{flex:1;min-width:0}.nl-track>small{font-size:9px;letter-spacing:1px;color:#b6cced}.nl-ticker{overflow:hidden;white-space:nowrap;font:700 12px var(--r2-body);mask-image:linear-gradient(90deg,transparent,black 3%,black 95%,transparent)}
+.nl-ticker>span{display:inline-block;padding-right:35px}.nl-ticker>span.nl-scroll{animation:music-credit-scroll 19s linear infinite}
+@keyframes music-credit-scroll{0%,8%{transform:translateX(0)}92%,100%{transform:translateX(-70%)}}
+.nl-transport{display:flex;gap:3px}.nl-transport button{min-width:27px!important;width:27px!important;height:30px;min-height:30px!important;padding:0!important;border:1px solid #071326;background:linear-gradient(#21477e,#0b254b)!important;color:white;font-size:19px;border-radius:6px}.nl-transport button:disabled{opacity:.4;cursor:default}
+#refugeLobby .nl-score{margin-left:auto}.nl-score img{height:87px}
+#refugeLobby.night-lobby .nl-vitrola{width:114px!important;min-height:104px!important;align-self:flex-end;display:grid;place-items:center;padding:5px!important;border:2px solid #5277a7!important;border-radius:16px;background:#071d45c9!important;box-shadow:inset 0 1px #a6c6ef!important}
+#refugeLobby .nl-vitrola img{width:94px;height:94px;object-fit:contain;margin:0}
+/* Dark cobalt under the forge, matching the elevator inset and upgrade surface. */
+#dialog.forge-dialog,#dialog.forge-dialog #dialogBody,#dialog.forge-dialog .forge-layout,#dialog.forge-dialog .forge-screen{background:#0b2450!important;--r2-page:#0b2450;--forge-panel:#0b2450}
+#dialog.forge-dialog :is(.forge-left,.forge-right,.forge-sidebar,.forge-projects){background:#0b2450!important}
+#dialog.tree-dialog .tree-heading,#dialog.tree-dialog #dialogLabel{background:none!important;box-shadow:none!important;border:0!important}
+#dialog.tree-dialog .tree-heading:before,#dialog.tree-dialog .tree-heading:after{display:none!important}
+#dialog.tree-dialog .tree-emblem-slot img{object-fit:contain;width:100%;height:100%}
+/* Two compact card rows have bounded height; requirements stay in the detail pane. */
+#dialog.pets-dialog .gv-pets__cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:210px;gap:10px;max-height:430px;overflow:auto;align-content:start}
+#dialog.pets-dialog .gv-pets__card{min-height:0;height:210px;padding:7px}
+#dialog.pets-dialog .gv-pets__select{padding:0;min-height:0}.gv-pets__card-stage{height:91px!important}
+#dialog.pets-dialog .gv-pets__card-stage .relic-art{height:95px;width:105px;inset:auto;left:50%;top:-4px;transform:translateX(-50%)}
+#dialog.pets-dialog .relic-art img{width:100%;height:100%;object-fit:contain;image-rendering:auto}
+#dialog.pets-dialog .gv-pets__card-name{font-size:18px}#dialog.pets-dialog .gv-pets__card-copy{font-size:11px;line-height:1.2;min-height:0}#dialog.pets-dialog .gv-pets__equip{min-height:30px;padding:3px 8px;font-size:13px}
+#dialog.pets-dialog .gv-pets__scene .relic-art{width:210px;height:210px}
+/* Fog belongs only at illustration boundaries, not over labels or gameplay. */
+.gv-v2-biome-banner>.gv-v2-biome-panorama,.gv-v2-biome-scene img,.gv-v2-biome-art{mask-image:linear-gradient(90deg,transparent,black 13%,black 84%,transparent)!important;-webkit-mask-image:linear-gradient(90deg,transparent,black 13%,black 84%,transparent)!important}
+.gv-v2-earned-stars img{width:18px;height:18px;vertical-align:middle}
+.gv-v2-floor .gv-v2-floor-stars i:not(.is-earned){color:#566584!important;-webkit-text-stroke:0!important;text-shadow:0 1px #06142d!important}
+.gv-v2-floor .gv-v2-floor-stars i.is-earned{color:#ffdb4c!important;-webkit-text-stroke:1px #8c570c!important;text-shadow:0 1px #8c570c!important}
+#dialog.map-dialog .gv-v2-close{width:44px;height:44px;min-height:44px;padding:8px;background:linear-gradient(#ed5b58,#a72638)!important;border:2px solid #020816!important;border-radius:9px;color:white;box-shadow:inset 0 2px #ff9690!important;filter:none}
+#dialog.map-dialog .gv-v2-close-mark{width:26px;height:26px}
+#dialog[open].relic-dialog.gv-relic-v10[data-r2-screen=stars]{display:block!important}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] #dialogBody{display:block;height:auto;max-height:none;flex:1 1 auto}
+#dialog.relic-dialog.gv-relic-v10[data-r2-screen=stars] .r2-relic{min-height:0}
+#dialog.statue-dialog{width:min(900px,94vw);background:#071d45;border:3px solid #315c91;border-radius:16px;color:#e5f1ff}
+#dialog.statue-dialog .dialog-top{background:#0b2e70;border-bottom:2px solid #020816}
+#dialog.statue-dialog{--r2-body:'GV R2 Body',Nunito,sans-serif;--r2-display:'GV R2 Display',Fredoka,sans-serif}
+#dialog.statue-dialog,#dialog.statue-dialog button,#dialog.statue-dialog .statue-score :is(p,summary,li){font-family:var(--r2-body)!important}
+#dialog.statue-dialog .dialog-top{padding:15px 18px;min-height:66px}
+#dialog.statue-dialog #dialogLabel{font:600 28px var(--r2-display)!important;color:#fff;text-shadow:0 3px #020816}
+#dialog.statue-dialog #close{height:44px;width:44px;font:bold 32px sans-serif;background:linear-gradient(#ff3b52,#cb0827);color:white;border:2px solid #020816;border-radius:9px;box-shadow:inset 0 2px #ff9690}
+#dialog.statue-dialog .statue-score-heading{font-family:var(--r2-display),sans-serif}
+#dialog.statue-dialog #dialogBody{background:#071d45;padding:22px;max-height:calc(90vh - 60px);overflow:auto}
+#dialog.statue-dialog .statue-score{background:linear-gradient(#103064,#071d45);color:#e5f1ff;border:2px solid #315c91;border-radius:14px;box-shadow:inset 0 1px #5487ba}
+#dialog.statue-dialog .statue-score-total{color:#ffe451;font-family:var(--r2-display);text-shadow:0 3px #020816}
+#dialog.statue-dialog .statue-score-milestones{background:#06132b;border-color:#315c91;color:#e5f1ff}
+#dialog.statue-dialog .statue-score-progress{background:#06132b;border-color:#315c91}#dialog.statue-dialog .statue-score-progress i{background:linear-gradient(#ffe451,#ecab11)}
+#hubGuideOverlay[data-step=hub-catalog] .tutor-panel{width:min(640px,calc(100vw - 30px));max-width:none;background:linear-gradient(#103064,#06132b);border:2px solid #5277a7;border-radius:17px;box-shadow:0 15px 70px #020816aa}
+#hubGuideOverlay .hub-guide-list{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+#hubGuideOverlay .hub-guide-list button{display:flex;align-items:center;gap:10px;text-align:left;min-height:64px;padding:8px;background:linear-gradient(#153968,#0b254b);border:2px solid #020816;box-shadow:inset 0 1px #5277a7;border-radius:10px;color:#e5f1ff;font:700 14px var(--r2-body)}
+.hub-guide-list img{width:39px;height:39px;object-fit:contain}
+@media(max-height:740px){#refugeLobby .nl-brand img{max-height:80px}#refugeLobby .nl-action{min-height:68px}#refugeLobby .nl-missions{min-height:54px}#refugeLobby .nl-score img{height:65px}#dialog.pets-dialog .gv-pets__cards{grid-auto-rows:190px;max-height:390px}#dialog.pets-dialog .gv-pets__card{height:190px}.gv-pets__card-stage{height:75px!important}}
+@media(max-width:760px){#refugeLobby .nl-player{width:250px}.nl-track>small{font-size:8px}.nl-ticker{font-size:10px}#refugeLobby .nl-vitrola{width:84px!important;min-height:78px!important}#refugeLobby .nl-vitrola img{width:68px;height:68px}#refugeLobby .nl-missions small{display:none}}
+@media(prefers-reduced-motion:reduce){#refugeLobby .nl-action[data-refuge-action=stars] img,.nl-ticker>span{animation:none}.nl-ticker{overflow:auto}}
+/* Override the caregiver skin at its own scope, retaining its gallery and detail panes. */
+#dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__cards{grid-template-columns:repeat(auto-fill,minmax(170px,1fr))!important;grid-auto-rows:205px!important;max-height:420px!important;overflow:auto;align-content:start}
+#dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__card{height:205px!important;min-height:0!important;padding:7px!important;gap:4px!important;display:flex;flex-direction:column}
+#dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__select{flex:1;min-height:0!important;padding:3px!important;gap:3px!important}
+#dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__card-name{font-size:16px!important;line-height:18px!important}
+#dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__card-copy{font-size:11px!important;line-height:13px!important;min-height:0!important}
+#dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__card .gv-pets__states{min-height:15px;height:15px;font-size:9px}
+#dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__card .gv-pets__equip{height:29px!important;min-height:29px!important;padding:2px 6px!important;font-size:13px!important;flex:none}
+#dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__card-stage .relic-art{width:120px!important;height:72px!important;top:-6px!important;left:50%;transform:translateX(-50%)!important}
+#dialog.pets-dialog.gv-r2 .pet-card-portrait svg{display:block;width:100%;height:100%;transform:none}
+@media(max-height:760px){
+ #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__cards{grid-auto-rows:174px!important;max-height:358px!important}
+ #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__card{height:174px!important}
+ #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__card-stage{height:52px!important}
+ #dialog.pets-dialog.gv-r2 .gv-pets--caregiver .gv-pets__card-stage .relic-art{height:49px!important;top:-3px!important}
+}

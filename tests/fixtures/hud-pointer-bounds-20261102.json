@@ -1,0 +1,9 @@
+{
+  "id": "HUD-POINTER-BOUNDS-20261102-R1",
+  "authorization": "Direct current user request to fix HUD input rectangles outside visible controls and check whole-button interaction.",
+  "files": {
+    "approved-expedition-hud.css": "6d702372e38e7b19496a740bada13bcb2f05e77b9876dafb30ae458948e2daa1",
+    "hud-hit-regions.js": "bc496cb423145f4b5524d0f2147be1d02d89e6ec8527df1ea7079a85f6f32938",
+    "expedition-hud-view.js": "5562968e4fa5f394deffbd34f30541f777101e04029f22e63403d82e9adaa7f3"
+  }
+}

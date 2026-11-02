@@ -1,5 +1,5 @@
 // Stars buy permanent rule variants. Rolls are saved immediately and never use cash.
-export const ASTRAL_COST=35;
+export const ASTRAL_COST=4;
 export const ASTRAL_SLOTS=3;
 const data=[
  ['first-light','PRIMEIRA LUZ','Comece com escudo.','guard','startShield',8],

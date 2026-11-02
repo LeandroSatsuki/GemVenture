@@ -1,0 +1,10 @@
+{
+  "id": "GV-059/BUTTON-HIERARCHY-R1",
+  "authorization": "Current direct user implementation request, not a new perceptual acceptance",
+  "files": {
+    "run.js": "1f15205cdaa6a2de27f7cb1e740d4d14fd572b5962f55b17ee7c9e273fdc2780",
+    "ui-bubble-feedback.js": "a2eb8f19e5d2357d97cc8f28e4d7136162b9db140f4afd5ff3a17d9b82794ab2",
+    "sound-design.js": "88886acf26e42efd64dff3a53db630837eccf5ea0aa7dc674575ca5db4c1cc9b",
+    "ui-button-sound-map.js": "24ca573eedf0245fa47984740dcd5095af32ba955d5164b99f139931358e4ca8"
+  }
+}

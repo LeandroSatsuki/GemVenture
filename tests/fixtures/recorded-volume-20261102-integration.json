@@ -1,0 +1,11 @@
+{
+  "id": "GV-059/RECORDED-VOLUME-R1",
+  "authorization": "Current user: new songs are too loud; standardize their default volume to match the other songs in the official game",
+  "scope": "Recorded music default gain only; old songs, SFX, preferences, audio files and beat maps unchanged",
+  "sourceReceipt": "E:\\Genventure\\coordination\\GV-059-recorded-volume-r1\\APPLICATION-RECEIPT.json",
+  "files": {
+    "recorded-album-player.js": "4fb57bd38f0ea8db786309c70dc2854bbc38fde9e2fb1e6d0695a26736067319",
+    "recorded-expedition.js": "5042d62d0fd5f75bc8d5ce567fc56e698cff0b434b7305a5da77b91853dd7f35",
+    "recorded-music-levels.js": "ce499725e6e6bc7dec85bc5309d411db7e8ed6eef430a59a538aa4fb021b90fe"
+  }
+}

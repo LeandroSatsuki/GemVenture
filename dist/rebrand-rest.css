@@ -1,0 +1,28 @@
+/* Existing rest shell and showRest own all content/actions. No global theme. */
+body #dialog[data-menu=rest]{box-sizing:border-box;position:fixed;inset:0;margin:auto;width:min(1120px,calc(100vw - 16px));height:calc(100dvh - 16px);max-width:none;max-height:900px;padding:0;overflow:hidden;border:3px solid var(--r2-ink,#180d2f);border-radius:16px;background:var(--r2-panel,#2890dc);color:var(--r2-text,#fff);font-family:var(--r2-body,'GV R2 Body',sans-serif);box-shadow:inset 0 3px #ffffff44,inset 0 -6px #180d2f66}
+body #dialog[data-menu=rest][open]{display:flex;flex-direction:column}
+body #dialog[data-menu=rest]::backdrop{background:#180d2fcc}
+body #dialog[data-menu=rest] .dialog-top{position:static;flex:none;min-height:64px;height:auto;padding:8px 12px;gap:8px;border-bottom:3px solid var(--r2-ink,#180d2f);background:var(--r2-panel,#2890dc)}
+body #dialog[data-menu=rest] #dialogLabel{min-width:0;flex:1;font:600 32px/1.2 var(--r2-display,'GV R2 Display',sans-serif);letter-spacing:0;color:var(--r2-text,#fff);white-space:normal;overflow-wrap:anywhere}
+body #dialog[data-menu=rest] #close{box-sizing:border-box;flex:none;min-width:48px;width:48px;min-height:48px;height:48px;border:3px solid var(--r2-ink,#180d2f);border-radius:12px;background:var(--r2-inset,#353658);color:var(--r2-text,#fff);font:900 24px/1.2 var(--r2-body,'GV R2 Body',sans-serif);clip-path:none}
+body #dialog[data-menu=rest] #dialogBody{box-sizing:border-box;display:block;flex:1;min-height:0;height:auto;max-height:none;padding:24px;overflow:auto;overscroll-behavior:contain;scroll-padding:16px}
+body #dialog[data-menu=rest] .camp-scene{height:128px;max-width:580px;margin:0 auto 16px}
+body #dialog[data-menu=rest] .rest-heading{text-align:center}
+body #dialog[data-menu=rest] .rest-heading h2{margin:12px 0;font:600 40px/1.2 var(--r2-display,'GV R2 Display',sans-serif);color:var(--r2-text,#fff);text-shadow:0 2px var(--r2-ink,#180d2f);overflow-wrap:anywhere}
+body #dialog[data-menu=rest] .rest-heading p{margin:12px 0;font:900 18px/1.4 var(--r2-body,'GV R2 Body',sans-serif);color:var(--r2-select,#5ee9e9);letter-spacing:0;overflow-wrap:anywhere}
+body #dialog[data-menu=rest] .rest-heading>strong{display:block;padding:16px;border:3px solid var(--r2-ink,#180d2f);border-radius:14px;background:var(--r2-inset,#353658);font:900 24px/1.4 var(--r2-body,'GV R2 Body',sans-serif);font-variant-numeric:tabular-nums;color:var(--r2-text,#fff);white-space:normal;overflow-wrap:anywhere}
+body #dialog[data-menu=rest] .camp-offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0}
+body #dialog[data-menu=rest] .camp-offers:empty{display:none}
+body #dialog[data-menu=rest] .camp-offers article{display:flex;flex-direction:column;gap:12px;min-width:0;padding:20px 16px;border:3px solid var(--r2-ink,#180d2f);border-radius:14px;background:var(--r2-inset,#353658);color:var(--r2-text,#fff);box-shadow:inset 0 2px #ffffff44,inset 0 -5px #180d2f66;text-align:center}
+body #dialog[data-menu=rest] .camp-offers h3{margin:0;font:600 28px/1.2 var(--r2-display,'GV R2 Display',sans-serif);color:var(--r2-text,#fff);overflow-wrap:anywhere}
+body #dialog[data-menu=rest] .camp-offers strong{font:900 24px/1.3 var(--r2-body,'GV R2 Body',sans-serif);color:var(--r2-action,#ece910);overflow-wrap:anywhere}
+body #dialog[data-menu=rest] .camp-offers p{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;min-width:0;margin:0 0 4px;font:800 20px/1.4 var(--r2-body,'GV R2 Body',sans-serif);color:var(--r2-text,#fff);overflow-wrap:anywhere}
+body #dialog[data-menu=rest] .camp-offers svg{flex:none;width:32px;height:36px}
+body #dialog[data-menu=rest] :is(.camp-offers button,.rest-actions button){box-sizing:border-box;min-width:48px;min-height:60px;padding:16px;border:3px solid var(--r2-ink,#180d2f);border-radius:12px;background:var(--r2-action,#ece910);color:var(--r2-ink,#180d2f);box-shadow:inset 0 2px #ffffff55,inset 0 -5px #180d2f66;font:900 20px/1.3 var(--r2-body,'GV R2 Body',sans-serif);white-space:normal;overflow-wrap:anywhere;clip-path:none;touch-action:manipulation}
+body #dialog[data-menu=rest] .camp-offers button{width:100%;margin-top:auto}
+body #dialog[data-menu=rest] button:disabled{border-style:dashed;border-color:var(--r2-lock,#686b72);background:var(--r2-ink,#180d2f);color:var(--r2-muted,#c5cddb);box-shadow:none;opacity:1;cursor:default}
+body #dialog[data-menu=rest] .rest-actions{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0 0}
+body #dialog[data-menu=rest] #restBuild{background:var(--r2-inset,#353658);color:var(--r2-text,#fff)}
+body #dialog[data-menu=rest] button:focus-visible{outline:3px solid var(--r2-focus,#fff);outline-offset:3px;box-shadow:0 0 0 6px var(--r2-ink,#180d2f)}
+@media(max-width:700px){body #dialog[data-menu=rest] #dialogBody{padding:16px}body #dialog[data-menu=rest] #dialogLabel{font-size:28px}body #dialog[data-menu=rest] .rest-heading h2{font-size:32px}body #dialog[data-menu=rest] .camp-offers,body #dialog[data-menu=rest] .rest-actions{grid-template-columns:1fr}}
+/* The original camp flame and its soft/reduced rules remain unchanged. */

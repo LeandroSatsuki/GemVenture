@@ -1,0 +1,11 @@
+{
+  "id": "DISCOVERIES-UI-INTEGRATION-20261101",
+  "authorization": "Ficou muito bom, aprovado. Pode aplicar os avisos de novas descobertas no jogo oficial e seguir para a próxima tela que ainda falta, mantendo esse padrão, com pouco texto e sem remover nenhuma funcionalidade.",
+  "proposal": "../DISCOVERIES-UI-PROPOSAL-20261101/v1/DELIVERY.json",
+  "files": {
+    "discovery-notices.js": "8d495a21da4d3f930de7ac30501d930d11142ad3304bd0484b0c628f29e8cd9d",
+    "approved-discoveries-ui.js": "a47ac3a856b6eba7616b8a567a22027c8eb20e2a606997d7106aac4b909bf05e",
+    "approved-discoveries-ui.css": "d1252852c6bd0cf5e0c2e54dd909e22fb194af0c10794a46b22703224bf0149f",
+    "run.js": "95413226babcd33ca421034e31c870ea1a23dc180ffd97be25189398b4f18f8d"
+  }
+}

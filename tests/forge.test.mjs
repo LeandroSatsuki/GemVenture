@@ -1,3 +1,4 @@
+import {rectangularRoom} from './helpers/rectangular-room.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as E from '../dist/core.js';
@@ -25,11 +26,11 @@ test('investment and benefits survive reload and death; legacy saves get empty p
  for(const [field,value]of [['levels',-1],['levels',101],['invested',-20],['invested',999999]]){const bad=structuredClone(s);bad.forge[field].anvil=value;assert.equal(E.restoreState(JSON.stringify(bad)),null);}
 });
 test('anvil boosts actual attacks and alchemist boosts actual tonic healing',()=>{
- const s=base();craft(s,'anvil');craft(s,'tonic');E.startRun(s);const r=s.run;r.room.rocks=[];r.room.enemies=[];r.room.quota=999;r.room.nodes=[{id:999,type:'crystal',kind:0,x:4,y:11,hp:100,maxHp:100,value:1,born:0}];
+ const s=base();craft(s,'anvil');craft(s,'tonic');E.startRun(s);rectangularRoom(s);const r=s.run;r.room.rocks=[];r.room.enemies=[];r.room.quota=999;r.room.nodes=[{id:999,type:'crystal',kind:0,x:4,y:11,hp:100,maxHp:100,value:1,born:0}];
  E.act(s,{type:'hit',id:999},0);assert.equal(r.room.nodes[0].hp,98.995);r.health=20;r.items.tonic=1;E.act(s,{type:'item',item:'tonic'},1);assert.equal(r.health,45.15);assert.equal(r.items.tonic,0);
 });
 test('armor reduces enemy attacks, stacks with cards and does not erase rhythm penalties',()=>{
- const s=base();craft(s,'armor');E.startRun(s);const r=s.run;r.cards={shell:1};r.room.rocks=[];r.room.nodes=[];r.room.enemies=[{id:999,type:'enemy',kind:2,x:4,y:11,hp:100,maxHp:100,stunUntil:-1,windup:{x:3,y:11,radius:0,beat:4}}];r.acted=4;E.tick(s,4);
+ const s=base();craft(s,'armor');E.startRun(s);rectangularRoom(s);const r=s.run;r.cards={shell:1};r.room.rocks=[];r.room.nodes=[];r.room.enemies=[{id:999,type:'enemy',kind:2,x:4,y:11,hp:100,maxHp:100,stunUntil:-1,windup:{x:3,y:11,radius:0,beat:4}}];r.acted=4;E.tick(s,4);
  assert.ok(Math.abs(r.health-(100-22.4*.35*.997*.85))<1e-8);const before=r.health;E.act(s,{type:'move',x:2,y:11},5.45);assert.equal(r.health,before);assert.equal(r.rhythm,87.5);
 });
 test('vault protects real loot on death or retreat, while safe returns still keep everything',()=>{

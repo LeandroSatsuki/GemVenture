@@ -1,0 +1,10 @@
+{
+  "id": "GV-043/BOMB-RED/R1",
+  "authorization": "Current user rejected new cartoon animation, chose existing effect and requested stronger explosion-red color.",
+  "scope": "Bomb-only red palette and sprite opacity 0.85 to 1. Preserve geometry, particles, timings, anchor, queue and all other visual events.",
+  "files": {
+    "effects.js": "cdd088d5904a67ca5a9dd479c360a6c35be188f651971d025c65e16fa3df4b4a",
+    "vfx-assets.js": "6db02acbc7b4b59d35367ec99a3f2b0db2e376205ba6bb24ef7d2592c9f69f87",
+    "dungeon-fx.js": "a0db073cc1c1bc87bb1fa62843c6ac5372a61615c1169cd764bc001a8edbf8f0"
+  }
+}

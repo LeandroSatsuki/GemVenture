@@ -1,17 +1,18 @@
+import {rectangularRoom} from './helpers/rectangular-room.mjs';
 import test from 'node:test';
 test('the initial relic card may stack with thirty-five floor rewards and survive saving',()=>{const s=E.createState();s.relics=['echo'];E.startRun(s);s.run.cards={popcorn:36};assert.equal(E.restoreState(JSON.stringify(s)).run.cards.popcorn,36);s.relics=[];assert.equal(E.restoreState(JSON.stringify(s)),null);});
 import assert from 'node:assert/strict';
 import * as E from '../dist/core.js';
 import {grantXP,nextLevelXP,makeOffering,BLESSINGS,RELICS,buyRelic,skillPointCost} from '../dist/pillars.js';
-function run(){const s=E.createState(712);E.startRun(s);s.run.room.explored=null;s.run.room.visible=null;s.run.room.terrain=Array((s.run.room.cols||21)*(s.run.room.rows||15)).fill(0);s.run.room.wave=null;s.run.room.rocks=[];s.run.room.enemies=[];s.run.room.quota=999;return s;}
+function run(){const s=E.createState(712);E.startRun(s);rectangularRoom(s);s.run.room.explored=null;s.run.room.visible=null;s.run.room.terrain=Array((s.run.room.cols||21)*(s.run.room.rows||15)).fill(0);s.run.room.wave=null;s.run.room.rocks=[];s.run.room.enemies=[];s.run.room.quota=999;return s;}
 test('XP levels grant skill points once; learning consumes points and no materials or currency',()=>{
  const s=run(),need=nextLevelXP(1);grantXP(s,need-1);assert.equal(s.experience.points,0);grantXP(s,1);assert.equal(s.experience.level,2);assert.equal(s.experience.points,1);E.finishRun(s,'death');const saved=E.restoreState(JSON.stringify(s));assert.equal(saved.experience.points,1);const bank=saved.bank,materials=[...saved.materials];assert.ok(E.learn(saved,'force'));assert.equal(saved.experience.points,0);assert.equal(saved.bank,bank);assert.deepEqual(saved.materials,materials);assert.equal(E.learn(saved,'force'),false);assert.equal(E.learn(saved,'ear'),false);
 });
 test('destroying an object earns permanent XP once while duplicate input and dead targets do not',()=>{
  const s=run();s.run.room.nodes=[{id:999,type:'crystal',kind:0,x:4,y:11,hp:1,maxHp:1,value:10,born:0}];E.act(s,{type:'hit',id:999},0);assert.equal(s.experience.xp,8);E.act(s,{type:'hit',id:999},0);E.act(s,{type:'hit',id:999},1);assert.equal(s.experience.xp,8);E.finishRun(s,'death');assert.equal(s.experience.xp,8);
 });
-test('well consumes the chosen surplus color once, saves its roll, and only applies to the next run',()=>{
- const seen=new Set();for(let seed=1;seed<30;seed++){const s=E.createState(seed);s.materials=[60,70,80,90];const a=makeOffering(s,2);assert.ok(a);seen.add(a.id);assert.deepEqual(s.materials,[60,70,35,90]);assert.equal(makeOffering(s,0),null);const copy=E.restoreState(JSON.stringify(s));assert.equal(copy.pendingBlessing,a.id);E.startRun(copy);assert.equal(copy.run.blessing,a.id);assert.equal(copy.pendingBlessing,null);assert.equal(makeOffering(copy,0),null);E.finishRun(copy);E.startRun(copy);assert.equal(copy.run.blessing,null);}assert.equal(seen.size,3);
+test('retired well cannot spend resources or prepare another blessing',()=>{
+ for(let kind=0;kind<4;kind++){const s=E.createState(12);s.materials=[60,70,80,90];const before=JSON.stringify(s);assert.equal(makeOffering(s,kind),null);assert.equal(JSON.stringify(s),before);assert.ok(E.restoreState(before));}
 });
 test('blessings apply both their reward and actual downside',()=>{
  const glass=E.createState();glass.pendingBlessing='glass';E.startRun(glass);assert.equal(glass.run.health,75);assert.equal(E.maxHealth(glass),75);assert.ok(E.restoreState(JSON.stringify(glass)));const normal=run(),fury=run();fury.run.blessing='fury';assert.equal(E.power(fury),E.power(normal)+2);for(const s of [normal,fury])E.act(s,{type:'hit',id:9999},.45);assert.ok(fury.run.rhythm<normal.run.rhythm);

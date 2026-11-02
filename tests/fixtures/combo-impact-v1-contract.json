@@ -1,0 +1,12 @@
+{
+  "authorization": "User requested large free-standing combo text with actual fill-color changes and a promotional milestone number flying into the live counter.",
+  "preservedStarSha256": "cd0ef61655fd1979618ba7713c958adea39a7bf3953f93305043c178eda662f1",
+  "files": {
+    "gamefeel-v5.js": "9449e89f1881e4385c5baca1454227ccd3c8203986c9f3747630aa55e95bcaf5",
+    "combo-impact.css": "0e2875860db9bb0438976182b7bad75a88655f409fe4f04268fbc545650febb8",
+    "index.html": "35d22ec49090edbebee3f6233ad2f42cb3a3b93585b324d2f7cd4b271dfaa0f4",
+    "hud-markup.js": "3b7864e149c9867bffaac8ca5625f076b534d104b22c5cf5fab60af6dcf91eb5",
+    "expedition-hud-view.js": "a470f98e534b8ffd55bc85033c88ae5cf20516616503dd030d7cfd395b0d24e9",
+    "run.js": "d7148c4067d0e793e6468c58251d8ce62e0c7d2b5ed863069f29bcb5a61deb02"
+  }
+}

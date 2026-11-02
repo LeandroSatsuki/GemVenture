@@ -1,0 +1,12 @@
+{
+  "id": "EXPEDITION-CARDS-INTEGRATION-20261031",
+  "authority": "User explicitly authorized applying previously approved campaign cards v2 and Abyss cards v1 from Ui GemVenture",
+  "approval": "../../../coordination/EXPEDITION-CARDS-INTEGRATION-20261031/HUMAN-APPROVAL.json",
+  "files": {
+    "approved-expedition-cards-ui.js": "37a8e392c132a3ccca8a53e8abd706efe9692b299afc567d1aa7bb324878710f",
+    "approved-expedition-cards-ui.css": "9be0e989ebd5f7b5c829225d1916a6c38d9efdc6d66111ead5ec27915717cdac",
+    "approved-expedition-cards-shell.css": "aed31498e95d2ed3fe719678fcd8f98a21c7c35f1d147f669c6a3dce86e5f9ad",
+    "run.js": "5a386d3ccb8ff60696fe3f8550c3981f24172e14ac7e1ead8b76a9b810113233"
+  },
+  "composition": "Guarded UI-only owner deltas, preserving the prior approved rest/return and campaign-loading changes"
+}

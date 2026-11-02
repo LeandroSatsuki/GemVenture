@@ -1,0 +1,14 @@
+/* Approved V06 shell is unchanged; only real journey text and temporary entry adapt. */
+#dialog .gv-pets--caregiver .gv-pets__journey{margin:8px 0 12px;padding:0;list-style:none;font:600 16px/1.4 Nunito,sans-serif;color:inherit}
+#dialog .gv-pets--caregiver .gv-pets__journey li{display:flex;align-items:baseline;gap:8px;margin:4px 0;overflow-wrap:anywhere}
+#dialog .gv-pets--caregiver .gv-pets__journey li span{font-weight:900;flex:none}
+#openPets{width:auto;min-width:90px;padding-inline:12px;font:800 16px/1.2 var(--r2-body,'GV R2 Body',sans-serif)}
+#openPets[hidden]{display:none!important}
+
+#dialog .gv-pets--caregiver .gv-pets__journey-note{font:600 14px/1.4 Nunito,sans-serif;margin:6px 0 10px;color:inherit}
+
+#dialog:has(.gv-pets--caregiver){inset:30px 0 auto;height:calc(100dvh - 60px);display:block}
+#dialog:has(.gv-pets--caregiver) .dialog-top{height:66px;min-height:66px;padding:14px 80px 12px 22px;display:flex;align-items:center}
+#dialog:has(.gv-pets--caregiver) #dialogLabel{font-size:32px}
+#dialog:has(.gv-pets--caregiver) #dialogBody{height:calc(100% - 66px);display:block;overflow:hidden}
+#dialog .gv-pets--caregiver .gv-pets__intro{position:static;margin:12px 22px 0;flex:none;font-size:16px;color:#bfd0e8}

@@ -1,0 +1,11 @@
+{
+  "origin": "User-requested v3 UI revisions, 2026-10-27. Implementation receipt, not visual approval. Previous approval receipts retained.",
+  "files": {
+    "pets-view.js": "60128aef1845fb1399c060db37a115676587ca7331e1f99c4a2d388e25955301",
+    "abyss-selected-art-v2y.js": "2b3e6320be8bb5add7740ca89f3196fc618b46fce6d9f4d85038e369b7165a9b",
+    "abyss-v2y.js": "ccff179f490baebfbfd70b55b0bf6831924440f50f74ca2c45e9c48e588f8719",
+    "rebrand-lift.js": "63a40aabddca1f951cffc4eb6914a19232993cae8148b7742cf8e02c7be795dd",
+    "reward-catalog-ui.js": "b063bd4436ef0d94f41cb671a0c074bd64bd8995fcd591f6fb402a9975f7530a",
+    "refuge-polish-v3.css": "e80db808ae3d28a76380e17f28d42f0da3593b5c6d9575b9fa37d87f348c5011"
+  }
+}

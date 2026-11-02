@@ -1,0 +1,10 @@
+{
+  "authorization": "Human approval31/10/2026: apply approved Relicário v1; preserved primitive palette and scoped host delta",
+  "files": {
+    "approved-reliquary-ui.js": "02fe9adce84e8818f6af4f20168a59b97adbe56eab8aa6b4ceacf3fe5ec52142",
+    "approved-reliquary-ui.css": "960b26ff5af9da23e5f43994e6eebfee253e4fa39fa7285233f901f26592d837",
+    "approved-reliquary-assets.js": "11f7ca83c20d8b46b90a9a6006b259383f4e8bfc9846e2d5815922917299dbd9",
+    "run.js": "9c03f265ad784221b8cbc14b6f0397a2e516bb96df1f419de87ad5deea377cac",
+    "approved-services-shell.css": "6ff5165dbf8f96bcb1ba4c06bf83598ee2adf0602cc190d70d8f2f2e6cc22403"
+  }
+}

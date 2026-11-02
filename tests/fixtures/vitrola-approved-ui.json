@@ -1,0 +1,69 @@
+{
+  "origin": "Human approved Vitrola, Guilherme final approval ironV03/palette; only cover and canonical gramophone URLs mapped",
+  "files": {
+    "vitrola-assets.js": "0cf33a804abb609e7b0739599ad7e5b4e3a3db5c3d63598b0391a54c3e87f8ba",
+    "vitrola.css": "49829a257dfe589897b8e1f9750cda8b0e2254f8f1745b6cbfbef897e60a57f3"
+  },
+  "covers": [
+    {
+      "id": "pulse",
+      "sha256": "3fe63ff15b1a395a6f52a7d654b45596837658c1d358c12f3f1967189ea590a3"
+    },
+    {
+      "id": "iron",
+      "sha256": "dd19e1afe686c91ba51930509d3440c9ee3a5458b6049bd3a619ae2e41206030"
+    },
+    {
+      "id": "aria",
+      "sha256": "5587c5b0d9e29ba7443fc95031a752644a9cbeff360ea9cbdaa1aad4b1557274"
+    },
+    {
+      "id": "moss",
+      "sha256": "76c85bbd67f211b9bb0d101a1c97855d22b00f133a7b2b65de169239b693eac0"
+    },
+    {
+      "id": "amber",
+      "sha256": "305486ab5a67273a487398fd6d122ef39237069f6683a7294a95ef0ae3658dca"
+    },
+    {
+      "id": "night",
+      "sha256": "01407aa13120d0301c75c3dbb912e549d4816930c758e604830b81148f61b0b3"
+    },
+    {
+      "id": "choir",
+      "sha256": "9d3d0d3cfe244c0e4c35b6af1fa64fd5517bd6302b29d97c32debf6fe6348350"
+    },
+    {
+      "id": "storm",
+      "sha256": "28c8f6afc7d1f6fa8fa8c3762eb2c04eac74da7599290f9de8b7e85543ac8438"
+    },
+    {
+      "id": "circuit",
+      "sha256": "a3153fa1d33013b1148c5aa4b7ffc2a967c58023ea335aa89f1eb3134c755f13"
+    },
+    {
+      "id": "dusk",
+      "sha256": "3e173e2ca45f2b903d20f9444d24be0faa64f6d5bf7f6fc7fbb520b99573678e"
+    },
+    {
+      "id": "voice",
+      "sha256": "fe7687a9b4f5dc99b020ba547de7e574215ef20a0a735ca84894ae0cc8600bf3"
+    },
+    {
+      "id": "rush",
+      "sha256": "bb9f63f093fc73c511046b931433b10119d517e47aa62e8532868fb8164ee112"
+    },
+    {
+      "id": "pixel",
+      "sha256": "f19b160366322a2a51dc903cc59ca66cf7326a0963995e54fd41b178d5deadb1"
+    },
+    {
+      "id": "swing",
+      "sha256": "b45139a6b02e532c3e496d72bebef3d7b5356a4afd1bb9a621bcfb7c5626701d"
+    },
+    {
+      "id": "turbo",
+      "sha256": "ad41b14a666601e2f6f0f79779e5c6a9aaaea571ba05ce9c1fb9665fd8d1c734"
+    }
+  ]
+}

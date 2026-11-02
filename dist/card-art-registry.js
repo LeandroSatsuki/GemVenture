@@ -1,0 +1,27 @@
+// Canonical approved card artwork for offers, HUD miniatures and pause.
+export const APPROVED_CARD_RASTERS=Object.freeze({
+ 'muscle':'assets/card-art/muscle-approved-v01.png',
+ 'lucky':'assets/card-art/lucky-approved-v01.png',
+ 'popcorn':'assets/card-art/popcorn-approved-v01.png',
+ 'ricochet':'assets/card-art/ricochet-approved-v01.png',
+ 'pockets':'assets/card-art/pockets-approved-v01.png',
+ 'candy':'assets/card-art/candy-approved-v01.png',
+ 'ember':'assets/card-art/ember-approved-v01.png',
+ 'ice':'assets/card-art/ice-approved-v02.png',
+ 'vampire':'assets/card-art/vampire-approved-v01.png',
+ 'skates':'assets/card-art/skates-approved-v01.png',
+ 'elastic':'assets/card-art/elastic-approved-v01.png',
+ 'secondwind':'assets/card-art/secondwind-approved-v01.png',
+ 'shell':'assets/card-art/shell-approved-v01.png',
+ 'laser':'assets/card-art/laser-approved-v01.png',
+ 'echohit':'assets/card-art/echohit-approved-v01.png',
+ 'greed':'assets/card-art/greed-approved-v01.png',
+ 'bombgift':'assets/card-art/bombgift-approved-v01.png',
+ 'battery':'assets/card-art/battery-approved-v01.png',
+ 'sprouts':'assets/card-art/sprouts-approved-v01.png',
+ 'revival':'assets/card-art/revival-approved-v01.png',
+ 'lantern':'assets/card-art/lantern-approved-v01.png',
+ 'abyss-heal':'assets/card-art/abyss-heal-approved-v01.png',
+ 'abyss-breath':'assets/card-art/abyss-breath-approved-v01.png',
+ 'abyss-ward':'assets/card-art/abyss-ward-approved-v01.png'
+});

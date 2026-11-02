@@ -1,0 +1,11 @@
+{
+  "id": "GV-043/COMBO-PULSE/R2+GV-048/SOFT-CONTACT/R1",
+  "authorization": "User requests improved combo under player, aligned with beat, and soft gradient object/structure shadows.",
+  "files": {
+    "combo-disco.js": "b75df3fc98da753afe53895dddb6d18f55433212b787db9a490ca53551fd4eae",
+    "art-kit.js": "e7c6da5b7d81c1d357079fa046472b4a66ee025410ca02c9deb4372e17d5de8b",
+    "refuge-contact.js": "b859654be44bee95d6ae5a7aec38924f6317695ff6fd6f55da9e9931dab29748",
+    "refuge-terrain.js": "fa9e455b86822e404dff92c0323a2bdf74e1bb3c131e6a635c9e979de92f5303",
+    "soft-ground-shadow.js": "5c81111c82b9d0cc5fe7af99945001097ef6e8ed1e2e37aad54509a806bb5752"
+  }
+}

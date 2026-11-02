@@ -1,0 +1,4 @@
+interface:
+  display_name: "GemVenture — Bosses"
+  short_description: "Mecânicas rítmicas, arte e animação dos bosses"
+  default_prompt: "Use $gemventure-boss-design para analisar um boss do GemVenture e propor sua mecânica antes de produzir arte e animação."

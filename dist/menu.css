@@ -1,0 +1,41 @@
+@font-face{font-family:'Menu Fredoka';src:url('assets/menu-fonts/Fredoka-600-Static.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'Menu Nunito';src:url('assets/menu-fonts/Nunito-600-Static.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'Menu Nunito';src:url('assets/menu-fonts/Nunito-800-Static.ttf') format('truetype');font-weight:800;font-display:swap}
+@font-face{font-family:'Menu Nunito';src:url('assets/menu-fonts/Nunito-900-Static.ttf') format('truetype');font-weight:900;font-display:swap}
+[data-game-surface][hidden],#menuHost [hidden]{display:none!important}
+body.application-menu-open>:not(#menuHost):not(#entryLoading):not(.entry-beta):not(#gv-global-crt):not(svg):not(link):not(script){display:none!important}
+#menuShell{--menu-sea:#053239;--menu-forest:#005f41;--menu-honey:#ecab11;--menu-depth:#8a4926;--menu-ink:#180d2f;--menu-sand:#fbbe82;--menu-muted:#c5cddb;--menu-focus:#e8ff75;position:fixed;inset:0;z-index:10000;overflow:auto;overscroll-behavior:contain;background:var(--menu-sea);color:var(--menu-sand);font:600 16px/1.5 'Menu Nunito','Trebuchet MS','Segoe UI',sans-serif;text-align:left}
+#menuShell *{box-sizing:border-box}
+#menuShell .menu-layout{display:grid;grid-template-columns:minmax(240px,360px) minmax(0,880px);gap:clamp(48px,9vw,144px);align-items:start;align-content:start;max-width:1600px;min-height:100svh;margin:0 auto;padding:0 clamp(24px,6vw,96px) 48px}
+#menuShell .menu-actions{grid-column:1;grid-row:1;display:grid;gap:18px;align-content:center;min-width:0;margin-top:clamp(180px,36.666667svh,330px)}
+#menuShell .menu-art{grid-column:2;grid-row:1;margin:clamp(80px,16.666667svh,150px) 0 0;position:relative;min-width:0;text-align:center}
+#menuShell .menu-art-frame{width:100%;aspect-ratio:880/650;max-height:650px}
+#menuShell .menu-art img{display:block;width:100%;height:100%;object-fit:contain}
+#menuShell button{display:block;position:relative;width:100%;min-width:44px;min-height:68px;margin:0;padding:14px 22px;border:2px solid var(--menu-depth);border-radius:14px;background:var(--menu-forest);color:var(--menu-sand);font:800 22px/1.3 'Menu Nunito','Trebuchet MS',sans-serif;box-shadow:inset 0 2px #ffffff25,inset 0 -4px var(--menu-depth);transform:none;translate:none;filter:none;touch-action:manipulation;cursor:pointer;transition:box-shadow 90ms,background-color 90ms}
+#menuShell button.menu-primary{background:var(--menu-honey);color:var(--menu-ink);min-height:90px;font-size:28px}
+#menuShell button:hover:not(:disabled){box-shadow:inset 0 2px #ffffff45,inset 0 -5px var(--menu-depth)}
+#menuShell button:active:not(:disabled){box-shadow:inset 0 4px var(--menu-depth),inset 0 -1px #ffffff25}
+#menuShell :is(button,input):focus-visible{outline:3px solid var(--menu-focus);outline-offset:4px}
+#menuShell button:disabled{background:var(--menu-sea);color:var(--menu-muted);box-shadow:none;border-style:dashed;cursor:wait}
+#menuShell #menuNotice{min-height:1.5em;margin:0;color:var(--menu-muted);font-size:15px}
+#menuShell .menu-settings{width:min(600px,calc(100% - 48px));margin:clamp(24px,8vh,96px) auto;padding:clamp(22px,4vw,36px);border:2px solid var(--menu-depth);border-radius:18px;background:var(--menu-forest);box-shadow:0 6px var(--menu-depth)}
+#menuShell h1{margin:0 0 28px;font:600 clamp(28px,6vw,38px)/1.15 'Menu Fredoka','Arial Rounded MT Bold',sans-serif;color:var(--menu-sand);text-transform:none;text-shadow:none}
+#menuShell .settings-toggle{display:flex;align-items:center;justify-content:space-between;min-height:52px;font-weight:800;gap:20px}
+#menuShell input{accent-color:var(--menu-honey);cursor:pointer}
+#menuShell input[type=checkbox]{width:26px;height:26px;flex:0 0 26px}
+#menuShell .settings-range{display:grid;grid-template-columns:1fr auto;gap:8px;margin:20px 0;font-weight:800}
+#menuShell input[type=range]{grid-column:1/-1;width:100%;height:44px;min-width:0;margin:0}
+#menuShell output{font-variant-numeric:tabular-nums;color:var(--menu-sand)}
+#menuShell fieldset{padding:16px 0 0;margin:20px 0;border:0;border-top:1px solid var(--menu-depth);min-width:0}
+#menuShell legend{font:800 16px 'Menu Nunito',sans-serif;padding:0 8px 0 0;color:var(--menu-sand)}
+#menuShell .settings-visual{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#menuShell .settings-visual label{display:flex;align-items:center;gap:9px;min-height:48px;padding:8px 12px;background:var(--menu-sea);border-radius:9px;cursor:pointer}
+#menuShell input[type=radio]{width:20px;height:20px;margin:0}
+#menuShell #settingsAudioStatus{font-size:14px;min-height:3em;color:var(--menu-muted);margin:24px 0}
+#menuShell #settingsBack{min-height:56px;font-size:20px}
+@media(max-aspect-ratio:1/1),(max-width:760px){#menuShell .menu-layout{grid-template-columns:minmax(0,592px);grid-template-rows:auto auto;justify-content:center;gap:clamp(24px,4.6875svh,60px);padding:clamp(24px,11.71875svh,150px) max(24px,env(safe-area-inset-right),min(8.9vw,64px)) max(24px,env(safe-area-inset-bottom)) max(24px,env(safe-area-inset-left),min(8.9vw,64px))}#menuShell .menu-art{grid-column:1;grid-row:1;margin:0}#menuShell .menu-art-frame{height:min(42.96875svh,550px);aspect-ratio:auto;max-height:550px}#menuShell .menu-actions{grid-column:1;grid-row:2;margin-top:0}#menuShell button{font-size:20px}#menuShell button.menu-primary{font-size:26px}}
+@media(max-height:580px) and (min-aspect-ratio:1/1){#menuShell .menu-layout{min-height:420px;padding-top:24px;padding-bottom:24px;gap:32px}#menuShell .menu-actions,#menuShell .menu-art{margin-top:24px}#menuShell button{min-height:56px}#menuShell button.menu-primary{min-height:70px}#menuShell .menu-art-frame{max-height:330px}}
+@media(prefers-reduced-motion:reduce){#menuShell button{transition:none}}
+.soft-fx #menuShell button{transition:none}
+@media(max-width:380px){#menuShell .settings-visual{grid-template-columns:1fr}}
+.game-toolbar #sound[aria-label="Desativar som"]{color:#5ee9e9}

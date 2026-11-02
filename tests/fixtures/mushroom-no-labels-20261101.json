@@ -1,0 +1,22 @@
+{
+  "id": "VFX/MUSHROOM-NO-LABELS",
+  "approvedOn": "2026-11-01",
+  "authorization": "Tira o nome dos cogumelos. Não precisa de nome. A imagem por si tem que responder; evitar texto/plaquinha nos objetos.",
+  "scope": "Remove mushroom hover labels, target-tip descriptions and descriptive activation feed only. Preserve chest presentation, data names, all events/payout/HP/timing rules, visuals and numeric rewards.",
+  "files": {
+    "cave-find-art.js": "3c74d9d78f85e03ab089c3bd81ea5fcfb525a474e7f82623d1507d00620870b6",
+    "cave-finds.js": "49435972783b350faa605b47d7a070c64a013f8d9a96fbecd5c54f39724e8611",
+    "run.js": "f54601d0c87e1f199425fa591e65ec9861ade4403b5f7ee9ee368fc01e5ad8b1"
+  },
+  "reconciliation": {
+    "file": "run.js",
+    "previousPatchHash": "641d09f43bf2092ed9962681f42c6a2ba35e18f4294b9988b4621744de2d9445",
+    "currentHash": "f54601d0c87e1f199425fa591e65ec9861ade4403b5f7ee9ee368fc01e5ad8b1",
+    "inheritedChanges": [
+      "cavePressureWarning toast shortened to PERIGO AUMENTANDO",
+      "cavePressure toast shortened to PERIGO AUMENTOU"
+    ],
+    "validation": "Normalized content equals reserved baseline plus two mushroom presentation guards and only the two inherited toast-string changes.",
+    "scope": "Preserved concurrent work; this receipt covers only mushroom presentation removal."
+  }
+}

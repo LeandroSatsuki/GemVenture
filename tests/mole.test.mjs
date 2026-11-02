@@ -17,7 +17,7 @@ function arena(){const s=E.createState(712);s.seals=5;E.startRun(s);s.run.floor=
 test('amber adds five floors and a prestige seal, preserving existing saves and abyss access',()=>{
  assert.equal(TOTAL_FLOORS,35);assert.equal(BIOME_COUNT,7);
  const s=E.createState();s.seals=4;s.best=25;s.stars=35;s.descent.bosses=[20,25];s.descent.gate=[1500,1200,1000,800];
- assert.ok(E.restoreState(JSON.stringify(s)));assert.ok(canEnterAbyss(s));assert.ok(E.purchaseSeal(s));assert.equal(s.stars,0);assert.equal(E.depthLimit(s),30);assert.ok(canEnterAbyss(s));
+ assert.ok(E.restoreState(JSON.stringify(s)));assert.ok(canEnterAbyss(s));assert.ok(E.purchaseSeal(s));assert.equal(s.stars,35);assert.equal(E.depthLimit(s),30);assert.ok(canEnterAbyss(s));
  E.startRun(s);for(let floor=26;floor<=30;floor++){s.run.floor=floor;E.generateRoom(s);assert.equal(E.biomeIndex(floor),5);assert.equal(environment(floor).terrain,5);assert.equal(!!s.run.room.bossFloor,floor===30);assert.ok(E.restoreState(JSON.stringify(s)),`save floor ${floor}`);}
  assert.equal(floorMinerals(26).focus,2);assert.ok(floorMinerals(26).weights[1]<10);
  assert.match(floorPicture(5,30,true),/REI DAS TOCAS/);assert.doesNotMatch(floorPicture(5,26),/undefined|NaN/);

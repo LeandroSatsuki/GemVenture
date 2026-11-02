@@ -1,0 +1,10 @@
+{
+  "scope": "Rewards show image and name only; true exit requirements are distinguished from score stars",
+  "humanAuthorization": "Direct request in this chat on 30 October 2026",
+  "humanVisualApproval": false,
+  "integrationReceipt": "coordination/UI-CORRECTIONS-20261029/r5/INTEGRATION.json",
+  "files": {
+    "rebrand-lift.js": "75e1a436816be0a6d31c36d3646fe487719c7d5969afde2344aa40171ff3cefd",
+    "ui-consistency.css": "902733b1a1bdff3b12ce929fc3d410d18019279c0930ec5258a6365330ddda70"
+  }
+}

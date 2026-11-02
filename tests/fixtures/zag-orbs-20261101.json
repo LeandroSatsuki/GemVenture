@@ -1,0 +1,17 @@
+{
+  "id": "ZAG-ORBS-20261101-R1",
+  "authorization": "Pedido humano direto neste chat: aplicar Zag e orbes, três espaços por cor, compra ao pisar sem parar o ritmo, seguindo o estudo de progressão.",
+  "sourceReceipt": "E:/Genventure/coordination/zag-orbs-20261101-r1/APPLICATION.json",
+  "scope": "Merchant/run orb consumers and HUD only. Existing palette/art stays frozen; human perceptual acceptance remains pending.",
+  "files": {
+    "core.js": "efacd6885830597f6322fff636b3df33ef87f072b116b173709737983301dfb4",
+    "cavern.js": "64e25ca3bb4486fab5fb597499dea7953d8b467c5e26549e551c1d88f26e7e1f",
+    "world.js": "3e18eb7f9b2931ac4f754025df9f2620878b7380d13d84e96b2250a335ca1e82",
+    "expedition-hud-view.js": "aeb8e839fcb0469c420fffac38a49e8bc6c3c7d504efa202bce2b3993ee01727",
+    "run-orbs.js": "0744278fec5a43d43f72eae9a870da096f8813f45632fa94604cdc3748b8eb60",
+    "cave-merchant.js": "d65d64c606a1cffe2dd96c9da0329d89ca125b937dfdfc6f9e4982f9879254e6",
+    "cave-merchant-art.js": "2bf56d2bab6832f9230c80de3d30258a5f22d86a7f61f7130bf191380218af94",
+    "run-orb-hud.js": "f0ee876ec01f9588be3fd7f9ac5738aca27c303ecf6cd6652fe5c02ebd7d28b6",
+    "run-orb-hud.css": "9f1104d6e13766b2d11c376fa949ab85e830592202ec1e616b398d266a627b74"
+  }
+}

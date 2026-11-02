@@ -1,0 +1,14 @@
+{
+  "id": "DUNGEON-LEARNING-OPTIN-20261102-R1",
+  "authorization": "Direct current user request: optional pre-expedition guide and no automatic dungeon tutorials; initial onboarding preserved.",
+  "files": {
+    "approved-lift-ui.css": "1381f0bb40acca7666dc198be4a36f5fae15a3461f0d2707de7995b1fde62098",
+    "approved-lift-ui.js": "56c51bb1177a87aa542fc140a1021e68e6df2cd36085c811469470f38a000426",
+    "contextual-learning.js": "ee317588895372c1e6b5555c405e5e85484f7d7adace81860ee5e2e343616486",
+    "expedition-briefing.js": "4e66882484f9b02aab0141566ceaab8da8acc3f2608c230bdb4d85a74b934a70",
+    "expedition-hud-view.js": "fece62d385e33e9ce6e087f2162aadb51a2d594024ca2b116f68dc9d7e8a7fb1",
+    "learning-path.js": "5587e7553dde717d09e8e60525dd4f1faa450f2541ae9bae1252fdf3fab37d00",
+    "learning-view.js": "052f055f3c53d8fd3b1215184435bc48be0281f510ad9faf442dd1f46951b242",
+    "run.js": "2cab1384a5ac18da1be5ccec1b5ae8cbff5067f8e33ff8d23394cd2768c78487"
+  }
+}

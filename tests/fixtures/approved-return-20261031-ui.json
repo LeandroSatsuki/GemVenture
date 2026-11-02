@@ -1,0 +1,12 @@
+{
+  "id": "APPROVED-RETURN-20261031",
+  "approval": "../../../coordination/EXPEDITION-RETURN-INTEGRATION-20261031/HUMAN-APPROVAL.json",
+  "approvedProposal": "../../../coordination/EXPEDITION-RETURN-PROPOSAL-20261031/v2/DELIVERY.json",
+  "files": {
+    "approved-return-ui.js": "aec647101a79e4e92d1677b18ef29bdd41f98e486f804d3f1d095a1e0ab19356",
+    "approved-return-ui.css": "2b5d3580ccf580fd70ae30ea9a732fd83af48ed399a357af9ec99f1ea73f54f3",
+    "approved-return-shell.css": "b12944d1c58b752974937f366388c069e6949a5c0d8e231c4304bb8f340fb703",
+    "run.js": "c63fe9946801b726c77807ff1b02293f861e501934dc058206a403f6f4243009",
+    "return-screen.js": "3a87cf9c28156fc8acb48b98a66abca2c0778f44b5a57f1c18922e3fba5d6210"
+  }
+}

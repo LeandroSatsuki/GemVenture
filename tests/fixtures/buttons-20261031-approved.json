@@ -1,0 +1,22 @@
+{
+  "delivery": "VFX-BUTTONS-APPLIED-20261031",
+  "humanApproval": "Gostei, tá aprovado. Pode aplicar esse padrão nos botões do jogo, mantendo essa nitidez e o brilho só quando a ação realmente for confirmada.",
+  "approvedPilot": "VFX-BUTTONS-P1-20261031",
+  "scope": "Approved button press/select/confirmed-result presentation only; domain and audio untouched",
+  "files": {
+    "approved-forge-ui.js": "bbdf59715843cfde7cd4e61b485212ca9a4c79187c88ec3085d8d36cafda1dff",
+    "approved-missions-ui.js": "e570d7c776b6ec36e4e7d154e17d16bcd40624358072bc960bc5638fa8a3e9ea",
+    "approved-pets-ui.js": "aadfede4c8c0ccb02468e4120ed737fca926312c89ad2b4ffd9716a2c4ceffa9",
+    "approved-records-ui.js": "7181e7bef2eb8ed22887cd5451e499b1e7cbfd35be137f81b140ae2e460ce4b3",
+    "approved-reliquary-ui.js": "f173491a1389fdba4759bc8ef2c2ed49418b1863c83c7e7dc6ab7755fd446893",
+    "approved-tree-ui.js": "ff0a55739a52bb98bead17f957f7b9b429647113745bac9b7ec09fd21ab1ad98",
+    "approved-wardrobe-ui.js": "b3ddc1195c9d2ea30cc1d8686781592ee5f102eb4496d4a0476a177f6b1430a7",
+    "button-feedback.js": "149c1a73bb353b0195f088f57b9c1704fdfaac5bbfbdb92127e1c06847475aa5",
+    "menu-entry.js": "c67e3410ae3f3029b1aab91a1d9f8deb1b973f264e213eb05c3eb5579921cf71",
+    "miner-view.js": "e04a1c373fd5137c84a58ebbeb05531d7f75597eb3d565e4db1ace7231117984",
+    "run.js": "d32c0e82e28bdb98f02dd1b3f9d4cb5d2ae7d42d4bd09a39f46c703508a8edf4",
+    "ui-command-feedback.js": "bcf7cefaee7c68d3dfdc2b25383e5090dfae69a2d831dbafb4a219be60b24ad8",
+    "ui-consistency.css": "f484ab68f15e1eab076e2537b9cf861c348c822d730a880b7d2f515b4b9193ae",
+    "zag-view.js": "a0b3baff5681890f1595cd558a3a60edf32547988d4dfc6279d0d5da00d3e304"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "BOSS-OPTIONAL-HELP-20261102-R1",
+  "authorization": "Current user approves bar and requests optional help, default off; no combat changes",
+  "files": {
+    "approved-settings-ui.css": "4e8710b7416c1ce70a0cd3722fc2da6368aeca7ee7c7b556ed5b999edf92dcd2",
+    "boss-help-preferences.js": "108bd682848e5fbf648abe2da73bd71bb91459b5e6f72508bc3022c8a1c4feea",
+    "boss-help-view.js": "160cdbb4b3e418bc5d8acb71b9a3f3fb7673764af00a435509f117c03c7199d7",
+    "boss-hud.css": "ccf608297018b5ecea6a2d62fd715bbe70a1a17d27ac9ea87301141bab63b3b3",
+    "index.html": "2e8e780c37234b9b968d41f6dac9d02f43e0cff427b6e24bf3c59878a4e0a5f4",
+    "settings-panels.js": "992065f1db9a62cf0deffcc319f3f164bbb8ea06e789e951be4e7c507db0ac0f",
+    "world.js": "2ea38e7c4cfde8442846dad62b3314be31cacba8b1bb7c879c49d1d5b1cec381"
+  }
+}

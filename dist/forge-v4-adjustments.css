@@ -1,0 +1,119 @@
+/* V4 delta. Preserve V3 CTA fill/text, workshop and compact recipe materials. */
+#dialog.forge-dialog.gv-forge-v1 .dialog-top {
+  height:82px;
+  min-height:82px;
+  padding:8px 20px 8px 174px;
+  gap:12px;
+}
+/* Canonical 1351x1164 PNG, unchanged. Crop is only a CSS viewport.
+   Scale .22; source head begins near y188, aligned to slot top. */
+#dialog.forge-dialog.gv-forge-v1 .gv-forge-portrait-slot {
+  grid-column:auto;
+  grid-row:auto;
+  top:-40px;
+  left:14px;
+  width:144px;
+  height:122px;
+  overflow:hidden;
+}
+#dialog.forge-dialog.gv-forge-v1 .gv-forge-portrait {
+  position:absolute;
+  width:297.22px;
+  max-width:none;
+  height:auto;
+  aspect-ratio:auto;
+  left:-74.8px;
+  top:-41.36px;
+  object-fit:contain;
+  object-position:initial;
+  filter:drop-shadow(0 2px 1px #020a1b);
+}
+#dialog.forge-dialog.gv-forge-v1 #dialogLabel {font-size:34px;position:relative;z-index:2}
+#dialog.forge-dialog.gv-forge-v1 #forgeAction,
+#dialog.forge-dialog.gv-forge-v1 #forgeAction:disabled {border:4px solid #06132b!important}
+#dialog.forge-dialog.gv-forge-v1 .gv-forge-resources {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:12px;
+  margin:0 0 16px;
+}
+#dialog.forge-dialog.gv-forge-v1 .gv-forge-resources .smith-stock {
+  grid-column:1;
+  grid-row:1;
+  margin:0;
+  padding:0;
+  gap:8px;
+}
+#dialog.forge-dialog.gv-forge-v1 .gv-forge-resources .smith-header {
+  grid-column:2;
+  grid-row:1;
+  margin:0;
+  padding:0;
+  min-width:0;
+}
+#dialog.forge-dialog.gv-forge-v1 .smith-header-tools {
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:flex-end;
+  gap:10px;
+  flex-wrap:wrap;
+  max-width:350px;
+}
+#dialog.forge-dialog.gv-forge-v1 .smith-header-tools>strong {
+  align-items:center;
+  gap:6px;
+  font-size:20px;
+  line-height:1.2;
+  min-width:0;
+}
+#dialog.forge-dialog.gv-forge-v1 .smith-header-tools .gv-forge-coin {width:28px;height:28px;margin-right:0}
+#dialog.forge-dialog.gv-forge-v1 .smith-header-tools .building-upgrade {position:relative;margin:0;padding:0;border:0}
+#dialog.forge-dialog.gv-forge-v1 .smith-header-tools .building-upgrade>summary {min-height:40px}
+#dialog.forge-dialog.gv-forge-v1 .gv-forge-resources .smith-stock>div {
+  grid-template-columns:30px minmax(0,1fr);
+  gap:2px 7px;
+  padding:8px;
+}
+#dialog.forge-dialog.gv-forge-v1 .gv-forge-resources .smith-stock svg {width:30px;height:36px}
+#dialog.forge-dialog.gv-forge-v1 .gv-forge-resources .smith-stock strong {font-size:20px}
+#dialog.forge-dialog.gv-forge-v1 .gv-forge-resources .smith-stock span {font-size:12px}
+#dialog.forge-dialog.gv-forge-v1 .smith-selection {
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-items:center;
+  gap:8px;
+}
+#dialog.forge-dialog.gv-forge-v1 .smith-selection-icon {
+  box-sizing:border-box;
+  flex:0 0 64px;
+  width:64px;
+  height:64px;
+  min-width:0;
+  margin:0;
+  padding:2px;
+}
+#dialog.forge-dialog.gv-forge-v1 .smith-selection>div:not(.smith-selection-icon) {
+  flex:1 1 0;
+  min-width:0;
+  width:auto;
+  margin:0;
+  padding:0;
+  text-align:left;
+}
+#dialog.forge-dialog.gv-forge-v1 .smith-selection h3 {margin:3px 0}
+@media(max-width:1400px),(max-height:850px) {
+  #dialog.forge-dialog.gv-forge-v1 #dialogLabel {font-size:32px}
+}
+@media(max-width:1050px) {
+  #dialog.forge-dialog.gv-forge-v1 .gv-forge-resources {grid-template-columns:minmax(0,1fr);gap:8px}
+  #dialog.forge-dialog.gv-forge-v1 .gv-forge-resources .smith-header {grid-column:1;grid-row:2}
+  #dialog.forge-dialog.gv-forge-v1 .smith-header-tools {max-width:none;justify-content:flex-start;width:100%}
+}
+@media(max-width:540px) {
+  #dialog.forge-dialog.gv-forge-v1 .dialog-top {padding-left:150px;padding-right:10px;gap:6px}
+  #dialog.forge-dialog.gv-forge-v1 .gv-forge-portrait-slot {left:8px;width:132px}
+  #dialog.forge-dialog.gv-forge-v1 #dialogLabel {font-size:25px}
+}
