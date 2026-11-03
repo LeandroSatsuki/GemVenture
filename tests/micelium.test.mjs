@@ -48,7 +48,7 @@ test('new seal opens five mushroom floors without relocking an already earned ab
 });
 
 test('micelial sovereign remains intangible; only eight destroyed nuclei clear the arena',()=>{
- const s=arena(),r=s.run,b=livingBoss(r.room);assert.deepEqual([b.x,b.y],[12,9]);assert.equal(r.room.enemies.filter(e=>e.summon===b.id).length,4);
+ const s=arena(),r=s.run,b=livingBoss(r.room);assert.deepEqual([b.x,b.y],[12,8]);assert.equal(r.room.enemies.filter(e=>e.summon===b.id).length,4);
  r.player={x:b.x-1,y:b.y};assert.equal(E.act(s,{type:'hit',id:b.id},0).intangible,true);assert.equal(r.combo,1);assert.equal(r.score.points,0);assert.equal(b.hp,720);assert.equal(bossDamage(b,100000,1),0);
  s.level=100;s.forge.levels.anvil=100;let beat=1,kills=0;
  for(;kills<8;){const n=r.room.enemies.find(e=>e.summon===b.id&&e.hp>0);if(!n){r.acted=beat;E.tick(s,beat++);continue;}r.player={x:n.x-1,y:n.y};while(n.hp>0)E.act(s,{type:'hit',id:n.id},beat++);kills++;assert.equal(b.hp,720-kills*90);E.act(s,{type:'hit',id:n.id},beat++);assert.equal(b.hp,720-kills*90);if(kills<8)assert.equal(r.room.cleared,false);}

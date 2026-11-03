@@ -1,0 +1,37 @@
+name: Windows desktop
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  installer:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Install desktop tools
+        run: npm ci --prefix desktop
+      - name: Desktop contracts
+        run: npm test --prefix desktop
+      - name: Prepare production game
+        run: npm run prepare:game --prefix desktop
+      - name: Build NSIS installer and update metadata
+        run: npm run dist --prefix desktop
+      - name: Preserve installer for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: GemVenture-Windows
+          path: |
+            desktop/artifacts/*.exe
+            desktop/artifacts/*.blockmap
+            desktop/artifacts/latest.yml
+          if-no-files-found: error

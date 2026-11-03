@@ -2,9 +2,11 @@
 export const BOSS_ARENA_SPACE=Object.freeze({version:3,cols:25,rows:19,zoom:.92});
 export const expandedBossArena=room=>room?.campaignCave?.arena===true&&[2,3].includes(room.campaignCave.arenaRevision);
 export function bossArenaSize(boss){return boss?.arenaSize||{cols:21,rows:15};}
-export function bossArenaCenter(boss){const {cols,rows}=bossArenaSize(boss);return {x:Math.floor(cols/2),y:Math.floor(rows/2)+(boss?.arenaSize?1:0)};}
+export function bossArenaCenter(boss){if(boss?.arenaHome)return {...boss.arenaHome};const {cols,rows}=bossArenaSize(boss);return {x:Math.floor(cols/2),y:Math.floor(rows/2)+(boss?.arenaSize?1:0)};}
+// Stored only on newly generated arenas; ongoing saves retain their old origin.
+export const campaignBossHome=room=>({x:Math.floor(room.cols/2),y:Math.floor(room.rows/2)-(room.campaignCave?.bossHomeRevision===1?1:0)});
 export function validBossArenaSize(boss){const a=boss?.arenaSize;return a===undefined||!!a&&((a.cols===23&&a.rows===17)||(a.cols===25&&a.rows===19))&&Object.keys(a).length===2;}
-export function validBossArenaContext(room,boss){if(!validBossArenaSize(boss))return false;const a=boss.arenaSize;if(expandedBossArena(room)?(!a||a.cols!==room.cols||a.rows!==room.rows):a!==undefined)return false;const w=boss.windup?.arenaSize;return w===undefined||!!a&&w?.cols===a.cols&&w?.rows===a.rows&&Object.keys(w).length===2;}
+export function validBossArenaContext(room,boss){if(!validBossArenaSize(boss))return false;const a=boss.arenaSize;if(expandedBossArena(room)?(!a||a.cols!==room.cols||a.rows!==room.rows):a!==undefined)return false;const revision=room.campaignCave?.bossHomeRevision,home=boss.arenaHome;if(revision!==undefined&&revision!==1)return false;if(revision===1){const p=campaignBossHome(room);if(!home||Object.keys(home).length!==2||home.x!==p.x||home.y!==p.y)return false;}else if(home!==undefined)return false;const w=boss.windup?.arenaSize;return w===undefined||!!a&&w?.cols===a.cols&&w?.rows===a.rows&&Object.keys(w).length===2;}
 export function bossArenaCorners(cols,rows){const r=cols-2,b=rows-2;return [[1,1],[2,1],[1,2],[r,1],[r-1,1],[r,2],[1,b],[2,b],[1,b-1],[r,b],[r-1,b],[r,b-1]];}
 export function bossArenaArt(room,original){
  if(!expandedBossArena(room))return original;

@@ -1,8 +1,8 @@
-import{bossArenaPavingTransform}from'./boss-arena-space.js';
-export const matriarchCenter=room=>({x:Math.floor(room.cols/2),y:Math.floor(room.rows/2)});
+import{bossArenaPavingTransform,campaignBossHome}from'./boss-arena-space.js';
+export const matriarchCenter=campaignBossHome;
 // Source campaign-cave-arena.js places both annular courses and the rosette
 // around (284,164). This is distinct from the paving transform's (284,169.5).
-export function arenaVisualOffset(room,b){if(!b?.vine?.centered)return{x:0,y:0};const p=matriarchCenter(room),t=bossArenaPavingTransform(room);return{x:t.x+284*t.sx-(50+22*p.x+2*p.y),y:t.y+164*t.sy-(57.5+16*p.y)};}
+export function arenaVisualOffset(room,b){if(!b?.vine?.centered)return{x:0,y:0};const p={x:Math.floor(room.cols/2),y:Math.floor(room.rows/2)},t=bossArenaPavingTransform(room);return{x:t.x+284*t.sx-(50+22*p.x+2*p.y),y:t.y+164*t.sy-(57.5+16*p.y)};}
 export const bossLift=(b,room)=>-arenaVisualOffset(room,b).y;
 const roots=new WeakMap();export function registerRootRoom(f,room,b){roots.set(f,{room,b});}export function feedLift(f){const n=roots.get(f);return n?bossLift(n.b,n.room):0;}
 export function clearBossFootprint(room,b){const inside=(x,y)=>x>0&&y>0&&x<room.cols-1&&y<room.rows-1&&room.floorMask[y*room.cols+x]===1,foot=(x,y)=>Math.abs(x-b.x)<=1&&Math.abs(y-b.y)<=1,occupied=new Set([...room.nodes,...room.rocks,...room.enemies].filter(n=>n!==b&&n.hp!==0).map(n=>n.x+','+n.y)),moved=[];for(const n of room.nodes.filter(n=>n.hp>0&&foot(n.x,n.y))){occupied.delete(n.x+','+n.y);const choices=[];for(let y=1;y<room.rows-1;y++)for(let x=1;x<room.cols-1;x++)if(inside(x,y)&&!foot(x,y)&&!occupied.has(x+','+y))choices.push({x,y,d:Math.abs(x-n.x)+Math.abs(y-n.y)});choices.sort((a,b)=>a.d-b.d||a.y-b.y||a.x-b.x);if(!choices.length)throw Error('No free node placement outside centered boss');moved.push({id:n.id,from:{x:n.x,y:n.y},to:{x:choices[0].x,y:choices[0].y}});n.x=choices[0].x;n.y=choices[0].y;occupied.add(n.x+','+n.y);}return moved;}

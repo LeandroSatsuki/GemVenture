@@ -1,5 +1,14 @@
 # Changelog
 
+## 03/11/2026 — Hotfix dos bosses e candidata Windows
+
+- Novas arenas colocam os sete chefes acima do centro, com mais espaço frontal. Encontros salvos conservam a origem anterior.
+- Geodo: abertura frontal de 120° para 96° (−20%); empurrão traseiro de 180° para 108° (−40%), seguindo a direção do tronco e deixando os flancos livres. Alcance, dano e relógio musical preservados.
+- Quatro quinas da colisão liberadas, com centro sólido. Punhos aceleram até o contato com o chão e produzem poeira discreta.
+- Candidata Windows 0.27.1: instalador NSIS, mesmo renderizador e shaders, consulta a GitHub Releases e download/reinício sob comando do usuário. Instalação visual e atualização entre duas versões ainda não verificadas; pacote sem assinatura.
+- Evidências e limites em docs/boss-hotfix-20261103.md e desktop/README.md. Testes técnicos não substituem o aceite humano do balanceamento.
+
+
 ## 02/11/2026 — Publicação das cavernas, chefes e ambientação
 
 - Atualização publicada no Itch.io, com nova arte promocional, capturas atuais e diário de desenvolvimento.

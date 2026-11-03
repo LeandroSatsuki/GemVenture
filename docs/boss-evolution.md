@@ -544,3 +544,12 @@ Verificação:27/27 no recorte; suíte geral 1256/1256 com concorrência2,0falha
 Recibo: coordination/boss-evolution/mystic-r1/BEAM01-APPLIED.json; fontes, logs e capturas: asset-work/mystic-beam01/official-r1/. O portátil anterior não foi copiado byte a byte: a reserva inicial nomeou saída antiga; recuperação por reexportação dos módulos/exportador restaurados, documentada no recibo.
 
 Composição posterior com BOSS-OPTIONAL-HELP: recibo concorrente parte exatamente do hash do World instalado por BEAM01 e preserva seus hooks. Nenhum arquivo do outro lote foi revertido. A suíte de1256 corresponde à aplicação BEAM01 anterior a essa mudança;46/46 testes pertinentes passaram novamente sobre a composição final (Místico/coluna/ajuda/configurações/recibos de arte). Check677/2169 e portátil repetidos; dois helpers da ajuda registrados no portátil por dependência do World atual. Navegador recarregado e captura applied-final.png, sem erros. Recibo discrimina ambos os hashes/escopos.
+
+
+## 03/11/2026 — Hotfix dos bosses e preparação desktop
+
+- Novas arenas colocam os sete chefes um pouco acima do centro, com mais espaço frontal; partidas em andamento mantêm a origem anterior.
+- Geodo: abertura do leque de120° para96° (−20%); empurrão traseiro de180° para108° (−40%), orientado pela direção real e sem afetar os flancos laterais. Alcance, dano e aviso musical preservados.
+- Quinas da colisão do corpo liberadas; centro sólido e alcance da picareta mantidos. Punhos descem rapidamente até o chão no impacto, com poeira curta e limitada.
+- Preparado aplicativo Windows com o mesmo renderizador/shaders, instalador NSIS e consulta a GitHub Releases. Push de código não equivale a publicar um instalador. O teste de atualização entre dois instaladores publicados é uma validação posterior.
+- Evidências e limites em docs/boss-hotfix-20261103.md e desktop/README.md.

@@ -1,4 +1,5 @@
 import {isFloor} from './cave-layout.js';
+import {campaignBossHome} from './boss-arena-space.js';
 import {bossDamage} from './bosses.js';
 export const MYSTIC_RULES=Object.freeze({version:2,dance:6,reveal:2,response:8,recovery:4,transform:3,warning:2,shots:4,exhaust:6,fireLife:5,fireDamage:6,beamDamage:14,fireCap:128,weaknessMinimum:12});
 const d=(a,b)=>Math.abs(a.x-b.x)+Math.abs(a.y-b.y),point=n=>({x:n.x,y:n.y}),inside=(room,p)=>p&&Number.isInteger(p.x)&&Number.isInteger(p.y)&&isFloor(room,p.x,p.y);
@@ -17,7 +18,7 @@ export const mysticReserved=(room,p)=>room.enemies.some(mysticActive)&&(d(p,{x:M
 export function enableMystic(b,room){if(!b?.boss||b.bossIndex!==3)throw Error('Boss Místico only');Object.assign(b,center(room));b.windup=null;b.phase=1;b.exposedUntil=-1;b.recoverUntil=3;b.mirage={version:2,state:'rest',phase:1,cycle:0,lastBegin:-1,lastResolved:-1,nextCycle:4,serial:0,copies:[],slots:[],moves:[],ringOffset:0,moveCount:0,danceStart:-1,danceEnd:-1,revealAt:-1,huntAt:-1,deadline:-1,openAt:-1,openUntil:-1,hitAt:-1,shatterAt:-1,shatterFrom:null,chaseStart:-1,nextAim:-1,shot:null,lastShot:null,shots:0,lastPlayer:null,fire:[],fireHitBeat:-1};
  for(const node of room.nodes)if(mysticReserved(room,node)){const options=[];for(let y=2;y<room.rows-2;y++)for(let x=2;x<room.cols-2;x++){const q={x,y};if(isFloor(room,x,y)&&!mysticReserved(room,q)&&d(q,room.exit)>2&&!room.nodes.some(n=>n!==node&&n.hp>0&&d(n,q)<2))options.push(q);}const q=options.sort((a,z)=>d(a,node)-d(z,node)||a.y-z.y||a.x-z.x)[0];if(!q)throw Error('No safe vein relocation');Object.assign(node,q);}return b;}
 function emit(s,b,type,beat,data={}){s.run.events.push({type,id:`mystic2:${s.run.room.seed}:${b.id}:${++b.mirage.serial}:${type}:${beat}`,bossIndex:3,sourceId:b.id,beat,x:b.x,y:b.y,...data});}
-const center=room=>({x:Math.floor(room.cols/2),y:Math.floor(room.rows/2)});
+const center=campaignBossHome;
 function addFire(b,room,tiles,beat,source){const m=b.mirage;for(const p of tiles){if(!inside(room,p))continue;let f=m.fire.find(q=>d(q,p)===0);if(f){f.until=Math.max(f.until,beat+5);continue;}if(m.fire.length>=128)m.fire.shift();m.fire.push({...p,born:beat,activeAt:beat+1,until:beat+5,source});}}
 export const activeMysticFire=(b,beat)=>b.mirage.fire.filter(f=>beat>=f.activeAt&&beat<f.until);
 export const mysticFireAt=(b,p,beat)=>activeMysticFire(b,beat).some(f=>d(f,p)===0);

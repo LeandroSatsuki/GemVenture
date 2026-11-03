@@ -1,0 +1,4 @@
+node_modules/
+artifacts/
+game/
+*.log

@@ -1,7 +1,7 @@
 // QA-only: uses real navigation, action limits and the same wave danger schedule.
 import {setGeodeCollisionPhase} from '../../dist/geode-collision.js';
 import * as E from '../../dist/core.js';import{crownApproach}from'../../dist/geode-crown.js';import{inRear,waveDangerAt}from'../../dist/geode-fan.js';
-export function demoAction(s,b,beat){const r=s.run;setGeodeCollisionPhase(r.room,beat);const danger=waveDangerAt(r.room,b,beat),next=waveDangerAt(r.room,b,beat+1),unsafe=p=>danger.some(t=>t.x===p.x&&t.y===p.y)||inRear(b,p),limit=E.movement(s),hit={type:'hit',id:b.id,crownSide:b.crown.side};
+export function demoAction(s,b,beat){const r=s.run;setGeodeCollisionPhase(r.room,beat);const danger=waveDangerAt(r.room,b,beat),next=waveDangerAt(r.room,b,beat+1),unsafe=p=>danger.some(t=>t.x===p.x&&t.y===p.y)||p.y<b.y,limit=E.movement(s),hit={type:'hit',id:b.id,crownSide:b.crown.side};
  let goal=crownApproach(b,r.player,b.crown.side);
  if(b.crown.stage==='open'||b.crown.stage==='recover'){
   const candidates=[['W',-2,0],['E',2,0],['S',0,2]].map(([side,dx,dy])=>({side,x:b.x+dx,y:b.y+dy}));

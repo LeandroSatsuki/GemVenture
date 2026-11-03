@@ -1,5 +1,5 @@
 import {crownActive} from './geode-crown.js';
-import {GEODE_BODY} from './geode-body.js';
+import {GEODE_BODY,geodeBodyContains} from './geode-body.js';
 import {isFloor} from './cave-layout.js';
 import {wavePillars} from './geode-fan.js';
 // Derived collision clock: never serialized and never advanced by a render callback.
@@ -27,7 +27,7 @@ export function escapeGeodeWave(room,player,boss){
   .sort((a,b)=>b.away-a.away||b.y-a.y||a.x-b.x);
  return out[0]?{x:out[0].x,y:out[0].y}:null;
 }
-export function solidGeodeCells(room){return(room.enemies||[]).filter(b=>crownActive(b)&&b.hp>0).flatMap(b=>{const cells=[];for(let dy=-GEODE_BODY.halfSize;dy<=GEODE_BODY.halfSize;dy++)for(let dx=-GEODE_BODY.halfSize;dx<=GEODE_BODY.halfSize;dx++)cells.push({x:b.x+dx,y:b.y+dy});return cells;});}
-export function geodeBodyBlocks(room,x,y){return(room.enemies||[]).some(b=>crownActive(b)&&b.hp>0&&Math.abs(b.x-x)<=GEODE_BODY.halfSize&&Math.abs(b.y-y)<=GEODE_BODY.halfSize);}
+export function solidGeodeCells(room){return(room.enemies||[]).filter(b=>crownActive(b)&&b.hp>0).flatMap(b=>{const cells=[];for(let dy=-GEODE_BODY.halfSize;dy<=GEODE_BODY.halfSize;dy++)for(let dx=-GEODE_BODY.halfSize;dx<=GEODE_BODY.halfSize;dx++)if(geodeBodyContains(b,b.x+dx,b.y+dy))cells.push({x:b.x+dx,y:b.y+dy});return cells;});}
+export function geodeBodyBlocks(room,x,y){return(room.enemies||[]).some(b=>crownActive(b)&&b.hp>0&&geodeBodyContains(b,x,y));}
 export const geodeContactReach=target=>crownActive(target)?GEODE_BODY.reach:1;
-export function escapeGeodeBody(room,player){if(!geodeBodyBlocks(room,player.x,player.y))return null;const b=(room.enemies||[]).find(b=>crownActive(b)&&b.hp>0&&Math.abs(b.x-player.x)<=1&&Math.abs(b.y-player.y)<=1),out=[];for(let y=b.y-2;y<=b.y+2;y++)for(let x=b.x-2;x<=b.x+2;x++){if(!isFloor(room,x,y)||geodeObstacleBlocks(room,x,y)||room.rocks.some(n=>(n.hp==null||n.hp>0)&&n.x===x&&n.y===y))continue;out.push({x,y,d:Math.abs(x-player.x)+Math.abs(y-player.y),rear:y<b.y});}out.sort((a,b)=>a.d-b.d||Number(a.rear)-Number(b.rear)||b.y-a.y||a.x-b.x);return out[0]?{x:out[0].x,y:out[0].y}:null;}
+export function escapeGeodeBody(room,player){if(!geodeBodyBlocks(room,player.x,player.y))return null;const b=(room.enemies||[]).find(b=>crownActive(b)&&b.hp>0&&geodeBodyContains(b,player.x,player.y)),out=[];for(let y=b.y-2;y<=b.y+2;y++)for(let x=b.x-2;x<=b.x+2;x++){if(!isFloor(room,x,y)||geodeObstacleBlocks(room,x,y)||room.rocks.some(n=>(n.hp==null||n.hp>0)&&n.x===x&&n.y===y))continue;out.push({x,y,d:Math.abs(x-player.x)+Math.abs(y-player.y),rear:y<b.y});}out.sort((a,b)=>a.d-b.d||Number(a.rear)-Number(b.rear)||b.y-a.y||a.x-b.x);return out[0]?{x:out[0].x,y:out[0].y}:null;}

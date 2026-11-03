@@ -1,0 +1,7 @@
+{
+ "name":"gemventure-desktop","productName":"GemVenture","version":"0.27.1","private":true,
+ "description":"Mineração rítmica, cavernas procedurais e progressão incremental.","author":"LeandroSatsuki","license":"UNLICENSED","main":"main.cjs",
+ "scripts":{"start":"electron .","test":"node --test *.test.cjs","prepare:game":"node prepare-game.mjs","dist":"electron-builder --win nsis --x64 --publish never"},
+ "dependencies":{"electron-updater":"6.8.11"},"devDependencies":{"electron":"45.2.2","electron-builder":"26.18.0"},
+ "build":{"appId":"io.itch.leandrosatsuki.gemventure","productName":"GemVenture","asar":true,"directories":{"output":"artifacts"},"files":["main.cjs","asset-path.cjs","updater.cjs","icon.png","icon.ico","game/**/*"],"artifactName":"GemVenture-Setup-${version}-${arch}.${ext}","win":{"target":[{"target":"nsis","arch":["x64"]}],"icon":"icon.ico"},"nsis":{"oneClick":false,"perMachine":false,"allowElevation":false,"allowToChangeInstallationDirectory":true,"createDesktopShortcut":true,"createStartMenuShortcut":true,"deleteAppDataOnUninstall":false},"publish":[{"provider":"github","owner":"LeandroSatsuki","repo":"GemVenture","releaseType":"release"}]}
+}

@@ -1,4 +1,4 @@
-import {BOSS_ARENA_SPACE,bossArenaCorners} from './boss-arena-space.js';
+import {BOSS_ARENA_SPACE,bossArenaCorners,campaignBossHome} from './boss-arena-space.js';
 import {EXPEDITION_SPEC,createExpedition,createResourcePlan,expeditionDistances} from './campaign-cave-expedition.js';
 export const CAMPAIGN_CAVE_VERSION=1;
 export const isCampaignCave=room=>room?.campaignCave?.version===CAMPAIGN_CAVE_VERSION;
@@ -13,11 +13,11 @@ export function finalizeCampaignCave(run,biome){
   for(const [x,y]of bossArenaCorners(cols,rows))room.floorMask[y*cols+x]=0;
   room.terrain=Array(cols*rows).fill(0);room.explored=null;room.visible=null;room.exit={x:cols-3,y:2};run.player={x:4,y:rows-4};
   room.layout={version:1,style:'ARENA',rooms:[{x:cx,y:cy,rx:cx-1,ry:cy-1,kind:'boss'}],protectedTiles:room.floorMask.flatMap((v,i)=>v?[i]:[]),burrow:{x:cx-2,y:0}};
-  room.hedgehog={...room.hedgehog,x:cx-2,y:0,biome};room.campaignCave={version:1,biome,arena:true,arenaRevision:version};
+  room.hedgehog={...room.hedgehog,x:cx-2,y:0,biome};room.campaignCave={version:1,biome,arena:true,arenaRevision:version,bossHomeRevision:1};
   const boss=room.enemies.find(n=>n.boss);
   for(const n of room.nodes){n.x+=dx;n.y+=dy;}
-  for(const n of room.enemies){n.x+=dx;n.y+=dy+1;}
-  if(boss){boss.x=cx;boss.y=cy+(boss.bossIndex===0?0:1);boss.arenaSize={cols,rows};}
+  for(const n of room.enemies){n.x+=dx;n.y+=dy-1;}
+  if(boss){boss.arenaHome=campaignBossHome(room);Object.assign(boss,boss.arenaHome);boss.arenaSize={cols,rows};}
   const occupied=new Set([...room.nodes,...room.enemies].filter(n=>inside(room,n.x,n.y)).map(n=>n.y*cols+n.x));
   for(const node of room.nodes)if(!inside(room,node.x,node.y)||boss&&distance(node,boss)<=2){occupied.delete(node.y*cols+node.x);const choices=[];for(let y=1;y<rows-1;y++)for(let x=1;x<cols-1;x++)if(inside(room,x,y)&&!occupied.has(y*cols+x)&&(!boss||distance({x,y},boss)>2))choices.push({x,y,d:distance({x,y},node)});choices.sort((a,b)=>a.d-b.d||a.y-b.y||a.x-b.x);if(!choices.length)throw Error('Campaign arena relocation exhausted');const {x,y}=choices[0];Object.assign(node,{x,y});occupied.add(y*cols+x);}
   return;

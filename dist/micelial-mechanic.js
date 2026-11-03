@@ -1,9 +1,10 @@
 import {isFloor} from './cave-layout.js';
+import {campaignBossHome} from './boss-arena-space.js';
 export const MICELIAL_RULES=Object.freeze({version:1,start:4,turnPeriod:32,reverseWarning:2,speed1:.30,speed2:.40,radius:6.1,inner:1.8,thickness:.38,sporeWarning:2,sporeLife:4,sporePeriod:8,sporeCap:2,damage:8,gapLife:2});
 const R=MICELIAL_RULES,dist=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y),tau=Math.PI*2;
 export const micelialActive=b=>b?.boss===true&&b.bossIndex===4&&b.mycelium?.version===1;
 export const micelialBoss=room=>room.enemies.find(b=>micelialActive(b)&&b.hp>0);
-export function enableMicelial(b,room){if(!b?.boss||b.bossIndex!==4)throw Error('Micelial only');b.x=Math.floor(room.cols/2);b.y=Math.floor(room.rows/2);b.windup=null;b.spiralTiles=[];b.phase=1;b.mycelium={version:1,anchorBeat:4,anchorAngle:0,lastBegin:-1,lastResolved:-1,phase:1,serial:0,hitAt:-100,breakAt:-100,nextRelease:8,spores:[],gaps:[],lastContact:-1};return b;}
+export function enableMicelial(b,room){if(!b?.boss||b.bossIndex!==4)throw Error('Micelial only');Object.assign(b,campaignBossHome(room));b.windup=null;b.spiralTiles=[];b.phase=1;b.mycelium={version:1,anchorBeat:4,anchorAngle:0,lastBegin:-1,lastResolved:-1,phase:1,serial:0,hitAt:-100,breakAt:-100,nextRelease:8,spores:[],gaps:[],lastContact:-1};return b;}
 function signedTime(beat){const t=Math.max(0,beat-4),cycle=Math.floor(t/32),u=t%32;return cycle%2?32-u:u;}
 export function micelialAngle(b,beat){const m=b.mycelium,speed=m.phase===2?R.speed2:R.speed1;return m.anchorAngle+(signedTime(beat)-signedTime(m.anchorBeat))*speed;}
 export const micelialDirection=beat=>Math.floor(Math.max(0,beat-4)/32)%2?-1:1;

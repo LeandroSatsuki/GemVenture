@@ -204,3 +204,7 @@ não concede licença de reutilização. Consulte [LICENSE](LICENSE) e
 Depois de instalar as dependências de desenvolvimento com npm ci, gere uma release com build:release. Execute node tools/build-itch.mjs PASTA_DA_RELEASE NOVA_PASTA para produzir a variante compatível com o limite de 1.000 arquivos. Compacte o conteúdo da nova pasta, mantendo index.html na raiz.
 
 O empacotador mantém CSS e áudio, conserva os pixels das imagens e reúne os módulos sem minificação. Os chunks ficam na raiz para preservar URLs relativas dos estilos, e as entradas inline do HTML são mantidas. Na atualização de 02/11, o pacote tem 945 arquivos; 258 PNGs pequenos são transportados sem perdas como data URLs. O recibo é gravado ao lado da pasta, fora do ZIP. Não sobrescreva releases anteriores.
+
+## Aplicativo Windows
+
+A candidata desktop preserva o jogo web e usa instalador NSIS. Instruções de build e atualizações pelo GitHub Releases em[desktop/README.md](desktop/README.md). O save desktop é independente do navegador.

@@ -1,12 +1,14 @@
 # Rei Geodo · Coroa Fraturada
 
 Novos encontros oficiais usam a revisão **TESTE 09 — crown-collision-r9**.
+Hotfix de03/11/2026: abertura frontal96° (antes120°), setor traseiro108° (antes180°) acompanhando o tronco. Alcances de7casas, dano e relógio preservados. Novas arenas usam origem(12,8); saves anteriores mantêm sua origem. A descida final dos punhos ocupa0,07pulso e toca o chão no impacto, seguida de poeira discreta. Detalhes em[boss-hotfix-20261103.md](boss-hotfix-20261103.md).
+
 Fontes congeladas preservadas em `asset-work/geode-crown-test09` e na cadeia
 TESTE08/07/06/05 descrita no manifesto de integração. A autorização humana de
 02/11/2026 e o recibo ficam em
 `../../coordination/geode-crown-official-20261102-r1/`.
 
-- O corpo ocupa 3 × 3 casas. A picareta alcança a borda a duas casas do centro.
+- O corpo mantém cinco casas sólidas (centro e apoios cardinais); as quatro quinas externas ficam livres. A picareta alcança a borda a duas casas do centro.
 - O aviso de dois pulsos prepara a onda de quartzo. Ela avança para a frente
   em fileiras e só bloqueia passagem enquanto seus cristais estão erguidos.
 - A fissura indica esquerda, direita ou frente. Três acertos do lado indicado

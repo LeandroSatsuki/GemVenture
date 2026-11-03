@@ -1,0 +1,18 @@
+{
+  "id": "BOSS-HOTFIX-20261103-R1",
+  "authorization": "Direct user hotfix request 2026-11-03",
+  "files": {
+    "geode-fan.js": "53f8a7c2e0a188d34ff970e375f8806561486a4417f8a7678dbe32f0d41ec998",
+    "geode-body.js": "3744d8e2463e855d411b68f5cc6d794da4c4982673980225437d0ca9d02747e5",
+    "geode-collision.js": "a54133b107ecd72d876a52073d8ee15372a97487aeff1f2b4921c7d98b9230a7",
+    "geode-slam-contract.js": "c9cad5d018d739d739682b91a72231dbf899e69d64407075adaee81a50d9b19f",
+    "geode-crown-art.js": "a6e7490c8558296448f6b723f326407c7cab22abda10ade7121d547e5ebbc7a3",
+    "boss-arena-space.js": "0ed6b3122b2bb66b2b12b6fdfa2979c0edd0342f9e8221d26cbf4d76f9244c3b",
+    "campaign-cave-layout.js": "94feabf9cb95115ddcc2a96275d6453e641f6b6fe801b31cd39ce4559c746ba0",
+    "matriarch-arena.js": "056949d0249381e25ce76b6f919902af8509cae192f4428138de25bd61d4719f",
+    "mystic-mechanic.js": "909cfbf92ecd0ee0b5a96029cb872369559172f39ff24d5540e50aeb5b72572e",
+    "micelial-mechanic.js": "31e857fcfdf2894124a911f94fa206e6e190d8eb777550b7f358b238e026edf8"
+  },
+  "humanVisualAcceptance": false,
+  "monitorResumed": false
+}
