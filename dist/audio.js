@@ -66,6 +66,9 @@ export class Music{
   if(!record||!this.enabled||!this.ctx||this.ctx.state!=='running')return false;
   this.silence(false);
   this.preview={record,startedAt:this.ctx.currentTime,until:this.ctx.currentTime+5};
+  // Prime the real arrangement inside the accepted click, including its first beat.
+  // A hub/tutorial frame is not required before the five-second sample can sound.
+  this.home(0,true);
   return true;
  }
  stopPreview(){if(!this.preview)return;this.preview=null;this.silence(false);}

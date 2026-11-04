@@ -55,7 +55,7 @@ test('every disc can be previewed without buying or equipping it',()=>{
  assert.match(recordsMarkup(s,'ROCK','iron'),/■ PARAR/);
 });
 test('five-second preview plays the chosen arrangement and restores the equipped disc',()=>{
- const m=new Music(),notes=[];m.enabled=true;m.ctx=homeAudioContext(10);m.master={gain:{setTargetAtTime(){}}};m.tone=(...args)=>notes.push(args);m.noise=()=>{};
+ const m=new Music(),notes=[];m.enabled=true;m.ctx=homeAudioContext(10);m.master={gain:{setTargetAtTime(){}}};m.tone=(...args)=>notes.push(args);m.noise=()=>{};m.vocal=()=>{};
  assert.equal(m.previewRecord('missing'),false);assert.equal(m.previewRecord('iron'),true);
  assert.equal(m.record.id,'pulse');assert.equal(m.preview.until,15);
  m.home(0,true);assert.equal(m.track,3);assert.equal(m.record.id,'pulse');assert.ok(notes.some(n=>n[2]==='sawtooth'));

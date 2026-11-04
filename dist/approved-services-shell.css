@@ -26,3 +26,9 @@ body #dialog.approved-ui-dialog.wardrobe-dialog[data-service=wardrobe] #dialogBo
 body #dialog.approved-ui-dialog.pets-dialog[data-service=pets]{transform:none!important;inset:0!important;margin:auto!important;width:min(1160px,calc(100vw - 24px))!important;height:fit-content!important;max-width:none!important;max-height:calc(100dvh - 24px)!important;min-height:0!important;padding:0!important;border:0!important;border-radius:18px!important;background:#081a30!important;overflow:auto!important;box-sizing:border-box!important}
 body #dialog.approved-ui-dialog.pets-dialog[data-service=pets]>.dialog-top{display:none!important}
 body #dialog.approved-ui-dialog.pets-dialog[data-service=pets] #dialogBody{display:block!important;padding:0!important;max-height:none!important;min-height:0!important;overflow:visible!important;background:none!important;border:0!important}
+
+/* Approved Shadow DOM services own their content height. Legacy viewport-sized
+   flex dialogs must not stretch the light-DOM body below the service surface.
+   Keep native outer scrolling when real content exceeds the scaled viewport. */
+body #dialog.approved-ui-dialog[data-service]{display:block!important;height:fit-content!important;min-height:0!important;border:0!important}
+body #dialog.approved-ui-dialog[data-service]>#dialogBody{height:auto!important;flex:none!important}

@@ -10,7 +10,7 @@ test('new profile saves restore depletion and the arrival under their explicit g
 });
 test('a real synthetic 30-room legacy save restores its original map without regeneration',async()=>{
  const fixture=JSON.parse(await readFile(new URL('./fixtures/cave-expedition-legacy-v2.json',import.meta.url),'utf8')),state=JSON.parse(inflateSync(Buffer.from(fixture.data,'base64'))),old=state.run.room;
- assert.equal(old.layout.version,2);assert.equal(old.layout.rooms.length,30);const restored=E.restoreState(JSON.stringify(state));assert.ok(restored);assert.deepEqual(restored.run.room,old);assert.equal(restored.run.room.cols,192);assert.equal(restored.run.room.rows,144);assert.ok(arrivalPlan(restored.run).enabled);
+ assert.equal(old.layout.version,2);assert.equal(old.layout.rooms.length,30);const restored=E.restoreState(JSON.stringify(state));assert.ok(restored);const expected=structuredClone(old);delete expected.caveZag;delete expected.zagShop;assert.deepEqual(restored.run.room,expected);assert.equal(restored.run.room.cols,192);assert.equal(restored.run.room.rows,144);assert.ok(arrivalPlan(restored.run).enabled);
  const altered=JSON.parse(JSON.stringify(state));altered.run.room.layout.version=3;assert.equal(E.restoreState(JSON.stringify(altered)),null);
 });
 test('profile size/count mismatches are rejected instead of truncating an existing save',()=>{

@@ -1,5 +1,5 @@
 import {CaveAlertModel} from './cave-alerts-model.js';
-import {usesStairs} from './cave-descent.js';
+// Objective wording belongs to expedition-hud-view; alerts never rewrite it.
 
 export function createCaveAlerts({document:doc,onLayout=()=>{}}){
  const model=new CaveAlertModel(),win=doc.defaultView;let objective=null,box=null,link=null,observer=null,last=null,room=null,previousStage=null,arrivalKey=null,layoutKey='',accentMs=0;
@@ -32,7 +32,6 @@ export function createCaveAlerts({document:doc,onLayout=()=>{}}){
    const hRow=box.querySelector('[data-alert-horde]'),pRow=box.querySelector('[data-alert-pressure]');hRow.hidden=!h;pRow.hidden=!p;box.hidden=!h&&!p;
    if(h){text(hRow.querySelector('strong'),'Horda '+h.number);text(hRow.querySelector('span'),h.state==='warning'?Math.ceil(h.remaining)+' pulsos':h.count+' criaturas');bar(hRow,h.progress||0,h.state==='warning');}
    if(p){text(pRow.querySelector('strong'),p.state==='active'?'Dano inimigo':'Perigo');text(pRow.querySelector('span'),p.state==='active'?'+'+p.damagePercent+'%':Math.ceil(p.remaining)+' pulsos');pRow.dataset.danger=String(p.state==='active');bar(pRow,p.progress||0,p.state==='warning');const steps=pRow.querySelector('.gv-pressure-steps');steps.hidden=p.state!=='active';steps.setAttribute('aria-label','Pressão '+p.stage+' de 3');[...steps.children].forEach((e,i)=>e.dataset.on=String(i<p.stage));}
-   if(usesStairs(run)){const title=objective.querySelector('small');if(title)text(title,title.textContent.toLocaleLowerCase('pt-BR').replace('encontre a descida','Encontre a descida').replace('pule no buraco','Pule no buraco').replace('buraco','Buraco').replace('derrote o chefe','Derrote o chefe').replace('descendo','Descendo'));}
    objective.dataset.alertsActive=String(!box.hidden);
    const key=String(!!h)+':'+String(!!p);if(key!==layoutKey){layoutKey=key;onLayout();}
    for(const animation of animations.values()){if(reduced)animation.cancel();else if(held&&animation.playState==='running')animation.pause();else if(!held&&animation.playState==='paused')animation.play();}

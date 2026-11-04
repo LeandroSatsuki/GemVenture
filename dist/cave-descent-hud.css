@@ -20,10 +20,17 @@ body.hud-v5 #stage #hud5Root .hud5-critical #objective .cave-hole-hint{font:700 
 }
 
 @layer ui-layout-r2 {
-@keyframes gv-descent-ready{0%,100%{opacity:.12}50%{opacity:1}}
-body.hud-v5 #stage #hud5Root .cave-complete:not(:disabled)::after{content:'';position:absolute;inset:0;border:3px solid #ffd36a;border-radius:inherit;background:#ffbc0026;box-shadow:inset 0 0 16px #ffd36a80,0 0 20px #ffbc00;pointer-events:none;animation:gv-descent-ready 1.05s ease-in-out infinite}
+@keyframes gv-descent-ready{0%,100%{opacity:.42}50%{opacity:1}}
+body.hud-v5 #stage #hud5Root .cave-complete:not(:disabled)::after{content:'';position:absolute;inset:0;border:3px solid #ffd36a;border-radius:inherit;background:#ffe45e38;box-shadow:inset 0 0 18px #ffef9280,0 0 22px #ffcc38,0 0 34px #ffbc0080;pointer-events:none;animation:gv-descent-ready .9s ease-in-out infinite}
 body.hud-v5 #stage #hud5Root .hud5-critical #objective .cave-complete{position:relative}
 body.hud-v5 #stage #hud5Root[data-feedback-held=true] .cave-complete::after{animation-play-state:paused}
 body.soft-fx #stage #hud5Root .cave-complete:not(:disabled)::after{animation:none;opacity:1;box-shadow:inset 0 0 0 1px #ffd36a}
 @media(prefers-reduced-motion:reduce){body.hud-v5 #stage #hud5Root .cave-complete:not(:disabled)::after{animation:none;opacity:1;box-shadow:inset 0 0 0 1px #ffd36a}}
+}
+
+@layer ui-layout-r2 {
+/* Ready is an earned action: a solid gold face, not a blue button with a halo. */
+body.hud-v5 #stage #hud5Root .hud5-critical #objective .cave-complete:not(:disabled){background:linear-gradient(#ffe85e,#ffc328 62%,#f79a20)!important;color:#081225!important;-webkit-text-fill-color:#081225!important;border:2px solid #ffe36b!important;box-shadow:0 3px #9f5416,inset 0 1px #fff4ad,0 0 18px #ffcc3860!important;text-shadow:0 1px #fff09a!important;font-weight:700!important;isolation:isolate;text-transform:none!important}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective [data-cave-completion][data-ready=true] .cave-charge-meter i{background:linear-gradient(90deg,#ffc328,#ffe85e)!important}
+body.hud-v5 #stage #hud5Root .hud5-critical #objective .cave-complete:focus-visible{outline:3px solid #fff4ad!important;outline-offset:3px}
 }

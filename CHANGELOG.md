@@ -1,5 +1,14 @@
 # Changelog
 
+## 03/11/2026 — Prévias, descida e retirada do Zag
+
+- Prévias procedurais agendam a primeira batida no clique e continuam durante as explicações do tutorial. Ativação bloqueada do áudio tem espera limitada e mensagem para tentar novamente; prévia continua sem compra/equipagem.
+- Zag deixa de nascer nas cavernas e de aparecer nas partidas antigas. Compatibilidade remove somente seus metadados da sala, preservando terreno, recursos e poderes existentes.
+- Objetivo da descida passa a ter um único responsável pelo texto, eliminando a alternância de caixa. Botão “CONCLUIR E DESCER” recebe face amarela e pulsação mais forte, com modo suave e pausa preservados.
+- Lote UI-FOOTER-20261103-r1 integrado: o host dos pop-ups acompanha seu conteúdo e elimina a base azul excedente. Matriz física de 2500 × 1000 em UI80/UI150 conferida pelo chat de UI, preservando a Forja e a rolagem necessária.
+
+
+
 ## 03/11/2026 — Hotfix dos bosses e candidata Windows
 
 - Novas arenas colocam os sete chefes acima do centro, com mais espaço frontal. Encontros salvos conservam a origem anterior.

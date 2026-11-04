@@ -1,0 +1,7 @@
+{
+  "id": "UI-FOOTER-20261103-r1",
+  "authorization": "Explicit user delegation from general chat 01a172ed-96f1-7a10-9cb9-8d69c99b32c4 2026-11-03: diagnose and locally correct empty blue footer/scroll; preserve approved Forge",
+  "files": {
+    "approved-services-shell.css": "41463040ddd528322ec987edf13cbbc4eac49e8ed31e43b2feb62508c39d289e"
+  }
+}

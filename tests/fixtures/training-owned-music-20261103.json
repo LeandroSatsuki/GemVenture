@@ -1,0 +1,16 @@
+{
+  "id": "GV-059/TRAINING-OWNED-R1",
+  "authorization": "Direct human request relayed by Direção de Som 2026-11-03, training purchased recorded music in official local game.",
+  "scope": "Owned music training consumers only; receipt is source integrity, not visual/human approval",
+  "files": {
+    "training-clock.js": "62bc1beaa4df961f7f3c79615881cc2f7db330abcc2e2470a5b777758873db4f",
+    "tutorial-training.js": "87022159a45f8ae2523f0923885eb4c9260c4b9623ca95d9abec1af753bbf93e",
+    "tutorial-runtime.js": "913ee45e0f80ccfa7e55690b7210d6e13b5aaf35e87f8a2f3f12aea8d8afa30b",
+    "tutorial-view.js": "05485943f31a2a1a724becd5bae46d001e63f20104f68b929ae89879d0db0acd",
+    "approved-training-ui.js": "5d7743521be679e7d7e9ab7d8dd127aa8e1b0ec7d04c49e4f7d2b666f86faef4",
+    "approved-training-ui.css": "5d2a7520266e5dbaaf1e3aa34fdaab6f75de98b1c7b87573d96efa641d3fb92a",
+    "training-music.js": "c22b2b32786db9f5756ec0dded5bac7259915e92a556db988510df4f1f2f1d96",
+    "training-audio-gate.js": "ddccd9ee22250557f9235d45bbcbe1cbe0571516efbbd6db39b3db2d61b7a714",
+    "run.js": "6a9febd5279f12696808ed7377c8ca1a1f8b9e7a9f0b188886dfed80619cd564"
+  }
+}

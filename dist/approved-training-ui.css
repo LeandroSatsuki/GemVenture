@@ -122,3 +122,10 @@
 .tutor-training.approved-training .contact{position:absolute!important;left:15%!important;top:50%!important;width:26px!important;height:26px!important;margin:-13px 0 0 -13px!important;border:2px solid #5ee9e9!important;border-radius:50%!important;opacity:0!important;pointer-events:none!important}
 .tutor-training.approved-training .contact-rays{position:absolute!important;left:15%!important;top:50%!important;width:4px!important;height:4px!important;background:var(--text)!important;opacity:0!important;pointer-events:none!important}
 .tutor-training.approved-training :is(.energy-fill,.energy-edge){transition:none!important}
+
+/* Owned songs share the coach surface; never cover the moving rhythm rail. */
+#tutorialOverlay.approved-training-guide .gv-training-music{display:grid;gap:6px;min-width:0;margin:12px 0;color:var(--text);font:600 15px/1.35 GVTrainingBody,sans-serif}
+#tutorialOverlay.approved-training-guide .gv-training-music select{width:100%;min-width:0;max-width:100%;min-height:40px;padding:8px;border:2px solid var(--line);border-radius:8px;background:var(--inset);color:var(--text);font:inherit;text-transform:none;letter-spacing:normal}
+#tutorialOverlay.approved-training-guide .gv-training-music select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+#tutorialOverlay.approved-training-guide .gv-training-music-status{font:600 12px/1.4 GVTrainingBody,sans-serif;color:var(--muted);overflow-wrap:anywhere}
+#tutorialOverlay.approved-training-guide .gv-training-music-status[data-status=error]{color:#ffd39a}

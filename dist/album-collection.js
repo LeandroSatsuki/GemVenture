@@ -1,6 +1,6 @@
 import {MUSIC_ALBUMS,albumById} from './music-albums.js';
-export const ALBUM_PURCHASE_COSTS=Object.freeze({Facil:2,Medio:3,Dificil:5,Insano:6});
-export function albumPrice(id){const album=typeof id==='string'?albumById(id):id;return album?Math.max(...album.editions.map(e=>ALBUM_PURCHASE_COSTS[e.tier])):null;}
+export const ALBUM_PURCHASE_COSTS=Object.freeze({Facil:2,Medio:3,Dificil:5});
+export function albumPrice(id){const album=typeof id==='string'?albumById(id):id;return album?(album.purchaseCost??Math.max(...album.editions.map(e=>ALBUM_PURCHASE_COSTS[e.tier]))):null;}
 export const ownsAlbum=(state,id)=>!!state.records?.albumOwned?.includes(id);
 export function restoreAlbumOwnership(value){
  if(value===undefined)return undefined;
@@ -10,7 +10,7 @@ export function restoreAlbumOwnership(value){
 export function buyAlbum(state,id){
  const album=albumById(id),cost=albumPrice(album);
  if(state.run||!album||!state.records||ownsAlbum(state,id)||!Number.isFinite(state.stars)||state.stars<cost)return false;
- state.stars-=cost;(state.records.albumOwned??=[]).push(id);return true;
+ state.stars-=cost;(state.records.albumOwned??=[]).push(id);state.records.albumCatalogVersion=1;return true;
 }
 
 export const albumForEdition=id=>MUSIC_ALBUMS.find(a=>a.editions.some(e=>e.id===id));

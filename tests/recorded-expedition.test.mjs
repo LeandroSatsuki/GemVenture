@@ -29,7 +29,7 @@ test('every approved timestamp remains exact across intro, loop seam and later c
   }
   for(const p of [-1,0,3.8,4])assert.ok(Math.abs(runBeatPhase(r,runBeatTime(r,p))-p)<1e-8);
  }
- const r={albumEdition:'GV059-L05-04'},c=albumClock(r.albumEdition),gap=c.times;assert.ok(gap.some((t,i)=>i>1&&Math.abs(t-gap[i-1]-(gap[1]-gap[0]))>.08));
+ const r={albumEdition:'GV059-L04-06'},c=albumClock(r.albumEdition),gap=c.times;assert.ok(gap.some((t,i)=>i>1&&Math.abs(t-gap[i-1]-(gap[1]-gap[0]))>.08));
  const at=gap.findIndex((t,i)=>i>1&&Math.abs(t-gap[i-1]-(gap[1]-gap[0]))>.08),positions=rhythmPositions(at+2.4,r).positions;assert.ok(positions.slice(2).some((p,i)=>Math.abs((p-positions[i+1])-(positions[1]-positions[0]))>.1));
 });
 test('native timing judge accepts a mapped hit and rejects one outside the real time window',()=>{

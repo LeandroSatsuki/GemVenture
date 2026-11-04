@@ -1,3 +1,4 @@
+import {validTrainingEdition} from './training-music.js';
 // Disposable native simulation. Never pass a player profile into this module.
 import * as E from './core.js';
 import {createLayout,locateHedgehog} from './cave-layout.js';
@@ -5,7 +6,7 @@ import {initCeiling} from './cave-ceiling.js';
 import {reveal,sightRange} from './cavern.js';
 import {heatState,initFrenzy} from './frenzy.js';
 import {awardScore,scoreProgress} from './stars.js';
-import {TRAINING_BPMS,validTrainingBpm} from './training-clock.js';
+import {TRAINING_BPMS,validTrainingBpm,runBeatTime,runBeatPhase} from './training-clock.js';
 import {beatTime} from './score.js';
 import {musicFloor} from './frenzy.js';
 export {TRAINING_BPMS};
@@ -16,22 +17,23 @@ const copy=value=>JSON.parse(JSON.stringify(value));
 function check(s){if(!s||s.version!==VERSION||!s.state||!Array.isArray(s.history))throw TypeError('Sessão de treino inválida.');}
 function remember(s,entry){const last=s.history.at(-1);if(entry.op==='advance'&&last?.op==='advance'&&last.dt+entry.dt<=.25){last.dt+=entry.dt;return;}if(s.history.length>=LIMIT){s.checkpointUnavailable=true;return;}s.history.push(entry);}
 const run=s=>s.state.run||s.lastRun;
-const phase=s=>s.elapsed*s.bpm/60;
-export function trainingView(s){check(s);const p=phase(s),r=run(s);return {version:VERSION,bpm:s.bpm,elapsed:s.elapsed,phase:p,worldTime:beatTime(musicFloor(r),p),beat:Math.round(p),paused:s.paused,consecutive:s.consecutive,practicedFive:s.practicedFive,scene:s.scene,lesson:s.lesson,breathEnabled:s.breathEnabled,firstBreathLossSeen:s.firstBreathLossSeen,breathResets:s.breathResets||0,countIn:Math.max(0,(r.trainingClock?.silenceStart||0)-Math.ceil(p)),complete:s.complete,closed:s.closed,practice:s.scene==='practice'?{charge:r.room.charge,goal:8,crystals:r.loot.crystals.reduce((sum,c)=>sum+c.count,0),rocks:r.loot.rocks.count,usedBlast:s.usedItems.blast,usedTonic:s.usedItems.tonic,usedWard:s.usedItems.ward,blockedShield:s.blockedShield,readyForExit:r.room.charge>=8}:null};}
+const phase=s=>runBeatPhase(run(s),s.elapsed);
+export function trainingView(s){check(s);const p=phase(s),r=run(s);return {version:VERSION,bpm:s.bpm,albumEdition:s.albumEdition,elapsed:s.elapsed,phase:p,worldTime:beatTime(musicFloor(r),p),beat:Math.round(p),paused:s.paused,consecutive:s.consecutive,practicedFive:s.practicedFive,scene:s.scene,lesson:s.lesson,breathEnabled:s.breathEnabled,firstBreathLossSeen:s.firstBreathLossSeen,breathResets:s.breathResets||0,countIn:Math.max(0,(r.trainingClock?.silenceStart||0)-Math.ceil(p)),complete:s.complete,closed:s.closed,practice:s.scene==='practice'?{charge:r.room.charge,goal:8,crystals:r.loot.crystals.reduce((sum,c)=>sum+c.count,0),rocks:r.loot.rocks.count,usedBlast:s.usedItems.blast,usedTonic:s.usedItems.tonic,usedWard:s.usedItems.ward,blockedShield:s.blockedShield,readyForExit:r.room.charge>=8}:null};}
 function collect(s,r,extras=[]){const events=r.events.splice(0),resets=events.filter(e=>e.type==='trainingBreathReset');if(resets.length)s.breathResets=(s.breathResets||0)+resets.length;const miss=events.find(e=>(e.type==='hurt'&&e.reserve==='rhythm')||e.type==='trainingProtectedMiss');if(miss){s.consecutive=0;const protectedMiss=miss.type==='trainingProtectedMiss',firstLoss=!protectedMiss&&!s.firstBreathLossSeen;if(firstLoss){s.firstBreathLossSeen=true;if(!resets.length)s.paused=true;}extras.push({type:'trainingTimingMiss',early:phase(s)<Math.round(phase(s)),reason:miss.reason,protected:protectedMiss,firstLoss,reset:resets.length>0});}if(events.some(e=>e.type==='shieldBlock'))s.blockedShield=true;return [...events,...extras];}
-export function createTraining({seed=56,bpm=100}={}){
+export function createTraining({seed=56,bpm=100,albumEdition=null}={}){
  if(!Number.isSafeInteger(seed)||seed<0||seed>2147483647||!validTrainingBpm(bpm))throw TypeError('Use 80, 100 ou 120 BPM.');
+ if(albumEdition!==null&&!validTrainingEdition(albumEdition))throw TypeError('Música indisponível para treino.');
  const state=E.createState(seed);if(!E.startRun(state))throw Error('Não foi possível iniciar treino.');
- const s={version:VERSION,seed,bpm,initialBpm:bpm,elapsed:0,paused:true,consecutive:0,practicedFive:false,scene:'rhythm',lesson:'rhythm',breathEnabled:false,firstBreathLossSeen:false,usedItems:{blast:0,tonic:0,ward:0},blockedShield:false,lessonsPrepared:[],complete:false,closed:false,state,lastRun:state.run,history:[]};sessions.add(s);
+ const s={version:VERSION,seed,bpm,albumEdition,initialBpm:bpm,elapsed:0,paused:true,consecutive:0,practicedFive:false,scene:'rhythm',lesson:'rhythm',breathEnabled:false,firstBreathLossSeen:false,usedItems:{blast:0,tonic:0,ward:0},blockedShield:false,lessonsPrepared:[],complete:false,closed:false,state,lastRun:state.run,history:[]};sessions.add(s);
  prepareTrainingScene(s,'rhythm');s.history=[];return s;
 }
-export function setTrainingBpm(s,bpm){check(s);if(!s.paused||s.closed)throw Error('Pause o treino para mudar o BPM.');if(!validTrainingBpm(bpm))throw TypeError('Use 80, 100 ou 120 BPM.');const p=phase(s);remember(s,{op:'bpm',bpm});s.bpm=bpm;s.elapsed=p*60/bpm;run(s).trainingClock.bpm=bpm;return trainingView(s);}
-export function setTrainingPaused(s,paused){check(s);if(typeof paused!=='boolean')throw TypeError('Pausa inválida.');if(s.closed)return trainingView(s);if(s.paused!==paused){remember(s,{op:'pause',paused});if(!paused)run(s).trainingClock.silenceStart=Math.max(run(s).trainingClock.silenceStart||0,Math.ceil(phase(s))+4);s.paused=paused;}return trainingView(s);}
+export function setTrainingBpm(s,bpm){check(s);if(!s.paused||s.closed||s.albumEdition)throw Error('BPM livre disponível com o treino pausado, sem música gravada.');if(!validTrainingBpm(bpm))throw TypeError('Use 80, 100 ou 120 BPM.');const p=phase(s);remember(s,{op:'bpm',bpm});s.bpm=bpm;s.elapsed=p*60/bpm;run(s).trainingClock.bpm=bpm;return trainingView(s);}
+export function setTrainingPaused(s,paused){check(s);if(typeof paused!=='boolean')throw TypeError('Pausa inválida.');if(s.closed)return trainingView(s);if(s.paused!==paused){remember(s,{op:'pause',paused});if(!paused&&!s.albumEdition)run(s).trainingClock.silenceStart=Math.max(run(s).trainingClock.silenceStart||0,Math.ceil(phase(s))+4);s.paused=paused;}return trainingView(s);}
 export function prepareTrainingScene(s,id){
  check(s);if(!s.paused||s.closed)throw Error('Pause antes de preparar uma cena.');if(!SCENES.includes(id))throw TypeError('Cena de treino desconhecida.');remember(s,{op:'scene',id});
- const r=s.state.run;if(!r)throw Error('Treino encerrado.');const p=id==='heat'?64:Math.max(4,Math.ceil(phase(s)-1e-9));s.elapsed=p*60/s.bpm;s.scene=id;s.complete=false;s.consecutive=0;
+ const r=s.state.run;if(!r)throw Error('Treino encerrado.');const p=id==='heat'?64:s.albumEdition?Math.max(0,Math.ceil(phase(s)-1e-9)):Math.max(4,Math.ceil(phase(s)-1e-9));r.trainingClock={version:1,bpm:s.bpm,...(s.albumEdition?{albumEdition:s.albumEdition}:{})};s.elapsed=runBeatTime(r,p);s.scene=id;s.complete=false;s.consecutive=0;
  r.mode=id==='heat'?'abyss':'floors';r.abyss=id==='heat'?{section:1,rows:0,lastShift:64,checkpoint:null,secured:0,cardSection:1,cardChoice:null}:undefined;
- r.floor=1;r.trainingClock={version:1,bpm:s.bpm,silenceStart:p+4,breathEnabled:s.breathEnabled};r.beat=p-1;r.acted=-1;r.missed=-1;r.enemyBeat=p-1;r.guardUntil=-1;r.recovery=null;r.rest=null;r.cardOffer=[];r.cardChosen=false;r.cards={};r.combo=0;r.cardHits=0;r.events=[];r.items={blast:0,tonic:0,ward:0};r.health=id==='heal'?50:Math.max(50,r.health);r.rhythm=100;r.player={x:8,y:8};s.lesson=id;
+ r.floor=1;r.trainingClock={...r.trainingClock,silenceStart:s.albumEdition?4:p+4,breathEnabled:s.breathEnabled};r.beat=p-1;r.acted=-1;r.missed=-1;r.enemyBeat=p-1;r.guardUntil=-1;r.recovery=null;r.rest=null;r.cardOffer=[];r.cardChosen=false;r.cards={};r.combo=0;r.cardHits=0;r.events=[];r.items={blast:0,tonic:0,ward:0};r.health=id==='heal'?50:Math.max(50,r.health);r.rhythm=100;r.player={x:8,y:8};s.lesson=id;
  const room=r.room={cols:21,rows:15,seed:s.seed,openingMining:1,rocks:[],nodes:[],enemies:[],nextId:1000,quota:9999,minBeats:0,goal:0,charge:0,cleared:false,bossFloor:false,hazards:[],scoreLimit:3000,scoreSpent:0,scoredTiles:[],exit:{x:18,y:2},terrain:Array(315).fill(0),explored:Array(315).fill(0),floorStart:{materials:[...r.materials],bag:r.bag,points:r.score.points,stars:r.score.earned}};
  createLayout(room,E.rng(s.seed),0,true);locateHedgehog(room,0);initCeiling(room);r.frenzy=null;
  const entity=(type,kind,x,y,hp,value)=>({id:room.nextId++,type,kind,x,y,hp,maxHp:hp,value,born:p});
@@ -105,11 +107,12 @@ export function finishTraining(s,{skipped=false}={}){
  const r=s.state.run;if(r){E.finishRun(s.state,skipped?'retreat':'return');s.state.run=r;r.events=[];}
  return {complete:s.complete,skipped,rewardsTransferred:false};
 }
-export function exportTraining(s){check(s);return s.checkpointUnavailable?null:{version:VERSION,seed:s.seed,initialBpm:s.initialBpm,history:copy(s.history)};}
-export function restoreTraining(raw){
+export function exportTraining(s){check(s);return s.checkpointUnavailable?null:{version:VERSION,seed:s.seed,initialBpm:s.initialBpm,...(s.albumEdition?{albumEdition:s.albumEdition}:{}),history:copy(s.history)};}
+export function restoreTraining(raw,{ownsEdition=()=>false}={}){
  try{
   if(!raw||raw.version!==VERSION||!Number.isSafeInteger(raw.seed)||raw.seed<0||raw.seed>2147483647||!validTrainingBpm(raw.initialBpm)||!Array.isArray(raw.history)||raw.history.length>LIMIT||JSON.stringify(raw).length>1000000)return null;
-  const s=createTraining({seed:raw.seed,bpm:raw.initialBpm??100});
+  if(raw.albumEdition!==undefined&&(!validTrainingEdition(raw.albumEdition)||!ownsEdition(raw.albumEdition)))return null;
+  const s=createTraining({seed:raw.seed,bpm:raw.initialBpm??100,albumEdition:raw.albumEdition??null});
   for(const entry of raw.history){if(!entry||typeof entry!=='object')return null;
    if(entry.op==='pause')setTrainingPaused(s,entry.paused);
    else if(entry.op==='bpm')setTrainingBpm(s,entry.bpm);
@@ -126,7 +129,7 @@ export function restoreTraining(raw){
  }catch{return null;}
 }
 export function isCompletedTraining(s){return sessions.has(s)&&s.complete===true&&s.closed===true&&!s.skipped&&run(s)?.room.cleared===true&&s.state.lastResult?.reason==='return';}
-export function setTrainingBreath(s,enabled){check(s);if(!s.paused||s.closed)throw Error('Pause para explicar o fôlego.');if(typeof enabled!=='boolean')throw TypeError('Política de fôlego inválida.');remember(s,{op:'breath',enabled});s.breathEnabled=enabled;run(s).trainingClock.breathEnabled=enabled;return trainingView(s);}
+export function setTrainingBreath(s,enabled){check(s);if(!s.paused||s.closed)throw Error('Pause para explicar o fôlego.');if(typeof enabled!=='boolean'||enabled&&s.albumEdition)throw TypeError('Treino com música mantém o fôlego protegido.');remember(s,{op:'breath',enabled});s.breathEnabled=enabled;run(s).trainingClock.breathEnabled=enabled;return trainingView(s);}
 export function demonstrateTrainingBreath(s){
  check(s);if(!s.paused||s.closed||!s.breathEnabled||!s.state.run||s.state.run.room.cleared)throw Error('Explique e ative o fôlego antes da demonstração.');
  remember(s,{op:'demo'});const r=s.state.run,beat=Math.max(Math.ceil(phase(s)),r.acted,r.missed,r.beat)+1;r.rhythm=100;const before=r.rhythm;s.elapsed=(beat+.4)*60/s.bpm;r.beat=beat-1;r.enemyBeat=Math.max(r.enemyBeat,beat-1);

@@ -25,9 +25,10 @@ export const createRecords=()=>({owned:['pulse'],active:'pulse'});
 export function restoreRecords(value){
  if(value===undefined)return createRecords();
  if(!value||!Array.isArray(value.owned)||value.owned.length>RECORDS.length||!value.owned.includes('pulse')||new Set(value.owned).size!==value.owned.length||value.owned.some(id=>!recordById(id))||!value.owned.includes(value.active))return null;
+ if(value.albumCatalogVersion!==undefined&&value.albumCatalogVersion!==1)return null;
  const albumOwned=restoreAlbumOwnership(value.albumOwned);if(albumOwned===null)return null;
  const album=albumForEdition(value.albumActive);if(value.albumActive!==undefined&&(!album||!albumOwned?.includes(album.id)))return null;
- return {owned:[...value.owned],active:value.active,...(albumOwned===undefined?{}:{albumOwned}),...(value.albumActive===undefined?{}:{albumActive:value.albumActive})};
+ return {owned:[...value.owned],active:value.active,...(value.albumCatalogVersion===1?{albumCatalogVersion:1}:{}),...(albumOwned===undefined?{}:{albumOwned}),...(value.albumActive===undefined?{}:{albumActive:value.albumActive})};
 }
 export function buyRecord(s,id){
  const record=recordById(id);

@@ -1,0 +1,17 @@
+{
+  "id": "RUNTIME-FEEDBACK-20261103-R1",
+  "authorization": "Direct human request 2026-11-03",
+  "files": {
+    "audio.js": "c2193f97a5304738b90ed7ea8ee214b12a73391e5bb9efa372e5676926a84bbc",
+    "run.js": "fc7910a55eede7d3fbd842583ae6c87d6d88874e33fc56152d4b91a49f4fceff",
+    "unified-records-ui.js": "8dd4522b8e079c2a55f5746f98883af1b9f0baeeade8069338b95c61e2530c19",
+    "cave-zag.js": "cf34388ecc48875b0f2157be1c87a4d2500bf6e1f5962f64a0217a1a985c4327",
+    "cave-zag-art.js": "ec76e8e4e155d7c977d5809be18a2a211e68af9dab17f20fa4f19128f3fd33c8",
+    "approved-cave-alerts-ui.js": "35e1dd5cc7424e02c2726740df7da1f718956edff3bdb825342d1827795813a9",
+    "cave-descent-hud.css": "b5f86c5b55245e8beb7001b0dac0935198701fb7469d3c8bccb1ae0cfcdc0654",
+    "expedition-hud-view.js": "b1162f170413cd282070634c3ef05ab01ee2b1b91763bf39630c1d967d3036b5"
+  },
+  "physicalBrowserVerified": false,
+  "humanAcceptance": false,
+  "monitorResumed": false
+}

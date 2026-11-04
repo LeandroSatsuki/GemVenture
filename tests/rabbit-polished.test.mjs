@@ -22,5 +22,7 @@ test('follow-through retains committed direction after a dodge instead of turnin
 function withoutApprovedScheduling(source){
  const declaration='// Scheduled notes run on the audio thread. Keep enough overlap for a brief\n// render/GC stall; phase/time mapping and the gameplay judgment stay unchanged.\nconst MUSIC_SCHEDULE_AHEAD=.24;\n';
  assert.ok(source.includes(declaration));assert.ok(source.includes('phaseAt(elapsed+MUSIC_SCHEDULE_AHEAD)'));
- return source.replace(declaration,'').replace('phaseAt(elapsed+MUSIC_SCHEDULE_AHEAD)','phaseAt(elapsed+.12)');
+ const preview='  // Prime the real arrangement inside the accepted click, including its first beat.\n  // A hub/tutorial frame is not required before the five-second sample can sound.\n  this.home(0,true);\n';
+ assert.ok(source.includes(preview));
+ return source.replace(preview,'').replace(declaration,'').replace('phaseAt(elapsed+MUSIC_SCHEDULE_AHEAD)','phaseAt(elapsed+.12)');
 }

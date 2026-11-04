@@ -1,0 +1,19 @@
+{
+  "id": "GV-059/LIBRARY-RELIABILITY-R1",
+  "scope": "Recorded loading, playable catalog, compatibility migration and audio-only vitrola reclassification; no art redesign",
+  "sourceReceipt": "E:\\Genventure\\coordination\\GV-059-library-reliability-r1\\APPLICATION-RECEIPT.json",
+  "files": {
+    "recorded-audio-loader.js": "3743bd3d112d3ed7c82ea18e1fe14ee2ef7de7285350120ba62c33ee496155ae",
+    "recorded-catalog-migration.js": "4a3ed4083784e9488208d9da5ca371aadc30a8feee5dc35e2f81cf72f98b30ce",
+    "music-albums.js": "7e00116c799eaf8b46bd1fc651239a88d1ad38c87fd5e18a4241a8e2c492a51f",
+    "recorded-album-player.js": "a27b3f734fb87d8c5f6c7d78c6723c164ae858030a26365b41cd5ff1d361a391",
+    "recorded-expedition.js": "b70fb54c516c793214ade026517149f8d68994620f81c97a13dd597ee3bd6b61",
+    "album-collection.js": "2e4300f14eb955d38f2b89842e063fb8f3f7ba79c17153450f7a8fbc792c2b2e",
+    "records.js": "0a776e02f598588cf562387eea96360861c5c9a4da434ce8b45e5f44cfc7545f",
+    "recorded-beatmaps.js": "c8b373fa28a552ee0182203c24295d26b6a1f6643cf7dcfb70023a444e213f71",
+    "recorded-album-art.js": "106e8752634dea75e02daff02135c84cbe54cec0ea46274205f8754325bf1659",
+    "unified-records-ui.js": "c0de8b6ea1a53565d081438d104865f1e93cedb6654b3e98b6a8f3bf7333ef3f",
+    "recorded-albums-ui.js": "ea126f954ea910df4157cb14e924289892eac0317c407b9b60e5b0277cf302d2",
+    "core.js": "25cab3cd7229f32119700d4d8e0dd19b5e3b30936c69421f22363d9a2d591b62"
+  }
+}

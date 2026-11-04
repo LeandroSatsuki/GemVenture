@@ -235,6 +235,10 @@ test('legacy palette remains frozen and candidate UI changes match their explici
  Object.assign(approvedUI,JSON.parse(await readFile(new URL('./fixtures/cave-room-reduction-20261102.json',import.meta.url),'utf8')).files);
  Object.assign(approvedUI,JSON.parse(await readFile(new URL('./fixtures/cave-stream-fluidity-20261102.json',import.meta.url),'utf8')).files);
  Object.assign(approvedUI,JSON.parse(await readFile(new URL('./fixtures/boss-hotfix-20261103.json',import.meta.url),'utf8')).files);
+ Object.assign(approvedUI,JSON.parse(await readFile(new URL('./fixtures/training-owned-music-20261103.json',import.meta.url),'utf8')).files);
+ Object.assign(approvedUI,JSON.parse(await readFile(new URL('./fixtures/recorded-reliability-20261103.json',import.meta.url),'utf8')).files);
+ Object.assign(approvedUI,JSON.parse(await readFile(new URL('./fixtures/ui-footer-20261103.json',import.meta.url),'utf8')).files);
+ Object.assign(approvedUI,JSON.parse(await readFile(new URL('./fixtures/runtime-feedback-20261103.json',import.meta.url),'utf8')).files);
  for(const file of await readdir(new URL('../dist/',import.meta.url))){if(file.startsWith('qa-')||!/\.(js|css|html|svg)$/.test(file))continue;
 
 
