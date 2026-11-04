@@ -30,5 +30,8 @@ body #dialog.approved-ui-dialog.pets-dialog[data-service=pets] #dialogBody{displ
 /* Approved Shadow DOM services own their content height. Legacy viewport-sized
    flex dialogs must not stretch the light-DOM body below the service surface.
    Keep native outer scrolling when real content exceeds the scaled viewport. */
-body #dialog.approved-ui-dialog[data-service]{display:block!important;height:fit-content!important;min-height:0!important;border:0!important}
+body #dialog.approved-ui-dialog[data-service][open]{display:block!important;height:fit-content!important;min-height:0!important;border:0!important}
 body #dialog.approved-ui-dialog[data-service]>#dialogBody{height:auto!important;flex:none!important}
+
+/* Closed native dialogs must never be resurrected by approved/legacy layout. */
+body #dialog.approved-ui-dialog[data-service]:not([open]){display:none!important;pointer-events:none!important}

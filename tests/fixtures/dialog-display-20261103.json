@@ -1,0 +1,16 @@
+{
+  "id": "DIALOG-DISPLAY-20261103-R1",
+  "files": {
+    "approved-services-shell.css": "be8d9d1b70083730afe1b19df55ba10f4f14197d4a3f2fe858cb501a0b1e3045",
+    "run.js": "400fa47644389f1c90403d67c06581dd6100c1b1fca2f4eb531b655dc7dbd166",
+    "index.html": "61feb6fe0524a34be5c25bfca3b8284cbb08b83b036227fd9803725b2323fa26",
+    "settings-panels.js": "57335ac041fa265b32ab0945f65864ca380b0562a736a2d08209cf277a34965a",
+    "approved-settings-ui.css": "26e54d8480021c76bb14ed6654980a98fd67c91c1bd343e9938b99278d0aa023",
+    "display-mode.js": "fe364f27f8b5f964568bbbbee627f7bf6947d0c1be5eb26f8c5b3b44ca24b30f"
+  },
+  "nativeIntegration": "App-owned Electron45 fixture; real computed display and hit testing for ten closed services, actual mode bounds, same WebContents and one page load; audio clock stays running",
+  "humanAcceptance": false,
+  "installedUpgradeVerified": false,
+  "monitorResumed": false,
+  "nativeVisibility": "80ms stabilization for native reparent pairs, held during active mode transition; real minimize/restore still reaches existing pause handler. Browser visibility behavior unchanged."
+}

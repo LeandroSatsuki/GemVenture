@@ -1,19 +1,22 @@
+import {getDisplayModeController} from './display-mode.js';
 import {getVideoPreferences,VIDEO_CONTROLS} from './video-preferences.js';
 import {getBossHelpPreferences} from './boss-help-preferences.js';
 import {getHudLayoutPreferences} from './hud-layout.js';
 import {DEFAULT_AUDIO} from './audio-settings.js';
 
 // Presentation bindings only; the existing owners retain values, persistence and effects.
-export function bindSettingsPanels(settings,{services,onChange=()=>{},video,help,hud,editHud}={}){
+export function bindSettingsPanels(settings,{services,onChange=()=>{},video,help,hud,editHud,display}={}){
  const $=selector=>settings.querySelector?.(selector);
  if(!$('#settingsVideoPanel'))return {open(){},close(){},refresh(){},dispose(){},persisted:()=>true,focusTarget:()=>null};
  const preferences=video??getVideoPreferences(),tabs=[...settings.querySelectorAll('[data-settings-tab]')],cleanups=[];
  const helpInput=$('#settingsBossHelp'),helpPreferences=helpInput?(help??getBossHelpPreferences()):null;
  const hudButton=$('#settingsEditHud'),hudPreferences=hudButton?(hud??getHudLayoutPreferences()):null;let editor=null,editorEpoch=0;
- let selected='video',unsubscribe=null,unsubscribeHelp=null,unsubscribeHud=null,disposed=false;
+ const displayInput=$('#settingsDisplayMode'),displayPreferences=displayInput?(display??getDisplayModeController()):null;
+ let selected='video',unsubscribe=null,unsubscribeHelp=null,unsubscribeHud=null,unsubscribeDisplay=null,disposed=false;
+ function refreshDisplay(){if(!displayInput||disposed)return;const value=displayPreferences.getState();displayInput.value=value.mode;displayInput.disabled=!value.ready||value.pending;const option=displayInput.querySelector?.('option[value=borderless]');if(option)option.disabled=!value.native;const help=$('#settingsDisplayHelp');if(help)help.hidden=value.native;const status=$('#settingsDisplayStatus');if(status)status.textContent=value.pending?'Alterando tela…':value.error||(!value.persisted?'Preferência válida nesta sessão.':'');}
  const listen=(node,type,fn)=>{node.addEventListener(type,fn);cleanups.push(()=>node.removeEventListener(type,fn));};
  function refresh(){
-  if(disposed)return;const state=preferences.getState();if(helpInput)helpInput.checked=helpPreferences.getState().enabled;
+  if(disposed)return;refreshDisplay();const state=preferences.getState();if(helpInput)helpInput.checked=helpPreferences.getState().enabled;
   for(const {key} of VIDEO_CONTROLS){const input=$('[data-video-key="'+key+'"]');input.value=String(state[key]);input.setAttribute('aria-valuetext',state[key]+'%');$('#'+input.getAttribute('aria-controls')).textContent=state[key]+'%';}
   for(const input of settings.querySelectorAll('[data-video-layer]'))input.checked=state.camadas[input.dataset.videoLayer];
   if($('#settingsCamera')){$('#settingsCamera').value=String(state.distancia_camera_pct);$('#settingsCamera').setAttribute('aria-valuetext',state.distancia_camera_pct+'%');$('#settingsCameraValue').textContent=state.distancia_camera_pct+'%';}
@@ -33,15 +36,16 @@ export function bindSettingsPanels(settings,{services,onChange=()=>{},video,help
  if(helpInput)listen(helpInput,'change',()=>helpPreferences.setEnabled(helpInput.checked));
  if($('#settingsCamera')){listen($('#settingsCamera'),'input',()=>preferences.set({distancia_camera_pct:Number($('#settingsCamera').value)}));listen($('#settingsCameraReset'),'click',()=>preferences.resetCamera());}
  if(hudButton)listen(hudButton,'click',async()=>{const epoch=++editorEpoch;hudButton.disabled=true;try{const open=editHud??(await import('./hud-editor.js')).openHudEditor;if(disposed||epoch!==editorEpoch)return;editor=await open({document:settings.ownerDocument,preferences:hudPreferences,onApply:()=>{$('#settingsClose')?.click();},onClose:()=>hudButton.focus?.()});if(disposed||epoch!==editorEpoch)editor?.close?.();}catch{hudButton.textContent='Tentar abrir editor';}finally{hudButton.disabled=false;}});
+ if(displayInput)listen(displayInput,'change',async()=>{try{await displayPreferences.setMode(displayInput.value);}catch{}finally{if(!disposed)refreshDisplay();}});
  listen($('#settingsVideoReset'),'click',()=>preferences.reset());
  listen($('#settingsAudioReset'),'click',()=>{services.audio.controller.set({enabled:DEFAULT_AUDIO.enabled,musicVolume:DEFAULT_AUDIO.musicVolume,sfxVolume:DEFAULT_AUDIO.sfxVolume});void services.audio.controller.unlock();});
  // UI reset remains bound by menu-controller to its original global service.
  select(tabs.find(tab=>tab.dataset.settingsTab===selected),{notify:false});
  return {
-  open(){if(disposed)return;if(!unsubscribe)unsubscribe=preferences.subscribe(()=>{refresh();onChange();});if(helpPreferences&&!unsubscribeHelp)unsubscribeHelp=helpPreferences.subscribe(()=>{refresh();onChange();});if(hudPreferences&&!unsubscribeHud)unsubscribeHud=hudPreferences.subscribe(()=>{refresh();onChange();});refresh();},
-  close(){editorEpoch++;editor?.close?.();editor=null;unsubscribe?.();unsubscribe=null;unsubscribeHelp?.();unsubscribeHelp=null;unsubscribeHud?.();unsubscribeHud=null;},refresh,
-  persisted:()=>preferences.getStatus().persisted&&(!helpPreferences||helpPreferences.getStatus().persisted)&&(!hudPreferences||hudPreferences.getStatus().persisted),
+  open(){if(disposed)return;if(displayPreferences&&!unsubscribeDisplay){unsubscribeDisplay=displayPreferences.subscribe(()=>{refreshDisplay();onChange();});void displayPreferences.refresh();}if(!unsubscribe)unsubscribe=preferences.subscribe(()=>{refresh();onChange();});if(helpPreferences&&!unsubscribeHelp)unsubscribeHelp=helpPreferences.subscribe(()=>{refresh();onChange();});if(hudPreferences&&!unsubscribeHud)unsubscribeHud=hudPreferences.subscribe(()=>{refresh();onChange();});refresh();},
+  close(){unsubscribeDisplay?.();unsubscribeDisplay=null;editorEpoch++;editor?.close?.();editor=null;unsubscribe?.();unsubscribe=null;unsubscribeHelp?.();unsubscribeHelp=null;unsubscribeHud?.();unsubscribeHud=null;},refresh,
+  persisted:()=>(!displayPreferences||displayPreferences.getState().persisted)&&preferences.getStatus().persisted&&(!helpPreferences||helpPreferences.getStatus().persisted)&&(!hudPreferences||hudPreferences.getStatus().persisted),
   focusTarget:()=>tabs.find(tab=>tab.dataset.settingsTab===selected),
-  dispose(){if(disposed)return;disposed=true;editorEpoch++;editor?.close?.();unsubscribeHud?.();unsubscribeHud=null;unsubscribe?.();unsubscribe=null;unsubscribeHelp?.();unsubscribeHelp=null;for(const off of cleanups)off();}
+  dispose(){if(disposed)return;disposed=true;unsubscribeDisplay?.();unsubscribeDisplay=null;editorEpoch++;editor?.close?.();unsubscribeHud?.();unsubscribeHud=null;unsubscribe?.();unsubscribe=null;unsubscribeHelp?.();unsubscribeHelp=null;for(const off of cleanups)off();}
  };
 }

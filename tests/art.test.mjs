@@ -239,6 +239,7 @@ test('legacy palette remains frozen and candidate UI changes match their explici
  Object.assign(approvedUI,JSON.parse(await readFile(new URL('./fixtures/recorded-reliability-20261103.json',import.meta.url),'utf8')).files);
  Object.assign(approvedUI,JSON.parse(await readFile(new URL('./fixtures/ui-footer-20261103.json',import.meta.url),'utf8')).files);
  Object.assign(approvedUI,JSON.parse(await readFile(new URL('./fixtures/runtime-feedback-20261103.json',import.meta.url),'utf8')).files);
+ Object.assign(approvedUI,JSON.parse(await readFile(new URL('./fixtures/dialog-display-20261103.json',import.meta.url),'utf8')).files);
  for(const file of await readdir(new URL('../dist/',import.meta.url))){if(file.startsWith('qa-')||!/\.(js|css|html|svg)$/.test(file))continue;
 
 

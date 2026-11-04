@@ -1,7 +1,7 @@
 {
   "name": "gemventure-desktop",
   "productName": "GemVenture",
-  "version": "0.27.2",
+  "version": "0.27.3",
   "private": true,
   "description": "Mineração rítmica, cavernas procedurais e progressão incremental.",
   "author": "LeandroSatsuki",
@@ -33,7 +33,9 @@
       "updater.cjs",
       "icon.png",
       "icon.ico",
-      "game/**/*"
+      "game/**/*",
+      "preload.cjs",
+      "display-window.cjs"
     ],
     "artifactName": "GemVenture-Setup-${version}-${arch}.${ext}",
     "win": {

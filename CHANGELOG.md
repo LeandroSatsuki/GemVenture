@@ -1,5 +1,14 @@
 # Changelog
 
+## 03/11/2026 — Fechamento dos painéis e modos de tela (0.27.3)
+
+- Corrige regressão no ajuste de altura: a regra de exibição do shell aprovado agora vale somente para diálogos abertos. Painéis fechados ficam invisíveis, inertes e têm o conteúdo liberado após o encerramento.
+- Configurações → Vídeo passa a oferecer Tela cheia, Janela e Janela sem bordas no aplicativo Windows. A primeira abertura em Janela é maximizada; o modo escolhido fica em uma preferência separada do save.
+- A troca do frame nativo preserva a mesma página e a sessão de áudio, sem recarregar a partida. F11 e menu Exibir usam o mesmo controlador; no navegador, a opção sem bordas fica indisponível.
+- Eventos transitórios de visibilidade da troca nativa são estabilizados antes de chegarem à pausa do jogo; minimizar/restaurar de verdade continua usando a pausa existente.
+- Verificação: fixture nativa em Electron45 com estilos reais, dez tipos de painel, cinco trocas de modo, uma única carga e relógio de áudio contínuo. Não equivale a instalação/upgrade real ou aceite humano.
+
+
 ## 03/11/2026 — Prévias, descida e retirada do Zag
 
 - Prévias procedurais agendam a primeira batida no clique e continuam durante as explicações do tutorial. Ativação bloqueada do áudio tem espera limitada e mensagem para tentar novamente; prévia continua sem compra/equipagem.

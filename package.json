@@ -1,6 +1,6 @@
 {
   "name": "gemventure",
-  "version": "0.27.2",
+  "version": "0.27.3",
   "description": "Mineração rítmica, cavernas procedurais e progressão incremental.",
   "private": true,
   "type": "module",

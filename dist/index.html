@@ -38,6 +38,7 @@
    </div>
   </section>
   <section class="section" id="settingsVideoPanel" role="tabpanel" aria-labelledby="settingsVideoTab">
+   <div class="display-mode-setting"><label for="settingsDisplayMode">Modo de tela</label><select id="settingsDisplayMode" aria-describedby="settingsDisplayHelp settingsDisplayStatus"><option value="fullscreen">Tela cheia</option><option value="windowed" selected>Janela</option><option value="borderless">Janela sem bordas</option></select><small id="settingsDisplayHelp">Janela sem bordas está disponível no aplicativo Windows.</small><span id="settingsDisplayStatus" role="status" aria-live="polite"></span></div>
    <div class="scope"><h3>Iluminação</h3><span>Biomas e Abismo</span></div>
    <div class="sliders">
     <label class="slider"><span class="label"><span>Luz do ambiente</span><output id="settingsAmbientValue" for="settingsAmbient">103%</output></span><input id="settingsAmbient" data-video-key="luz_ambiente_pct" aria-controls="settingsAmbientValue" type="range" min="0" max="200" step="1" value="103"></label>
